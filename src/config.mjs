@@ -51,6 +51,10 @@ export function loadChannels() {
     country: c.country || 'CN',
     enabled: c.enabled !== false,
     order: i,
+    // 转播继承（补节目简介时用）：这些频道本身不制作节目，
+    // 节目单跟着被转播频道走，所以简介也借用被转播频道的索引
+    inheritFrom: c.inheritFrom || '',
+    inheritTvmao: c.inheritTvmao || '',
   }))
 }
 

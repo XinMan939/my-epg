@@ -32,8 +32,8 @@
  */
 import fs from 'node:fs'
 import path from 'node:path'
-import { PATHS } from './config.mjs'
-import { fetchText, log, mapLimit, normalizeName, nameVariants } from './utils.mjs'
+import { PATHS, loadOverrides } from './config.mjs'
+import { fetchText, log, mapLimit, normalizeName, nameVariants, toSimplified } from './utils.mjs'
 
 const BASE = 'https://m.tvmao.com'
 const UA_MOBILE =
@@ -51,25 +51,64 @@ const TTL_FAIL = 3 * DAY
 const MAX_DESC_LEN = 400
 
 /**
+ * 电视猫节目详情页的五类路径。
+ *
+ * ⚠️ 2026-10-27 补上 /movie/ 和 /competition/：
+ *    之前只允许 tvcolumn/kanju/drama 三类，导致电影和体育赛事简介全被过滤掉。
+ *    实测 CCTV-6 电影频道一天 33 条节目里，有 20+ 条指向 /movie/，
+ *    但因为被 continue 跳过，索引只建了 11 项，简介覆盖率只有 13%。
+ *    同理 CCTV-5+ 的赛事指向 /competition/。
+ *
+ *   /tvcolumn/{hash}    栏目（新闻、综艺、固定栏目）→ 正文 div
+ *   /kanju/{hash}       剧集·移动端 → meta description
+ *   /drama/{hash}       剧集·PC 端 → meta description
+ *   /movie/{hash}       电影 → meta description（"电影XXX剧情讲述的是：…"）
+ *   /competition/{hash} 体育赛事 → meta description（赛事介绍）
+ */
+const DETAIL_PATH_RE = /^\/(tvcolumn|kanju|drama|movie|competition)\/[^/]+$/
+
+/**
  * 从节目单 HTML 里抽出「节目名 → 详情页路径」映射
  *
- * 移动端节目单结构：
- *   <span class="epg-row-link"><a href="/tvcolumn/aiFdZ2Jm">生活早参考</a>…</span>
+ * ⚠️ 2026-10-27 修正：不能假设 <a> 紧跟在 span 后面。
  *
- * 注意同一节目一天可能出现多次（重播），用 Map 自然去重。
+ * 移动端有两种节目行结构，取决于「这个节目有没有被 tvmao 收录成词条」：
+ *
+ *   A) 整条节目就是一个词条（常见于栏目、整部电影）：
+ *        <span class="epg-row-link"><a href="/tvcolumn/aiFdZ2Jm">生活早参考</a></span>
+ *
+ *   B) 节目名里只有一部分是词条（常见于体育赛事、带期号的栏目）：
+ *        <span class="epg-row-link">实况录像-2026年<a href="/competition/MmlTUg==">亚运会</a> 羽毛球比赛1</span>
+ *        <span class="epg-row-link">译制剧</span>（整条无链接）
+ *
+ * 旧实现用 `/<span class="epg-row-link"><a href=.../` 只认 A 型，
+ * 结果 CCTV-5+ 这种「全是 B 型」的频道索引 0 项、CCTV-6 这种混合型
+ * 一天 33 条只索引到 11 项，简介覆盖率长期卡在 0%/13%。
+ *
+ * 现在的做法：先按 span 边界取整段内文，再在里面找第一个详情页链接；
+ * 标题取「去标签后的整段文本」，这样才能和我们的节目标题对上。
  *
  * @returns {Map<title, path>}
  */
 export function extractProgrammeLinks(html) {
   const out = new Map()
-  const re = /<span class="epg-row-link"><a[^>]*href="(\/[a-z]+\/[^"]+)"[^>]*>([^<]*)<\/a>/g
+  const spanRe = /<span class="epg-row-link">([\s\S]*?)<\/span>/g
   let m
-  while ((m = re.exec(html))) {
-    const href = m[1]
-    const title = m[2].trim()
-    if (!title || !href) continue
-    // 只要这三类详情页
-    if (!/^\/(tvcolumn|kanju|drama)\//.test(href)) continue
+  while ((m = spanRe.exec(html))) {
+    const inner = m[1]
+    const a = inner.match(/<a[^>]*href="(\/[^"]+)"[^>]*>([^<]*)<\/a>/)
+    if (!a) continue
+    const href = a[1]
+    if (!DETAIL_PATH_RE.test(href)) continue
+    // 标题要取整段（含 <a> 外的文字），否则「实况录像-2026年亚运会 羽毛球比赛1」
+    // 会被截成「亚运会」，和我们的标题完全对不上
+    const title = inner
+      .replace(/<[^>]*>/g, '')
+      .replace(/&nbsp;/g, ' ')
+      .replace(/&amp;/g, '&')
+      .replace(/\s+/g, ' ')
+      .trim()
+    if (!title) continue
     if (!out.has(title)) out.set(title, href)
   }
   return out
@@ -180,6 +219,8 @@ export function normTitle(t) {
   let s = String(t)
   s = s.replace(/[\uff01-\uff5e]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0xfee0))
   s = s.replace(/\u3000/g, ' ')
+  // 繁 → 简：港台频道标题是繁体，tvmao 索引是简体，不转换永远对不上
+  s = toSimplified(s)
   // 集数：「第20集」→ 20；「20/20」→ 20
   s = s.replace(/第\s*(\d+)\s*集/g, '$1')
   s = s.replace(/(\d+)\s*\/\s*\d+/g, '$1')
@@ -187,6 +228,13 @@ export function normTitle(t) {
   s = s.replace(/[-–—]\s*\d{4}\s*[-–—]\s*\d+$/, '')
   s = s.replace(/\d{4}\s*[-–—]\s*\d+$/, '')
   s = s.replace(/[-–—]\s*\d{4}$/, '')
+  // 裸集数尾巴：「稻米之路6」「荒野至上3」→ 「稻米之路」「荒野至上」
+  //
+  // ⚠️ 只在「末尾 1-3 位数字，且前面还有 ≥2 个汉字」时才剥。
+  //    这样「新闻30分」不会被剥（数字不在末尾），
+  //    「第5空间」不会被剥（数字在开头），
+  //    但「中国第三季1」「我，与脑1」会被正确剥成「中国第三季」「我，与脑」。
+  s = s.replace(/(?<=[\u4e00-\u9fa5]{2,})\d{1,3}$/, '')
   // 画质标注
   s = s.replace(/[（(]\s*(4K|8K|高清|HD|超清|标清)\s*[）)]/gi, '')
   // 噪声后缀
@@ -317,8 +365,13 @@ export async function enrichDescs(targets, catalog, epgMap, opts = {}) {
     concurrency = 4,
     force = false,
     maxFetch = 600,
-    // 港澳台频道 epg.pw 自带简介，不用补
-    skipGroups = ['hk', 'mo', 'tw'],
+    // ⚠️ 2026-10-27 修正：原来这里跳过 hk/mo/tw，理由是「epg.pw 港澳台自带简介」。
+    //    但实测并非如此：epg.pw TW 里只有 202/515 个频道有 desc，HK 是 163/230。
+    //    港台33/34/35、公視、華視新聞这些恰恰一个 desc 都没有，
+    //    跳过它们等于把最需要补的频道排除在外。
+    //    现在改成：港澳台也参与补简介，但由「已有简介比例 > 0.5 就跳过」这条统一规则
+    //    自动过滤掉本来就够用的频道，不需要按地区硬编码。
+    skipGroups = [],
   } = opts
 
   // ---- 1) 目标频道 → tvmao 频道 ----
@@ -344,23 +397,50 @@ export async function enrichDescs(targets, catalog, epgMap, opts = {}) {
       ...(t.aliases || []).flatMap((a) => nameVariants(a)),
     ])
     // 精确
+    //
+    // ⚠️ 2026-10-27 修正：不能直接 return list[0]。
+    //    tvmao 里同一频道名可能对应多个 id，list[0] 是 catalog 顺序决定的，
+    //    不代表最合适。实测踩坑：
+    //      「CCTV-16 奥林匹克」→ 精确命中 CCTV-CCTV16，但那个 id 实际是 CCTV-15 音乐（串台）
+    //      「公視」→ 精确命中后可能拿到公視台語台/公視兒少台这类子频道
+    //    改成按「名字最接近目标」优先，同名时优先条目多的。
     for (const v of variants) {
       const list = byNorm.get(v)
-      if (list && list.length) return list[0]
+      if (list && list.length) return pickTvmaoBest(list, t)
     }
     // 包含（长度差 ≤ 4，防错台）
     for (const [n, list] of byNorm) {
       for (const v of variants) {
         if (v.length < 3) continue
         if (n.includes(v) || v.includes(n)) {
-          if (Math.abs(n.length - v.length) <= 4) return list[0]
+          if (Math.abs(n.length - v.length) <= 4) return pickTvmaoBest(list, t)
         }
       }
     }
     return null
   }
 
+  /** 从同名候选里挑最合适的 tvmao 频道 */
+  function pickTvmaoBest(list, t) {
+    if (list.length === 1) return list[0]
+    const tn = normalizeName(t.name)
+    const sorted = [...list].sort((a, b) => {
+      // 名字长度越接近目标越好（避免把「公視台語台」当成「公視」）
+      const da = Math.abs(a.norm.length - tn.length)
+      const db = Math.abs(b.norm.length - tn.length)
+      if (da !== db) return da - db
+      // 条目多的优先（节目更全）
+      return (b.count || 0) - (a.count || 0)
+    })
+    return sorted[0]
+  }
+
   const pairs = []
+  const overrides = loadOverrides()
+
+  /** 目标频道 id → 已确定的 tvmao 路由（含转播继承），给第二步索引复用 */
+  const pairByTarget = new Map()
+
   for (const t of targets) {
     if (skipGroups.includes(t.group)) continue
     const rows = epgMap.get(t.id)
@@ -369,15 +449,63 @@ export async function enrichDescs(targets, catalog, epgMap, opts = {}) {
     const withDesc = rows.filter((r) => r.desc && r.desc.trim()).length
     if (withDesc / rows.length > 0.5) continue
 
+    // ① 手工指定优先：overrides.json 里的 descSourceId
+    //    用于 tvmao 频道清单页没收录、但节目页真实存在的频道（如 CCTV-4K）
+    const ov = overrides[t.id]
+    if (ov && ov.descSourceId) {
+      const p = { target: t, tvmaoId: ov.descSourceId, tvmaoName: ov.descSourceId, manual: true }
+      pairs.push(p)
+      pairByTarget.set(t.id, p)
+      continue
+    }
+
+    // ② 自动对齐
     const hit = alignOne(t)
-    if (hit) pairs.push({ target: t, tvmaoId: hit.sourceId, tvmaoName: hit.clean })
+    if (hit) {
+      const p = { target: t, tvmaoId: hit.sourceId, tvmaoName: hit.clean }
+      pairs.push(p)
+      pairByTarget.set(t.id, p)
+      continue
+    }
+
+    // ③ 转播继承：港台33 转播 CCTV-1、34 转 CGTN Documentary、35 转 CGTN。
+    //    这类频道本身不制作节目，节目单跟着被转播频道走，
+    //    所以直接借用被转播频道的 tvmao 索引来解析自己的标题即可。
+    //
+    //    channels.json 里两种写法：
+    //      "inheritFrom": "CCTV1.cn"       继承「我们自己的某个频道」，走它的索引
+    //      "inheritTvmao": "CCTV-CCTV18"   直接指定 tvmao 频道 id（被转播台不在我们清单里时用）
+    if (t.inheritFrom || t.inheritTvmao) {
+      const p = {
+        target: t,
+        tvmaoId: t.inheritTvmao || null,
+        tvmaoName: t.inheritTvmao || `继承 ${t.inheritFrom}`,
+        inheritFrom: t.inheritFrom || null,
+        inheritTvmao: t.inheritTvmao || null,
+      }
+      pairs.push(p)
+      pairByTarget.set(t.id, p)
+    }
   }
 
-  log.info(`[desc] ${pairs.length} 个频道需要补简介（已跳过港澳台和已有简介的）`)
+  log.info(
+    `[desc] ${pairs.length} 个频道需要补简介` +
+      `（其中转播继承 ${pairs.filter((p) => p.inheritFrom).length} 个）`,
+  )
   if (!pairs.length) return new Map()
 
   // ---- 2) 建 title→href 索引 ----
-  // 索引缓存也持久化：一天内重复 build 不必重抓节目单
+  //
+  // ⚠️ 2026-10-27 重构：索引从「全频道合并成一个大 Map」改成「按频道各自一个 Map」。
+  //
+  //    原来的做法是把所有频道的 tvmao 索引合并，然后所有节目标题都在这一个大池子里查。
+  //    问题有两个：
+  //      1) 不同频道的同名节目会互相污染（CCTV-1 的「新闻联播」和 CCTV-13 的「新闻联播」
+  //         指向不同详情页，合并后只能留一个）；
+  //      2) 转播继承没法做——港台33 要继承 CCTV-1 的索引，合并后就分不清是谁的。
+  //
+  //    现在 indexByTvmaoId 按 tvmao 频道分开存，解析时按目标频道取自己那份；
+  //    继承频道（inheritFrom）直接取被继承频道的那份。
   const indexCacheFile = path.join(PATHS.cache, 'desc-index.json')
   let indexCache = {}
   try {
@@ -386,51 +514,85 @@ export async function enrichDescs(targets, catalog, epgMap, opts = {}) {
     indexCache = {}
   }
 
-  const index = new Map()
+  /** tvmao 频道 id → Map<normTitle, {href, raw}> */
+  const indexByTvmaoId = new Map()
   const now = Date.now()
   const INDEX_TTL = 2 * DAY
 
+  // 继承频道不需要自己抓索引，先算出「真正要抓索引的 tvmao id 集合」
+  const tvmaoIdsToBuild = new Set()
+  for (const p of pairs) {
+    if (p.inheritFrom) continue
+    if (p.tvmaoId) tvmaoIdsToBuild.add(p.tvmaoId)
+    // 继承频道如果指定了 inheritTvmao，那个 tvmao id 也要建索引
+    if (p.inheritTvmao) tvmaoIdsToBuild.add(p.inheritTvmao)
+  }
+
   let reused = 0
   const needFetch = []
-  for (const p of pairs) {
-    const c = indexCache[p.tvmaoId]
+  for (const id of tvmaoIdsToBuild) {
+    const c = indexCache[id]
     if (!force && c && now - c.fetchedAt < INDEX_TTL) {
-      for (const [k, v] of Object.entries(c.items)) {
-        if (!index.has(k)) index.set(k, v)
-      }
+      const m = new Map()
+      for (const [k, v] of Object.entries(c.items)) m.set(k, v)
+      indexByTvmaoId.set(id, m)
       reused++
     } else {
-      needFetch.push(p)
+      needFetch.push(id)
     }
   }
   log.info(`[desc] 索引：复用 ${reused} 个频道的缓存，需抓 ${needFetch.length} 个`)
 
   let idxFetched = 0
-  await mapLimit(needFetch, 3, async (p) => {
+  await mapLimit(needFetch, 3, async (id) => {
     const local = new Map()
     try {
-      await collectChannelIndex(p.tvmaoId, local, 7)
+      await collectChannelIndex(id, local, 7)
     } catch {
       /* 忽略单频道失败 */
     }
-    const items = Object.fromEntries(local)
-    indexCache[p.tvmaoId] = { fetchedAt: now, name: p.tvmaoName, items }
-    for (const [k, v] of local) if (!index.has(k)) index.set(k, v)
+    indexByTvmaoId.set(id, local)
+    indexCache[id] = { fetchedAt: now, name: id, items: Object.fromEntries(local) }
     idxFetched++
     if (idxFetched % 10 === 0) log.info(`[desc] 索引进度 ${idxFetched}/${needFetch.length}`)
   })
 
   fs.mkdirSync(path.dirname(indexCacheFile), { recursive: true })
   fs.writeFileSync(indexCacheFile, JSON.stringify(indexCache, null, 2), 'utf8')
-  log.info(`[desc] 索引建立完成：${index.size} 个节目标题可解析`)
+  const totalItems = [...indexByTvmaoId.values()].reduce((a, m) => a + m.size, 0)
+  log.info(`[desc] 索引建立完成：${indexByTvmaoId.size} 个频道，共 ${totalItems} 个节目标题`)
 
   // ---- 3) 我们的标题 → 详情页 ----
+  //
+  // 关键：按「目标频道」取它自己那份索引，而不是全局合并池。
+  // 继承频道（港台33 等）取被继承频道的那份。
   const links = new Map() // ourTitle -> href
   let resolvable = 0
-  for (const t of targets) {
-    if (skipGroups.includes(t.group)) continue
+  for (const p of pairs) {
+    const t = p.target
     const rows = epgMap.get(t.id)
     if (!rows || !rows.length) continue
+
+    // 决定用哪份索引
+    let index = null
+    if (p.inheritTvmao) {
+      // 直接指定了 tvmao id（被转播台不在我们清单里，如港台34 → CCTV-CCTV18）
+      index = indexByTvmaoId.get(p.inheritTvmao)
+    } else if (p.inheritFrom) {
+      // 继承我们自己的某个频道，走它的 tvmao 索引
+      const srcPair = pairByTarget.get(p.inheritFrom)
+      const srcTvmaoId = srcPair?.tvmaoId
+      index = srcTvmaoId ? indexByTvmaoId.get(srcTvmaoId) : null
+      if (!index) {
+        // 被继承频道自己没进 pairs（可能它 desc 已够用），退回 overrides 里记的 descSourceId
+        const ovSrc = overrides[p.inheritFrom]
+        if (ovSrc?.descSourceId) index = indexByTvmaoId.get(ovSrc.descSourceId)
+      }
+    } else {
+      index = indexByTvmaoId.get(p.tvmaoId)
+    }
+    if (!index) continue
+
     for (const r of rows) {
       if (r.desc && r.desc.trim()) continue // 已有简介不覆盖
       if (links.has(r.title)) continue
@@ -452,11 +614,31 @@ export async function enrichDescs(targets, catalog, epgMap, opts = {}) {
  * 第二步：从 tvmao 频道页建「节目名 → 详情页」索引
  * ========================================================================== */
 
-/** 由 tvmao 的 sourceId 推断节目单路径前缀 */
-function tvmaoPrefix(sourceId) {
-  if (/^CCTVPAYFEE-/i.test(sourceId)) return '/program_digital/'
-  if (/^CCTV-/i.test(sourceId)) return '/program/'
-  return '/program_satellite/'
+/**
+ * 由 tvmao 的 sourceId 推断节目单 URL 前缀
+ *
+ * 实测三种前缀（2026-10-27）：
+ *   央视     /program/CCTV-CCTV1-w1.html
+ *   卫视     /program_satellite/HUNANTV1-w1.html
+ *   数字付费 /program_digital/CCTVPAYFEE-CCTVPAYFEE1-w1.html
+ *
+ * 外加一个特例：CCTV-4K / CCTV-8K 走「两段式」路径，形如
+ *   /program/CCTVPAYFEE/CCTV4K-w1.html
+ * 注意是 /program/ 而不是 /program_digital/，且 ID 段是 CCTVPAYFEE、末段是 CCTV4K。
+ * 这两个频道在 tvmao 的频道清单页（/program/duration/cctv/…）里根本没收录，
+ * 所以自动对齐找不到它们，只能靠 overrides.json 手工指定成 "CCTVPAYFEE/CCTV4K"。
+ *
+ * @returns {{prefix: string, id: string}} 前缀 + 末段 id
+ */
+function tvmaoRoute(sourceId) {
+  // 两段式特例：sourceId 里带斜杠，如 "CCTVPAYFEE/CCTV4K"
+  if (sourceId.includes('/')) {
+    const [head, tail] = sourceId.split('/')
+    return { prefix: `/program/${head}/`, id: tail }
+  }
+  if (/^CCTVPAYFEE-/i.test(sourceId)) return { prefix: '/program_digital/', id: sourceId }
+  if (/^CCTV-/i.test(sourceId)) return { prefix: '/program/', id: sourceId }
+  return { prefix: '/program_satellite/', id: sourceId }
 }
 
 /**
@@ -471,13 +653,13 @@ function tvmaoPrefix(sourceId) {
  * @param days      抓几天，默认 7
  */
 export async function collectChannelIndex(sourceId, index, days = 7) {
-  const prefix = tvmaoPrefix(sourceId)
+  const { prefix, id } = tvmaoRoute(sourceId)
   let added = 0
 
   for (let w = 1; w <= days; w++) {
     let html = ''
     try {
-      const res = await fetchText(`${BASE}${prefix}${sourceId}-w${w}.html`, {
+      const res = await fetchText(`${BASE}${prefix}${id}-w${w}.html`, {
         timeout: 20000,
         retries: 1,
         headers: { 'User-Agent': UA_MOBILE },

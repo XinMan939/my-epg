@@ -48,41 +48,69 @@ function isFresh(p) {
   }
 }
 
+/**
+ * 进行中的下载任务（region → Promise）。
+ *
+ * ⚠️ 2026-10-27 实测踩坑：同一 region 会被并发调用多次（主流程预热 + 多个频道并行解析），
+ *    每次都看到"缓存不存在/已过期"就各自去下载，多个请求同时写同一个缓存文件。
+ *    结果：HK 包（19.7MB）被写了三四份，后到的写入覆盖前面的，
+ *    中途有读者读到 14.9MB 的半成品 → gunzip 报 "unexpected end of file"，
+ *    表现成"epg.pw HK 解压失败"，直接导致翡翠台/港台33 等 6 个香港频道变空。
+ *
+ *    修法：同 region 的下载收敛成一个 Promise，后来的调用 await 同一个任务。
+ */
+const inflight = new Map()
+
 /** 下载并解压某个地区的 XMLTV，返回本地文件路径 */
 async function ensureFile(region) {
   ensureCacheDir()
   const out = cachePath(region)
   if (isFresh(out)) return out
 
-  const url = `${BASE}/epg_${region}.xml.gz`
-  log.info(`[epg.pw] 下载 ${region} ...`)
-  // fetch 给 90s 先探路（CI 直连通常够），失败立刻降级到 curl（本地走代理时 curl 才通）
-  const { ok, buf, bytes, error } = await fetchBuffer(url, {
-    timeout: 600000,
-    fetchTimeout: 90000,
-    retries: 1,
-  })
+  // 已有同 region 的下载在跑 → 等它，别再开一份
+  if (inflight.has(region)) return inflight.get(region)
 
-  if (!ok || !buf || bytes < 1024) {
-    // 下载失败时若存在旧缓存则降级使用
-    if (fs.existsSync(out)) {
-      log.warn(`[epg.pw] ${region} 下载失败(${error || 'empty'})，沿用旧缓存`)
-      return out
+  const task = (async () => {
+    const url = `${BASE}/epg_${region}.xml.gz`
+    log.info(`[epg.pw] 下载 ${region} ...`)
+    // fetch 给 90s 先探路（CI 直连通常够），失败立刻降级到 curl（本地走代理时 curl 才通）
+    const { ok, buf, bytes, error } = await fetchBuffer(url, {
+      timeout: 600000,
+      fetchTimeout: 90000,
+      retries: 1,
+    })
+
+    if (!ok || !buf || bytes < 1024) {
+      // 下载失败时若存在旧缓存则降级使用
+      if (fs.existsSync(out)) {
+        log.warn(`[epg.pw] ${region} 下载失败(${error || 'empty'})，沿用旧缓存`)
+        return out
+      }
+      throw new Error(`epg.pw ${region} 下载失败: ${error || 'empty'}`)
     }
-    throw new Error(`epg.pw ${region} 下载失败: ${error || 'empty'}`)
-  }
 
-  let xml
+    let xml
+    try {
+      xml = zlib.gunzipSync(buf).toString('utf8')
+    } catch (e) {
+      throw new Error(`epg.pw ${region} 解压失败: ${e.message} (${bytes} bytes)`)
+    }
+
+    if (!xml.includes('<tv')) throw new Error(`epg.pw ${region} 内容不是合法 XMLTV`)
+    // 先写临时文件再 rename，保证任何时刻读到的都是完整文件
+    const tmp = `${out}.tmp`
+    fs.writeFileSync(tmp, xml, 'utf8')
+    fs.renameSync(tmp, out)
+    log.ok(`[epg.pw] ${region} 就绪 ${(xml.length / 1024 / 1024).toFixed(1)} MB`)
+    return out
+  })()
+
+  inflight.set(region, task)
   try {
-    xml = zlib.gunzipSync(buf).toString('utf8')
-  } catch (e) {
-    throw new Error(`epg.pw ${region} 解压失败: ${e.message} (${bytes} bytes)`)
+    return await task
+  } finally {
+    inflight.delete(region)
   }
-
-  if (!xml.includes('<tv')) throw new Error(`epg.pw ${region} 内容不是合法 XMLTV`)
-  fs.writeFileSync(out, xml, 'utf8')
-  log.ok(`[epg.pw] ${region} 就绪 ${(xml.length / 1024 / 1024).toFixed(1)} MB`)
-  return out
 }
 
 /**

@@ -5,7 +5,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import zlib from 'node:zlib'
 import { CONFIG, PATHS, ensureOutputDir } from './config.mjs'
-import { esc } from './utils.mjs'
+import { esc, isRealDesc } from './utils.mjs'
 
 /**
  * 生成 XMLTV 字符串
@@ -79,6 +79,45 @@ export function writeOutput(xml, basename = 'epg') {
 }
 
 /**
+ * 输出频道清单 channels.json
+ *
+ * 为什么需要单独一个文件：
+ *   直播源侧（iptv-api / iptv-tool / 手工维护的 M3U）需要知道「这个台在本项目里的
+ *   tvg-id 是什么」，才能把 M3U 的 tvg-id 填对，让播放器自动把节目单挂上去。
+ *   没有这份清单，两边只能靠中文名模糊匹配——实测会串台
+ *   （CCTV5+ 吸到 CCTV5、台視新聞 吸到 台視），用户看到的就是错节目单。
+ *
+ * 格式刻意做成「够用且稳定」：
+ *   id     tvg-id，填进 M3U 的 tvg-id 属性
+ *   name   显示名
+ *   group  分组（央视/卫视/local/hk/tw…），对应 M3U 的 group-title
+ *   aliases 该台在各类源里的常见写法，直播源侧做关键词匹配用
+ *   logo   台标
+ *   hasEpg 本次是否真的抓到了节目（false 表示这个台暂时挂不上节目单）
+ *
+ * @param channels 输出用频道数组（含 logo/source 等 enrich 过的字段）
+ * @param epgMap   Map<tvgId, programmes[]>
+ */
+export function writeChannelsJson(channels, epgMap) {
+  ensureOutputDir()
+  const list = channels.map((c) => {
+    const rows = epgMap.get(c.id) || []
+    return {
+      id: c.id,
+      name: c.name,
+      group: c.group || '',
+      aliases: c.aliases || [],
+      logo: c.logo || '',
+      hasEpg: rows.length > 0,
+      programmeCount: rows.length,
+    }
+  })
+  const outPath = path.join(PATHS.output, 'channels.json')
+  fs.writeFileSync(outPath, JSON.stringify(list, null, 2) + '\n', 'utf8')
+  return { path: outPath, count: list.length, withEpg: list.filter((c) => c.hasEpg).length }
+}
+
+/**
  * 生成统计报告
  *
  * 这个 report.json 是看板（web/index.html）的唯一数据来源，
@@ -110,7 +149,11 @@ export function buildReport(channels, epgMap, extra = {}) {
     }
     const daysCovered = daySeen.size
 
-    const withDesc = list.filter((p) => p.desc && p.desc.trim()).length
+    // ⚠️ 口径必须是「真实简介」。
+    //    51zmt 的 e1 里 70% 的 <desc> 是「暂无节目描述」「此阶段播放精彩电视剧内容」
+    //    这类占位文本，只要非空就计数的话，覆盖率会虚高到 99%，用户看到的全是废话。
+    //    统一走 isRealDesc 判定，看板和实际体验才对得上。
+    const withDesc = list.filter((p) => isRealDesc(p.desc)).length
     const withCategory = list.filter((p) => p.category && p.category.trim()).length
     const uniqTitles = new Set(list.map((p) => p.title)).size
 

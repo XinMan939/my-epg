@@ -19,19 +19,21 @@ import {
   CONFIG,
   PATHS,
   loadChannels,
+  loadOverrides,
   saveJson,
   ensureOutputDir,
 } from './config.mjs'
-import { log, mapLimit } from './utils.mjs'
+import { log, mapLimit, isRealDesc } from './utils.mjs'
 import { matchChannels } from './match.mjs'
 import { buildDateRange, normalizeProgrammes, mergeDays, dayStartTs } from './normalize.mjs'
-import { buildXmltv, writeOutput, buildReport } from './output.mjs'
+import { buildXmltv, writeOutput, buildReport, writeChannelsJson } from './output.mjs'
 import { aggregate } from './aggregator.mjs'
 import { enrichDescs } from './desc.mjs'
 
 import * as epgpw from './sources/epgpw.mjs'
 import * as tvmao from './sources/tvmao.mjs'
 import * as tvsou from './sources/tvsou.mjs'
+import { enrichFromZ51, loadPacks, fillEmptyChannels } from './sources/z51.mjs'
 
 const SOURCES = { epgpw, tvmao, tvsou }
 
@@ -341,7 +343,43 @@ async function cmdBuild() {
     log.warn(`空频道 ${emptyList.length} 个: ${emptyList.map((e) => e.id).slice(0, 20).join(', ')}${emptyList.length > 20 ? ' ...' : ''}`)
   }
 
-  // 3.5) 外部 XML 源兜底聚合
+  // 3.5) 51zmt 节目单兜底
+  //
+  // 比 3.55 的通用聚合器优先，理由：
+  //   ① 51zmt 的频道是「中文名对齐」，比聚合器按 tvg-id 猜准得多；
+  //   ② 它带真实简介（e1 有 69.6%），而聚合器只拿得到 title/desc 混杂的原始数据；
+  //   ③ 包已经在补简介那步下载好了，这里零额外网络成本。
+  //
+  // 覆盖对象：epg.pw 完全抓空的大陆地方台（浙江/湖南/江苏系列共 16 个）。
+  const stillEmpty = emptyList.map((e) => e.id)
+  let z51Filled = []
+  if (stillEmpty.length && !process.env.NO_Z51) {
+    try {
+      const { byKey } = await loadPacks()
+      const filled = fillEmptyChannels(targets, epgMap, byKey, { overrides: loadOverrides() })
+      for (const [id, v] of filled) {
+        const norm = normalizeProgrammes(v.programmes, { dayStartTs: globalStart, dayEndTs: globalEnd })
+        if (!norm.length) continue
+        epgMap.set(id, norm)
+        usedSources.set(id, {
+          source: `z51:${v.sourceKey}`,
+          sourceId: v.sourceName,
+          sourceName: v.sourceName,
+        })
+        z51Filled.push({ id, sourceKey: v.sourceKey, sourceName: v.sourceName, count: norm.length })
+        okCount++
+        const idx = emptyList.findIndex((e) => e.id === id)
+        if (idx >= 0) emptyList.splice(idx, 1)
+      }
+      if (z51Filled.length) {
+        log.ok(`[z51] 节目单补全 ${z51Filled.length} 个: ${z51Filled.map((f) => f.id).join(', ')}`)
+      }
+    } catch (e) {
+      log.warn(`[z51] 节目单兜底失败，忽略: ${e.message}`)
+    }
+  }
+
+  // 3.55) 外部 XML 源兜底聚合
   //
   // 只在「本地三源全部抓空」的频道上启用。理由：外部源是整包下载（1MB+），
   // 而且数据质量明显不如本地源（老张的EPG 只有 2 天、0 条简介），
@@ -351,11 +389,13 @@ async function cmdBuild() {
   //          若外部源天数更多但当前已有节目，默认不动（本地源有 desc，质量更高）。
   const aggSources = []
   let aggReport = []
-  const stillEmpty = emptyList.map((e) => e.id)
-  if (stillEmpty.length && !process.env.NO_AGGREGATE) {
-    log.info(`[aggregator] 仍有 ${stillEmpty.length} 个空频道，尝试外部 XML 源兜底`)
+  // ⚠️ 必须重算：3.5 的 51zmt 已经补掉一部分，emptyList 被 splice 过了，
+  //    如果沿用前面的 stillEmpty 快照，会对已经补好的频道再跑一遍聚合，白花流量。
+  const aggStillEmpty = emptyList.map((e) => e.id)
+  if (aggStillEmpty.length && !process.env.NO_AGGREGATE) {
+    log.info(`[aggregator] 仍有 ${aggStillEmpty.length} 个空频道，尝试外部 XML 源兜底`)
     try {
-      const aggTargets = targets.filter((c) => stillEmpty.includes(c.id))
+      const aggTargets = targets.filter((c) => aggStillEmpty.includes(c.id))
       const agg = await aggregate(aggTargets)
       aggReport = agg.sourceReport || []
       for (const [id, v] of agg.result || new Map()) {
@@ -400,39 +440,113 @@ async function cmdBuild() {
 
   // 3.6) 补节目简介
   //
-  // 现状：epg.pw 自带 desc 的只有港澳台频道（覆盖率很高），
-  //       大陆频道（央视/卫视/地方台）desc 全是 0。
-  // 方案：从电视猫的节目详情页抓简介，按「节目名」对齐补进来。
-  //       详情页 hash 是栏目级 ID，长期复用，所以有持久化缓存，日常增量很小。
+  // 现状：epg.pw 自带 desc 的只有港澳台频道，大陆频道（央视/卫视/地方台）基本为 0。
+  //
+  // ⚠️ 2026-10-27 起分两步，顺序很重要：
+  //
+  //   ① 先用「老张的 EPG」(51zmt) 的 e1/e2 整包——
+  //      一次下载 2.2MB（实测 2.5 秒）就能覆盖 80 个频道，
+  //      大陆央视/卫视真实简介覆盖率 60~100%，零额外请求成本。
+  //      这一步能解决绝大部分缺口，务必排在 tvmao 前面。
+  //
+  //   ② 剩下的缺口再交给电视猫（tvmao）逐频道抓详情页——
+  //      慢（每频道 7 天节目单 + 每条详情页）、有反爬风险，
+  //      但因为 ① 已经补掉大头，这里只需要处理残余，请求量能降一个量级。
+  //
+  // 统计口径统一用「真实简介」：51zmt 有 74% 的 desc 是「暂无节目描述」这类占位，
+  // 不做过滤会把覆盖率吹到 99%，实际用户看到的全是废话。
   let descStats = null
   if (!process.env.NO_DESC) {
-    try {
-      log.info('[desc] 开始补节目简介...')
-      const descMap = await enrichDescs(targets, catalog, epgMap, {
-        concurrency: Number(process.env.DESC_CONCURRENCY || 4),
-        force: process.env.DESC_FORCE === '1',
-        maxFetch: Number(process.env.DESC_MAX_FETCH || 600),
-      })
-      if (descMap && descMap.size) {
-        let filled = 0
-        for (const [, rows] of epgMap) {
-          for (const r of rows) {
-            if (r.desc && r.desc.trim()) continue
-            const d = descMap.get(r.title)
-            if (d) {
-              r.desc = d
-              filled++
+    // ⚠️ 统计口径必须和 output.mjs / 看板完全一致，否则日志报 63.9%、
+    //    report.json 里却是 62.1%，两个数字对不上会让人不知道该信哪个。
+    //    统一走 utils 的 isRealDesc（要求 ≥12 字且非占位文本）。
+    const countReal = () => {
+      let n = 0
+      let real = 0
+      for (const [, rows] of epgMap) {
+        for (const r of rows) {
+          n++
+          if (isRealDesc(r.desc)) real++
+        }
+      }
+      return { n, real }
+    }
+
+    const base = countReal()
+
+    // ① 老张的 EPG
+    let z51Stats = null
+    if (!process.env.NO_Z51) {
+      try {
+        log.info('[desc] ① 用 51zmt 整包补简介...')
+        const r = await enrichFromZ51(targets, epgMap, { force: process.env.Z51_FORCE === '1' })
+        z51Stats = {
+          channels: r.stats.size,
+          filled: [...r.stats.values()].reduce((a, v) => a + v.filled, 0),
+          packs: r.report,
+          detail: r.detail,
+          byChannel: Object.fromEntries([...r.stats].map(([id, v]) => [id, v])),
+        }
+        if (z51Stats.filled) log.ok(`[desc] ① 51zmt 补了 ${z51Stats.filled} 条`)
+        else log.info('[desc] ① 51zmt 没补到任何条目')
+      } catch (e) {
+        log.warn(`[desc] ① 51zmt 失败，忽略: ${e.message}`)
+      }
+    }
+
+    const afterZ51 = countReal()
+    if (z51Stats) {
+      z51Stats.coverageBefore = +(base.real / base.n * 100).toFixed(1)
+      z51Stats.coverageAfter = +(afterZ51.real / afterZ51.n * 100).toFixed(1)
+    }
+
+    // ② 电视猫补残余
+    let tvmaoStats = null
+    if (!process.env.NO_TVMAO_DESC) {
+      try {
+        log.info('[desc] ② 用 tvmao 详情页补剩余缺口...')
+        const descMap = await enrichDescs(targets, catalog, epgMap, {
+          concurrency: Number(process.env.DESC_CONCURRENCY || 4),
+          force: process.env.DESC_FORCE === '1',
+          maxFetch: Number(process.env.DESC_MAX_FETCH || 600),
+        })
+        if (descMap && descMap.size) {
+          let filled = 0
+          for (const [, rows] of epgMap) {
+            for (const r of rows) {
+              if (r.desc && r.desc.trim()) continue
+              const d = descMap.get(r.title)
+              if (d) {
+                r.desc = d
+                filled++
+              }
             }
           }
+          tvmaoStats = { titles: descMap.size, filled }
+          log.ok(`[desc] ② tvmao 补了 ${filled} 条`)
+        } else {
+          log.info('[desc] ② tvmao 没有可补的简介')
         }
-        log.ok(`[desc] 已补 ${filled} 条简介`)
-        descStats = { titles: descMap.size, filled }
-      } else {
-        log.info('[desc] 没有可补的简介')
+      } catch (e) {
+        log.warn(`[desc] ② tvmao 失败，忽略: ${e.message}`)
       }
-    } catch (e) {
-      log.warn(`[desc] 补简介失败，忽略: ${e.message}`)
     }
+
+    const final = countReal()
+    descStats = {
+      // 真实简介口径（去掉「暂无节目描述」等占位）
+      realCoverage: +(final.real / final.n * 100).toFixed(1),
+      realCount: final.real,
+      totalCount: final.n,
+      // 历史字段，保留兼容看板
+      titles: tvmaoStats?.titles || 0,
+      filled: (z51Stats?.filled || 0) + (tvmaoStats?.filled || 0),
+      z51: z51Stats,
+      tvmao: tvmaoStats,
+    }
+    log.info(
+      `[desc] 最终真实简介覆盖 ${descStats.realCoverage}% (${descStats.realCount}/${descStats.totalCount})`
+    )
   }
 
   // 4) 输出
@@ -448,6 +562,9 @@ async function cmdBuild() {
   })
   const xml = buildXmltv(enriched, epgMap)
   const { xmlPath, gzPath, xmlBytes, gzBytes } = writeOutput(xml, 'epg')
+
+  // 频道清单：给直播源侧填 M3U 的 tvg-id 用（见 docs/merge-plan.md）
+  const chJson = writeChannelsJson(enriched, epgMap)
 
   const report = buildReport(enriched, epgMap, {
     days: CONFIG.days,
@@ -473,6 +590,7 @@ async function cmdBuild() {
     ),
     aggregated: aggSources,
     aggregateReport: aggReport,
+    z51Filled,
     descStats,
     dayList: dates.map((d) => d.ymd),
   })
@@ -481,7 +599,9 @@ async function cmdBuild() {
   console.log('\n=== 输出 ===')
   console.log(`  ${xmlPath}  ${(xmlBytes / 1024).toFixed(0)} KB`)
   console.log(`  ${gzPath}  ${(gzBytes / 1024).toFixed(0)} KB`)
+  console.log(`  ${chJson.path}  ${chJson.count} 个频道（${chJson.withEpg} 个有节目）`)
   console.log(`  频道 ${report.channelsWithEpg}/${report.channelsTotal}，节目 ${report.programmesTotal} 条`)
+  console.log(`  真实简介覆盖 ${report.descCoverage}%（${report.programmesWithDesc}/${report.programmesTotal}）`)
 }
 
 main().catch((e) => {

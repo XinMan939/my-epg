@@ -774,6 +774,7 @@
     {
       "id": "RTHKTV33.hk",
       "name": "港台电视33",
+      "inheritFrom": "CCTV1.cn",
       "group": "hk",
       "country": "HK",
       "aliases": [
@@ -789,7 +790,8 @@
       "aliases": [
         "RTHK 34",
         "港台34"
-      ]
+      ],
+      "inheritTvmao": "CCTV-CCTV18"
     },
     {
       "id": "RTHKTV35.hk",
@@ -799,7 +801,8 @@
       "aliases": [
         "RTHK 35",
         "港台35"
-      ]
+      ],
+      "inheritTvmao": "CCTV-CCTV19"
     },
     {
       "id": "HOYTV.hk",

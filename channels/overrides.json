@@ -1,4 +1,14 @@
 {
+  "_comment_z51": "老张的 EPG（51zmt）频道 id，仅用于「节目单兜底」——主源全空时才生效。格式 e1:N / e2:N。只在『台名对不上但确实是同一个台』时才需要写，台名一致的靠自动匹配。",
+
+  "_notes_z51": {
+    "JiangsuPublicNewsChannel.cn": "51zmt 里叫「江苏新闻」(e1:349，42 条)，我们叫「江苏公共·新闻」，纯名字匹配永远命中不了。实测节目为时代问答/网罗天下/评新而论/新闻360，就是江苏公共·新闻频道的编排",
+    "ZhejiangFilmEntertainmentChannel.cn": "51zmt 里叫「浙江科教影视」(e1:659)，我们叫「浙江影视」。注意 e1:659 全天 48 条全是「精彩节目」占位，补了等于没补 → 不写，保持空",
+    "ZhejiangPublicNewsChannel.cn": "51zmt e1:661「浙江公共新闻」70 条真实节目（新闻大直播/浙江警视/爱上乡村），但我方清单里没有这个台，暂不接入"
+  },
+
+  "JiangsuPublicNewsChannel.cn": { "z51SourceId": "e1:349" },
+
   "_comment": "手工指定频道 → 源 id。优先级高于任何自动匹配，用于修正匹配错误或绕过源里的空壳频道。改完跑 node src/index.mjs check 验证。",
 
   "_notes": {
@@ -13,5 +23,13 @@
   },
 
   "SanshaSatelliteTV.cn": { "source": "tvmao", "sourceId": "SANSHATV" },
-  "ZhejiangMinshengLeisure.cn": { "source": "epgpw", "sourceId": "570490" }
+  "ZhejiangMinshengLeisure.cn": { "source": "epgpw", "sourceId": "570490" },
+
+  "_comment_desc": "以下仅用于「节目简介抓取」时指定电视猫频道路径，不影响节目单匹配。sourceId 写成两段式 'CCTVPAYFEE/CCTV4K' 表示 /program/CCTVPAYFEE/CCTV4K-w{N}.html",
+  "_notes_desc": {
+    "CCTV4K.cn": "CCTV-4K 不在 tvmao 频道清单页（/program/duration/cctv/）里，自动对齐永远找不到。但节目页真实存在：/program/CCTVPAYFEE/CCTV4K-w1.html（title 实测为「CCTV-4K节目表,CCTV-4K超高清频道节目预告」）。注意前缀是 /program/ 不是 /program_digital/",
+    "CCTV8K.cn": "tvmao 没有 CCTV-8K。/program/CCTVPAYFEE/CCTV8K-w1.html 会串台返回「风云足球节目表」，/program/CCTV-CCTV8K-w1.html 串成 CCTV-1 → 无法补简介，只能靠 epg.pw 自带（8K 频道 epg.pw 覆盖也很低）"
+  },
+
+  "CCTV4K.cn": { "descSource": "tvmao", "descSourceId": "CCTVPAYFEE/CCTV4K" }
 }
