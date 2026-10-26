@@ -2380,6 +2380,80 @@
       "name": "广州竞赛",
       "group": "local",
       "country": "CN"
+    },
+    {
+      "id": "农林卫视.cn",
+      "name": "农林卫视",
+      "group": "satellite",
+      "country": "CN",
+      "aliases": [
+        "陝西農林衛視",
+        "陕西农林卫视"
+      ]
+    },
+    {
+      "id": "AsianFood.tw",
+      "name": "AsianFood",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "亞洲美食頻道",
+        "亚洲美食频道",
+        "亞洲美食台"
+      ]
+    },
+    {
+      "id": "阿里郎.tw",
+      "name": "阿里郎",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "ARIRANG",
+        "韓國阿里郎",
+        "韩国阿里郎",
+        "阿里郎頻道"
+      ]
+    },
+    {
+      "id": "我的欧洲电影.tw",
+      "name": "我的欧洲电影",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "MCE 我的歐洲電影台",
+        "My Cinema Europe HD",
+        "我的歐洲電影"
+      ]
+    },
+    {
+      "id": "汕头经济.cn",
+      "name": "汕头经济",
+      "group": "local",
+      "country": "CN",
+      "aliases": [
+        "汕頭經濟生活",
+        "汕头经济生活"
+      ]
+    },
+    {
+      "id": "广东珠江.cn",
+      "name": "广东珠江",
+      "group": "local",
+      "country": "CN",
+      "aliases": [
+        "珠江台",
+        "廣東珠江"
+      ]
+    },
+    {
+      "id": "HBO电影.tw",
+      "name": "HBO电影",
+      "group": "pay",
+      "country": "TW",
+      "aliases": [
+        "HBO",
+        "HBO HD"
+      ]
     }
   ]
 }

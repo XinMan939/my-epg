@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T15:47:43.388Z",
+  "generatedAt": "2026-10-26T20:35:43.752Z",
   "total": 2050,
   "items": [
     {
@@ -12246,1498 +12246,1498 @@
       "source": "tvmao",
       "group": "cctv",
       "sourceId": "CCTV-CCTV1",
-      "name": "CCTV-1综合节目单",
+      "name": "CCTV-1综合",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "cctv",
       "sourceId": "CCTV-CCTV2",
-      "name": "CCTV-2财经节目单",
+      "name": "CCTV-2财经",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "cctv",
       "sourceId": "CCTV-CCTV5",
-      "name": "CCTV-5体育节目单",
+      "name": "CCTV-5体育",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "cctv",
       "sourceId": "CCTV-CCTV6",
-      "name": "CCTV-6电影节目单",
+      "name": "CCTV-6电影",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "cctv",
       "sourceId": "CCTV-CCTV10",
-      "name": "CCTV-10科教节目单",
+      "name": "CCTV-10科教",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "cctv",
       "sourceId": "CCTV-CCTV8",
-      "name": "CCTV-8电视剧节目单",
+      "name": "CCTV-8电视剧",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "cctv",
       "sourceId": "CCTV-CCTV7",
-      "name": "CCTV-7国防军事节目单",
+      "name": "CCTV-7国防军事",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "cctv",
       "sourceId": "CCTV-CCTV3",
-      "name": "CCTV-3综艺节目单",
+      "name": "CCTV-3综艺",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "cctv",
       "sourceId": "CCTV-CCTV4",
-      "name": "CCTV-4国际节目单",
+      "name": "CCTV-4国际",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "cctv",
       "sourceId": "CCTV-CCTV9",
-      "name": "CCTV-9纪录节目单",
+      "name": "CCTV-9纪录",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "cctv",
       "sourceId": "CCTV-CCTV11",
-      "name": "CCTV-11戏曲节目单",
+      "name": "CCTV-11戏曲",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "cctv",
       "sourceId": "CCTV-CCTV12",
-      "name": "CCTV-12法制节目单",
+      "name": "CCTV-12法制",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "cctv",
       "sourceId": "CCTV-CCTV13",
-      "name": "CCTV-13新闻节目单",
+      "name": "CCTV-13新闻",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "cctv",
       "sourceId": "CCTV-CCTV15",
-      "name": "CCTV-14少儿节目单",
+      "name": "CCTV-14少儿",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "cctv",
       "sourceId": "CCTV-CCTV16",
-      "name": "CCTV-15音乐节目单",
+      "name": "CCTV-15音乐",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "cctv",
       "sourceId": "CCTV-CCTV17",
-      "name": "CGTN 西语节目单",
+      "name": "CGTN 西语",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "cctv",
       "sourceId": "CCTV-CCTV18",
-      "name": "CGTN 纪录(英)节目单",
+      "name": "CGTN 纪录(英)",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "cctv",
       "sourceId": "CCTV-CCTV19",
-      "name": "CGTN节目单",
+      "name": "CGTN",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "cctv",
       "sourceId": "CCTV-CCTVEUROPE",
-      "name": "CCTV-4欧洲节目单",
+      "name": "CCTV-4欧洲",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "cctv",
       "sourceId": "CCTV-CCTVAMERICAS",
-      "name": "CCTV-4美洲节目单",
+      "name": "CCTV-4美洲",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "cctv",
       "sourceId": "CCTV-CCTVF",
-      "name": "CGTN 法语节目单",
+      "name": "CGTN 法语",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "cctv",
       "sourceId": "CCTV-CCTV5-PLUS",
-      "name": "CCTV5加节目单",
+      "name": "CCTV5加",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "cctv",
       "sourceId": "CCTV-CCTVA",
-      "name": "CGTN 阿语节目单",
+      "name": "CGTN 阿语",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "cctv",
       "sourceId": "CCTV-CCTVR",
-      "name": "CGTN 俄语节目单",
+      "name": "CGTN 俄语",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "cctv",
       "sourceId": "CCTV-CCTV17NY",
-      "name": "CCTV-17农业节目单",
+      "name": "CCTV-17农业",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "cctv",
       "sourceId": "CCTV-CCTVOLY",
-      "name": "CCTV-16奥林匹克节目单",
+      "name": "CCTV-16奥林匹克",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "AHTV1",
-      "name": "安徽卫视节目单",
+      "name": "安徽卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "BTV1",
-      "name": "北京卫视节目单",
+      "name": "北京卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "BTV10",
-      "name": "卡酷少儿节目单",
+      "name": "卡酷少儿",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "CCQTV1",
-      "name": "重庆卫视节目单",
+      "name": "重庆卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "FJTV2",
-      "name": "东南卫视节目单",
+      "name": "东南卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "XMTV5",
-      "name": "厦门卫视节目单",
+      "name": "厦门卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "GSTV1",
-      "name": "甘肃卫视节目单",
+      "name": "甘肃卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "GDTV1",
-      "name": "广东卫视节目单",
+      "name": "广东卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "SZTV1",
-      "name": "深圳卫视节目单",
+      "name": "深圳卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "GUANXI1",
-      "name": "广西卫视节目单",
+      "name": "广西卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "GUIZOUTV1",
-      "name": "贵州卫视节目单",
+      "name": "贵州卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "TCTC1",
-      "name": "海南卫视节目单",
+      "name": "海南卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "HEBEI1",
-      "name": "河北卫视节目单",
+      "name": "河北卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "HLJTV1",
-      "name": "黑龙江卫视节目单",
+      "name": "黑龙江卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "HNTV1",
-      "name": "河南卫视节目单",
+      "name": "河南卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "HUBEI1",
-      "name": "湖北卫视节目单",
+      "name": "湖北卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "HUNANTV1",
-      "name": "湖南卫视节目单",
+      "name": "湖南卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "HUNANTV2",
-      "name": "湖南金鹰卡通频道节目单",
+      "name": "湖南金鹰卡通频道",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "JSTV1",
-      "name": "江苏卫视节目单",
+      "name": "江苏卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "JXTV1",
-      "name": "江西卫视节目单",
+      "name": "江西卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "JILIN1",
-      "name": "吉林卫视节目单",
+      "name": "吉林卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "LNTV1",
-      "name": "辽宁卫视节目单",
+      "name": "辽宁卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "NMGTV1",
-      "name": "内蒙卫视节目单",
+      "name": "内蒙卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "NXTV2",
-      "name": "宁夏卫视节目单",
+      "name": "宁夏卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "SXTV1",
-      "name": "山西卫视节目单",
+      "name": "山西卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "SDTV1",
-      "name": "山东卫视节目单",
+      "name": "山东卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "DONGFANG1",
-      "name": "东方卫视节目单",
+      "name": "东方卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "TOONMAX1",
-      "name": "哈哈炫动节目单",
+      "name": "哈哈炫动",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "SHXITV1",
-      "name": "陕西卫视节目单",
+      "name": "陕西卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "SCTV1",
-      "name": "四川卫视节目单",
+      "name": "四川卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "TJTV1",
-      "name": "天津卫视节目单",
+      "name": "天津卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "XJTV1",
-      "name": "新疆卫视节目单",
+      "name": "新疆卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "YNTV1",
-      "name": "云南卫视节目单",
+      "name": "云南卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "ZJTV1",
-      "name": "浙江卫视节目单",
+      "name": "浙江卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "QHTV1",
-      "name": "青海卫视节目单",
+      "name": "青海卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "XIZANGTV1",
-      "name": "藏语卫视节目单",
+      "name": "藏语卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "XIZANGTV2",
-      "name": "西藏卫视节目单",
+      "name": "西藏卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "YANBIAN1",
-      "name": "延边卫视节目单",
+      "name": "延边卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "BINGTUAN",
-      "name": "兵团卫视节目单",
+      "name": "兵团卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "HXTV",
-      "name": "海峡卫视节目单",
+      "name": "海峡卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "HHWS",
-      "name": "黄河卫视节目单",
+      "name": "黄河卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "KAMBA-TV",
-      "name": "康巴卫视节目单",
+      "name": "康巴卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "satellite",
       "sourceId": "SANSHATV",
-      "name": "三沙卫视节目单",
+      "name": "三沙卫视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CCTVPAYFEE-CCTVPAYFEE1",
-      "name": "风云足球节目单",
+      "name": "风云足球",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CCTVPAYFEE-CCTVPAYFEE2",
-      "name": "风云音乐节目单",
+      "name": "风云音乐",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CCTVPAYFEE-CCTVPAYFEE3",
-      "name": "第一剧场节目单",
+      "name": "第一剧场",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CCTVPAYFEE-CCTVPAYFEE4",
-      "name": "风云剧场节目单",
+      "name": "风云剧场",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CCTVPAYFEE-CCTVPAYFEE5",
-      "name": "世界地理节目单",
+      "name": "世界地理",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CCTVPAYFEE-CCTVPAYFEE6",
-      "name": "电视指南节目单",
+      "name": "电视指南",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CCTVPAYFEE-CCTVPAYFEE7",
-      "name": "怀旧剧场节目单",
+      "name": "怀旧剧场",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CCTVPAYFEE-CCTVPAYFEE8",
-      "name": "兵器科技节目单",
+      "name": "兵器科技",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CCTVPAYFEE-CCTVPAYFEE9",
-      "name": "女性时尚节目单",
+      "name": "女性时尚",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CCTVPAYFEE-CCTVPAYFEE13",
-      "name": "高尔夫网球节目单",
+      "name": "高尔夫网球",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CCTVPAYFEE-CCTVPAYFEE14",
-      "name": "央视精品节目单",
+      "name": "央视精品",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CCTVPAYFEE-CCTVPAYFEE15",
-      "name": "中视购物节目单",
+      "name": "中视购物",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CCTVPAYFEE-CCTVPAYFEE17",
-      "name": "法律服务节目单",
+      "name": "法律服务",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CCTVPAYFEE-CCTVPAYFEE20",
-      "name": "梨园节目单",
+      "name": "梨园",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CCTVPAYFEE-CCTVPAYFEE22",
-      "name": "汽摩节目单",
+      "name": "汽摩",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CCTVPAYFEE-CCTVPAYFEE24",
-      "name": "留学世界*节目单",
+      "name": "留学世界*",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CCTVPAYFEE-CCTVPAYFEE25",
-      "name": "青年学苑*节目单",
+      "name": "青年学苑*",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CCTVPAYFEE-PHOTOGRAPHY-CHANNEL",
-      "name": "摄影频道节目单",
+      "name": "摄影频道",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CCTVPAYFEE-TIANYUANWEIQI",
-      "name": "天元围棋节目单",
+      "name": "天元围棋",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CCTVPAYFEE-CCTVPAYFEE33",
-      "name": "早期教育节目单",
+      "name": "早期教育",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CCTVPAYFEE-CCTVPAYFEE35",
-      "name": "CCTV中学生频道节目单",
+      "name": "CCTV中学生频道",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CCTVPAYFEE-CCTVPAYFEE36",
-      "name": "CCTV央视台球节目单",
+      "name": "CCTV央视台球",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CETV-CETV1",
-      "name": "中国教育节目单",
+      "name": "中国教育",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CETV-CETV2",
-      "name": "中教二台节目单",
+      "name": "中教二台",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CETV-CETV3",
-      "name": "中教三台节目单",
+      "name": "中教三台",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CETV-CETV4",
-      "name": "中教四台节目单",
+      "name": "中教四台",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "SITV3",
-      "name": "法治天地节目单",
+      "name": "法治天地",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "SITV6",
-      "name": "金色学堂节目单",
+      "name": "金色学堂",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "SITV13",
-      "name": "卫生健康节目单",
+      "name": "卫生健康",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "SITV14",
-      "name": "东方财经&middot;浦东节目单",
+      "name": "东方财经&middot;浦东",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "SITV15",
-      "name": "SITV经典剧场节目单",
+      "name": "SITV经典剧场",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "SITV21",
-      "name": "动作影院*节目单",
+      "name": "动作影院*",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "SITV22",
-      "name": "英语教室*节目单",
+      "name": "英语教室*",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "SITV26",
-      "name": "玩具益智节目单",
+      "name": "玩具益智",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CCTVPAYFEE-WUSHUSHIJIE",
-      "name": "武术世界节目单",
+      "name": "武术世界",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "SITV30",
-      "name": "新视觉节目单",
+      "name": "新视觉",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CHC-CHC1",
-      "name": "CHC动作电影节目单",
+      "name": "CHC动作电影",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CHC-CHC2",
-      "name": "CHC家庭影院节目单",
+      "name": "CHC家庭影院",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CHC-CHC3",
-      "name": "CHC影迷电影节目单",
+      "name": "CHC影迷电影",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "BAMC-BAMC3",
-      "name": "优优宝贝节目单",
+      "name": "优优宝贝",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "BAMC-BAMC4",
-      "name": "四海钓鱼节目单",
+      "name": "四海钓鱼",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "BAMC-BAMC5",
-      "name": "动感音乐*节目单",
+      "name": "动感音乐*",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "BAMC-BAMC6",
-      "name": "环球旅游节目单",
+      "name": "环球旅游",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "BAMC-BAMC8",
-      "name": "京视剧场*节目单",
+      "name": "京视剧场*",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "BAMC-BAMC9",
-      "name": "爱家购物节目单",
+      "name": "爱家购物",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "BAMC-BAMC10",
-      "name": "弈坛春秋*节目单",
+      "name": "弈坛春秋*",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "BAMC-BAMC11",
-      "name": "置业频道*节目单",
+      "name": "置业频道*",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CCTVPAYFEE-CCTVPAYFEE37",
-      "name": "书画频道节目单",
+      "name": "书画频道",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "BAMC-CAIFUTIANXIA",
-      "name": "财富天下节目单",
+      "name": "财富天下",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "BAMC-CHINA-WEATHER-TV",
-      "name": "中国天气频道节目单",
+      "name": "中国天气频道",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "BAMC-FAMILY-CHANNEL",
-      "name": "证券服务节目单",
+      "name": "证券服务",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CCTVPAYFEE-CCTVFXZL",
-      "name": "发现之旅节目单",
+      "name": "发现之旅",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CCTVPAYFEE-HUANQIUQIGUAN",
-      "name": "环球奇观节目单",
+      "name": "环球奇观",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CCTVPAYFEE-SHUOWENJIEZI",
-      "name": "国学节目单",
+      "name": "国学",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CCTVPAYFEE-WENWUBAOKU",
-      "name": "文物宝库节目单",
+      "name": "文物宝库",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CCTVPAYFEE-YOUERJIAOYU",
-      "name": "幼儿教育节目单",
+      "name": "幼儿教育",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CCTVPAYFEE-CCTVLAOGUSHI",
-      "name": "CCTV老故事节目单",
+      "name": "CCTV老故事",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CCTVPAYFEE-KUAILECHUIDIAO",
-      "name": "快乐垂钓节目单",
+      "name": "快乐垂钓",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "EUROPEFOOTBALL",
-      "name": "欧洲足球*节目单",
+      "name": "欧洲足球*",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "FANGCHAN",
-      "name": "房产频道*节目单",
+      "name": "房产频道*",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "SITV-SPORTS",
-      "name": "劲爆体育节目单",
+      "name": "劲爆体育",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "SITV-DOCUMENTARY",
-      "name": "乐游节目单",
+      "name": "乐游",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "SITV-MOVIES",
-      "name": "多彩文体节目单",
+      "name": "多彩文体",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "SITV-YULE",
-      "name": "魅力足球节目单",
+      "name": "魅力足球",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "DOXYH",
-      "name": "DOX映画节目单",
+      "name": "DOX映画",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "DOXJC",
-      "name": "DOX剧场节目单",
+      "name": "DOX剧场",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "DIGITAL-ERA",
-      "name": "数码时代*节目单",
+      "name": "数码时代*",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CCTVPAYFEE-DANGJIAO",
-      "name": "全国党教节目单",
+      "name": "全国党教",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "DONGFANGGW2",
-      "name": "东方购物二套节目单",
+      "name": "东方购物二套",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "DIANBOYINGYUAN",
-      "name": "点播影院节目单",
+      "name": "点播影院",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CNRMALL",
-      "name": "央广购物节目单",
+      "name": "央广购物",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "UGO",
-      "name": "优购物节目单",
+      "name": "优购物",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "JIAJIAMALL",
-      "name": "家家购物节目单",
+      "name": "家家购物",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "TTCJMALL",
-      "name": "三佳购物节目单",
+      "name": "三佳购物",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "TTGW",
-      "name": "亲子游戏节目单",
+      "name": "亲子游戏",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "JIAYOUGO",
-      "name": "家有购物节目单",
+      "name": "家有购物",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "JINGCAILIAONING",
-      "name": "晴彩辽宁节目单",
+      "name": "晴彩辽宁",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "YYTD",
-      "name": "音乐天地节目单",
+      "name": "音乐天地",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "HSCM-TSJS",
-      "name": "HD探索纪录节目单",
+      "name": "HD探索纪录",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "HSCM-OMYY",
-      "name": "HD欧美影院节目单",
+      "name": "HD欧美影院",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "IPTVEFEL",
-      "name": "外汇理财节目单",
+      "name": "外汇理财",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "SITV-ZXQX",
-      "name": "资讯气象*节目单",
+      "name": "资讯气象*",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "DOXXZ",
-      "name": "DOX新知节目单",
+      "name": "DOX新知",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "DOXXY",
-      "name": "DOX新艺节目单",
+      "name": "DOX新艺",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "BAMC-GLOBALGO",
-      "name": "聚鲨环球精选节目单",
+      "name": "聚鲨环球精选",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "SITV-CHILDREN",
-      "name": "动漫秀场节目单",
+      "name": "动漫秀场",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "SITV-FASHION",
-      "name": "生活时尚节目单",
+      "name": "生活时尚",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "SITV-MOVIE",
-      "name": "都市剧场节目单",
+      "name": "都市剧场",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "SITV-GAME",
-      "name": "游戏风云节目单",
+      "name": "游戏风云",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "JDDY",
-      "name": "环宇电影节目单",
+      "name": "环宇电影",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "YZDY",
-      "name": "亚洲电影节目单",
+      "name": "亚洲电影",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "DOX-CINEMA",
-      "name": "DOX院线节目单",
+      "name": "DOX院线",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "DOXYL",
-      "name": "DOX英伦节目单",
+      "name": "DOX英伦",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "DOXYJ",
-      "name": "DOX怡家节目单",
+      "name": "DOX怡家",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "HSCM-QSJL",
-      "name": "求索纪录节目单",
+      "name": "求索纪录",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "HSCM-QSDW",
-      "name": "求索动物节目单",
+      "name": "求索动物",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "HSCM-QSKX",
-      "name": "求索科学节目单",
+      "name": "求索科学",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "HSCM-HSJPJC",
-      "name": "HD精品剧场节目单",
+      "name": "HD精品剧场",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "HSCM-HSSEDM",
-      "name": "HD少儿动漫节目单",
+      "name": "HD少儿动漫",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "HSCM-HSDGYC",
-      "name": "动感英超节目单",
+      "name": "动感英超",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "OMDY",
-      "name": "欧美电影节目单",
+      "name": "欧美电影",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "XYOMJC",
-      "name": "星元欧美剧场节目单",
+      "name": "星元欧美剧场",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "XYOMYX",
-      "name": "星元欧美院线节目单",
+      "name": "星元欧美院线",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "XYYZJC",
-      "name": "星元亚洲剧场节目单",
+      "name": "星元亚洲剧场",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "XYYZYX",
-      "name": "星元亚洲院线节目单",
+      "name": "星元亚洲院线",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "XYSY",
-      "name": "星元首映节目单",
+      "name": "星元首映",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "XYCZ",
-      "name": "星元成长节目单",
+      "name": "星元成长",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "XYGJ",
-      "name": "星元国剧节目单",
+      "name": "星元国剧",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "XYSE",
-      "name": "星元少儿节目单",
+      "name": "星元少儿",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "XYCWDS",
-      "name": "川网导视节目单",
+      "name": "川网导视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "KKXW",
-      "name": "Knews24节目单",
+      "name": "Knews24",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "SSJX2",
-      "name": "赛事精选-2节目单",
+      "name": "赛事精选-2",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "SSJX3",
-      "name": "赛事精选-3节目单",
+      "name": "赛事精选-3",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "DJTT",
-      "name": "电竞天堂节目单",
+      "name": "电竞天堂",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "JGC",
-      "name": "竞G场节目单",
+      "name": "竞G场",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "CJWJ",
-      "name": "超级玩家节目单",
+      "name": "超级玩家",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "XJYY2",
-      "name": "星光院线节目单",
+      "name": "星光院线",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "RMJC",
-      "name": "热门剧场节目单",
+      "name": "热门剧场",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "WXJC",
-      "name": "武侠剧场节目单",
+      "name": "武侠剧场",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "GZJC",
-      "name": "古装剧场节目单",
+      "name": "古装剧场",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "DZJC",
-      "name": "谍战剧场节目单",
+      "name": "谍战剧场",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "IPTV3",
-      "name": "IPTV3+节目单",
+      "name": "IPTV3+",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "IPTV5",
-      "name": "IPTV5+节目单",
+      "name": "IPTV5+",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "IPTV6",
-      "name": "IPTV6+节目单",
+      "name": "IPTV6+",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "IPTV8",
-      "name": "IPTV8+节目单",
+      "name": "IPTV8+",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "IPTVDZJC",
-      "name": "IPTV谍战剧场节目单",
+      "name": "IPTV谍战剧场",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "IPTVXSXP",
-      "name": "IPTV相声小品节目单",
+      "name": "IPTV相声小品",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "IPTVYW",
-      "name": "IPTV野外节目单",
+      "name": "IPTV野外",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "IPTVFZ",
-      "name": "IPTV法治节目单",
+      "name": "IPTV法治",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "IPTVRBJC",
-      "name": "IPTV热播剧场节目单",
+      "name": "IPTV热播剧场",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "IPTVSEDH",
-      "name": "IPTV少儿动画节目单",
+      "name": "IPTV少儿动画",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "IPTVMLSS",
-      "name": "IPTV魅力时尚节目单",
+      "name": "IPTV魅力时尚",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "GJFY",
-      "name": "港剧风云节目单",
+      "name": "港剧风云",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "MEISHI",
-      "name": "IPTV美食节目单",
+      "name": "IPTV美食",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "LVYOU",
-      "name": "IPTV旅游节目单",
+      "name": "IPTV旅游",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "NVREN",
-      "name": "IPTV女人节目单",
+      "name": "IPTV女人",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "NFGW",
-      "name": "南方购物节目单",
+      "name": "南方购物",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "BSTYCH",
-      "name": "IPTV演唱会节目单",
+      "name": "IPTV演唱会",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "NMGZQ",
-      "name": "足球频道节目单",
+      "name": "足球频道",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "HSCM-HSJCYS",
-      "name": "精彩影视节目单",
+      "name": "精彩影视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "HUDONG",
-      "name": "互动导视节目单",
+      "name": "互动导视",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "ZGJTPD",
-      "name": "中国交通频道节目单",
+      "name": "中国交通频道",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "DOXYAQUPD",
-      "name": "DOX雅趣节目单",
+      "name": "DOX雅趣",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "BAMC-ZHTCTV",
-      "name": "中华特产节目单",
+      "name": "中华特产",
       "logo": ""
     },
     {
       "source": "tvmao",
       "group": "digital",
       "sourceId": "BAMC-CWJINGDIAN",
-      "name": "重温经典频道节目单",
+      "name": "重温经典频道",
       "logo": ""
     },
     {

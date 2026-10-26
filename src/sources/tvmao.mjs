@@ -28,6 +28,12 @@ export const PATHS = {
 
 /** 由 sourceId 推断路径前缀。sourceId 形如 "CCTV-CCTV1" / "HUNANTV1" / "CCTVPAYFEE-CCTVPAYFEE1" */
 export function inferPath(sourceId) {
+  // 2026-10-27 站点改版后实测（三条都返回 200，但只有前两条是正确页面）：
+  //   /program/CCTV-CCTV1-w2.html        68600B  ✓ 央视
+  //   /program/cctv/CCTV-CCTV1-w2.html   34114B  ✗ 尺寸差一半，内容不对
+  //   /program_satellite/HUNANTV1-w2.html        ✓ 卫视
+  //   /program_digital/CCTVPAYFEE-...-w2.html    ✓ 数字付费
+  // 所以带 CCTVPAYFEE- 前缀走 digital，其余央视走 cctv（= /program/），别再加 cctv/ 子目录。
   if (/^CCTVPAYFEE-/i.test(sourceId)) return PATHS.digital
   if (/^CCTV-/i.test(sourceId)) return PATHS.cctv
   // 卫视类：形如 HUNANTV1 / ZJTV1 / BTV1
@@ -110,12 +116,21 @@ export async function listChannels() {
       continue
     }
 
-    const re = /href="(\/program[a-z_]*\/([A-Za-z0-9\-]+)-w1\.html)"\s*\n?\s*title="([^"]+)"/g
+    // ⚠️ 2026-10-27 站点改版，旧正则一条都匹配不上，tvmao 源整个消失（214 频道 → 0），
+    //    连带简介率从 61.2% 掉到 60%。两处变化：
+    //    ① 路径：央视/数字 → /program/<ID>-wN.html；卫视 → /program_satellite/<ID>-wN.html
+    //       （旧正则写死 /program[a-z_]*/ 能同时吃两种，新写法反而只认 /program/，卫视全丢）
+    //    ② ID：CCTV1 → CCTV-CCTV1，加了分组前缀
+    //    所以这里把路径前缀做成捕获组，后面交给 inferPath 决定怎么拼。
+    const re =
+      /<a href="(\/program(?:_satellite|_digital)?\/([A-Za-z0-9\-]+)-w\d+\.html)"\s*\n?\s*title="([^"]+)"/g
     let m
     const seen = new Set()
     while ((m = re.exec(res.text))) {
       const sourceId = m[2]
-      const name = m[3].trim()
+      // 2026-10-27 改版后 title 变成了「CCTV-1综合节目单」，直接拿去匹配会把名字搞脏，
+      // 剥掉结尾的「节目单」「节目预告」再入库。
+      const name = m[3].trim().replace(/(?:节目单|节目预告|节目表)$/, '').trim()
       if (seen.has(sourceId)) continue
       seen.add(sourceId)
       out.push({ source: 'tvmao', group, sourceId, name, logo: '' })

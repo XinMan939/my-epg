@@ -617,21 +617,21 @@ export async function enrichDescs(targets, catalog, epgMap, opts = {}) {
 /**
  * 由 tvmao 的 sourceId 推断节目单 URL 前缀
  *
- * 实测三种前缀（2026-10-27）：
+ * 实测三种前缀（2026-10-27 改版后）：
  *   央视     /program/CCTV-CCTV1-w1.html
  *   卫视     /program_satellite/HUNANTV1-w1.html
  *   数字付费 /program_digital/CCTVPAYFEE-CCTVPAYFEE1-w1.html
  *
- * 外加一个特例：CCTV-4K / CCTV-8K 走「两段式」路径，形如
- *   /program/CCTVPAYFEE/CCTV4K-w1.html
- * 注意是 /program/ 而不是 /program_digital/，且 ID 段是 CCTVPAYFEE、末段是 CCTV4K。
- * 这两个频道在 tvmao 的频道清单页（/program/duration/cctv/…）里根本没收录，
- * 所以自动对齐找不到它们，只能靠 overrides.json 手工指定成 "CCTVPAYFEE/CCTV4K"。
+ * ⚠️ 旧版 CCTV-4K / CCTV-8K 走「两段式」路径 /program/CCTVPAYFEE/CCTV4K-w1.html，
+ *    2026-10-27 站点改版后已失效（实测返回 0 条）。现在直接用
+ *    /program/CCTV-CCTV4K-w1.html，34 条节目，title 为「CCTV-4K节目表…」。
+ *    所以 overrides.json 里 CCTV4K.cn 的 descSourceId 已改成 "CCTV-CCTV4K"。
+ *    两段式分支保留着，仅作兼容，新配置不要再用。
  *
  * @returns {{prefix: string, id: string}} 前缀 + 末段 id
  */
 function tvmaoRoute(sourceId) {
-  // 两段式特例：sourceId 里带斜杠，如 "CCTVPAYFEE/CCTV4K"
+  // 兼容旧两段式写法（如 "CCTVPAYFEE/CCTV4K"）——改版后基本失效，别再新增
   if (sourceId.includes('/')) {
     const [head, tail] = sourceId.split('/')
     return { prefix: `/program/${head}/`, id: tail }

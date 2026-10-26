@@ -1,21 +1,18 @@
 {
   "_comment_z51": "老张的 EPG（51zmt）频道 id，仅用于「节目单兜底」——主源全空时才生效。格式 e1:N / e2:N。只在『台名对不上但确实是同一个台』时才需要写，台名一致的靠自动匹配。",
-
   "_notes_z51": {
     "JiangsuPublicNewsChannel.cn": "51zmt 里叫「江苏新闻」(e1:349，42 条)，我们叫「江苏公共·新闻」，纯名字匹配永远命中不了。实测节目为时代问答/网罗天下/评新而论/新闻360，就是江苏公共·新闻频道的编排",
     "ZhejiangFilmEntertainmentChannel.cn": "51zmt 里叫「浙江科教影视」(e1:659)，我们叫「浙江影视」。注意 e1:659 全天 48 条全是「精彩节目」占位，补了等于没补 → 不写，保持空",
     "ZhejiangPublicNewsChannel.cn": "51zmt e1:661「浙江公共新闻」70 条真实节目（新闻大直播/浙江警视/爱上乡村），但我方清单里没有这个台，暂不接入"
   },
-
-  "JiangsuPublicNewsChannel.cn": { "z51SourceId": "e1:349" },
-
+  "JiangsuPublicNewsChannel.cn": {
+    "z51SourceId": "e1:349"
+  },
   "_comment_titleMap": "手工标题映射：{ 频道id: { from: '51zmt频道key', titles: { '原标题': '51zmt里的中文标题' } } }。用于「标题压根不是中文」的频道——港台35转播CGTN标题是英文、延边卫视标题是朝鲜语，任何按文本相等的匹配都命中不了。from 指定从哪个51zmt频道取简介（不写则用全局索引）。改完跑 node src/index.mjs check 验证。",
-
   "_notes_titleMap": {
     "RTHKTV35.hk": "港台电视35 全天转播 CGTN，265 条全是英文栏目名。51zmt 的 e1:20「CGTN」标题恰好是中文译名（今日世界/对话/非洲直播室/中国24小时…），带真实简介。逐条人工核对译名，不靠模糊匹配——「对话」在 CCTV-2 是另一个完全不同的栏目。",
     "YanbianSatelliteTV.cn": "延边卫视 167 条里 21 个唯一标题是朝鲜语。51zmt e1:63「延边卫视」只有 8 条真实简介，能安全对上的仅 3 条；其余（드라마/일기예보/특집프로…）上游本身没简介，不硬凑。"
   },
-
   "RTHKTV35.hk": {
     "from": "e1:20",
     "titles": {
@@ -32,7 +29,6 @@
       "Talk Africa": "非洲直播室"
     }
   },
-
   "YanbianSatelliteTV.cn": {
     "from": "e1:63",
     "titles": {
@@ -41,9 +37,7 @@
       "동물세계": "动画片"
     }
   },
-
   "_comment": "手工指定频道 → 源 id。优先级高于任何自动匹配，用于修正匹配错误或绕过源里的空壳频道。改完跑 node src/index.mjs check 验证。",
-
   "_notes": {
     "SanshaSatelliteTV.cn": "epgpw 的 539632/410381 都是空壳（注册了但零节目），tvmao 有完整数据（含真实结束时间），tvsou 是空表 → 用 tvmao",
     "ZhejiangMinshengLeisure.cn": "epgpw 539891「浙江民生休闲」零节目，改用 570490「浙江民生」（52 条）",
@@ -54,15 +48,52 @@
     "HunanCityChannel.cn": "湖南都市在三个源里没有 → 保持未匹配",
     "HunanPublicChannel.cn": "湖南公共在三个源里没有 → 保持未匹配"
   },
-
-  "SanshaSatelliteTV.cn": { "source": "tvmao", "sourceId": "SANSHATV" },
-  "ZhejiangMinshengLeisure.cn": { "source": "epgpw", "sourceId": "570490" },
-
-  "_comment_desc": "以下仅用于「节目简介抓取」时指定电视猫频道路径，不影响节目单匹配。sourceId 写成两段式 'CCTVPAYFEE/CCTV4K' 表示 /program/CCTVPAYFEE/CCTV4K-w{N}.html",
+  "SanshaSatelliteTV.cn": {
+    "source": "tvmao",
+    "sourceId": "SANSHATV"
+  },
+  "ZhejiangMinshengLeisure.cn": {
+    "source": "epgpw",
+    "sourceId": "570490"
+  },
+  "_comment_desc": "以下仅用于「节目简介抓取」时指定电视猫频道，不影响节目单匹配。sourceId 直接用 catalog 里的写法（如 CCTV-CCTV4K / CCTVPAYFEE-CCTVPAYFEE1 / HUNANTV1），路径前缀由 tvmaoRoute() 按前缀自动推断。旧的两段式写法「CCTVPAYFEE/CCTV4K」已因站点改版失效，不要再用。",
   "_notes_desc": {
-    "CCTV4K.cn": "CCTV-4K 不在 tvmao 频道清单页（/program/duration/cctv/）里，自动对齐永远找不到。但节目页真实存在：/program/CCTVPAYFEE/CCTV4K-w1.html（title 实测为「CCTV-4K节目表,CCTV-4K超高清频道节目预告」）。注意前缀是 /program/ 不是 /program_digital/",
+    "CCTV4K.cn": "2026-10-27 tvmao 改版后，旧两段式 /program/CCTVPAYFEE/CCTV4K-w1.html 已失效（0 条）。改用 /program/CCTV-CCTV4K-w1.html，34 条节目，title 实测「CCTV-4K节目表,CCTV-4K超高清频道节目预告」。",
     "CCTV8K.cn": "tvmao 没有 CCTV-8K。/program/CCTVPAYFEE/CCTV8K-w1.html 会串台返回「风云足球节目表」，/program/CCTV-CCTV8K-w1.html 串成 CCTV-1 → 无法补简介，只能靠 epg.pw 自带（8K 频道 epg.pw 覆盖也很低）"
   },
-
-  "CCTV4K.cn": { "descSource": "tvmao", "descSourceId": "CCTVPAYFEE/CCTV4K" }
+  "CCTV4K.cn": {
+    "descSource": "tvmao",
+    "descSourceId": "CCTV-CCTV4K"
+  },
+  "农林卫视.cn": {
+    "source": "epgpw",
+    "sourceId": "570491"
+  },
+  "AsianFood.tw": {
+    "source": "epgpw",
+    "sourceId": "457281"
+  },
+  "阿里郎.tw": {
+    "source": "epgpw",
+    "sourceId": "456650"
+  },
+  "我的欧洲电影.tw": {
+    "source": "epgpw",
+    "sourceId": "457377"
+  },
+  "汕头经济.cn": {
+    "source": "epgpw",
+    "sourceId": "544379"
+  },
+  "广东珠江.cn": {
+    "source": "epgpw",
+    "sourceId": "544420",
+    "z51SourceId": "e1:1759"
+  },
+  "HBO电影.tw": {
+    "source": "epgpw",
+    "sourceId": "456655"
+  },
+  "_notes_epgpw_misaligned": "epg.pw 里有些 id 的 display-name 与实际节目内容不是同一个台，纯按名字匹配会挂错。实测两个：① 370247 display-name「My Cinema Europe HD 我的歐洲電影」，节目却是 Newshour / Inside Story / Al Jazeera World（半岛英文台）；② 570483 display-name「CGTN西语」，节目却是 剧场 / 寻味中国 / 这就是中国（中文节目）。所以「我的欧洲电影」改用 457377（MCE 我的歐洲電影台，节目为 黑蝶漫舞/聚焦謀殺案，确认是电影台）；「CGTN西班牙语」保持空缺，宁空不挂错台。",
+  "_notes_z51_广东珠江": "epg.pw 的 544420（中央台–珠江）只有 20261026 一天数据，构建窗口从 20261027 起 → 等于 0 条。51zmt 的 e1:1759「珠江频道」有 20261027+20261028 两天 42 条、34 条真实简介（今日关注/剧场:云水怒/南海海洋环境预报），明显更好。"
 }
