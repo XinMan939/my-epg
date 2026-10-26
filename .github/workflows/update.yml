@@ -58,6 +58,17 @@ jobs:
           restore-keys: |
             epg-cache-
 
+      # 刷新直播源映射表：channels.json 变了（比如新增频道）而 m3u-map.json
+      # 没跟着刷新的话，epg-m3u.xml 里那些新频道还是规范 id，播放器挂不上。
+      # 失败不阻塞构建 —— 用上一次的映射表也能出 epg-m3u.xml。
+      - name: 刷新直播源映射
+        continue-on-error: true
+        env:
+          TZ: Asia/Shanghai
+        run: |
+          URL="https://cdn.jsdelivr.net/gh/XinMan939/iptv-api@master/output/result.m3u"
+          node src/index.mjs m3u "$URL" || echo "::warning::m3u 对齐失败，沿用 channels/m3u-map.json 里上一次的映射"
+
       - name: 生成节目表
         env:
           DAYS: ${{ github.event.inputs.days || '7' }}
