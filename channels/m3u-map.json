@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-26T19:25:56.936Z",
-  "source": ".probe/mine/r.m3u",
+  "generatedAt": "2026-10-26T19:48:40.556Z",
+  "source": "https://cdn.jsdelivr.net/gh/XinMan939/iptv-api@master/output/result.m3u",
   "stats": {
     "epgChannels": 275,
     "m3uIds": 318,

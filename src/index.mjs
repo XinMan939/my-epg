@@ -654,10 +654,43 @@ async function cmdM3u() {
 
   let text
   if (/^https?:\/\//i.test(arg)) {
-    log.info('下载 ' + arg)
-    const res = await fetch(arg, { redirect: 'follow' })
-    if (!res.ok) throw new Error('下载失败 HTTP ' + res.status)
-    text = await res.text()
+    // ⚠️ jsdelivr 的反爬规则是反的：浏览器 UA → 403，curl UA → 200。
+    // 实测 `User-Agent: curl/8.5.0` 能过，项目默认的 Chrome UA 会被拦。
+    // 所以这里不用 utils 的 fetchText（它固定用浏览器 UA），自己带 UA 抓。
+    // raw.githubusercontent 在部分网络下不可达，失败时自动换镜像重试。
+    const candidates = [arg]
+    const ghRaw = arg.match(/^https?:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/([^/]+)\/(.+)$/i)
+    if (ghRaw) {
+      const [, owner, repo, branch, file] = ghRaw
+      candidates.push(`https://cdn.jsdelivr.net/gh/${owner}/${repo}@${branch}/${file}`)
+      candidates.push(`https://ghfast.top/${arg}`)
+    }
+
+    let lastErr = ''
+    for (const url of candidates) {
+      log.info('下载 ' + url)
+      const ac = new AbortController()
+      const timer = setTimeout(() => ac.abort(), 60000)
+      try {
+        const res = await fetch(url, {
+          redirect: 'follow',
+          signal: ac.signal,
+          headers: { 'User-Agent': 'curl/8.5.0', Accept: '*/*' },
+        })
+        const body = await res.text()
+        clearTimeout(timer)
+        if (res.ok && body) {
+          text = body
+          break
+        }
+        lastErr = `HTTP ${res.status}`
+      } catch (e) {
+        clearTimeout(timer)
+        lastErr = e.message
+      }
+      log.warn(`下载失败（${lastErr}）${candidates.length > 1 ? '，换下一个地址' : ''}`)
+    }
+    if (!text) throw new Error('下载失败：' + lastErr)
   } else {
     text = fs.readFileSync(arg, 'utf8')
   }
@@ -693,20 +726,43 @@ async function cmdM3u() {
   const { mapping, detail, stats } = alignToM3u(enriched, parsed, manual)
   const { list, byGroup } = listUnmatched(parsed, mapping)
 
-  saveJson(mapPath, {
-    generatedAt: new Date().toISOString(),
-    source: arg,
-    stats,
-    manual,
-    mapping,
-    detail,
-    unmatched: list,
-  })
+  // 安全阀：上游 m3u 改版 / 抓取半途中断时，匹配数会突然塌下来。
+  // 这时如果照旧覆盖 m3u-map.json，会把一份好映射换成坏映射，
+  // 下次 build 出来的 epg-m3u.xml 会大面积挂不上——比不更新更糟。
+  // 所以只要比上一版少了两成以上，就拒绝覆盖。
+  let prev = null
+  if (fs.existsSync(mapPath)) {
+    try {
+      prev = JSON.parse(fs.readFileSync(mapPath, 'utf8'))
+    } catch {
+      /* 忽略 */
+    }
+  }
+  const prevMatched = prev?.stats?.matched || 0
+  const regressed = prevMatched > 0 && stats.matched < prevMatched * 0.8
+  if (regressed) {
+    log.warn(
+      `[m3u] 匹配数从 ${prevMatched} 掉到 ${stats.matched}（降幅 ${Math.round(
+        (1 - stats.matched / prevMatched) * 100
+      )}%），疑似上游改版或抓取不完整，保留原映射表不覆盖`
+    )
+    log.warn('[m3u] 确认这次是对的就手工删掉 channels/m3u-map.json 再跑一遍')
+  } else {
+    saveJson(mapPath, {
+      generatedAt: new Date().toISOString(),
+      source: arg,
+      stats,
+      manual,
+      mapping,
+      detail,
+      unmatched: list,
+    })
+  }
 
   console.log('\n=== 对齐结果 ===')
   console.log('  我们 ' + stats.epgChannels + ' 个频道，能对上 m3u 的 ' + stats.matched + ' 个（其中 ' + stats.matchedWithEpg + ' 个有节目）')
   console.log('  覆盖 m3u 的 ' + stats.m3uCovered + '/' + stats.m3uIds + ' 个 tvg-id（' + stats.m3uCoverage + '%）')
-  console.log('  映射表已写入 ' + mapPath)
+  console.log('  映射表' + (regressed ? '未更新（见上方告警）' : '已写入 ' + mapPath))
 
   console.log('\n=== m3u 里我们还没有的频道（按分组）===')
   const rows = [...byGroup].sort((a, b) => b[1].length - a[1].length)
