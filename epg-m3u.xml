@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tv generator-info-name="my-epg" generator-info-url="https://github.com/" date="20261027035253 +0800">
+<tv generator-info-name="my-epg" generator-info-url="https://github.com/" date="20261027044024 +0800">
   <channel id="CCTV1">
     <display-name lang="zh">CCTV-1 综合</display-name>
     <display-name lang="zh">CCTV-1</display-name>
@@ -49644,12 +49644,12 @@
     <title lang="zh">自贸先行者</title>
     <desc lang="zh">《自贸先行者》栏目组对华侨城为海南自贸港筑梦先行以及华侨城的美丽乡村实践探索表达高度认可，透过节目展示出华侨城助力海南自贸港建设的信心和决心。未来，华侨城集团将以“乡村振兴”为己任，在海南自贸港的建设大潮中彰显文旅央企担当，为高质量高标准加快建设自由贸易港提供强劲动力。</desc>
   </programme>
+  <programme start="20261027033000 +0800" stop="20261027040000 +0800" channel="三沙卫视">
+    <title lang="zh">南海直播室</title>
+  </programme>
   <programme start="20261027040000 +0800" stop="20261027043000 +0800" channel="三沙卫视">
     <title lang="zh">三沙新闻</title>
     <desc lang="zh">三沙新闻报道中国海南省三沙市南海各岛的新闻和报道。</desc>
-  </programme>
-  <programme start="20261027043000 +0800" stop="20261027050000 +0800" channel="三沙卫视">
-    <title lang="zh">英语新闻</title>
   </programme>
   <programme start="20261027054000 +0800" stop="20261027062000 +0800" channel="三沙卫视">
     <title lang="zh">风尚潮</title>
