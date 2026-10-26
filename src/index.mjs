@@ -29,6 +29,7 @@ import { buildDateRange, normalizeProgrammes, mergeDays, dayStartTs } from './no
 import { buildXmltv, writeOutput, buildReport, writeChannelsJson } from './output.mjs'
 import { aggregate } from './aggregator.mjs'
 import { enrichDescs } from './desc.mjs'
+import { parseM3u, alignToM3u, listUnmatched } from './m3u.mjs'
 
 import * as epgpw from './sources/epgpw.mjs'
 import * as tvmao from './sources/tvmao.mjs'
@@ -60,8 +61,10 @@ async function main() {
       return cmdCheck()
     case 'build':
       return cmdBuild()
+    case 'm3u':
+      return cmdM3u()
     default:
-      console.log('用法: node src/index.mjs [catalog|init|check|build]')
+      console.log('用法: node src/index.mjs [catalog|init|check|build|m3u <m3u路径或URL>]')
   }
 }
 
@@ -564,6 +567,31 @@ async function cmdBuild() {
   const xml = buildXmltv(enriched, epgMap)
   const { xmlPath, gzPath, xmlBytes, gzBytes } = writeOutput(xml, 'epg')
 
+  // 直播源对接版：把 channel id 改写成 m3u 里的 tvg-id
+  //
+  // 只有 channels/m3u-map.json 存在时才生成。这是「节目单能不能挂上」的关键——
+  // 自建 m3u 普遍用裸名（tvg-id="CCTV1"），而本项目规范 id 是 CCTV1.cn，
+  // 不改写的话播放器一个都对不上，内容再丰富也没用。
+  let m3uOut = null
+  const m3uMapPath = path.join(PATHS.root, 'channels', 'm3u-map.json')
+  if (fs.existsSync(m3uMapPath)) {
+    try {
+      const mm = JSON.parse(fs.readFileSync(m3uMapPath, 'utf8'))
+      const idMap = mm.mapping || {}
+      const extraNames = {}
+      for (const c of enriched) {
+        if (!idMap[c.id]) continue
+        const alt = idMap[c.id]
+        if (alt && alt !== c.name) extraNames[c.id] = [alt]
+      }
+      const xmlM = buildXmltv(enriched, epgMap, { idMap, extraNames })
+      const outM = writeOutput(xmlM, 'epg-m3u')
+      m3uOut = { ...outM, mapped: Object.keys(idMap).length }
+    } catch (e) {
+      log.warn(`[m3u] 生成对接版失败，忽略: ${e.message}`)
+    }
+  }
+
   // 频道清单：给直播源侧填 M3U 的 tvg-id 用（见 docs/merge-plan.md）
   const chJson = writeChannelsJson(enriched, epgMap)
 
@@ -603,6 +631,90 @@ async function cmdBuild() {
   console.log(`  ${chJson.path}  ${chJson.count} 个频道（${chJson.withEpg} 个有节目）`)
   console.log(`  频道 ${report.channelsWithEpg}/${report.channelsTotal}，节目 ${report.programmesTotal} 条`)
   console.log(`  真实简介覆盖 ${report.descCoverage}%（${report.programmesWithDesc}/${report.programmesTotal}）`)
+  if (m3uOut) {
+    console.log(`  ${m3uOut.xmlPath}  ${(m3uOut.xmlBytes / 1024).toFixed(0)} KB（直播源对接版，${m3uOut.mapped} 个频道 id 已改写）`)
+  }
+}
+
+/**
+ * 生成「直播源对接映射表」：channels/m3u-map.json
+ *
+ * 用途：把本项目频道的规范 id（CCTV1.cn）对上你自己 m3u 里的 tvg-id（CCTV1）。
+ * 跑完之后再 build，会多出一个 output/epg-m3u.xml，其 channel id 已是 m3u 侧的写法，
+ * 播放器订阅它 + 你的 m3u 就能自动挂上节目单，不用改任何一侧。
+ *
+ * 用法：node src/index.mjs m3u <m3u路径或URL>
+ */
+async function cmdM3u() {
+  const arg = process.argv[3]
+  if (!arg) {
+    console.error('用法: node src/index.mjs m3u <m3u文件路径或URL>')
+    process.exit(1)
+  }
+
+  let text
+  if (/^https?:\/\//i.test(arg)) {
+    log.info('下载 ' + arg)
+    const res = await fetch(arg, { redirect: 'follow' })
+    if (!res.ok) throw new Error('下载失败 HTTP ' + res.status)
+    text = await res.text()
+  } else {
+    text = fs.readFileSync(arg, 'utf8')
+  }
+
+  const parsed = parseM3u(text)
+  if (!parsed.byId.size) throw new Error('m3u 里没解析到任何 tvg-id')
+
+  const channels = loadChannels().filter((c) => c.enabled !== false)
+
+  // 补「有没有节目」，用于判断映射的实际价值
+  let withEpg = new Set()
+  const chJsonPath = path.join(PATHS.output, 'channels.json')
+  if (fs.existsSync(chJsonPath)) {
+    try {
+      const cj = JSON.parse(fs.readFileSync(chJsonPath, 'utf8'))
+      withEpg = new Set(cj.filter((c) => c.hasEpg).map((c) => c.id))
+    } catch {
+      /* 忽略 */
+    }
+  }
+  const enriched = channels.map((c) => ({ ...c, hasEpg: withEpg.has(c.id) }))
+
+  const mapPath = path.join(PATHS.root, 'channels', 'm3u-map.json')
+  let manual = {}
+  if (fs.existsSync(mapPath)) {
+    try {
+      manual = JSON.parse(fs.readFileSync(mapPath, 'utf8')).manual || {}
+    } catch {
+      /* 忽略 */
+    }
+  }
+
+  const { mapping, detail, stats } = alignToM3u(enriched, parsed, manual)
+  const { list, byGroup } = listUnmatched(parsed, mapping)
+
+  saveJson(mapPath, {
+    generatedAt: new Date().toISOString(),
+    source: arg,
+    stats,
+    manual,
+    mapping,
+    detail,
+    unmatched: list,
+  })
+
+  console.log('\n=== 对齐结果 ===')
+  console.log('  我们 ' + stats.epgChannels + ' 个频道，能对上 m3u 的 ' + stats.matched + ' 个（其中 ' + stats.matchedWithEpg + ' 个有节目）')
+  console.log('  覆盖 m3u 的 ' + stats.m3uCovered + '/' + stats.m3uIds + ' 个 tvg-id（' + stats.m3uCoverage + '%）')
+  console.log('  映射表已写入 ' + mapPath)
+
+  console.log('\n=== m3u 里我们还没有的频道（按分组）===')
+  const rows = [...byGroup].sort((a, b) => b[1].length - a[1].length)
+  for (const [g, names] of rows) {
+    console.log('  ' + g + '：' + names.length + ' 个')
+    console.log('    ' + names.slice(0, 12).join(' / ') + (names.length > 12 ? ' ...' : ''))
+  }
+  console.log('\n下一步：node src/index.mjs build  → 会额外产出 output/epg-m3u.xml')
 }
 
 main().catch((e) => {

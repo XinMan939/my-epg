@@ -9,10 +9,16 @@ import { esc, isRealDesc } from './utils.mjs'
 
 /**
  * 生成 XMLTV 字符串
- * @param channels  [{id, name, logo, group}]
+ * @param channels  [{id, name, logo, group, aliases}]
  * @param epgMap    Map<tvgId, programmes[]>
+ * @param opts      { idMap?: {我们的id: 输出的id}, extraNames?: {我们的id: string[]} }
+ *
+ *   idMap 用于「按直播源 id 输出」——很多自建 m3u 的 tvg-id 是裸名（CCTV1 / 浙江卫视），
+ *   与我们 iptv-org 规范的 id（CCTV1.cn）不同，播放器因此挂不上节目单。
+ *   传 idMap 就能把 channel id 改写成直播源侧的写法。
  */
-export function buildXmltv(channels, epgMap) {
+export function buildXmltv(channels, epgMap, opts = {}) {
+  const { idMap = null, extraNames = null } = opts
   const now = new Date()
   const stamp = new Date(now.getTime() + 8 * 3600 * 1000)
     .toISOString()
@@ -31,12 +37,21 @@ export function buildXmltv(channels, epgMap) {
     return list && list.length > 0
   })
 
+  // 输出用哪个 id：有映射用映射值，否则用本项目的规范 id
+  const outId = (c) => (idMap && idMap[c.id]) || c.id
+
   for (const c of withEpg) {
-    lines.push(`  <channel id="${esc(c.id)}">`)
+    lines.push(`  <channel id="${esc(outId(c))}">`)
     lines.push(`    <display-name lang="zh">${esc(c.name)}</display-name>`)
     if (c.aliases && c.aliases.length) {
       for (const a of c.aliases) {
         if (a) lines.push(`    <display-name lang="zh">${esc(a)}</display-name>`)
+      }
+    }
+    // 补上直播源侧的原始写法，让按名字匹配的播放器也能命中
+    if (extraNames && extraNames[c.id]) {
+      for (const a of extraNames[c.id]) {
+        if (a && a !== c.name) lines.push(`    <display-name lang="zh">${esc(a)}</display-name>`)
       }
     }
     if (c.logo) lines.push(`    <icon src="${esc(c.logo)}" />`)
@@ -46,7 +61,7 @@ export function buildXmltv(channels, epgMap) {
   for (const c of withEpg) {
     for (const p of epgMap.get(c.id)) {
       lines.push(
-        `  <programme start="${p.start}" stop="${p.stop}" channel="${esc(c.id)}">`
+        `  <programme start="${p.start}" stop="${p.stop}" channel="${esc(outId(c))}">`
       )
       lines.push(`    <title lang="zh">${esc(p.title)}</title>`)
       if (p.desc) lines.push(`    <desc lang="zh">${esc(p.desc)}</desc>`)

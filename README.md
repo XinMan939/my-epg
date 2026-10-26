@@ -10,6 +10,7 @@
 |---|---|
 | **频道看板（直观检查）** | `https://xinman939.github.io/my-epg/` |
 | 播放器订阅（推荐，体积小） | `https://xinman939.github.io/my-epg/epg.xml.gz` |
+| **直播源对接版（自己的 m3u 用这个）** | `https://xinman939.github.io/my-epg/epg-m3u.xml.gz` |
 | 未压缩版 | `https://xinman939.github.io/my-epg/epg.xml` |
 | 频道清单（对接 M3U 用） | `https://xinman939.github.io/my-epg/channels.json` |
 | 构建报告（看板的数据源） | `https://xinman939.github.io/my-epg/report.json` |
@@ -128,7 +129,11 @@ https://gitee.com/taksssss/tv/raw/main/epg/{112114,51zmt,51zmte1,51zmte2,erw,epg
 
 ## 和直播源项目怎么配合
 
-见 [`docs/merge-plan.md`](docs/merge-plan.md)。一句话：**不需要合并代码**。
+见 [`docs/merge-plan.md`](docs/merge-plan.md) 和 [`docs/m3u-coverage.md`](docs/m3u-coverage.md)。一句话：**不需要合并代码**。
+
+有两种接法，选一种：
+
+### 接法 A：把 m3u 的 tvg-id 改成我们的规范 id（干净，但要改直播源配置）
 
 本项目已输出 `output/channels.json`，直播源侧（iptv-api / iptv-tool / 手写 M3U）读它，把 `tvg-id` 填成同样的 id，播放器就能自动挂上节目单：
 
@@ -137,6 +142,27 @@ https://gitee.com/taksssss/tv/raw/main/epg/{112114,51zmt,51zmte1,51zmte2,erw,epg
 ```
 
 这比按中文名模糊匹配可靠得多——实测名字匹配会串台（`CCTV5+` 吸到 `CCTV5`、`台視新聞` 吸到 `台視`）。
+
+### 接法 B：不动 m3u，改用 EPG 侧的 id 改写版（省事，推荐）
+
+自己的 m3u 几乎是裸名 id（`tvg-id="CCTV1"`、`tvg-id="浙江卫视"`），跟我们的 `CCTV1.cn` 一个都对不上。这时跑一次对齐，生成一份 **channel id 已改写成 m3u 侧写法** 的 EPG：
+
+```bash
+node src/index.mjs m3u https://raw.githubusercontent.com/XinMan939/iptv-api/master/output/result.m3u
+node src/index.mjs build
+```
+
+产物：
+
+- `channels/m3u-map.json` —— 映射表（建议入库，CI 直接复用）
+- `output/epg-m3u.xml` / `.gz` —— 对接版 EPG，`<channel id>` 就是你的 `tvg-id`
+
+播放器里 **EPG 填 `epg-m3u.xml.gz`、直播源填你的 m3u** 即可，两边都不用改。
+
+**匹配规则是五级保守匹配**（宁可漏不可串台）：手工映射 → id 完全相等 → 去国家后缀 → 名字唯一 → 宽松归一化（繁→简 + 去 `TVB`/`CCTV` 前缀 + 去「卫视/电视/频道/台」，且**两侧都唯一**才认）。名字撞车一律跳过留给人工。
+
+**实测**（`iptv-api` 的 `result.m3u`，4376 条 / 318 个 tvg-id）：我们 114 个频道里 95 个对得上（83%），反向覆盖它 318 个里的 95 个（29.9%）。剩下 223 个是**我们压根没有这个频道**（台湾 107 / 数字付费 35 / 央视频道付费 24 / 港澳 23 / 咪咕赛事 17 / 广东 11 …），不是名字对不上。按 51zmt + epg.pw 现有频道清单评估，补进 148 个后能覆盖到 **243/318 = 76.4%**，详见 `docs/m3u-coverage.md`。
+
 
 ## 频道 id 规范
 
@@ -152,10 +178,12 @@ epg/
 │   ├── channels.json      ← 你要哪些台（唯一需要手工维护的文件）
 │   ├── overrides.json     ← 自动匹配失败时手工指定（兜底）+ 51zmt 频道映射
 │   ├── epg-sources.json   ← 外部 XMLTV 源清单 + 各源实测记录
+│   ├── m3u-map.json       ← 自动生成：我们的频道 ↔ 你 m3u 的 tvg-id 映射
 │   ├── catalog.json       ← 自动生成：所有源里的频道清单
 │   └── match-cache.json   ← 自动生成：本次匹配结果
 ├── docs/
-│   └── merge-plan.md      ← 和直播源项目（iptv-api / iptv-tool）怎么配合
+│   ├── merge-plan.md      ← 和直播源项目（iptv-api / iptv-tool）怎么配合
+│   └── m3u-coverage.md    ← M3U 对接实测：每条规则命中数、缺口、可补频道清单
 ├── web/
 │   ├── index.html         ← 频道看板（纯静态，读同目录 report.json）
 │   └── report.json        ← 看板数据（build 后从 output/ 同步过来）
@@ -164,6 +192,7 @@ epg/
 │   ├── config.mjs         ← 配置与路径
 │   ├── utils.mjs          ← 抓取 / 时间 / 转义 / 名称归一化 / isRealDesc
 │   ├── match.mjs          ← 频道匹配（核心）
+│   ├── m3u.mjs            ← M3U 解析 + 五级保守对齐（生成 m3u-map.json）
 │   ├── normalize.mjs      ← 节目清洗 / 补 stop / 去重
 │   ├── output.mjs         ← XMLTV 生成 + channels.json + report 统计
 │   ├── aggregator.mjs     ← 外部 XMLTV 源聚合（空频道兜底）
@@ -176,6 +205,8 @@ epg/
 ├── output/
 │   ├── epg.xml
 │   ├── epg.xml.gz
+│   ├── epg-m3u.xml        ← 直播源对接版：channel id 已改写成 m3u 的 tvg-id
+│   ├── epg-m3u.xml.gz
 │   ├── channels.json      ← 频道清单，给直播源侧填 tvg-id 用
 │   └── report.json
 └── .github/workflows/update.yml
@@ -198,6 +229,8 @@ epg/
 node src/index.mjs catalog   # 扫描所有源的频道，导出 channels/catalog.json
 node src/index.mjs check     # 只检查匹配命中率，不抓节目
 node src/index.mjs build     # 抓节目并输出 output/epg.xml + epg.xml.gz
+node src/index.mjs m3u <路径或URL>  # 对齐自己的 m3u，生成 channels/m3u-map.json
+                             # （之后 build 会额外产出 output/epg-m3u.xml）
 ```
 
 环境变量：
