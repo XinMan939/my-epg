@@ -1,0 +1,142 @@
+name: Update EPG
+
+on:
+  # 定时更新：每 6 小时一次（UTC 时间，对应北京时间 02/08/14/20 点）
+  schedule:
+    - cron: '0 18,0,6,12 * * *'
+  # 手动触发，可在 Actions 页面点 "Run workflow"
+  workflow_dispatch:
+    inputs:
+      days:
+        description: '覆盖天数'
+        required: false
+        default: '7'
+      only:
+        description: '只处理指定频道（逗号分隔的 tvg-id，留空为全部）'
+        required: false
+        default: ''
+  # 推送代码时也跑一次，便于调试
+  push:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'channels/**'
+      - '.github/workflows/update.yml'
+
+# 允许部署到 GitHub Pages
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# 同一时间只跑一个，避免并发写 Pages
+concurrency:
+  group: epg-update
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 安装 Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # 缓存 epg.pw 的原始 XMLTV 包（几十 MB，下载很慢）
+      # 命中缓存能省掉大部分时间；build 内部有 30 分钟 TTL 校验，不会用到过期数据
+      - name: 缓存数据源
+        uses: actions/cache@v4
+        with:
+          path: .cache
+          key: epg-cache-${{ github.run_id }}
+          restore-keys: |
+            epg-cache-
+
+      - name: 生成节目表
+        env:
+          DAYS: ${{ github.event.inputs.days || '7' }}
+          ONLY: ${{ github.event.inputs.only }}
+          CONCURRENCY: '6'
+          TZ: Asia/Shanghai
+        run: node src/index.mjs build
+
+      - name: 检查产物
+        run: |
+          ls -lh output/
+          for f in output/epg.xml output/epg.xml.gz output/channels.json output/report.json; do
+            if [ ! -s "$f" ]; then
+              echo "::error::$f 为空，构建失败"
+              exit 1
+            fi
+          done
+          # 校验 XML 结构完整
+          head -1 output/epg.xml | grep -q '<?xml' || { echo "::error::XML 头缺失"; exit 1; }
+          tail -1 output/epg.xml | grep -q '</tv>' || { echo "::error::XML 未闭合"; exit 1; }
+          # 直播源对接版（channel id 已改写成 M3U 侧 tvg-id），有才校验
+          if [ -f output/epg-m3u.xml ]; then
+            head -1 output/epg-m3u.xml | grep -q '<?xml' || { echo "::error::epg-m3u.xml 头缺失"; exit 1; }
+            tail -1 output/epg-m3u.xml | grep -q '</tv>' || { echo "::error::epg-m3u.xml 未闭合"; exit 1; }
+            echo "对接版频道数: $(grep -c '<channel id' output/epg-m3u.xml)"
+          fi
+          echo "节目总数: $(grep -c '<programme' output/epg.xml)"
+          echo "频道总数: $(grep -c '<channel id' output/epg.xml)"
+
+      # 同步看板数据（web/report.json 是 Pages 上 index.html 的数据源）
+      - name: 同步看板数据
+        run: cp output/report.json web/report.json
+
+      # 统计报告留档，方便追溯每天的抓取情况
+      - name: 上传统计报告
+        uses: actions/upload-artifact@v4
+        with:
+          name: epg-report-${{ github.run_number }}
+          path: output/report.json
+          retention-days: 30
+
+      - name: 准备 Pages 目录
+        run: |
+          mkdir -p public
+          cp output/epg.xml output/epg.xml.gz output/report.json public/
+          # 直播源对接版：channel id 已是 M3U 侧的 tvg-id，播放器订阅它就能直接挂上节目单
+          if [ -f output/epg-m3u.xml ]; then
+            cp output/epg-m3u.xml output/epg-m3u.xml.gz public/
+          fi
+          # 看板页面（web/index.html 是数据驱动的，读同目录 report.json）
+          cp web/index.html public/index.html
+          # 频道清单：由 build 直接产出（含 aliases / logo / hasEpg），
+          # 直播源侧读它填 M3U 的 tvg-id，见 docs/merge-plan.md
+          cp output/channels.json public/channels.json
+          touch public/.nojekyll
+
+      - name: 部署到 GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
+          commit_message: 'epg: 自动更新 ${{ github.run_number }}'
+          force_orphan: false
+
+      - name: 摘要
+        run: |
+          node -e "
+            const fs = require('fs');
+            const r = JSON.parse(fs.readFileSync('./output/report.json', 'utf8'));
+            const gz = (fs.statSync('./output/epg.xml.gz').size / 1024 / 1024).toFixed(2);
+            const out = [
+              '## EPG 构建完成', '',
+              '| 项目 | 数值 |', '|---|---|',
+              '| 频道（有节目/总数） | ' + r.channelsWithEpg + ' / ' + r.channelsTotal + ' |',
+              '| 节目总数 | ' + r.programmesTotal + ' |',
+              '| 真实简介覆盖 | ' + r.descCoverage + '%（' + r.programmesWithDesc + ' / ' + r.programmesTotal + '） |',
+              '| 日期范围 | ' + r.dateRange.join(' ~ ') + ' |',
+              '| gz 体积 | ' + gz + ' MB |', '',
+            ].join('\n');
+            fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, out + '\n');
+          "
