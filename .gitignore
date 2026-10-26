@@ -21,6 +21,5 @@ web/report.json
 Thumbs.db
 node_modules/
 
-# workflow 文件需要 token 具备 workflow scope（当前 token 只有 repo），
-# 本地保留此文件，需在 GitHub 网页端手动添加或换带 workflow scope 的 token
-.github/workflows/
+# 注：.github/workflows/ 曾因本地 token 无 workflow scope 被忽略，
+# 2026-10-27 起改用 gh CLI（token 含 workflow scope）管理，已正常入库，不再忽略。

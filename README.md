@@ -15,7 +15,13 @@
 | 频道清单（对接 M3U 用） | `https://xinman939.github.io/my-epg/channels.json` |
 | 构建报告（看板的数据源） | `https://xinman939.github.io/my-epg/report.json` |
 
-> Pages 需先在仓库 Settings → Pages 里把 Source 设为 `gh-pages` 分支，首次 Actions 跑完后生效。
+> Pages 已配好（Source = `gh-pages` 分支），Actions 每 6 小时自动更新并部署，无需手工操作。
+
+**怎么用（两种场景）**
+
+- 你用的是**别人的/通用的** m3u 直播源 → 填 `epg.xml.gz`
+- 你用的是**自己抓的** m3u（tvg-id 是裸名 `CCTV1` / `浙江卫视`）→ 填 `epg-m3u.xml.gz`，
+  它已经把 channel id 改写成你 m3u 的写法。详见 [`docs/m3u-coverage.md`](docs/m3u-coverage.md)。
 
 大多数播放器（DIYP、TVBox、Kodi、Emby、Jellyfin、TiviMate）直接填 gz 地址即可，它们会自动解压。
 
