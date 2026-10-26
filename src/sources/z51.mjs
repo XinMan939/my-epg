@@ -372,7 +372,7 @@ function buildGlobalIndex(byKey) {
  * @returns {stats, detail, report}
  */
 export async function enrichFromZ51(targets, epgMap, opts = {}) {
-  const { force = false } = opts
+  const { force = false, titleMap = {} } = opts
 
   const { byKey } = await loadPacks({ force })
   if (!byKey.size) {
@@ -458,9 +458,63 @@ export async function enrichFromZ51(targets, epgMap, opts = {}) {
   }
   totalFilled = stage1 + stage2
   log.ok(`[z51] ② 全局级补 ${stage2} 条（${stage2Channels} 个频道）`)
+
+  // ③ 手工标题映射（最后兜底，专治「标题不是中文」）
+  //
+  // 为什么前两步救不了：
+  //   ①② 全靠「标题文本相等」找简介，但有一类频道标题压根不是中文——
+  //   · 港台电视35 转播 CGTN，标题是 The World Today / Dialogue / Africa Live；
+  //   · 延边卫视大量节目标题是朝鲜语（드라마 / 일기예보）。
+  //   这些在中文索引里永远命中不了，不管对齐算法多好。
+  //
+  //   而 51zmt 的 e1:20（CGTN）标题恰好就是中文译名（今日世界 / 对话 / 非洲直播室），
+  //   且带真实简介 —— 缺的只是一张「英文/朝鲜语 → 中文」对照表。
+  //
+  // 安全边界：只对 channels/overrides.json 里显式声明 titleMap 的频道生效，
+  //   不做任何模糊匹配。理由见 buildGlobalIndex 的注释——
+  //   「对话」在 CCTV-2 和 CGTN 是两个完全不同的栏目，自动匹配必串台。
+  let stage3 = 0
+  if (titleMap && Object.keys(titleMap).length) {
+    const gIndex = buildGlobalIndex(byKey)
+    for (const t of targets) {
+      const map = titleMap[t.id]
+      if (!map || !map.titles) continue
+      const rows = epgMap.get(t.id)
+      if (!rows || !rows.length) continue
+
+      // 目标库：overrides 里指定从哪个 51zmt 频道取简介，没写就用全局索引
+      const srcKey = map.from || ''
+      const srcObj = srcKey ? byKey.get(srcKey) : null
+
+      let filled = 0
+      for (const r of rows) {
+        if (isRealDesc(r.desc)) continue
+        const zh = map.titles[r.title]
+        if (!zh) continue
+        const nt = normTitleLoose(zh)
+        if (!nt) continue
+        const d = srcObj ? srcObj.descMap.get(nt) : (gIndex.get(nt) || {}).desc
+        if (!d || !isRealDesc(d)) continue
+        r.desc = d
+        filled++
+      }
+      if (!filled) continue
+      stage3 += filled
+      const prev = stats.get(t.id)
+      if (prev) {
+        prev.filled += filled
+        prev.stage += '+titleMap'
+      } else {
+        stats.set(t.id, { filled, before: 0, stage: 'titleMap', source: srcKey || '全局索引' })
+      }
+    }
+    if (stage3) log.ok(`[z51] ③ 手工标题映射补 ${stage3} 条`)
+    else log.info('[z51] ③ 手工标题映射没补到任何条目')
+  }
+  totalFilled = stage1 + stage2 + stage3
   log.ok(`[z51] 补简介完成：${stats.size} 个频道，共 ${totalFilled} 条`)
 
-  return { stats, detail, report: (await loadPacks()).stats, stage1, stage2 }
+  return { stats, detail, report: (await loadPacks()).stats, stage1, stage2, stage3 }
 }
 
 /** 清空内存缓存（测试用） */

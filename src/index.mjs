@@ -479,12 +479,13 @@ async function cmdBuild() {
     if (!process.env.NO_Z51) {
       try {
         log.info('[desc] ① 用 51zmt 整包补简介...')
-        const r = await enrichFromZ51(targets, epgMap, { force: process.env.Z51_FORCE === '1' })
+        const r = await enrichFromZ51(targets, epgMap, { force: process.env.Z51_FORCE === '1', titleMap: loadOverrides() })
         z51Stats = {
           channels: r.stats.size,
           filled: [...r.stats.values()].reduce((a, v) => a + v.filled, 0),
           packs: r.report,
           detail: r.detail,
+          stage3: r.stage3 || 0,
           byChannel: Object.fromEntries([...r.stats].map(([id, v]) => [id, v])),
         }
         if (z51Stats.filled) log.ok(`[desc] ① 51zmt 补了 ${z51Stats.filled} 条`)

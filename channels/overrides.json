@@ -9,6 +9,39 @@
 
   "JiangsuPublicNewsChannel.cn": { "z51SourceId": "e1:349" },
 
+  "_comment_titleMap": "手工标题映射：{ 频道id: { from: '51zmt频道key', titles: { '原标题': '51zmt里的中文标题' } } }。用于「标题压根不是中文」的频道——港台35转播CGTN标题是英文、延边卫视标题是朝鲜语，任何按文本相等的匹配都命中不了。from 指定从哪个51zmt频道取简介（不写则用全局索引）。改完跑 node src/index.mjs check 验证。",
+
+  "_notes_titleMap": {
+    "RTHKTV35.hk": "港台电视35 全天转播 CGTN，265 条全是英文栏目名。51zmt 的 e1:20「CGTN」标题恰好是中文译名（今日世界/对话/非洲直播室/中国24小时…），带真实简介。逐条人工核对译名，不靠模糊匹配——「对话」在 CCTV-2 是另一个完全不同的栏目。",
+    "YanbianSatelliteTV.cn": "延边卫视 167 条里 21 个唯一标题是朝鲜语。51zmt e1:63「延边卫视」只有 8 条真实简介，能安全对上的仅 3 条；其余（드라마/일기예보/특집프로…）上游本身没简介，不硬凑。"
+  },
+
+  "RTHKTV35.hk": {
+    "from": "e1:20",
+    "titles": {
+      "The World Today": "今日世界",
+      "Global Business": "全球财经",
+      "Sports Scene": "环球体育",
+      "World Insight with Tian Wei": "世界观察",
+      "Africa Live": "非洲直播室",
+      "China 24": "中国24小时",
+      "Dialogue": "对话",
+      "Rediscovering China": "中国再发现",
+      "The Point with Liu Xin": "视点",
+      "Global Watch": "环球瞭望",
+      "Talk Africa": "非洲直播室"
+    }
+  },
+
+  "YanbianSatelliteTV.cn": {
+    "from": "e1:63",
+    "titles": {
+      "매주일가": "每周一歌",
+      "국내외뉴스(조)": "中央电视台新闻联播(朝)",
+      "동물세계": "动画片"
+    }
+  },
+
   "_comment": "手工指定频道 → 源 id。优先级高于任何自动匹配，用于修正匹配错误或绕过源里的空壳频道。改完跑 node src/index.mjs check 验证。",
 
   "_notes": {
