@@ -26,6 +26,8 @@ import { log, mapLimit } from './utils.mjs'
 import { matchChannels } from './match.mjs'
 import { buildDateRange, normalizeProgrammes, mergeDays, dayStartTs } from './normalize.mjs'
 import { buildXmltv, writeOutput, buildReport } from './output.mjs'
+import { aggregate } from './aggregator.mjs'
+import { enrichDescs } from './desc.mjs'
 
 import * as epgpw from './sources/epgpw.mjs'
 import * as tvmao from './sources/tvmao.mjs'
@@ -61,8 +63,38 @@ async function main() {
   }
 }
 
-/** 汇总所有源的频道清单 */
-async function collectCatalog() {
+/**
+ * 读取频道清单。
+ *
+ * 关键：build 不要每次都联网重扫所有源。
+ * epgpw 的 listChannels 要先下载 3 个整包 XML（CN 9MB / HK 19MB / TW 29MB），
+ * 每跑一次 build 就重扫一遍等于把流量和时间白扔——而频道清单本身几周都不变。
+ *
+ * 所以：
+ *   - catalog 命令 → 强制重扫，写 channels/catalog.json
+ *   - init / check  → 重扫（匹配结果需要最新清单）
+ *   - build         → 复用 catalog.json；文件不存在或超过 CATALOG_TTL 才重扫
+ */
+async function collectCatalog({ force = false } = {}) {
+  const cacheFile = path.join(PATHS.root, 'channels', 'catalog.json')
+
+  if (!force) {
+    try {
+      const st = fs.statSync(cacheFile)
+      const ageMs = Date.now() - st.mtimeMs
+      const ttlMs = Number(process.env.CATALOG_TTL_HOURS || 24) * 3600 * 1000
+      if (ageMs < ttlMs) {
+        const data = JSON.parse(fs.readFileSync(cacheFile, 'utf8'))
+        if (data.items && data.items.length) {
+          log.info(`复用频道清单缓存（${data.items.length} 条，${(ageMs / 3600e3).toFixed(1)} 小时前）`)
+          return data.items
+        }
+      }
+    } catch {
+      /* 缓存不可用，走重扫 */
+    }
+  }
+
   log.info('扫描数据源频道清单...')
   const all = []
   const results = await Promise.all(
@@ -78,11 +110,15 @@ async function collectCatalog() {
     })
   )
   for (const r of results) all.push(...r)
+
+  if (all.length) {
+    saveJson(cacheFile, { generatedAt: new Date().toISOString(), total: all.length, items: all })
+  }
   return all
 }
 
 async function cmdCatalog() {
-  const catalog = await collectCatalog()
+  const catalog = await collectCatalog({ force: true })
   const outPath = path.join(PATHS.root, 'channels', 'catalog.json')
   saveJson(outPath, { generatedAt: new Date().toISOString(), total: catalog.length, items: catalog })
   log.ok(`已导出 ${catalog.length} 条到 channels/catalog.json`)
@@ -99,7 +135,7 @@ async function cmdInit() {
     log.error('channels/channels.json 为空，请先填写目标频道')
     process.exit(1)
   }
-  const catalog = await collectCatalog()
+  const catalog = await collectCatalog({ force: true })
   const { matched, stats } = matchChannels(channels, catalog)
 
   const out = {}
@@ -119,7 +155,7 @@ async function cmdInit() {
 
 async function cmdCheck() {
   const channels = loadChannels()
-  const catalog = await collectCatalog()
+  const catalog = await collectCatalog({ force: true })
   const { matched, stats } = matchChannels(channels, catalog)
 
   console.log('\n=== 匹配检查 ===')
@@ -276,7 +312,7 @@ async function cmdBuild() {
       }
       okCount++
     } else {
-      emptyList.push(`${r.id}(${r.reason || 'empty'})`)
+      emptyList.push({ id: r.id, reason: r.reason || 'empty' })
     }
   }
 
@@ -285,7 +321,101 @@ async function cmdBuild() {
     log.info(`自动降级 ${fallbacks.length} 个: ${fallbacks.map((f) => `${f.id} ${f.from}→${f.to}`).join(', ')}`)
   }
   if (emptyList.length) {
-    log.warn(`空频道 ${emptyList.length} 个: ${emptyList.slice(0, 20).join(', ')}${emptyList.length > 20 ? ' ...' : ''}`)
+    log.warn(`空频道 ${emptyList.length} 个: ${emptyList.map((e) => e.id).slice(0, 20).join(', ')}${emptyList.length > 20 ? ' ...' : ''}`)
+  }
+
+  // 3.5) 外部 XML 源兜底聚合
+  //
+  // 只在「本地三源全部抓空」的频道上启用。理由：外部源是整包下载（1MB+），
+  // 而且数据质量明显不如本地源（老张的EPG 只有 2 天、0 条简介），
+  // 无差别跑一遍等于白花流量。所以这里按需触发。
+  //
+  // 覆盖规则：外部源拿到的节目数 > 0 且当前为空 → 填入；
+  //          若外部源天数更多但当前已有节目，默认不动（本地源有 desc，质量更高）。
+  const aggSources = []
+  let aggReport = []
+  const stillEmpty = emptyList.map((e) => e.id)
+  if (stillEmpty.length && !process.env.NO_AGGREGATE) {
+    log.info(`[aggregator] 仍有 ${stillEmpty.length} 个空频道，尝试外部 XML 源兜底`)
+    try {
+      const aggTargets = targets.filter((c) => stillEmpty.includes(c.id))
+      const agg = await aggregate(aggTargets)
+      aggReport = agg.sourceReport || []
+      for (const [id, v] of agg.result || new Map()) {
+        const rows = v.programmes.map((p) => ({
+          startTs: p.startTs,
+          stopTs: p.stopTs,
+          title: p.title,
+          desc: p.desc,
+          category: p.category,
+        }))
+        const norm = normalizeProgrammes(rows, { dayStartTs: globalStart, dayEndTs: globalEnd })
+        if (!norm.length) continue
+        epgMap.set(id, norm)
+        usedSources.set(id, {
+          source: `ext:${v.sourceName}`,
+          sourceId: v.sourceChannelName,
+          sourceName: v.sourceChannelName,
+        })
+        aggSources.push({
+          id,
+          from: v.sourceName,
+          channelName: v.sourceChannelName,
+          count: norm.length,
+          candidates: v.candidates,
+        })
+        okCount++
+      }
+      const filled = aggSources.map((a) => a.id)
+      for (const id of filled) {
+        const idx = emptyList.findIndex((e) => e.id === id)
+        if (idx >= 0) emptyList.splice(idx, 1)
+      }
+      if (filled.length) {
+        log.ok(`[aggregator] 外部源补全 ${filled.length} 个: ${filled.join(', ')}`)
+      } else {
+        log.info('[aggregator] 外部源未能补全任何频道')
+      }
+    } catch (e) {
+      log.warn(`[aggregator] 聚合失败，忽略: ${e.message}`)
+    }
+  }
+
+  // 3.6) 补节目简介
+  //
+  // 现状：epg.pw 自带 desc 的只有港澳台频道（覆盖率很高），
+  //       大陆频道（央视/卫视/地方台）desc 全是 0。
+  // 方案：从电视猫的节目详情页抓简介，按「节目名」对齐补进来。
+  //       详情页 hash 是栏目级 ID，长期复用，所以有持久化缓存，日常增量很小。
+  let descStats = null
+  if (!process.env.NO_DESC) {
+    try {
+      log.info('[desc] 开始补节目简介...')
+      const descMap = await enrichDescs(targets, catalog, epgMap, {
+        concurrency: Number(process.env.DESC_CONCURRENCY || 4),
+        force: process.env.DESC_FORCE === '1',
+        maxFetch: Number(process.env.DESC_MAX_FETCH || 600),
+      })
+      if (descMap && descMap.size) {
+        let filled = 0
+        for (const [, rows] of epgMap) {
+          for (const r of rows) {
+            if (r.desc && r.desc.trim()) continue
+            const d = descMap.get(r.title)
+            if (d) {
+              r.desc = d
+              filled++
+            }
+          }
+        }
+        log.ok(`[desc] 已补 ${filled} 条简介`)
+        descStats = { titles: descMap.size, filled }
+      } else {
+        log.info('[desc] 没有可补的简介')
+      }
+    } catch (e) {
+      log.warn(`[desc] 补简介失败，忽略: ${e.message}`)
+    }
   }
 
   // 4) 输出
@@ -307,7 +437,27 @@ async function cmdBuild() {
     dateRange: [dates[0].ymd, dates[dates.length - 1].ymd],
     sourceStats,
     fallbacks,
-    emptyChannels: emptyList,
+    emptyChannels: emptyList.map((e) => `${e.id}(${e.reason})`),
+    // ↓ 看板需要的明细：匹配依据、源频道名、备选、每日分布
+    matchInfo: Object.fromEntries(
+      [...matched].map(([id, v]) => [
+        id,
+        {
+          confidence: v.confidence,
+          source: v.source,
+          sourceId: v.sourceId,
+          sourceName: v.sourceName,
+          alternatives: (v.alternatives || []).map((a) => `${a.source}:${a.sourceId}(${a.sourceName})`),
+        },
+      ])
+    ),
+    usedSources: Object.fromEntries(
+      [...usedSources].map(([id, v]) => [id, `${v.source}:${v.sourceId}(${v.sourceName})`])
+    ),
+    aggregated: aggSources,
+    aggregateReport: aggReport,
+    descStats,
+    dayList: dates.map((d) => d.ymd),
   })
   saveJson(path.join(PATHS.output, 'report.json'), report)
 

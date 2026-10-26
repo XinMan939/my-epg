@@ -268,7 +268,15 @@ export function tsToHM(ts) {
   return d.toISOString().slice(11, 16)
 }
 
-/** 频道名归一化，用于匹配：去空格、全角转半角、去括号后缀、小写 */
+/**
+ * 频道名归一化，用于匹配：去空格、全角转半角、去括号后缀、小写
+ *
+ * ⚠️ 两个必须保留的"语义字符"，删掉就会错台：
+ *   - 加号：CCTV5+ 是独立频道，若把 + 当噪声删掉就变成 CCTV5，会把体育赛事频道
+ *     的节目挂到 CCTV-5 体育上（2026-10-26 聚合器实测踩到）
+ *   - 4k/8k：CCTV-4K 是独立频道，只有"高清/HD/超清/标清/蓝光"这类才是可忽略的
+ *     画质后缀，4K/8K 是频道名的一部分，必须保留
+ */
 export function normalizeName(name) {
   if (!name) return ''
   let s = String(name)
@@ -276,13 +284,17 @@ export function normalizeName(name) {
   s = s.replace(/[\uff01-\uff5e]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0xfee0))
   s = s.replace(/\u3000/g, ' ')
   s = s.toLowerCase()
-  // 去常见后缀
-  s = s.replace(/[\s\-_·・]/g, '')
+  // 全角加号已在上面转成半角 +，这里把"5加"/"5plus"也统一成 5+
+  s = s.replace(/(\d)\s*(?:plus|加)$/, '$1+')
   s = s.replace(/[（(][^）)]*[）)]/g, '')
-  s = s.replace(/(高清|hd|超清|标清|4k|8k|蓝光|杜比)+$/gi, '')
+  // 可忽略的画质后缀（注意：不含 4k/8k，它们是独立频道标识）
+  // 超高清要排在 高清 前面，否则只会剥掉"高清"留下"超"
+  s = s.replace(/(超高清|高清|hd|超清|标清|蓝光|杜比)+$/gi, '')
   s = s.replace(/(频道|电视台|台|节目表|综合频道)$/g, '')
-  s = s.replace(/^cctv(\d+)/, 'cctv$1')
-  s = s.replace(/[^a-z0-9\u4e00-\u9fa5]/g, '')
+  // 去空格连字符，但保留 + 和数字字母汉字
+  s = s.replace(/[\s\-_·・]/g, '')
+  // 只保留字母数字汉字和加号
+  s = s.replace(/[^a-z0-9+\u4e00-\u9fa5]/g, '')
   return s
 }
 
@@ -297,18 +309,32 @@ export function nameVariants(name) {
   const noParen = base.replace(/[（(][^）)]*[）)]/g, '')
   out.add(normalizeName(noParen))
 
-  // 数字变体：CCTV-1 / CCTV1 / cctv-1综合
-  const m = base.match(/cctv[\s-]*(\d+)/i)
+  // 央视数字变体：CCTV-1 / CCTV1 / CCTV-1综合 → cctv1
+  //
+  // ⚠️ 必须区分「频道号」和「频道号的修饰」：
+  //    CCTV-5+  → 只能出 cctv5+，绝不能出 cctv5（否则撞 CCTV-5 体育）
+  //    CCTV-4K  → 只能出 cctv4k，绝不能出 cctv4（否则撞 CCTV-4 亚洲）
+  //    CCTV-4 欧洲 → 出 cctv4europe / cctv4eu 之类，也不该出裸 cctv4
+  //  所以：只有数字后面紧接"分隔符或中文描述（综合/新闻/财经…）"时才出裸 cctvN。
+  const m = base.match(/cctv[\s_-]*(\d{1,2})\s*([+\uff0b]|k|K)?/i)
   if (m) {
-    out.add(`cctv${m[1]}`)
-    out.add(`cctv-${m[1]}`)
+    const num = m[1]
+    const mark = (m[2] || '').toLowerCase()
+    if (mark === '+' || mark === '\uff0b') {
+      out.add(`cctv${num}+`)
+    } else if (mark === 'k') {
+      out.add(`cctv${num}k`)
+    } else {
+      // 数字后面跟的是什么？如果是英文字母（如 CCTV4EUO / CCTV4AME），不出裸号
+      const after = base.slice(m.index + m[0].length)
+      const startsWithLatin = /^[a-z]/i.test(after.trim())
+      if (!startsWithLatin) out.add(`cctv${num}`)
+    }
   }
 
-  // 卫视简写：湖南卫视 / 湖南 / 湖南卫视高清
+  // 卫视简写：湖南卫视 → 湖南
   const ws = base.match(/^(.+?)卫视/)
   if (ws) out.add(normalizeName(ws[1]))
-  const ws2 = base.match(/^(.+?)卫视/)
-  if (ws2) out.add(normalizeName(ws2[1] + '卫视'))
 
   return [...out].filter(Boolean)
 }

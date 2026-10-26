@@ -1,0 +1,44 @@
+{
+  "_comment": "外部 XMLTV 源清单。加源只改这个文件，不用动代码。抓取后按频道名归一化匹配到 channels/channels.json 里的目标频道，同名多源时自动选'覆盖天数最多、节目条数最多'的那份。",
+
+  "_字段说明": {
+    "name": "源名称，只用于日志和看板显示",
+    "url": "XML 或 XML.gz 直链。程序看文件魔数判断是否 gzip，不看后缀",
+    "tvgIdNative": "该源的频道 id 是否已经是 iptv-org tvg-id 规范（如 CCTV1.cn）。true 时优先用 id 精确对齐，否则退回按 display-name 匹配",
+    "priority": "数字越小越优先。仅在'覆盖天数和条数都相同'时才起作用",
+    "enabled": "false 可临时停用"
+  },
+
+  "_实测记录": {
+    "老张的EPG": {
+      "结论": "可用，但只能当兜底源，不能当主源",
+      "实测": "100 频道 / 7374 条 / 仅 2 天 / 0 条 desc / 0 条 category",
+      "坑1": "必须用 http 起头。https://epg.51zmt.top:8000 握手直接失败(000)，http 会 302 到 https://s.102031.xyz/xml/xxx.xml.gz（Cloudflare），跟着跳就 200",
+      "坑2": "URL 写着 e.xml.gz，实际返回明文 XML（首字节是 '<?xml' 不是 1f 8b）。所以只能靠魔数判断，不能信后缀",
+      "坑3": "channel id 是纯数字 1/2/3，不是 iptv-org 规范，所以 tvgIdNative 必须为 false",
+      "坑4": "频道名极粗糙：CCTV1 / 凤凰中文 / 中国教育1台，没有'综合''卫视中文台'这类后缀，只能靠归一化+别名匹配",
+      "坑5": "有个 id=9999 的占位频道 'noepg'，节目全是'精彩节目-暂未提供节目预告信息'，属于噪声"
+    },
+    "erw.cc": {
+      "结论": "当前不可用",
+      "实测": "http 返回 502（内容 70 字节的错误页），https 连接失败(000)"
+    }
+  },
+
+  "sources": [
+    {
+      "name": "老张的EPG",
+      "url": "http://epg.51zmt.top:8000/e.xml.gz",
+      "tvgIdNative": false,
+      "priority": 10,
+      "enabled": true
+    },
+    {
+      "name": "erw.cc",
+      "url": "http://e.erw.cc/e.xml.gz",
+      "tvgIdNative": true,
+      "priority": 20,
+      "enabled": false
+    }
+  ]
+}

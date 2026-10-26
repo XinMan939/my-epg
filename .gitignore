@@ -10,6 +10,12 @@ channels/match-cache.json
 # 日志
 *.log
 
+# 临时探查脚本（分析数据用，不进仓库）
+.probe/
+
+# 看板本地预览时拷过来的数据副本（真正的 report.json 由 CI 部署）
+web/report.json
+
 # 系统文件
 .DS_Store
 Thumbs.db

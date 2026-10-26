@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>EPG 频道看板</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+  :root{
+    --bg:#f6f7f9; --card:#fff; --line:#e3e6ea; --text:#1f2329; --dim:#8a9099;
+    --ok:#12a150; --warn:#d97706; --bad:#dc2626; --blue:#2563eb; --purple:#7c3aed;
+    --okbg:#e8f7ee; --warnbg:#fef3e2; --badbg:#fdeaea; --bluebg:#eaf1fe;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+       font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
+  .wrap{max-width:1440px;margin:0 auto;padding:22px 20px 60px}
+  h1{font-size:21px;margin:0 0 4px;letter-spacing:-.3px}
+  .sub{color:var(--dim);font-size:13px;margin-bottom:18px}
+  .sub b{color:var(--text);font-weight:600}
+
+  /* ---------- 概览卡片 ---------- */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(132px,1fr));gap:10px;margin-bottom:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .card .k{font-size:12px;color:var(--dim);margin-bottom:3px}
+  .card .v{font-size:24px;font-weight:650;letter-spacing:-.5px;line-height:1.15}
+  .card .n{font-size:11px;color:var(--dim);margin-top:2px}
+  .card.ok .v{color:var(--ok)} .card.warn .v{color:var(--warn)} .card.bad .v{color:var(--bad)}
+  .card.blue .v{color:var(--blue)} .card.purple .v{color:var(--purple)}
+
+  /* ---------- 工具栏 ---------- */
+  .bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px}
+  .tabs{display:flex;gap:4px;flex-wrap:wrap}
+  .tab{border:1px solid var(--line);background:var(--card);border-radius:7px;padding:6px 11px;
+       font-size:13px;cursor:pointer;color:#4a5159;user-select:none}
+  .tab:hover{border-color:#c9ced6}
+  .tab.on{background:var(--text);color:#fff;border-color:var(--text)}
+  .tab .c{opacity:.55;font-size:11px;margin-left:3px}
+  input[type=search]{flex:1;min-width:180px;border:1px solid var(--line);background:var(--card);
+       border-radius:7px;padding:7px 11px;font-size:13px;outline:none}
+  input[type=search]:focus{border-color:#9db4d8}
+  .chk{display:flex;align-items:center;gap:5px;font-size:13px;color:#4a5159;cursor:pointer;
+       border:1px solid var(--line);background:var(--card);border-radius:7px;padding:6px 10px}
+  .chk input{margin:0}
+
+  /* ---------- 表格 ---------- */
+  .tblwrap{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:auto}
+  table{border-collapse:collapse;width:100%;font-size:13px;min-width:1080px}
+  thead th{position:sticky;top:0;background:#fbfbfc;border-bottom:1px solid var(--line);
+      text-align:left;padding:9px 10px;font-weight:600;color:#5b636d;font-size:12px;white-space:nowrap;z-index:2}
+  tbody td{padding:8px 10px;border-bottom:1px solid #f0f2f5;vertical-align:middle}
+  tbody tr:last-child td{border-bottom:none}
+  tbody tr:hover{background:#fafbfc}
+  tr.suspect{background:#fffdf5}
+  tr.suspect:hover{background:#fffae8}
+  .nm{font-weight:600;white-space:nowrap}
+  .id{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:11.5px;color:var(--dim)}
+  .mono{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:11.5px}
+
+  .pill{display:inline-block;padding:1px 7px;border-radius:20px;font-size:11px;font-weight:600;white-space:nowrap}
+  .pill.full{background:var(--okbg);color:var(--ok)}
+  .pill.partial{background:var(--warnbg);color:var(--warn)}
+  .pill.empty{background:var(--badbg);color:var(--bad)}
+  .pill.exact{background:var(--okbg);color:var(--ok)}
+  .pill.alias{background:var(--bluebg);color:var(--blue)}
+  .pill.contains{background:var(--warnbg);color:var(--warn)}
+  .pill.override{background:#f2ecfe;color:var(--purple)}
+  .pill.ext{background:#e6f7f7;color:#0d9488}
+
+  /* 每日小柱状 */
+  .spark{display:flex;gap:2px;align-items:flex-end;height:22px}
+  .spark i{width:8px;background:#d8dde4;border-radius:1px;display:block;min-height:2px}
+  .spark i.has{background:#7cb3f0}
+  .spark i.zero{background:#f0d0d0}
+  .days{font-variant-numeric:tabular-nums}
+  .days b{font-size:14px}
+  .days s{text-decoration:none;color:var(--dim);font-size:11px}
+
+  .barwrap{width:56px;height:5px;background:#eef0f3;border-radius:3px;overflow:hidden}
+  .barwrap i{display:block;height:100%;background:var(--blue);border-radius:3px}
+
+  details summary{cursor:pointer;color:var(--dim);font-size:11.5px;list-style:none}
+  details summary::-webkit-details-marker{display:none}
+  details summary:hover{color:var(--blue)}
+  details[open] summary{color:var(--blue)}
+  .alt{font-size:11.5px;color:#6b7280;margin-top:4px;line-height:1.75}
+  .alt code{background:#f4f5f7;padding:1px 5px;border-radius:4px;margin-right:4px;display:inline-block}
+
+  .empty-hint{padding:36px;text-align:center;color:var(--dim)}
+
+  /* ---------- 命名规则说明 ---------- */
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:10px;
+         padding:16px 18px;margin-bottom:16px}
+  .panel h2{font-size:14px;margin:0 0 10px;color:#3a4048}
+  .panel p{margin:0 0 8px;color:#4a5159;font-size:13px}
+  .panel ul{margin:0;padding-left:20px;color:#4a5159;font-size:13px}
+  .panel li{margin-bottom:5px}
+  .panel code{background:#f4f5f7;padding:1px 6px;border-radius:4px;font-size:12px}
+  .legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px;font-size:12px;color:#5b636d}
+  .legend span{display:flex;align-items:center;gap:5px}
+
+  @media (max-width:700px){
+    .wrap{padding:14px 10px 40px}
+    .card .v{font-size:20px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>EPG 频道看板</h1>
+  <div class="sub" id="sub">加载中…</div>
+
+  <div class="cards" id="cards"></div>
+
+  <div class="panel">
+    <h2>怎么看这一页</h2>
+    <ul>
+      <li><b>状态</b>：<span class="pill full">完整</span> 表示 7 天每天都有节目；<span class="pill partial">不全</span> 表示有节目但缺天；<span class="pill empty">无数据</span> 表示所有源都没抓到。</li>
+      <li><b>每日柱状</b>：从左到右是今天起 7 天，柱子越高节目越多，<span style="color:#dc2626">红色</span>表示那天是 0 条。</li>
+      <li><b>匹配依据</b>：<span class="pill exact">精确</span> 名字归一化后完全相同，最可信；<span class="pill alias">别名</span> 靠别名表命中；<span class="pill contains">包含</span> 靠子串命中，<b>需要人工核对</b>；<span class="pill override">手工</span> 是你自己在 overrides.json 指定的。</li>
+      <li><b>源频道名</b>：这是数据源里那个频道的真实名字。如果它和左边的频道名差得远，说明可能配错台了，点“备选”能看到同名的其它候选。</li>
+      <li>黄色底色的行 = 建议核查（包含匹配，或节目不全）。</li>
+    </ul>
+    <div class="legend">
+      <span><i style="width:8px;height:14px;background:#7cb3f0;border-radius:1px;display:inline-block"></i> 当天有节目</span>
+      <span><i style="width:8px;height:14px;background:#d8dde4;border-radius:1px;display:inline-block"></i> 当天无节目</span>
+      <span><i style="width:8px;height:14px;background:#f0d0d0;border-radius:1px;display:inline-block"></i> 期望有但为 0</span>
+    </div>
+  </div>
+
+  <div class="bar">
+    <div class="tabs" id="tabs"></div>
+    <input type="search" id="q" placeholder="搜索频道名 / tvg-id / 别名 / 源频道名…">
+    <label class="chk"><input type="checkbox" id="onlySuspect"> 只看需核查</label>
+    <label class="chk"><input type="checkbox" id="onlyDesc"> 只看无简介</label>
+  </div>
+
+  <div class="tblwrap">
+    <table>
+      <thead><tr>
+        <th style="width:150px">频道</th>
+        <th style="width:150px">tvg-id（命名规则）</th>
+        <th style="width:66px">状态</th>
+        <th style="width:92px">天数 / 条数</th>
+        <th style="width:96px">每日分布</th>
+        <th style="width:70px">简介覆盖</th>
+        <th style="width:200px">匹配依据 → 源频道名</th>
+        <th>实际使用源</th>
+      </tr></thead>
+      <tbody id="tb"></tbody>
+    </table>
+    <div class="empty-hint" id="hint" style="display:none">没有符合条件的频道</div>
+  </div>
+</div>
+
+<script>
+const GROUP_LABEL = { cctv:'央视', satellite:'卫视', local:'地方台', hk:'香港', mo:'澳门', tw:'台湾' };
+const GROUP_ORDER = ['cctv','satellite','local','hk','mo','tw'];
+
+let DATA = null;
+let state = { group:'all', q:'', onlySuspect:false, onlyDesc:false };
+
+const $ = (id) => document.getElementById(id);
+
+function fmtDate(iso){
+  if(!iso) return '—';
+  const d = new Date(iso);
+  const p = (n)=>String(n).padStart(2,'0');
+  return `${d.getFullYear()}-${p(d.getMonth()+1)}-${p(d.getDate())} ${p(d.getHours())}:${p(d.getMinutes())}`;
+}
+
+function renderCards(){
+  const d = DATA;
+  const items = [
+    { k:'目标频道', v:d.channelsTotal, cls:'', n:`${GROUP_ORDER.filter(g=>countGroup(g)).length} 个分组` },
+    { k:'有节目', v:d.channelsWithEpg, cls:'ok', n:`覆盖 ${d.channelsTotal?Math.round(d.channelsWithEpg/d.channelsTotal*100):0}%` },
+    { k:'7 天完整', v:d.channelsFull, cls:'ok', n:'每天都有节目' },
+    { k:'缺天', v:d.channelsPartial, cls:'warn', n:'有节目但不全' },
+    { k:'完全无数据', v:d.channelsEmpty, cls:'bad', n:'所有源都没抓到' },
+    { k:'节目总数', v:d.programmesTotal, cls:'blue', n:`${d.days} 天合计` },
+    { k:'带简介', v:d.programmesWithDesc, cls:'purple', n:`覆盖率 ${d.descCoverage}%` },
+  ];
+  $('cards').innerHTML = items.map(i =>
+    `<div class="card ${i.cls}"><div class="k">${i.k}</div><div class="v">${i.v.toLocaleString()}</div><div class="n">${i.n}</div></div>`
+  ).join('');
+
+  $('sub').innerHTML = `生成时间 <b>${fmtDate(d.generatedAt)}</b> · 覆盖 <b>${d.dayList[0]}</b> ~ <b>${d.dayList[d.dayList.length-1]}</b>（${d.days} 天）· 数据来自 epg.pw / 电视猫 / 搜视网`;
+}
+
+function countGroup(g){ return DATA.detail.filter(r=>r.group===g).length }
+
+function renderTabs(){
+  const gs = ['all', ...GROUP_ORDER.filter(g=>countGroup(g))];
+  $('tabs').innerHTML = gs.map(g=>{
+    const c = g==='all' ? DATA.detail.length : countGroup(g);
+    const label = g==='all' ? '全部' : (GROUP_LABEL[g]||g);
+    return `<div class="tab ${state.group===g?'on':''}" data-g="${g}">${label}<span class="c">${c}</span></div>`;
+  }).join('');
+  $('tabs').querySelectorAll('.tab').forEach(el=>{
+    el.onclick = ()=>{ state.group = el.dataset.g; renderTabs(); renderTable(); };
+  });
+}
+
+function isSuspect(r){
+  return r.matchConfidence === 'contains' || r.status !== 'full';
+}
+
+function rowHtml(r){
+  const dayBars = DATA.dayList.map(d=>{
+    const n = r.perDay[d] || 0;
+    const max = Math.max(...DATA.dayList.map(x=>r.perDay[x]||0), 1);
+    const h = n===0 ? 3 : Math.max(4, Math.round(n/max*20));
+    const cls = n===0 ? 'zero' : 'has';
+    return `<i class="${cls}" style="height:${h}px" title="${d}: ${n} 条"></i>`;
+  }).join('');
+
+  const conf = r.matchConfidence || '';
+  const confLabel = { exact:'精确', alias:'别名', contains:'包含', override:'手工' }[conf] || conf;
+  const confPill = conf ? `<span class="pill ${conf}">${confLabel}</span>` : '<span class="pill empty">未匹配</span>';
+
+  const alts = (r.alternatives && r.alternatives.length)
+    ? `<details><summary>备选 ${r.alternatives.length} 个</summary><div class="alt">${
+        r.alternatives.map(a=>`<code>${a}</code>`).join('')
+      }</div></details>`
+    : '';
+
+  const usedIsExt = String(r.usedSource||'').startsWith('ext:');
+  const usedPill = usedIsExt
+    ? `<span class="pill ext">外部源</span> <span class="mono">${r.usedSource.replace(/^ext:/,'')}</span>`
+    : `<span class="mono">${r.usedSource || '—'}</span>`;
+
+  return `<tr class="${isSuspect(r)?'suspect':''}">
+    <td><div class="nm">${r.name}</div>${alts}</td>
+    <td><div class="id">${r.id}</div>${r.aliases.length?`<div class="id" style="opacity:.65;white-space:normal">${r.aliases.slice(0,3).join(' / ')}${r.aliases.length>3?' …':''}</div>`:''}</td>
+    <td><span class="pill ${r.status}">${{full:'完整',partial:'不全',empty:'无数据'}[r.status]}</span></td>
+    <td class="days"><b>${r.days}</b><s>/${DATA.days} 天</s><br><s>${r.count} 条</s></td>
+    <td><div class="spark">${dayBars}</div></td>
+    <td>
+      <div class="barwrap"><i style="width:${r.descRate}%"></i></div>
+      <div class="id">${r.withDesc}/${r.count}</div>
+    </td>
+    <td>${confPill}<div class="id" style="white-space:normal;margin-top:2px">${r.matchedSourceName || '—'}</div></td>
+    <td>${usedPill}</td>
+  </tr>`;
+}
+
+function renderTable(){
+  let rows = DATA.detail.slice();
+
+  if(state.group !== 'all') rows = rows.filter(r=>r.group===state.group);
+  if(state.onlySuspect) rows = rows.filter(isSuspect);
+  if(state.onlyDesc) rows = rows.filter(r=>r.count>0 && r.descRate===0);
+
+  const q = state.q.trim().toLowerCase();
+  if(q){
+    rows = rows.filter(r=>
+      r.name.toLowerCase().includes(q) ||
+      r.id.toLowerCase().includes(q) ||
+      (r.matchedSourceName||'').toLowerCase().includes(q) ||
+      (r.aliases||[]).some(a=>a.toLowerCase().includes(q))
+    );
+  }
+
+  // 排序：先按分组顺序，再按 无数据→不全→完整，同状态按条数降序
+  const gidx = (g)=>{ const i = GROUP_ORDER.indexOf(g); return i<0?99:i };
+  const sidx = (r)=> r.status==='empty'?0 : r.status==='partial'?1 : 2;
+  rows.sort((a,b)=> gidx(a.group)-gidx(b.group) || sidx(a)-sidx(b)-0 || b.count-a.count);
+
+  $('tb').innerHTML = rows.map(rowHtml).join('');
+  $('hint').style.display = rows.length ? 'none' : 'block';
+}
+
+async function main(){
+  try{
+    const res = await fetch('report.json', { cache:'no-store' });
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    DATA = await res.json();
+  }catch(e){
+    document.querySelector('.wrap').innerHTML =
+      `<h1>EPG 频道看板</h1><div class="panel"><p>读取 report.json 失败：${e.message}</p>
+       <p>请确认 report.json 与本页面在同一目录，并且是通过 http 访问（直接双击打开 html 会被浏览器的本地文件策略拦住）。</p></div>`;
+    return;
+  }
+  renderCards();
+  renderTabs();
+  renderTable();
+
+  $('q').oninput = (e)=>{ state.q = e.target.value; renderTable(); };
+  $('onlySuspect').onchange = (e)=>{ state.onlySuspect = e.target.checked; renderTable(); };
+  $('onlyDesc').onchange = (e)=>{ state.onlyDesc = e.target.checked; renderTable(); };
+}
+main();
+</script>
+</body>
+</html>

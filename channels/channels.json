@@ -9,124 +9,1050 @@
     "tw": "中国台湾"
   },
   "channels": [
-    { "id": "CCTV1.cn", "name": "CCTV-1 综合", "group": "cctv", "aliases": ["CCTV-1", "CCTV1", "CCTV-1综合", "CCTV1综合", "CCTV-1（高清）"] },
-    { "id": "CCTV2.cn", "name": "CCTV-2 财经", "group": "cctv", "aliases": ["CCTV-2", "CCTV2", "CCTV-2财经"] },
-    { "id": "CCTV3.cn", "name": "CCTV-3 综艺", "group": "cctv", "aliases": ["CCTV-3", "CCTV3", "CCTV-3综艺"] },
-    { "id": "CCTV4Asia.cn", "name": "CCTV-4 亚洲", "group": "cctv", "aliases": ["CCTV-4", "CCTV4", "CCTV-4 (亚洲)", "CCTV-4中文国际（亚）", "CCTV-4中文国际"] },
-    { "id": "CCTV5.cn", "name": "CCTV-5 体育", "group": "cctv", "aliases": ["CCTV-5", "CCTV5", "CCTV-5体育"] },
-    { "id": "CCTV5Plus.cn", "name": "CCTV-5+ 体育赛事", "group": "cctv", "aliases": ["CCTV-5+", "CCTV5+", "CCTV5加"] },
-    { "id": "CCTV6.cn", "name": "CCTV-6 电影", "group": "cctv", "aliases": ["CCTV-6", "CCTV6", "CCTV-6电影"] },
-    { "id": "CCTV7.cn", "name": "CCTV-7 国防军事", "group": "cctv", "aliases": ["CCTV-7", "CCTV7", "CCTV-7国防军事"] },
-    { "id": "CCTV8.cn", "name": "CCTV-8 电视剧", "group": "cctv", "aliases": ["CCTV-8", "CCTV8", "CCTV-8电视剧"] },
-    { "id": "CCTV9.cn", "name": "CCTV-9 纪录", "group": "cctv", "aliases": ["CCTV-9", "CCTV9", "CCTV-9纪录"] },
-    { "id": "CCTV10.cn", "name": "CCTV-10 科教", "group": "cctv", "aliases": ["CCTV-10", "CCTV10", "CCTV-10科教"] },
-    { "id": "CCTV11.cn", "name": "CCTV-11 戏曲", "group": "cctv", "aliases": ["CCTV-11", "CCTV11", "CCTV-11戏曲"] },
-    { "id": "CCTV12.cn", "name": "CCTV-12 社会与法", "group": "cctv", "aliases": ["CCTV-12", "CCTV12", "CCTV-12社会与法", "CCTV-12法制"] },
-    { "id": "CCTV13.cn", "name": "CCTV-13 新闻", "group": "cctv", "aliases": ["CCTV-13", "CCTV13", "CCTV-13新闻"] },
-    { "id": "CCTV14.cn", "name": "CCTV-14 少儿", "group": "cctv", "aliases": ["CCTV-14", "CCTV14", "CCTV-14少儿"] },
-    { "id": "CCTV15.cn", "name": "CCTV-15 音乐", "group": "cctv", "aliases": ["CCTV-15", "CCTV15", "CCTV-15音乐"] },
-    { "id": "CCTV16.cn", "name": "CCTV-16 奥林匹克", "group": "cctv", "aliases": ["CCTV-16", "CCTV16", "CCTV-16奥林匹克"] },
-    { "id": "CCTV17.cn", "name": "CCTV-17 农业农村", "group": "cctv", "aliases": ["CCTV-17", "CCTV17", "CCTV-17农业农村", "CCTV-17（农业农村）"] },
-    { "id": "CCTV4K.cn", "name": "CCTV-4K 超高清", "group": "cctv", "aliases": ["CCTV4K", "CCTV-4K"] },
-    { "id": "CCTV8K.cn", "name": "CCTV-8K 超高清", "group": "cctv", "aliases": ["CCTV8K", "CCTV-8K"] },
-    { "id": "CCTV4Europe.cn", "name": "CCTV-4 欧洲", "group": "cctv", "aliases": ["CCTV-4 (欧洲)", "CCTV-4中文国际（欧）"] },
-    { "id": "CCTV4America.cn", "name": "CCTV-4 美洲", "group": "cctv", "aliases": ["CCTV-4 (美洲)", "CCTV-4中文国际（美）"] },
-
-    { "id": "HunanTV.cn", "name": "湖南卫视", "group": "satellite", "aliases": ["湖南卫视（高清）"] },
-    { "id": "ZhejiangSatelliteTV.cn", "name": "浙江卫视", "group": "satellite", "aliases": ["浙江卫视（高清）"] },
-    { "id": "JiangsuSatelliteTV.cn", "name": "江苏卫视", "group": "satellite", "aliases": ["江苏卫视（高清）"] },
-    { "id": "DragonTV.cn", "name": "东方卫视", "group": "satellite", "aliases": ["东方卫视（高清）", "上海东方卫视"] },
-    { "id": "BeijingSatelliteTV.cn", "name": "北京卫视", "group": "satellite", "aliases": ["BTV北京卫视", "北京卫视（高清）"] },
-    { "id": "AnhuiSatelliteTV.cn", "name": "安徽卫视", "group": "satellite", "aliases": ["安徽卫视（高清）"] },
-    { "id": "ShandongSatelliteTV.cn", "name": "山东卫视", "group": "satellite", "aliases": ["山东卫视（高清）"] },
-    { "id": "GuangdongSatelliteTV.cn", "name": "广东卫视", "group": "satellite", "aliases": ["广东卫视（高清）"] },
-    { "id": "ShenzhenSatelliteTV.cn", "name": "深圳卫视", "group": "satellite", "aliases": ["深圳卫视（高清）"] },
-    { "id": "TianjinSatelliteTV.cn", "name": "天津卫视", "group": "satellite", "aliases": ["天津卫视（高清）"] },
-    { "id": "ChongqingSatelliteTV.cn", "name": "重庆卫视", "group": "satellite", "aliases": ["重庆卫视（高清）"] },
-    { "id": "SichuanSatelliteTV.cn", "name": "四川卫视", "group": "satellite", "aliases": ["四川卫视（高清）"] },
-    { "id": "HubeiSatelliteTV.cn", "name": "湖北卫视", "group": "satellite", "aliases": ["湖北卫视（高清）"] },
-    { "id": "HenanTVSatellite.cn", "name": "河南卫视", "group": "satellite", "aliases": ["河南卫视（高清）"] },
-    { "id": "HebeiSatelliteTV.cn", "name": "河北卫视", "group": "satellite", "aliases": ["河北卫视（高清）"] },
-    { "id": "ShanxiSatelliteTV.cn", "name": "山西卫视", "group": "satellite", "aliases": ["山西卫视（高清）"] },
-    { "id": "ShaanxiSatelliteTV.cn", "name": "陕西卫视", "group": "satellite", "aliases": ["陕西卫视（高清）"] },
-    { "id": "LiaoningSatelliteTV.cn", "name": "辽宁卫视", "group": "satellite", "aliases": ["辽宁卫视（高清）"] },
-    { "id": "JilinSatelliteTV.cn", "name": "吉林卫视", "group": "satellite", "aliases": ["吉林卫视（高清）"] },
-    { "id": "HeilongjiangSatelliteTV.cn", "name": "黑龙江卫视", "group": "satellite", "aliases": ["黑龙江卫视（高清）"] },
-    { "id": "JiangxiSatelliteTV.cn", "name": "江西卫视", "group": "satellite", "aliases": ["江西卫视（高清）"] },
-    { "id": "FujianSatelliteTV.cn", "name": "东南卫视", "group": "satellite", "aliases": ["东南卫视（高清）", "福建东南卫视"] },
-    { "id": "GuangxiSatelliteTV.cn", "name": "广西卫视", "group": "satellite", "aliases": ["广西卫视（高清）"] },
-    { "id": "YunnanSatelliteTV.cn", "name": "云南卫视", "group": "satellite", "aliases": ["云南卫视（高清）"] },
-    { "id": "GuizhouSatelliteTV.cn", "name": "贵州卫视", "group": "satellite", "aliases": ["贵州卫视（高清）"] },
-    { "id": "GansuSatelliteTV.cn", "name": "甘肃卫视", "group": "satellite", "aliases": ["甘肃卫视（高清）"] },
-    { "id": "QinghaiSatelliteTV.cn", "name": "青海卫视", "group": "satellite", "aliases": ["青海卫视（高清）"] },
-    { "id": "NingxiaSatelliteChannel.cn", "name": "宁夏卫视", "group": "satellite", "aliases": ["宁夏卫视（高清）"] },
-    { "id": "XinjiangSatelliteTV.cn", "name": "新疆卫视", "group": "satellite", "aliases": ["新疆卫视（高清）"] },
-    { "id": "TibetSatelliteTV.cn", "name": "西藏卫视", "group": "satellite", "aliases": ["西藏卫视（高清）"] },
-    { "id": "NeiMongolSatelliteTV.cn", "name": "内蒙古卫视", "group": "satellite", "aliases": ["内蒙古卫视（高清）"] },
-    { "id": "HainanSatelliteTV.cn", "name": "海南卫视", "group": "satellite", "aliases": ["海南卫视（高清）", "旅游卫视"] },
-    { "id": "XiamenSatelliteTV.cn", "name": "厦门卫视", "group": "satellite", "aliases": ["厦门卫视（高清）"] },
-    { "id": "YanbianSatelliteTV.cn", "name": "延边卫视", "group": "satellite", "aliases": ["延边卫视（高清）"] },
-    { "id": "BingtuanSatelliteTV.cn", "name": "兵团卫视", "group": "satellite", "aliases": [] },
-    { "id": "KangbaSatelliteTV.cn", "name": "康巴卫视", "group": "satellite", "aliases": [] },
-    { "id": "HuangheSatelliteTV.cn", "name": "黄河卫视", "group": "satellite", "aliases": [] },
-    { "id": "HaixiaSatelliteTV.cn", "name": "海峡卫视", "group": "satellite", "aliases": ["海峡卫视（高清）"] },
-    { "id": "GBASatelliteTV.cn", "name": "大湾区卫视", "group": "satellite", "aliases": ["广东南方卫视", "南方卫视"] },
-    { "id": "SanshaSatelliteTV.cn", "name": "三沙卫视", "group": "satellite", "aliases": [] },
-    { "id": "HunanTVInternational.cn", "name": "湖南国际", "group": "satellite", "aliases": ["湖南卫视国际", "湖南国际频道"] },
-    { "id": "ZhejiangInternationalChannel.cn", "name": "浙江国际", "group": "satellite", "aliases": ["浙江国际频道"] },
-
-    { "id": "HunanEconomyChannel.cn", "name": "湖南经视", "group": "local", "aliases": ["湖南经济电视台", "湖南经视综合"] },
-    { "id": "HunanEntertainmentChannel.cn", "name": "湖南娱乐", "group": "local", "aliases": ["湖南娱乐频道"] },
-    { "id": "HunanDramaChannel.cn", "name": "湖南电视剧", "group": "local", "aliases": ["湖南电视剧频道"] },
-    { "id": "HunanCityChannel.cn", "name": "湖南都市", "group": "local", "aliases": ["湖南都市频道"] },
-    { "id": "HunanPublicChannel.cn", "name": "湖南公共", "group": "local", "aliases": ["湖南公共频道"] },
-    { "id": "ZhejiangEconomicChannel.cn", "name": "浙江经视", "group": "local", "aliases": ["浙江经济生活", "浙江经济频道"] },
-    { "id": "ZhejiangMinshengLeisure.cn", "name": "浙江民生休闲", "group": "local", "aliases": ["浙江民生"] },
-    { "id": "ZhejiangFilmEntertainmentChannel.cn", "name": "浙江影视", "group": "local", "aliases": ["浙江影视娱乐"] },
-    { "id": "ZhejiangChildrensChannel.cn", "name": "浙江少儿", "group": "local", "aliases": ["浙江少儿频道"] },
-    { "id": "JiangsuCityChannel.cn", "name": "江苏城市", "group": "local", "aliases": ["江苏城市频道"] },
-    { "id": "JiangsuVarietyChannel.cn", "name": "江苏综艺", "group": "local", "aliases": ["江苏综艺频道"] },
-    { "id": "JiangsuMovieChannel.cn", "name": "江苏影视", "group": "local", "aliases": ["江苏影视剧频道"] },
-    { "id": "JiangsuPublicNewsChannel.cn", "name": "江苏公共新闻", "group": "local", "aliases": ["江苏公共·新闻"] },
-
-    { "id": "Jade.hk", "name": "翡翠台", "group": "hk", "country": "HK", "aliases": ["TVB翡翠台", "無綫翡翠台", "无线翡翠台"] },
-    { "id": "Pearl.hk", "name": "明珠台", "group": "hk", "country": "HK", "aliases": ["TVB明珠台", "無綫明珠台", "无线明珠台"] },
-    { "id": "TVBNewsChannel.hk", "name": "無綫新聞台", "group": "hk", "country": "HK", "aliases": ["TVB新闻台", "无线新闻台"] },
-    { "id": "GoldenJade.hk", "name": "黃金翡翠台", "group": "hk", "country": "HK", "aliases": ["黄金翡翠台", "TVB黃金翡翠台"] },
-    { "id": "TVBPlus.hk", "name": "TVB Plus", "group": "hk", "country": "HK", "aliases": ["TVB+", "无线Plus"] },
-    { "id": "ViuTV.hk", "name": "ViuTV", "group": "hk", "country": "HK", "aliases": ["ViuTV 99", "ViuTV99"] },
-    { "id": "ViuTVsix.hk", "name": "ViuTVsix", "group": "hk", "country": "HK", "aliases": ["ViuTV 96", "ViuTVsix 96"] },
-    { "id": "RTHKTV31.hk", "name": "港台电视31", "group": "hk", "country": "HK", "aliases": ["RTHK 31", "港台31"] },
-    { "id": "RTHKTV32.hk", "name": "港台电视32", "group": "hk", "country": "HK", "aliases": ["RTHK 32", "港台32"] },
-    { "id": "RTHKTV33.hk", "name": "港台电视33", "group": "hk", "country": "HK", "aliases": ["RTHK 33", "港台33"] },
-    { "id": "RTHKTV34.hk", "name": "港台电视34", "group": "hk", "country": "HK", "aliases": ["RTHK 34", "港台34"] },
-    { "id": "RTHKTV35.hk", "name": "港台电视35", "group": "hk", "country": "HK", "aliases": ["RTHK 35", "港台35"] },
-    { "id": "HOYTV.hk", "name": "HOY TV", "group": "hk", "country": "HK", "aliases": ["HOY 77", "香港开电视", "奇妙电视"] },
-    { "id": "PhoenixChineseChannel.hk", "name": "鳳凰衛視中文台", "group": "hk", "country": "HK", "aliases": ["凤凰卫视", "凤凰卫视中文台"] },
-    { "id": "PhoenixInfoNewsChannel.hk", "name": "鳳凰衛視資訊台", "group": "hk", "country": "HK", "aliases": ["凤凰卫视资讯台"] },
-    { "id": "PhoenixHongKongChannel.hk", "name": "鳳凰衛視香港台", "group": "hk", "country": "HK", "aliases": ["凤凰卫视香港台"] },
-
-    { "id": "MacauTV.hk", "name": "澳门电视台", "group": "mo", "country": "MO", "aliases": ["澳视澳门", "澳门澳视"] },
-    { "id": "MacauLotus.hk", "name": "澳门莲花电视台", "group": "mo", "country": "MO", "aliases": ["莲花卫视", "澳门莲花"] },
-    { "id": "AsiaSatelliteTV.hk", "name": "澳亚卫视", "group": "mo", "country": "MO", "aliases": [] },
-
-    { "id": "TTV.tw", "name": "台視", "group": "tw", "country": "TW", "aliases": ["台视", "TTV", "台湾电视台"] },
-    { "id": "CTV.tw", "name": "中視", "group": "tw", "country": "TW", "aliases": ["中视", "CTV", "中国电视"] },
-    { "id": "CTS.tw", "name": "華視", "group": "tw", "country": "TW", "aliases": ["华视", "CTS", "中华电视"] },
-    { "id": "FTV.tw", "name": "民視無線台", "group": "tw", "country": "TW", "aliases": ["民视", "FTV", "民视无线台"] },
-    { "id": "PTS.tw", "name": "公視", "group": "tw", "country": "TW", "aliases": ["公视", "PTS", "台湾公视"] },
-    { "id": "TVBS.tw", "name": "TVBS", "group": "tw", "country": "TW", "aliases": ["TVBS 56", "TVBS欢乐台"] },
-    { "id": "TVBSNews.tw", "name": "TVBS新聞", "group": "tw", "country": "TW", "aliases": ["TVBS新闻", "TVBS新闻台"] },
-    { "id": "CTiNews.tw", "name": "中天新聞", "group": "tw", "country": "TW", "aliases": ["中天新闻", "中天电视台", "中天新闻台"] },
-    { "id": "CTiTV.tw", "name": "中天綜合", "group": "tw", "country": "TW", "aliases": ["中天综合", "中天综合台"] },
-    { "id": "SETNews.tw", "name": "三立新聞", "group": "tw", "country": "TW", "aliases": ["三立新闻", "三立电视台", "三立新闻台"] },
-    { "id": "SETTaiwan.tw", "name": "三立台灣台", "group": "tw", "country": "TW", "aliases": ["三立台湾台"] },
-    { "id": "EBCNews.tw", "name": "東森新聞", "group": "tw", "country": "TW", "aliases": ["东森新闻", "东森电视台", "东森新闻台"] },
-    { "id": "EBCVariety.tw", "name": "東森綜合", "group": "tw", "country": "TW", "aliases": ["东森综合", "东森综合台"] },
-    { "id": "FTVNews.tw", "name": "民視新聞", "group": "tw", "country": "TW", "aliases": ["民视新闻", "民视新闻台"] },
-    { "id": "CTVNewsChannel.tw", "name": "中視新聞", "group": "tw", "country": "TW", "aliases": ["中视新闻", "中视新闻台"] },
-    { "id": "CTSNews.tw", "name": "華視新聞", "group": "tw", "country": "TW", "aliases": ["华视新闻"] },
-    { "id": "TTVNews.tw", "name": "台視新聞", "group": "tw", "country": "TW", "aliases": ["台视新闻"] },
-    { "id": "EBCYOYO.tw", "name": "東森幼幼台", "group": "tw", "country": "TW", "aliases": ["东森幼幼", "YOYO TV"] }
+    {
+      "id": "CCTV1.cn",
+      "name": "CCTV-1 综合",
+      "group": "cctv",
+      "aliases": [
+        "CCTV-1",
+        "CCTV1",
+        "CCTV-1综合",
+        "CCTV1综合",
+        "CCTV-1（高清）"
+      ]
+    },
+    {
+      "id": "CCTV2.cn",
+      "name": "CCTV-2 财经",
+      "group": "cctv",
+      "aliases": [
+        "CCTV-2",
+        "CCTV2",
+        "CCTV-2财经"
+      ]
+    },
+    {
+      "id": "CCTV3.cn",
+      "name": "CCTV-3 综艺",
+      "group": "cctv",
+      "aliases": [
+        "CCTV-3",
+        "CCTV3",
+        "CCTV-3综艺"
+      ]
+    },
+    {
+      "id": "CCTV4Asia.cn",
+      "name": "CCTV-4 亚洲",
+      "group": "cctv",
+      "aliases": [
+        "CCTV-4",
+        "CCTV4",
+        "CCTV-4 (亚洲)",
+        "CCTV-4中文国际（亚）",
+        "CCTV-4中文国际",
+        "CCTV4A",
+        "CCTV-4A"
+      ]
+    },
+    {
+      "id": "CCTV5.cn",
+      "name": "CCTV-5 体育",
+      "group": "cctv",
+      "aliases": [
+        "CCTV-5",
+        "CCTV5",
+        "CCTV-5体育"
+      ]
+    },
+    {
+      "id": "CCTV5Plus.cn",
+      "name": "CCTV-5+ 体育赛事",
+      "group": "cctv",
+      "aliases": [
+        "CCTV-5+",
+        "CCTV5+",
+        "CCTV5加"
+      ]
+    },
+    {
+      "id": "CCTV6.cn",
+      "name": "CCTV-6 电影",
+      "group": "cctv",
+      "aliases": [
+        "CCTV-6",
+        "CCTV6",
+        "CCTV-6电影"
+      ]
+    },
+    {
+      "id": "CCTV7.cn",
+      "name": "CCTV-7 国防军事",
+      "group": "cctv",
+      "aliases": [
+        "CCTV-7",
+        "CCTV7",
+        "CCTV-7国防军事"
+      ]
+    },
+    {
+      "id": "CCTV8.cn",
+      "name": "CCTV-8 电视剧",
+      "group": "cctv",
+      "aliases": [
+        "CCTV-8",
+        "CCTV8",
+        "CCTV-8电视剧"
+      ]
+    },
+    {
+      "id": "CCTV9.cn",
+      "name": "CCTV-9 纪录",
+      "group": "cctv",
+      "aliases": [
+        "CCTV-9",
+        "CCTV9",
+        "CCTV-9纪录"
+      ]
+    },
+    {
+      "id": "CCTV10.cn",
+      "name": "CCTV-10 科教",
+      "group": "cctv",
+      "aliases": [
+        "CCTV-10",
+        "CCTV10",
+        "CCTV-10科教"
+      ]
+    },
+    {
+      "id": "CCTV11.cn",
+      "name": "CCTV-11 戏曲",
+      "group": "cctv",
+      "aliases": [
+        "CCTV-11",
+        "CCTV11",
+        "CCTV-11戏曲"
+      ]
+    },
+    {
+      "id": "CCTV12.cn",
+      "name": "CCTV-12 社会与法",
+      "group": "cctv",
+      "aliases": [
+        "CCTV-12",
+        "CCTV12",
+        "CCTV-12社会与法",
+        "CCTV-12法制"
+      ]
+    },
+    {
+      "id": "CCTV13.cn",
+      "name": "CCTV-13 新闻",
+      "group": "cctv",
+      "aliases": [
+        "CCTV-13",
+        "CCTV13",
+        "CCTV-13新闻"
+      ]
+    },
+    {
+      "id": "CCTV14.cn",
+      "name": "CCTV-14 少儿",
+      "group": "cctv",
+      "aliases": [
+        "CCTV-14",
+        "CCTV14",
+        "CCTV-14少儿"
+      ]
+    },
+    {
+      "id": "CCTV15.cn",
+      "name": "CCTV-15 音乐",
+      "group": "cctv",
+      "aliases": [
+        "CCTV-15",
+        "CCTV15",
+        "CCTV-15音乐"
+      ]
+    },
+    {
+      "id": "CCTV16.cn",
+      "name": "CCTV-16 奥林匹克",
+      "group": "cctv",
+      "aliases": [
+        "CCTV-16",
+        "CCTV16",
+        "CCTV-16奥林匹克"
+      ]
+    },
+    {
+      "id": "CCTV17.cn",
+      "name": "CCTV-17 农业农村",
+      "group": "cctv",
+      "aliases": [
+        "CCTV-17",
+        "CCTV17",
+        "CCTV-17农业农村",
+        "CCTV-17（农业农村）"
+      ]
+    },
+    {
+      "id": "CCTV4K.cn",
+      "name": "CCTV-4K 超高清",
+      "group": "cctv",
+      "aliases": [
+        "CCTV4K",
+        "CCTV-4K"
+      ]
+    },
+    {
+      "id": "CCTV8K.cn",
+      "name": "CCTV-8K 超高清",
+      "group": "cctv",
+      "aliases": [
+        "CCTV8K",
+        "CCTV-8K"
+      ]
+    },
+    {
+      "id": "CCTV4Europe.cn",
+      "name": "CCTV-4 欧洲",
+      "group": "cctv",
+      "aliases": [
+        "CCTV-4 (欧洲)",
+        "CCTV-4中文国际（欧）",
+        "CCTV4EUO",
+        "CCTV4-EUO",
+        "CCTV4欧洲"
+      ]
+    },
+    {
+      "id": "CCTV4America.cn",
+      "name": "CCTV-4 美洲",
+      "group": "cctv",
+      "aliases": [
+        "CCTV-4 (美洲)",
+        "CCTV-4中文国际（美）",
+        "CCTV4AME",
+        "CCTV4-AME",
+        "CCTV4美洲"
+      ]
+    },
+    {
+      "id": "HunanTV.cn",
+      "name": "湖南卫视",
+      "group": "satellite",
+      "aliases": [
+        "湖南卫视（高清）"
+      ]
+    },
+    {
+      "id": "ZhejiangSatelliteTV.cn",
+      "name": "浙江卫视",
+      "group": "satellite",
+      "aliases": [
+        "浙江卫视（高清）"
+      ]
+    },
+    {
+      "id": "JiangsuSatelliteTV.cn",
+      "name": "江苏卫视",
+      "group": "satellite",
+      "aliases": [
+        "江苏卫视（高清）"
+      ]
+    },
+    {
+      "id": "DragonTV.cn",
+      "name": "东方卫视",
+      "group": "satellite",
+      "aliases": [
+        "东方卫视（高清）",
+        "上海东方卫视"
+      ]
+    },
+    {
+      "id": "BeijingSatelliteTV.cn",
+      "name": "北京卫视",
+      "group": "satellite",
+      "aliases": [
+        "BTV北京卫视",
+        "北京卫视（高清）"
+      ]
+    },
+    {
+      "id": "AnhuiSatelliteTV.cn",
+      "name": "安徽卫视",
+      "group": "satellite",
+      "aliases": [
+        "安徽卫视（高清）"
+      ]
+    },
+    {
+      "id": "ShandongSatelliteTV.cn",
+      "name": "山东卫视",
+      "group": "satellite",
+      "aliases": [
+        "山东卫视（高清）"
+      ]
+    },
+    {
+      "id": "GuangdongSatelliteTV.cn",
+      "name": "广东卫视",
+      "group": "satellite",
+      "aliases": [
+        "广东卫视（高清）"
+      ]
+    },
+    {
+      "id": "ShenzhenSatelliteTV.cn",
+      "name": "深圳卫视",
+      "group": "satellite",
+      "aliases": [
+        "深圳卫视（高清）"
+      ]
+    },
+    {
+      "id": "TianjinSatelliteTV.cn",
+      "name": "天津卫视",
+      "group": "satellite",
+      "aliases": [
+        "天津卫视（高清）"
+      ]
+    },
+    {
+      "id": "ChongqingSatelliteTV.cn",
+      "name": "重庆卫视",
+      "group": "satellite",
+      "aliases": [
+        "重庆卫视（高清）"
+      ]
+    },
+    {
+      "id": "SichuanSatelliteTV.cn",
+      "name": "四川卫视",
+      "group": "satellite",
+      "aliases": [
+        "四川卫视（高清）"
+      ]
+    },
+    {
+      "id": "HubeiSatelliteTV.cn",
+      "name": "湖北卫视",
+      "group": "satellite",
+      "aliases": [
+        "湖北卫视（高清）"
+      ]
+    },
+    {
+      "id": "HenanTVSatellite.cn",
+      "name": "河南卫视",
+      "group": "satellite",
+      "aliases": [
+        "河南卫视（高清）"
+      ]
+    },
+    {
+      "id": "HebeiSatelliteTV.cn",
+      "name": "河北卫视",
+      "group": "satellite",
+      "aliases": [
+        "河北卫视（高清）"
+      ]
+    },
+    {
+      "id": "ShanxiSatelliteTV.cn",
+      "name": "山西卫视",
+      "group": "satellite",
+      "aliases": [
+        "山西卫视（高清）"
+      ]
+    },
+    {
+      "id": "ShaanxiSatelliteTV.cn",
+      "name": "陕西卫视",
+      "group": "satellite",
+      "aliases": [
+        "陕西卫视（高清）"
+      ]
+    },
+    {
+      "id": "LiaoningSatelliteTV.cn",
+      "name": "辽宁卫视",
+      "group": "satellite",
+      "aliases": [
+        "辽宁卫视（高清）"
+      ]
+    },
+    {
+      "id": "JilinSatelliteTV.cn",
+      "name": "吉林卫视",
+      "group": "satellite",
+      "aliases": [
+        "吉林卫视（高清）"
+      ]
+    },
+    {
+      "id": "HeilongjiangSatelliteTV.cn",
+      "name": "黑龙江卫视",
+      "group": "satellite",
+      "aliases": [
+        "黑龙江卫视（高清）"
+      ]
+    },
+    {
+      "id": "JiangxiSatelliteTV.cn",
+      "name": "江西卫视",
+      "group": "satellite",
+      "aliases": [
+        "江西卫视（高清）"
+      ]
+    },
+    {
+      "id": "FujianSatelliteTV.cn",
+      "name": "东南卫视",
+      "group": "satellite",
+      "aliases": [
+        "东南卫视（高清）",
+        "福建东南卫视"
+      ]
+    },
+    {
+      "id": "GuangxiSatelliteTV.cn",
+      "name": "广西卫视",
+      "group": "satellite",
+      "aliases": [
+        "广西卫视（高清）"
+      ]
+    },
+    {
+      "id": "YunnanSatelliteTV.cn",
+      "name": "云南卫视",
+      "group": "satellite",
+      "aliases": [
+        "云南卫视（高清）"
+      ]
+    },
+    {
+      "id": "GuizhouSatelliteTV.cn",
+      "name": "贵州卫视",
+      "group": "satellite",
+      "aliases": [
+        "贵州卫视（高清）"
+      ]
+    },
+    {
+      "id": "GansuSatelliteTV.cn",
+      "name": "甘肃卫视",
+      "group": "satellite",
+      "aliases": [
+        "甘肃卫视（高清）"
+      ]
+    },
+    {
+      "id": "QinghaiSatelliteTV.cn",
+      "name": "青海卫视",
+      "group": "satellite",
+      "aliases": [
+        "青海卫视（高清）"
+      ]
+    },
+    {
+      "id": "NingxiaSatelliteChannel.cn",
+      "name": "宁夏卫视",
+      "group": "satellite",
+      "aliases": [
+        "宁夏卫视（高清）"
+      ]
+    },
+    {
+      "id": "XinjiangSatelliteTV.cn",
+      "name": "新疆卫视",
+      "group": "satellite",
+      "aliases": [
+        "新疆卫视（高清）"
+      ]
+    },
+    {
+      "id": "TibetSatelliteTV.cn",
+      "name": "西藏卫视",
+      "group": "satellite",
+      "aliases": [
+        "西藏卫视（高清）"
+      ]
+    },
+    {
+      "id": "NeiMongolSatelliteTV.cn",
+      "name": "内蒙古卫视",
+      "group": "satellite",
+      "aliases": [
+        "内蒙古卫视（高清）"
+      ]
+    },
+    {
+      "id": "HainanSatelliteTV.cn",
+      "name": "海南卫视",
+      "group": "satellite",
+      "aliases": [
+        "海南卫视（高清）",
+        "旅游卫视"
+      ]
+    },
+    {
+      "id": "XiamenSatelliteTV.cn",
+      "name": "厦门卫视",
+      "group": "satellite",
+      "aliases": [
+        "厦门卫视（高清）"
+      ]
+    },
+    {
+      "id": "YanbianSatelliteTV.cn",
+      "name": "延边卫视",
+      "group": "satellite",
+      "aliases": [
+        "延边卫视（高清）"
+      ]
+    },
+    {
+      "id": "BingtuanSatelliteTV.cn",
+      "name": "兵团卫视",
+      "group": "satellite",
+      "aliases": []
+    },
+    {
+      "id": "KangbaSatelliteTV.cn",
+      "name": "康巴卫视",
+      "group": "satellite",
+      "aliases": []
+    },
+    {
+      "id": "HuangheSatelliteTV.cn",
+      "name": "黄河卫视",
+      "group": "satellite",
+      "aliases": []
+    },
+    {
+      "id": "HaixiaSatelliteTV.cn",
+      "name": "海峡卫视",
+      "group": "satellite",
+      "aliases": [
+        "海峡卫视（高清）"
+      ]
+    },
+    {
+      "id": "GBASatelliteTV.cn",
+      "name": "大湾区卫视",
+      "group": "satellite",
+      "aliases": [
+        "广东南方卫视",
+        "南方卫视"
+      ]
+    },
+    {
+      "id": "SanshaSatelliteTV.cn",
+      "name": "三沙卫视",
+      "group": "satellite",
+      "aliases": []
+    },
+    {
+      "id": "HunanTVInternational.cn",
+      "name": "湖南国际",
+      "group": "satellite",
+      "aliases": [
+        "湖南卫视国际",
+        "湖南国际频道"
+      ]
+    },
+    {
+      "id": "ZhejiangInternationalChannel.cn",
+      "name": "浙江国际",
+      "group": "satellite",
+      "aliases": [
+        "浙江国际频道"
+      ]
+    },
+    {
+      "id": "HunanEconomyChannel.cn",
+      "name": "湖南经视",
+      "group": "local",
+      "aliases": [
+        "湖南经济电视台",
+        "湖南经视综合"
+      ]
+    },
+    {
+      "id": "HunanEntertainmentChannel.cn",
+      "name": "湖南娱乐",
+      "group": "local",
+      "aliases": [
+        "湖南娱乐频道"
+      ]
+    },
+    {
+      "id": "HunanDramaChannel.cn",
+      "name": "湖南电视剧",
+      "group": "local",
+      "aliases": [
+        "湖南电视剧频道"
+      ]
+    },
+    {
+      "id": "HunanCityChannel.cn",
+      "name": "湖南都市",
+      "group": "local",
+      "aliases": [
+        "湖南都市频道"
+      ]
+    },
+    {
+      "id": "HunanPublicChannel.cn",
+      "name": "湖南公共",
+      "group": "local",
+      "aliases": [
+        "湖南公共频道"
+      ]
+    },
+    {
+      "id": "ZhejiangEconomicChannel.cn",
+      "name": "浙江经视",
+      "group": "local",
+      "aliases": [
+        "浙江经济生活",
+        "浙江经济频道"
+      ]
+    },
+    {
+      "id": "ZhejiangMinshengLeisure.cn",
+      "name": "浙江民生休闲",
+      "group": "local",
+      "aliases": [
+        "浙江民生"
+      ]
+    },
+    {
+      "id": "ZhejiangFilmEntertainmentChannel.cn",
+      "name": "浙江影视",
+      "group": "local",
+      "aliases": [
+        "浙江影视娱乐"
+      ]
+    },
+    {
+      "id": "ZhejiangChildrensChannel.cn",
+      "name": "浙江少儿",
+      "group": "local",
+      "aliases": [
+        "浙江少儿频道"
+      ]
+    },
+    {
+      "id": "JiangsuCityChannel.cn",
+      "name": "江苏城市",
+      "group": "local",
+      "aliases": [
+        "江苏城市频道"
+      ]
+    },
+    {
+      "id": "JiangsuVarietyChannel.cn",
+      "name": "江苏综艺",
+      "group": "local",
+      "aliases": [
+        "江苏综艺频道"
+      ]
+    },
+    {
+      "id": "JiangsuMovieChannel.cn",
+      "name": "江苏影视",
+      "group": "local",
+      "aliases": [
+        "江苏影视剧频道"
+      ]
+    },
+    {
+      "id": "JiangsuPublicNewsChannel.cn",
+      "name": "江苏公共新闻",
+      "group": "local",
+      "aliases": [
+        "江苏公共·新闻"
+      ]
+    },
+    {
+      "id": "Jade.hk",
+      "name": "翡翠台",
+      "group": "hk",
+      "country": "HK",
+      "aliases": [
+        "TVB翡翠台",
+        "無綫翡翠台",
+        "无线翡翠台"
+      ]
+    },
+    {
+      "id": "Pearl.hk",
+      "name": "明珠台",
+      "group": "hk",
+      "country": "HK",
+      "aliases": [
+        "TVB明珠台",
+        "無綫明珠台",
+        "无线明珠台"
+      ]
+    },
+    {
+      "id": "TVBNewsChannel.hk",
+      "name": "無綫新聞台",
+      "group": "hk",
+      "country": "HK",
+      "aliases": [
+        "TVB新闻台",
+        "无线新闻台"
+      ]
+    },
+    {
+      "id": "GoldenJade.hk",
+      "name": "黃金翡翠台",
+      "group": "hk",
+      "country": "HK",
+      "aliases": [
+        "黄金翡翠台",
+        "TVB黃金翡翠台"
+      ]
+    },
+    {
+      "id": "TVBPlus.hk",
+      "name": "TVB Plus",
+      "group": "hk",
+      "country": "HK",
+      "aliases": [
+        "TVB+",
+        "无线Plus"
+      ]
+    },
+    {
+      "id": "ViuTV.hk",
+      "name": "ViuTV",
+      "group": "hk",
+      "country": "HK",
+      "aliases": [
+        "ViuTV 99",
+        "ViuTV99"
+      ]
+    },
+    {
+      "id": "ViuTVsix.hk",
+      "name": "ViuTVsix",
+      "group": "hk",
+      "country": "HK",
+      "aliases": [
+        "ViuTV 96",
+        "ViuTVsix 96"
+      ]
+    },
+    {
+      "id": "RTHKTV31.hk",
+      "name": "港台电视31",
+      "group": "hk",
+      "country": "HK",
+      "aliases": [
+        "RTHK 31",
+        "港台31"
+      ]
+    },
+    {
+      "id": "RTHKTV32.hk",
+      "name": "港台电视32",
+      "group": "hk",
+      "country": "HK",
+      "aliases": [
+        "RTHK 32",
+        "港台32"
+      ]
+    },
+    {
+      "id": "RTHKTV33.hk",
+      "name": "港台电视33",
+      "group": "hk",
+      "country": "HK",
+      "aliases": [
+        "RTHK 33",
+        "港台33"
+      ]
+    },
+    {
+      "id": "RTHKTV34.hk",
+      "name": "港台电视34",
+      "group": "hk",
+      "country": "HK",
+      "aliases": [
+        "RTHK 34",
+        "港台34"
+      ]
+    },
+    {
+      "id": "RTHKTV35.hk",
+      "name": "港台电视35",
+      "group": "hk",
+      "country": "HK",
+      "aliases": [
+        "RTHK 35",
+        "港台35"
+      ]
+    },
+    {
+      "id": "HOYTV.hk",
+      "name": "HOY TV",
+      "group": "hk",
+      "country": "HK",
+      "aliases": [
+        "HOY 77",
+        "香港开电视",
+        "奇妙电视"
+      ]
+    },
+    {
+      "id": "PhoenixChineseChannel.hk",
+      "name": "鳳凰衛視中文台",
+      "group": "hk",
+      "country": "HK",
+      "aliases": [
+        "凤凰卫视",
+        "凤凰卫视中文台",
+        "凤凰中文"
+      ]
+    },
+    {
+      "id": "PhoenixInfoNewsChannel.hk",
+      "name": "鳳凰衛視資訊台",
+      "group": "hk",
+      "country": "HK",
+      "aliases": [
+        "凤凰卫视资讯台",
+        "凤凰资讯"
+      ]
+    },
+    {
+      "id": "PhoenixHongKongChannel.hk",
+      "name": "鳳凰衛視香港台",
+      "group": "hk",
+      "country": "HK",
+      "aliases": [
+        "凤凰卫视香港台"
+      ]
+    },
+    {
+      "id": "MacauTV.hk",
+      "name": "澳门电视台",
+      "group": "mo",
+      "country": "MO",
+      "aliases": [
+        "澳视澳门",
+        "澳门澳视"
+      ]
+    },
+    {
+      "id": "MacauLotus.hk",
+      "name": "澳门莲花电视台",
+      "group": "mo",
+      "country": "MO",
+      "aliases": [
+        "莲花卫视",
+        "澳门莲花"
+      ]
+    },
+    {
+      "id": "AsiaSatelliteTV.hk",
+      "name": "澳亚卫视",
+      "group": "mo",
+      "country": "MO",
+      "aliases": []
+    },
+    {
+      "id": "TTV.tw",
+      "name": "台視",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "台视",
+        "TTV",
+        "台湾电视台"
+      ]
+    },
+    {
+      "id": "CTV.tw",
+      "name": "中視",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "中视",
+        "CTV",
+        "中国电视"
+      ]
+    },
+    {
+      "id": "CTS.tw",
+      "name": "華視",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "华视",
+        "CTS",
+        "中华电视"
+      ]
+    },
+    {
+      "id": "FTV.tw",
+      "name": "民視無線台",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "民视",
+        "FTV",
+        "民视无线台"
+      ]
+    },
+    {
+      "id": "PTS.tw",
+      "name": "公視",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "公视",
+        "PTS",
+        "台湾公视"
+      ]
+    },
+    {
+      "id": "TVBS.tw",
+      "name": "TVBS",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "TVBS 56",
+        "TVBS欢乐台"
+      ]
+    },
+    {
+      "id": "TVBSNews.tw",
+      "name": "TVBS新聞",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "TVBS新闻",
+        "TVBS新闻台"
+      ]
+    },
+    {
+      "id": "CTiNews.tw",
+      "name": "中天新聞",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "中天新闻",
+        "中天电视台",
+        "中天新闻台"
+      ]
+    },
+    {
+      "id": "CTiTV.tw",
+      "name": "中天綜合",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "中天综合",
+        "中天综合台"
+      ]
+    },
+    {
+      "id": "SETNews.tw",
+      "name": "三立新聞",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "三立新闻",
+        "三立电视台",
+        "三立新闻台"
+      ]
+    },
+    {
+      "id": "SETTaiwan.tw",
+      "name": "三立台灣台",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "三立台湾台"
+      ]
+    },
+    {
+      "id": "EBCNews.tw",
+      "name": "東森新聞",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "东森新闻",
+        "东森电视台",
+        "东森新闻台"
+      ]
+    },
+    {
+      "id": "EBCVariety.tw",
+      "name": "東森綜合",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "东森综合",
+        "东森综合台"
+      ]
+    },
+    {
+      "id": "FTVNews.tw",
+      "name": "民視新聞",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "民视新闻",
+        "民视新闻台"
+      ]
+    },
+    {
+      "id": "CTVNewsChannel.tw",
+      "name": "中視新聞",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "中视新闻",
+        "中视新闻台"
+      ]
+    },
+    {
+      "id": "CTSNews.tw",
+      "name": "華視新聞",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "华视新闻"
+      ]
+    },
+    {
+      "id": "TTVNews.tw",
+      "name": "台視新聞",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "台视新闻"
+      ]
+    },
+    {
+      "id": "EBCYOYO.tw",
+      "name": "東森幼幼台",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "东森幼幼",
+        "YOYO TV"
+      ]
+    }
   ]
 }

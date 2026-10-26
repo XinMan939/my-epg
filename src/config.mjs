@@ -19,6 +19,10 @@ export const PATHS = {
   channels: path.join(ROOT, 'channels', 'channels.json'),
   overrides: path.join(ROOT, 'channels', 'overrides.json'),
   matchCache: path.join(ROOT, 'channels', 'match-cache.json'),
+  /** 外部 XMLTV 源清单（聚合别人现成的节目单） */
+  epgSources: path.join(ROOT, 'channels', 'epg-sources.json'),
+  /** 节目简介缓存表 */
+  descCache: path.join(ROOT, '.cache', 'desc-cache.json'),
   output: path.join(ROOT, 'output'),
   cache: path.join(ROOT, '.cache'),
 }

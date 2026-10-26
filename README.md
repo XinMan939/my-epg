@@ -8,14 +8,26 @@
 
 | 用途 | 地址 |
 |---|---|
+| **频道看板（直观检查）** | `https://xinman939.github.io/my-epg/` |
 | 播放器订阅（推荐，体积小） | `https://xinman939.github.io/my-epg/epg.xml.gz` |
 | 未压缩版 | `https://xinman939.github.io/my-epg/epg.xml` |
 | 频道清单（对接 M3U 用） | `https://xinman939.github.io/my-epg/channels.json` |
-| 构建报告 | `https://xinman939.github.io/my-epg/report.json` |
+| 构建报告（看板的数据源） | `https://xinman939.github.io/my-epg/report.json` |
 
 > Pages 需先在仓库 Settings → Pages 里把 Source 设为 `gh-pages` 分支，首次 Actions 跑完后生效。
 
 大多数播放器（DIYP、TVBox、Kodi、Emby、Jellyfin、TiviMate）直接填 gz 地址即可，它们会自动解压。
+
+## 频道看板
+
+首页是一个纯静态看板（`web/index.html` + 同目录 `report.json`），用来回答四个问题：
+
+1. **现在有多少频道** —— 顶部概览卡片，按分组显示总数 / 有节目数 / 完整数 / 缺天数 / 完全无数据。
+2. **哪些在有效更新、哪些找不到** —— 每行有状态标签（完整 / 不全 / 无数据）和 7 天每日柱状图，红色柱子表示那天是 0 条。
+3. **频道命名规则** —— 第二列直接显示 `tvg-id` 和别名，一眼看出这个台的 id 是怎么定的。
+4. **匹配的节目单对不对** —— 「匹配依据」列显示是精确 / 别名 / 包含匹配，后面跟源里那个频道的真实名字。两者差得远就是配错了，点「备选」能看到同名的其它候选源。
+
+页面顶部有一个筛选开关「只看需核查」，会把「包含匹配」和「节目不全」的行挑出来，建议每次更新后过一眼。
 
 ## 当前覆盖情况（2026-10-26 实测）
 
@@ -29,7 +41,9 @@
 | 中国台湾 | 17 / 18 |
 | **合计** | **104 / 114** |
 
-共 20965 条节目，覆盖 7 天（今天起）。输出 `epg.xml` 4.6 MB / `epg.xml.gz` 391 KB。
+共 14345 条节目，覆盖 7 天（今天起）。输出 `epg.xml` 5.4 MB / `epg.xml.gz` 517 KB。
+
+节目简介覆盖 **7154 / 14345 = 50%**（央视 49%、卫视 51%、香港 40%、台湾 73%）。
 
 ## 频道 id 规范
 
@@ -44,15 +58,20 @@ epg/
 ├── channels/
 │   ├── channels.json      ← 你要哪些台（唯一需要手工维护的文件）
 │   ├── overrides.json     ← 自动匹配失败时手工指定（兜底）
+│   ├── epg-sources.json   ← 外部 XMLTV 源清单（聚合用）
 │   ├── catalog.json       ← 自动生成：所有源里的频道清单
 │   └── match-cache.json   ← 自动生成：本次匹配结果
+├── web/
+│   └── index.html         ← 频道看板（纯静态，读同目录 report.json）
 ├── src/
 │   ├── index.mjs          ← 主入口
 │   ├── config.mjs         ← 配置与路径
-│   ├── utils.mjs          ← 抓取 / 时间 / 转义工具
+│   ├── utils.mjs          ← 抓取 / 时间 / 转义 / 名称归一化
 │   ├── match.mjs          ← 频道匹配（核心）
 │   ├── normalize.mjs      ← 节目清洗 / 补 stop / 去重
-│   ├── output.mjs         ← XMLTV 生成
+│   ├── output.mjs         ← XMLTV 生成 + report 统计
+│   ├── aggregator.mjs     ← 外部 XMLTV 源聚合
+│   ├── desc.mjs           ← 节目简介抓取（电视猫）+ 缓存
 │   └── sources/
 │       ├── epgpw.mjs      ← 主源
 │       ├── tvmao.mjs      ← 补充源
@@ -79,6 +98,13 @@ node src/index.mjs build     # 抓节目并输出 output/epg.xml + epg.xml.gz
 | `DAYS` | 覆盖天数（含今天） | `7` |
 | `ONLY` | 只处理指定频道，逗号分隔 tvg-id（调试用） | 全部 |
 | `CONCURRENCY` | 并发数 | `6` |
+| `EPGPW_CACHE_TTL` | epg.pw 原始包缓存有效期（毫秒）。本地想跳过重下大包时设 `86400000` | `1800000` |
+| `CATALOG_TTL_HOURS` | 频道清单缓存有效期（小时）。build 默认复用，不重扫 | `24` |
+| `NO_AGGREGATE` | 设 `1` 跳过外部 XML 源兜底 | 不跳过 |
+| `NO_DESC` | 设 `1` 跳过节目简介抓取 | 不跳过 |
+| `DESC_CONCURRENCY` | 简介页并发数 | `4` |
+| `DESC_MAX_FETCH` | 单轮最多抓多少个简介页（防一次跑太久） | `600` |
+| `DESC_FORCE` | 设 `1` 忽略简介缓存全部重抓 | 不重抓 |
 
 调试单个频道：
 
@@ -128,11 +154,127 @@ ONLY=CCTV1.cn,Jade.hk node src/index.mjs build
 **3. epg.pw 有大量「注册了但零节目」的空壳频道。**
 如三沙卫视 `539632`/`410381`、浙江民生休闲 `539891`，名字能匹配上但一条节目都没有。这就是 `alternatives` + `[fallback]` 机制存在的原因，不要简化掉。
 
+**4. 名称归一化里有两个字符必须保留，删掉就会错台。**（`utils.mjs` 的 `normalizeName`）
+
+这是 2026-10-26 做聚合器时实测踩到的，影响的不只是 EPG，直播源聚合那边同样会错：
+
+| 字符 | 错删的后果 | 正确做法 |
+|---|---|---|
+| `+` | `CCTV5+` 归一化成 `cctv5`，**体育赛事频道的节目挂到了 CCTV-5 体育上** | 保留 `+`，只把 `5加`/`5plus` 统一成 `5+` |
+| `4k` / `8k` | `CCTV-4K` 归一化成 `cctv4`，撞 `CCTV-4 亚洲` | 只把「高清/HD/超清/标清/蓝光/杜比」当可忽略画质后缀，**4K/8K 是频道名的一部分** |
+
+另外 `nameVariants()` 生成央视数字变体时也必须区分「频道号」和「频道号的修饰」：`CCTV-5+` 只能出 `cctv5+`，`CCTV-4K` 只能出 `cctv4k`，绝不能出裸 `cctv5` / `cctv4`。
+
+顺带一个细节：画质后缀正则里 `超高清` 必须排在 `高清` 前面，否则只会剥掉「高清」留下一个「超」。
+
+**5. 节目标题归一化：期号正则必须锚定结尾。**
+
+我们（epg.pw）的标题带日期期号，电视猫是干净的：`寰宇视野2026-299` vs `寰宇视野`。去期号能对上，但**不能误删有意义的数字** —— `青春戏苑-2026-194溯光·花鼓戏` 里的 `2026-194` 后面还跟着内容，不是尾巴。所以期号正则一律用 `$` 锚定（`desc.mjs` 的 `normTitle`）。
+
 ### 下载的两个坑（`utils.mjs`）
 
 **超时计时器必须覆盖到 body 读完。** 早期实现在 `fetch()` 拿到响应头后就 `clearTimeout`，而 epg.pw 响应头秒回、body 龟速，导致 `arrayBuffer()` 永久卡死（实测挂 14 分钟）。现在计时器一直保留到 `arrayBuffer()` 返回。
 
 **Node 的 fetch 不读 `https_proxy` 环境变量。** 国内网络下直连 epg.pw 会卡死，所以 `fetchBuffer()` 做了三级降级：fetch 快速超时（90s）→ curl 子进程（能读代理环境变量）→ 报错交给调用方用旧缓存。GitHub Actions 在海外直连很快，走的是第一级。
+
+## 外部 XMLTV 源聚合
+
+定位和 [iptv-api](https://github.com/XinMan939/iptv-api) 聚合直播源完全同构 —— 那边是「抓别人的 M3U → 归一化匹配 → 去重汇总」，这边是「抓别人的 XML → 归一化匹配 → 择优汇总」。
+
+| 环节 | 直播源（iptv-api） | EPG（本项目） |
+|---|---|---|
+| 源列表 | `config/subscribe.txt` | `channels/epg-sources.json` |
+| 拉取 | M3U / TXT | XML / XML.gz |
+| 解析 | 正则提 `#EXTINF` | 解析 `<channel>` / `<programme>` |
+| 匹配 | 归一化 + `alias.txt` | **同一套**归一化 + 别名表 |
+| 去重 | 同名取最快/最稳 | 同名取**天数多、条数多** |
+| 输出 | M3U / TXT | XMLTV + gz |
+
+**别名表可以两个项目共享** —— 「CCTV1 = CCTV-1 = CCTV-1综合 = 央视一套」这张表不用维护两遍。
+
+### 用法
+
+编辑 `channels/epg-sources.json` 加源即可，不用改代码：
+
+```json
+{
+  "sources": [
+    { "name": "老张的EPG", "url": "http://epg.51zmt.top:8000/e.xml.gz",
+      "tvgIdNative": false, "priority": 10, "enabled": true }
+  ]
+}
+```
+
+`tvgIdNative` 表示该源的 channel id 是否已经是 iptv-org 规范（`CCTV1.cn`）。`false` 时会退回按 `display-name` 匹配。
+
+**触发时机**：只在本地三源全部抓空的频道上启用。因为外部源要整包下载（1MB+），且质量明显不如本地源，无差别跑一遍是白花流量。
+
+### 与 iptv-api 的 `updates/epg/request.py` 的三个关键差异
+
+那三个是它的硬伤，这边都避开了：
+
+1. **它只取 `<title>`**，把 `<desc>` / `<category>` / `<icon>` / `<episode-num>` 全丢了 → 即使抓了带简介的源，输出也没简介。这边 `parseXmltvFull()` 完整保留所有子元素。
+2. **它拿 channel_id 当 display-name 输出** → 播放器里显示 `CCTV1.cn` 而不是「CCTV-1 综合」。这边用目标频道自己的名字。
+3. **它纯精确名匹配** → 「CCTV-1综合」匹配不上「CCTV1」。这边复用 `match.mjs` 的归一化 + 别名 + 包含匹配。
+
+### 实测记录：老张的EPG
+
+**可用，但只能当兜底，不能当主源。** 100 频道 / 7374 条 / **仅 2 天** / **0 条 desc** / 0 条 category。频道名极粗糙（`CCTV1`、`凤凰中文`、`中国教育1台`）。
+
+四个坑，都记在 `epg-sources.json` 的 `_实测记录` 里：
+
+- **必须用 `http` 起头。** `https://epg.51zmt.top:8000` 握手直接失败（返回 000），`http://` 会 302 到 `https://s.102031.xyz/xml/xxx.xml.gz`（Cloudflare），跟着跳才 200。
+- **URL 写着 `e.xml.gz`，实际返回明文 XML**（首字节是 `<?xml` 不是 `1f 8b`）。所以只能靠魔数判断，不能信后缀。
+- **channel id 是纯数字 `1/2/3`**，不是 iptv-org 规范，`tvgIdNative` 必须为 `false`。
+- **有个 `id=9999` 的占位频道 `noepg`**，节目全是「精彩节目-暂未提供节目预告信息」，属于噪声。
+
+`erw.cc` 当前不可用（http 502 / https 连不上），已设 `enabled: false`。
+
+## 节目简介
+
+**现状**：epg.pw 自带 `<desc>` 的只有港澳台频道（覆盖率很高，台湾部分频道 100%），大陆频道 desc 全是 0。三个源里只有电视猫的节目详情页有简介。
+
+**做法**：`src/desc.mjs` 走三步 ——
+
+1. **对齐频道**：把目标频道按归一化名/别名对齐到电视猫的频道 id
+2. **建索引**：抓每个电视猫频道 **7 天**节目单，建「归一化节目名 → 详情页路径」索引
+   （只抓周一会漏掉只在周末播的节目：体育赛事、特别节目、周末综艺）
+3. **抓详情页**：按索引解析我们的每个节目标题，批量抓简介
+
+### 三类详情页，简介藏在三个不同位置
+
+| 路径 | 类型 | 简介位置 |
+|---|---|---|
+| `/tvcolumn/{hash}` | 栏目（新闻、综艺、固定栏目） | `<div class="...section">` 正文，**没有 meta description** |
+| `/kanju/{hash}` | 剧集·移动端 | `<meta name="description">` |
+| `/drama/{hash}` | 剧集·PC 端 | `<meta name="description">` |
+
+### 缓存与 TTL（为什么必须分级）
+
+**key 用详情页路径，不用节目名。** 因为栏目 hash 是**栏目级 ID，会长期复用** —— 「新闻联播」的 `/tvcolumn/eg==` 一年后还是它。所以一个 hash 抓一次就够，后面每天 build 直接命中缓存，零请求。
+
+TTL 分级（热播剧会换、集数会加，所以剧集类要短）：
+
+| 类型 | TTL | 理由 |
+|---|---|---|
+| 剧集（`/kanju` `/drama`） | 7 天 | 热播剧会更新，后面有新剧 |
+| 栏目（`/tvcolumn`） | 90 天 | 新闻/固定栏目简介基本不动 |
+| 抓取失败（空结果） | 3 天 | 别每天对同一个坏链接反复重试 |
+
+索引本身也有缓存（`.cache/desc-index.json`，2 天 TTL），一天内重复 build 不必重抓节目单。
+
+### 一个必须知道的解析坑
+
+**不能用 `<div ...>...</div>` 简单配对正则提简介正文。** 简介正文里可能含内层 `div`/`span`，非贪婪匹配会在第一个 `</div>` 就截断。实测「经济半小时」页：简介明明有 1240 字，正则只截到 177 字的导航条，于是被判定「无简介」。
+
+现在的做法是「先定位 class 含 `section` 的容器，取 3000 字窗口直接去标签」，不依赖精确配对。
+
+### 为什么覆盖率只有 50%
+
+剩下的一半主要是**天然没有简介的内容**，不是抓取失败：
+
+- **8K / 4K 频道的宣传片、标识演绎、剧场填充内容**（`周末一起看电影-宣传片（8K）`、`4K节目预告`、`午夜剧场`）—— 电视猫上这些条目本来就没有简介页
+- **地方台（local 组，覆盖率仅 3%）** —— 电视猫的数字频道组全是付费频道（风云足球、CHC 系列、SITV 系列），**没有省级地面频道**（湖南经视、浙江民生这些），所以对不上
 
 ## 自动更新
 
