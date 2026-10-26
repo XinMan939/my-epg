@@ -134,6 +134,31 @@ jobs:
           commit_message: 'epg: 自动更新 ${{ github.run_number }}'
           force_orphan: false
 
+      # 产物入库：输出到 output 分支，仓库里随时能直接拿到 epg-m3u.xml.gz。
+      #
+      # 为什么单独开分支而不是提交到 main：
+      #   epg-m3u.xml.gz 是 1.6MB 二进制，每 6 小时全量重写一次，git 无法做增量压缩。
+      #   提交到 main 的话一年累积 ~5.4GB 历史，clone 会变得极慢。
+      #   output 分支每次 force_orphan 重建 —— 永远只有最新一份，历史长度恒为 1。
+      #
+      # 只放压缩版 + 两个 json，不放 18MB 的未压缩 xml（用 Pages 地址取）。
+      - name: 暂存产物
+        run: |
+          mkdir -p outbranch
+          cp output/epg.xml.gz output/epg-m3u.xml.gz outbranch/ 2>/dev/null || true
+          cp output/channels.json output/report.json outbranch/
+          ls -lh outbranch/
+
+      - name: 产物入库到 output 分支
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./outbranch
+          publish_branch: output
+          commit_message: 'epg: 产物更新 ${{ github.run_number }}'
+          # true = 每次丢弃历史重建，仓库体积恒定，不会随天数膨胀
+          force_orphan: true
+
       - name: 摘要
         run: |
           node -e "
