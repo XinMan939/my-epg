@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T19:37:45.987Z",
+  "generatedAt": "2026-10-26T19:38:56.749Z",
   "days": 7,
   "dayList": [
     "20261027",
@@ -16,8 +16,8 @@
   "channelsFull": 142,
   "channelsPartial": 109,
   "programmesTotal": 40583,
-  "programmesWithDesc": 24931,
-  "descCoverage": 61,
+  "programmesWithDesc": 25055,
+  "descCoverage": 62,
   "dateRange": [
     "20261027",
     "20261102"
@@ -2922,11 +2922,11 @@
     }
   ],
   "descStats": {
-    "realCoverage": 61.4,
-    "realCount": 24931,
+    "realCoverage": 61.7,
+    "realCount": 25055,
     "totalCount": 40583,
-    "titles": 537,
-    "filled": 10185,
+    "titles": 611,
+    "filled": 10309,
     "z51": {
       "channels": 110,
       "filled": 9479,
@@ -5845,8 +5845,8 @@
       "coverageAfter": 59.7
     },
     "tvmao": {
-      "titles": 537,
-      "filled": 706
+      "titles": 611,
+      "filled": 830
     }
   },
   "detail": [
@@ -6572,8 +6572,8 @@
         "20261101": 72,
         "20261102": 0
       },
-      "withDesc": 120,
-      "descRate": 31,
+      "withDesc": 197,
+      "descRate": 51,
       "withCategory": 0,
       "uniqTitles": 132,
       "first": "20261026235925 +0800",
@@ -6839,8 +6839,8 @@
         "20261101": 42,
         "20261102": 0
       },
-      "withDesc": 100,
-      "descRate": 40,
+      "withDesc": 116,
+      "descRate": 46,
       "withCategory": 0,
       "uniqTitles": 66,
       "first": "20261026235000 +0800",
@@ -7135,8 +7135,8 @@
         "20261101": 38,
         "20261102": 0
       },
-      "withDesc": 100,
-      "descRate": 50,
+      "withDesc": 131,
+      "descRate": 66,
       "withCategory": 0,
       "uniqTitles": 114,
       "first": "20261026223000 +0800",
