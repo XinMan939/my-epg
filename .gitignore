@@ -14,3 +14,7 @@ channels/match-cache.json
 .DS_Store
 Thumbs.db
 node_modules/
+
+# workflow 文件需要 token 具备 workflow scope（当前 token 只有 repo），
+# 本地保留此文件，需在 GitHub 网页端手动添加或换带 workflow scope 的 token
+.github/workflows/
