@@ -86,8 +86,25 @@ async function collectCatalog({ force = false } = {}) {
       if (ageMs < ttlMs) {
         const data = JSON.parse(fs.readFileSync(cacheFile, 'utf8'))
         if (data.items && data.items.length) {
-          log.info(`复用频道清单缓存（${data.items.length} 条，${(ageMs / 3600e3).toFixed(1)} 小时前）`)
-          return data.items
+          // ⚠️ 校验缓存里有没有 days 字段。
+          //
+          // 2026-10-26 踩过：catalog.json 是修复 listChannels 之前生成的，
+          // 2050 条全都没有 days。于是 pickBest() 拿不到覆盖天数，
+          // 只能退回按条数和名字长度挑，结果台湾频道全挑了 3 天/desc 全空的
+          // 旧 id（370141 而非 456508）、翡翠台挑了 1 天的 539871（而非 368611），
+          // 简介覆盖率凭空掉了 30 个百分点，而且节目数从 22827 缩到 14344。
+          //
+          // 这种"缓存结构过期"比缓存过期更隐蔽：文件很新（几小时前），
+          // 但字段缺失导致匹配逻辑静默降级，日志里完全看不出来。
+          // 所以这里显式校验结构，缺字段就当缓存无效、强制重扫。
+          const sample = data.items.find((c) => c.source === 'epgpw')
+          const hasDays = sample && Object.prototype.hasOwnProperty.call(sample, 'days')
+          if (!hasDays) {
+            log.warn('频道清单缓存缺少 days 字段（结构过期），强制重扫')
+          } else {
+            log.info(`复用频道清单缓存（${data.items.length} 条，${(ageMs / 3600e3).toFixed(1)} 小时前）`)
+            return data.items
+          }
         }
       }
     } catch {
