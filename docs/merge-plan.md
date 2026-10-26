@@ -11,6 +11,12 @@
 
 理由在下面「为什么不焊在一起」一节。先给可执行方案。
 
+> **2026-10-27 补充：id 改写版已经实现了，不用改 iptv-api 的配置。**
+> `node src/index.mjs m3u <你的m3u>` + `build` 会额外产出 `output/epg-m3u.xml`，
+> 其中 `<channel id>` 直接就是 iptv-api 输出的 `tvg-id`（`CCTV1`、`TVB翡翠`…）。
+> 播放器「EPG 填 epg-m3u.xml.gz、直播源填 result.m3u」即可，实测覆盖 256/318（80.5%）。
+> 细节见 [`m3u-coverage.md`](m3u-coverage.md)。
+
 ---
 
 ## 一、三个项目到底各做什么

@@ -35,8 +35,16 @@ export function normName(s) {
   x = x.replace(/\s+/g, '')
   // 去掉（高清）（普）（209）这类括号内容
   x = x.replace(/[（(][^（()）]*[）)]/g, '')
-  // 去掉清晰度/画质后缀
-  x = x.replace(/(高清|超清|标清|蓝光|uhd|fhd|hd|sd|4k|8k|超|高码)/g, '')
+  // 去掉结尾的清晰度/画质后缀。必须①锚定结尾②允许连写（超高清 = 超+高清）。
+  // 刻意不剥 4k/8k —— 它们常是频道本身的区别（CCTV-4K / CCTV-8K），剥了会塌成「cctv」。
+  x = x.replace(/(?:(?:高清|超清|标清|蓝光|uhd|fhd|hd|sd|超|高码))+$/, '')
+  // 圈码 / 罗马数字统一成阿拉伯数字：大爱Ⅰ、大爱① 、大爱1 是同一个台。
+  // 不统一的话它们全塌成「大爱」，反而因为撞车被判为不可匹配。
+  // 注意 toLowerCase() 会把 Ⅰ(U+2160) 变成 ⅰ(U+2170)，两个区间都要处理。
+  x = x.replace(/[\u2460-\u2473]/g, (c) => String(c.charCodeAt(0) - 0x2460 + 1))
+  x = x.replace(/[\u2160-\u216b\u2170-\u217b]/g, (c) =>
+    String(c.charCodeAt(0) - (c.charCodeAt(0) >= 0x2170 ? 0x2170 : 0x2160) + 1)
+  )
   return x.replace(/[^\u4e00-\u9fa5a-z0-9+]/g, '')
 }
 
@@ -58,11 +66,12 @@ export function normNameLoose(s) {
   if (!x) return ''
   // 去频道性质词（卫视/电视/频道）
   x = x.replace(/卫视|电视|频道/g, '')
-  // 去台标前缀 TVB / CCTV，但要求剩下部分含汉字，避免 TVBS → s、CCTV5+ → 5+ 这种荒谬结果。
+  // 去台标前缀 TVB / CCTV，但要求剩下部分**以汉字开头**，避免 TVBS欢乐 → s欢乐、
+  // TVBPlus → plus、CCTV5+ → 5+ 这类荒谬结果。
   // 注意：只剥 tvb/cctv，不剥「无线」——否则 无线新闻台 会一路塌成「新闻」，太宽。
   // 无线新闻台 靠「去尾部台」就能变成 无线新闻，正好对上 m3u 的 TVB无线新闻。
   const p = x.replace(/^(tvb|cctv)/, '')
-  if (p !== x && /[\u4e00-\u9fa5]/.test(p)) x = p
+  if (p !== x && /^[\u4e00-\u9fa5]/.test(p)) x = p
   // 去尾部「台」：翡翠台 → 翡翠、凤凰香港台 → 凤凰香港
   x = x.replace(/台$/, '')
   return x

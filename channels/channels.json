@@ -1,12 +1,13 @@
 {
-  "_comment": "目标频道清单。id 采用 iptv-org 的 tvg-id 命名规范（频道名.国家码），可直接被 DIYP/TVBox/Kodi/Emby 等播放器的 M3U 订阅匹配。aliases 用于提高源匹配命中率。",
+  "_comment": "目标频道清单。id 采用 iptv-org 的 tvg-id 命名规范（频道名.国家码），可直接被 DIYP/TVBox/Kodi/Emby 等播放器的 M3U 订阅匹配。aliases 用于提高源匹配命中率。注意：部分频道（id 里含汉字的，如「靖天电影.tw」）在 iptv-org 里没有条目，id 直接沿用直播源侧 tvg-id + 国家码，这样与 M3U 的匹配是 id-exact，不会因名字漂移失配。详见 README「频道 id 规范」与 docs/m3u-coverage.md。",
   "_groups": {
     "cctv": "央视",
     "satellite": "卫视",
     "local": "地方台",
     "hk": "中国香港",
     "mo": "中国澳门",
-    "tw": "中国台湾"
+    "tw": "中国台湾",
+    "pay": "数字付费"
   },
   "channels": [
     {
@@ -1056,6 +1057,1329 @@
         "东森幼幼",
         "YOYO TV"
       ]
+    },
+    {
+      "id": "CCTVWeaponTechnology.cn",
+      "name": "CCTV兵器科技",
+      "group": "cctv",
+      "country": "CN",
+      "aliases": [
+        "兵器科技"
+      ]
+    },
+    {
+      "id": "CCTVTheFirstTheater.cn",
+      "name": "CCTV第一剧场",
+      "group": "cctv",
+      "country": "CN",
+      "aliases": [
+        "第一剧场"
+      ]
+    },
+    {
+      "id": "CNDFilmDiscoveryChannel.cn",
+      "name": "CCTV发现之旅",
+      "group": "cctv",
+      "country": "CN",
+      "aliases": [
+        "发现之旅"
+      ]
+    },
+    {
+      "id": "CCTVStormTheater.cn",
+      "name": "CCTV风云剧场",
+      "group": "cctv",
+      "country": "CN",
+      "aliases": [
+        "风云剧场"
+      ]
+    },
+    {
+      "id": "CCTVStormMusic.cn",
+      "name": "CCTV风云音乐",
+      "group": "cctv",
+      "country": "CN",
+      "aliases": [
+        "风云音乐"
+      ]
+    },
+    {
+      "id": "CCTVStormFootball.cn",
+      "name": "CCTV风云足球",
+      "group": "cctv",
+      "country": "CN",
+      "aliases": [
+        "风云足球"
+      ]
+    },
+    {
+      "id": "CCTVBilliards.cn",
+      "name": "CCTV央视台球",
+      "group": "cctv",
+      "country": "CN",
+      "aliases": [
+        "央视台球"
+      ]
+    },
+    {
+      "id": "CCTVGolfTennis.cn",
+      "name": "CCTV高尔夫网球",
+      "group": "cctv",
+      "country": "CN",
+      "aliases": [
+        "高尔夫网球"
+      ]
+    },
+    {
+      "id": "CCTVNostalgiaTheater.cn",
+      "name": "CCTV怀旧剧场",
+      "group": "cctv",
+      "country": "CN",
+      "aliases": [
+        "怀旧剧场"
+      ]
+    },
+    {
+      "id": "CNDFilmOldStoryChannel.cn",
+      "name": "CCTV老故事",
+      "group": "cctv",
+      "country": "CN",
+      "aliases": [
+        "老故事"
+      ]
+    },
+    {
+      "id": "CCTVWomensFashion.cn",
+      "name": "CCTV女性时尚",
+      "group": "cctv",
+      "country": "CN",
+      "aliases": [
+        "女性时尚"
+      ]
+    },
+    {
+      "id": "CCTVWorldGeography.cn",
+      "name": "CCTV世界地理",
+      "group": "cctv",
+      "country": "CN",
+      "aliases": [
+        "世界地理"
+      ]
+    },
+    {
+      "id": "CCTVHealth.cn",
+      "name": "CCTV卫生健康",
+      "group": "cctv",
+      "country": "CN",
+      "aliases": [
+        "卫生健康"
+      ]
+    },
+    {
+      "id": "CCTVTVGuide.cn",
+      "name": "CCTV电视指南",
+      "group": "cctv",
+      "country": "CN",
+      "aliases": [
+        "电视指南"
+      ]
+    },
+    {
+      "id": "CGTN.cn",
+      "name": "CGTN",
+      "group": "cctv",
+      "country": "CN"
+    },
+    {
+      "id": "CGTNFrench.cn",
+      "name": "CGTN法语",
+      "group": "cctv",
+      "country": "CN"
+    },
+    {
+      "id": "CGTNDocumentary.cn",
+      "name": "CGTN纪录",
+      "group": "cctv",
+      "country": "CN"
+    },
+    {
+      "id": "CETV1.cn",
+      "name": "CETV1",
+      "group": "cctv",
+      "country": "CN",
+      "aliases": [
+        "CETV-1"
+      ]
+    },
+    {
+      "id": "CETV2.cn",
+      "name": "CETV2",
+      "group": "cctv",
+      "country": "CN",
+      "aliases": [
+        "CETV-2"
+      ]
+    },
+    {
+      "id": "CETV4.cn",
+      "name": "CETV4",
+      "group": "cctv",
+      "country": "CN",
+      "aliases": [
+        "CETV-4"
+      ]
+    },
+    {
+      "id": "BRTVKakuChildrensChannel.cn",
+      "name": "卡酷少儿",
+      "group": "pay",
+      "country": "CN"
+    },
+    {
+      "id": "GoldenEagleCartoon.cn",
+      "name": "金鹰卡通",
+      "group": "pay",
+      "country": "CN"
+    },
+    {
+      "id": "哈哈炫动.cn",
+      "name": "哈哈炫动",
+      "group": "pay",
+      "country": "CN"
+    },
+    {
+      "id": "JiaJiaCartoon.cn",
+      "name": "嘉佳卡通",
+      "group": "pay",
+      "country": "CN"
+    },
+    {
+      "id": "LiyuanTV.cn",
+      "name": "梨园频道",
+      "group": "pay",
+      "country": "CN",
+      "aliases": [
+        "梨园"
+      ]
+    },
+    {
+      "id": "求索纪录.cn",
+      "name": "求索纪录",
+      "group": "pay",
+      "country": "CN"
+    },
+    {
+      "id": "求索动物.cn",
+      "name": "求索动物",
+      "group": "pay",
+      "country": "CN"
+    },
+    {
+      "id": "求索科学.cn",
+      "name": "求索科学",
+      "group": "pay",
+      "country": "CN"
+    },
+    {
+      "id": "求索生活.cn",
+      "name": "求索生活",
+      "group": "pay",
+      "country": "CN"
+    },
+    {
+      "id": "GreatSportsChannel.cn",
+      "name": "五星体育",
+      "group": "pay",
+      "country": "CN",
+      "aliases": [
+        "五星体育频道"
+      ]
+    },
+    {
+      "id": "魅力足球.cn",
+      "name": "魅力足球",
+      "group": "pay",
+      "country": "CN"
+    },
+    {
+      "id": "GameChannel.cn",
+      "name": "游戏风云",
+      "group": "pay",
+      "country": "CN"
+    },
+    {
+      "id": "劲爆体育.cn",
+      "name": "劲爆体育",
+      "group": "pay",
+      "country": "CN"
+    },
+    {
+      "id": "乐游.cn",
+      "name": "乐游",
+      "group": "pay",
+      "country": "CN"
+    },
+    {
+      "id": "AnimationShowChannel.cn",
+      "name": "动漫秀场",
+      "group": "pay",
+      "country": "CN"
+    },
+    {
+      "id": "CityTheaterChannel.cn",
+      "name": "都市剧场",
+      "group": "pay",
+      "country": "CN"
+    },
+    {
+      "id": "ChannelLaw.cn",
+      "name": "法治天地",
+      "group": "pay",
+      "country": "CN"
+    },
+    {
+      "id": "LaughterTheater.cn",
+      "name": "欢笑剧场",
+      "group": "pay",
+      "country": "CN"
+    },
+    {
+      "id": "金色学堂.cn",
+      "name": "金色学堂",
+      "group": "pay",
+      "country": "CN"
+    },
+    {
+      "id": "LifestyleChannel.cn",
+      "name": "生活时尚",
+      "group": "pay",
+      "country": "CN"
+    },
+    {
+      "id": "CHCAction.cn",
+      "name": "CHC动作电影",
+      "group": "pay",
+      "country": "CN"
+    },
+    {
+      "id": "CHCHomeTheater.cn",
+      "name": "CHC家庭影院",
+      "group": "pay",
+      "country": "CN"
+    },
+    {
+      "id": "CHCFansMovieChannel.cn",
+      "name": "CHC影迷电影",
+      "group": "pay",
+      "country": "CN"
+    },
+    {
+      "id": "EntertainmentNews.hk",
+      "name": "TVB娱乐新闻",
+      "group": "hk",
+      "country": "HK",
+      "aliases": [
+        "娛樂新聞台"
+      ]
+    },
+    {
+      "id": "TVB千禧经典.hk",
+      "name": "TVB千禧经典",
+      "group": "hk",
+      "country": "HK",
+      "aliases": [
+        "千禧經典台"
+      ]
+    },
+    {
+      "id": "nowNews.hk",
+      "name": "NOW新闻",
+      "group": "hk",
+      "country": "HK",
+      "aliases": [
+        "Now新聞台"
+      ]
+    },
+    {
+      "id": "nowBusinessNewsChannel.hk",
+      "name": "Now财经",
+      "group": "hk",
+      "country": "HK",
+      "aliases": [
+        "Now財經台"
+      ]
+    },
+    {
+      "id": "PopC.hk",
+      "name": "PopC",
+      "group": "hk",
+      "country": "HK"
+    },
+    {
+      "id": "nowDirect.hk",
+      "name": "Now直播台",
+      "group": "hk",
+      "country": "HK"
+    },
+    {
+      "id": "ROCKAction.sg",
+      "name": "ROCKAction",
+      "group": "hk",
+      "country": "HK",
+      "aliases": [
+        "ROCK Action"
+      ]
+    },
+    {
+      "id": "Thrill.hk",
+      "name": "Thrill",
+      "group": "hk",
+      "country": "HK"
+    },
+    {
+      "id": "ChineseOperaChannel.hk",
+      "name": "戏曲台",
+      "group": "hk",
+      "country": "HK",
+      "aliases": [
+        "戲曲台"
+      ]
+    },
+    {
+      "id": "黄金华剧台.hk",
+      "name": "黄金华剧台",
+      "group": "hk",
+      "country": "HK",
+      "aliases": [
+        "黃金華劇台"
+      ]
+    },
+    {
+      "id": "MeiAhMovieChannel.hk",
+      "name": "美亚电影",
+      "group": "hk",
+      "country": "HK",
+      "aliases": [
+        "美亞電影台"
+      ]
+    },
+    {
+      "id": "ZooMoo.sg",
+      "name": "ZooMoo",
+      "group": "hk",
+      "country": "HK"
+    },
+    {
+      "id": "TVBSEntertainmentChannel.tw",
+      "name": "TVBS欢乐",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "TVBS歡樂台"
+      ]
+    },
+    {
+      "id": "TVBS精采.tw",
+      "name": "TVBS精采",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "TVBS精采台HD"
+      ]
+    },
+    {
+      "id": "ETTVFinancial.tw",
+      "name": "东森财经新闻",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "東森財經新聞台"
+      ]
+    },
+    {
+      "id": "EBCSuper.tw",
+      "name": "东森超视",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "東森超視"
+      ]
+    },
+    {
+      "id": "EBCMovie.tw",
+      "name": "东森电影",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "東森電影台"
+      ]
+    },
+    {
+      "id": "ETTVDrama.tw",
+      "name": "东森戏剧",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "東森戲劇台"
+      ]
+    },
+    {
+      "id": "EBCForeignMovie.tw",
+      "name": "东森洋片",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "東森洋片台"
+      ]
+    },
+    {
+      "id": "EraNews.tw",
+      "name": "年代新闻",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "年代新聞台"
+      ]
+    },
+    {
+      "id": "UniqueBusinessNews.tw",
+      "name": "非凡新闻",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "非凡新聞台"
+      ]
+    },
+    {
+      "id": "非凡商业.tw",
+      "name": "非凡商业",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "非凡商業台"
+      ]
+    },
+    {
+      "id": "寰宇新闻台湾.tw",
+      "name": "寰宇新闻台湾",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "寰宇新聞台灣台"
+      ]
+    },
+    {
+      "id": "寰宇财经.tw",
+      "name": "寰宇财经",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "寰宇財經HD"
+      ]
+    },
+    {
+      "id": "GlobalNews.tw",
+      "name": "寰宇新闻",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "寰宇新聞HD"
+      ]
+    },
+    {
+      "id": "mnews.tw",
+      "name": "镜新闻",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "鏡電視新聞台"
+      ]
+    },
+    {
+      "id": "国会频道①.tw",
+      "name": "国会频道①",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "國會頻道1台"
+      ]
+    },
+    {
+      "id": "国会频道②.tw",
+      "name": "国会频道②",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "國會頻道2台"
+      ]
+    },
+    {
+      "id": "SETiNews.tw",
+      "name": "三立财经新闻",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "三立財經新聞台"
+      ]
+    },
+    {
+      "id": "三立综合.tw",
+      "name": "三立综合",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "三立綜合台HD"
+      ]
+    },
+    {
+      "id": "三立戏剧.tw",
+      "name": "三立戏剧",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "三立戲劇台HD"
+      ]
+    },
+    {
+      "id": "SETMetro.tw",
+      "name": "三立都会",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "三立都會台"
+      ]
+    },
+    {
+      "id": "CTVClassic.tw",
+      "name": "中视经典",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "中視經典台HD"
+      ]
+    },
+    {
+      "id": "中视菁采.tw",
+      "name": "中视菁采",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "中視菁采台HD"
+      ]
+    },
+    {
+      "id": "CTiEntertainment.tw",
+      "name": "中天娱乐",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "中天娛樂台"
+      ]
+    },
+    {
+      "id": "CTiAsia.tw",
+      "name": "中天亚洲",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "中天亞洲台"
+      ]
+    },
+    {
+      "id": "FTVOne.tw",
+      "name": "民视第一台",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "民視第一台"
+      ]
+    },
+    {
+      "id": "FTVTaiwan.tw",
+      "name": "民视台湾",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "民視台灣台"
+      ]
+    },
+    {
+      "id": "FTVDrama.tw",
+      "name": "民视影剧",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "民視影劇台"
+      ]
+    },
+    {
+      "id": "FTVVariety.tw",
+      "name": "民视综艺",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "民視綜藝台"
+      ]
+    },
+    {
+      "id": "FTVTravel.tw",
+      "name": "民视旅游",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "民視旅遊台"
+      ]
+    },
+    {
+      "id": "PTSTaigi.tw",
+      "name": "公视台语",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "公視台語台"
+      ]
+    },
+    {
+      "id": "公视戏剧.tw",
+      "name": "公视戏剧",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "公視戲劇"
+      ]
+    },
+    {
+      "id": "台视综合.tw",
+      "name": "台视综合",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "台視綜合台"
+      ]
+    },
+    {
+      "id": "TTVFinance.tw",
+      "name": "台视财经",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "台視財經台"
+      ]
+    },
+    {
+      "id": "纬来综合.tw",
+      "name": "纬来综合",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "緯來綜合台"
+      ]
+    },
+    {
+      "id": "VideolandDrama.tw",
+      "name": "纬来戏剧",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "緯來戲劇台"
+      ]
+    },
+    {
+      "id": "VideolandJapan.tw",
+      "name": "纬来日本",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "緯來日本台"
+      ]
+    },
+    {
+      "id": "VideolandMovie.tw",
+      "name": "纬来电影",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "緯來電影台"
+      ]
+    },
+    {
+      "id": "VideolandSports.tw",
+      "name": "纬来体育",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "緯來體育台"
+      ]
+    },
+    {
+      "id": "纬来育乐.tw",
+      "name": "纬来育乐",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "緯來育樂台"
+      ]
+    },
+    {
+      "id": "纬来精采.tw",
+      "name": "纬来精采",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "緯來精采HD"
+      ]
+    },
+    {
+      "id": "八大综艺.tw",
+      "name": "八大综艺",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "八大綜藝台"
+      ]
+    },
+    {
+      "id": "八大精彩.tw",
+      "name": "八大精彩",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "八大精彩台"
+      ]
+    },
+    {
+      "id": "龙华经典.tw",
+      "name": "龙华经典",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "龍華經典HD"
+      ]
+    },
+    {
+      "id": "龙华偶像.tw",
+      "name": "龙华偶像",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "龍華偶像HD"
+      ]
+    },
+    {
+      "id": "龙华戏剧.tw",
+      "name": "龙华戏剧",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "龍華戲劇HD"
+      ]
+    },
+    {
+      "id": "CelestialClassicMovies.hk",
+      "name": "天映经典",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "天映經典頻道"
+      ]
+    },
+    {
+      "id": "Catchplay电影.tw",
+      "name": "Catchplay电影",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "CATCHPLAY電影台"
+      ]
+    },
+    {
+      "id": "AMC.tw",
+      "name": "AMC",
+      "group": "tw",
+      "country": "TW"
+    },
+    {
+      "id": "HollywoodMovieChannel.tw",
+      "name": "好莱坞电影台",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "好萊塢電影台"
+      ]
+    },
+    {
+      "id": "靖天电影.tw",
+      "name": "靖天电影",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "靖天電影台"
+      ]
+    },
+    {
+      "id": "龙华电影.tw",
+      "name": "龙华电影",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "龍華電影HD"
+      ]
+    },
+    {
+      "id": "龙华洋片.tw",
+      "name": "龙华洋片",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "龍華洋片HD"
+      ]
+    },
+    {
+      "id": "采昌影剧.tw",
+      "name": "采昌影剧",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "采昌影劇台HD"
+      ]
+    },
+    {
+      "id": "靖天映画.tw",
+      "name": "靖天映画",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "靖天映畫"
+      ]
+    },
+    {
+      "id": "靖天戏剧.tw",
+      "name": "靖天戏剧",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "靖天戲劇HD"
+      ]
+    },
+    {
+      "id": "靖洋戏剧.tw",
+      "name": "靖洋戏剧",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "靖洋戲劇台"
+      ]
+    },
+    {
+      "id": "影迷数位电影.tw",
+      "name": "影迷数位电影",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "影迷數位電影台HD"
+      ]
+    },
+    {
+      "id": "经典电影台.tw",
+      "name": "经典电影台",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "經典電影台"
+      ]
+    },
+    {
+      "id": "CMusic.tw",
+      "name": "CMusic",
+      "group": "tw",
+      "country": "TW"
+    },
+    {
+      "id": "DreamWorks梦工厂动画.tw",
+      "name": "DreamWorks梦工厂动画",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "DreamWorks 夢工廠動畫"
+      ]
+    },
+    {
+      "id": "CinemaWorld.my",
+      "name": "CinemaWorld",
+      "group": "tw",
+      "country": "TW"
+    },
+    {
+      "id": "精选动漫台.tw",
+      "name": "精选动漫台",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "精選動漫台"
+      ]
+    },
+    {
+      "id": "金光布袋戏.tw",
+      "name": "金光布袋戏",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "金光布袋戲"
+      ]
+    },
+    {
+      "id": "AXN.tw",
+      "name": "AXN",
+      "group": "tw",
+      "country": "TW"
+    },
+    {
+      "id": "Cinemax.tw",
+      "name": "Cinemax",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "CINEMAX"
+      ]
+    },
+    {
+      "id": "DAZN1.uk",
+      "name": "DAZN1",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "DAZN 1"
+      ]
+    },
+    {
+      "id": "DAZN2.uk",
+      "name": "DAZN2",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "DAZN 2"
+      ]
+    },
+    {
+      "id": "Discovery.tw",
+      "name": "Discovery",
+      "group": "tw",
+      "country": "TW"
+    },
+    {
+      "id": "DW德国之声.tw",
+      "name": "DW德国之声",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "DW德國之聲"
+      ]
+    },
+    {
+      "id": "EYETVTravel.tw",
+      "name": "EYETV旅游",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "EYE TV旅遊台HD"
+      ]
+    },
+    {
+      "id": "EYETVDrama.tw",
+      "name": "EYETV戏剧",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "EYE TV戲劇台HD"
+      ]
+    },
+    {
+      "id": "HITS.tw",
+      "name": "HITS",
+      "group": "tw",
+      "country": "TW"
+    },
+    {
+      "id": "博斯魅力.tw",
+      "name": "博斯魅力",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "博斯魅力HD"
+      ]
+    },
+    {
+      "id": "博斯网球.tw",
+      "name": "博斯网球",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "博斯網球台"
+      ]
+    },
+    {
+      "id": "博斯无限Ⅰ.tw",
+      "name": "博斯无限Ⅰ",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "博斯無限台"
+      ]
+    },
+    {
+      "id": "博斯无限Ⅱ.tw",
+      "name": "博斯无限Ⅱ",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "博斯無限二台"
+      ]
+    },
+    {
+      "id": "博斯运动Ⅰ.tw",
+      "name": "博斯运动Ⅰ",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "博斯運動一台"
+      ]
+    },
+    {
+      "id": "博斯运动Ⅱ.tw",
+      "name": "博斯运动Ⅱ",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "博斯運動二台"
+      ]
+    },
+    {
+      "id": "博斯高球Ⅰ.tw",
+      "name": "博斯高球Ⅰ",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "博斯高球1台"
+      ]
+    },
+    {
+      "id": "博斯高球Ⅱ.tw",
+      "name": "博斯高球Ⅱ",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "博斯高球2台"
+      ]
+    },
+    {
+      "id": "DaAi1.tw",
+      "name": "大爱Ⅰ",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "大爱一台"
+      ]
+    },
+    {
+      "id": "DaAi2.tw",
+      "name": "大爱Ⅱ",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "大愛二台 "
+      ]
+    },
+    {
+      "id": "GoodTV.tw",
+      "name": "好消息Ⅰ",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "好消息頻道"
+      ]
+    },
+    {
+      "id": "Good2.tw",
+      "name": "好消息Ⅱ",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "好消息2台"
+      ]
+    },
+    {
+      "id": "AsiaTravelTV.tw",
+      "name": "亚洲旅游",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "亞洲旅遊台"
+      ]
+    },
+    {
+      "id": "智林体育.tw",
+      "name": "智林体育",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "智林體育HD"
+      ]
+    },
+    {
+      "id": "靖天卡通.tw",
+      "name": "靖天卡通",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "靖天卡通台"
+      ]
+    },
+    {
+      "id": "猪哥亮歌厅秀.tw",
+      "name": "猪哥亮歌厅秀",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "豬哥亮歌廳秀"
+      ]
+    },
+    {
+      "id": "HBO强档巨献.tw",
+      "name": "HBO强档巨献",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "HBO 強檔鉅獻"
+      ]
+    },
+    {
+      "id": "HBO原创巨献.tw",
+      "name": "HBO原创巨献",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "HBO 原創鉅獻"
+      ]
+    },
+    {
+      "id": "HBO温馨家庭.tw",
+      "name": "HBO温馨家庭",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "HBO 溫馨家庭"
+      ]
+    },
+    {
+      "id": "爱尔达体育Ⅰ.tw",
+      "name": "爱尔达体育Ⅰ",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "愛爾達體育1台"
+      ]
+    },
+    {
+      "id": "爱尔达体育Ⅱ.tw",
+      "name": "爱尔达体育Ⅱ",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "愛爾達體育2台"
+      ]
+    },
+    {
+      "id": "爱尔达体育Ⅲ.tw",
+      "name": "爱尔达体育Ⅲ",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "愛爾達體育3台"
+      ]
+    },
+    {
+      "id": "爱尔达影剧.tw",
+      "name": "爱尔达影剧",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "愛爾達影劇台HD"
+      ]
+    },
+    {
+      "id": "爱尔达体育Ⅳ.tw",
+      "name": "爱尔达体育Ⅳ",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "愛爾達體育4台"
+      ]
+    },
+    {
+      "id": "爱尔达娱乐.tw",
+      "name": "爱尔达娱乐",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "愛爾達娛樂台"
+      ]
+    },
+    {
+      "id": "爱尔达生活旅游.tw",
+      "name": "爱尔达生活旅游",
+      "group": "tw",
+      "country": "TW",
+      "aliases": [
+        "愛爾達生活旅遊台"
+      ]
+    },
+    {
+      "id": "湖南电影.cn",
+      "name": "湖南电影",
+      "group": "local",
+      "country": "CN"
+    },
+    {
+      "id": "GoldenEagleDocumentary.cn",
+      "name": "金鹰纪实",
+      "group": "local",
+      "country": "CN"
+    },
+    {
+      "id": "快乐垂钓.cn",
+      "name": "快乐垂钓",
+      "group": "local",
+      "country": "CN"
+    },
+    {
+      "id": "广东体育.cn",
+      "name": "广东体育",
+      "group": "local",
+      "country": "CN"
+    },
+    {
+      "id": "GuangdongNewsChannel.cn",
+      "name": "广东新闻",
+      "group": "local",
+      "country": "CN"
+    },
+    {
+      "id": "广东民生.cn",
+      "name": "广东民生",
+      "group": "local",
+      "country": "CN"
+    },
+    {
+      "id": "广州新闻.cn",
+      "name": "广州新闻",
+      "group": "local",
+      "country": "CN"
+    },
+    {
+      "id": "广州竞赛.cn",
+      "name": "广州竞赛",
+      "group": "local",
+      "country": "CN"
     }
   ]
 }

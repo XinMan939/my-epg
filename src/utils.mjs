@@ -2,6 +2,7 @@
  * 通用工具：HTTP 抓取、XML 转义、时间处理、日志
  */
 import { setTimeout as sleep } from 'node:timers/promises'
+import { T2S_FULL } from './t2s.mjs'
 
 const UA =
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'
@@ -421,11 +422,15 @@ const T2S_MAP = {
 /**
  * 繁体 → 简体（字级映射，未收录的字原样保留）
  * 用于把港台频道的繁体节目名转成简体，去对齐 tvmao 的简体索引。
+ *
+ * 查表顺序：先查下面这张手写表（个别字挑了更常用的简化），再兜到
+ * `t2s.mjs` 里的 OpenCC 完整表（3221 字）。手写表当年漏了「緯」，
+ * 直接导致「緯來育樂台」对不上「纬来育乐」——所以完整表是兜底，不是可选项。
  */
 export function toSimplified(s) {
   if (!s) return ''
   let out = ''
-  for (const ch of String(s)) out += T2S_MAP[ch] || ch
+  for (const ch of String(s)) out += T2S_MAP[ch] || T2S_FULL[ch] || ch
   return out
 }
 
