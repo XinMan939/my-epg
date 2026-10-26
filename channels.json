@@ -1378,7 +1378,7 @@
     "aliases": [
       "发现之旅"
     ],
-    "logo": "https://www.tvsou.com/media/f/a5db7a370cbd/zm48-24",
+    "logo": "",
     "hasEpg": true,
     "programmeCount": 351
   },
@@ -1455,7 +1455,7 @@
     "aliases": [
       "老故事"
     ],
-    "logo": "https://www.tvsou.com/media/f/fae100d33724/zm48-24",
+    "logo": "",
     "hasEpg": true,
     "programmeCount": 110
   },
@@ -1489,8 +1489,8 @@
       "卫生健康"
     ],
     "logo": "",
-    "hasEpg": false,
-    "programmeCount": 0
+    "hasEpg": true,
+    "programmeCount": 203
   },
   {
     "id": "CCTVTVGuide.cn",
@@ -1510,7 +1510,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 90
+    "programmeCount": 307
   },
   {
     "id": "CGTNFrench.cn",
@@ -1518,8 +1518,8 @@
     "group": "cctv",
     "aliases": [],
     "logo": "",
-    "hasEpg": false,
-    "programmeCount": 0
+    "hasEpg": true,
+    "programmeCount": 137
   },
   {
     "id": "CGTNDocumentary.cn",
@@ -1527,8 +1527,8 @@
     "group": "cctv",
     "aliases": [],
     "logo": "",
-    "hasEpg": false,
-    "programmeCount": 0
+    "hasEpg": true,
+    "programmeCount": 251
   },
   {
     "id": "CETV1.cn",
@@ -1569,8 +1569,8 @@
     "group": "pay",
     "aliases": [],
     "logo": "",
-    "hasEpg": false,
-    "programmeCount": 0
+    "hasEpg": true,
+    "programmeCount": 436
   },
   {
     "id": "GoldenEagleCartoon.cn",
@@ -1579,7 +1579,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 200
+    "programmeCount": 505
   },
   {
     "id": "哈哈炫动.cn",
@@ -1664,7 +1664,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 38
+    "programmeCount": 80
   },
   {
     "id": "GameChannel.cn",
@@ -1673,7 +1673,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 74
+    "programmeCount": 292
   },
   {
     "id": "劲爆体育.cn",
@@ -1681,8 +1681,8 @@
     "group": "pay",
     "aliases": [],
     "logo": "",
-    "hasEpg": false,
-    "programmeCount": 0
+    "hasEpg": true,
+    "programmeCount": 123
   },
   {
     "id": "乐游.cn",
@@ -1690,8 +1690,8 @@
     "group": "pay",
     "aliases": [],
     "logo": "",
-    "hasEpg": false,
-    "programmeCount": 0
+    "hasEpg": true,
+    "programmeCount": 402
   },
   {
     "id": "AnimationShowChannel.cn",
@@ -1700,7 +1700,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 193
+    "programmeCount": 697
   },
   {
     "id": "CityTheaterChannel.cn",
@@ -1709,7 +1709,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 99
+    "programmeCount": 170
   },
   {
     "id": "ChannelLaw.cn",
@@ -1718,7 +1718,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 93
+    "programmeCount": 115
   },
   {
     "id": "LaughterTheater.cn",
@@ -1735,8 +1735,8 @@
     "group": "pay",
     "aliases": [],
     "logo": "",
-    "hasEpg": false,
-    "programmeCount": 0
+    "hasEpg": true,
+    "programmeCount": 154
   },
   {
     "id": "LifestyleChannel.cn",
@@ -1745,7 +1745,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 103
+    "programmeCount": 376
   },
   {
     "id": "CHCAction.cn",
@@ -3035,5 +3035,93 @@
     "logo": "",
     "hasEpg": false,
     "programmeCount": 0
+  },
+  {
+    "id": "农林卫视.cn",
+    "name": "农林卫视",
+    "group": "satellite",
+    "aliases": [
+      "陝西農林衛視",
+      "陕西农林卫视"
+    ],
+    "logo": "",
+    "hasEpg": false,
+    "programmeCount": 0
+  },
+  {
+    "id": "AsianFood.tw",
+    "name": "AsianFood",
+    "group": "tw",
+    "aliases": [
+      "亞洲美食頻道",
+      "亚洲美食频道",
+      "亞洲美食台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919170840611834_26.png",
+    "hasEpg": true,
+    "programmeCount": 248
+  },
+  {
+    "id": "阿里郎.tw",
+    "name": "阿里郎",
+    "group": "tw",
+    "aliases": [
+      "ARIRANG",
+      "韓國阿里郎",
+      "韩国阿里郎",
+      "阿里郎頻道"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917035151658357_64.jpg",
+    "hasEpg": true,
+    "programmeCount": 310
+  },
+  {
+    "id": "我的欧洲电影.tw",
+    "name": "我的欧洲电影",
+    "group": "tw",
+    "aliases": [
+      "MCE 我的歐洲電影台",
+      "My Cinema Europe HD",
+      "我的歐洲電影"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919173504365160_58.png",
+    "hasEpg": true,
+    "programmeCount": 72
+  },
+  {
+    "id": "汕头经济.cn",
+    "name": "汕头经济",
+    "group": "local",
+    "aliases": [
+      "汕頭經濟生活",
+      "汕头经济生活"
+    ],
+    "logo": "",
+    "hasEpg": false,
+    "programmeCount": 0
+  },
+  {
+    "id": "广东珠江.cn",
+    "name": "广东珠江",
+    "group": "local",
+    "aliases": [
+      "珠江台",
+      "廣東珠江"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 42
+  },
+  {
+    "id": "HBO电影.tw",
+    "name": "HBO电影",
+    "group": "pay",
+    "aliases": [
+      "HBO",
+      "HBO HD"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917035324057947_34.jpg",
+    "hasEpg": true,
+    "programmeCount": 182
   }
 ]

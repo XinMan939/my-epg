@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T20:40:24.995Z",
+  "generatedAt": "2026-10-26T20:42:13.603Z",
   "days": 7,
   "dayList": [
     "20261027",
@@ -10,24 +10,94 @@
     "20261101",
     "20261102"
   ],
-  "channelsTotal": 275,
-  "channelsWithEpg": 251,
-  "channelsEmpty": 24,
-  "channelsFull": 142,
-  "channelsPartial": 109,
-  "programmesTotal": 40583,
-  "programmesWithDesc": 25055,
-  "descCoverage": 62,
+  "channelsTotal": 282,
+  "channelsWithEpg": 263,
+  "channelsEmpty": 19,
+  "channelsFull": 158,
+  "channelsPartial": 105,
+  "programmesTotal": 44795,
+  "programmesWithDesc": 28112,
+  "descCoverage": 63,
   "dateRange": [
     "20261027",
     "20261102"
   ],
   "sourceStats": {
-    "epgpw": 203,
-    "tvmao": 2,
+    "epgpw": 207,
+    "tvmao": 17,
     "tvsou": 2
   },
   "fallbacks": [
+    {
+      "id": "CNDFilmDiscoveryChannel.cn",
+      "from": "tvmao:CCTVPAYFEE-CCTVFXZL",
+      "to": "tvsou:c3758372"
+    },
+    {
+      "id": "CCTVHealth.cn",
+      "from": "epgpw:539738",
+      "to": "tvmao:SITV13"
+    },
+    {
+      "id": "CGTNFrench.cn",
+      "from": "epgpw:570493",
+      "to": "tvmao:CCTV-CCTVF"
+    },
+    {
+      "id": "CGTNDocumentary.cn",
+      "from": "epgpw:544390",
+      "to": "tvmao:CCTV-CCTV18"
+    },
+    {
+      "id": "BRTVKakuChildrensChannel.cn",
+      "from": "epgpw:539885",
+      "to": "tvmao:BTV10"
+    },
+    {
+      "id": "魅力足球.cn",
+      "from": "epgpw:544272",
+      "to": "tvmao:SITV-YULE"
+    },
+    {
+      "id": "GameChannel.cn",
+      "from": "epgpw:539857",
+      "to": "tvmao:SITV-GAME"
+    },
+    {
+      "id": "劲爆体育.cn",
+      "from": "epgpw:539746",
+      "to": "tvmao:SITV-SPORTS"
+    },
+    {
+      "id": "乐游.cn",
+      "from": "epgpw:544282",
+      "to": "tvmao:SITV-DOCUMENTARY"
+    },
+    {
+      "id": "AnimationShowChannel.cn",
+      "from": "epgpw:539640",
+      "to": "tvmao:SITV-CHILDREN"
+    },
+    {
+      "id": "CityTheaterChannel.cn",
+      "from": "epgpw:539848",
+      "to": "tvmao:SITV-MOVIE"
+    },
+    {
+      "id": "ChannelLaw.cn",
+      "from": "epgpw:545509",
+      "to": "tvmao:SITV3"
+    },
+    {
+      "id": "金色学堂.cn",
+      "from": "epgpw:549673",
+      "to": "tvmao:SITV6"
+    },
+    {
+      "id": "LifestyleChannel.cn",
+      "from": "epgpw:570487",
+      "to": "tvmao:SITV-FASHION"
+    },
     {
       "id": "寰宇财经.tw",
       "from": "tvsou:a77c8f78",
@@ -71,19 +141,14 @@
     "MacauLotus.hk(empty(tvsou:b6d548b0=0))",
     "AsiaSatelliteTV.hk(empty(tvsou:d5f45f0e=0))",
     "CTiNews.tw(empty(tvsou:8be4a756=0))",
-    "CCTVHealth.cn(empty(epgpw:539738=0))",
-    "CCTVTVGuide.cn(empty(epgpw:544333=0))",
-    "CGTNFrench.cn(empty(epgpw:570493=0))",
-    "CGTNDocumentary.cn(empty(epgpw:544390=0))",
-    "BRTVKakuChildrensChannel.cn(empty(epgpw:539885=0))",
-    "求索纪录.cn(empty(epgpw:539845=0))",
+    "CCTVTVGuide.cn(empty(epgpw:544333=0 tvmao:CCTVPAYFEE-CCTVPAYFEE6=0))",
+    "求索纪录.cn(empty(epgpw:539845=0 tvmao:HSCM-QSJL=0))",
     "求索生活.cn(empty(epgpw:539681=0))",
-    "劲爆体育.cn(empty(epgpw:539746=0))",
-    "乐游.cn(empty(epgpw:544282=0))",
-    "金色学堂.cn(empty(epgpw:549673=0))",
-    "CHCHomeTheater.cn(empty(epgpw:539900=0))",
+    "CHCHomeTheater.cn(empty(epgpw:539900=0 tvmao:CHC-CHC2=0))",
     "广州新闻.cn(empty(epgpw:539887=0))",
-    "广州竞赛.cn(empty(epgpw:539796=0))"
+    "广州竞赛.cn(empty(epgpw:539796=0))",
+    "农林卫视.cn(empty(epgpw:570491=0))",
+    "汕头经济.cn(empty(epgpw:544379=0))"
   ],
   "matchInfo": {
     "CCTV1.cn": {
@@ -95,6 +160,7 @@
         "epgpw:572136(CCTV-1综合)",
         "epgpw:572141(CCTV-1（高清）)",
         "epgpw:410374(CCTV-1)",
+        "tvmao:CCTV-CCTV1(CCTV-1综合)",
         "tvsou:b3666b9d(CCTV-1（综合）)",
         "tvsou:f6309ea9(CCTV-1（高清）)"
       ]
@@ -107,6 +173,7 @@
       "alternatives": [
         "epgpw:545933(CCTV-2 财经)",
         "epgpw:572147(CCTV-2（高清）)",
+        "tvmao:CCTV-CCTV2(CCTV-2财经)",
         "tvsou:c5717c2d(CCTV-2（财经）)",
         "tvsou:92db4c5a(CCTV-2（高清）)"
       ]
@@ -119,6 +186,7 @@
       "alternatives": [
         "epgpw:572135(CCTV-3综艺)",
         "epgpw:572142(CCTV-3（高清）)",
+        "tvmao:CCTV-CCTV3(CCTV-3综艺)",
         "tvsou:53eda06f(CCTV-3（综艺）)",
         "tvsou:c354238e(CCTV-3（高清）)"
       ]
@@ -146,6 +214,7 @@
       "alternatives": [
         "epgpw:572137(CCTV-5体育)",
         "epgpw:572143(CCTV-5（高清）)",
+        "tvmao:CCTV-CCTV5(CCTV-5体育)",
         "tvsou:6b26bee1(CCTV-5（体育）)",
         "tvsou:1e9d3e76(CCTV-5（高清）)"
       ]
@@ -158,6 +227,7 @@
       "alternatives": [
         "epgpw:572143(CCTV-5（高清）)",
         "epgpw:572145(CCTV5+)",
+        "tvmao:CCTV-CCTV5-PLUS(CCTV5加)",
         "tvsou:6b26bee1(CCTV-5（体育）)",
         "tvsou:e4e3801d(CCTV5+)",
         "tvsou:1e9d3e76(CCTV-5（高清）)",
@@ -172,6 +242,7 @@
       "alternatives": [
         "epgpw:572132(CCTV-6电影)",
         "epgpw:572146(CCTV-6（高清）)",
+        "tvmao:CCTV-CCTV6(CCTV-6电影)",
         "tvsou:ddb707c0(CCTV-6（电影）)",
         "tvsou:6a861ace(CCTV-6（高清）)"
       ]
@@ -183,6 +254,7 @@
       "sourceName": "CCTV-7国防军事",
       "alternatives": [
         "epgpw:545939(CCTV-7 国防军事)",
+        "tvmao:CCTV-CCTV7(CCTV-7国防军事)",
         "tvsou:f2d13f2a(CCTV-7（国防军事）)",
         "tvsou:65174ca3(CCTV-7（高清）)"
       ]
@@ -195,6 +267,7 @@
       "alternatives": [
         "epgpw:572129(CCTV-8电视剧)",
         "epgpw:572144(CCTV-8（高清）)",
+        "tvmao:CCTV-CCTV8(CCTV-8电视剧)",
         "tvsou:13e8f054(CCTV-8（电视剧）)",
         "tvsou:c2e033a7(CCTV-8（高清）)"
       ]
@@ -206,6 +279,7 @@
       "sourceName": "CCTV-9纪录",
       "alternatives": [
         "epgpw:545941(CCTV-9 纪录)",
+        "tvmao:CCTV-CCTV9(CCTV-9纪录)",
         "tvsou:8f932b7b(CCTV-9（纪录）)",
         "tvsou:6f96eb29(CCTV-9（高清）)"
       ]
@@ -217,6 +291,7 @@
       "sourceName": "CCTV-10科教",
       "alternatives": [
         "epgpw:545942(CCTV-10 科教)",
+        "tvmao:CCTV-CCTV10(CCTV-10科教)",
         "tvsou:7651a0a2(CCTV-10（科教）)",
         "tvsou:06b6878e(CCTV-10（高清）)"
       ]
@@ -228,6 +303,7 @@
       "sourceName": "CCTV-11戏曲",
       "alternatives": [
         "epgpw:545943(CCTV-11 戏曲)",
+        "tvmao:CCTV-CCTV11(CCTV-11戏曲)",
         "tvsou:0a2de840(CCTV-11（戏曲）)",
         "tvsou:e175677c(CCTV-11（高清）)"
       ]
@@ -239,6 +315,7 @@
       "sourceName": "CCTV-12 社会与法",
       "alternatives": [
         "epgpw:572138(CCTV-12法制)",
+        "tvmao:CCTV-CCTV12(CCTV-12法制)",
         "tvsou:1e983148(CCTV-12（社会与法）)",
         "tvsou:bc05ab3b(CCTV-12（高清）)"
       ]
@@ -250,6 +327,7 @@
       "sourceName": "CCTV-13新闻",
       "alternatives": [
         "epgpw:545945(CCTV-13 新闻)",
+        "tvmao:CCTV-CCTV13(CCTV-13新闻)",
         "tvsou:f5b1a323(CCTV-13（新闻）)",
         "tvsou:4928a6b7(CCTV-13（高清）)"
       ]
@@ -261,6 +339,7 @@
       "sourceName": "CCTV-14 少儿",
       "alternatives": [
         "epgpw:572487(CCTV-14少儿)",
+        "tvmao:CCTV-CCTV15(CCTV-14少儿)",
         "tvsou:6fff4f43(CCTV-14（少儿）)",
         "tvsou:39b60dac(CCTV-14（高清）)"
       ]
@@ -273,6 +352,7 @@
       "alternatives": [
         "epgpw:572148(CCTV-15（高清）)",
         "epgpw:545947(CCTV-15 音乐)",
+        "tvmao:CCTV-CCTV16(CCTV-15音乐)",
         "tvsou:3201ff16(CCTV-15（音乐）)",
         "tvsou:ee0d1991(CCTV-15（高清）)"
       ]
@@ -282,7 +362,9 @@
       "source": "epgpw",
       "sourceId": "545948",
       "sourceName": "CCTV-16奥林匹克",
-      "alternatives": []
+      "alternatives": [
+        "tvmao:CCTV-CCTVOLY(CCTV-16奥林匹克)"
+      ]
     },
     "CCTV17.cn": {
       "confidence": "exact",
@@ -318,6 +400,7 @@
         "epgpw:545952(CCTV-4 (美洲))",
         "epgpw:545951(CCTV-4 (欧洲))",
         "epgpw:410375(CCTV-4)",
+        "tvmao:CCTV-CCTVEUROPE(CCTV-4欧洲)",
         "tvsou:0ccc41bf(CCTV-4中文国际（亚）)",
         "tvsou:63a3b196(CCTV-4中文国际（欧）)",
         "tvsou:9d22479f(CCTV-4中文国际（美）)",
@@ -334,6 +417,7 @@
         "epgpw:545952(CCTV-4 (美洲))",
         "epgpw:545951(CCTV-4 (欧洲))",
         "epgpw:410375(CCTV-4)",
+        "tvmao:CCTV-CCTVAMERICAS(CCTV-4美洲)",
         "tvsou:0ccc41bf(CCTV-4中文国际（亚）)",
         "tvsou:63a3b196(CCTV-4中文国际（欧）)",
         "tvsou:9d22479f(CCTV-4中文国际（美）)",
@@ -348,6 +432,7 @@
       "alternatives": [
         "epgpw:572162(湖南卫视)",
         "epgpw:539731(湖南卫视)",
+        "tvmao:HUNANTV1(湖南卫视)",
         "tvsou:7d4daf1f(湖南卫视)",
         "tvsou:0205c095(湖南卫视高清)"
       ]
@@ -360,6 +445,7 @@
       "alternatives": [
         "epgpw:545962(浙江卫视)",
         "epgpw:539700(浙江卫视)",
+        "tvmao:ZJTV1(浙江卫视)",
         "tvsou:9f005630(浙江卫视)",
         "tvsou:900249c3(浙江卫视（高清）)"
       ]
@@ -372,6 +458,7 @@
       "alternatives": [
         "epgpw:572161(江苏卫视)",
         "epgpw:539834(江苏卫视)",
+        "tvmao:JSTV1(江苏卫视)",
         "tvsou:69e7e66e(江苏卫视)",
         "tvsou:bee74995(江苏卫视（高清）)"
       ]
@@ -384,6 +471,7 @@
       "alternatives": [
         "epgpw:572176(东方卫视)",
         "epgpw:539699(东方卫视)",
+        "tvmao:DONGFANG1(东方卫视)",
         "tvsou:95f40184(东方卫视)",
         "tvsou:6b7440e7(东方卫视（高清）)"
       ]
@@ -396,6 +484,7 @@
       "alternatives": [
         "epgpw:545957(北京卫视)",
         "epgpw:539726(北京卫视)",
+        "tvmao:BTV1(北京卫视)",
         "tvsou:696f2203(BTV北京卫视)",
         "tvsou:4d5fdbb2(BTV北京卫视（高清）)"
       ]
@@ -408,6 +497,7 @@
       "alternatives": [
         "epgpw:545966(安徽卫视)",
         "epgpw:539701(安徽卫视)",
+        "tvmao:AHTV1(安徽卫视)",
         "tvsou:06a195fd(安徽卫视)",
         "tvsou:9ae7a551(安徽卫视（高清）)"
       ]
@@ -420,6 +510,7 @@
       "alternatives": [
         "epgpw:545961(山东卫视)",
         "epgpw:539740(山东卫视)",
+        "tvmao:SDTV1(山东卫视)",
         "tvsou:c62d45e9(山东卫视)",
         "tvsou:c5210e9b(山东卫视（高清）)"
       ]
@@ -432,6 +523,7 @@
       "alternatives": [
         "epgpw:545964(广东卫视)",
         "epgpw:539712(广东卫视)",
+        "tvmao:GDTV1(广东卫视)",
         "tvsou:cb608c10(广东卫视)",
         "tvsou:0608aa38(广东卫视（高清）)"
       ]
@@ -444,6 +536,7 @@
       "alternatives": [
         "epgpw:545979(深圳卫视)",
         "epgpw:539856(深圳卫视)",
+        "tvmao:SZTV1(深圳卫视)",
         "tvsou:50ca1f4c(深圳卫视)",
         "tvsou:331eb8cd(深圳卫视（高清）)"
       ]
@@ -456,6 +549,7 @@
       "alternatives": [
         "epgpw:572171(天津卫视)",
         "epgpw:539703(天津卫视)",
+        "tvmao:TJTV1(天津卫视)",
         "tvsou:b5cb5697(天津卫视)",
         "tvsou:59f7d5b9(天津卫视（高清）)"
       ]
@@ -468,6 +562,7 @@
       "alternatives": [
         "epgpw:545975(重庆卫视)",
         "epgpw:539790(重庆卫视)",
+        "tvmao:CCQTV1(重庆卫视)",
         "tvsou:54cb9087(重庆卫视)",
         "tvsou:b271fc3f(重庆卫视（高清）)"
       ]
@@ -480,6 +575,7 @@
       "alternatives": [
         "epgpw:545980(四川卫视)",
         "epgpw:539826(四川卫视)",
+        "tvmao:SCTV1(四川卫视)",
         "tvsou:e5b252e4(四川卫视)",
         "tvsou:8468b0e5(四川卫视（高清）)"
       ]
@@ -491,6 +587,7 @@
       "sourceName": "湖北卫视",
       "alternatives": [
         "epgpw:539692(湖北卫视)",
+        "tvmao:HUBEI1(湖北卫视)",
         "tvsou:526cbae7(湖北卫视)",
         "tvsou:d43b0fc9(湖北卫视（高清）)"
       ]
@@ -503,6 +600,7 @@
       "alternatives": [
         "epgpw:572159(河南卫视)",
         "epgpw:539838(河南卫视)",
+        "tvmao:HNTV1(河南卫视)",
         "tvsou:789d0d22(河南卫视)"
       ]
     },
@@ -514,6 +612,7 @@
       "alternatives": [
         "epgpw:545984(河北卫视)",
         "epgpw:539695(河北卫视)",
+        "tvmao:HEBEI1(河北卫视)",
         "tvsou:25feea76(河北卫视)",
         "tvsou:8f981eed(河北卫视（高清）)"
       ]
@@ -526,6 +625,7 @@
       "alternatives": [
         "epgpw:545977(山西卫视)",
         "epgpw:539843(山西卫视)",
+        "tvmao:SXTV1(山西卫视)",
         "tvsou:d667526e(山西卫视)",
         "tvsou:9d25f4b8(山西卫视（高清）)"
       ]
@@ -538,6 +638,7 @@
       "alternatives": [
         "epgpw:545978(陕西卫视)",
         "epgpw:539697(陕西卫视)",
+        "tvmao:SHXITV1(陕西卫视)",
         "tvsou:6ef94ac4(陕西卫视)"
       ]
     },
@@ -549,6 +650,7 @@
       "alternatives": [
         "epgpw:545968(辽宁卫视)",
         "epgpw:539777(辽宁卫视)",
+        "tvmao:LNTV1(辽宁卫视)",
         "tvsou:019d9e5e(辽宁卫视)",
         "tvsou:41f849ee(辽宁卫视（高清）)"
       ]
@@ -561,6 +663,7 @@
       "alternatives": [
         "epgpw:572149(吉林卫视)",
         "epgpw:539864(吉林卫视)",
+        "tvmao:JILIN1(吉林卫视)",
         "tvsou:a3aa4d01(吉林卫视)"
       ]
     },
@@ -572,6 +675,7 @@
       "alternatives": [
         "epgpw:572152(黑龙江卫视)",
         "epgpw:539850(黑龙江卫视)",
+        "tvmao:HLJTV1(黑龙江卫视)",
         "tvsou:59736a35(黑龙江卫视)",
         "tvsou:b2283398(黑龙江卫视（高清）)"
       ]
@@ -584,6 +688,7 @@
       "alternatives": [
         "epgpw:545976(江西卫视)",
         "epgpw:539876(江西卫视)",
+        "tvmao:JXTV1(江西卫视)",
         "tvsou:61914025(江西卫视)"
       ]
     },
@@ -595,6 +700,7 @@
       "alternatives": [
         "epgpw:545965(东南卫视)",
         "epgpw:539717(东南卫视)",
+        "tvmao:FJTV2(东南卫视)",
         "tvsou:da0c3f96(东南卫视)",
         "tvsou:b5e14570(东南卫视（高清）)"
       ]
@@ -605,7 +711,8 @@
       "sourceId": "545982",
       "sourceName": "广西卫视",
       "alternatives": [
-        "epgpw:539698(广西卫视)"
+        "epgpw:539698(广西卫视)",
+        "tvmao:GUANXI1(广西卫视)"
       ]
     },
     "YunnanSatelliteTV.cn": {
@@ -616,6 +723,7 @@
       "alternatives": [
         "epgpw:545974(云南卫视)",
         "epgpw:539641(云南卫视)",
+        "tvmao:YNTV1(云南卫视)",
         "tvsou:3a19b822(云南卫视)"
       ]
     },
@@ -627,6 +735,7 @@
       "alternatives": [
         "epgpw:545983(贵州卫视)",
         "epgpw:539814(贵州卫视)",
+        "tvmao:GUIZOUTV1(贵州卫视)",
         "tvsou:a136a49d(贵州卫视)"
       ]
     },
@@ -638,6 +747,7 @@
       "alternatives": [
         "epgpw:545967(甘肃卫视)",
         "epgpw:539851(甘肃卫视)",
+        "tvmao:GSTV1(甘肃卫视)",
         "tvsou:fac1ecf6(甘肃卫视)"
       ]
     },
@@ -649,6 +759,7 @@
       "alternatives": [
         "epgpw:572180(青海卫视)",
         "epgpw:539730(青海卫视)",
+        "tvmao:QHTV1(青海卫视)",
         "tvsou:6cf61152(青海卫视)"
       ]
     },
@@ -660,6 +771,7 @@
       "alternatives": [
         "epgpw:545971(宁夏卫视)",
         "epgpw:539644(宁夏卫视)",
+        "tvmao:NXTV2(宁夏卫视)",
         "tvsou:1c4d4f90(宁夏卫视)"
       ]
     },
@@ -671,6 +783,7 @@
       "alternatives": [
         "epgpw:572170(新疆卫视)",
         "epgpw:539831(新疆卫视)",
+        "tvmao:XJTV1(新疆卫视)",
         "tvsou:aa83e122(新疆卫视)"
       ]
     },
@@ -682,6 +795,7 @@
       "alternatives": [
         "epgpw:572167(西藏卫视)",
         "epgpw:539728(西藏卫视)",
+        "tvmao:XIZANGTV2(西藏卫视)",
         "tvsou:e237763b(西藏卫视)"
       ]
     },
@@ -703,6 +817,7 @@
       "alternatives": [
         "epgpw:572151(旅游卫视)",
         "epgpw:539659(海南卫视)",
+        "tvmao:TCTC1(海南卫视)",
         "tvsou:8024c685(海南卫视)"
       ]
     },
@@ -714,6 +829,7 @@
       "alternatives": [
         "epgpw:572178(厦门卫视)",
         "epgpw:539824(厦门卫视)",
+        "tvmao:XMTV5(厦门卫视)",
         "tvsou:d6253770(厦门卫视)",
         "tvsou:49171575(厦门卫视（高清）)"
       ]
@@ -726,6 +842,7 @@
       "alternatives": [
         "epgpw:572179(延边卫视)",
         "epgpw:539752(延边卫视)",
+        "tvmao:YANBIAN1(延边卫视)",
         "tvsou:c33fa0cc(延边卫视)"
       ]
     },
@@ -737,6 +854,7 @@
       "alternatives": [
         "epgpw:545992(兵团卫视)",
         "epgpw:539743(兵团卫视)",
+        "tvmao:BINGTUAN(兵团卫视)",
         "tvsou:d8bee9f9(兵团卫视)"
       ]
     },
@@ -747,6 +865,7 @@
       "sourceName": "康巴卫视",
       "alternatives": [
         "epgpw:539766(康巴卫视)",
+        "tvmao:KAMBA-TV(康巴卫视)",
         "tvsou:5ccb1172(康巴卫视)"
       ]
     },
@@ -757,6 +876,7 @@
       "sourceName": "黄河卫视",
       "alternatives": [
         "epgpw:539803(黄河卫视)",
+        "tvmao:HHWS(黄河卫视)",
         "tvsou:8334edbd(黄河卫视)"
       ]
     },
@@ -767,6 +887,7 @@
       "sourceName": "海峡卫视",
       "alternatives": [
         "epgpw:539830(海峡卫视)",
+        "tvmao:HXTV(海峡卫视)",
         "tvsou:1d7e3bf3(海峡卫视)"
       ]
     },
@@ -785,7 +906,7 @@
       "confidence": "override",
       "source": "tvmao",
       "sourceId": "SANSHATV",
-      "sourceName": "三沙卫视节目单",
+      "sourceName": "三沙卫视",
       "alternatives": []
     },
     "HunanTVInternational.cn": {
@@ -1168,10 +1289,10 @@
       "alternatives": []
     },
     "CCTVWeaponTechnology.cn": {
-      "confidence": "contains",
+      "confidence": "exact",
       "source": "tvmao",
       "sourceId": "CCTVPAYFEE-CCTVPAYFEE8",
-      "sourceName": "兵器科技节目单",
+      "sourceName": "兵器科技",
       "alternatives": []
     },
     "CCTVTheFirstTheater.cn": {
@@ -1179,41 +1300,47 @@
       "source": "epgpw",
       "sourceId": "544354",
       "sourceName": "CCTV第一剧场",
-      "alternatives": []
+      "alternatives": [
+        "tvmao:CCTVPAYFEE-CCTVPAYFEE3(第一剧场)"
+      ]
     },
     "CNDFilmDiscoveryChannel.cn": {
       "confidence": "exact",
-      "source": "tvsou",
-      "sourceId": "c3758372",
+      "source": "tvmao",
+      "sourceId": "CCTVPAYFEE-CCTVFXZL",
       "sourceName": "发现之旅",
-      "alternatives": []
+      "alternatives": [
+        "tvsou:c3758372(发现之旅)"
+      ]
     },
     "CCTVStormTheater.cn": {
       "confidence": "exact",
       "source": "epgpw",
       "sourceId": "544381",
       "sourceName": "CCTV风云剧场",
-      "alternatives": []
+      "alternatives": [
+        "tvmao:CCTVPAYFEE-CCTVPAYFEE4(风云剧场)"
+      ]
     },
     "CCTVStormMusic.cn": {
-      "confidence": "contains",
+      "confidence": "exact",
       "source": "tvmao",
       "sourceId": "CCTVPAYFEE-CCTVPAYFEE2",
-      "sourceName": "风云音乐节目单",
+      "sourceName": "风云音乐",
       "alternatives": []
     },
     "CCTVStormFootball.cn": {
-      "confidence": "contains",
+      "confidence": "exact",
       "source": "tvmao",
       "sourceId": "CCTVPAYFEE-CCTVPAYFEE1",
-      "sourceName": "风云足球节目单",
+      "sourceName": "风云足球",
       "alternatives": []
     },
     "CCTVBilliards.cn": {
-      "confidence": "contains",
+      "confidence": "exact",
       "source": "tvmao",
       "sourceId": "CCTVPAYFEE-CCTVPAYFEE36",
-      "sourceName": "CCTV央视台球节目单",
+      "sourceName": "CCTV央视台球",
       "alternatives": []
     },
     "CCTVGolfTennis.cn": {
@@ -1221,34 +1348,40 @@
       "source": "epgpw",
       "sourceId": "539874",
       "sourceName": "高尔夫网球",
-      "alternatives": []
+      "alternatives": [
+        "tvmao:CCTVPAYFEE-CCTVPAYFEE13(高尔夫网球)"
+      ]
     },
     "CCTVNostalgiaTheater.cn": {
       "confidence": "exact",
       "source": "epgpw",
       "sourceId": "544310",
       "sourceName": "CCTV怀旧剧场",
-      "alternatives": []
+      "alternatives": [
+        "tvmao:CCTVPAYFEE-CCTVPAYFEE7(怀旧剧场)"
+      ]
     },
     "CNDFilmOldStoryChannel.cn": {
       "confidence": "exact",
-      "source": "tvsou",
-      "sourceId": "e8166713",
-      "sourceName": "老故事",
-      "alternatives": []
+      "source": "tvmao",
+      "sourceId": "CCTVPAYFEE-CCTVLAOGUSHI",
+      "sourceName": "CCTV老故事",
+      "alternatives": [
+        "tvsou:e8166713(老故事)"
+      ]
     },
     "CCTVWomensFashion.cn": {
-      "confidence": "contains",
+      "confidence": "exact",
       "source": "tvmao",
       "sourceId": "CCTVPAYFEE-CCTVPAYFEE9",
-      "sourceName": "女性时尚节目单",
+      "sourceName": "女性时尚",
       "alternatives": []
     },
     "CCTVWorldGeography.cn": {
-      "confidence": "contains",
+      "confidence": "exact",
       "source": "tvmao",
       "sourceId": "CCTVPAYFEE-CCTVPAYFEE5",
-      "sourceName": "世界地理节目单",
+      "sourceName": "世界地理",
       "alternatives": []
     },
     "CCTVHealth.cn": {
@@ -1256,20 +1389,24 @@
       "source": "epgpw",
       "sourceId": "539738",
       "sourceName": "卫生健康",
-      "alternatives": []
+      "alternatives": [
+        "tvmao:SITV13(卫生健康)"
+      ]
     },
     "CCTVTVGuide.cn": {
       "confidence": "exact",
       "source": "epgpw",
       "sourceId": "544333",
       "sourceName": "电视指南",
-      "alternatives": []
+      "alternatives": [
+        "tvmao:CCTVPAYFEE-CCTVPAYFEE6(电视指南)"
+      ]
     },
     "CGTN.cn": {
-      "confidence": "contains",
-      "source": "epgpw",
-      "sourceId": "570484",
-      "sourceName": "CGTN俄语",
+      "confidence": "exact",
+      "source": "tvmao",
+      "sourceId": "CCTV-CCTV19",
+      "sourceName": "CGTN",
       "alternatives": []
     },
     "CGTNFrench.cn": {
@@ -1277,14 +1414,18 @@
       "source": "epgpw",
       "sourceId": "570493",
       "sourceName": "CGTN法语",
-      "alternatives": []
+      "alternatives": [
+        "tvmao:CCTV-CCTVF(CGTN 法语)"
+      ]
     },
     "CGTNDocumentary.cn": {
       "confidence": "exact",
       "source": "epgpw",
       "sourceId": "544390",
       "sourceName": "CGTN纪录",
-      "alternatives": []
+      "alternatives": [
+        "tvmao:CCTV-CCTV18(CGTN 纪录(英))"
+      ]
     },
     "CETV1.cn": {
       "confidence": "exact",
@@ -1312,13 +1453,22 @@
       "source": "epgpw",
       "sourceId": "539885",
       "sourceName": "卡酷少儿",
+      "alternatives": [
+        "tvmao:BTV10(卡酷少儿)"
+      ]
+    },
+    "GoldenEagleCartoon.cn": {
+      "confidence": "contains",
+      "source": "tvmao",
+      "sourceId": "HUNANTV2",
+      "sourceName": "湖南金鹰卡通频道",
       "alternatives": []
     },
     "哈哈炫动.cn": {
-      "confidence": "contains",
+      "confidence": "exact",
       "source": "tvmao",
       "sourceId": "TOONMAX1",
-      "sourceName": "哈哈炫动节目单",
+      "sourceName": "哈哈炫动",
       "alternatives": []
     },
     "LiyuanTV.cn": {
@@ -1326,27 +1476,31 @@
       "source": "epgpw",
       "sourceId": "539775",
       "sourceName": "梨园",
-      "alternatives": []
+      "alternatives": [
+        "tvmao:CCTVPAYFEE-CCTVPAYFEE20(梨园)"
+      ]
     },
     "求索纪录.cn": {
       "confidence": "exact",
       "source": "epgpw",
       "sourceId": "539845",
       "sourceName": "求索纪录",
-      "alternatives": []
+      "alternatives": [
+        "tvmao:HSCM-QSJL(求索纪录)"
+      ]
     },
     "求索动物.cn": {
-      "confidence": "contains",
+      "confidence": "exact",
       "source": "tvmao",
       "sourceId": "HSCM-QSDW",
-      "sourceName": "求索动物节目单",
+      "sourceName": "求索动物",
       "alternatives": []
     },
     "求索科学.cn": {
-      "confidence": "contains",
+      "confidence": "exact",
       "source": "tvmao",
       "sourceId": "HSCM-QSKX",
-      "sourceName": "求索科学节目单",
+      "sourceName": "求索科学",
       "alternatives": []
     },
     "求索生活.cn": {
@@ -1368,49 +1522,63 @@
       "source": "epgpw",
       "sourceId": "544272",
       "sourceName": "魅力足球",
-      "alternatives": []
+      "alternatives": [
+        "tvmao:SITV-YULE(魅力足球)"
+      ]
     },
     "GameChannel.cn": {
       "confidence": "exact",
       "source": "epgpw",
       "sourceId": "539857",
       "sourceName": "游戏风云",
-      "alternatives": []
+      "alternatives": [
+        "tvmao:SITV-GAME(游戏风云)"
+      ]
     },
     "劲爆体育.cn": {
       "confidence": "exact",
       "source": "epgpw",
       "sourceId": "539746",
       "sourceName": "劲爆体育",
-      "alternatives": []
+      "alternatives": [
+        "tvmao:SITV-SPORTS(劲爆体育)"
+      ]
     },
     "乐游.cn": {
       "confidence": "exact",
       "source": "epgpw",
       "sourceId": "544282",
       "sourceName": "乐游",
-      "alternatives": []
+      "alternatives": [
+        "tvmao:SITV-DOCUMENTARY(乐游)"
+      ]
     },
     "AnimationShowChannel.cn": {
       "confidence": "exact",
       "source": "epgpw",
       "sourceId": "539640",
       "sourceName": "动漫秀场",
-      "alternatives": []
+      "alternatives": [
+        "tvmao:SITV-CHILDREN(动漫秀场)"
+      ]
     },
     "CityTheaterChannel.cn": {
       "confidence": "exact",
       "source": "epgpw",
       "sourceId": "539848",
       "sourceName": "都市剧场",
-      "alternatives": []
+      "alternatives": [
+        "tvmao:SITV-MOVIE(都市剧场)"
+      ]
     },
     "ChannelLaw.cn": {
       "confidence": "exact",
       "source": "epgpw",
       "sourceId": "545509",
       "sourceName": "法治天地",
-      "alternatives": []
+      "alternatives": [
+        "tvmao:SITV3(法治天地)"
+      ]
     },
     "LaughterTheater.cn": {
       "confidence": "exact",
@@ -1424,34 +1592,42 @@
       "source": "epgpw",
       "sourceId": "549673",
       "sourceName": "金色学堂",
-      "alternatives": []
+      "alternatives": [
+        "tvmao:SITV6(金色学堂)"
+      ]
     },
     "LifestyleChannel.cn": {
       "confidence": "exact",
       "source": "epgpw",
       "sourceId": "570487",
       "sourceName": "生活时尚",
-      "alternatives": []
+      "alternatives": [
+        "tvmao:SITV-FASHION(生活时尚)"
+      ]
     },
     "CHCAction.cn": {
       "confidence": "exact",
       "source": "epgpw",
       "sourceId": "539759",
       "sourceName": "CHC动作电影",
-      "alternatives": []
+      "alternatives": [
+        "tvmao:CHC-CHC1(CHC动作电影)"
+      ]
     },
     "CHCHomeTheater.cn": {
       "confidence": "exact",
       "source": "epgpw",
       "sourceId": "539900",
       "sourceName": "CHC家庭影院",
-      "alternatives": []
+      "alternatives": [
+        "tvmao:CHC-CHC2(CHC家庭影院)"
+      ]
     },
     "CHCFansMovieChannel.cn": {
-      "confidence": "contains",
+      "confidence": "exact",
       "source": "tvmao",
       "sourceId": "CHC-CHC3",
-      "sourceName": "CHC影迷电影节目单",
+      "sourceName": "CHC影迷电影",
       "alternatives": []
     },
     "EntertainmentNews.hk": {
@@ -2359,7 +2535,9 @@
       "source": "epgpw",
       "sourceId": "569211",
       "sourceName": "快乐垂钓",
-      "alternatives": []
+      "alternatives": [
+        "tvmao:CCTVPAYFEE-KUAILECHUIDIAO(快乐垂钓)"
+      ]
     },
     "广东体育.cn": {
       "confidence": "exact",
@@ -2389,6 +2567,55 @@
       "source": "epgpw",
       "sourceId": "539796",
       "sourceName": "广州竞赛",
+      "alternatives": []
+    },
+    "农林卫视.cn": {
+      "confidence": "override",
+      "source": "epgpw",
+      "sourceId": "570491",
+      "sourceName": "陕西农林卫视",
+      "alternatives": []
+    },
+    "AsianFood.tw": {
+      "confidence": "override",
+      "source": "epgpw",
+      "sourceId": "457281",
+      "sourceName": "亞洲美食頻道",
+      "alternatives": []
+    },
+    "阿里郎.tw": {
+      "confidence": "override",
+      "source": "epgpw",
+      "sourceId": "456650",
+      "sourceName": "韓國阿里郎",
+      "alternatives": []
+    },
+    "我的欧洲电影.tw": {
+      "confidence": "override",
+      "source": "epgpw",
+      "sourceId": "457377",
+      "sourceName": "MCE 我的歐洲電影台",
+      "alternatives": []
+    },
+    "汕头经济.cn": {
+      "confidence": "override",
+      "source": "epgpw",
+      "sourceId": "544379",
+      "sourceName": "汕头经济生活",
+      "alternatives": []
+    },
+    "广东珠江.cn": {
+      "confidence": "override",
+      "source": "epgpw",
+      "sourceId": "544420",
+      "sourceName": "中央台–珠江",
+      "alternatives": []
+    },
+    "HBO电影.tw": {
+      "confidence": "override",
+      "source": "epgpw",
+      "sourceId": "456655",
+      "sourceName": "HBO HD",
       "alternatives": []
     }
   },
@@ -2453,7 +2680,7 @@
     "KangbaSatelliteTV.cn": "epgpw:572182(康巴卫视)",
     "HuangheSatelliteTV.cn": "epgpw:572177(黄河卫视)",
     "HaixiaSatelliteTV.cn": "epgpw:572183(海峡卫视)",
-    "SanshaSatelliteTV.cn": "tvmao:SANSHATV(三沙卫视节目单)",
+    "SanshaSatelliteTV.cn": "tvmao:SANSHATV(三沙卫视)",
     "Jade.hk": "epgpw:368366(翡翠台)",
     "Pearl.hk": "epgpw:368369(明珠台)",
     "TVBNewsChannel.hk": "epgpw:368359(無綫新聞台)",
@@ -2486,10 +2713,25 @@
     "TTVNews.tw": "epgpw:456645(台視新聞台)",
     "EBCYOYO.tw": "epgpw:456525(東森幼幼台)",
     "CNDFilmDiscoveryChannel.cn": "tvsou:c3758372(发现之旅)",
+    "CCTVHealth.cn": "tvmao:SITV13(卫生健康)",
+    "CGTN.cn": "tvmao:CCTV-CCTV19(CGTN)",
+    "CGTNFrench.cn": "tvmao:CCTV-CCTVF(CGTN 法语)",
+    "CGTNDocumentary.cn": "tvmao:CCTV-CCTV18(CGTN 纪录(英))",
     "CETV1.cn": "epgpw:545953(CETV-1)",
     "CETV2.cn": "epgpw:545954(CETV-2)",
     "CETV4.cn": "epgpw:545956(CETV-4)",
-    "哈哈炫动.cn": "tvmao:TOONMAX1(哈哈炫动节目单)",
+    "BRTVKakuChildrensChannel.cn": "tvmao:BTV10(卡酷少儿)",
+    "GoldenEagleCartoon.cn": "tvmao:HUNANTV2(湖南金鹰卡通频道)",
+    "哈哈炫动.cn": "tvmao:TOONMAX1(哈哈炫动)",
+    "魅力足球.cn": "tvmao:SITV-YULE(魅力足球)",
+    "GameChannel.cn": "tvmao:SITV-GAME(游戏风云)",
+    "劲爆体育.cn": "tvmao:SITV-SPORTS(劲爆体育)",
+    "乐游.cn": "tvmao:SITV-DOCUMENTARY(乐游)",
+    "AnimationShowChannel.cn": "tvmao:SITV-CHILDREN(动漫秀场)",
+    "CityTheaterChannel.cn": "tvmao:SITV-MOVIE(都市剧场)",
+    "ChannelLaw.cn": "tvmao:SITV3(法治天地)",
+    "金色学堂.cn": "tvmao:SITV6(金色学堂)",
+    "LifestyleChannel.cn": "tvmao:SITV-FASHION(生活时尚)",
     "EntertainmentNews.hk": "epgpw:368323(娛樂新聞台)",
     "TVB千禧经典.hk": "epgpw:368325(千禧經典台)",
     "nowNews.hk": "epgpw:410344(Now新聞台)",
@@ -2600,6 +2842,10 @@
     "爱尔达娱乐.tw": "epgpw:370149(愛爾達娛樂台)",
     "爱尔达生活旅游.tw": "epgpw:370222(愛爾達生活旅遊台)",
     "广东体育.cn": "tvsou:64e4e458(广东体育)",
+    "AsianFood.tw": "epgpw:457281(亞洲美食頻道)",
+    "阿里郎.tw": "epgpw:456650(韓國阿里郎)",
+    "我的欧洲电影.tw": "epgpw:457377(MCE 我的歐洲電影台)",
+    "HBO电影.tw": "epgpw:456655(HBO HD)",
     "GBASatelliteTV.cn": "z51:e1:1995:大湾区卫视(大湾区卫视)",
     "HunanEconomyChannel.cn": "z51:e1:1323:湖南经视(湖南经视)",
     "HunanEntertainmentChannel.cn": "z51:e1:1317:湖南娱乐(湖南娱乐)",
@@ -2622,20 +2868,12 @@
     "CNDFilmOldStoryChannel.cn": "z51:e1:1683:老故事(老故事)",
     "CCTVWomensFashion.cn": "z51:e1:1653:女性时尚(女性时尚)",
     "CCTVWorldGeography.cn": "z51:e1:1649:世界地理(世界地理)",
-    "CGTN.cn": "z51:e1:20:CGTN(CGTN)",
-    "GoldenEagleCartoon.cn": "z51:e1:69:金鹰卡通(金鹰卡通)",
     "JiaJiaCartoon.cn": "z51:e1:1434:嘉佳卡通(嘉佳卡通)",
     "LiyuanTV.cn": "z51:e1:1645:梨园(梨园)",
     "求索动物.cn": "z51:e1:1640:求索动物(求索动物)",
     "求索科学.cn": "z51:e1:1638:求索科学(求索科学)",
     "GreatSportsChannel.cn": "z51:e1:1287:五星体育频道(五星体育频道)",
-    "魅力足球.cn": "z51:e1:1857:魅力足球(魅力足球)",
-    "GameChannel.cn": "z51:e1:1283:游戏风云(游戏风云)",
-    "AnimationShowChannel.cn": "z51:e1:1279:动漫秀场(动漫秀场)",
-    "CityTheaterChannel.cn": "z51:e1:1282:都市剧场(都市剧场)",
-    "ChannelLaw.cn": "z51:e1:1273:法治天地(法治天地)",
     "LaughterTheater.cn": "z51:e1:1277:欢笑剧场(欢笑剧场)",
-    "LifestyleChannel.cn": "z51:e1:1281:生活时尚(生活时尚)",
     "CHCAction.cn": "z51:e1:1643:CHC动作电影(CHC动作电影)",
     "CHCFansMovieChannel.cn": "z51:e1:1969:CHC影迷电影(CHC影迷电影)",
     "DaAi1.tw": "z51:e2:1450:大爱一台(大爱一台)",
@@ -2643,7 +2881,8 @@
     "GoldenEagleDocumentary.cn": "z51:e1:1324:金鹰纪实(金鹰纪实)",
     "快乐垂钓.cn": "z51:e1:1684:快乐垂钓(快乐垂钓)",
     "GuangdongNewsChannel.cn": "z51:e1:1439:广东新闻(广东新闻)",
-    "广东民生.cn": "z51:e1:1996:广东民生(广东民生)"
+    "广东民生.cn": "z51:e1:1996:广东民生(广东民生)",
+    "广东珠江.cn": "z51:e1:1759:珠江频道(珠江频道)"
   },
   "aggregated": [],
   "aggregateReport": [
@@ -2789,18 +3028,6 @@
       "count": 76
     },
     {
-      "id": "CGTN.cn",
-      "sourceKey": "e1:20",
-      "sourceName": "CGTN",
-      "count": 90
-    },
-    {
-      "id": "GoldenEagleCartoon.cn",
-      "sourceKey": "e1:69",
-      "sourceName": "金鹰卡通",
-      "count": 200
-    },
-    {
       "id": "JiaJiaCartoon.cn",
       "sourceKey": "e1:1434",
       "sourceName": "嘉佳卡通",
@@ -2831,46 +3058,10 @@
       "count": 62
     },
     {
-      "id": "魅力足球.cn",
-      "sourceKey": "e1:1857",
-      "sourceName": "魅力足球",
-      "count": 38
-    },
-    {
-      "id": "GameChannel.cn",
-      "sourceKey": "e1:1283",
-      "sourceName": "游戏风云",
-      "count": 74
-    },
-    {
-      "id": "AnimationShowChannel.cn",
-      "sourceKey": "e1:1279",
-      "sourceName": "动漫秀场",
-      "count": 193
-    },
-    {
-      "id": "CityTheaterChannel.cn",
-      "sourceKey": "e1:1282",
-      "sourceName": "都市剧场",
-      "count": 99
-    },
-    {
-      "id": "ChannelLaw.cn",
-      "sourceKey": "e1:1273",
-      "sourceName": "法治天地",
-      "count": 93
-    },
-    {
       "id": "LaughterTheater.cn",
       "sourceKey": "e1:1277",
       "sourceName": "欢笑剧场",
       "count": 65
-    },
-    {
-      "id": "LifestyleChannel.cn",
-      "sourceKey": "e1:1281",
-      "sourceName": "生活时尚",
-      "count": 103
     },
     {
       "id": "CHCAction.cn",
@@ -2919,17 +3110,23 @@
       "sourceKey": "e1:1996",
       "sourceName": "广东民生",
       "count": 68
+    },
+    {
+      "id": "广东珠江.cn",
+      "sourceKey": "e1:1759",
+      "sourceName": "珠江频道",
+      "count": 42
     }
   ],
   "descStats": {
-    "realCoverage": 61.7,
-    "realCount": 25055,
-    "totalCount": 40583,
-    "titles": 611,
-    "filled": 10309,
+    "realCoverage": 62.8,
+    "realCount": 28112,
+    "totalCount": 44795,
+    "titles": 798,
+    "filled": 13660,
     "z51": {
-      "channels": 110,
-      "filled": 9479,
+      "channels": 125,
+      "filled": 12287,
       "packs": [
         {
           "key": "e1",
@@ -3938,12 +4135,39 @@
           "rate": 1
         },
         {
+          "id": "CCTVHealth.cn",
+          "name": "CCTV10",
+          "status": "weak",
+          "mine": 23,
+          "key": "e1:11",
+          "inter": 3,
+          "rate": 0.13043478260869565
+        },
+        {
           "id": "CGTN.cn",
           "name": "CGTN",
           "status": "ok",
-          "mine": 14,
+          "mine": 27,
           "key": "e1:20",
-          "inter": 14,
+          "inter": 13,
+          "rate": 0.48148148148148145
+        },
+        {
+          "id": "CGTNFrench.cn",
+          "name": "兵团卫视",
+          "status": "weak",
+          "mine": 42,
+          "key": "e1:61",
+          "inter": 2,
+          "rate": 0.047619047619047616
+        },
+        {
+          "id": "CGTNDocumentary.cn",
+          "name": "CGTNDocumentary",
+          "status": "ok",
+          "mine": 6,
+          "key": "e2:296",
+          "inter": 6,
           "rate": 1
         },
         {
@@ -3974,13 +4198,22 @@
           "rate": 0.56
         },
         {
+          "id": "BRTVKakuChildrensChannel.cn",
+          "name": "卡酷动画",
+          "status": "ok",
+          "mine": 23,
+          "key": "e1:67",
+          "inter": 15,
+          "rate": 0.6521739130434783
+        },
+        {
           "id": "GoldenEagleCartoon.cn",
           "name": "金鹰卡通",
           "status": "ok",
-          "mine": 11,
+          "mine": 24,
           "key": "e1:69",
-          "inter": 11,
-          "rate": 1
+          "inter": 9,
+          "rate": 0.375
         },
         {
           "id": "哈哈炫动.cn",
@@ -4040,19 +4273,37 @@
           "id": "魅力足球.cn",
           "name": "魅力足球",
           "status": "ok",
-          "mine": 28,
+          "mine": 41,
           "key": "e1:1857",
-          "inter": 28,
-          "rate": 1
+          "inter": 20,
+          "rate": 0.4878048780487805
         },
         {
           "id": "GameChannel.cn",
           "name": "游戏风云",
           "status": "ok",
-          "mine": 23,
+          "mine": 34,
           "key": "e1:1283",
-          "inter": 23,
-          "rate": 1
+          "inter": 21,
+          "rate": 0.6176470588235294
+        },
+        {
+          "id": "劲爆体育.cn",
+          "name": "生活时尚",
+          "status": "weak",
+          "mine": 45,
+          "key": "e1:1281",
+          "inter": 2,
+          "rate": 0.044444444444444446
+        },
+        {
+          "id": "乐游.cn",
+          "name": "全纪实",
+          "status": "ok",
+          "mine": 102,
+          "key": "e1:1276",
+          "inter": 53,
+          "rate": 0.5196078431372549
         },
         {
           "id": "AnimationShowChannel.cn",
@@ -4060,26 +4311,26 @@
           "status": "ok",
           "mine": 11,
           "key": "e1:1279",
-          "inter": 11,
-          "rate": 1
+          "inter": 9,
+          "rate": 0.8181818181818182
         },
         {
           "id": "CityTheaterChannel.cn",
           "name": "都市剧场",
           "status": "ok",
-          "mine": 18,
+          "mine": 10,
           "key": "e1:1282",
-          "inter": 18,
-          "rate": 1
+          "inter": 6,
+          "rate": 0.6
         },
         {
           "id": "ChannelLaw.cn",
           "name": "法治天地",
           "status": "ok",
-          "mine": 14,
+          "mine": 12,
           "key": "e1:1273",
-          "inter": 14,
-          "rate": 1
+          "inter": 5,
+          "rate": 0.4166666666666667
         },
         {
           "id": "LaughterTheater.cn",
@@ -4091,13 +4342,22 @@
           "rate": 1
         },
         {
+          "id": "金色学堂.cn",
+          "name": "金色",
+          "status": "ok",
+          "mine": 46,
+          "key": "e1:1274",
+          "inter": 19,
+          "rate": 0.41304347826086957
+        },
+        {
           "id": "LifestyleChannel.cn",
           "name": "生活时尚",
           "status": "ok",
-          "mine": 24,
+          "mine": 50,
           "key": "e1:1281",
-          "inter": 24,
-          "rate": 1
+          "inter": 21,
+          "rate": 0.42
         },
         {
           "id": "CHCAction.cn",
@@ -5028,6 +5288,51 @@
           "key": "e1:1996",
           "inter": 14,
           "rate": 1
+        },
+        {
+          "id": "AsianFood.tw",
+          "name": "亚洲美食频道",
+          "status": "weak",
+          "mine": 55,
+          "key": "e2:1589",
+          "inter": 6,
+          "rate": 0.10909090909090909
+        },
+        {
+          "id": "阿里郎.tw",
+          "name": "ArirangTV",
+          "status": "ok",
+          "mine": 47,
+          "key": "e2:1562",
+          "inter": 22,
+          "rate": 0.46808510638297873
+        },
+        {
+          "id": "我的欧洲电影.tw",
+          "name": "MyCinemaEurope",
+          "status": "ok",
+          "mine": 71,
+          "key": "e2:1829",
+          "inter": 27,
+          "rate": 0.38028169014084506
+        },
+        {
+          "id": "广东珠江.cn",
+          "name": "珠江频道",
+          "status": "ok",
+          "mine": 18,
+          "key": "e1:1759",
+          "inter": 18,
+          "rate": 1
+        },
+        {
+          "id": "HBO电影.tw",
+          "name": "HBOHD",
+          "status": "weak",
+          "mine": 55,
+          "key": "e2:1573",
+          "inter": 8,
+          "rate": 0.14545454545454545
         }
       ],
       "stage3": 202,
@@ -5504,6 +5809,22 @@
           "inter": 20,
           "rate": 0.7692307692307693
         },
+        "CGTN.cn": {
+          "filled": 204,
+          "before": 0,
+          "stage": "channel",
+          "source": "e1:20(CGTN)",
+          "inter": 13,
+          "rate": 0.48148148148148145
+        },
+        "CGTNDocumentary.cn": {
+          "filled": 42,
+          "before": 0,
+          "stage": "channel",
+          "source": "e2:296(CGTNDocumentary)",
+          "inter": 6,
+          "rate": 1
+        },
         "CETV1.cn": {
           "filled": 137,
           "before": 0,
@@ -5528,6 +5849,22 @@
           "inter": 14,
           "rate": 0.56
         },
+        "BRTVKakuChildrensChannel.cn": {
+          "filled": 351,
+          "before": 0,
+          "stage": "channel+global",
+          "source": "e1:67(卡酷动画)",
+          "inter": 15,
+          "rate": 0.6521739130434783
+        },
+        "GoldenEagleCartoon.cn": {
+          "filled": 471,
+          "before": 0,
+          "stage": "channel+global",
+          "source": "e1:69(金鹰卡通)",
+          "inter": 9,
+          "rate": 0.375
+        },
         "哈哈炫动.cn": {
           "filled": 132,
           "before": 0,
@@ -5536,13 +5873,61 @@
           "inter": 5,
           "rate": 1
         },
+        "GameChannel.cn": {
+          "filled": 224,
+          "before": 0,
+          "stage": "channel",
+          "source": "e1:1283(游戏风云)",
+          "inter": 21,
+          "rate": 0.6176470588235294
+        },
+        "乐游.cn": {
+          "filled": 193,
+          "before": 0,
+          "stage": "channel+global",
+          "source": "e1:1276(全纪实)",
+          "inter": 53,
+          "rate": 0.5196078431372549
+        },
+        "AnimationShowChannel.cn": {
+          "filled": 609,
+          "before": 0,
+          "stage": "channel",
+          "source": "e1:1279(动漫秀场)",
+          "inter": 9,
+          "rate": 0.8181818181818182
+        },
+        "CityTheaterChannel.cn": {
+          "filled": 163,
+          "before": 0,
+          "stage": "channel",
+          "source": "e1:1282(都市剧场)",
+          "inter": 6,
+          "rate": 0.6
+        },
         "ChannelLaw.cn": {
-          "filled": 2,
-          "before": 89,
+          "filled": 59,
+          "before": 0,
           "stage": "channel",
           "source": "e1:1273(法治天地)",
-          "inter": 14,
-          "rate": 1
+          "inter": 5,
+          "rate": 0.4166666666666667
+        },
+        "金色学堂.cn": {
+          "filled": 74,
+          "before": 0,
+          "stage": "channel",
+          "source": "e1:1274(金色)",
+          "inter": 19,
+          "rate": 0.41304347826086957
+        },
+        "LifestyleChannel.cn": {
+          "filled": 176,
+          "before": 0,
+          "stage": "channel",
+          "source": "e1:1281(生活时尚)",
+          "inter": 21,
+          "rate": 0.42
         },
         "EBCForeignMovie.tw": {
           "filled": 4,
@@ -5720,6 +6105,24 @@
           "stage": "global",
           "source": "全局索引"
         },
+        "CCTVHealth.cn": {
+          "filled": 171,
+          "before": 0,
+          "stage": "global",
+          "source": "全局索引"
+        },
+        "CGTNFrench.cn": {
+          "filled": 19,
+          "before": 0,
+          "stage": "global",
+          "source": "全局索引"
+        },
+        "劲爆体育.cn": {
+          "filled": 11,
+          "before": 0,
+          "stage": "global",
+          "source": "全局索引"
+        },
         "TVBS精采.tw": {
           "filled": 19,
           "before": 0,
@@ -5828,6 +6231,18 @@
           "stage": "global",
           "source": "全局索引"
         },
+        "AsianFood.tw": {
+          "filled": 39,
+          "before": 0,
+          "stage": "global",
+          "source": "全局索引"
+        },
+        "广东珠江.cn": {
+          "filled": 4,
+          "before": 0,
+          "stage": "global",
+          "source": "全局索引"
+        },
         "YanbianSatelliteTV.cn": {
           "filled": 22,
           "before": 0,
@@ -5841,12 +6256,12 @@
           "source": "e1:20"
         }
       },
-      "coverageBefore": 36.3,
+      "coverageBefore": 32.3,
       "coverageAfter": 59.7
     },
     "tvmao": {
-      "titles": 611,
-      "filled": 830
+      "titles": 798,
+      "filled": 1373
     }
   },
   "detail": [
@@ -5887,6 +6302,7 @@
         "epgpw:572136(CCTV-1综合)",
         "epgpw:572141(CCTV-1（高清）)",
         "epgpw:410374(CCTV-1)",
+        "tvmao:CCTV-CCTV1(CCTV-1综合)",
         "tvsou:b3666b9d(CCTV-1（综合）)",
         "tvsou:f6309ea9(CCTV-1（高清）)"
       ],
@@ -5926,6 +6342,7 @@
       "alternatives": [
         "epgpw:545933(CCTV-2 财经)",
         "epgpw:572147(CCTV-2（高清）)",
+        "tvmao:CCTV-CCTV2(CCTV-2财经)",
         "tvsou:c5717c2d(CCTV-2（财经）)",
         "tvsou:92db4c5a(CCTV-2（高清）)"
       ],
@@ -5965,6 +6382,7 @@
       "alternatives": [
         "epgpw:572135(CCTV-3综艺)",
         "epgpw:572142(CCTV-3（高清）)",
+        "tvmao:CCTV-CCTV3(CCTV-3综艺)",
         "tvsou:53eda06f(CCTV-3（综艺）)",
         "tvsou:c354238e(CCTV-3（高清）)"
       ],
@@ -6050,6 +6468,7 @@
       "alternatives": [
         "epgpw:572137(CCTV-5体育)",
         "epgpw:572143(CCTV-5（高清）)",
+        "tvmao:CCTV-CCTV5(CCTV-5体育)",
         "tvsou:6b26bee1(CCTV-5（体育）)",
         "tvsou:1e9d3e76(CCTV-5（高清）)"
       ],
@@ -6089,6 +6508,7 @@
       "alternatives": [
         "epgpw:572143(CCTV-5（高清）)",
         "epgpw:572145(CCTV5+)",
+        "tvmao:CCTV-CCTV5-PLUS(CCTV5加)",
         "tvsou:6b26bee1(CCTV-5（体育）)",
         "tvsou:e4e3801d(CCTV5+)",
         "tvsou:1e9d3e76(CCTV-5（高清）)",
@@ -6130,6 +6550,7 @@
       "alternatives": [
         "epgpw:572132(CCTV-6电影)",
         "epgpw:572146(CCTV-6（高清）)",
+        "tvmao:CCTV-CCTV6(CCTV-6电影)",
         "tvsou:ddb707c0(CCTV-6（电影）)",
         "tvsou:6a861ace(CCTV-6（高清）)"
       ],
@@ -6168,6 +6589,7 @@
       "matchedSourceName": "CCTV-7国防军事",
       "alternatives": [
         "epgpw:545939(CCTV-7 国防军事)",
+        "tvmao:CCTV-CCTV7(CCTV-7国防军事)",
         "tvsou:f2d13f2a(CCTV-7（国防军事）)",
         "tvsou:65174ca3(CCTV-7（高清）)"
       ],
@@ -6207,6 +6629,7 @@
       "alternatives": [
         "epgpw:572129(CCTV-8电视剧)",
         "epgpw:572144(CCTV-8（高清）)",
+        "tvmao:CCTV-CCTV8(CCTV-8电视剧)",
         "tvsou:13e8f054(CCTV-8（电视剧）)",
         "tvsou:c2e033a7(CCTV-8（高清）)"
       ],
@@ -6234,8 +6657,8 @@
         "20261101": 27,
         "20261102": 0
       },
-      "withDesc": 109,
-      "descRate": 64,
+      "withDesc": 112,
+      "descRate": 65,
       "withCategory": 0,
       "uniqTitles": 75,
       "first": "20261026232700 +0800",
@@ -6245,6 +6668,7 @@
       "matchedSourceName": "CCTV-9纪录",
       "alternatives": [
         "epgpw:545941(CCTV-9 纪录)",
+        "tvmao:CCTV-CCTV9(CCTV-9纪录)",
         "tvsou:8f932b7b(CCTV-9（纪录）)",
         "tvsou:6f96eb29(CCTV-9（高清）)"
       ],
@@ -6283,6 +6707,7 @@
       "matchedSourceName": "CCTV-10科教",
       "alternatives": [
         "epgpw:545942(CCTV-10 科教)",
+        "tvmao:CCTV-CCTV10(CCTV-10科教)",
         "tvsou:7651a0a2(CCTV-10（科教）)",
         "tvsou:06b6878e(CCTV-10（高清）)"
       ],
@@ -6321,6 +6746,7 @@
       "matchedSourceName": "CCTV-11戏曲",
       "alternatives": [
         "epgpw:545943(CCTV-11 戏曲)",
+        "tvmao:CCTV-CCTV11(CCTV-11戏曲)",
         "tvsou:0a2de840(CCTV-11（戏曲）)",
         "tvsou:e175677c(CCTV-11（高清）)"
       ],
@@ -6360,6 +6786,7 @@
       "matchedSourceName": "CCTV-12 社会与法",
       "alternatives": [
         "epgpw:572138(CCTV-12法制)",
+        "tvmao:CCTV-CCTV12(CCTV-12法制)",
         "tvsou:1e983148(CCTV-12（社会与法）)",
         "tvsou:bc05ab3b(CCTV-12（高清）)"
       ],
@@ -6397,6 +6824,7 @@
       "matchedSourceName": "CCTV-13新闻",
       "alternatives": [
         "epgpw:545945(CCTV-13 新闻)",
+        "tvmao:CCTV-CCTV13(CCTV-13新闻)",
         "tvsou:f5b1a323(CCTV-13（新闻）)",
         "tvsou:4928a6b7(CCTV-13（高清）)"
       ],
@@ -6435,6 +6863,7 @@
       "matchedSourceName": "CCTV-14 少儿",
       "alternatives": [
         "epgpw:572487(CCTV-14少儿)",
+        "tvmao:CCTV-CCTV15(CCTV-14少儿)",
         "tvsou:6fff4f43(CCTV-14（少儿）)",
         "tvsou:39b60dac(CCTV-14（高清）)"
       ],
@@ -6474,6 +6903,7 @@
       "alternatives": [
         "epgpw:572148(CCTV-15（高清）)",
         "epgpw:545947(CCTV-15 音乐)",
+        "tvmao:CCTV-CCTV16(CCTV-15音乐)",
         "tvsou:3201ff16(CCTV-15（音乐）)",
         "tvsou:ee0d1991(CCTV-15（高清）)"
       ],
@@ -6510,7 +6940,9 @@
       "usedSource": "epgpw:545948(CCTV-16奥林匹克)",
       "matchConfidence": "exact",
       "matchedSourceName": "CCTV-16奥林匹克",
-      "alternatives": [],
+      "alternatives": [
+        "tvmao:CCTV-CCTVOLY(CCTV-16奥林匹克)"
+      ],
       "status": "full"
     },
     {
@@ -6655,6 +7087,7 @@
         "epgpw:545952(CCTV-4 (美洲))",
         "epgpw:545951(CCTV-4 (欧洲))",
         "epgpw:410375(CCTV-4)",
+        "tvmao:CCTV-CCTVEUROPE(CCTV-4欧洲)",
         "tvsou:0ccc41bf(CCTV-4中文国际（亚）)",
         "tvsou:63a3b196(CCTV-4中文国际（欧）)",
         "tvsou:9d22479f(CCTV-4中文国际（美）)",
@@ -6700,6 +7133,7 @@
         "epgpw:545952(CCTV-4 (美洲))",
         "epgpw:545951(CCTV-4 (欧洲))",
         "epgpw:410375(CCTV-4)",
+        "tvmao:CCTV-CCTVAMERICAS(CCTV-4美洲)",
         "tvsou:0ccc41bf(CCTV-4中文国际（亚）)",
         "tvsou:63a3b196(CCTV-4中文国际（欧）)",
         "tvsou:9d22479f(CCTV-4中文国际（美）)",
@@ -6739,6 +7173,7 @@
       "alternatives": [
         "epgpw:572162(湖南卫视)",
         "epgpw:539731(湖南卫视)",
+        "tvmao:HUNANTV1(湖南卫视)",
         "tvsou:7d4daf1f(湖南卫视)",
         "tvsou:0205c095(湖南卫视高清)"
       ],
@@ -6776,6 +7211,7 @@
       "alternatives": [
         "epgpw:545962(浙江卫视)",
         "epgpw:539700(浙江卫视)",
+        "tvmao:ZJTV1(浙江卫视)",
         "tvsou:9f005630(浙江卫视)",
         "tvsou:900249c3(浙江卫视（高清）)"
       ],
@@ -6813,6 +7249,7 @@
       "alternatives": [
         "epgpw:572161(江苏卫视)",
         "epgpw:539834(江苏卫视)",
+        "tvmao:JSTV1(江苏卫视)",
         "tvsou:69e7e66e(江苏卫视)",
         "tvsou:bee74995(江苏卫视（高清）)"
       ],
@@ -6851,6 +7288,7 @@
       "alternatives": [
         "epgpw:572176(东方卫视)",
         "epgpw:539699(东方卫视)",
+        "tvmao:DONGFANG1(东方卫视)",
         "tvsou:95f40184(东方卫视)",
         "tvsou:6b7440e7(东方卫视（高清）)"
       ],
@@ -6889,6 +7327,7 @@
       "alternatives": [
         "epgpw:545957(北京卫视)",
         "epgpw:539726(北京卫视)",
+        "tvmao:BTV1(北京卫视)",
         "tvsou:696f2203(BTV北京卫视)",
         "tvsou:4d5fdbb2(BTV北京卫视（高清）)"
       ],
@@ -6926,6 +7365,7 @@
       "alternatives": [
         "epgpw:545966(安徽卫视)",
         "epgpw:539701(安徽卫视)",
+        "tvmao:AHTV1(安徽卫视)",
         "tvsou:06a195fd(安徽卫视)",
         "tvsou:9ae7a551(安徽卫视（高清）)"
       ],
@@ -6963,6 +7403,7 @@
       "alternatives": [
         "epgpw:545961(山东卫视)",
         "epgpw:539740(山东卫视)",
+        "tvmao:SDTV1(山东卫视)",
         "tvsou:c62d45e9(山东卫视)",
         "tvsou:c5210e9b(山东卫视（高清）)"
       ],
@@ -7000,6 +7441,7 @@
       "alternatives": [
         "epgpw:545964(广东卫视)",
         "epgpw:539712(广东卫视)",
+        "tvmao:GDTV1(广东卫视)",
         "tvsou:cb608c10(广东卫视)",
         "tvsou:0608aa38(广东卫视（高清）)"
       ],
@@ -7036,6 +7478,7 @@
       "alternatives": [
         "epgpw:545979(深圳卫视)",
         "epgpw:539856(深圳卫视)",
+        "tvmao:SZTV1(深圳卫视)",
         "tvsou:50ca1f4c(深圳卫视)",
         "tvsou:331eb8cd(深圳卫视（高清）)"
       ],
@@ -7073,6 +7516,7 @@
       "alternatives": [
         "epgpw:572171(天津卫视)",
         "epgpw:539703(天津卫视)",
+        "tvmao:TJTV1(天津卫视)",
         "tvsou:b5cb5697(天津卫视)",
         "tvsou:59f7d5b9(天津卫视（高清）)"
       ],
@@ -7110,6 +7554,7 @@
       "alternatives": [
         "epgpw:545975(重庆卫视)",
         "epgpw:539790(重庆卫视)",
+        "tvmao:CCQTV1(重庆卫视)",
         "tvsou:54cb9087(重庆卫视)",
         "tvsou:b271fc3f(重庆卫视（高清）)"
       ],
@@ -7147,6 +7592,7 @@
       "alternatives": [
         "epgpw:545980(四川卫视)",
         "epgpw:539826(四川卫视)",
+        "tvmao:SCTV1(四川卫视)",
         "tvsou:e5b252e4(四川卫视)",
         "tvsou:8468b0e5(四川卫视（高清）)"
       ],
@@ -7183,6 +7629,7 @@
       "matchedSourceName": "湖北卫视",
       "alternatives": [
         "epgpw:539692(湖北卫视)",
+        "tvmao:HUBEI1(湖北卫视)",
         "tvsou:526cbae7(湖北卫视)",
         "tvsou:d43b0fc9(湖北卫视（高清）)"
       ],
@@ -7220,6 +7667,7 @@
       "alternatives": [
         "epgpw:572159(河南卫视)",
         "epgpw:539838(河南卫视)",
+        "tvmao:HNTV1(河南卫视)",
         "tvsou:789d0d22(河南卫视)"
       ],
       "status": "full"
@@ -7256,6 +7704,7 @@
       "alternatives": [
         "epgpw:545984(河北卫视)",
         "epgpw:539695(河北卫视)",
+        "tvmao:HEBEI1(河北卫视)",
         "tvsou:25feea76(河北卫视)",
         "tvsou:8f981eed(河北卫视（高清）)"
       ],
@@ -7293,6 +7742,7 @@
       "alternatives": [
         "epgpw:545977(山西卫视)",
         "epgpw:539843(山西卫视)",
+        "tvmao:SXTV1(山西卫视)",
         "tvsou:d667526e(山西卫视)",
         "tvsou:9d25f4b8(山西卫视（高清）)"
       ],
@@ -7330,6 +7780,7 @@
       "alternatives": [
         "epgpw:545978(陕西卫视)",
         "epgpw:539697(陕西卫视)",
+        "tvmao:SHXITV1(陕西卫视)",
         "tvsou:6ef94ac4(陕西卫视)"
       ],
       "status": "full"
@@ -7366,6 +7817,7 @@
       "alternatives": [
         "epgpw:545968(辽宁卫视)",
         "epgpw:539777(辽宁卫视)",
+        "tvmao:LNTV1(辽宁卫视)",
         "tvsou:019d9e5e(辽宁卫视)",
         "tvsou:41f849ee(辽宁卫视（高清）)"
       ],
@@ -7403,6 +7855,7 @@
       "alternatives": [
         "epgpw:572149(吉林卫视)",
         "epgpw:539864(吉林卫视)",
+        "tvmao:JILIN1(吉林卫视)",
         "tvsou:a3aa4d01(吉林卫视)"
       ],
       "status": "full"
@@ -7439,6 +7892,7 @@
       "alternatives": [
         "epgpw:572152(黑龙江卫视)",
         "epgpw:539850(黑龙江卫视)",
+        "tvmao:HLJTV1(黑龙江卫视)",
         "tvsou:59736a35(黑龙江卫视)",
         "tvsou:b2283398(黑龙江卫视（高清）)"
       ],
@@ -7476,6 +7930,7 @@
       "alternatives": [
         "epgpw:545976(江西卫视)",
         "epgpw:539876(江西卫视)",
+        "tvmao:JXTV1(江西卫视)",
         "tvsou:61914025(江西卫视)"
       ],
       "status": "full"
@@ -7513,6 +7968,7 @@
       "alternatives": [
         "epgpw:545965(东南卫视)",
         "epgpw:539717(东南卫视)",
+        "tvmao:FJTV2(东南卫视)",
         "tvsou:da0c3f96(东南卫视)",
         "tvsou:b5e14570(东南卫视（高清）)"
       ],
@@ -7548,7 +8004,8 @@
       "matchConfidence": "exact",
       "matchedSourceName": "广西卫视",
       "alternatives": [
-        "epgpw:539698(广西卫视)"
+        "epgpw:539698(广西卫视)",
+        "tvmao:GUANXI1(广西卫视)"
       ],
       "status": "full"
     },
@@ -7584,6 +8041,7 @@
       "alternatives": [
         "epgpw:545974(云南卫视)",
         "epgpw:539641(云南卫视)",
+        "tvmao:YNTV1(云南卫视)",
         "tvsou:3a19b822(云南卫视)"
       ],
       "status": "full"
@@ -7619,6 +8077,7 @@
       "alternatives": [
         "epgpw:545983(贵州卫视)",
         "epgpw:539814(贵州卫视)",
+        "tvmao:GUIZOUTV1(贵州卫视)",
         "tvsou:a136a49d(贵州卫视)"
       ],
       "status": "partial"
@@ -7655,6 +8114,7 @@
       "alternatives": [
         "epgpw:545967(甘肃卫视)",
         "epgpw:539851(甘肃卫视)",
+        "tvmao:GSTV1(甘肃卫视)",
         "tvsou:fac1ecf6(甘肃卫视)"
       ],
       "status": "full"
@@ -7691,6 +8151,7 @@
       "alternatives": [
         "epgpw:572180(青海卫视)",
         "epgpw:539730(青海卫视)",
+        "tvmao:QHTV1(青海卫视)",
         "tvsou:6cf61152(青海卫视)"
       ],
       "status": "full"
@@ -7727,6 +8188,7 @@
       "alternatives": [
         "epgpw:545971(宁夏卫视)",
         "epgpw:539644(宁夏卫视)",
+        "tvmao:NXTV2(宁夏卫视)",
         "tvsou:1c4d4f90(宁夏卫视)"
       ],
       "status": "full"
@@ -7763,6 +8225,7 @@
       "alternatives": [
         "epgpw:572170(新疆卫视)",
         "epgpw:539831(新疆卫视)",
+        "tvmao:XJTV1(新疆卫视)",
         "tvsou:aa83e122(新疆卫视)"
       ],
       "status": "full"
@@ -7799,6 +8262,7 @@
       "alternatives": [
         "epgpw:572167(西藏卫视)",
         "epgpw:539728(西藏卫视)",
+        "tvmao:XIZANGTV2(西藏卫视)",
         "tvsou:e237763b(西藏卫视)"
       ],
       "status": "full"
@@ -7871,6 +8335,7 @@
       "alternatives": [
         "epgpw:572151(旅游卫视)",
         "epgpw:539659(海南卫视)",
+        "tvmao:TCTC1(海南卫视)",
         "tvsou:8024c685(海南卫视)"
       ],
       "status": "full"
@@ -7907,6 +8372,7 @@
       "alternatives": [
         "epgpw:572178(厦门卫视)",
         "epgpw:539824(厦门卫视)",
+        "tvmao:XMTV5(厦门卫视)",
         "tvsou:d6253770(厦门卫视)",
         "tvsou:49171575(厦门卫视（高清）)"
       ],
@@ -7944,6 +8410,7 @@
       "alternatives": [
         "epgpw:572179(延边卫视)",
         "epgpw:539752(延边卫视)",
+        "tvmao:YANBIAN1(延边卫视)",
         "tvsou:c33fa0cc(延边卫视)"
       ],
       "status": "full"
@@ -7978,6 +8445,7 @@
       "alternatives": [
         "epgpw:545992(兵团卫视)",
         "epgpw:539743(兵团卫视)",
+        "tvmao:BINGTUAN(兵团卫视)",
         "tvsou:d8bee9f9(兵团卫视)"
       ],
       "status": "full"
@@ -8010,6 +8478,7 @@
       "matchedSourceName": "康巴卫视",
       "alternatives": [
         "epgpw:539766(康巴卫视)",
+        "tvmao:KAMBA-TV(康巴卫视)",
         "tvsou:5ccb1172(康巴卫视)"
       ],
       "status": "partial"
@@ -8043,6 +8512,7 @@
       "matchedSourceName": "黄河卫视",
       "alternatives": [
         "epgpw:539803(黄河卫视)",
+        "tvmao:HHWS(黄河卫视)",
         "tvsou:8334edbd(黄河卫视)"
       ],
       "status": "full"
@@ -8078,6 +8548,7 @@
       "matchedSourceName": "海峡卫视",
       "alternatives": [
         "epgpw:539830(海峡卫视)",
+        "tvmao:HXTV(海峡卫视)",
         "tvsou:1d7e3bf3(海峡卫视)"
       ],
       "status": "full"
@@ -8141,9 +8612,9 @@
       "uniqTitles": 17,
       "first": "20261027000000 +0800",
       "last": "20261102232000 +0800",
-      "usedSource": "tvmao:SANSHATV(三沙卫视节目单)",
+      "usedSource": "tvmao:SANSHATV(三沙卫视)",
       "matchConfidence": "override",
-      "matchedSourceName": "三沙卫视节目单",
+      "matchedSourceName": "三沙卫视",
       "alternatives": [],
       "status": "partial"
     },
@@ -9884,8 +10355,8 @@
       "first": "20261027002100 +0800",
       "last": "20261029001800 +0800",
       "usedSource": "z51:e1:1652:兵器科技(兵器科技)",
-      "matchConfidence": "contains",
-      "matchedSourceName": "兵器科技节目单",
+      "matchConfidence": "exact",
+      "matchedSourceName": "兵器科技",
       "alternatives": [],
       "status": "partial"
     },
@@ -9917,7 +10388,9 @@
       "usedSource": "z51:e1:1647:第一剧场(第一剧场)",
       "matchConfidence": "exact",
       "matchedSourceName": "CCTV第一剧场",
-      "alternatives": [],
+      "alternatives": [
+        "tvmao:CCTVPAYFEE-CCTVPAYFEE3(第一剧场)"
+      ],
       "status": "partial"
     },
     {
@@ -9927,7 +10400,7 @@
       "aliases": [
         "发现之旅"
       ],
-      "logo": "https://www.tvsou.com/media/f/a5db7a370cbd/zm48-24",
+      "logo": "",
       "count": 351,
       "days": 7,
       "perDay": {
@@ -9948,7 +10421,9 @@
       "usedSource": "tvsou:c3758372(发现之旅)",
       "matchConfidence": "exact",
       "matchedSourceName": "发现之旅",
-      "alternatives": [],
+      "alternatives": [
+        "tvsou:c3758372(发现之旅)"
+      ],
       "status": "full"
     },
     {
@@ -9979,7 +10454,9 @@
       "usedSource": "z51:e1:1648:风云剧场(风云剧场)",
       "matchConfidence": "exact",
       "matchedSourceName": "CCTV风云剧场",
-      "alternatives": [],
+      "alternatives": [
+        "tvmao:CCTVPAYFEE-CCTVPAYFEE4(风云剧场)"
+      ],
       "status": "partial"
     },
     {
@@ -10008,8 +10485,8 @@
       "first": "20261027003200 +0800",
       "last": "20261029004600 +0800",
       "usedSource": "z51:e1:1646:风云音乐(风云音乐)",
-      "matchConfidence": "contains",
-      "matchedSourceName": "风云音乐节目单",
+      "matchConfidence": "exact",
+      "matchedSourceName": "风云音乐",
       "alternatives": [],
       "status": "partial"
     },
@@ -10039,8 +10516,8 @@
       "first": "20261027011000 +0800",
       "last": "20261029011000 +0800",
       "usedSource": "z51:e1:1424:风云足球(风云足球)",
-      "matchConfidence": "contains",
-      "matchedSourceName": "风云足球节目单",
+      "matchConfidence": "exact",
+      "matchedSourceName": "风云足球",
       "alternatives": [],
       "status": "partial"
     },
@@ -10070,8 +10547,8 @@
       "first": "20261027005700 +0800",
       "last": "20261029000400 +0800",
       "usedSource": "z51:e1:1673:央视台球(央视台球)",
-      "matchConfidence": "contains",
-      "matchedSourceName": "CCTV央视台球节目单",
+      "matchConfidence": "exact",
+      "matchedSourceName": "CCTV央视台球",
       "alternatives": [],
       "status": "partial"
     },
@@ -10103,7 +10580,9 @@
       "usedSource": "z51:e1:1657:高尔夫网球(高尔夫网球)",
       "matchConfidence": "exact",
       "matchedSourceName": "高尔夫网球",
-      "alternatives": [],
+      "alternatives": [
+        "tvmao:CCTVPAYFEE-CCTVPAYFEE13(高尔夫网球)"
+      ],
       "status": "partial"
     },
     {
@@ -10134,7 +10613,9 @@
       "usedSource": "z51:e1:1651:怀旧剧场(怀旧剧场)",
       "matchConfidence": "exact",
       "matchedSourceName": "CCTV怀旧剧场",
-      "alternatives": [],
+      "alternatives": [
+        "tvmao:CCTVPAYFEE-CCTVPAYFEE7(怀旧剧场)"
+      ],
       "status": "partial"
     },
     {
@@ -10144,7 +10625,7 @@
       "aliases": [
         "老故事"
       ],
-      "logo": "https://www.tvsou.com/media/f/fae100d33724/zm48-24",
+      "logo": "",
       "count": 110,
       "days": 2,
       "perDay": {
@@ -10164,8 +10645,10 @@
       "last": "20261029000000 +0800",
       "usedSource": "z51:e1:1683:老故事(老故事)",
       "matchConfidence": "exact",
-      "matchedSourceName": "老故事",
-      "alternatives": [],
+      "matchedSourceName": "CCTV老故事",
+      "alternatives": [
+        "tvsou:e8166713(老故事)"
+      ],
       "status": "partial"
     },
     {
@@ -10194,8 +10677,8 @@
       "first": "20261027080000 +0800",
       "last": "20261029000500 +0800",
       "usedSource": "z51:e1:1653:女性时尚(女性时尚)",
-      "matchConfidence": "contains",
-      "matchedSourceName": "女性时尚节目单",
+      "matchConfidence": "exact",
+      "matchedSourceName": "女性时尚",
       "alternatives": [],
       "status": "partial"
     },
@@ -10225,8 +10708,8 @@
       "first": "20261027002500 +0800",
       "last": "20261029002500 +0800",
       "usedSource": "z51:e1:1649:世界地理(世界地理)",
-      "matchConfidence": "contains",
-      "matchedSourceName": "世界地理节目单",
+      "matchConfidence": "exact",
+      "matchedSourceName": "世界地理",
       "alternatives": [],
       "status": "partial"
     },
@@ -10238,28 +10721,30 @@
         "卫生健康"
       ],
       "logo": "",
-      "count": 0,
-      "days": 0,
+      "count": 203,
+      "days": 6,
       "perDay": {
-        "20261027": 0,
-        "20261028": 0,
-        "20261029": 0,
-        "20261030": 0,
-        "20261031": 0,
+        "20261027": 32,
+        "20261028": 38,
+        "20261029": 31,
+        "20261030": 32,
+        "20261031": 39,
         "20261101": 0,
-        "20261102": 0
+        "20261102": 31
       },
-      "withDesc": 0,
-      "descRate": 0,
+      "withDesc": 171,
+      "descRate": 84,
       "withCategory": 0,
-      "uniqTitles": 0,
-      "first": "",
-      "last": "",
-      "usedSource": "epgpw",
+      "uniqTitles": 71,
+      "first": "20261027000800 +0800",
+      "last": "20261103000800 +0800",
+      "usedSource": "tvmao:SITV13(卫生健康)",
       "matchConfidence": "exact",
       "matchedSourceName": "卫生健康",
-      "alternatives": [],
-      "status": "empty"
+      "alternatives": [
+        "tvmao:SITV13(卫生健康)"
+      ],
+      "status": "partial"
     },
     {
       "id": "CCTVTVGuide.cn",
@@ -10289,7 +10774,9 @@
       "usedSource": "epgpw",
       "matchConfidence": "exact",
       "matchedSourceName": "电视指南",
-      "alternatives": [],
+      "alternatives": [
+        "tvmao:CCTVPAYFEE-CCTVPAYFEE6(电视指南)"
+      ],
       "status": "empty"
     },
     {
@@ -10298,28 +10785,28 @@
       "group": "cctv",
       "aliases": [],
       "logo": "",
-      "count": 90,
-      "days": 2,
+      "count": 307,
+      "days": 7,
       "perDay": {
-        "20261027": 45,
-        "20261028": 45,
-        "20261029": 0,
-        "20261030": 0,
-        "20261031": 0,
-        "20261101": 0,
-        "20261102": 0
+        "20261027": 43,
+        "20261028": 43,
+        "20261029": 43,
+        "20261030": 44,
+        "20261031": 42,
+        "20261101": 43,
+        "20261102": 49
       },
-      "withDesc": 68,
-      "descRate": 76,
+      "withDesc": 204,
+      "descRate": 66,
       "withCategory": 0,
-      "uniqTitles": 14,
+      "uniqTitles": 27,
       "first": "20261027000000 +0800",
-      "last": "20261029000000 +0800",
-      "usedSource": "z51:e1:20:CGTN(CGTN)",
-      "matchConfidence": "contains",
-      "matchedSourceName": "CGTN俄语",
+      "last": "20261103000000 +0800",
+      "usedSource": "tvmao:CCTV-CCTV19(CGTN)",
+      "matchConfidence": "exact",
+      "matchedSourceName": "CGTN",
       "alternatives": [],
-      "status": "partial"
+      "status": "full"
     },
     {
       "id": "CGTNFrench.cn",
@@ -10327,28 +10814,30 @@
       "group": "cctv",
       "aliases": [],
       "logo": "",
-      "count": 0,
-      "days": 0,
+      "count": 137,
+      "days": 7,
       "perDay": {
-        "20261027": 0,
-        "20261028": 0,
-        "20261029": 0,
-        "20261030": 0,
-        "20261031": 0,
-        "20261101": 0,
-        "20261102": 0
+        "20261027": 21,
+        "20261028": 14,
+        "20261029": 22,
+        "20261030": 18,
+        "20261031": 19,
+        "20261101": 26,
+        "20261102": 17
       },
-      "withDesc": 0,
-      "descRate": 0,
+      "withDesc": 86,
+      "descRate": 63,
       "withCategory": 0,
-      "uniqTitles": 0,
-      "first": "",
-      "last": "",
-      "usedSource": "epgpw",
+      "uniqTitles": 46,
+      "first": "20261027014500 +0800",
+      "last": "20261102233000 +0800",
+      "usedSource": "tvmao:CCTV-CCTVF(CGTN 法语)",
       "matchConfidence": "exact",
       "matchedSourceName": "CGTN法语",
-      "alternatives": [],
-      "status": "empty"
+      "alternatives": [
+        "tvmao:CCTV-CCTVF(CGTN 法语)"
+      ],
+      "status": "full"
     },
     {
       "id": "CGTNDocumentary.cn",
@@ -10356,28 +10845,30 @@
       "group": "cctv",
       "aliases": [],
       "logo": "",
-      "count": 0,
-      "days": 0,
+      "count": 251,
+      "days": 7,
       "perDay": {
-        "20261027": 0,
-        "20261028": 0,
-        "20261029": 0,
-        "20261030": 0,
-        "20261031": 0,
-        "20261101": 0,
-        "20261102": 0
+        "20261027": 35,
+        "20261028": 36,
+        "20261029": 36,
+        "20261030": 36,
+        "20261031": 36,
+        "20261101": 36,
+        "20261102": 36
       },
-      "withDesc": 0,
-      "descRate": 0,
+      "withDesc": 84,
+      "descRate": 33,
       "withCategory": 0,
-      "uniqTitles": 0,
-      "first": "",
-      "last": "",
-      "usedSource": "epgpw",
+      "uniqTitles": 6,
+      "first": "20261027000000 +0800",
+      "last": "20261103000000 +0800",
+      "usedSource": "tvmao:CCTV-CCTV18(CGTN 纪录(英))",
       "matchConfidence": "exact",
       "matchedSourceName": "CGTN纪录",
-      "alternatives": [],
-      "status": "empty"
+      "alternatives": [
+        "tvmao:CCTV-CCTV18(CGTN 纪录(英))"
+      ],
+      "status": "full"
     },
     {
       "id": "CETV1.cn",
@@ -10480,28 +10971,30 @@
       "group": "pay",
       "aliases": [],
       "logo": "",
-      "count": 0,
-      "days": 0,
+      "count": 436,
+      "days": 7,
       "perDay": {
-        "20261027": 0,
-        "20261028": 0,
-        "20261029": 0,
-        "20261030": 0,
-        "20261031": 0,
-        "20261101": 0,
-        "20261102": 0
+        "20261027": 64,
+        "20261028": 65,
+        "20261029": 67,
+        "20261030": 64,
+        "20261031": 64,
+        "20261101": 55,
+        "20261102": 57
       },
-      "withDesc": 0,
-      "descRate": 0,
+      "withDesc": 351,
+      "descRate": 81,
       "withCategory": 0,
-      "uniqTitles": 0,
-      "first": "",
-      "last": "",
-      "usedSource": "epgpw",
+      "uniqTitles": 291,
+      "first": "20261027000400 +0800",
+      "last": "20261103000400 +0800",
+      "usedSource": "tvmao:BTV10(卡酷少儿)",
       "matchConfidence": "exact",
       "matchedSourceName": "卡酷少儿",
-      "alternatives": [],
-      "status": "empty"
+      "alternatives": [
+        "tvmao:BTV10(卡酷少儿)"
+      ],
+      "status": "full"
     },
     {
       "id": "GoldenEagleCartoon.cn",
@@ -10509,28 +11002,28 @@
       "group": "pay",
       "aliases": [],
       "logo": "",
-      "count": 200,
-      "days": 2,
+      "count": 505,
+      "days": 7,
       "perDay": {
-        "20261027": 100,
-        "20261028": 100,
-        "20261029": 0,
-        "20261030": 0,
-        "20261031": 0,
-        "20261101": 0,
-        "20261102": 0
+        "20261027": 16,
+        "20261028": 99,
+        "20261029": 99,
+        "20261030": 99,
+        "20261031": 88,
+        "20261101": 88,
+        "20261102": 16
       },
-      "withDesc": 200,
-      "descRate": 100,
+      "withDesc": 471,
+      "descRate": 93,
       "withCategory": 0,
-      "uniqTitles": 182,
-      "first": "20261027000000 +0800",
-      "last": "20261029000000 +0800",
-      "usedSource": "z51:e1:69:金鹰卡通(金鹰卡通)",
-      "matchConfidence": "",
-      "matchedSourceName": "",
+      "uniqTitles": 301,
+      "first": "20261027070000 +0800",
+      "last": "20261103000000 +0800",
+      "usedSource": "tvmao:HUNANTV2(湖南金鹰卡通频道)",
+      "matchConfidence": "contains",
+      "matchedSourceName": "湖南金鹰卡通频道",
       "alternatives": [],
-      "status": "partial"
+      "status": "full"
     },
     {
       "id": "哈哈炫动.cn",
@@ -10555,9 +11048,9 @@
       "uniqTitles": 5,
       "first": "20261027001500 +0800",
       "last": "20261103001500 +0800",
-      "usedSource": "tvmao:TOONMAX1(哈哈炫动节目单)",
-      "matchConfidence": "contains",
-      "matchedSourceName": "哈哈炫动节目单",
+      "usedSource": "tvmao:TOONMAX1(哈哈炫动)",
+      "matchConfidence": "exact",
+      "matchedSourceName": "哈哈炫动",
       "alternatives": [],
       "status": "full"
     },
@@ -10618,7 +11111,9 @@
       "usedSource": "z51:e1:1645:梨园(梨园)",
       "matchConfidence": "exact",
       "matchedSourceName": "梨园",
-      "alternatives": [],
+      "alternatives": [
+        "tvmao:CCTVPAYFEE-CCTVPAYFEE20(梨园)"
+      ],
       "status": "partial"
     },
     {
@@ -10647,7 +11142,9 @@
       "usedSource": "epgpw",
       "matchConfidence": "exact",
       "matchedSourceName": "求索纪录",
-      "alternatives": [],
+      "alternatives": [
+        "tvmao:HSCM-QSJL(求索纪录)"
+      ],
       "status": "empty"
     },
     {
@@ -10674,8 +11171,8 @@
       "first": "20261027000500 +0800",
       "last": "20261029000500 +0800",
       "usedSource": "z51:e1:1640:求索动物(求索动物)",
-      "matchConfidence": "contains",
-      "matchedSourceName": "求索动物节目单",
+      "matchConfidence": "exact",
+      "matchedSourceName": "求索动物",
       "alternatives": [],
       "status": "partial"
     },
@@ -10703,8 +11200,8 @@
       "first": "20261027000500 +0800",
       "last": "20261029000500 +0800",
       "usedSource": "z51:e1:1638:求索科学(求索科学)",
-      "matchConfidence": "contains",
-      "matchedSourceName": "求索科学节目单",
+      "matchConfidence": "exact",
+      "matchedSourceName": "求索科学",
       "alternatives": [],
       "status": "partial"
     },
@@ -10774,28 +11271,30 @@
       "group": "pay",
       "aliases": [],
       "logo": "",
-      "count": 38,
-      "days": 2,
+      "count": 80,
+      "days": 7,
       "perDay": {
-        "20261027": 19,
-        "20261028": 19,
-        "20261029": 0,
-        "20261030": 0,
-        "20261031": 0,
-        "20261101": 0,
-        "20261102": 0
+        "20261027": 13,
+        "20261028": 13,
+        "20261029": 13,
+        "20261030": 13,
+        "20261031": 11,
+        "20261101": 12,
+        "20261102": 5
       },
-      "withDesc": 0,
-      "descRate": 0,
+      "withDesc": 80,
+      "descRate": 100,
       "withCategory": 0,
-      "uniqTitles": 28,
+      "uniqTitles": 41,
       "first": "20261027011500 +0800",
-      "last": "20261029011500 +0800",
-      "usedSource": "z51:e1:1857:魅力足球(魅力足球)",
+      "last": "20261103011500 +0800",
+      "usedSource": "tvmao:SITV-YULE(魅力足球)",
       "matchConfidence": "exact",
       "matchedSourceName": "魅力足球",
-      "alternatives": [],
-      "status": "partial"
+      "alternatives": [
+        "tvmao:SITV-YULE(魅力足球)"
+      ],
+      "status": "full"
     },
     {
       "id": "GameChannel.cn",
@@ -10803,28 +11302,30 @@
       "group": "pay",
       "aliases": [],
       "logo": "",
-      "count": 74,
-      "days": 2,
+      "count": 292,
+      "days": 7,
       "perDay": {
-        "20261027": 32,
+        "20261027": 41,
         "20261028": 42,
-        "20261029": 0,
-        "20261030": 0,
-        "20261031": 0,
-        "20261101": 0,
-        "20261102": 0
+        "20261029": 42,
+        "20261030": 42,
+        "20261031": 42,
+        "20261101": 42,
+        "20261102": 41
       },
-      "withDesc": 72,
-      "descRate": 97,
+      "withDesc": 224,
+      "descRate": 77,
       "withCategory": 0,
-      "uniqTitles": 44,
+      "uniqTitles": 80,
       "first": "20261027000000 +0800",
-      "last": "20261029000000 +0800",
-      "usedSource": "z51:e1:1283:游戏风云(游戏风云)",
+      "last": "20261103000000 +0800",
+      "usedSource": "tvmao:SITV-GAME(游戏风云)",
       "matchConfidence": "exact",
       "matchedSourceName": "游戏风云",
-      "alternatives": [],
-      "status": "partial"
+      "alternatives": [
+        "tvmao:SITV-GAME(游戏风云)"
+      ],
+      "status": "full"
     },
     {
       "id": "劲爆体育.cn",
@@ -10832,28 +11333,30 @@
       "group": "pay",
       "aliases": [],
       "logo": "",
-      "count": 0,
-      "days": 0,
+      "count": 123,
+      "days": 7,
       "perDay": {
-        "20261027": 0,
-        "20261028": 0,
-        "20261029": 0,
-        "20261030": 0,
-        "20261031": 0,
-        "20261101": 0,
-        "20261102": 0
+        "20261027": 17,
+        "20261028": 20,
+        "20261029": 18,
+        "20261030": 16,
+        "20261031": 17,
+        "20261101": 16,
+        "20261102": 19
       },
-      "withDesc": 0,
-      "descRate": 0,
+      "withDesc": 104,
+      "descRate": 85,
       "withCategory": 0,
-      "uniqTitles": 0,
-      "first": "",
-      "last": "",
-      "usedSource": "epgpw",
+      "uniqTitles": 45,
+      "first": "20261027000000 +0800",
+      "last": "20261103000000 +0800",
+      "usedSource": "tvmao:SITV-SPORTS(劲爆体育)",
       "matchConfidence": "exact",
       "matchedSourceName": "劲爆体育",
-      "alternatives": [],
-      "status": "empty"
+      "alternatives": [
+        "tvmao:SITV-SPORTS(劲爆体育)"
+      ],
+      "status": "full"
     },
     {
       "id": "乐游.cn",
@@ -10861,28 +11364,30 @@
       "group": "pay",
       "aliases": [],
       "logo": "",
-      "count": 0,
-      "days": 0,
+      "count": 402,
+      "days": 7,
       "perDay": {
-        "20261027": 0,
-        "20261028": 0,
-        "20261029": 0,
-        "20261030": 0,
-        "20261031": 0,
-        "20261101": 0,
-        "20261102": 0
+        "20261027": 59,
+        "20261028": 61,
+        "20261029": 57,
+        "20261030": 56,
+        "20261031": 57,
+        "20261101": 55,
+        "20261102": 57
       },
-      "withDesc": 0,
-      "descRate": 0,
+      "withDesc": 275,
+      "descRate": 68,
       "withCategory": 0,
-      "uniqTitles": 0,
-      "first": "",
-      "last": "",
-      "usedSource": "epgpw",
+      "uniqTitles": 118,
+      "first": "20261027000000 +0800",
+      "last": "20261103000000 +0800",
+      "usedSource": "tvmao:SITV-DOCUMENTARY(乐游)",
       "matchConfidence": "exact",
       "matchedSourceName": "乐游",
-      "alternatives": [],
-      "status": "empty"
+      "alternatives": [
+        "tvmao:SITV-DOCUMENTARY(乐游)"
+      ],
+      "status": "full"
     },
     {
       "id": "AnimationShowChannel.cn",
@@ -10890,28 +11395,30 @@
       "group": "pay",
       "aliases": [],
       "logo": "",
-      "count": 193,
-      "days": 2,
+      "count": 697,
+      "days": 7,
       "perDay": {
-        "20261027": 93,
+        "20261027": 99,
         "20261028": 100,
-        "20261029": 0,
-        "20261030": 0,
-        "20261031": 0,
-        "20261101": 0,
-        "20261102": 0
+        "20261029": 100,
+        "20261030": 100,
+        "20261031": 100,
+        "20261101": 99,
+        "20261102": 99
       },
-      "withDesc": 191,
-      "descRate": 99,
+      "withDesc": 609,
+      "descRate": 87,
       "withCategory": 0,
-      "uniqTitles": 99,
+      "uniqTitles": 186,
       "first": "20261027000000 +0800",
-      "last": "20261029000000 +0800",
-      "usedSource": "z51:e1:1279:动漫秀场(动漫秀场)",
+      "last": "20261103000000 +0800",
+      "usedSource": "tvmao:SITV-CHILDREN(动漫秀场)",
       "matchConfidence": "exact",
       "matchedSourceName": "动漫秀场",
-      "alternatives": [],
-      "status": "partial"
+      "alternatives": [
+        "tvmao:SITV-CHILDREN(动漫秀场)"
+      ],
+      "status": "full"
     },
     {
       "id": "CityTheaterChannel.cn",
@@ -10919,28 +11426,30 @@
       "group": "pay",
       "aliases": [],
       "logo": "",
-      "count": 99,
-      "days": 2,
+      "count": 170,
+      "days": 7,
       "perDay": {
-        "20261027": 42,
-        "20261028": 57,
-        "20261029": 0,
-        "20261030": 0,
-        "20261031": 0,
-        "20261101": 0,
-        "20261102": 0
+        "20261027": 26,
+        "20261028": 25,
+        "20261029": 26,
+        "20261030": 26,
+        "20261031": 26,
+        "20261101": 25,
+        "20261102": 16
       },
-      "withDesc": 68,
-      "descRate": 69,
+      "withDesc": 163,
+      "descRate": 96,
       "withCategory": 0,
-      "uniqTitles": 57,
-      "first": "20261027001500 +0800",
-      "last": "20261029000400 +0800",
-      "usedSource": "z51:e1:1282:都市剧场(都市剧场)",
+      "uniqTitles": 74,
+      "first": "20261027020000 +0800",
+      "last": "20261103013700 +0800",
+      "usedSource": "tvmao:SITV-MOVIE(都市剧场)",
       "matchConfidence": "exact",
       "matchedSourceName": "都市剧场",
-      "alternatives": [],
-      "status": "partial"
+      "alternatives": [
+        "tvmao:SITV-MOVIE(都市剧场)"
+      ],
+      "status": "full"
     },
     {
       "id": "ChannelLaw.cn",
@@ -10948,28 +11457,30 @@
       "group": "pay",
       "aliases": [],
       "logo": "",
-      "count": 93,
-      "days": 2,
+      "count": 115,
+      "days": 7,
       "perDay": {
-        "20261027": 40,
-        "20261028": 53,
-        "20261029": 0,
-        "20261030": 0,
-        "20261031": 0,
-        "20261101": 0,
-        "20261102": 0
+        "20261027": 13,
+        "20261028": 17,
+        "20261029": 16,
+        "20261030": 14,
+        "20261031": 19,
+        "20261101": 17,
+        "20261102": 19
       },
-      "withDesc": 91,
-      "descRate": 98,
+      "withDesc": 59,
+      "descRate": 51,
       "withCategory": 0,
-      "uniqTitles": 19,
-      "first": "20261027000000 +0800",
-      "last": "20261029000000 +0800",
-      "usedSource": "z51:e1:1273:法治天地(法治天地)",
+      "uniqTitles": 18,
+      "first": "20261027055900 +0800",
+      "last": "20261102180000 +0800",
+      "usedSource": "tvmao:SITV3(法治天地)",
       "matchConfidence": "exact",
       "matchedSourceName": "法治天地",
-      "alternatives": [],
-      "status": "partial"
+      "alternatives": [
+        "tvmao:SITV3(法治天地)"
+      ],
+      "status": "full"
     },
     {
       "id": "LaughterTheater.cn",
@@ -11006,28 +11517,30 @@
       "group": "pay",
       "aliases": [],
       "logo": "",
-      "count": 0,
-      "days": 0,
+      "count": 154,
+      "days": 7,
       "perDay": {
-        "20261027": 0,
-        "20261028": 0,
-        "20261029": 0,
-        "20261030": 0,
-        "20261031": 0,
-        "20261101": 0,
-        "20261102": 0
+        "20261027": 22,
+        "20261028": 25,
+        "20261029": 21,
+        "20261030": 20,
+        "20261031": 21,
+        "20261101": 19,
+        "20261102": 26
       },
-      "withDesc": 0,
-      "descRate": 0,
+      "withDesc": 140,
+      "descRate": 91,
       "withCategory": 0,
-      "uniqTitles": 0,
-      "first": "",
-      "last": "",
-      "usedSource": "epgpw",
+      "uniqTitles": 69,
+      "first": "20261027000000 +0800",
+      "last": "20261103000000 +0800",
+      "usedSource": "tvmao:SITV6(金色学堂)",
       "matchConfidence": "exact",
       "matchedSourceName": "金色学堂",
-      "alternatives": [],
-      "status": "empty"
+      "alternatives": [
+        "tvmao:SITV6(金色学堂)"
+      ],
+      "status": "full"
     },
     {
       "id": "LifestyleChannel.cn",
@@ -11035,28 +11548,30 @@
       "group": "pay",
       "aliases": [],
       "logo": "",
-      "count": 103,
-      "days": 2,
+      "count": 376,
+      "days": 7,
       "perDay": {
-        "20261027": 44,
+        "20261027": 60,
         "20261028": 59,
-        "20261029": 0,
-        "20261030": 0,
-        "20261031": 0,
-        "20261101": 0,
-        "20261102": 0
+        "20261029": 49,
+        "20261030": 47,
+        "20261031": 49,
+        "20261101": 55,
+        "20261102": 57
       },
-      "withDesc": 78,
+      "withDesc": 286,
       "descRate": 76,
       "withCategory": 0,
-      "uniqTitles": 27,
-      "first": "20261027001000 +0800",
-      "last": "20261029000700 +0800",
-      "usedSource": "z51:e1:1281:生活时尚(生活时尚)",
+      "uniqTitles": 57,
+      "first": "20261027000900 +0800",
+      "last": "20261103000900 +0800",
+      "usedSource": "tvmao:SITV-FASHION(生活时尚)",
       "matchConfidence": "exact",
       "matchedSourceName": "生活时尚",
-      "alternatives": [],
-      "status": "partial"
+      "alternatives": [
+        "tvmao:SITV-FASHION(生活时尚)"
+      ],
+      "status": "full"
     },
     {
       "id": "CHCAction.cn",
@@ -11084,7 +11599,9 @@
       "usedSource": "z51:e1:1643:CHC动作电影(CHC动作电影)",
       "matchConfidence": "exact",
       "matchedSourceName": "CHC动作电影",
-      "alternatives": [],
+      "alternatives": [
+        "tvmao:CHC-CHC1(CHC动作电影)"
+      ],
       "status": "partial"
     },
     {
@@ -11113,7 +11630,9 @@
       "usedSource": "epgpw",
       "matchConfidence": "exact",
       "matchedSourceName": "CHC家庭影院",
-      "alternatives": [],
+      "alternatives": [
+        "tvmao:CHC-CHC2(CHC家庭影院)"
+      ],
       "status": "empty"
     },
     {
@@ -11140,8 +11659,8 @@
       "first": "20261027011900 +0800",
       "last": "20261029014000 +0800",
       "usedSource": "z51:e1:1969:CHC影迷电影(CHC影迷电影)",
-      "matchConfidence": "contains",
-      "matchedSourceName": "CHC影迷电影节目单",
+      "matchConfidence": "exact",
+      "matchedSourceName": "CHC影迷电影",
       "alternatives": [],
       "status": "partial"
     },
@@ -14784,7 +15303,9 @@
       "usedSource": "z51:e1:1684:快乐垂钓(快乐垂钓)",
       "matchConfidence": "exact",
       "matchedSourceName": "快乐垂钓",
-      "alternatives": [],
+      "alternatives": [
+        "tvmao:CCTVPAYFEE-KUAILECHUIDIAO(快乐垂钓)"
+      ],
       "status": "partial"
     },
     {
@@ -14933,6 +15454,236 @@
       "matchedSourceName": "广州竞赛",
       "alternatives": [],
       "status": "empty"
+    },
+    {
+      "id": "农林卫视.cn",
+      "name": "农林卫视",
+      "group": "satellite",
+      "aliases": [
+        "陝西農林衛視",
+        "陕西农林卫视"
+      ],
+      "logo": "",
+      "count": 0,
+      "days": 0,
+      "perDay": {
+        "20261027": 0,
+        "20261028": 0,
+        "20261029": 0,
+        "20261030": 0,
+        "20261031": 0,
+        "20261101": 0,
+        "20261102": 0
+      },
+      "withDesc": 0,
+      "descRate": 0,
+      "withCategory": 0,
+      "uniqTitles": 0,
+      "first": "",
+      "last": "",
+      "usedSource": "epgpw",
+      "matchConfidence": "override",
+      "matchedSourceName": "陕西农林卫视",
+      "alternatives": [],
+      "status": "empty"
+    },
+    {
+      "id": "AsianFood.tw",
+      "name": "AsianFood",
+      "group": "tw",
+      "aliases": [
+        "亞洲美食頻道",
+        "亚洲美食频道",
+        "亞洲美食台"
+      ],
+      "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919170840611834_26.png",
+      "count": 248,
+      "days": 6,
+      "perDay": {
+        "20261027": 43,
+        "20261028": 43,
+        "20261029": 41,
+        "20261030": 42,
+        "20261031": 42,
+        "20261101": 37,
+        "20261102": 0
+      },
+      "withDesc": 39,
+      "descRate": 16,
+      "withCategory": 0,
+      "uniqTitles": 55,
+      "first": "20261027000000 +0800",
+      "last": "20261102000000 +0800",
+      "usedSource": "epgpw:457281(亞洲美食頻道)",
+      "matchConfidence": "override",
+      "matchedSourceName": "亞洲美食頻道",
+      "alternatives": [],
+      "status": "partial"
+    },
+    {
+      "id": "阿里郎.tw",
+      "name": "阿里郎",
+      "group": "tw",
+      "aliases": [
+        "ARIRANG",
+        "韓國阿里郎",
+        "韩国阿里郎",
+        "阿里郎頻道"
+      ],
+      "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917035151658357_64.jpg",
+      "count": 310,
+      "days": 7,
+      "perDay": {
+        "20261027": 53,
+        "20261028": 55,
+        "20261029": 54,
+        "20261030": 52,
+        "20261031": 47,
+        "20261101": 48,
+        "20261102": 1
+      },
+      "withDesc": 256,
+      "descRate": 83,
+      "withCategory": 0,
+      "uniqTitles": 47,
+      "first": "20261027000000 +0800",
+      "last": "20261102120000 +0800",
+      "usedSource": "epgpw:456650(韓國阿里郎)",
+      "matchConfidence": "override",
+      "matchedSourceName": "韓國阿里郎",
+      "alternatives": [],
+      "status": "full"
+    },
+    {
+      "id": "我的欧洲电影.tw",
+      "name": "我的欧洲电影",
+      "group": "tw",
+      "aliases": [
+        "MCE 我的歐洲電影台",
+        "My Cinema Europe HD",
+        "我的歐洲電影"
+      ],
+      "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919173504365160_58.png",
+      "count": 72,
+      "days": 6,
+      "perDay": {
+        "20261026": 1,
+        "20261027": 14,
+        "20261028": 14,
+        "20261029": 14,
+        "20261030": 14,
+        "20261031": 15,
+        "20261101": 0,
+        "20261102": 0
+      },
+      "withDesc": 0,
+      "descRate": 0,
+      "withCategory": 0,
+      "uniqTitles": 72,
+      "first": "20261026225000 +0800",
+      "last": "20261101000000 +0800",
+      "usedSource": "epgpw:457377(MCE 我的歐洲電影台)",
+      "matchConfidence": "override",
+      "matchedSourceName": "MCE 我的歐洲電影台",
+      "alternatives": [],
+      "status": "partial"
+    },
+    {
+      "id": "汕头经济.cn",
+      "name": "汕头经济",
+      "group": "local",
+      "aliases": [
+        "汕頭經濟生活",
+        "汕头经济生活"
+      ],
+      "logo": "",
+      "count": 0,
+      "days": 0,
+      "perDay": {
+        "20261027": 0,
+        "20261028": 0,
+        "20261029": 0,
+        "20261030": 0,
+        "20261031": 0,
+        "20261101": 0,
+        "20261102": 0
+      },
+      "withDesc": 0,
+      "descRate": 0,
+      "withCategory": 0,
+      "uniqTitles": 0,
+      "first": "",
+      "last": "",
+      "usedSource": "epgpw",
+      "matchConfidence": "override",
+      "matchedSourceName": "汕头经济生活",
+      "alternatives": [],
+      "status": "empty"
+    },
+    {
+      "id": "广东珠江.cn",
+      "name": "广东珠江",
+      "group": "local",
+      "aliases": [
+        "珠江台",
+        "廣東珠江"
+      ],
+      "logo": "",
+      "count": 42,
+      "days": 2,
+      "perDay": {
+        "20261027": 21,
+        "20261028": 21,
+        "20261029": 0,
+        "20261030": 0,
+        "20261031": 0,
+        "20261101": 0,
+        "20261102": 0
+      },
+      "withDesc": 38,
+      "descRate": 90,
+      "withCategory": 0,
+      "uniqTitles": 22,
+      "first": "20261027000500 +0800",
+      "last": "20261029000900 +0800",
+      "usedSource": "z51:e1:1759:珠江频道(珠江频道)",
+      "matchConfidence": "override",
+      "matchedSourceName": "中央台–珠江",
+      "alternatives": [],
+      "status": "partial"
+    },
+    {
+      "id": "HBO电影.tw",
+      "name": "HBO电影",
+      "group": "pay",
+      "aliases": [
+        "HBO",
+        "HBO HD"
+      ],
+      "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917035324057947_34.jpg",
+      "count": 182,
+      "days": 7,
+      "perDay": {
+        "20261026": 1,
+        "20261027": 30,
+        "20261028": 30,
+        "20261029": 29,
+        "20261030": 31,
+        "20261031": 32,
+        "20261101": 29,
+        "20261102": 0
+      },
+      "withDesc": 182,
+      "descRate": 100,
+      "withCategory": 0,
+      "uniqTitles": 55,
+      "first": "20261026235500 +0800",
+      "last": "20261102000000 +0800",
+      "usedSource": "epgpw:456655(HBO HD)",
+      "matchConfidence": "override",
+      "matchedSourceName": "HBO HD",
+      "alternatives": [],
+      "status": "full"
     }
   ]
 }
