@@ -1,0 +1,17 @@
+{
+  "_comment": "手工指定频道 → 源 id。优先级高于任何自动匹配，用于修正匹配错误或绕过源里的空壳频道。改完跑 node src/index.mjs check 验证。",
+
+  "_notes": {
+    "SanshaSatelliteTV.cn": "epgpw 的 539632/410381 都是空壳（注册了但零节目），tvmao 有完整数据（含真实结束时间），tvsou 是空表 → 用 tvmao",
+    "ZhejiangMinshengLeisure.cn": "epgpw 539891「浙江民生休闲」零节目，改用 570490「浙江民生」（52 条）",
+    "JiangsuPublicNewsChannel.cn": "三个源都没有江苏公共新闻 → 保持未匹配",
+    "PhoenixHongKongChannel.hk": "凤凰卫视香港台在三个源里都没有。注意别错配到 410378（凤凰卫视中文台，已被 PhoenixChineseChannel.hk 占用），tvsou 的 65e0f71a 是空表 → 保持未匹配",
+    "CTiNews.tw": "中天新闻台在三个源里都没有。epgpw 有 456536 中天綜合台/456539 中天娛樂台/410372 中天亞洲台，都不是新闻台 → 保持未匹配",
+    "HOYTV.hk": "HOY 台（前奇妙电视）在三个源里完全没有 → 保持未匹配",
+    "HunanCityChannel.cn": "湖南都市在三个源里没有 → 保持未匹配",
+    "HunanPublicChannel.cn": "湖南公共在三个源里没有 → 保持未匹配"
+  },
+
+  "SanshaSatelliteTV.cn": { "source": "tvmao", "sourceId": "SANSHATV" },
+  "ZhejiangMinshengLeisure.cn": { "source": "epgpw", "sourceId": "570490" }
+}

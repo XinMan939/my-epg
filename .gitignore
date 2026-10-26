@@ -1,0 +1,16 @@
+# 数据源缓存（几十 MB，不入库；CI 用 actions/cache 单独缓存）
+.cache/
+
+# 构建产物（由 CI 生成后发布到 Pages，不需要入库）
+output/
+
+# 自动生成的中间文件
+channels/match-cache.json
+
+# 日志
+*.log
+
+# 系统文件
+.DS_Store
+Thumbs.db
+node_modules/

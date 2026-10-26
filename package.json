@@ -1,0 +1,17 @@
+{
+  "name": "my-epg",
+  "version": "1.0.0",
+  "description": "自建中文 EPG：抓取央视/卫视/地方台/港澳台节目单，输出标准 XMLTV",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "init": "node src/index.mjs init",
+    "build": "node src/index.mjs build",
+    "catalog": "node src/index.mjs catalog",
+    "check": "node src/index.mjs check"
+  },
+  "license": "MIT"
+}
