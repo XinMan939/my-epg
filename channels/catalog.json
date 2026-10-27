@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-27T16:32:15.111Z",
-  "total": 2393,
+  "generatedAt": "2026-10-27T18:22:49.671Z",
+  "total": 2398,
   "items": [
     {
       "source": "epgpw",
@@ -13962,13 +13962,6 @@
     {
       "source": "tvmao",
       "group": "satellite",
-      "sourceId": "SDTV1",
-      "name": "山东卫视",
-      "logo": ""
-    },
-    {
-      "source": "tvmao",
-      "group": "satellite",
       "sourceId": "DONGFANG1",
       "name": "东方卫视",
       "logo": ""
@@ -21858,6 +21851,66 @@
       "days": 6,
       "count": 135,
       "withDesc": 22
+    },
+    {
+      "source": "tdm",
+      "region": "MO",
+      "sourceId": "1",
+      "name": "澳視澳門",
+      "logo": "",
+      "days": 6,
+      "count": 272,
+      "withDesc": 69
+    },
+    {
+      "source": "tdm",
+      "region": "MO",
+      "sourceId": "2",
+      "name": "澳視葡文",
+      "logo": "",
+      "days": 6,
+      "count": 107,
+      "withDesc": 0
+    },
+    {
+      "source": "tdm",
+      "region": "MO",
+      "sourceId": "6",
+      "name": "澳門體育",
+      "logo": "",
+      "days": 6,
+      "count": 107,
+      "withDesc": 0
+    },
+    {
+      "source": "tdm",
+      "region": "MO",
+      "sourceId": "5",
+      "name": "澳門資訊",
+      "logo": "",
+      "days": 6,
+      "count": 303,
+      "withDesc": 15
+    },
+    {
+      "source": "tdm",
+      "region": "MO",
+      "sourceId": "7",
+      "name": "澳門綜藝",
+      "logo": "",
+      "days": 6,
+      "count": 95,
+      "withDesc": 39
+    },
+    {
+      "source": "tdm",
+      "region": "MO",
+      "sourceId": "8",
+      "name": "澳門-Macau",
+      "logo": "",
+      "days": 6,
+      "count": 293,
+      "withDesc": 33
     }
   ]
 }
