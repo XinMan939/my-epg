@@ -730,7 +730,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 121
+    "programmeCount": 131
   },
   {
     "id": "HunanTVInternational.cn",
@@ -1358,7 +1358,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 78
+    "programmeCount": 283
   },
   {
     "id": "CCTVTheFirstTheater.cn",
@@ -1380,7 +1380,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 351
+    "programmeCount": 350
   },
   {
     "id": "CCTVStormTheater.cn",
@@ -1402,7 +1402,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 53
+    "programmeCount": 171
   },
   {
     "id": "CCTVStormFootball.cn",
@@ -1413,7 +1413,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 72
+    "programmeCount": 133
   },
   {
     "id": "CCTVBilliards.cn",
@@ -1457,7 +1457,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 110
+    "programmeCount": 348
   },
   {
     "id": "CCTVWomensFashion.cn",
@@ -1468,7 +1468,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 45
+    "programmeCount": 160
   },
   {
     "id": "CCTVWorldGeography.cn",
@@ -1479,7 +1479,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 76
+    "programmeCount": 216
   },
   {
     "id": "CCTVHealth.cn",
@@ -1510,7 +1510,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 316
+    "programmeCount": 320
   },
   {
     "id": "CGTNFrench.cn",
@@ -1579,7 +1579,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 341
+    "programmeCount": 366
   },
   {
     "id": "哈哈炫动.cn",
@@ -1626,7 +1626,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 56
+    "programmeCount": 195
   },
   {
     "id": "求索科学.cn",
@@ -1635,7 +1635,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 56
+    "programmeCount": 195
   },
   {
     "id": "求索生活.cn",
@@ -1745,7 +1745,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 377
+    "programmeCount": 103
   },
   {
     "id": "CHCAction.cn",
@@ -1772,7 +1772,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 29
+    "programmeCount": 81
   },
   {
     "id": "EntertainmentNews.hk",
@@ -2641,7 +2641,9 @@
     "name": "DW德国之声",
     "group": "tw",
     "aliases": [
-      "DW德國之聲"
+      "DW德國之聲",
+      "德國之聲",
+      "德国之声"
     ],
     "logo": "https://epg.pw/media/images/epg/2024/06/12/20240612111756574035_95.png",
     "hasEpg": true,
@@ -2771,7 +2773,9 @@
     "name": "大爱Ⅰ",
     "group": "tw",
     "aliases": [
-      "大爱一台"
+      "大爱一台",
+      "大愛",
+      "大爱"
     ],
     "logo": "",
     "hasEpg": true,
@@ -3123,5 +3127,30 @@
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917035324057947_34.jpg",
     "hasEpg": true,
     "programmeCount": 209
+  },
+  {
+    "id": "CCTV中学生.cn",
+    "name": "CCTV中学生",
+    "group": "pay",
+    "aliases": [
+      "中学生频道",
+      "CCTV中学生频道",
+      "CCTV-中学生"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 319
+  },
+  {
+    "id": "重温经典.cn",
+    "name": "重温经典",
+    "group": "pay",
+    "aliases": [
+      "重温经典频道",
+      "重溫經典"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 161
   }
 ]

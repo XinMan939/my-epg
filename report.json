@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T04:15:34.574Z",
+  "generatedAt": "2026-10-27T04:37:16.105Z",
   "days": 7,
   "dayList": [
     "20261027",
@@ -10,34 +10,24 @@
     "20261101",
     "20261102"
   ],
-  "channelsTotal": 282,
-  "channelsWithEpg": 273,
+  "channelsTotal": 284,
+  "channelsWithEpg": 275,
   "channelsEmpty": 9,
-  "channelsFull": 135,
-  "channelsPartial": 138,
-  "programmesTotal": 45523,
-  "programmesWithDesc": 27587,
-  "descCoverage": 61,
+  "channelsFull": 145,
+  "channelsPartial": 130,
+  "programmesTotal": 46974,
+  "programmesWithDesc": 29190,
+  "descCoverage": 62,
   "dateRange": [
     "20261027",
     "20261102"
   ],
   "sourceStats": {
     "epgpw": 248,
-    "tvmao": 5,
-    "tvsou": 2
+    "tvmao": 16,
+    "tvsou": 1
   },
   "fallbacks": [
-    {
-      "id": "CNDFilmDiscoveryChannel.cn",
-      "from": "tvmao:CCTVPAYFEE-CCTVFXZL",
-      "to": "tvsou:c3758372"
-    },
-    {
-      "id": "LifestyleChannel.cn",
-      "from": "epgpw:570487",
-      "to": "tvmao:SITV-FASHION"
-    },
     {
       "id": "寰宇财经.tw",
       "from": "tvsou:a77c8f78",
@@ -837,7 +827,10 @@
       "source": "tvmao",
       "sourceId": "SANSHATV",
       "sourceName": "三沙卫视",
-      "alternatives": []
+      "alternatives": [
+        "epgpw:539632(三沙卫视)",
+        "tvsou:79d20678(三沙卫视)"
+      ]
     },
     "HunanTVInternational.cn": {
       "confidence": "exact",
@@ -892,7 +885,9 @@
       "source": "epgpw",
       "sourceId": "570490",
       "sourceName": "浙江民生",
-      "alternatives": []
+      "alternatives": [
+        "epgpw:539891(浙江民生休闲)"
+      ]
     },
     "ZhejiangFilmEntertainmentChannel.cn": {
       "confidence": "exact",
@@ -2204,7 +2199,9 @@
       "source": "epgpw",
       "sourceId": "370254",
       "sourceName": "DW德國之聲",
-      "alternatives": []
+      "alternatives": [
+        "epgpw:457352(德國之聲)"
+      ]
     },
     "EYETVTravel.tw": {
       "confidence": "exact",
@@ -2504,14 +2501,18 @@
       "source": "epgpw",
       "sourceId": "570491",
       "sourceName": "陕西农林卫视",
-      "alternatives": []
+      "alternatives": [
+        "tvmao:SHXITV/SHXITV9(SHXITV/SHXITV9)"
+      ]
     },
     "AsianFood.tw": {
       "confidence": "override",
       "source": "epgpw",
       "sourceId": "457281",
       "sourceName": "亞洲美食頻道",
-      "alternatives": []
+      "alternatives": [
+        "epgpw:410370(亞洲美食台)"
+      ]
     },
     "阿里郎.tw": {
       "confidence": "override",
@@ -2539,13 +2540,32 @@
       "source": "epgpw",
       "sourceId": "544420",
       "sourceName": "中央台–珠江",
-      "alternatives": []
+      "alternatives": [
+        "epgpw:539669(广东珠江)"
+      ]
     },
     "HBO电影.tw": {
       "confidence": "override",
       "source": "epgpw",
       "sourceId": "456655",
       "sourceName": "HBO HD",
+      "alternatives": [
+        "epgpw:410283(HBO)",
+        "epgpw:456567(HBO)"
+      ]
+    },
+    "CCTV中学生.cn": {
+      "confidence": "override",
+      "source": "tvmao",
+      "sourceId": "CCTVPAYFEE-CCTVPAYFEE35",
+      "sourceName": "CCTV中学生频道",
+      "alternatives": []
+    },
+    "重温经典.cn": {
+      "confidence": "override",
+      "source": "tvmao",
+      "sourceId": "BAMC-CWJINGDIAN",
+      "sourceName": "重温经典频道",
       "alternatives": []
     }
   },
@@ -2653,11 +2673,17 @@
     "CTSNews.tw": "epgpw:370171(華視新聞)",
     "TTVNews.tw": "epgpw:456645(台視新聞台)",
     "EBCYOYO.tw": "epgpw:456525(東森幼幼台)",
+    "CCTVWeaponTechnology.cn": "tvmao:CCTVPAYFEE-CCTVPAYFEE8(兵器科技)",
     "CCTVTheFirstTheater.cn": "epgpw:544354(CCTV第一剧场)",
-    "CNDFilmDiscoveryChannel.cn": "tvsou:c3758372(发现之旅)",
+    "CNDFilmDiscoveryChannel.cn": "tvmao:CCTVPAYFEE-CCTVFXZL(发现之旅)",
     "CCTVStormTheater.cn": "epgpw:544381(CCTV风云剧场)",
+    "CCTVStormMusic.cn": "tvmao:CCTVPAYFEE-CCTVPAYFEE2(风云音乐)",
+    "CCTVStormFootball.cn": "tvmao:CCTVPAYFEE-CCTVPAYFEE1(风云足球)",
     "CCTVGolfTennis.cn": "epgpw:539874(高尔夫网球)",
     "CCTVNostalgiaTheater.cn": "epgpw:544310(CCTV怀旧剧场)",
+    "CNDFilmOldStoryChannel.cn": "tvmao:CCTVPAYFEE-CCTVLAOGUSHI(CCTV老故事)",
+    "CCTVWomensFashion.cn": "tvmao:CCTVPAYFEE-CCTVPAYFEE9(女性时尚)",
+    "CCTVWorldGeography.cn": "tvmao:CCTVPAYFEE-CCTVPAYFEE5(世界地理)",
     "CCTVHealth.cn": "epgpw:539738(卫生健康)",
     "CCTVTVGuide.cn": "epgpw:544333(电视指南)",
     "CGTN.cn": "tvmao:CCTV-CCTV19(CGTN)",
@@ -2671,6 +2697,8 @@
     "哈哈炫动.cn": "tvmao:TOONMAX1(哈哈炫动)",
     "LiyuanTV.cn": "epgpw:539775(梨园)",
     "求索纪录.cn": "epgpw:539845(求索纪录)",
+    "求索动物.cn": "tvmao:HSCM-QSDW(求索动物)",
+    "求索科学.cn": "tvmao:HSCM-QSKX(求索科学)",
     "求索生活.cn": "epgpw:539681(求索生活)",
     "魅力足球.cn": "epgpw:544272(魅力足球)",
     "GameChannel.cn": "epgpw:539857(游戏风云)",
@@ -2681,9 +2709,9 @@
     "ChannelLaw.cn": "epgpw:545509(法治天地)",
     "LaughterTheater.cn": "epgpw:539757(欢笑剧场)",
     "金色学堂.cn": "epgpw:549673(金色学堂)",
-    "LifestyleChannel.cn": "tvmao:SITV-FASHION(生活时尚)",
     "CHCAction.cn": "epgpw:539759(CHC动作电影)",
     "CHCHomeTheater.cn": "epgpw:539900(CHC家庭影院)",
+    "CHCFansMovieChannel.cn": "tvmao:CHC-CHC3(CHC影迷电影)",
     "EntertainmentNews.hk": "epgpw:368323(娛樂新聞台)",
     "TVB千禧经典.hk": "epgpw:368325(千禧經典台)",
     "nowNews.hk": "epgpw:410344(Now新聞台)",
@@ -2805,20 +2833,14 @@
     "汕头经济.cn": "epgpw:544379(汕头经济生活)",
     "广东珠江.cn": "epgpw:544420(中央台–珠江)",
     "HBO电影.tw": "epgpw:456655(HBO HD)",
+    "CCTV中学生.cn": "tvmao:CCTVPAYFEE-CCTVPAYFEE35(CCTV中学生频道)",
+    "重温经典.cn": "tvmao:BAMC-CWJINGDIAN(重温经典频道)",
     "ZhejiangMinshengLeisure.cn": "z51:e1:660:浙江民生休闲(浙江民生休闲)",
     "JiangsuPublicNewsChannel.cn": "z51:e1:349:江苏新闻(江苏新闻)",
-    "CCTVWeaponTechnology.cn": "z51:e1:1652:兵器科技(兵器科技)",
-    "CCTVStormMusic.cn": "z51:e1:1646:风云音乐(风云音乐)",
-    "CCTVStormFootball.cn": "z51:e1:1424:风云足球(风云足球)",
     "CCTVBilliards.cn": "z51:e1:1673:央视台球(央视台球)",
-    "CNDFilmOldStoryChannel.cn": "z51:e1:1683:老故事(老故事)",
-    "CCTVWomensFashion.cn": "z51:e1:1653:女性时尚(女性时尚)",
-    "CCTVWorldGeography.cn": "z51:e1:1649:世界地理(世界地理)",
     "JiaJiaCartoon.cn": "z51:e1:1434:嘉佳卡通(嘉佳卡通)",
-    "求索动物.cn": "z51:e1:1640:求索动物(求索动物)",
-    "求索科学.cn": "z51:e1:1638:求索科学(求索科学)",
     "GreatSportsChannel.cn": "z51:e1:1287:五星体育频道(五星体育频道)",
-    "CHCFansMovieChannel.cn": "z51:e1:1969:CHC影迷电影(CHC影迷电影)",
+    "LifestyleChannel.cn": "z51:e1:1281:生活时尚(生活时尚)",
     "DaAi1.tw": "z51:e2:1450:大爱一台(大爱一台)",
     "GoldenEagleDocumentary.cn": "z51:e1:1324:金鹰纪实(金鹰纪实)",
     "GuangdongNewsChannel.cn": "z51:e1:1439:广东新闻(广东新闻)",
@@ -2848,46 +2870,10 @@
       "count": 42
     },
     {
-      "id": "CCTVWeaponTechnology.cn",
-      "sourceKey": "e1:1652",
-      "sourceName": "兵器科技",
-      "count": 78
-    },
-    {
-      "id": "CCTVStormMusic.cn",
-      "sourceKey": "e1:1646",
-      "sourceName": "风云音乐",
-      "count": 53
-    },
-    {
-      "id": "CCTVStormFootball.cn",
-      "sourceKey": "e1:1424",
-      "sourceName": "风云足球",
-      "count": 72
-    },
-    {
       "id": "CCTVBilliards.cn",
       "sourceKey": "e1:1673",
       "sourceName": "央视台球",
       "count": 48
-    },
-    {
-      "id": "CNDFilmOldStoryChannel.cn",
-      "sourceKey": "e1:1683",
-      "sourceName": "老故事",
-      "count": 110
-    },
-    {
-      "id": "CCTVWomensFashion.cn",
-      "sourceKey": "e1:1653",
-      "sourceName": "女性时尚",
-      "count": 45
-    },
-    {
-      "id": "CCTVWorldGeography.cn",
-      "sourceKey": "e1:1649",
-      "sourceName": "世界地理",
-      "count": 76
     },
     {
       "id": "JiaJiaCartoon.cn",
@@ -2896,28 +2882,16 @@
       "count": 124
     },
     {
-      "id": "求索动物.cn",
-      "sourceKey": "e1:1640",
-      "sourceName": "求索动物",
-      "count": 56
-    },
-    {
-      "id": "求索科学.cn",
-      "sourceKey": "e1:1638",
-      "sourceName": "求索科学",
-      "count": 56
-    },
-    {
       "id": "GreatSportsChannel.cn",
       "sourceKey": "e1:1287",
       "sourceName": "五星体育频道",
       "count": 62
     },
     {
-      "id": "CHCFansMovieChannel.cn",
-      "sourceKey": "e1:1969",
-      "sourceName": "CHC影迷电影",
-      "count": 29
+      "id": "LifestyleChannel.cn",
+      "sourceKey": "e1:1281",
+      "sourceName": "生活时尚",
+      "count": 103
     },
     {
       "id": "DaAi1.tw",
@@ -2945,14 +2919,14 @@
     }
   ],
   "descStats": {
-    "realCoverage": 60.6,
-    "realCount": 27587,
-    "totalCount": 45523,
-    "titles": 678,
-    "filled": 11729,
+    "realCoverage": 62.1,
+    "realCount": 29190,
+    "totalCount": 46974,
+    "titles": 658,
+    "filled": 13692,
     "z51": {
-      "channels": 141,
-      "filled": 10716,
+      "channels": 149,
+      "filled": 11753,
       "packs": [
         {
           "key": "e1",
@@ -3511,10 +3485,10 @@
           "id": "SanshaSatelliteTV.cn",
           "name": "三沙卫视",
           "status": "ok",
-          "mine": 18,
+          "mine": 19,
           "key": "e1:72",
-          "inter": 17,
-          "rate": 0.9444444444444444
+          "inter": 18,
+          "rate": 0.9473684210526315
         },
         {
           "id": "HunanTVInternational.cn",
@@ -3871,10 +3845,10 @@
           "id": "CCTVWeaponTechnology.cn",
           "name": "兵器科技",
           "status": "ok",
-          "mine": 7,
+          "mine": 11,
           "key": "e1:1652",
           "inter": 7,
-          "rate": 1
+          "rate": 0.6363636363636364
         },
         {
           "id": "CCTVTheFirstTheater.cn",
@@ -3907,19 +3881,19 @@
           "id": "CCTVStormMusic.cn",
           "name": "风云音乐",
           "status": "ok",
-          "mine": 20,
+          "mine": 34,
           "key": "e1:1646",
           "inter": 20,
-          "rate": 1
+          "rate": 0.5882352941176471
         },
         {
           "id": "CCTVStormFootball.cn",
           "name": "风云足球",
-          "status": "ok",
-          "mine": 28,
+          "status": "weak",
+          "mine": 9,
           "key": "e1:1424",
-          "inter": 28,
-          "rate": 1
+          "inter": 4,
+          "rate": 0.4444444444444444
         },
         {
           "id": "CCTVBilliards.cn",
@@ -3952,28 +3926,28 @@
           "id": "CNDFilmOldStoryChannel.cn",
           "name": "老故事",
           "status": "ok",
-          "mine": 29,
+          "mine": 52,
           "key": "e1:1683",
-          "inter": 29,
-          "rate": 1
+          "inter": 28,
+          "rate": 0.5384615384615384
         },
         {
           "id": "CCTVWomensFashion.cn",
           "name": "女性时尚",
           "status": "ok",
-          "mine": 13,
+          "mine": 17,
           "key": "e1:1653",
           "inter": 13,
-          "rate": 1
+          "rate": 0.7647058823529411
         },
         {
           "id": "CCTVWorldGeography.cn",
           "name": "世界地理",
           "status": "ok",
-          "mine": 19,
+          "mine": 16,
           "key": "e1:1649",
-          "inter": 19,
-          "rate": 1
+          "inter": 15,
+          "rate": 0.9375
         },
         {
           "id": "CCTVHealth.cn",
@@ -3994,10 +3968,10 @@
           "id": "CGTN.cn",
           "name": "CGTN",
           "status": "ok",
-          "mine": 28,
+          "mine": 30,
           "key": "e1:20",
           "inter": 13,
-          "rate": 0.4642857142857143
+          "rate": 0.43333333333333335
         },
         {
           "id": "CGTNFrench.cn",
@@ -4054,10 +4028,10 @@
           "id": "GoldenEagleCartoon.cn",
           "name": "金鹰卡通",
           "status": "ok",
-          "mine": 24,
+          "mine": 26,
           "key": "e1:69",
           "inter": 8,
-          "rate": 0.3333333333333333
+          "rate": 0.3076923076923077
         },
         {
           "id": "哈哈炫动.cn",
@@ -4210,10 +4184,10 @@
           "id": "LifestyleChannel.cn",
           "name": "生活时尚",
           "status": "ok",
-          "mine": 50,
+          "mine": 24,
           "key": "e1:1281",
-          "inter": 21,
-          "rate": 0.42
+          "inter": 24,
+          "rate": 1
         },
         {
           "id": "CHCAction.cn",
@@ -4235,12 +4209,12 @@
         },
         {
           "id": "CHCFansMovieChannel.cn",
-          "name": "CHC影迷电影",
+          "name": "CHC高清电影",
           "status": "ok",
-          "mine": 24,
-          "key": "e1:1969",
-          "inter": 24,
-          "rate": 1
+          "mine": 69,
+          "key": "e1:1639",
+          "inter": 23,
+          "rate": 0.3333333333333333
         },
         {
           "id": "EntertainmentNews.hk",
@@ -5231,6 +5205,21 @@
           "key": "e2:1573",
           "inter": 8,
           "rate": 0.12698412698412698
+        },
+        {
+          "id": "CCTV中学生.cn",
+          "name": "CCTV中学生",
+          "status": "none",
+          "mine": 106
+        },
+        {
+          "id": "重温经典.cn",
+          "name": "兵团卫视",
+          "status": "weak",
+          "mine": 21,
+          "key": "e1:61",
+          "inter": 4,
+          "rate": 0.19047619047619047
         }
       ],
       "stage3": 237,
@@ -5672,8 +5661,8 @@
           "before": 0,
           "stage": "channel",
           "source": "e1:72(三沙卫视)",
-          "inter": 17,
-          "rate": 0.9444444444444444
+          "inter": 18,
+          "rate": 0.9473684210526315
         },
         "HunanEconomyChannel.cn": {
           "filled": 18,
@@ -5755,13 +5744,29 @@
           "inter": 15,
           "rate": 0.46875
         },
+        "CCTVWeaponTechnology.cn": {
+          "filled": 172,
+          "before": 0,
+          "stage": "channel",
+          "source": "e1:1652(兵器科技)",
+          "inter": 7,
+          "rate": 0.6363636363636364
+        },
         "CNDFilmDiscoveryChannel.cn": {
-          "filled": 266,
+          "filled": 265,
           "before": 0,
           "stage": "channel",
           "source": "e1:1677(发现之旅)",
           "inter": 20,
           "rate": 0.7692307692307693
+        },
+        "CCTVStormMusic.cn": {
+          "filled": 115,
+          "before": 0,
+          "stage": "channel",
+          "source": "e1:1646(风云音乐)",
+          "inter": 20,
+          "rate": 0.5882352941176471
         },
         "CCTVNostalgiaTheater.cn": {
           "filled": 19,
@@ -5771,13 +5776,37 @@
           "inter": 7,
           "rate": 1
         },
+        "CNDFilmOldStoryChannel.cn": {
+          "filled": 182,
+          "before": 0,
+          "stage": "channel",
+          "source": "e1:1683(老故事)",
+          "inter": 28,
+          "rate": 0.5384615384615384
+        },
+        "CCTVWomensFashion.cn": {
+          "filled": 143,
+          "before": 0,
+          "stage": "channel",
+          "source": "e1:1653(女性时尚)",
+          "inter": 13,
+          "rate": 0.7647058823529411
+        },
+        "CCTVWorldGeography.cn": {
+          "filled": 160,
+          "before": 0,
+          "stage": "channel+global",
+          "source": "e1:1649(世界地理)",
+          "inter": 15,
+          "rate": 0.9375
+        },
         "CGTN.cn": {
           "filled": 204,
           "before": 0,
           "stage": "channel",
           "source": "e1:20(CGTN)",
           "inter": 13,
-          "rate": 0.4642857142857143
+          "rate": 0.43333333333333335
         },
         "CGTNDocumentary.cn": {
           "filled": 6,
@@ -5825,7 +5854,7 @@
           "stage": "channel+global",
           "source": "e1:69(金鹰卡通)",
           "inter": 8,
-          "rate": 0.3333333333333333
+          "rate": 0.3076923076923077
         },
         "哈哈炫动.cn": {
           "filled": 132,
@@ -5898,14 +5927,6 @@
           "source": "e1:1274(金色)",
           "inter": 53,
           "rate": 1
-        },
-        "LifestyleChannel.cn": {
-          "filled": 175,
-          "before": 0,
-          "stage": "channel",
-          "source": "e1:1281(生活时尚)",
-          "inter": 21,
-          "rate": 0.42
         },
         "CHCAction.cn": {
           "filled": 29,
@@ -6101,12 +6122,6 @@
           "stage": "global",
           "source": "全局索引"
         },
-        "CCTVWorldGeography.cn": {
-          "filled": 1,
-          "before": 0,
-          "stage": "global",
-          "source": "全局索引"
-        },
         "CCTVHealth.cn": {
           "filled": 28,
           "before": 0,
@@ -6125,6 +6140,18 @@
           "stage": "global",
           "source": "全局索引"
         },
+        "求索动物.cn": {
+          "filled": 195,
+          "before": 0,
+          "stage": "global",
+          "source": "全局索引"
+        },
+        "求索科学.cn": {
+          "filled": 195,
+          "before": 0,
+          "stage": "global",
+          "source": "全局索引"
+        },
         "劲爆体育.cn": {
           "filled": 1,
           "before": 0,
@@ -6133,6 +6160,12 @@
         },
         "CHCHomeTheater.cn": {
           "filled": 10,
+          "before": 0,
+          "stage": "global",
+          "source": "全局索引"
+        },
+        "CHCFansMovieChannel.cn": {
+          "filled": 21,
           "before": 0,
           "stage": "global",
           "source": "全局索引"
@@ -6263,6 +6296,18 @@
           "stage": "global",
           "source": "全局索引"
         },
+        "CCTV中学生.cn": {
+          "filled": 14,
+          "before": 0,
+          "stage": "global",
+          "source": "全局索引"
+        },
+        "重温经典.cn": {
+          "filled": 17,
+          "before": 0,
+          "stage": "global",
+          "source": "全局索引"
+        },
         "YanbianSatelliteTV.cn": {
           "filled": 26,
           "before": 0,
@@ -6276,12 +6321,2259 @@
           "source": "e1:20"
         }
       },
-      "coverageBefore": 34.8,
-      "coverageAfter": 58.4
+      "coverageBefore": 33.1,
+      "coverageAfter": 58.1
     },
     "tvmao": {
-      "titles": 678,
-      "filled": 1013
+      "titles": 658,
+      "filled": 922
+    },
+    "kbro": {
+      "channels": 251,
+      "aligned": 75,
+      "globalTitles": 2875,
+      "filled": 1017,
+      "filledByChannel": 619,
+      "filledByGlobal": 398,
+      "dates": [
+        {
+          "ymd": "20261027"
+        },
+        {
+          "ymd": "20261028"
+        },
+        {
+          "ymd": "20261029"
+        }
+      ],
+      "detail": [
+        {
+          "id": "CCTV1.cn",
+          "name": "CCTV-1 综合",
+          "status": "none",
+          "mine": 134
+        },
+        {
+          "id": "CCTV2.cn",
+          "name": "CCTV-2 财经",
+          "status": "none",
+          "mine": 92
+        },
+        {
+          "id": "CCTV3.cn",
+          "name": "CCTV-3 综艺",
+          "status": "none",
+          "mine": 109
+        },
+        {
+          "id": "CCTV4Asia.cn",
+          "name": "CCTV-4 亚洲",
+          "status": "none",
+          "mine": 129
+        },
+        {
+          "id": "CCTV5.cn",
+          "name": "CCTV-5 体育",
+          "status": "none",
+          "mine": 97
+        },
+        {
+          "id": "CCTV5Plus.cn",
+          "name": "CCTV-5+ 体育赛事",
+          "status": "none",
+          "mine": 90
+        },
+        {
+          "id": "CCTV6.cn",
+          "name": "CCTV-6 电影",
+          "status": "none",
+          "mine": 105
+        },
+        {
+          "id": "CCTV7.cn",
+          "name": "CCTV-7 国防军事",
+          "status": "none",
+          "mine": 100
+        },
+        {
+          "id": "CCTV8.cn",
+          "name": "CCTV-8 电视剧",
+          "status": "none",
+          "mine": 200
+        },
+        {
+          "id": "CCTV9.cn",
+          "name": "CCTV-9 纪录",
+          "status": "none",
+          "mine": 31
+        },
+        {
+          "id": "CCTV10.cn",
+          "name": "CCTV-10 科教",
+          "status": "none",
+          "mine": 102
+        },
+        {
+          "id": "CCTV11.cn",
+          "name": "CCTV-11 戏曲",
+          "status": "none",
+          "mine": 89
+        },
+        {
+          "id": "CCTV12.cn",
+          "name": "CCTV-12 社会与法",
+          "status": "none",
+          "mine": 95
+        },
+        {
+          "id": "CCTV13.cn",
+          "name": "CCTV-13 新闻",
+          "status": "none",
+          "mine": 23
+        },
+        {
+          "id": "CCTV14.cn",
+          "name": "CCTV-14 少儿",
+          "status": "none",
+          "mine": 84
+        },
+        {
+          "id": "CCTV15.cn",
+          "name": "CCTV-15 音乐",
+          "status": "none",
+          "mine": 78
+        },
+        {
+          "id": "CCTV16.cn",
+          "name": "CCTV-16 奥林匹克",
+          "status": "none",
+          "mine": 123
+        },
+        {
+          "id": "CCTV17.cn",
+          "name": "CCTV-17 农业农村",
+          "status": "none",
+          "mine": 105
+        },
+        {
+          "id": "CCTV4K.cn",
+          "name": "CCTV-4K 超高清",
+          "status": "none",
+          "mine": 132
+        },
+        {
+          "id": "CCTV8K.cn",
+          "name": "CCTV-8K 超高清",
+          "status": "none",
+          "mine": 194
+        },
+        {
+          "id": "CCTV4Europe.cn",
+          "name": "CCTV-4 欧洲",
+          "status": "none",
+          "mine": 26
+        },
+        {
+          "id": "CCTV4America.cn",
+          "name": "CCTV-4 美洲",
+          "status": "none",
+          "mine": 23
+        },
+        {
+          "id": "HunanTV.cn",
+          "name": "湖南卫视",
+          "status": "none",
+          "mine": 25
+        },
+        {
+          "id": "ZhejiangSatelliteTV.cn",
+          "name": "浙江卫视",
+          "status": "none",
+          "mine": 52
+        },
+        {
+          "id": "JiangsuSatelliteTV.cn",
+          "name": "江苏卫视",
+          "status": "none",
+          "mine": 26
+        },
+        {
+          "id": "DragonTV.cn",
+          "name": "东方卫视",
+          "status": "none",
+          "mine": 28
+        },
+        {
+          "id": "BeijingSatelliteTV.cn",
+          "name": "北京卫视",
+          "status": "none",
+          "mine": 43
+        },
+        {
+          "id": "AnhuiSatelliteTV.cn",
+          "name": "安徽卫视",
+          "status": "none",
+          "mine": 34
+        },
+        {
+          "id": "ShandongSatelliteTV.cn",
+          "name": "山东卫视",
+          "status": "none",
+          "mine": 34
+        },
+        {
+          "id": "GuangdongSatelliteTV.cn",
+          "name": "广东卫视",
+          "status": "none",
+          "mine": 35
+        },
+        {
+          "id": "ShenzhenSatelliteTV.cn",
+          "name": "深圳卫视",
+          "status": "none",
+          "mine": 37
+        },
+        {
+          "id": "TianjinSatelliteTV.cn",
+          "name": "天津卫视",
+          "status": "none",
+          "mine": 22
+        },
+        {
+          "id": "ChongqingSatelliteTV.cn",
+          "name": "重庆卫视",
+          "status": "none",
+          "mine": 43
+        },
+        {
+          "id": "SichuanSatelliteTV.cn",
+          "name": "四川卫视",
+          "status": "none",
+          "mine": 46
+        },
+        {
+          "id": "HubeiSatelliteTV.cn",
+          "name": "湖北卫视",
+          "status": "none",
+          "mine": 32
+        },
+        {
+          "id": "HenanTVSatellite.cn",
+          "name": "河南卫视",
+          "status": "none",
+          "mine": 22
+        },
+        {
+          "id": "HebeiSatelliteTV.cn",
+          "name": "河北卫视",
+          "status": "none",
+          "mine": 34
+        },
+        {
+          "id": "ShanxiSatelliteTV.cn",
+          "name": "山西卫视",
+          "status": "none",
+          "mine": 26
+        },
+        {
+          "id": "ShaanxiSatelliteTV.cn",
+          "name": "陕西卫视",
+          "status": "none",
+          "mine": 37
+        },
+        {
+          "id": "LiaoningSatelliteTV.cn",
+          "name": "辽宁卫视",
+          "status": "none",
+          "mine": 30
+        },
+        {
+          "id": "JilinSatelliteTV.cn",
+          "name": "吉林卫视",
+          "status": "none",
+          "mine": 18
+        },
+        {
+          "id": "HeilongjiangSatelliteTV.cn",
+          "name": "黑龙江卫视",
+          "status": "none",
+          "mine": 22
+        },
+        {
+          "id": "JiangxiSatelliteTV.cn",
+          "name": "江西卫视",
+          "status": "none",
+          "mine": 34
+        },
+        {
+          "id": "FujianSatelliteTV.cn",
+          "name": "东南卫视",
+          "status": "none",
+          "mine": 46
+        },
+        {
+          "id": "GuangxiSatelliteTV.cn",
+          "name": "广西卫视",
+          "status": "none",
+          "mine": 34
+        },
+        {
+          "id": "YunnanSatelliteTV.cn",
+          "name": "云南卫视",
+          "status": "none",
+          "mine": 34
+        },
+        {
+          "id": "GuizhouSatelliteTV.cn",
+          "name": "贵州卫视",
+          "status": "none",
+          "mine": 43
+        },
+        {
+          "id": "GansuSatelliteTV.cn",
+          "name": "甘肃卫视",
+          "status": "none",
+          "mine": 25
+        },
+        {
+          "id": "QinghaiSatelliteTV.cn",
+          "name": "青海卫视",
+          "status": "none",
+          "mine": 24
+        },
+        {
+          "id": "NingxiaSatelliteChannel.cn",
+          "name": "宁夏卫视",
+          "status": "none",
+          "mine": 56
+        },
+        {
+          "id": "XinjiangSatelliteTV.cn",
+          "name": "新疆卫视",
+          "status": "none",
+          "mine": 16
+        },
+        {
+          "id": "TibetSatelliteTV.cn",
+          "name": "西藏卫视",
+          "status": "none",
+          "mine": 39
+        },
+        {
+          "id": "NeiMongolSatelliteTV.cn",
+          "name": "内蒙古卫视",
+          "status": "none",
+          "mine": 17
+        },
+        {
+          "id": "HainanSatelliteTV.cn",
+          "name": "海南卫视",
+          "status": "none",
+          "mine": 20
+        },
+        {
+          "id": "XiamenSatelliteTV.cn",
+          "name": "厦门卫视",
+          "status": "none",
+          "mine": 60
+        },
+        {
+          "id": "YanbianSatelliteTV.cn",
+          "name": "延边卫视",
+          "status": "none",
+          "mine": 19
+        },
+        {
+          "id": "BingtuanSatelliteTV.cn",
+          "name": "兵团卫视",
+          "status": "none",
+          "mine": 31
+        },
+        {
+          "id": "KangbaSatelliteTV.cn",
+          "name": "康巴卫视",
+          "status": "none",
+          "mine": 43
+        },
+        {
+          "id": "HuangheSatelliteTV.cn",
+          "name": "黄河卫视",
+          "status": "none",
+          "mine": 12
+        },
+        {
+          "id": "HaixiaSatelliteTV.cn",
+          "name": "海峡卫视",
+          "status": "none",
+          "mine": 29
+        },
+        {
+          "id": "GBASatelliteTV.cn",
+          "name": "大湾区卫视",
+          "status": "none",
+          "mine": 9
+        },
+        {
+          "id": "SanshaSatelliteTV.cn",
+          "name": "三沙卫视",
+          "status": "none",
+          "mine": 19
+        },
+        {
+          "id": "HunanTVInternational.cn",
+          "name": "湖南国际",
+          "status": "none",
+          "mine": 8
+        },
+        {
+          "id": "HunanEconomyChannel.cn",
+          "name": "湖南经视",
+          "status": "none",
+          "mine": 12
+        },
+        {
+          "id": "HunanEntertainmentChannel.cn",
+          "name": "湖南娱乐",
+          "status": "none",
+          "mine": 5
+        },
+        {
+          "id": "HunanDramaChannel.cn",
+          "name": "湖南电视剧",
+          "status": "none",
+          "mine": 6
+        },
+        {
+          "id": "ZhejiangEconomicChannel.cn",
+          "name": "浙江经视",
+          "status": "none",
+          "mine": 10
+        },
+        {
+          "id": "ZhejiangMinshengLeisure.cn",
+          "name": "浙江民生休闲",
+          "status": "none",
+          "mine": 14
+        },
+        {
+          "id": "ZhejiangFilmEntertainmentChannel.cn",
+          "name": "浙江影视",
+          "status": "none",
+          "mine": 1
+        },
+        {
+          "id": "ZhejiangChildrensChannel.cn",
+          "name": "浙江少儿",
+          "status": "none",
+          "mine": 1
+        },
+        {
+          "id": "JiangsuCityChannel.cn",
+          "name": "江苏城市",
+          "status": "none",
+          "mine": 16
+        },
+        {
+          "id": "JiangsuVarietyChannel.cn",
+          "name": "江苏综艺",
+          "status": "none",
+          "mine": 10
+        },
+        {
+          "id": "JiangsuMovieChannel.cn",
+          "name": "江苏影视",
+          "status": "none",
+          "mine": 6
+        },
+        {
+          "id": "JiangsuPublicNewsChannel.cn",
+          "name": "江苏公共新闻",
+          "status": "none",
+          "mine": 16
+        },
+        {
+          "id": "Jade.hk",
+          "name": "鏡電視新聞台HD",
+          "status": "weak",
+          "mine": 123,
+          "nameEq": false,
+          "channelId": "1086",
+          "inter": 2,
+          "rate": 0.016260162601626018
+        },
+        {
+          "id": "Pearl.hk",
+          "name": "明珠台",
+          "status": "none",
+          "mine": 54
+        },
+        {
+          "id": "TVBNewsChannel.hk",
+          "name": "鏡電視新聞台HD",
+          "status": "weak",
+          "mine": 108,
+          "nameEq": false,
+          "channelId": "1086",
+          "inter": 2,
+          "rate": 0.018518518518518517
+        },
+        {
+          "id": "GoldenJade.hk",
+          "name": "黃金翡翠台",
+          "status": "none",
+          "mine": 56
+        },
+        {
+          "id": "TVBPlus.hk",
+          "name": "TVB Plus",
+          "status": "none",
+          "mine": 73
+        },
+        {
+          "id": "ViuTV.hk",
+          "name": "ViuTV",
+          "status": "none",
+          "mine": 176
+        },
+        {
+          "id": "ViuTVsix.hk",
+          "name": "ViuTVsix",
+          "status": "none",
+          "mine": 121
+        },
+        {
+          "id": "RTHKTV31.hk",
+          "name": "港台电视31",
+          "status": "none",
+          "mine": 65
+        },
+        {
+          "id": "RTHKTV32.hk",
+          "name": "港台电视32",
+          "status": "none",
+          "mine": 35
+        },
+        {
+          "id": "RTHKTV33.hk",
+          "name": "港台电视33",
+          "status": "none",
+          "mine": 69
+        },
+        {
+          "id": "RTHKTV34.hk",
+          "name": "港台电视34",
+          "status": "none",
+          "mine": 67
+        },
+        {
+          "id": "RTHKTV35.hk",
+          "name": "港台电视35",
+          "status": "none",
+          "mine": 27
+        },
+        {
+          "id": "PhoenixChineseChannel.hk",
+          "name": "鳳凰衛視中文台",
+          "status": "none",
+          "mine": 70
+        },
+        {
+          "id": "PhoenixInfoNewsChannel.hk",
+          "name": "鳳凰衛視資訊台",
+          "status": "none",
+          "mine": 32
+        },
+        {
+          "id": "TTV.tw",
+          "name": "台視HD",
+          "status": "ok",
+          "mine": 36,
+          "nameEq": false,
+          "channelId": "8",
+          "inter": 20,
+          "rate": 0.5555555555555556
+        },
+        {
+          "id": "CTV.tw",
+          "name": "中視HD",
+          "status": "ok",
+          "mine": 24,
+          "nameEq": false,
+          "channelId": "1010",
+          "inter": 15,
+          "rate": 0.625
+        },
+        {
+          "id": "CTS.tw",
+          "name": "華視HD",
+          "status": "ok",
+          "mine": 31,
+          "nameEq": false,
+          "channelId": "12",
+          "inter": 16,
+          "rate": 0.5161290322580645
+        },
+        {
+          "id": "FTV.tw",
+          "name": "民視HD",
+          "status": "ok",
+          "mine": 29,
+          "nameEq": false,
+          "channelId": "606",
+          "inter": 15,
+          "rate": 0.5172413793103449
+        },
+        {
+          "id": "PTS.tw",
+          "name": "公視HD",
+          "status": "ok",
+          "mine": 71,
+          "nameEq": false,
+          "channelId": "1013",
+          "inter": 34,
+          "rate": 0.4788732394366197
+        },
+        {
+          "id": "TVBS.tw",
+          "name": "TVBS HD",
+          "status": "ok",
+          "mine": 21,
+          "nameEq": true,
+          "channelId": "1056",
+          "inter": 10,
+          "rate": 0.47619047619047616
+        },
+        {
+          "id": "TVBSNews.tw",
+          "name": "TVBS新聞台 HD",
+          "status": "ok",
+          "mine": 16,
+          "nameEq": true,
+          "channelId": "55",
+          "inter": 14,
+          "rate": 0.875
+        },
+        {
+          "id": "CTiTV.tw",
+          "name": "中天綜合台HD",
+          "status": "ok",
+          "mine": 17,
+          "nameEq": true,
+          "channelId": "1036",
+          "inter": 10,
+          "rate": 0.5882352941176471
+        },
+        {
+          "id": "SETNews.tw",
+          "name": "三立新聞HD",
+          "status": "ok",
+          "mine": 20,
+          "nameEq": true,
+          "channelId": "54",
+          "inter": 12,
+          "rate": 0.6
+        },
+        {
+          "id": "SETTaiwan.tw",
+          "name": "三立台灣台HD",
+          "status": "ok",
+          "mine": 18,
+          "nameEq": true,
+          "channelId": "29",
+          "inter": 10,
+          "rate": 0.5555555555555556
+        },
+        {
+          "id": "EBCNews.tw",
+          "name": "東森新聞HD",
+          "status": "ok",
+          "mine": 10,
+          "nameEq": true,
+          "channelId": "51",
+          "inter": 8,
+          "rate": 0.8
+        },
+        {
+          "id": "EBCVariety.tw",
+          "name": "東森綜合台HD",
+          "status": "ok",
+          "mine": 25,
+          "nameEq": true,
+          "channelId": "1032",
+          "inter": 14,
+          "rate": 0.56
+        },
+        {
+          "id": "FTVNews.tw",
+          "name": "民視新聞台HD",
+          "status": "ok",
+          "mine": 32,
+          "nameEq": true,
+          "channelId": "53",
+          "inter": 19,
+          "rate": 0.59375
+        },
+        {
+          "id": "CTVNewsChannel.tw",
+          "name": "中視新聞台HD",
+          "status": "ok",
+          "mine": 10,
+          "nameEq": true,
+          "channelId": "1154",
+          "inter": 7,
+          "rate": 0.7
+        },
+        {
+          "id": "CTSNews.tw",
+          "name": "華視新聞資訊台HD",
+          "status": "ok",
+          "mine": 15,
+          "nameEq": false,
+          "channelId": "296",
+          "inter": 7,
+          "rate": 0.4666666666666667
+        },
+        {
+          "id": "TTVNews.tw",
+          "name": "台視新聞台HD",
+          "status": "ok",
+          "mine": 33,
+          "nameEq": true,
+          "channelId": "302",
+          "inter": 25,
+          "rate": 0.7575757575757576
+        },
+        {
+          "id": "EBCYOYO.tw",
+          "name": "東森幼幼台HD",
+          "status": "ok",
+          "mine": 44,
+          "nameEq": true,
+          "channelId": "25",
+          "inter": 24,
+          "rate": 0.5454545454545454
+        },
+        {
+          "id": "CCTVWeaponTechnology.cn",
+          "name": "CCTV兵器科技",
+          "status": "none",
+          "mine": 91
+        },
+        {
+          "id": "CCTVTheFirstTheater.cn",
+          "name": "CCTV第一剧场",
+          "status": "none",
+          "mine": 4
+        },
+        {
+          "id": "CNDFilmDiscoveryChannel.cn",
+          "name": "CCTV发现之旅",
+          "status": "none",
+          "mine": 26
+        },
+        {
+          "id": "CCTVStormTheater.cn",
+          "name": "CCTV风云剧场",
+          "status": "none",
+          "mine": 3
+        },
+        {
+          "id": "CCTVStormMusic.cn",
+          "name": "CCTV风云音乐",
+          "status": "none",
+          "mine": 64
+        },
+        {
+          "id": "CCTVStormFootball.cn",
+          "name": "CCTV风云足球",
+          "status": "none",
+          "mine": 9
+        },
+        {
+          "id": "CCTVBilliards.cn",
+          "name": "CCTV央视台球",
+          "status": "none",
+          "mine": 41
+        },
+        {
+          "id": "CCTVGolfTennis.cn",
+          "name": "CCTV高尔夫网球",
+          "status": "none",
+          "mine": 16
+        },
+        {
+          "id": "CCTVNostalgiaTheater.cn",
+          "name": "CCTV怀旧剧场",
+          "status": "none",
+          "mine": 7
+        },
+        {
+          "id": "CNDFilmOldStoryChannel.cn",
+          "name": "CCTV老故事",
+          "status": "none",
+          "mine": 52
+        },
+        {
+          "id": "CCTVWomensFashion.cn",
+          "name": "CCTV女性时尚",
+          "status": "none",
+          "mine": 17
+        },
+        {
+          "id": "CCTVWorldGeography.cn",
+          "name": "CCTV世界地理",
+          "status": "none",
+          "mine": 90
+        },
+        {
+          "id": "CCTVHealth.cn",
+          "name": "CCTV卫生健康",
+          "status": "none",
+          "mine": 31
+        },
+        {
+          "id": "CCTVTVGuide.cn",
+          "name": "CCTV电视指南",
+          "status": "none",
+          "mine": 30
+        },
+        {
+          "id": "CGTN.cn",
+          "name": "CGTN",
+          "status": "none",
+          "mine": 30
+        },
+        {
+          "id": "CGTNFrench.cn",
+          "name": "CGTN法语",
+          "status": "none",
+          "mine": 15
+        },
+        {
+          "id": "CGTNDocumentary.cn",
+          "name": "CGTN纪录",
+          "status": "none",
+          "mine": 6
+        },
+        {
+          "id": "CETV1.cn",
+          "name": "CETV1",
+          "status": "none",
+          "mine": 31
+        },
+        {
+          "id": "CETV2.cn",
+          "name": "CETV2",
+          "status": "none",
+          "mine": 16
+        },
+        {
+          "id": "CETV4.cn",
+          "name": "CETV4",
+          "status": "none",
+          "mine": 25
+        },
+        {
+          "id": "BRTVKakuChildrensChannel.cn",
+          "name": "卡酷少儿",
+          "status": "none",
+          "mine": 16
+        },
+        {
+          "id": "GoldenEagleCartoon.cn",
+          "name": "金鹰卡通",
+          "status": "none",
+          "mine": 32
+        },
+        {
+          "id": "哈哈炫动.cn",
+          "name": "哈哈炫动",
+          "status": "none",
+          "mine": 5
+        },
+        {
+          "id": "JiaJiaCartoon.cn",
+          "name": "嘉佳卡通",
+          "status": "none",
+          "mine": 13
+        },
+        {
+          "id": "LiyuanTV.cn",
+          "name": "梨园频道",
+          "status": "none",
+          "mine": 8
+        },
+        {
+          "id": "求索纪录.cn",
+          "name": "求索纪录",
+          "status": "none",
+          "mine": 1
+        },
+        {
+          "id": "求索动物.cn",
+          "name": "求索动物",
+          "status": "none",
+          "mine": 2
+        },
+        {
+          "id": "求索科学.cn",
+          "name": "求索科学",
+          "status": "none",
+          "mine": 2
+        },
+        {
+          "id": "求索生活.cn",
+          "name": "求索生活",
+          "status": "none",
+          "mine": 1
+        },
+        {
+          "id": "GreatSportsChannel.cn",
+          "name": "五星体育",
+          "status": "none",
+          "mine": 35
+        },
+        {
+          "id": "魅力足球.cn",
+          "name": "魅力足球",
+          "status": "none",
+          "mine": 18
+        },
+        {
+          "id": "GameChannel.cn",
+          "name": "游戏风云",
+          "status": "none",
+          "mine": 18
+        },
+        {
+          "id": "劲爆体育.cn",
+          "name": "劲爆体育",
+          "status": "none",
+          "mine": 15
+        },
+        {
+          "id": "乐游.cn",
+          "name": "乐游",
+          "status": "none",
+          "mine": 41
+        },
+        {
+          "id": "AnimationShowChannel.cn",
+          "name": "动漫秀场",
+          "status": "none",
+          "mine": 11
+        },
+        {
+          "id": "CityTheaterChannel.cn",
+          "name": "都市剧场",
+          "status": "none",
+          "mine": 13
+        },
+        {
+          "id": "ChannelLaw.cn",
+          "name": "法治天地",
+          "status": "none",
+          "mine": 14
+        },
+        {
+          "id": "LaughterTheater.cn",
+          "name": "欢笑剧场",
+          "status": "none",
+          "mine": 20
+        },
+        {
+          "id": "金色学堂.cn",
+          "name": "金色学堂",
+          "status": "none",
+          "mine": 53
+        },
+        {
+          "id": "LifestyleChannel.cn",
+          "name": "生活时尚",
+          "status": "none",
+          "mine": 24
+        },
+        {
+          "id": "CHCAction.cn",
+          "name": "CHC动作电影",
+          "status": "none",
+          "mine": 17
+        },
+        {
+          "id": "CHCHomeTheater.cn",
+          "name": "CHC家庭影院",
+          "status": "none",
+          "mine": 15
+        },
+        {
+          "id": "CHCFansMovieChannel.cn",
+          "name": "CHC影迷电影",
+          "status": "none",
+          "mine": 69
+        },
+        {
+          "id": "EntertainmentNews.hk",
+          "name": "TVB娱乐新闻",
+          "status": "none",
+          "mine": 1
+        },
+        {
+          "id": "TVB千禧经典.hk",
+          "name": "TVB千禧经典",
+          "status": "none",
+          "mine": 61
+        },
+        {
+          "id": "nowNews.hk",
+          "name": "NOW新闻",
+          "status": "none",
+          "mine": 12
+        },
+        {
+          "id": "nowBusinessNewsChannel.hk",
+          "name": "Now财经",
+          "status": "none",
+          "mine": 21
+        },
+        {
+          "id": "PopC.hk",
+          "name": "PopC",
+          "status": "none",
+          "mine": 81
+        },
+        {
+          "id": "nowDirect.hk",
+          "name": "Now直播台",
+          "status": "none",
+          "mine": 8
+        },
+        {
+          "id": "ROCKAction.sg",
+          "name": "ROCK Action HD",
+          "status": "ok",
+          "mine": 24,
+          "nameEq": true,
+          "channelId": "146",
+          "inter": 10,
+          "rate": 0.4166666666666667
+        },
+        {
+          "id": "Thrill.hk",
+          "name": "Thrill",
+          "status": "none",
+          "mine": 37
+        },
+        {
+          "id": "ChineseOperaChannel.hk",
+          "name": "戏曲台",
+          "status": "none",
+          "mine": 104
+        },
+        {
+          "id": "黄金华剧台.hk",
+          "name": "黄金华剧台",
+          "status": "none",
+          "mine": 24
+        },
+        {
+          "id": "MeiAhMovieChannel.hk",
+          "name": "緯來電影台HD",
+          "status": "weak",
+          "mine": 92,
+          "nameEq": false,
+          "channelId": "63",
+          "inter": 2,
+          "rate": 0.021739130434782608
+        },
+        {
+          "id": "ZooMoo.sg",
+          "name": "ZooMoo",
+          "status": "none",
+          "mine": 48
+        },
+        {
+          "id": "TVBSEntertainmentChannel.tw",
+          "name": "TVBS歡樂台HD",
+          "status": "ok",
+          "mine": 18,
+          "nameEq": true,
+          "channelId": "42",
+          "inter": 9,
+          "rate": 0.5
+        },
+        {
+          "id": "TVBS精采.tw",
+          "name": "TVBS歡樂台HD",
+          "status": "ok",
+          "mine": 23,
+          "nameEq": false,
+          "channelId": "42",
+          "inter": 5,
+          "rate": 0.21739130434782608
+        },
+        {
+          "id": "ETTVFinancial.tw",
+          "name": "東森財經新聞HD",
+          "status": "ok",
+          "mine": 34,
+          "nameEq": true,
+          "channelId": "1057",
+          "inter": 21,
+          "rate": 0.6176470588235294
+        },
+        {
+          "id": "EBCSuper.tw",
+          "name": "超視HD",
+          "status": "ok",
+          "mine": 26,
+          "nameEq": false,
+          "channelId": "1033",
+          "inter": 19,
+          "rate": 0.7307692307692307
+        },
+        {
+          "id": "EBCMovie.tw",
+          "name": "東森電影台HD",
+          "status": "ok",
+          "mine": 61,
+          "nameEq": true,
+          "channelId": "62",
+          "inter": 30,
+          "rate": 0.4918032786885246
+        },
+        {
+          "id": "ETTVDrama.tw",
+          "name": "東森戲劇台HD",
+          "status": "ok",
+          "mine": 32,
+          "nameEq": true,
+          "channelId": "1040",
+          "inter": 12,
+          "rate": 0.375
+        },
+        {
+          "id": "EBCForeignMovie.tw",
+          "name": "東森洋片台HD",
+          "status": "ok",
+          "mine": 47,
+          "nameEq": true,
+          "channelId": "66",
+          "inter": 23,
+          "rate": 0.48936170212765956
+        },
+        {
+          "id": "EraNews.tw",
+          "name": "年代新聞HD",
+          "status": "ok",
+          "mine": 21,
+          "nameEq": true,
+          "channelId": "50",
+          "inter": 15,
+          "rate": 0.7142857142857143
+        },
+        {
+          "id": "UniqueBusinessNews.tw",
+          "name": "非凡新聞HD",
+          "status": "ok",
+          "mine": 34,
+          "nameEq": true,
+          "channelId": "1058",
+          "inter": 25,
+          "rate": 0.7352941176470589
+        },
+        {
+          "id": "非凡商业.tw",
+          "name": "非凡商業台HD",
+          "status": "ok",
+          "mine": 27,
+          "nameEq": true,
+          "channelId": "88",
+          "inter": 16,
+          "rate": 0.5925925925925926
+        },
+        {
+          "id": "寰宇新闻台湾.tw",
+          "name": "寰宇新聞台灣台",
+          "status": "ok",
+          "mine": 7,
+          "nameEq": true,
+          "channelId": "1085",
+          "inter": 5,
+          "rate": 0.7142857142857143
+        },
+        {
+          "id": "寰宇财经.tw",
+          "name": "寰宇財經台HD",
+          "status": "ok",
+          "mine": 24,
+          "nameEq": true,
+          "channelId": "149",
+          "inter": 16,
+          "rate": 0.6666666666666666
+        },
+        {
+          "id": "GlobalNews.tw",
+          "name": "寰宇新聞台",
+          "status": "ok",
+          "mine": 10,
+          "nameEq": true,
+          "channelId": "307",
+          "inter": 5,
+          "rate": 0.5
+        },
+        {
+          "id": "mnews.tw",
+          "name": "鏡電視新聞台HD",
+          "status": "ok",
+          "mine": 24,
+          "nameEq": true,
+          "channelId": "1086",
+          "inter": 17,
+          "rate": 0.7083333333333334
+        },
+        {
+          "id": "国会频道①.tw",
+          "name": "国会频道①",
+          "status": "none",
+          "mine": 1
+        },
+        {
+          "id": "国会频道②.tw",
+          "name": "国会频道②",
+          "status": "none",
+          "mine": 1
+        },
+        {
+          "id": "SETiNews.tw",
+          "name": "三立iNEWS HD",
+          "status": "ok",
+          "mine": 28,
+          "nameEq": false,
+          "channelId": "106",
+          "inter": 17,
+          "rate": 0.6071428571428571
+        },
+        {
+          "id": "三立综合.tw",
+          "name": "三立台灣台HD",
+          "status": "weak",
+          "mine": 18,
+          "nameEq": false,
+          "channelId": "29",
+          "inter": 2,
+          "rate": 0.1111111111111111
+        },
+        {
+          "id": "三立戏剧.tw",
+          "name": "三立台灣台HD",
+          "status": "weak",
+          "mine": 14,
+          "nameEq": false,
+          "channelId": "29",
+          "inter": 2,
+          "rate": 0.14285714285714285
+        },
+        {
+          "id": "SETMetro.tw",
+          "name": "三立都會台HD",
+          "status": "ok",
+          "mine": 16,
+          "nameEq": true,
+          "channelId": "30",
+          "inter": 7,
+          "rate": 0.4375
+        },
+        {
+          "id": "CTVClassic.tw",
+          "name": "中視菁采台HD",
+          "status": "weak",
+          "mine": 20,
+          "nameEq": false,
+          "channelId": "153",
+          "inter": 4,
+          "rate": 0.2
+        },
+        {
+          "id": "中视菁采.tw",
+          "name": "中視菁采台HD",
+          "status": "ok",
+          "mine": 18,
+          "nameEq": true,
+          "channelId": "153",
+          "inter": 13,
+          "rate": 0.7222222222222222
+        },
+        {
+          "id": "CTiEntertainment.tw",
+          "name": "中天娛樂台HD",
+          "status": "ok",
+          "mine": 22,
+          "nameEq": true,
+          "channelId": "39",
+          "inter": 11,
+          "rate": 0.5
+        },
+        {
+          "id": "CTiAsia.tw",
+          "name": "好消息HD",
+          "status": "weak",
+          "mine": 30,
+          "nameEq": false,
+          "channelId": "15",
+          "inter": 3,
+          "rate": 0.1
+        },
+        {
+          "id": "FTVOne.tw",
+          "name": "民視第一台HD",
+          "status": "ok",
+          "mine": 33,
+          "nameEq": true,
+          "channelId": "301",
+          "inter": 18,
+          "rate": 0.5454545454545454
+        },
+        {
+          "id": "FTVTaiwan.tw",
+          "name": "民視台灣台HD",
+          "status": "ok",
+          "mine": 37,
+          "nameEq": true,
+          "channelId": "1300",
+          "inter": 22,
+          "rate": 0.5945945945945946
+        },
+        {
+          "id": "FTVDrama.tw",
+          "name": "民视影剧",
+          "status": "none",
+          "mine": 15
+        },
+        {
+          "id": "FTVVariety.tw",
+          "name": "民视综艺",
+          "status": "none",
+          "mine": 14
+        },
+        {
+          "id": "FTVTravel.tw",
+          "name": "民视旅游",
+          "status": "none",
+          "mine": 14
+        },
+        {
+          "id": "PTSTaigi.tw",
+          "name": "公視台語台HD",
+          "status": "ok",
+          "mine": 46,
+          "nameEq": true,
+          "channelId": "14",
+          "inter": 17,
+          "rate": 0.3695652173913043
+        },
+        {
+          "id": "公视戏剧.tw",
+          "name": "公视戏剧",
+          "status": "none",
+          "mine": 35
+        },
+        {
+          "id": "台视综合.tw",
+          "name": "台視綜合台HD",
+          "status": "ok",
+          "mine": 28,
+          "nameEq": true,
+          "channelId": "157",
+          "inter": 10,
+          "rate": 0.35714285714285715
+        },
+        {
+          "id": "TTVFinance.tw",
+          "name": "台視財經台HD",
+          "status": "ok",
+          "mine": 26,
+          "nameEq": true,
+          "channelId": "308",
+          "inter": 16,
+          "rate": 0.6153846153846154
+        },
+        {
+          "id": "纬来综合.tw",
+          "name": "緯來綜合台HD",
+          "status": "ok",
+          "mine": 37,
+          "nameEq": true,
+          "channelId": "26",
+          "inter": 18,
+          "rate": 0.4864864864864865
+        },
+        {
+          "id": "VideolandDrama.tw",
+          "name": "緯來戲劇台HD",
+          "status": "ok",
+          "mine": 18,
+          "nameEq": true,
+          "channelId": "43",
+          "inter": 11,
+          "rate": 0.6111111111111112
+        },
+        {
+          "id": "VideolandJapan.tw",
+          "name": "緯來日本台HD",
+          "status": "ok",
+          "mine": 37,
+          "nameEq": true,
+          "channelId": "75",
+          "inter": 14,
+          "rate": 0.3783783783783784
+        },
+        {
+          "id": "VideolandMovie.tw",
+          "name": "緯來電影台HD",
+          "status": "ok",
+          "mine": 59,
+          "nameEq": true,
+          "channelId": "63",
+          "inter": 28,
+          "rate": 0.4745762711864407
+        },
+        {
+          "id": "VideolandSports.tw",
+          "name": "緯來體育台HD",
+          "status": "ok",
+          "mine": 22,
+          "nameEq": true,
+          "channelId": "72",
+          "inter": 13,
+          "rate": 0.5909090909090909
+        },
+        {
+          "id": "纬来育乐.tw",
+          "name": "緯來育樂台HD",
+          "status": "ok",
+          "mine": 45,
+          "nameEq": true,
+          "channelId": "71",
+          "inter": 12,
+          "rate": 0.26666666666666666
+        },
+        {
+          "id": "纬来精采.tw",
+          "name": "緯來精采台HD",
+          "status": "ok",
+          "mine": 31,
+          "nameEq": true,
+          "channelId": "123",
+          "inter": 4,
+          "rate": 0.12903225806451613
+        },
+        {
+          "id": "八大综艺.tw",
+          "name": "八大综艺",
+          "status": "none",
+          "mine": 35
+        },
+        {
+          "id": "八大精彩.tw",
+          "name": "八大精彩",
+          "status": "none",
+          "mine": 32
+        },
+        {
+          "id": "龙华经典.tw",
+          "name": "龙华经典",
+          "status": "none",
+          "mine": 56
+        },
+        {
+          "id": "龙华偶像.tw",
+          "name": "龙华偶像",
+          "status": "none",
+          "mine": 53
+        },
+        {
+          "id": "龙华戏剧.tw",
+          "name": "龙华戏剧",
+          "status": "none",
+          "mine": 54
+        },
+        {
+          "id": "CelestialClassicMovies.hk",
+          "name": "天映经典",
+          "status": "none",
+          "mine": 97
+        },
+        {
+          "id": "Catchplay电影.tw",
+          "name": "CATCHPLAY電影台HD",
+          "status": "ok",
+          "mine": 60,
+          "nameEq": true,
+          "channelId": "230",
+          "inter": 6,
+          "rate": 0.1
+        },
+        {
+          "id": "AMC.tw",
+          "name": "amc電影台HD",
+          "status": "ok",
+          "mine": 91,
+          "nameEq": false,
+          "channelId": "1208",
+          "inter": 45,
+          "rate": 0.4945054945054945
+        },
+        {
+          "id": "HollywoodMovieChannel.tw",
+          "name": "好萊塢電影台HD",
+          "status": "ok",
+          "mine": 48,
+          "nameEq": true,
+          "channelId": "68",
+          "inter": 22,
+          "rate": 0.4583333333333333
+        },
+        {
+          "id": "靖天电影.tw",
+          "name": "wedotv Movies HD",
+          "status": "weak",
+          "mine": 80,
+          "nameEq": false,
+          "channelId": "608",
+          "inter": 5,
+          "rate": 0.0625
+        },
+        {
+          "id": "龙华电影.tw",
+          "name": "龙华电影",
+          "status": "none",
+          "mine": 77
+        },
+        {
+          "id": "龙华洋片.tw",
+          "name": "龙华洋片",
+          "status": "none",
+          "mine": 87
+        },
+        {
+          "id": "采昌影剧.tw",
+          "name": "采昌影剧",
+          "status": "none",
+          "mine": 53
+        },
+        {
+          "id": "靖天映画.tw",
+          "name": "靖天映畫台HD",
+          "status": "ok",
+          "mine": 79,
+          "nameEq": true,
+          "channelId": "1233",
+          "inter": 12,
+          "rate": 0.1518987341772152
+        },
+        {
+          "id": "靖天戏剧.tw",
+          "name": "靖天戏剧",
+          "status": "none",
+          "mine": 22
+        },
+        {
+          "id": "靖洋戏剧.tw",
+          "name": "靖洋戏剧",
+          "status": "none",
+          "mine": 15
+        },
+        {
+          "id": "影迷数位电影.tw",
+          "name": "影迷数位电影",
+          "status": "none",
+          "mine": 44
+        },
+        {
+          "id": "经典电影台.tw",
+          "name": "经典电影台",
+          "status": "none",
+          "mine": 37
+        },
+        {
+          "id": "CMusic.tw",
+          "name": "Cmusic HD",
+          "status": "ok",
+          "mine": 1367,
+          "nameEq": true,
+          "channelId": "2219",
+          "inter": 679,
+          "rate": 0.4967081199707388
+        },
+        {
+          "id": "DreamWorks梦工厂动画.tw",
+          "name": "DREAMWORKS",
+          "status": "ok",
+          "mine": 22,
+          "nameEq": false,
+          "channelId": "212",
+          "inter": 15,
+          "rate": 0.6818181818181818
+        },
+        {
+          "id": "CinemaWorld.my",
+          "name": "CinemaWorld HD",
+          "status": "ok",
+          "mine": 58,
+          "nameEq": true,
+          "channelId": "1239",
+          "inter": 28,
+          "rate": 0.4827586206896552
+        },
+        {
+          "id": "精选动漫台.tw",
+          "name": "精选动漫台",
+          "status": "none",
+          "mine": 62
+        },
+        {
+          "id": "金光布袋戏.tw",
+          "name": "金光布袋戏",
+          "status": "none",
+          "mine": 24
+        },
+        {
+          "id": "AXN.tw",
+          "name": "AXN",
+          "status": "none",
+          "mine": 41
+        },
+        {
+          "id": "Cinemax.tw",
+          "name": "CINEMAX HD",
+          "status": "ok",
+          "mine": 66,
+          "nameEq": true,
+          "channelId": "70",
+          "inter": 6,
+          "rate": 0.09090909090909091
+        },
+        {
+          "id": "DAZN1.uk",
+          "name": "DAZN 1 HD",
+          "status": "ok",
+          "mine": 34,
+          "nameEq": true,
+          "channelId": "1098",
+          "inter": 16,
+          "rate": 0.47058823529411764
+        },
+        {
+          "id": "DAZN2.uk",
+          "name": "DAZN 1 HD",
+          "status": "ok",
+          "mine": 22,
+          "nameEq": false,
+          "channelId": "1098",
+          "inter": 12,
+          "rate": 0.5454545454545454
+        },
+        {
+          "id": "Discovery.tw",
+          "name": "Discovery 頻道HD",
+          "status": "ok",
+          "mine": 28,
+          "nameEq": true,
+          "channelId": "19",
+          "inter": 23,
+          "rate": 0.8214285714285714
+        },
+        {
+          "id": "DW德国之声.tw",
+          "name": "德國之聲電視台HD",
+          "status": "ok",
+          "mine": 21,
+          "nameEq": true,
+          "channelId": "255",
+          "inter": 5,
+          "rate": 0.23809523809523808
+        },
+        {
+          "id": "EYETVTravel.tw",
+          "name": "緯來育樂台HD",
+          "status": "weak",
+          "mine": 18,
+          "nameEq": false,
+          "channelId": "71",
+          "inter": 2,
+          "rate": 0.1111111111111111
+        },
+        {
+          "id": "EYETVDrama.tw",
+          "name": "EYETV戏剧",
+          "status": "none",
+          "mine": 21
+        },
+        {
+          "id": "HITS.tw",
+          "name": "HITS HD",
+          "status": "ok",
+          "mine": 9,
+          "nameEq": true,
+          "channelId": "1240",
+          "inter": 8,
+          "rate": 0.8888888888888888
+        },
+        {
+          "id": "博斯魅力.tw",
+          "name": "博斯魅力台",
+          "status": "ok",
+          "mine": 41,
+          "nameEq": true,
+          "channelId": "241",
+          "inter": 13,
+          "rate": 0.3170731707317073
+        },
+        {
+          "id": "博斯网球.tw",
+          "name": "博斯網球台",
+          "status": "ok",
+          "mine": 40,
+          "nameEq": true,
+          "channelId": "242",
+          "inter": 2,
+          "rate": 0.05
+        },
+        {
+          "id": "博斯无限Ⅰ.tw",
+          "name": "博斯无限Ⅰ",
+          "status": "none",
+          "mine": 40
+        },
+        {
+          "id": "博斯无限Ⅱ.tw",
+          "name": "博斯无限Ⅱ",
+          "status": "none",
+          "mine": 43
+        },
+        {
+          "id": "博斯运动Ⅰ.tw",
+          "name": "博斯網球台",
+          "status": "weak",
+          "mine": 51,
+          "nameEq": false,
+          "channelId": "242",
+          "inter": 3,
+          "rate": 0.058823529411764705
+        },
+        {
+          "id": "博斯运动Ⅱ.tw",
+          "name": "博斯運動二台",
+          "status": "ok",
+          "mine": 40,
+          "nameEq": true,
+          "channelId": "243",
+          "inter": 6,
+          "rate": 0.15
+        },
+        {
+          "id": "博斯高球Ⅰ.tw",
+          "name": "博斯高球台HD",
+          "status": "ok",
+          "mine": 20,
+          "nameEq": false,
+          "channelId": "224",
+          "inter": 19,
+          "rate": 0.95
+        },
+        {
+          "id": "博斯高球Ⅱ.tw",
+          "name": "博斯高球台HD",
+          "status": "ok",
+          "mine": 20,
+          "nameEq": false,
+          "channelId": "224",
+          "inter": 19,
+          "rate": 0.95
+        },
+        {
+          "id": "DaAi1.tw",
+          "name": "大愛2台HD",
+          "status": "weak",
+          "mine": 75,
+          "nameEq": false,
+          "channelId": "111",
+          "inter": 4,
+          "rate": 0.05333333333333334
+        },
+        {
+          "id": "DaAi2.tw",
+          "name": "大愛2台HD",
+          "status": "ok",
+          "mine": 32,
+          "nameEq": false,
+          "channelId": "111",
+          "inter": 22,
+          "rate": 0.6875
+        },
+        {
+          "id": "GoodTV.tw",
+          "name": "好消息HD",
+          "status": "ok",
+          "mine": 168,
+          "nameEq": true,
+          "channelId": "15",
+          "inter": 4,
+          "rate": 0.023809523809523808
+        },
+        {
+          "id": "Good2.tw",
+          "name": "好消息HD",
+          "status": "weak",
+          "mine": 168,
+          "nameEq": false,
+          "channelId": "15",
+          "inter": 4,
+          "rate": 0.023809523809523808
+        },
+        {
+          "id": "AsiaTravelTV.tw",
+          "name": "亞洲旅遊台",
+          "status": "ok",
+          "mine": 6,
+          "nameEq": true,
+          "channelId": "1305",
+          "inter": 6,
+          "rate": 1
+        },
+        {
+          "id": "智林体育.tw",
+          "name": "智林體育台HD",
+          "status": "ok",
+          "mine": 48,
+          "nameEq": true,
+          "channelId": "129",
+          "inter": 2,
+          "rate": 0.041666666666666664
+        },
+        {
+          "id": "靖天卡通.tw",
+          "name": "靖洋卡通台Nice Bingo HD",
+          "status": "weak",
+          "mine": 19,
+          "nameEq": false,
+          "channelId": "1215",
+          "inter": 2,
+          "rate": 0.10526315789473684
+        },
+        {
+          "id": "猪哥亮歌厅秀.tw",
+          "name": "猪哥亮歌厅秀",
+          "status": "none",
+          "mine": 15
+        },
+        {
+          "id": "HBO强档巨献.tw",
+          "name": "HBO強檔鉅獻HD",
+          "status": "ok",
+          "mine": 24,
+          "nameEq": true,
+          "channelId": "163",
+          "inter": 19,
+          "rate": 0.7916666666666666
+        },
+        {
+          "id": "HBO原创巨献.tw",
+          "name": "HBO原創鉅獻HD",
+          "status": "ok",
+          "mine": 60,
+          "nameEq": true,
+          "channelId": "162",
+          "inter": 33,
+          "rate": 0.55
+        },
+        {
+          "id": "HBO温馨家庭.tw",
+          "name": "HBO溫馨家庭HD",
+          "status": "ok",
+          "mine": 33,
+          "nameEq": true,
+          "channelId": "164",
+          "inter": 17,
+          "rate": 0.5151515151515151
+        },
+        {
+          "id": "爱尔达体育Ⅰ.tw",
+          "name": "爱尔达体育Ⅰ",
+          "status": "none",
+          "mine": 54
+        },
+        {
+          "id": "爱尔达体育Ⅱ.tw",
+          "name": "爱尔达体育Ⅱ",
+          "status": "none",
+          "mine": 48
+        },
+        {
+          "id": "爱尔达体育Ⅲ.tw",
+          "name": "爱尔达体育Ⅲ",
+          "status": "none",
+          "mine": 37
+        },
+        {
+          "id": "爱尔达影剧.tw",
+          "name": "爱尔达影剧",
+          "status": "none",
+          "mine": 14
+        },
+        {
+          "id": "爱尔达体育Ⅳ.tw",
+          "name": "爱尔达体育Ⅳ",
+          "status": "none",
+          "mine": 9
+        },
+        {
+          "id": "爱尔达娱乐.tw",
+          "name": "爱尔达娱乐",
+          "status": "none",
+          "mine": 50
+        },
+        {
+          "id": "爱尔达生活旅游.tw",
+          "name": "爱尔达生活旅游",
+          "status": "none",
+          "mine": 27
+        },
+        {
+          "id": "湖南电影.cn",
+          "name": "湖南电影",
+          "status": "none",
+          "mine": 8
+        },
+        {
+          "id": "GoldenEagleDocumentary.cn",
+          "name": "金鹰纪实",
+          "status": "none",
+          "mine": 12
+        },
+        {
+          "id": "快乐垂钓.cn",
+          "name": "快乐垂钓",
+          "status": "none",
+          "mine": 8
+        },
+        {
+          "id": "广东体育.cn",
+          "name": "广东体育",
+          "status": "none",
+          "mine": 74
+        },
+        {
+          "id": "GuangdongNewsChannel.cn",
+          "name": "广东新闻",
+          "status": "none",
+          "mine": 17
+        },
+        {
+          "id": "广东民生.cn",
+          "name": "广东民生",
+          "status": "none",
+          "mine": 14
+        },
+        {
+          "id": "广州新闻.cn",
+          "name": "广州新闻",
+          "status": "none",
+          "mine": 12
+        },
+        {
+          "id": "广州竞赛.cn",
+          "name": "广州竞赛",
+          "status": "none",
+          "mine": 8
+        },
+        {
+          "id": "农林卫视.cn",
+          "name": "农林卫视",
+          "status": "none",
+          "mine": 10
+        },
+        {
+          "id": "AsianFood.tw",
+          "name": "AsianFood",
+          "status": "none",
+          "mine": 59
+        },
+        {
+          "id": "阿里郎.tw",
+          "name": "Arirang TV HD",
+          "status": "ok",
+          "mine": 49,
+          "nameEq": false,
+          "channelId": "306",
+          "inter": 35,
+          "rate": 0.7142857142857143
+        },
+        {
+          "id": "我的欧洲电影.tw",
+          "name": "我的欧洲电影",
+          "status": "none",
+          "mine": 71
+        },
+        {
+          "id": "汕头经济.cn",
+          "name": "汕头经济",
+          "status": "none",
+          "mine": 9
+        },
+        {
+          "id": "广东珠江.cn",
+          "name": "广东珠江",
+          "status": "none",
+          "mine": 10
+        },
+        {
+          "id": "HBO电影.tw",
+          "name": "HBO HD頻道",
+          "status": "ok",
+          "mine": 37,
+          "nameEq": false,
+          "channelId": "122",
+          "inter": 26,
+          "rate": 0.7027027027027027
+        },
+        {
+          "id": "CCTV中学生.cn",
+          "name": "CCTV中学生",
+          "status": "none",
+          "mine": 107
+        },
+        {
+          "id": "重温经典.cn",
+          "name": "重温经典",
+          "status": "none",
+          "mine": 34
+        }
+      ],
+      "report": [
+        {
+          "id": "Pearl.hk",
+          "name": "明珠台",
+          "channelId": "",
+          "filled": 11
+        },
+        {
+          "id": "TVBNewsChannel.hk",
+          "name": "無綫新聞台",
+          "channelId": "",
+          "filled": 1
+        },
+        {
+          "id": "RTHKTV32.hk",
+          "name": "港台电视32",
+          "channelId": "",
+          "filled": 7
+        },
+        {
+          "id": "RTHKTV33.hk",
+          "name": "港台电视33",
+          "channelId": "",
+          "filled": 7
+        },
+        {
+          "id": "TTV.tw",
+          "name": "台視",
+          "channelId": "8",
+          "filled": 5
+        },
+        {
+          "id": "PTS.tw",
+          "name": "公視",
+          "channelId": "1013",
+          "filled": 118
+        },
+        {
+          "id": "EBCVariety.tw",
+          "name": "東森綜合",
+          "channelId": "1032",
+          "filled": 2
+        },
+        {
+          "id": "CTSNews.tw",
+          "name": "華視新聞",
+          "channelId": "296",
+          "filled": 45
+        },
+        {
+          "id": "TTVNews.tw",
+          "name": "台視新聞",
+          "channelId": "302",
+          "filled": 18
+        },
+        {
+          "id": "GoldenEagleCartoon.cn",
+          "name": "金鹰卡通",
+          "channelId": "",
+          "filled": 13
+        },
+        {
+          "id": "TVBS精采.tw",
+          "name": "TVBS精采",
+          "channelId": "42",
+          "filled": 59
+        },
+        {
+          "id": "EBCSuper.tw",
+          "name": "东森超视",
+          "channelId": "1033",
+          "filled": 1
+        },
+        {
+          "id": "UniqueBusinessNews.tw",
+          "name": "非凡新闻",
+          "channelId": "1058",
+          "filled": 6
+        },
+        {
+          "id": "寰宇财经.tw",
+          "name": "寰宇财经",
+          "channelId": "149",
+          "filled": 85
+        },
+        {
+          "id": "三立综合.tw",
+          "name": "三立综合",
+          "channelId": "",
+          "filled": 34
+        },
+        {
+          "id": "三立戏剧.tw",
+          "name": "三立戏剧",
+          "channelId": "",
+          "filled": 28
+        },
+        {
+          "id": "CTVClassic.tw",
+          "name": "中视经典",
+          "channelId": "",
+          "filled": 35
+        },
+        {
+          "id": "中视菁采.tw",
+          "name": "中视菁采",
+          "channelId": "153",
+          "filled": 92
+        },
+        {
+          "id": "CTiAsia.tw",
+          "name": "中天亚洲",
+          "channelId": "",
+          "filled": 25
+        },
+        {
+          "id": "TTVFinance.tw",
+          "name": "台视财经",
+          "channelId": "308",
+          "filled": 20
+        },
+        {
+          "id": "VideolandSports.tw",
+          "name": "纬来体育",
+          "channelId": "72",
+          "filled": 1
+        },
+        {
+          "id": "纬来精采.tw",
+          "name": "纬来精采",
+          "channelId": "123",
+          "filled": 59
+        },
+        {
+          "id": "龙华戏剧.tw",
+          "name": "龙华戏剧",
+          "channelId": "",
+          "filled": 4
+        },
+        {
+          "id": "龙华电影.tw",
+          "name": "龙华电影",
+          "channelId": "",
+          "filled": 3
+        },
+        {
+          "id": "龙华洋片.tw",
+          "name": "龙华洋片",
+          "channelId": "",
+          "filled": 1
+        },
+        {
+          "id": "采昌影剧.tw",
+          "name": "采昌影剧",
+          "channelId": "",
+          "filled": 14
+        },
+        {
+          "id": "影迷数位电影.tw",
+          "name": "影迷数位电影",
+          "channelId": "",
+          "filled": 3
+        },
+        {
+          "id": "DreamWorks梦工厂动画.tw",
+          "name": "DreamWorks梦工厂动画",
+          "channelId": "212",
+          "filled": 129
+        },
+        {
+          "id": "DAZN1.uk",
+          "name": "DAZN1",
+          "channelId": "1098",
+          "filled": 27
+        },
+        {
+          "id": "DAZN2.uk",
+          "name": "DAZN2",
+          "channelId": "1098",
+          "filled": 53
+        },
+        {
+          "id": "DW德国之声.tw",
+          "name": "DW德国之声",
+          "channelId": "255",
+          "filled": 3
+        },
+        {
+          "id": "EYETVTravel.tw",
+          "name": "EYETV旅游",
+          "channelId": "",
+          "filled": 51
+        },
+        {
+          "id": "EYETVDrama.tw",
+          "name": "EYETV戏剧",
+          "channelId": "",
+          "filled": 2
+        },
+        {
+          "id": "GoodTV.tw",
+          "name": "好消息Ⅰ",
+          "channelId": "15",
+          "filled": 26
+        },
+        {
+          "id": "Good2.tw",
+          "name": "好消息Ⅱ",
+          "channelId": "",
+          "filled": 21
+        },
+        {
+          "id": "广东民生.cn",
+          "name": "广东民生",
+          "channelId": "",
+          "filled": 3
+        },
+        {
+          "id": "阿里郎.tw",
+          "name": "阿里郎",
+          "channelId": "306",
+          "filled": 5
+        }
+      ]
     }
   },
   "detail": [
@@ -8559,27 +10851,30 @@
       "group": "satellite",
       "aliases": [],
       "logo": "",
-      "count": 121,
+      "count": 131,
       "days": 3,
       "perDay": {
-        "20261027": 39,
-        "20261028": 41,
+        "20261027": 43,
+        "20261028": 44,
         "20261029": 0,
         "20261030": 0,
         "20261031": 0,
         "20261101": 0,
-        "20261102": 41
+        "20261102": 44
       },
-      "withDesc": 61,
-      "descRate": 50,
+      "withDesc": 62,
+      "descRate": 47,
       "withCategory": 0,
-      "uniqTitles": 18,
+      "uniqTitles": 19,
       "first": "20261027000000 +0800",
-      "last": "20261102232000 +0800",
+      "last": "20261103000000 +0800",
       "usedSource": "tvmao:SANSHATV(三沙卫视)",
       "matchConfidence": "override",
       "matchedSourceName": "三沙卫视",
-      "alternatives": [],
+      "alternatives": [
+        "epgpw:539632(三沙卫视)",
+        "tvsou:79d20678(三沙卫视)"
+      ],
       "status": "partial"
     },
     {
@@ -8867,7 +11162,9 @@
       "usedSource": "z51:e1:660:浙江民生休闲(浙江民生休闲)",
       "matchConfidence": "override",
       "matchedSourceName": "浙江民生",
-      "alternatives": [],
+      "alternatives": [
+        "epgpw:539891(浙江民生休闲)"
+      ],
       "status": "partial"
     },
     {
@@ -9112,8 +11409,8 @@
         "20261101": 35,
         "20261102": 35
       },
-      "withDesc": 74,
-      "descRate": 31,
+      "withDesc": 85,
+      "descRate": 36,
       "withCategory": 0,
       "uniqTitles": 55,
       "first": "20261027001500 +0800",
@@ -9144,7 +11441,7 @@
         "20261101": 49,
         "20261102": 54
       },
-      "withDesc": 46,
+      "withDesc": 47,
       "descRate": 12,
       "withCategory": 0,
       "uniqTitles": 108,
@@ -9336,8 +11633,8 @@
         "20261101": 51,
         "20261102": 52
       },
-      "withDesc": 122,
-      "descRate": 32,
+      "withDesc": 129,
+      "descRate": 34,
       "withCategory": 0,
       "uniqTitles": 35,
       "first": "20261027000000 +0800",
@@ -9368,8 +11665,8 @@
         "20261101": 32,
         "20261102": 34
       },
-      "withDesc": 137,
-      "descRate": 54,
+      "withDesc": 144,
+      "descRate": 56,
       "withCategory": 0,
       "uniqTitles": 69,
       "first": "20261027000000 +0800",
@@ -9692,8 +11989,8 @@
         "20261101": 21,
         "20261102": 28
       },
-      "withDesc": 187,
-      "descRate": 97,
+      "withDesc": 192,
+      "descRate": 99,
       "withCategory": 0,
       "uniqTitles": 45,
       "first": "20261027000000 +0800",
@@ -9832,8 +12129,8 @@
         "20261101": 19,
         "20261102": 24
       },
-      "withDesc": 2,
-      "descRate": 1,
+      "withDesc": 120,
+      "descRate": 56,
       "withCategory": 0,
       "uniqTitles": 163,
       "first": "20261027000000 +0800",
@@ -10101,8 +12398,8 @@
         "20261101": 16,
         "20261102": 21
       },
-      "withDesc": 140,
-      "descRate": 93,
+      "withDesc": 142,
+      "descRate": 94,
       "withCategory": 0,
       "uniqTitles": 33,
       "first": "20261027000000 +0800",
@@ -10203,8 +12500,8 @@
         "20261101": 0,
         "20261102": 0
       },
-      "withDesc": 0,
-      "descRate": 0,
+      "withDesc": 45,
+      "descRate": 68,
       "withCategory": 0,
       "uniqTitles": 15,
       "first": "20261027010000 +0800",
@@ -10236,8 +12533,8 @@
         "20261101": 28,
         "20261102": 25
       },
-      "withDesc": 112,
-      "descRate": 63,
+      "withDesc": 130,
+      "descRate": 73,
       "withCategory": 0,
       "uniqTitles": 33,
       "first": "20261027000000 +0800",
@@ -10290,28 +12587,28 @@
         "兵器科技"
       ],
       "logo": "",
-      "count": 78,
-      "days": 2,
+      "count": 283,
+      "days": 7,
       "perDay": {
-        "20261027": 40,
+        "20261027": 39,
         "20261028": 38,
-        "20261029": 0,
-        "20261030": 0,
-        "20261031": 0,
-        "20261101": 0,
-        "20261102": 0
+        "20261029": 38,
+        "20261030": 39,
+        "20261031": 44,
+        "20261101": 45,
+        "20261102": 40
       },
-      "withDesc": 52,
-      "descRate": 67,
+      "withDesc": 172,
+      "descRate": 61,
       "withCategory": 0,
-      "uniqTitles": 37,
+      "uniqTitles": 91,
       "first": "20261027002100 +0800",
-      "last": "20261029001800 +0800",
-      "usedSource": "z51:e1:1652:兵器科技(兵器科技)",
+      "last": "20261103002100 +0800",
+      "usedSource": "tvmao:CCTVPAYFEE-CCTVPAYFEE8(兵器科技)",
       "matchConfidence": "exact",
       "matchedSourceName": "兵器科技",
       "alternatives": [],
-      "status": "partial"
+      "status": "full"
     },
     {
       "id": "CCTVTheFirstTheater.cn",
@@ -10354,10 +12651,10 @@
         "发现之旅"
       ],
       "logo": "",
-      "count": 351,
+      "count": 350,
       "days": 7,
       "perDay": {
-        "20261027": 51,
+        "20261027": 50,
         "20261028": 50,
         "20261029": 51,
         "20261030": 50,
@@ -10365,13 +12662,13 @@
         "20261101": 49,
         "20261102": 43
       },
-      "withDesc": 266,
+      "withDesc": 265,
       "descRate": 76,
       "withCategory": 0,
       "uniqTitles": 47,
       "first": "20261027000000 +0800",
       "last": "20261103000000 +0800",
-      "usedSource": "tvsou:c3758372(发现之旅)",
+      "usedSource": "tvmao:CCTVPAYFEE-CCTVFXZL(发现之旅)",
       "matchConfidence": "exact",
       "matchedSourceName": "发现之旅",
       "alternatives": [
@@ -10420,28 +12717,28 @@
         "风云音乐"
       ],
       "logo": "",
-      "count": 53,
-      "days": 2,
+      "count": 171,
+      "days": 7,
       "perDay": {
-        "20261027": 27,
+        "20261027": 26,
         "20261028": 26,
-        "20261029": 0,
-        "20261030": 0,
-        "20261031": 0,
-        "20261101": 0,
-        "20261102": 0
+        "20261029": 28,
+        "20261030": 22,
+        "20261031": 22,
+        "20261101": 23,
+        "20261102": 24
       },
-      "withDesc": 43,
-      "descRate": 81,
+      "withDesc": 115,
+      "descRate": 67,
       "withCategory": 0,
-      "uniqTitles": 28,
+      "uniqTitles": 64,
       "first": "20261027003200 +0800",
-      "last": "20261029004600 +0800",
-      "usedSource": "z51:e1:1646:风云音乐(风云音乐)",
+      "last": "20261103003200 +0800",
+      "usedSource": "tvmao:CCTVPAYFEE-CCTVPAYFEE2(风云音乐)",
       "matchConfidence": "exact",
       "matchedSourceName": "风云音乐",
       "alternatives": [],
-      "status": "partial"
+      "status": "full"
     },
     {
       "id": "CCTVStormFootball.cn",
@@ -10451,28 +12748,28 @@
         "风云足球"
       ],
       "logo": "",
-      "count": 72,
-      "days": 2,
+      "count": 133,
+      "days": 7,
       "perDay": {
-        "20261027": 36,
-        "20261028": 36,
-        "20261029": 0,
-        "20261030": 0,
-        "20261031": 0,
-        "20261101": 0,
-        "20261102": 0
+        "20261027": 19,
+        "20261028": 19,
+        "20261029": 19,
+        "20261030": 19,
+        "20261031": 19,
+        "20261101": 19,
+        "20261102": 19
       },
       "withDesc": 0,
       "descRate": 0,
       "withCategory": 0,
-      "uniqTitles": 30,
+      "uniqTitles": 9,
       "first": "20261027011000 +0800",
-      "last": "20261029011000 +0800",
-      "usedSource": "z51:e1:1424:风云足球(风云足球)",
+      "last": "20261102235000 +0800",
+      "usedSource": "tvmao:CCTVPAYFEE-CCTVPAYFEE1(风云足球)",
       "matchConfidence": "exact",
       "matchedSourceName": "风云足球",
       "alternatives": [],
-      "status": "partial"
+      "status": "full"
     },
     {
       "id": "CCTVBilliards.cn",
@@ -10579,30 +12876,30 @@
         "老故事"
       ],
       "logo": "",
-      "count": 110,
-      "days": 2,
+      "count": 348,
+      "days": 7,
       "perDay": {
-        "20261027": 52,
-        "20261028": 58,
-        "20261029": 0,
-        "20261030": 0,
-        "20261031": 0,
-        "20261101": 0,
-        "20261102": 0
+        "20261027": 49,
+        "20261028": 57,
+        "20261029": 55,
+        "20261030": 51,
+        "20261031": 51,
+        "20261101": 46,
+        "20261102": 39
       },
-      "withDesc": 83,
-      "descRate": 75,
+      "withDesc": 182,
+      "descRate": 52,
       "withCategory": 0,
-      "uniqTitles": 37,
+      "uniqTitles": 79,
       "first": "20261027000000 +0800",
-      "last": "20261029000000 +0800",
-      "usedSource": "z51:e1:1683:老故事(老故事)",
+      "last": "20261103000000 +0800",
+      "usedSource": "tvmao:CCTVPAYFEE-CCTVLAOGUSHI(CCTV老故事)",
       "matchConfidence": "exact",
       "matchedSourceName": "CCTV老故事",
       "alternatives": [
         "tvsou:e8166713(老故事)"
       ],
-      "status": "partial"
+      "status": "full"
     },
     {
       "id": "CCTVWomensFashion.cn",
@@ -10612,28 +12909,28 @@
         "女性时尚"
       ],
       "logo": "",
-      "count": 45,
-      "days": 2,
+      "count": 160,
+      "days": 7,
       "perDay": {
-        "20261027": 22,
+        "20261027": 21,
         "20261028": 23,
-        "20261029": 0,
-        "20261030": 0,
-        "20261031": 0,
-        "20261101": 0,
-        "20261102": 0
+        "20261029": 23,
+        "20261030": 23,
+        "20261031": 23,
+        "20261101": 23,
+        "20261102": 24
       },
-      "withDesc": 42,
-      "descRate": 93,
+      "withDesc": 143,
+      "descRate": 89,
       "withCategory": 0,
-      "uniqTitles": 22,
+      "uniqTitles": 41,
       "first": "20261027080000 +0800",
-      "last": "20261029000500 +0800",
-      "usedSource": "z51:e1:1653:女性时尚(女性时尚)",
+      "last": "20261103080000 +0800",
+      "usedSource": "tvmao:CCTVPAYFEE-CCTVPAYFEE9(女性时尚)",
       "matchConfidence": "exact",
       "matchedSourceName": "女性时尚",
       "alternatives": [],
-      "status": "partial"
+      "status": "full"
     },
     {
       "id": "CCTVWorldGeography.cn",
@@ -10643,28 +12940,28 @@
         "世界地理"
       ],
       "logo": "",
-      "count": 76,
-      "days": 2,
+      "count": 216,
+      "days": 7,
       "perDay": {
-        "20261027": 42,
-        "20261028": 34,
-        "20261029": 0,
-        "20261030": 0,
-        "20261031": 0,
-        "20261101": 0,
-        "20261102": 0
+        "20261027": 33,
+        "20261028": 28,
+        "20261029": 29,
+        "20261030": 29,
+        "20261031": 28,
+        "20261101": 35,
+        "20261102": 34
       },
-      "withDesc": 47,
-      "descRate": 62,
+      "withDesc": 180,
+      "descRate": 83,
       "withCategory": 0,
-      "uniqTitles": 48,
+      "uniqTitles": 94,
       "first": "20261027002500 +0800",
-      "last": "20261029002500 +0800",
-      "usedSource": "z51:e1:1649:世界地理(世界地理)",
+      "last": "20261103002500 +0800",
+      "usedSource": "tvmao:CCTVPAYFEE-CCTVPAYFEE5(世界地理)",
       "matchConfidence": "exact",
       "matchedSourceName": "世界地理",
       "alternatives": [],
-      "status": "partial"
+      "status": "full"
     },
     {
       "id": "CCTVHealth.cn",
@@ -10738,7 +13035,7 @@
       "group": "cctv",
       "aliases": [],
       "logo": "",
-      "count": 316,
+      "count": 320,
       "days": 7,
       "perDay": {
         "20261027": 52,
@@ -10747,12 +13044,12 @@
         "20261030": 44,
         "20261031": 42,
         "20261101": 43,
-        "20261102": 49
+        "20261102": 53
       },
       "withDesc": 204,
-      "descRate": 65,
+      "descRate": 64,
       "withCategory": 0,
-      "uniqTitles": 28,
+      "uniqTitles": 30,
       "first": "20261027000000 +0800",
       "last": "20261103000000 +0800",
       "usedSource": "tvmao:CCTV-CCTV19(CGTN)",
@@ -10953,21 +13250,21 @@
       "group": "pay",
       "aliases": [],
       "logo": "",
-      "count": 341,
+      "count": 366,
       "days": 7,
       "perDay": {
         "20261027": 16,
         "20261028": 17,
         "20261029": 17,
-        "20261030": 99,
-        "20261031": 88,
-        "20261101": 88,
+        "20261030": 100,
+        "20261031": 100,
+        "20261101": 100,
         "20261102": 16
       },
-      "withDesc": 298,
-      "descRate": 87,
+      "withDesc": 311,
+      "descRate": 85,
       "withCategory": 0,
-      "uniqTitles": 224,
+      "uniqTitles": 249,
       "first": "20261027000000 +0800",
       "last": "20261103000000 +0800",
       "usedSource": "tvmao:HUNANTV2(湖南金鹰卡通频道)",
@@ -11104,28 +13401,28 @@
       "group": "pay",
       "aliases": [],
       "logo": "",
-      "count": 56,
-      "days": 2,
+      "count": 195,
+      "days": 7,
       "perDay": {
-        "20261027": 28,
+        "20261027": 27,
         "20261028": 28,
-        "20261029": 0,
-        "20261030": 0,
-        "20261031": 0,
-        "20261101": 0,
-        "20261102": 0
+        "20261029": 28,
+        "20261030": 28,
+        "20261031": 28,
+        "20261101": 28,
+        "20261102": 28
       },
-      "withDesc": 56,
+      "withDesc": 195,
       "descRate": 100,
       "withCategory": 0,
       "uniqTitles": 2,
       "first": "20261027000500 +0800",
-      "last": "20261029000500 +0800",
-      "usedSource": "z51:e1:1640:求索动物(求索动物)",
+      "last": "20261103000500 +0800",
+      "usedSource": "tvmao:HSCM-QSDW(求索动物)",
       "matchConfidence": "exact",
       "matchedSourceName": "求索动物",
       "alternatives": [],
-      "status": "partial"
+      "status": "full"
     },
     {
       "id": "求索科学.cn",
@@ -11133,28 +13430,28 @@
       "group": "pay",
       "aliases": [],
       "logo": "",
-      "count": 56,
-      "days": 2,
+      "count": 195,
+      "days": 7,
       "perDay": {
-        "20261027": 28,
+        "20261027": 27,
         "20261028": 28,
-        "20261029": 0,
-        "20261030": 0,
-        "20261031": 0,
-        "20261101": 0,
-        "20261102": 0
+        "20261029": 28,
+        "20261030": 28,
+        "20261031": 28,
+        "20261101": 28,
+        "20261102": 28
       },
-      "withDesc": 56,
+      "withDesc": 195,
       "descRate": 100,
       "withCategory": 0,
       "uniqTitles": 2,
       "first": "20261027000500 +0800",
-      "last": "20261029000500 +0800",
-      "usedSource": "z51:e1:1638:求索科学(求索科学)",
+      "last": "20261103000500 +0800",
+      "usedSource": "tvmao:HSCM-QSKX(求索科学)",
       "matchConfidence": "exact",
       "matchedSourceName": "求索科学",
       "alternatives": [],
-      "status": "partial"
+      "status": "full"
     },
     {
       "id": "求索生活.cn",
@@ -11499,30 +13796,30 @@
       "group": "pay",
       "aliases": [],
       "logo": "",
-      "count": 377,
-      "days": 7,
+      "count": 103,
+      "days": 2,
       "perDay": {
-        "20261027": 60,
+        "20261027": 44,
         "20261028": 59,
-        "20261029": 49,
-        "20261030": 47,
-        "20261031": 49,
-        "20261101": 55,
-        "20261102": 58
+        "20261029": 0,
+        "20261030": 0,
+        "20261031": 0,
+        "20261101": 0,
+        "20261102": 0
       },
-      "withDesc": 287,
+      "withDesc": 78,
       "descRate": 76,
       "withCategory": 0,
-      "uniqTitles": 57,
-      "first": "20261027000900 +0800",
-      "last": "20261103000900 +0800",
-      "usedSource": "tvmao:SITV-FASHION(生活时尚)",
+      "uniqTitles": 27,
+      "first": "20261027001000 +0800",
+      "last": "20261029000700 +0800",
+      "usedSource": "z51:e1:1281:生活时尚(生活时尚)",
       "matchConfidence": "exact",
       "matchedSourceName": "生活时尚",
       "alternatives": [
         "tvmao:SITV-FASHION(生活时尚)"
       ],
-      "status": "full"
+      "status": "partial"
     },
     {
       "id": "CHCAction.cn",
@@ -11592,28 +13889,28 @@
       "group": "pay",
       "aliases": [],
       "logo": "",
-      "count": 29,
-      "days": 2,
+      "count": 81,
+      "days": 7,
       "perDay": {
-        "20261027": 14,
-        "20261028": 15,
-        "20261029": 0,
-        "20261030": 0,
-        "20261031": 0,
-        "20261101": 0,
-        "20261102": 0
+        "20261027": 10,
+        "20261028": 12,
+        "20261029": 11,
+        "20261030": 12,
+        "20261031": 11,
+        "20261101": 12,
+        "20261102": 13
       },
-      "withDesc": 25,
-      "descRate": 86,
+      "withDesc": 21,
+      "descRate": 26,
       "withCategory": 0,
-      "uniqTitles": 24,
+      "uniqTitles": 69,
       "first": "20261027011900 +0800",
-      "last": "20261029014000 +0800",
-      "usedSource": "z51:e1:1969:CHC影迷电影(CHC影迷电影)",
+      "last": "20261103011900 +0800",
+      "usedSource": "tvmao:CHC-CHC3(CHC影迷电影)",
       "matchConfidence": "exact",
       "matchedSourceName": "CHC影迷电影",
       "alternatives": [],
-      "status": "partial"
+      "status": "full"
     },
     {
       "id": "EntertainmentNews.hk",
@@ -12037,8 +14334,8 @@
         "20261101": 21,
         "20261102": 0
       },
-      "withDesc": 19,
-      "descRate": 16,
+      "withDesc": 78,
+      "descRate": 64,
       "withCategory": 0,
       "uniqTitles": 50,
       "first": "20261027000000 +0800",
@@ -12103,8 +14400,8 @@
         "20261101": 20,
         "20261102": 24
       },
-      "withDesc": 157,
-      "descRate": 99,
+      "withDesc": 158,
+      "descRate": 100,
       "withCategory": 0,
       "uniqTitles": 81,
       "first": "20261027000000 +0800",
@@ -12258,8 +14555,8 @@
         "20261101": 26,
         "20261102": 27
       },
-      "withDesc": 164,
-      "descRate": 93,
+      "withDesc": 170,
+      "descRate": 97,
       "withCategory": 0,
       "uniqTitles": 34,
       "first": "20261027000000 +0800",
@@ -12354,8 +14651,8 @@
         "20261101": 24,
         "20261102": 24
       },
-      "withDesc": 62,
-      "descRate": 37,
+      "withDesc": 147,
+      "descRate": 88,
       "withCategory": 0,
       "uniqTitles": 24,
       "first": "20261027000000 +0800",
@@ -12557,8 +14854,8 @@
         "20261101": 17,
         "20261102": 0
       },
-      "withDesc": 12,
-      "descRate": 9,
+      "withDesc": 46,
+      "descRate": 36,
       "withCategory": 0,
       "uniqTitles": 41,
       "first": "20261027000000 +0800",
@@ -12590,8 +14887,8 @@
         "20261101": 15,
         "20261102": 0
       },
-      "withDesc": 5,
-      "descRate": 4,
+      "withDesc": 33,
+      "descRate": 29,
       "withCategory": 0,
       "uniqTitles": 44,
       "first": "20261027000000 +0800",
@@ -12652,8 +14949,8 @@
         "20261101": 20,
         "20261102": 28
       },
-      "withDesc": 7,
-      "descRate": 4,
+      "withDesc": 42,
+      "descRate": 23,
       "withCategory": 0,
       "uniqTitles": 95,
       "first": "20261027000000 +0800",
@@ -12683,8 +14980,8 @@
         "20261101": 19,
         "20261102": 21
       },
-      "withDesc": 14,
-      "descRate": 10,
+      "withDesc": 106,
+      "descRate": 77,
       "withCategory": 0,
       "uniqTitles": 64,
       "first": "20261027000000 +0800",
@@ -12745,8 +15042,8 @@
         "20261101": 26,
         "20261102": 25
       },
-      "withDesc": 0,
-      "descRate": 0,
+      "withDesc": 25,
+      "descRate": 14,
       "withCategory": 0,
       "uniqTitles": 30,
       "first": "20261027000000 +0800",
@@ -13036,8 +15333,8 @@
         "20261101": 27,
         "20261102": 27
       },
-      "withDesc": 133,
-      "descRate": 84,
+      "withDesc": 153,
+      "descRate": 97,
       "withCategory": 0,
       "uniqTitles": 26,
       "first": "20261027000000 +0800",
@@ -13193,7 +15490,7 @@
         "20261101": 22,
         "20261102": 20
       },
-      "withDesc": 129,
+      "withDesc": 130,
       "descRate": 98,
       "withCategory": 0,
       "uniqTitles": 26,
@@ -13255,8 +15552,8 @@
         "20261101": 18,
         "20261102": 0
       },
-      "withDesc": 0,
-      "descRate": 0,
+      "withDesc": 59,
+      "descRate": 46,
       "withCategory": 0,
       "uniqTitles": 74,
       "first": "20261027000000 +0800",
@@ -13412,8 +15709,8 @@
         "20261101": 14,
         "20261102": 0
       },
-      "withDesc": 16,
-      "descRate": 20,
+      "withDesc": 20,
+      "descRate": 25,
       "withCategory": 0,
       "uniqTitles": 61,
       "first": "20261027000000 +0800",
@@ -13604,8 +15901,8 @@
         "20261101": 10,
         "20261102": 11
       },
-      "withDesc": 1,
-      "descRate": 1,
+      "withDesc": 4,
+      "descRate": 5,
       "withCategory": 0,
       "uniqTitles": 77,
       "first": "20261027013000 +0800",
@@ -13635,8 +15932,8 @@
         "20261101": 11,
         "20261102": 13
       },
-      "withDesc": 2,
-      "descRate": 2,
+      "withDesc": 3,
+      "descRate": 3,
       "withCategory": 0,
       "uniqTitles": 87,
       "first": "20261027011500 +0800",
@@ -13666,8 +15963,8 @@
         "20261101": 20,
         "20261102": 17
       },
-      "withDesc": 0,
-      "descRate": 0,
+      "withDesc": 14,
+      "descRate": 12,
       "withCategory": 0,
       "uniqTitles": 61,
       "first": "20261027000000 +0800",
@@ -13800,8 +16097,8 @@
         "20261101": 12,
         "20261102": 13
       },
-      "withDesc": 0,
-      "descRate": 0,
+      "withDesc": 3,
+      "descRate": 3,
       "withCategory": 0,
       "uniqTitles": 44,
       "first": "20261027000000 +0800",
@@ -13893,8 +16190,8 @@
         "20261101": 0,
         "20261102": 0
       },
-      "withDesc": 0,
-      "descRate": 0,
+      "withDesc": 129,
+      "descRate": 69,
       "withCategory": 0,
       "uniqTitles": 22,
       "first": "20261027002000 +0800",
@@ -14082,8 +16379,8 @@
         "20261101": 17,
         "20261102": 17
       },
-      "withDesc": 68,
-      "descRate": 63,
+      "withDesc": 83,
+      "descRate": 77,
       "withCategory": 0,
       "uniqTitles": 34,
       "first": "20261027013000 +0800",
@@ -14113,8 +16410,8 @@
         "20261101": 18,
         "20261102": 14
       },
-      "withDesc": 38,
-      "descRate": 36,
+      "withDesc": 73,
+      "descRate": 69,
       "withCategory": 0,
       "uniqTitles": 22,
       "first": "20261027000000 +0800",
@@ -14161,7 +16458,9 @@
       "name": "DW德国之声",
       "group": "tw",
       "aliases": [
-        "DW德國之聲"
+        "DW德國之聲",
+        "德國之聲",
+        "德国之声"
       ],
       "logo": "https://epg.pw/media/images/epg/2024/06/12/20240612111756574035_95.png",
       "count": 218,
@@ -14175,8 +16474,8 @@
         "20261101": 0,
         "20261102": 0
       },
-      "withDesc": 7,
-      "descRate": 3,
+      "withDesc": 10,
+      "descRate": 5,
       "withCategory": 0,
       "uniqTitles": 21,
       "first": "20261027000000 +0800",
@@ -14184,7 +16483,9 @@
       "usedSource": "epgpw:370254(DW德國之聲)",
       "matchConfidence": "exact",
       "matchedSourceName": "DW德國之聲",
-      "alternatives": [],
+      "alternatives": [
+        "epgpw:457352(德國之聲)"
+      ],
       "status": "partial"
     },
     {
@@ -14206,8 +16507,8 @@
         "20261101": 26,
         "20261102": 0
       },
-      "withDesc": 12,
-      "descRate": 8,
+      "withDesc": 63,
+      "descRate": 43,
       "withCategory": 0,
       "uniqTitles": 18,
       "first": "20261027000000 +0800",
@@ -14237,8 +16538,8 @@
         "20261101": 24,
         "20261102": 0
       },
-      "withDesc": 0,
-      "descRate": 0,
+      "withDesc": 2,
+      "descRate": 1,
       "withCategory": 0,
       "uniqTitles": 86,
       "first": "20261027000000 +0800",
@@ -14557,7 +16858,9 @@
       "name": "大爱Ⅰ",
       "group": "tw",
       "aliases": [
-        "大爱一台"
+        "大爱一台",
+        "大愛",
+        "大爱"
       ],
       "logo": "",
       "count": 140,
@@ -14637,8 +16940,8 @@
         "20261101": 36,
         "20261102": 48
       },
-      "withDesc": 0,
-      "descRate": 0,
+      "withDesc": 26,
+      "descRate": 8,
       "withCategory": 0,
       "uniqTitles": 180,
       "first": "20261027000000 +0800",
@@ -14671,8 +16974,8 @@
         "20261101": 36,
         "20261102": 48
       },
-      "withDesc": 0,
-      "descRate": 0,
+      "withDesc": 21,
+      "descRate": 6,
       "withCategory": 0,
       "uniqTitles": 180,
       "first": "20261027000000 +0800",
@@ -15294,8 +17597,8 @@
         "20261101": 0,
         "20261102": 0
       },
-      "withDesc": 46,
-      "descRate": 68,
+      "withDesc": 49,
+      "descRate": 72,
       "withCategory": 0,
       "uniqTitles": 14,
       "first": "20261027002400 +0800",
@@ -15393,7 +17696,9 @@
       "usedSource": "epgpw:570491(陕西农林卫视)",
       "matchConfidence": "override",
       "matchedSourceName": "陕西农林卫视",
-      "alternatives": [],
+      "alternatives": [
+        "tvmao:SHXITV/SHXITV9(SHXITV/SHXITV9)"
+      ],
       "status": "partial"
     },
     {
@@ -15426,7 +17731,9 @@
       "usedSource": "epgpw:457281(亞洲美食頻道)",
       "matchConfidence": "override",
       "matchedSourceName": "亞洲美食頻道",
-      "alternatives": [],
+      "alternatives": [
+        "epgpw:410370(亞洲美食台)"
+      ],
       "status": "full"
     },
     {
@@ -15557,7 +17864,9 @@
       "usedSource": "epgpw:544420(中央台–珠江)",
       "matchConfidence": "override",
       "matchedSourceName": "中央台–珠江",
-      "alternatives": [],
+      "alternatives": [
+        "epgpw:539669(广东珠江)"
+      ],
       "status": "partial"
     },
     {
@@ -15589,6 +17898,74 @@
       "usedSource": "epgpw:456655(HBO HD)",
       "matchConfidence": "override",
       "matchedSourceName": "HBO HD",
+      "alternatives": [
+        "epgpw:410283(HBO)",
+        "epgpw:456567(HBO)"
+      ],
+      "status": "full"
+    },
+    {
+      "id": "CCTV中学生.cn",
+      "name": "CCTV中学生",
+      "group": "pay",
+      "aliases": [
+        "中学生频道",
+        "CCTV中学生频道",
+        "CCTV-中学生"
+      ],
+      "logo": "",
+      "count": 319,
+      "days": 7,
+      "perDay": {
+        "20261027": 34,
+        "20261028": 51,
+        "20261029": 54,
+        "20261030": 48,
+        "20261031": 40,
+        "20261101": 42,
+        "20261102": 50
+      },
+      "withDesc": 14,
+      "descRate": 4,
+      "withCategory": 0,
+      "uniqTitles": 214,
+      "first": "20261027091900 +0800",
+      "last": "20261103080100 +0800",
+      "usedSource": "tvmao:CCTVPAYFEE-CCTVPAYFEE35(CCTV中学生频道)",
+      "matchConfidence": "override",
+      "matchedSourceName": "CCTV中学生频道",
+      "alternatives": [],
+      "status": "full"
+    },
+    {
+      "id": "重温经典.cn",
+      "name": "重温经典",
+      "group": "pay",
+      "aliases": [
+        "重温经典频道",
+        "重溫經典"
+      ],
+      "logo": "",
+      "count": 161,
+      "days": 7,
+      "perDay": {
+        "20261027": 21,
+        "20261028": 22,
+        "20261029": 22,
+        "20261030": 22,
+        "20261031": 22,
+        "20261101": 22,
+        "20261102": 30
+      },
+      "withDesc": 17,
+      "descRate": 11,
+      "withCategory": 0,
+      "uniqTitles": 34,
+      "first": "20261027060200 +0800",
+      "last": "20261103060200 +0800",
+      "usedSource": "tvmao:BAMC-CWJINGDIAN(重温经典频道)",
+      "matchConfidence": "override",
+      "matchedSourceName": "重温经典频道",
       "alternatives": [],
       "status": "full"
     }
