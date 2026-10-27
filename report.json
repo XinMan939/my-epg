@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T18:28:53.729Z",
+  "generatedAt": "2026-10-27T18:30:34.223Z",
   "days": 7,
   "dayList": [
     "20261028",
@@ -15,8 +15,8 @@
   "channelsEmpty": 10,
   "channelsFull": 195,
   "channelsPartial": 83,
-  "programmesTotal": 54366,
-  "programmesWithDesc": 32527,
+  "programmesTotal": 54333,
+  "programmesWithDesc": 32503,
   "descCoverage": 60,
   "dateRange": [
     "20261028",
@@ -24,8 +24,8 @@
   ],
   "sourceStats": {
     "epgpw": 179,
-    "webncode": 17,
     "tvmao": 43,
+    "webncode": 17,
     "fengshows": 1,
     "litv": 13,
     "tdm": 6,
@@ -549,7 +549,6 @@
       "alternatives": [
         "epgpw:572158(山东卫视)",
         "epgpw:539740(山东卫视)",
-        "tvmao:SDTV1(山东卫视)",
         "tvsou:c62d45e9(山东卫视)",
         "tvsou:c5210e9b(山东卫视（高清）)"
       ]
@@ -1183,7 +1182,7 @@
       ]
     },
     "MacauTV.hk": {
-      "confidence": "override-unlisted",
+      "confidence": "override",
       "source": "tdm",
       "sourceId": "1",
       "sourceName": "澳視澳門",
@@ -2794,35 +2793,35 @@
       "alternatives": []
     },
     "MacauPortuguese.hk": {
-      "confidence": "override-unlisted",
+      "confidence": "override",
       "source": "tdm",
       "sourceId": "2",
       "sourceName": "澳視葡文",
       "alternatives": []
     },
     "MacauSports.hk": {
-      "confidence": "override-unlisted",
+      "confidence": "override",
       "source": "tdm",
       "sourceId": "6",
       "sourceName": "澳門體育",
       "alternatives": []
     },
     "MacauInfo.hk": {
-      "confidence": "override-unlisted",
+      "confidence": "override",
       "source": "tdm",
       "sourceId": "5",
       "sourceName": "澳門資訊",
       "alternatives": []
     },
     "MacauVariety.hk": {
-      "confidence": "override-unlisted",
+      "confidence": "override",
       "source": "tdm",
       "sourceId": "7",
       "sourceName": "澳門綜藝",
       "alternatives": []
     },
     "MacauSatellite.hk": {
-      "confidence": "override-unlisted",
+      "confidence": "override",
       "source": "tdm",
       "sourceId": "8",
       "sourceName": "澳門-Macau",
@@ -3231,11 +3230,35 @@
   ],
   "dayFillStats": [
     {
-      "id": "CCTV1.cn",
+      "id": "CCTV3.cn",
       "before": 6,
       "after": 7,
       "sources": [
-        "tvmao:CCTV-CCTV1+38"
+        "tvmao:CCTV-CCTV3+21"
+      ]
+    },
+    {
+      "id": "CCTV2.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTV-CCTV2+41"
+      ]
+    },
+    {
+      "id": "CCTV5.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTV-CCTV5+23"
+      ]
+    },
+    {
+      "id": "CCTV5Plus.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTV-CCTV5-PLUS+17"
       ]
     },
     {
@@ -3271,19 +3294,11 @@
       ]
     },
     {
-      "id": "CCTV3.cn",
+      "id": "CCTV10.cn",
       "before": 6,
       "after": 7,
       "sources": [
-        "tvmao:CCTV-CCTV3+21"
-      ]
-    },
-    {
-      "id": "CCTV5.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTV-CCTV5+23"
+        "tvmao:CCTV-CCTV10+37"
       ]
     },
     {
@@ -3295,19 +3310,19 @@
       ]
     },
     {
-      "id": "CCTV5Plus.cn",
+      "id": "CCTV11.cn",
       "before": 6,
       "after": 7,
       "sources": [
-        "tvmao:CCTV-CCTV5-PLUS+17"
+        "tvmao:CCTV-CCTV11+19"
       ]
     },
     {
-      "id": "CCTV10.cn",
+      "id": "CCTV13.cn",
       "before": 6,
       "after": 7,
       "sources": [
-        "tvmao:CCTV-CCTV10+37"
+        "tvmao:CCTV-CCTV13+42"
       ]
     },
     {
@@ -3327,19 +3342,11 @@
       ]
     },
     {
-      "id": "CCTV11.cn",
+      "id": "CCTV14.cn",
       "before": 6,
       "after": 7,
       "sources": [
-        "tvmao:CCTV-CCTV11+19"
-      ]
-    },
-    {
-      "id": "CCTV2.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTV-CCTV2+41"
+        "tvmao:CCTV-CCTV15+21"
       ]
     },
     {
@@ -3359,14 +3366,6 @@
       ]
     },
     {
-      "id": "CCTV13.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTV-CCTV13+42"
-      ]
-    },
-    {
       "id": "HunanTV.cn",
       "before": 5,
       "after": 7,
@@ -3383,35 +3382,11 @@
       ]
     },
     {
-      "id": "JiangsuSatelliteTV.cn",
-      "before": 5,
-      "after": 7,
-      "sources": [
-        "tvmao:JSTV1+60"
-      ]
-    },
-    {
       "id": "DragonTV.cn",
       "before": 5,
       "after": 7,
       "sources": [
         "tvmao:DONGFANG1+83"
-      ]
-    },
-    {
-      "id": "CCTV14.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTV-CCTV15+21"
-      ]
-    },
-    {
-      "id": "AnhuiSatelliteTV.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:AHTV1+36"
       ]
     },
     {
@@ -3423,27 +3398,11 @@
       ]
     },
     {
-      "id": "ShandongSatelliteTV.cn",
+      "id": "AnhuiSatelliteTV.cn",
       "before": 6,
       "after": 7,
       "sources": [
-        "tvmao:SDTV1+33"
-      ]
-    },
-    {
-      "id": "TianjinSatelliteTV.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:TJTV1+34"
-      ]
-    },
-    {
-      "id": "ShenzhenSatelliteTV.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:SZTV1+44"
+        "tvmao:AHTV1+36"
       ]
     },
     {
@@ -3455,6 +3414,30 @@
       ]
     },
     {
+      "id": "JiangsuSatelliteTV.cn",
+      "before": 5,
+      "after": 7,
+      "sources": [
+        "tvmao:JSTV1+60"
+      ]
+    },
+    {
+      "id": "ShenzhenSatelliteTV.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:SZTV1+44"
+      ]
+    },
+    {
+      "id": "TianjinSatelliteTV.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:TJTV1+34"
+      ]
+    },
+    {
       "id": "ChongqingSatelliteTV.cn",
       "before": 6,
       "after": 7,
@@ -3463,27 +3446,19 @@
       ]
     },
     {
-      "id": "HubeiSatelliteTV.cn",
-      "before": 5,
-      "after": 7,
-      "sources": [
-        "tvmao:HUBEI1+66"
-      ]
-    },
-    {
-      "id": "CCTV4Asia.cn",
-      "before": 5,
-      "after": 6,
-      "sources": [
-        "epgpw:410375+38"
-      ]
-    },
-    {
       "id": "SichuanSatelliteTV.cn",
       "before": 6,
       "after": 7,
       "sources": [
         "tvmao:SCTV1+32"
+      ]
+    },
+    {
+      "id": "HubeiSatelliteTV.cn",
+      "before": 5,
+      "after": 7,
+      "sources": [
+        "tvmao:HUBEI1+66"
       ]
     },
     {
@@ -3535,14 +3510,6 @@
       ]
     },
     {
-      "id": "HeilongjiangSatelliteTV.cn",
-      "before": 5,
-      "after": 7,
-      "sources": [
-        "tvmao:HLJTV1+61"
-      ]
-    },
-    {
       "id": "JiangxiSatelliteTV.cn",
       "before": 5,
       "after": 7,
@@ -3551,11 +3518,27 @@
       ]
     },
     {
+      "id": "HeilongjiangSatelliteTV.cn",
+      "before": 5,
+      "after": 7,
+      "sources": [
+        "tvmao:HLJTV1+61"
+      ]
+    },
+    {
       "id": "FujianSatelliteTV.cn",
       "before": 6,
       "after": 7,
       "sources": [
         "tvmao:FJTV2+41"
+      ]
+    },
+    {
+      "id": "GuangxiSatelliteTV.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:GUANXI1+31"
       ]
     },
     {
@@ -3575,11 +3558,11 @@
       ]
     },
     {
-      "id": "GuangxiSatelliteTV.cn",
+      "id": "GansuSatelliteTV.cn",
       "before": 6,
       "after": 7,
       "sources": [
-        "tvmao:GUANXI1+31"
+        "tvmao:GSTV1+50"
       ]
     },
     {
@@ -3588,14 +3571,6 @@
       "after": 7,
       "sources": [
         "tvmao:QHTV1+27"
-      ]
-    },
-    {
-      "id": "GansuSatelliteTV.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:GSTV1+50"
       ]
     },
     {
@@ -3631,19 +3606,19 @@
       ]
     },
     {
-      "id": "YanbianSatelliteTV.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:YANBIAN1+21"
-      ]
-    },
-    {
       "id": "XiamenSatelliteTV.cn",
       "before": 6,
       "after": 7,
       "sources": [
         "tvmao:XMTV5+39"
+      ]
+    },
+    {
+      "id": "YanbianSatelliteTV.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:YANBIAN1+21"
       ]
     },
     {
@@ -3663,11 +3638,11 @@
       ]
     },
     {
-      "id": "HaixiaSatelliteTV.cn",
-      "before": 5,
+      "id": "CCTV1.cn",
+      "before": 6,
       "after": 7,
       "sources": [
-        "tvmao:HXTV+83"
+        "tvmao:CCTV-CCTV1+38"
       ]
     },
     {
@@ -3679,11 +3654,27 @@
       ]
     },
     {
+      "id": "HaixiaSatelliteTV.cn",
+      "before": 5,
+      "after": 7,
+      "sources": [
+        "tvmao:HXTV+83"
+      ]
+    },
+    {
       "id": "PhoenixHongKongChannel.hk",
       "before": 0,
       "after": 5,
       "sources": [
         "webncode:tvb_hdjade+243"
+      ]
+    },
+    {
+      "id": "CCTV4Asia.cn",
+      "before": 5,
+      "after": 6,
+      "sources": [
+        "epgpw:410375+38"
       ]
     },
     {
@@ -3697,14 +3688,14 @@
   ],
   "descStats": {
     "realCoverage": 59.8,
-    "realCount": 32527,
-    "totalCount": 54366,
+    "realCount": 32503,
+    "totalCount": 54333,
     "echoCount": 633,
     "titles": 956,
-    "filled": 17943,
+    "filled": 17919,
     "z51": {
       "channels": 151,
-      "filled": 15504,
+      "filled": 15480,
       "packs": [
         {
           "key": "e1",
@@ -3975,10 +3966,10 @@
           "id": "ShandongSatelliteTV.cn",
           "name": "山东卫视",
           "status": "ok",
-          "mine": 43,
+          "mine": 35,
           "key": "e1:38",
-          "inter": 20,
-          "rate": 0.46511627906976744
+          "inter": 18,
+          "rate": 0.5142857142857142
         },
         {
           "id": "GuangdongSatelliteTV.cn",
@@ -6214,12 +6205,12 @@
           "rate": 0.39473684210526316
         },
         "ShandongSatelliteTV.cn": {
-          "filled": 197,
+          "filled": 173,
           "before": 0,
           "stage": "channel+global",
           "source": "e1:38(山东卫视)",
-          "inter": 20,
-          "rate": 0.46511627906976744
+          "inter": 18,
+          "rate": 0.5142857142857142
         },
         "GuangdongSatelliteTV.cn": {
           "filled": 173,
@@ -7328,7 +7319,7 @@
           "id": "ShandongSatelliteTV.cn",
           "name": "山东卫视",
           "status": "none",
-          "mine": 43
+          "mine": 35
         },
         {
           "id": "GuangdongSatelliteTV.cn",
@@ -10468,8 +10459,8 @@
         "山东卫视（高清）"
       ],
       "logo": "",
-      "count": 238,
-      "days": 8,
+      "count": 205,
+      "days": 7,
       "perDay": {
         "20261027": 1,
         "20261028": 34,
@@ -10478,21 +10469,20 @@
         "20261031": 34,
         "20261101": 35,
         "20261102": 32,
-        "20261103": 33
+        "20261103": 0
       },
-      "withDesc": 198,
-      "descRate": 83,
+      "withDesc": 174,
+      "descRate": 85,
       "withCategory": 0,
-      "uniqTitles": 49,
+      "uniqTitles": 37,
       "first": "20261027222500 +0800",
-      "last": "20261104011800 +0800",
+      "last": "20261103000000 +0800",
       "usedSource": "epgpw:545961(山东卫视)",
       "matchConfidence": "exact",
       "matchedSourceName": "山东卫视",
       "alternatives": [
         "epgpw:572158(山东卫视)",
         "epgpw:539740(山东卫视)",
-        "tvmao:SDTV1(山东卫视)",
         "tvsou:c62d45e9(山东卫视)",
         "tvsou:c5210e9b(山东卫视（高清）)"
       ],
@@ -12756,7 +12746,7 @@
       "first": "20261028070000 +0800",
       "last": "20261103062500 +0800",
       "usedSource": "tdm:1(澳視澳門)",
-      "matchConfidence": "override-unlisted",
+      "matchConfidence": "override",
       "matchedSourceName": "澳視澳門",
       "alternatives": [],
       "status": "full"
@@ -18934,7 +18924,7 @@
       "first": "20261028133000 +0800",
       "last": "20261103010500 +0800",
       "usedSource": "tdm:2(澳視葡文)",
-      "matchConfidence": "override-unlisted",
+      "matchConfidence": "override",
       "matchedSourceName": "澳視葡文",
       "alternatives": [],
       "status": "full"
@@ -18966,7 +18956,7 @@
       "first": "20261028095900 +0800",
       "last": "20261103051500 +0800",
       "usedSource": "tdm:6(澳門體育)",
-      "matchConfidence": "override-unlisted",
+      "matchConfidence": "override",
       "matchedSourceName": "澳門體育",
       "alternatives": [],
       "status": "full"
@@ -18998,7 +18988,7 @@
       "first": "20261028065900 +0800",
       "last": "20261103030000 +0800",
       "usedSource": "tdm:5(澳門資訊)",
-      "matchConfidence": "override-unlisted",
+      "matchConfidence": "override",
       "matchedSourceName": "澳門資訊",
       "alternatives": [],
       "status": "full"
@@ -19030,7 +19020,7 @@
       "first": "20261028095900 +0800",
       "last": "20261103010100 +0800",
       "usedSource": "tdm:7(澳門綜藝)",
-      "matchConfidence": "override-unlisted",
+      "matchConfidence": "override",
       "matchedSourceName": "澳門綜藝",
       "alternatives": [],
       "status": "full"
@@ -19062,7 +19052,7 @@
       "first": "20261028000200 +0800",
       "last": "20261103004000 +0800",
       "usedSource": "tdm:8(澳門-Macau)",
-      "matchConfidence": "override-unlisted",
+      "matchConfidence": "override",
       "matchedSourceName": "澳門-Macau",
       "alternatives": [],
       "status": "partial"
