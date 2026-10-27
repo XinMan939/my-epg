@@ -1,4 +1,4 @@
-name: 探测 TBC + MOD v2（临时）
+name: 探测 MOD epginfob + TBC 备用路径（临时）
 on:
   workflow_dispatch:
 jobs:
@@ -6,74 +6,63 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - name: TBC + MOD 探测
+      - name: MOD epginfob
         run: |
           set +e
           mkdir -p out
           UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36"
           {
-            echo "########## 1. TBC 连通性多路径试探 ##########"
-            echo "--- www.tbc.net.tw 首页"
-            curl -sS -o /tmp/t1.html -w "  http -> %{http_code}|%{size_download}|%{time_total}s\n" --max-time 20 -A "$UA" "https://www.tbc.net.tw/" || echo "  失败"
-            echo "--- indexV2 (http)"
-            curl -sS -o /tmp/t2.html -w "  -> %{http_code}|%{size_download}|%{time_total}s\n" --max-time 20 -A "$UA" "http://www.tbc.net.tw/Epg/Epg/indexV2" || echo "  失败"
-            echo "--- indexV2 (https, 关 TLS 校验)"
-            curl -sSk -o /tmp/t3.html -w "  -> %{http_code}|%{size_download}|%{time_total}s\n" --max-time 20 -A "$UA" "https://www.tbc.net.tw/Epg/Epg/indexV2" || echo "  失败"
-            echo "--- 80 端口 TCP 连通"
-            timeout 10 bash -c "cat < /dev/null > /dev/tcp/123.241.238.168/80" && echo "  80 通" || echo "  80 不通"
-            echo "--- 443 端口 TCP 连通"
-            timeout 10 bash -c "cat < /dev/null > /dev/tcp/123.241.238.168/443" && echo "  443 通" || echo "  443 不通"
-            echo "--- DNS 其他解析"
-            getent hosts tbc.net.tw || echo "  裸域解析失败"
-            echo "--- traceroute 前 6 跳"
-            timeout 25 traceroute -m 6 -w 2 123.241.238.168 2>/dev/null || echo "  traceroute 不可用"
-
+            echo "########## A. epginfob.php 原始页 ##########"
+            curl -sS --compressed -o out/epg6.html -w "  id=6 -> %{http_code}|%{size_download}|%{time_total}s\n" --max-time 30 -A "$UA" -H "Referer: https://mod.cht.com.tw/program.do?id=6" "https://modp.cht.com.tw/modinfo/epginfob.php?id=6"
+            echo "  大小: $(wc -c < out/epg6.html)"
+            echo "  标题: $(grep -oE '<title>[^<]*</title>' out/epg6.html | head -1)"
             echo
-            echo "########## 2. MOD 全部频道页 ##########"
-            curl -sS --compressed -o out/mod-all.html -w "  all.do -> %{http_code}|%{size_download}|%{time_total}s\n" --max-time 30 -A "$UA" "https://mod.cht.com.tw/%E9%A0%BB%E9%81%93TV/%E5%85%A8%E9%83%A8.do"
-            echo "  标题: $(grep -oE '<title>[^<]*</title>' out/mod-all.html | head -1)"
-            echo "  --- program.do 链接 ---"
-            grep -oE '/program\.do\?id=[0-9]+' out/mod-all.html | sort -u | head -30
-            echo "  总数: $(grep -oE '/program\.do\?id=[0-9]+' out/mod-all.html | sort -u | wc -l)"
-            echo "  --- 频道名（alt/title）---"
-            grep -oE '(alt|title)="[^"]{2,30}"' out/mod-all.html | sort -u | head -30
-            echo "  --- 页面里的 js ---"
-            grep -oE 'src="[^"]+\.js[^"]*"' out/mod-all.html | sort -u | head -20
-            echo "  --- 页面里的 .do 路径 ---"
-            grep -oE "/[A-Za-z0-9_\-/%]+\.do[^'\" ]*" out/mod-all.html | sort -u | head -30
-
+            echo "  --- 全文前 4000 字节 ---"
+            head -c 4000 out/epg6.html
             echo
-            echo "########## 3. MOD 民视无线台 program.do?id=6 ##########"
-            curl -sS --compressed -o out/mod-6.html -w "  -> %{http_code}|%{size_download}|%{time_total}s\n" --max-time 30 -A "$UA" "https://mod.cht.com.tw/program.do?id=6"
-            echo "  标题: $(grep -oE '<title>[^<]*</title>' out/mod-6.html | head -1)"
-            echo
-            echo "  --- 正文纯文本前 80 行 ---"
-            sed 's/<script[^>]*>.*<\/script>//g; s/<[^>]*>/|/g' out/mod-6.html | tr -s '|' '\n' | grep -vE '^\s*$' | head -80
             echo
             echo "  --- 关键 class ---"
-            grep -oE 'class="[^"]{2,60}"' out/mod-6.html | sort | uniq -c | sort -rn | head -25
+            grep -oE 'class="[^"]{2,50}"' out/epg6.html | sort | uniq -c | sort -rn | head -20
             echo
-            echo "  --- 内嵌 JSON? ---"
-            grep -cE '\{"' out/mod-6.html
+            echo "  --- 日期/参数痕迹 ---"
+            grep -oE '(date|day|Date|Day|sel)[^,;<>]{0,70}' out/epg6.html | head -20
             echo
-            echo "  --- 日期参数? ---"
-            grep -oE '(date|Date|day|Day)[^,;]{0,60}' out/mod-6.html | head -15
+            echo "  --- 是否有 JSON ---"
+            grep -cE '\{"' out/epg6.html
             echo
-            echo "  --- js 文件 ---"
-            grep -oE 'src="[^"]+\.js[^"]*"' out/mod-6.html | sort -u | head -20
+            echo "  --- 所有链接/接口 ---"
+            grep -oE "(href|src|url|action)\s*[:=]\s*['\"][^'\"]{3,90}['\"]" out/epg6.html | sort -u | head -30
 
             echo
-            echo "########## 4. MOD 接口试探 ##########"
-            for u in \
-              "https://mod.cht.com.tw/program.do?id=6&date=2026-10-28" \
-              "https://mod.cht.com.tw/program.do?id=6&d=1" \
-              "https://mod.cht.com.tw/program.do?id=6&day=1" \
-              "https://mod.cht.com.tw/program.do?id=7" \
-              "https://mod.cht.com.tw/program.do?id=1"; do
-              R=$(curl -sS --compressed -o /tmp/m.html -w "%{http_code}|%{size_download}" --max-time 20 -A "$UA" "$u" 2>/dev/null || echo ERR)
+            echo "########## B. epginfob 带日期参数试探 ##########"
+            for p in "" "&date=2026-10-28" "&d=1" "&day=1" "&dt=20261028" "&selDate=2026-10-28" "&pdate=2026-10-28"; do
+              R=$(curl -sS --compressed -o /tmp/e.html -w "%{http_code}|%{size_download}" --max-time 20 -A "$UA" "https://modp.cht.com.tw/modinfo/epginfob.php?id=6$p" 2>/dev/null || echo ERR)
+              H=$(md5sum /tmp/e.html 2>/dev/null | cut -c1-8)
+              echo "  [$p] -> $R | md5=$H"
+            done
+
+            echo
+            echo "########## C. 同目录其他 php 试探 ##########"
+            for f in epginfo.php epg.php epginfob.php epginfoa.php epglist.php; do
+              R=$(curl -sS --compressed -o /tmp/f.html -w "%{http_code}|%{size_download}" --max-time 15 -A "$UA" "https://modp.cht.com.tw/modinfo/$f?id=6" 2>/dev/null || echo ERR)
+              echo "  $f -> $R"
+            done
+
+            echo
+            echo "########## D. 多频道 id 抽样 ##########"
+            for id in 6 7 8 10 20 50 100; do
+              R=$(curl -sS --compressed -o /tmp/g$id.html -w "%{http_code}|%{size_download}" --max-time 20 -A "$UA" "https://modp.cht.com.tw/modinfo/epginfob.php?id=$id" 2>/dev/null || echo ERR)
+              T=$(grep -oE '<title>[^<]*</title>' /tmp/g$id.html 2>/dev/null | head -1)
+              echo "  id=$id -> $R | $T"
+            done
+
+            echo
+            echo "########## E. TBC 备用路径（不同域名/端口/协议）##########"
+            for u in "http://123.241.238.168/" "https://123.241.238.168/" "http://www.tbc.net.tw/Epg/Epg/indexV2" "https://tbc.net.tw/Epg/Epg/indexV2" "https://www.tbc.net.tw:8080/"; do
+              R=$(curl -sSk -o /tmp/t.html -w "%{http_code}|%{size_download}|%{time_total}s" --max-time 12 -A "$UA" -H "Host: www.tbc.net.tw" "$u" 2>/dev/null || echo TIMEOUT)
               echo "  $u -> $R"
             done
           } > out/report.txt 2>&1
       - uses: actions/upload-artifact@v4
         if: always()
-        with: { name: tbcmod2, path: out/ }
+        with: { name: modepg, path: out/ }
