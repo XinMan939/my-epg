@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T08:44:08.639Z",
+  "generatedAt": "2026-10-27T11:49:07.688Z",
   "days": 7,
   "dayList": [
     "20261027",
@@ -15,8 +15,8 @@
   "channelsEmpty": 9,
   "channelsFull": 145,
   "channelsPartial": 130,
-  "programmesTotal": 46978,
-  "programmesWithDesc": 28444,
+  "programmesTotal": 46983,
+  "programmesWithDesc": 28442,
   "descCoverage": 61,
   "dateRange": [
     "20261027",
@@ -2920,14 +2920,14 @@
   ],
   "descStats": {
     "realCoverage": 60.5,
-    "realCount": 28444,
-    "totalCount": 46978,
+    "realCount": 28442,
+    "totalCount": 46983,
     "echoCount": 640,
     "titles": 658,
-    "filled": 13632,
+    "filled": 13630,
     "z51": {
       "channels": 148,
-      "filled": 11726,
+      "filled": 11724,
       "packs": [
         {
           "key": "e1",
@@ -4212,10 +4212,10 @@
           "id": "CHCFansMovieChannel.cn",
           "name": "CHC高清电影",
           "status": "ok",
-          "mine": 70,
+          "mine": 69,
           "key": "e1:1639",
-          "inter": 24,
-          "rate": 0.34285714285714286
+          "inter": 23,
+          "rate": 0.3333333333333333
         },
         {
           "id": "EntertainmentNews.hk",
@@ -5211,16 +5211,16 @@
           "id": "CCTV中学生.cn",
           "name": "CCTV中学生",
           "status": "none",
-          "mine": 106
+          "mine": 105
         },
         {
           "id": "重温经典.cn",
           "name": "兵团卫视",
           "status": "weak",
-          "mine": 21,
+          "mine": 27,
           "key": "e1:61",
           "inter": 4,
-          "rate": 0.19047619047619047
+          "rate": 0.14814814814814814
         }
       ],
       "stage3": 237,
@@ -5658,7 +5658,7 @@
           "rate": 0.5862068965517241
         },
         "SanshaSatelliteTV.cn": {
-          "filled": 61,
+          "filled": 60,
           "before": 0,
           "stage": "channel",
           "source": "e1:72(三沙卫视)",
@@ -5746,7 +5746,7 @@
           "rate": 0.46875
         },
         "CCTVWeaponTechnology.cn": {
-          "filled": 172,
+          "filled": 171,
           "before": 0,
           "stage": "channel",
           "source": "e1:1652(兵器科技)",
@@ -5778,7 +5778,7 @@
           "rate": 1
         },
         "CNDFilmOldStoryChannel.cn": {
-          "filled": 182,
+          "filled": 183,
           "before": 0,
           "stage": "channel",
           "source": "e1:1683(老故事)",
@@ -5786,7 +5786,7 @@
           "rate": 0.5384615384615384
         },
         "CCTVWomensFashion.cn": {
-          "filled": 143,
+          "filled": 144,
           "before": 0,
           "stage": "channel",
           "source": "e1:1653(女性时尚)",
@@ -5802,7 +5802,7 @@
           "rate": 0.9375
         },
         "CGTN.cn": {
-          "filled": 205,
+          "filled": 204,
           "before": 0,
           "stage": "channel",
           "source": "e1:20(CGTN)",
@@ -6158,7 +6158,7 @@
           "source": "全局索引"
         },
         "CHCFansMovieChannel.cn": {
-          "filled": 21,
+          "filled": 22,
           "before": 0,
           "stage": "global",
           "source": "全局索引"
@@ -6296,7 +6296,7 @@
           "source": "全局索引"
         },
         "重温经典.cn": {
-          "filled": 18,
+          "filled": 16,
           "before": 0,
           "stage": "global",
           "source": "全局索引"
@@ -7082,7 +7082,7 @@
           "id": "CCTVStormFootball.cn",
           "name": "CCTV风云足球",
           "status": "none",
-          "mine": 9
+          "mine": 10
         },
         {
           "id": "CCTVBilliards.cn",
@@ -7304,7 +7304,7 @@
           "id": "CHCFansMovieChannel.cn",
           "name": "CHC影迷电影",
           "status": "none",
-          "mine": 70
+          "mine": 69
         },
         {
           "id": "EntertainmentNews.hk",
@@ -8336,13 +8336,13 @@
           "id": "CCTV中学生.cn",
           "name": "CCTV中学生",
           "status": "none",
-          "mine": 107
+          "mine": 106
         },
         {
           "id": "重温经典.cn",
           "name": "重温经典",
           "status": "none",
-          "mine": 34
+          "mine": 51
         }
       ],
       "report": [
@@ -10821,7 +10821,7 @@
         "20261101": 0,
         "20261102": 44
       },
-      "withDesc": 62,
+      "withDesc": 61,
       "descRate": 47,
       "withCategory": 0,
       "uniqTitles": 19,
@@ -12557,8 +12557,8 @@
         "20261101": 45,
         "20261102": 41
       },
-      "withDesc": 172,
-      "descRate": 61,
+      "withDesc": 171,
+      "descRate": 60,
       "withCategory": 0,
       "uniqTitles": 91,
       "first": "20261027002100 +0800",
@@ -12721,7 +12721,7 @@
       "withDesc": 0,
       "descRate": 0,
       "withCategory": 0,
-      "uniqTitles": 9,
+      "uniqTitles": 10,
       "first": "20261027011000 +0800",
       "last": "20261102235000 +0800",
       "usedSource": "tvmao:CCTVPAYFEE-CCTVPAYFEE1(风云足球)",
@@ -12846,8 +12846,8 @@
         "20261101": 46,
         "20261102": 39
       },
-      "withDesc": 182,
-      "descRate": 52,
+      "withDesc": 183,
+      "descRate": 53,
       "withCategory": 0,
       "uniqTitles": 79,
       "first": "20261027000000 +0800",
@@ -12879,8 +12879,8 @@
         "20261101": 23,
         "20261102": 24
       },
-      "withDesc": 143,
-      "descRate": 89,
+      "withDesc": 144,
+      "descRate": 90,
       "withCategory": 0,
       "uniqTitles": 41,
       "first": "20261027080000 +0800",
@@ -13005,7 +13005,7 @@
         "20261101": 43,
         "20261102": 53
       },
-      "withDesc": 205,
+      "withDesc": 204,
       "descRate": 64,
       "withCategory": 0,
       "uniqTitles": 30,
@@ -13859,10 +13859,10 @@
         "20261101": 12,
         "20261102": 13
       },
-      "withDesc": 21,
-      "descRate": 26,
+      "withDesc": 22,
+      "descRate": 27,
       "withCategory": 0,
-      "uniqTitles": 70,
+      "uniqTitles": 69,
       "first": "20261027011900 +0800",
       "last": "20261103011900 +0800",
       "usedSource": "tvmao:CHC-CHC3(CHC影迷电影)",
@@ -17887,7 +17887,7 @@
       "withDesc": 14,
       "descRate": 4,
       "withCategory": 0,
-      "uniqTitles": 215,
+      "uniqTitles": 214,
       "first": "20261027091900 +0800",
       "last": "20261103080100 +0800",
       "usedSource": "tvmao:CCTVPAYFEE-CCTVPAYFEE35(CCTV中学生频道)",
@@ -17905,10 +17905,10 @@
         "重溫經典"
       ],
       "logo": "",
-      "count": 161,
+      "count": 166,
       "days": 7,
       "perDay": {
-        "20261027": 21,
+        "20261027": 26,
         "20261028": 22,
         "20261029": 22,
         "20261030": 22,
@@ -17916,10 +17916,10 @@
         "20261101": 22,
         "20261102": 30
       },
-      "withDesc": 18,
-      "descRate": 11,
+      "withDesc": 16,
+      "descRate": 10,
       "withCategory": 0,
-      "uniqTitles": 34,
+      "uniqTitles": 51,
       "first": "20261027060200 +0800",
       "last": "20261103060200 +0800",
       "usedSource": "tvmao:BAMC-CWJINGDIAN(重温经典频道)",

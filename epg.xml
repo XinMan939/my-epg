@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tv generator-info-name="my-epg" generator-info-url="https://github.com/" date="20261027164407 +0800">
+<tv generator-info-name="my-epg" generator-info-url="https://github.com/" date="20261027194906 +0800">
   <channel id="CCTV1.cn">
     <display-name lang="zh">CCTV-1 综合</display-name>
     <display-name lang="zh">CCTV-1</display-name>
@@ -49181,6 +49181,9 @@
   <programme start="20261027150000 +0800" stop="20261027163200 +0800" channel="SanshaSatelliteTV.cn">
     <title lang="zh">电影时间</title>
   </programme>
+  <programme start="20261027163200 +0800" stop="20261027170000 +0800" channel="SanshaSatelliteTV.cn">
+    <title lang="zh">自宣段</title>
+  </programme>
   <programme start="20261027170000 +0800" stop="20261027173000 +0800" channel="SanshaSatelliteTV.cn">
     <title lang="zh">英语新闻</title>
   </programme>
@@ -49205,10 +49208,6 @@
   <programme start="20261027185700 +0800" stop="20261027190000 +0800" channel="SanshaSatelliteTV.cn">
     <title lang="zh">天气预报</title>
     <desc lang="zh">《天气预报》为您提供天气气象信息,及时发布天气预报、灾害预警、气象云图、台风、暴雨雪等气象信息,为人民的生产生活提供全面精确的气象服务。</desc>
-  </programme>
-  <programme start="20261027193500 +0800" stop="20261027200000 +0800" channel="SanshaSatelliteTV.cn">
-    <title lang="zh">三沙新闻</title>
-    <desc lang="zh">三沙新闻报道中国海南省三沙市南海各岛的新闻和报道。</desc>
   </programme>
   <programme start="20261027200000 +0800" stop="20261027203000 +0800" channel="SanshaSatelliteTV.cn">
     <title lang="zh">海南新闻联播</title>
@@ -78243,6 +78242,9 @@
     <title lang="zh">讲武堂-2026-6</title>
     <desc lang="zh">《讲武堂》栏目作为兵家名师谈兵论道的话语战略平台，坚持“传播军事知识 弘扬国防理念” 的节目宗旨。大力宣扬“兵学名师的战略智慧，历史人文的个性专题，权威的军事学术报告，前沿国防和军事思想。” 将栏目办成一所“电视上的国防大学”，达到普及全民国防知识的目的。《讲武堂》是在原《和平年代.周末开讲》节目基础上，更名为独立栏目。2011年1月4日在中央电视台军事农业频道正式开播, 首播时间：每周六 10:18 ；重播时间：每周二 10:18；16:27。《讲武堂》的前身《周末开讲》，在观众中有一定的影响力和固定收视群。开播5年来，收视率一直很稳定。《讲武堂》栏目形态是以一人主讲，辅之以多种电视表现手段的讲座类电视节目。她力求理论通俗化，内容故事化，表达囗语化。此外，还强调节目的知识性、趣味性、可视性；强调节目的时效性，热点话题的背景解读。《讲武堂》拥有高端新锐军事专家资源：如金一南、乔良、薛国安、柴宇球、马骏、骆少明、戴旭等；还有一批实力派美女学者，如：邵永灵、李莉、尚伟、夏旻等。《讲武堂》今年栏目的开山之作将推出“名将之死”系列，适时推出“让战争拐弯的细节”、“让战争拐弯的发明”、“信息战争”、“超低空打击”等等。适时推出“将军论坛”系列，“走进中国著名军校”系列。</desc>
   </programme>
+  <programme start="20261027164200 +0800" stop="20261027171300 +0800" channel="CCTVWeaponTechnology.cn">
+    <title lang="zh">兵器科技频道包装-2023-52</title>
+  </programme>
   <programme start="20261027171300 +0800" stop="20261027174300 +0800" channel="CCTVWeaponTechnology.cn">
     <title lang="zh">军火之源-2020-36</title>
     <desc lang="zh">《军火之源》将为观众深度剖析各种闻名于世的冷热兵器前世今生，追溯创造源头、生产厂家、历经的重大战役等。</desc>
@@ -78261,10 +78263,6 @@
   <programme start="20261027184400 +0800" stop="20261027191400 +0800" channel="CCTVWeaponTechnology.cn">
     <title lang="zh">武器装备背后的故事-2020-17</title>
     <desc lang="zh">真实记录了中国军工史上五型典型武器装备研制背后不为人知的故事</desc>
-  </programme>
-  <programme start="20261027191400 +0800" stop="20261027200400 +0800" channel="CCTVWeaponTechnology.cn">
-    <title lang="zh">大家谈-2024-50</title>
-    <desc lang="zh">《大家谈》---参与时事辩论，亮出你的观点军事，国事，天下事，你谈，我谈，大家谈。《大家谈》是强档推出的“军事聊天室”类栏目，已播出近五年，由著名军事专家陈虎、宋晓军等现场主持，军迷代表进行辩论；同时真实在线，邀请网友参与辩论全过程。内容包括军事热点分析，国防时事点评，以辩论的形式揣摩国际军情，在观点的碰撞中交换独家视角。话题紧随全球军事脉络而动，跨越国际关系、武器装备、战略战术等国防热点领域。《大家谈》是一档样式新颖的“军事聊天室”类栏目。内容包括军事热点分析，国防时事点评，以辩论的形式揣摩国际军情，在观点的碰撞中交换独家视角。话题紧随全球军事脉络而动，跨越国际关系、武器装备、战略战术等国防热点领域。例如：台独势力“以武促独”管用吗？伊拉克会成为第二个“越南”吗？日本军国主义有可能复活吗？伊朗核危机能否引发战争？《大家谈》由著名军事评论家，新华社《世界军事》杂志主编陈虎担任主持，军迷代表现场辩论；同时真实在线，网友全程参与！我们将提前预告在线时间， 敬请关注CCTV.COM!《大家谈》播出时间：09:15 ，14:45， 22:55栏目时长：50分钟</desc>
   </programme>
   <programme start="20261027200400 +0800" stop="20261027200500 +0800" channel="CCTVWeaponTechnology.cn">
     <title lang="zh">兵器科技频道包装-2023-52</title>
@@ -79387,6 +79385,9 @@
   <programme start="20261027153000 +0800" stop="20261027161800 +0800" channel="CNDFilmDiscoveryChannel.cn">
     <title lang="zh">辜鸿铭</title>
   </programme>
+  <programme start="20261027161800 +0800" stop="20261027164500 +0800" channel="CNDFilmDiscoveryChannel.cn">
+    <title lang="zh">重建中国茶道</title>
+  </programme>
   <programme start="20261027164500 +0800" stop="20261027165000 +0800" channel="CNDFilmDiscoveryChannel.cn">
     <title lang="zh">青春之我(7)</title>
     <desc lang="zh">一百年，谈不上沧海桑田，也不是过眼云烟。一百年，有多少青春的花儿绽放？在黑暗混沌的那年，或是启明清朗的昨天？百年间，青春的花开花谢，化作漫天纷飞的花雨，落在春的泥土里，滋养了大地，开出下一个花季。苍茫中华，因此换了人间。《青春之我》中100位优秀党员，来自天南海北，也来自各行各业；他们，来自人民、服务人民。在传统行业，不忘初心、持续耕耘；在新兴产业，牢记使命、不断创新。青年兴则国兴，青年强则国强；他们和我们，以青春之我，共谱青春之歌，共铸青春之国。</desc>
@@ -79414,9 +79415,6 @@
   <programme start="20261027183000 +0800" stop="20261027190200 +0800" channel="CNDFilmDiscoveryChannel.cn">
     <title lang="zh">揽胜神州</title>
     <desc lang="zh">《揽胜神州》以人文介绍地理，以地理引出人文。在祖国绮丽壮美的地理空间中引领观众进入深邃莫测的人文世界，揭秘历史，叙述故事，解密事件，领略文化，体验当地风情，展示城市变迁，记录时代精彩。《揽胜神州》每周以固定的时间，以“发现”的视角，以纪录片为载体，秉持人文情怀，向社会大众展示华夏文明、华夏景观，文化遗产、民族风情、地方特产，城市变迁、时代名人，以及现实生活中可以大书特书的时代现象，对于地方来说，《揽胜神州》就是展示地域特点的一张“非常名片”。</desc>
-  </programme>
-  <programme start="20261027190200 +0800" stop="20261027195000 +0800" channel="CNDFilmDiscoveryChannel.cn">
-    <title lang="zh">辜鸿铭</title>
   </programme>
   <programme start="20261027195000 +0800" stop="20261027195800 +0800" channel="CNDFilmDiscoveryChannel.cn">
     <title lang="zh">戈壁母亲</title>
@@ -80729,6 +80727,10 @@
     <title lang="zh">黄金100秒-TOP音乐咖-27</title>
     <desc lang="zh">《黄金100秒》是一档综艺节目，以丰富的文艺节目为主体，加上游戏节目的投票淘汰环节。《黄金100秒》是一个证明自己实力、表达自己心意的舞台，也是一个得到认同的平台，这种认同不是单向的，它既可以是一种自我的认同，也可以是观众或者表演者希望的对象的一种认同，是一种情感的认同。“黄金100秒”指的就是表演者将有100秒的宝贵时间，去尽情释放自己的才艺和激情。只要现场观众的投票支持让选手在舞台上站够100秒，参与者就有可能获得本场节目最终的超级大奖。</desc>
   </programme>
+  <programme start="20261027155600 +0800" stop="20261027165600 +0800" channel="CCTVStormMusic.cn">
+    <title lang="zh">一起音乐吧-2025-39</title>
+    <desc lang="zh">《一起音乐吧》是中央电视台音乐频道最新推出的一档60分钟周播音乐类节目，每期会邀请不同的演艺嘉宾做客节目，用互动游戏的方式为观众展示不一样的音乐知识。节目共分为三大板块：快问快打、大百科和大歌星，内容贯穿中西音乐、民族与流行等等。其主要宗旨就是：在音乐中互动娱乐、在音乐中活力四射！</desc>
+  </programme>
   <programme start="20261027165600 +0800" stop="20261027175600 +0800" channel="CCTVStormMusic.cn">
     <title lang="zh">民歌·中国-2025-14故乡回响·故乡的味道</title>
     <desc lang="zh">《民歌•中国》栏目是中国唯一一档以中国原生态民歌歌种版图概念全景展示的中国民歌艺术节目，它为展示中国民歌提供了一个良好的契机和广阔的平台。此栏目系列化开拓中国民歌艺术视野，系列化介绍中国民族、民间的原生态民歌艺术，并大力推动中国原生态民歌的发展。</desc>
@@ -80740,10 +80742,6 @@
   <programme start="20261027184200 +0800" stop="20261027194200 +0800" channel="CCTVStormMusic.cn">
     <title lang="zh">童声唱-2024-7</title>
     <desc lang="zh">集结东西南北最美童声，唱响祖国各地，唱出南腔北调。偶像班主任强强联手，考评团大师拭目以待，未来世界音乐代表强势入席，全媒体时代共同打造，高频开唱，强势入耳，打开音乐频道，优质童声炫丽开唱，用音乐点燃夏日风尚！</desc>
-  </programme>
-  <programme start="20261027194200 +0800" stop="20261027203600 +0800" channel="CCTVStormMusic.cn">
-    <title lang="zh">黄金100秒-2025-10TOP音乐咖10</title>
-    <desc lang="zh">《黄金100秒》是一档综艺节目，以丰富的文艺节目为主体，加上游戏节目的投票淘汰环节。《黄金100秒》是一个证明自己实力、表达自己心意的舞台，也是一个得到认同的平台，这种认同不是单向的，它既可以是一种自我的认同，也可以是观众或者表演者希望的对象的一种认同，是一种情感的认同。“黄金100秒”指的就是表演者将有100秒的宝贵时间，去尽情释放自己的才艺和激情。只要现场观众的投票支持让选手在舞台上站够100秒，参与者就有可能获得本场节目最终的超级大奖。</desc>
   </programme>
   <programme start="20261027203600 +0800" stop="20261027212100 +0800" channel="CCTVStormMusic.cn">
     <title lang="zh">乐享汇-2025-27</title>
@@ -81399,247 +81397,247 @@
     <title lang="zh">风云足球频道包装-2026-4</title>
   </programme>
   <programme start="20261028171500 +0800" stop="20261028172000 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261028184000 +0800" stop="20261028184500 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261028193500 +0800" stop="20261028194000 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261028222000 +0800" stop="20261028222500 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261028234500 +0800" stop="20261028235000 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261029011000 +0800" stop="20261029011500 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261029023500 +0800" stop="20261029024000 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261029040000 +0800" stop="20261029040500 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261029052500 +0800" stop="20261029053000 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261029065000 +0800" stop="20261029065500 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261029081500 +0800" stop="20261029082000 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261029094000 +0800" stop="20261029094500 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261029110500 +0800" stop="20261029111000 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261029123000 +0800" stop="20261029123500 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261029130000 +0800" stop="20261029130500 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261029130500 +0800" stop="20261029142500 +0800" channel="CCTVStormFootball.cn">
     <title lang="zh">实况录像-2026世界杯 1/16决赛 葡萄牙队-克罗地亚队</title>
   </programme>
   <programme start="20261029142500 +0800" stop="20261029143000 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261029143000 +0800" stop="20261029155000 +0800" channel="CCTVStormFootball.cn">
     <title lang="zh">实况录像-2026世界杯小组赛I 组第二轮 挪威队-塞内加尔队</title>
   </programme>
   <programme start="20261029155000 +0800" stop="20261029155500 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261029171500 +0800" stop="20261029172000 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261029184000 +0800" stop="20261029184500 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261029193500 +0800" stop="20261029194000 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261029222000 +0800" stop="20261029222500 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261029234500 +0800" stop="20261029235000 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261030011000 +0800" stop="20261030011500 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261030023500 +0800" stop="20261030024000 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261030040000 +0800" stop="20261030040500 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261030052500 +0800" stop="20261030053000 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261030065000 +0800" stop="20261030065500 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261030081500 +0800" stop="20261030082000 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261030094000 +0800" stop="20261030094500 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261030110500 +0800" stop="20261030111000 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261030123000 +0800" stop="20261030123500 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261030130000 +0800" stop="20261030130500 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261030130500 +0800" stop="20261030142500 +0800" channel="CCTVStormFootball.cn">
     <title lang="zh">实况录像-2026世界杯小组赛I 组第二轮 挪威队-塞内加尔队</title>
   </programme>
   <programme start="20261030142500 +0800" stop="20261030143000 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261030143000 +0800" stop="20261030155000 +0800" channel="CCTVStormFootball.cn">
     <title lang="zh">实况录像-2026世界杯 1/16决赛 瑞士队-阿尔及利亚队</title>
   </programme>
   <programme start="20261030155000 +0800" stop="20261030155500 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261030171500 +0800" stop="20261030172000 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261030184000 +0800" stop="20261030184500 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261030193500 +0800" stop="20261030194000 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261030222000 +0800" stop="20261030222500 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261030234500 +0800" stop="20261030235000 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261031011000 +0800" stop="20261031011500 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261031023500 +0800" stop="20261031024000 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261031040000 +0800" stop="20261031040500 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261031052500 +0800" stop="20261031053000 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261031065000 +0800" stop="20261031065500 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261031081500 +0800" stop="20261031082000 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261031094000 +0800" stop="20261031094500 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261031110500 +0800" stop="20261031111000 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261031123000 +0800" stop="20261031123500 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261031130000 +0800" stop="20261031130500 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261031130500 +0800" stop="20261031142500 +0800" channel="CCTVStormFootball.cn">
     <title lang="zh">实况录像-2026世界杯 1/16决赛 瑞士队-阿尔及利亚队</title>
   </programme>
   <programme start="20261031142500 +0800" stop="20261031143000 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261031143000 +0800" stop="20261031155000 +0800" channel="CCTVStormFootball.cn">
     <title lang="zh">实况录像-2026世界杯 1/16决赛 澳大利亚队-埃及队</title>
   </programme>
   <programme start="20261031155000 +0800" stop="20261031155500 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261031171500 +0800" stop="20261031172000 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261031184000 +0800" stop="20261031184500 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261031193500 +0800" stop="20261031194000 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261031222000 +0800" stop="20261031222500 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261031234500 +0800" stop="20261031235000 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261101011000 +0800" stop="20261101011500 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261101023500 +0800" stop="20261101024000 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261101040000 +0800" stop="20261101040500 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261101052500 +0800" stop="20261101053000 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261101065000 +0800" stop="20261101065500 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261101081500 +0800" stop="20261101082000 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261101094000 +0800" stop="20261101094500 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261101110500 +0800" stop="20261101111000 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261101123000 +0800" stop="20261101123500 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261101130000 +0800" stop="20261101130500 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261101130500 +0800" stop="20261101142500 +0800" channel="CCTVStormFootball.cn">
     <title lang="zh">实况录像-2026世界杯 1/16决赛 澳大利亚队-埃及队</title>
   </programme>
   <programme start="20261101142500 +0800" stop="20261101143000 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261101143000 +0800" stop="20261101155000 +0800" channel="CCTVStormFootball.cn">
     <title lang="zh">实况录像-2026世界杯 1/16决赛 哥伦比亚队-加纳队</title>
   </programme>
   <programme start="20261101155000 +0800" stop="20261101155500 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261101171500 +0800" stop="20261101172000 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261101184000 +0800" stop="20261101184500 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261101193500 +0800" stop="20261101194000 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261101222000 +0800" stop="20261101222500 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261101234500 +0800" stop="20261101235000 +0800" channel="CCTVStormFootball.cn">
-    <title lang="zh">风云足球频道包装-2026-4</title>
+    <title lang="zh">风云足球频道包装-2026-7</title>
   </programme>
   <programme start="20261102011000 +0800" stop="20261102011500 +0800" channel="CCTVStormFootball.cn">
     <title lang="zh">风云足球频道包装-2026-4</title>
@@ -82128,6 +82126,10 @@
     <title lang="zh">岁月丹青:李铎</title>
     <desc lang="zh">由中国国家画院与中央新影集团联合摄制的大型纪录片《岁月丹青》选取了六十位在世的优秀美术家作为拍摄对象，这是新中国成立以来规模最大的一次美术文献摄制工程。中国国家画院院长杨晓阳介绍，这部大型美术纪录片，以老艺术家口述为主要叙述方式，记录了共和国建国以来60位70岁以上中国顶级美术家的艺术与生活，囊括了国画、油画、版画、雕刻、装饰艺术、连环画、漫画、壁画、工艺美术、书法、美术理论在内的全部美术门类，反映美术发展的整体面貌和成就。这是一部全方位、全覆盖的共和国美术文献纪录片，为人们学习、研究中国近代美术提供了文字和图片所不能替代的影像资料。</desc>
   </programme>
+  <programme start="20261027163400 +0800" stop="20261027170100 +0800" channel="CNDFilmOldStoryChannel.cn">
+    <title lang="zh">居之美(15)</title>
+    <desc lang="zh">《居之美》是一档探讨中国人居住历史的大型文化类电视栏目，以演播室访谈结合历史遗迹、遗址和相关文献资料为表现形式，充分体现了文化类节目的史实性、趣味性、可视性以及学术价值。</desc>
+  </programme>
   <programme start="20261027170100 +0800" stop="20261027173100 +0800" channel="CNDFilmOldStoryChannel.cn">
     <title lang="zh">亲历:将军大使出征记(3)</title>
     <desc lang="zh">《见证·亲历》是中央电视台推出的一个最具人文气质和广博内涵的纪录片栏目，其宗旨是穿过岁月风雨；追寻历史真迹；回溯难忘经历；触动心灵记忆。《见证·亲历》栏目2003年5月8日在中央电视台开播。四年多来，在全体同仁的努力下，栏目已经逐渐成长为中央电视台最具影响力的纪录片栏目之一。栏目始终关注中国历史进程中产生广泛影响的重大事件或者社会现象，在紧跟时代脉搏，关注社会民生的过程中，不断发现历史、贴近历史。追寻历史真迹，触动心灵记忆。《见证·亲历》栏目所播出的纪录片涵盖了中国近代历史的各个层面。其中既有重温毛泽东首次访苏的日日夜夜，讲述国民党政府代总统李宗仁神秘的北京之行这样重大历史事件的揭秘，也有追溯赤脚医生的时代步履，重温光荣的八大员等探寻时代变迁的温暖记忆……“温故而知新”。如果说记忆是人类重要的生命特质之一，那么历史就是人民的记忆。历史与现实是一对永恒而富有张力的矛盾，《见证·亲历》栏目对历史的回顾，是我们对生命与情感历程的唤醒与重温。</desc>
@@ -82157,9 +82159,6 @@
   </programme>
   <programme start="20261027192700 +0800" stop="20261027194600 +0800" channel="CNDFilmOldStoryChannel.cn">
     <title lang="zh">马桑树儿搭灯台</title>
-  </programme>
-  <programme start="20261027194600 +0800" stop="20261027200000 +0800" channel="CNDFilmOldStoryChannel.cn">
-    <title lang="zh">长征文学风采录(8)</title>
   </programme>
   <programme start="20261027200000 +0800" stop="20261027201000 +0800" channel="CNDFilmOldStoryChannel.cn">
     <title lang="zh">对话向上的品牌</title>
@@ -83288,6 +83287,10 @@
     <title lang="zh">回家吃饭</title>
     <desc lang="zh">CCTV2的《回家吃饭》，将于大年初一到初七晚17：55,也就是晚饭时间，与众人分享各方美食。届时，央视财经主持人小丫约央视七大男闺蜜，展示他们的拿手绝活。在央视春晚上，和朱军、李思思一块儿包饺子的撒贝宁，不仅将在节目中尽显鬼马整蛊本色，还倾情推出拿手的武汉热干面；小丫面对小撒毫不示弱，精心制作爽口的四川小面。他们在做面的过程中，讲的是各自的家乡话。</desc>
   </programme>
+  <programme start="20261027161600 +0800" stop="20261027170600 +0800" channel="CCTVWomensFashion.cn">
+    <title lang="zh">绽放吧!妈妈(41)</title>
+    <desc lang="zh">节目题材聚焦妈妈群体，通过为妈妈们完成“绽放自我、寻找最美”的时尚变装，讲述每一个妈妈的真实故事，传颂至真母爱，传递代际共鸣，展现女性力量，鼓励探索成长，高歌孝道与责任，奉献与付出，诉说平凡中的伟大，呼唤蜕变中的绽放。</desc>
+  </programme>
   <programme start="20261027170600 +0800" stop="20261027174300 +0800" channel="CCTVWomensFashion.cn">
     <title lang="zh">心理访谈</title>
     <desc lang="zh">这一栏目将以个案出现的心理压力、心理危机、心理困境为切入点，探讨出现问题的原因和如何应对的方法；栏目以心理视角解读个案故事和社会事件，从心理科学的角度以通俗的方式在大家有相似经历或能产生共鸣的故事中帮助人们认知自己的情绪、心理和行为并能够给予适当的方法和建议，以体现栏目的贴近服务性和实用性。一、午夜访谈 心灵对话 《心理访谈》是全国第一档以现场个案访谈为电视表现形式的心理栏目，每期20分钟，每天11：15在社会与法频道（CCTV12）播出，次日下午14：45和晚上23：25重播。节目气氛温馨、动情，谈话现场平等、互动，节目调性积极、向上，且有深切的人文关怀气息。二、 贴近生活 服务大众《心理访谈》把自己定位为服务类节目，和以往不同的是，节目把关注的视角从生活服务上升到心灵服务。每期节目都有具体的当事人到场，他们把生活中经常遇到的一些难题，如夫妻关系，亲子教育，人际交往等等向主持人倾诉，专家则从心理学、社会学等各学科的不同角度，帮助人们认知、梳理、管理自己的情绪、心理和行为，并给出有大众借鉴意义的建议，以帮助公众提高生活质量，促进家庭和谐。三、全新栏目 全新理念社会转型、竞争加剧、工作变动、人口流动……，个人的亚健康情绪及亚健康心理的积累，往往会影响人们的生活质量和事业发展。因此，关注心理健康、引导人们树立正确的价值观是整个社会的共识。《心理访谈》栏目，为人们提供了一个敞开心扉、打开心结的平台，作为中央电视台第一档心理健康类栏目，我们愿意为广大电视观众提供科学、客观的引导和帮助。</desc>
@@ -83295,9 +83298,6 @@
   <programme start="20261027174300 +0800" stop="20261027180900 +0800" channel="CCTVWomensFashion.cn">
     <title lang="zh">回家吃饭</title>
     <desc lang="zh">CCTV2的《回家吃饭》，将于大年初一到初七晚17：55,也就是晚饭时间，与众人分享各方美食。届时，央视财经主持人小丫约央视七大男闺蜜，展示他们的拿手绝活。在央视春晚上，和朱军、李思思一块儿包饺子的撒贝宁，不仅将在节目中尽显鬼马整蛊本色，还倾情推出拿手的武汉热干面；小丫面对小撒毫不示弱，精心制作爽口的四川小面。他们在做面的过程中，讲的是各自的家乡话。</desc>
-  </programme>
-  <programme start="20261027180900 +0800" stop="20261027195900 +0800" channel="CCTVWomensFashion.cn">
-    <title lang="zh">开播吧!国潮(2)</title>
   </programme>
   <programme start="20261027195900 +0800" stop="20261027202900 +0800" channel="CCTVWomensFashion.cn">
     <title lang="zh">衣锦天下丝路季(2)</title>
@@ -83931,6 +83931,10 @@
     <title lang="zh">故事中国2024-320</title>
     <desc lang="zh">「故事·中国」50分钟时段，播放社会现实题材纪录片，选取真实、有趣、积极向上的故事，呈现正在发生的时代变迁。</desc>
   </programme>
+  <programme start="20261027163200 +0800" stop="20261027170200 +0800" channel="CCTVWorldGeography.cn">
+    <title lang="zh">味道-2026-51(精编)</title>
+    <desc lang="zh">《味道》栏目是中央广播电视总台央视科教频道（CCTV-10）创办的首档美食文化探索类的全媒体节目，是由央视科教频道品牌特别节目《味道》改版升级而成的栏目。栏目围绕“与文化学者同行、品鉴美食文化、留住乡愁记忆”的定位，运用“美食+”的全媒体思维，荟萃美食精华，传播美食文化，栏目宣传口号为“让生活更有味”。《味道》国庆节特别节目《国庆节有味道·丰收中国》</desc>
+  </programme>
   <programme start="20261027170200 +0800" stop="20261027173200 +0800" channel="CCTVWorldGeography.cn">
     <title lang="zh">味道-2026-52(精编)</title>
     <desc lang="zh">《味道》栏目是中央广播电视总台央视科教频道（CCTV-10）创办的首档美食文化探索类的全媒体节目，是由央视科教频道品牌特别节目《味道》改版升级而成的栏目。栏目围绕“与文化学者同行、品鉴美食文化、留住乡愁记忆”的定位，运用“美食+”的全媒体思维，荟萃美食精华，传播美食文化，栏目宣传口号为“让生活更有味”。《味道》国庆节特别节目《国庆节有味道·丰收中国》</desc>
@@ -83946,10 +83950,6 @@
   <programme start="20261027185700 +0800" stop="20261027191700 +0800" channel="CCTVWorldGeography.cn">
     <title lang="zh">跟着书本去旅行-2022-180</title>
     <desc lang="zh">由中央广播电视总台央视科教频道倾力打造的行进体验式文化教育节目 《跟着书本去旅行》 ，于12月9日每周一至周五18：54在科教频道播出。作为一档原创的节目，《跟着书本去旅行》突破传统模式，创新表达方式。旨在让经典文学、历史名著“新”起来，让书本“厚”起来，让陈列在广阔大地上的遗产“活”起来！节目从书本出发，在文学、历史著作中选取融思想性、艺术性、观赏性为一体的作品，由领队带着同学们寻访文中古迹，听专家讲故事。通过读文、走访、纪录，拓展了教育专题节目的传统模式。在节目多维度的呈现下让经典文章、诗词不仅可以在笔墨中书写，在琅琅的读书声中回荡，当同学们置身实景实地，还可以体会其作品中的文化和精神的力量。</desc>
-  </programme>
-  <programme start="20261027191700 +0800" stop="20261027195900 +0800" channel="CCTVWorldGeography.cn">
-    <title lang="zh">远方的家2024-136</title>
-    <desc lang="zh">让国内观众受益 -----独特的旅游信息，惊艳的文化常识；让海外观众关注 ------中华文化的魅力，全媒体互动传播。《远方的家》强调普通人旅行体验和全媒体互动，通过放松的表述，打造出真正意义上的互动旅游体验和中国之旅公共大百科。栏目还将分为演播室日播版、真人秀周末版、排行榜季播版、全媒体年度版等版本。节目通过旅行体验者的亲身讲述、民间达人的旅行情报，旅游咨讯的权威发布、学者嘉宾的文化解读、旅游话题的实时互动，呈现国人多样化生活形态和旅行百科，彰显既有传承又具时代感的国家旅游形象。演播室内设多位节目主持人，时尚动感与博学稳重相结合，时代表达与文化传承成一脉，访谈亦正亦谐、轻松风趣、平实真诚，用各自不同的体验对同一旅游信息或事件作出独特判断，成为一档新颖的主持秀。节目宗旨：展示中国人的生活方式；表达新生代的旅行态度；沟通多元化的文化价值；构建华语圈的心灵家园。</desc>
   </programme>
   <programme start="20261027195900 +0800" stop="20261027200000 +0800" channel="CCTVWorldGeography.cn">
     <title lang="zh">世界地理频道字幕板-2023-2</title>
@@ -85376,6 +85376,9 @@
     <title lang="zh">今日世界</title>
     <desc lang="zh">The World Today is the core rolling news service of CGTN. Regular updates from Beijing and Washington D.C. keep viewers up-to-date with all the world’s top stories as they happen. The World Today delivers breaking news, live event, in-depth reporting, expert analysis and sustained coverage.</desc>
   </programme>
+  <programme start="20261027161500 +0800" stop="20261027170000 +0800" channel="CGTN.cn">
+    <title lang="zh">全球财经</title>
+  </programme>
   <programme start="20261027170000 +0800" stop="20261027173000 +0800" channel="CGTN.cn">
     <title lang="zh">今日世界</title>
     <desc lang="zh">The World Today is the core rolling news service of CGTN. Regular updates from Beijing and Washington D.C. keep viewers up-to-date with all the world’s top stories as they happen. The World Today delivers breaking news, live event, in-depth reporting, expert analysis and sustained coverage.</desc>
@@ -85393,10 +85396,6 @@
   </programme>
   <programme start="20261027190000 +0800" stop="20261027193000 +0800" channel="CGTN.cn">
     <title lang="zh">亚洲直播室</title>
-  </programme>
-  <programme start="20261027193000 +0800" stop="20261027200000 +0800" channel="CGTN.cn">
-    <title lang="zh">对话</title>
-    <desc lang="zh">《对话》栏目是中国中央电视台2000年推出的一档演播室谈话节目，时长60分钟，是中央电视台创立最早、影响力最大的高端精英谈话节目。 《对话》致力于为新闻人物、企业精英、政府官员、经济专家和投资者提供一个交流和对话的平台。受邀嘉宾均来自世界政要、行业领先者、具有强势话语权的标志性人物。每次节目由突发事件、热门人物、热门话题或某一经济现象导入，捕捉鲜活经济事件、探讨新潮理念、演绎故事冲突，着重突出思想的交锋与智慧的碰撞。 《对话》自开播以来，一直秉承高端、前沿、新锐、求实的节目风格，拥有了稳定的观众群，并在激烈的媒介市场竞争中占据自己独特的难以超越的位置，成为中央电视台最具影响力和核心品牌价值的王牌谈话节目。</desc>
   </programme>
   <programme start="20261027200000 +0800" stop="20261027201500 +0800" channel="CGTN.cn">
     <title lang="zh">今日世界</title>
@@ -88944,19 +88943,19 @@
     <title lang="zh">小猪佩奇</title>
     <desc lang="zh">粉红猪小妹是一只非常可爱的小粉红猪，她与弟弟乔治、爸爸、妈妈快乐地住在一起。粉红猪小妹最喜欢做的事情是玩游戏，打扮的漂漂亮亮，渡假，以及住在小泥坑里快乐的跳上跳下！除了这些，她还喜欢到处探险，虽然有些时候会遇到一些小状况，但总可以化险为夷，而且都会带给大家意外的惊喜！</desc>
   </programme>
+  <programme start="20261027142800 +0800" stop="20261027163200 +0800" channel="GoldenEagleCartoon.cn">
+    <title lang="zh">熊出没之神奇宝物</title>
+    <desc lang="zh">当拥有神奇能量的神奇宝物散落狗熊岭，具有极强的危险性和破坏性的宝物随时危害到森林的人类和动物。为了保护狗熊岭，熊大、熊二、光头强必须尽快行动寻回宝物，与此同时还得对抗意图抢夺宝物，修复许愿树，恢复青春的反派金豪 及其手下，大马猴和二狗再次重返成为熊强敌人 ，狗熊岭的日子注定不会平静……</desc>
+  </programme>
   <programme start="20261027163200 +0800" stop="20261027170000 +0800" channel="GoldenEagleCartoon.cn">
     <title lang="zh">小猪佩奇</title>
     <desc lang="zh">粉红猪小妹是一只非常可爱的小粉红猪，她与弟弟乔治、爸爸、妈妈快乐地住在一起。粉红猪小妹最喜欢做的事情是玩游戏，打扮的漂漂亮亮，渡假，以及住在小泥坑里快乐的跳上跳下！除了这些，她还喜欢到处探险，虽然有些时候会遇到一些小状况，但总可以化险为夷，而且都会带给大家意外的惊喜！</desc>
   </programme>
-  <programme start="20261027170800 +0800" stop="20261027172000 +0800" channel="GoldenEagleCartoon.cn">
+  <programme start="20261027171000 +0800" stop="20261027172300 +0800" channel="GoldenEagleCartoon.cn">
     <title lang="zh">麦咭超能学院</title>
     <desc lang="zh">在芒哆星少年麦咭与伙伴哆特意外被神秘金色能量卷入，来到奇妙的超能学院。在这里麦咭结识了追寻父亲下落的“黑客”少女新玥、“高塔首席”天才少年凌。三人开启了一段在困惑中成长、在陪伴中蜕变的奇妙冒险……</desc>
   </programme>
-  <programme start="20261027172000 +0800" stop="20261027192500 +0800" channel="GoldenEagleCartoon.cn">
-    <title lang="zh">熊出没之神奇宝物</title>
-    <desc lang="zh">当拥有神奇能量的神奇宝物散落狗熊岭，具有极强的危险性和破坏性的宝物随时危害到森林的人类和动物。为了保护狗熊岭，熊大、熊二、光头强必须尽快行动寻回宝物，与此同时还得对抗意图抢夺宝物，修复许愿树，恢复青春的反派金豪 及其手下，大马猴和二狗再次重返成为熊强敌人 ，狗熊岭的日子注定不会平静……</desc>
-  </programme>
-  <programme start="20261027192500 +0800" stop="20261027212000 +0800" channel="GoldenEagleCartoon.cn">
+  <programme start="20261027172300 +0800" stop="20261027193100 +0800" channel="GoldenEagleCartoon.cn">
     <title lang="zh">熊出没之神奇宝物</title>
     <desc lang="zh">当拥有神奇能量的神奇宝物散落狗熊岭，具有极强的危险性和破坏性的宝物随时危害到森林的人类和动物。为了保护狗熊岭，熊大、熊二、光头强必须尽快行动寻回宝物，与此同时还得对抗意图抢夺宝物，修复许愿树，恢复青春的反派金豪 及其手下，大马猴和二狗再次重返成为熊强敌人 ，狗熊岭的日子注定不会平静……</desc>
   </programme>
@@ -90352,6 +90351,10 @@
     <title lang="zh">动画片剧场</title>
     <desc lang="zh">为观众朋友奉上国内外优秀动画片作品。</desc>
   </programme>
+  <programme start="20261027163000 +0800" stop="20261027170000 +0800" channel="哈哈炫动.cn">
+    <title lang="zh">动画片剧场</title>
+    <desc lang="zh">为观众朋友奉上国内外优秀动画片作品。</desc>
+  </programme>
   <programme start="20261027170000 +0800" stop="20261027180000 +0800" channel="哈哈炫动.cn">
     <title lang="zh">动画片剧场</title>
     <desc lang="zh">为观众朋友奉上国内外优秀动画片作品。</desc>
@@ -90366,10 +90369,6 @@
   </programme>
   <programme start="20261027191500 +0800" stop="20261027193000 +0800" channel="哈哈炫动.cn">
     <title lang="zh">荧星梦工厂</title>
-  </programme>
-  <programme start="20261027193000 +0800" stop="20261027203000 +0800" channel="哈哈炫动.cn">
-    <title lang="zh">动画片剧场</title>
-    <desc lang="zh">为观众朋友奉上国内外优秀动画片作品。</desc>
   </programme>
   <programme start="20261027203000 +0800" stop="20261027220000 +0800" channel="哈哈炫动.cn">
     <title lang="zh">动画片剧场</title>
@@ -91517,6 +91516,10 @@
     <title lang="zh">纪录片</title>
     <desc lang="zh">关注于各行各业的新兴企业的成长史，将企业鲜为人知的奋斗历程、资源优势、文化理念，以生动易懂的方式娓娓道来。以真实、客观、感人、详尽的纪录片形式呈现在大众面前。</desc>
   </programme>
+  <programme start="20261027162000 +0800" stop="20261027171000 +0800" channel="求索动物.cn">
+    <title lang="zh">纪录栏目</title>
+    <desc lang="zh">关注于各行各业的新兴企业的成长史，将企业鲜为人知的奋斗历程、资源优势、文化理念，以生动易懂的方式娓娓道来。以真实、客观、感人、详尽的纪录片形式呈现在大众面前。</desc>
+  </programme>
   <programme start="20261027171000 +0800" stop="20261027180500 +0800" channel="求索动物.cn">
     <title lang="zh">纪录片</title>
     <desc lang="zh">关注于各行各业的新兴企业的成长史，将企业鲜为人知的奋斗历程、资源优势、文化理念，以生动易懂的方式娓娓道来。以真实、客观、感人、详尽的纪录片形式呈现在大众面前。</desc>
@@ -91527,10 +91530,6 @@
   </programme>
   <programme start="20261027185500 +0800" stop="20261027194500 +0800" channel="求索动物.cn">
     <title lang="zh">纪录片</title>
-    <desc lang="zh">关注于各行各业的新兴企业的成长史，将企业鲜为人知的奋斗历程、资源优势、文化理念，以生动易懂的方式娓娓道来。以真实、客观、感人、详尽的纪录片形式呈现在大众面前。</desc>
-  </programme>
-  <programme start="20261027194500 +0800" stop="20261027203500 +0800" channel="求索动物.cn">
-    <title lang="zh">纪录栏目</title>
     <desc lang="zh">关注于各行各业的新兴企业的成长史，将企业鲜为人知的奋斗历程、资源优势、文化理念，以生动易懂的方式娓娓道来。以真实、客观、感人、详尽的纪录片形式呈现在大众面前。</desc>
   </programme>
   <programme start="20261027203500 +0800" stop="20261027213000 +0800" channel="求索动物.cn">
@@ -92297,6 +92296,10 @@
     <title lang="zh">纪录片</title>
     <desc lang="zh">关注于各行各业的新兴企业的成长史，将企业鲜为人知的奋斗历程、资源优势、文化理念，以生动易懂的方式娓娓道来。以真实、客观、感人、详尽的纪录片形式呈现在大众面前。</desc>
   </programme>
+  <programme start="20261027162000 +0800" stop="20261027171000 +0800" channel="求索科学.cn">
+    <title lang="zh">纪录栏目</title>
+    <desc lang="zh">关注于各行各业的新兴企业的成长史，将企业鲜为人知的奋斗历程、资源优势、文化理念，以生动易懂的方式娓娓道来。以真实、客观、感人、详尽的纪录片形式呈现在大众面前。</desc>
+  </programme>
   <programme start="20261027171000 +0800" stop="20261027180500 +0800" channel="求索科学.cn">
     <title lang="zh">纪录片</title>
     <desc lang="zh">关注于各行各业的新兴企业的成长史，将企业鲜为人知的奋斗历程、资源优势、文化理念，以生动易懂的方式娓娓道来。以真实、客观、感人、详尽的纪录片形式呈现在大众面前。</desc>
@@ -92307,10 +92310,6 @@
   </programme>
   <programme start="20261027185500 +0800" stop="20261027194500 +0800" channel="求索科学.cn">
     <title lang="zh">纪录片</title>
-    <desc lang="zh">关注于各行各业的新兴企业的成长史，将企业鲜为人知的奋斗历程、资源优势、文化理念，以生动易懂的方式娓娓道来。以真实、客观、感人、详尽的纪录片形式呈现在大众面前。</desc>
-  </programme>
-  <programme start="20261027194500 +0800" stop="20261027203500 +0800" channel="求索科学.cn">
-    <title lang="zh">纪录栏目</title>
     <desc lang="zh">关注于各行各业的新兴企业的成长史，将企业鲜为人知的奋斗历程、资源优势、文化理念，以生动易懂的方式娓娓道来。以真实、客观、感人、详尽的纪录片形式呈现在大众面前。</desc>
   </programme>
   <programme start="20261027203500 +0800" stop="20261027213000 +0800" channel="求索科学.cn">
@@ -95465,12 +95464,13 @@
     <title lang="zh">小美人鱼</title>
     <desc lang="zh">影片从家喻户晓的安徒生童话中汲取灵感，以天真、勇敢兼具反叛精神的美人鱼爱丽儿（海莉·贝利 Halle Bailey 饰）为主角。渴望探索大海以外世界的她爱上了人类王子亚历克（乔纳·豪尔-金 Jonah Hauer-King 饰）。爱丽儿追随内心的声音，不惜违背传统，与邪恶的海底女巫乌苏拉（梅丽莎·麦卡西 Melissa McCarthy 饰）达成交易以换取体验人类生活的机会，却发现将自己和父亲都置于极度危险的境地……</desc>
   </programme>
+  <programme start="20261027150100 +0800" stop="20261027172100 +0800" channel="CHCFansMovieChannel.cn">
+    <title lang="zh">志愿军-雄兵出击</title>
+    <desc lang="zh">1949年建国初期，新中国面临“内忧外患”局面。朝鲜内战爆发以来，美军屡在中朝边境挑衅，平民惨遭轰炸。为了维护来之不易的和平、为了世代长久的安稳，1950年10月，中国人民志愿军入朝，“抗美援朝”战争拉开帷幕。这是一场“举国之战”——政治博弈场，毛泽东和斯大林谈判，运筹帷幄力争国家利益；朝鲜战场，即使军备实力对比悬殊，我军却用壮烈牺牲换回节节胜利；外交舞台，中华人民共和国代表团首度亮相联合国，中国新声赢得国际敬畏；国内民间，全国人民一心支援前线，热火朝天捐款捐物......新中国，寸土不让扬国威；新青年，意气风发保家国。</desc>
+  </programme>
   <programme start="20261027172100 +0800" stop="20261027193900 +0800" channel="CHCFansMovieChannel.cn">
     <title lang="zh">志愿军-存亡之战</title>
     <desc lang="zh">影片聚焦铁原阻击战。1951年5月，中国人民志愿军第63军刚刚结束了持续一个月的作战，就受命进驻铁原战场，正面对抗“联合国军”4个师。志愿军将士们浴血奋战，终于把敌军打上了谈判桌。为了完成任务，63军189师的战士化整为零，把自己变成一根钉子，牢牢钉在阵地上!1营阵地上，身为营教导员的李想（朱一龙）立下“一步也不会再退”的誓言，死守阵地；炮火连天中，李默尹（辛柏青 饰）一家三口在战场上团聚，一把钥匙，一顿战壕中的团圆饭，让这个因战争分离的小家更为亲密。为了给新中国造出更好的武器，归国军工专家吴本正（朱亚文 饰）在张孝恒（欧豪 饰）的保护下进入战场。身为警卫员的张孝恒坚信，守住了吴本正，就是守住了祖国的未来。孙醒（陈飞宇 饰）、杨三弟（张宥浩 饰）也纷纷来到铁原。63军全体将士一起，在铁原战场上筑成了一道冲不破的“铁长城”！</desc>
-  </programme>
-  <programme start="20261027194100 +0800" stop="20261027220000 +0800" channel="CHCFansMovieChannel.cn">
-    <title lang="zh">志愿军-浴血和平</title>
   </programme>
   <programme start="20261027220000 +0800" stop="20261027235500 +0800" channel="CHCFansMovieChannel.cn">
     <title lang="zh">天使陷落</title>
@@ -169823,6 +169823,9 @@
   <programme start="20261027154400 +0800" stop="20261027154900 +0800" channel="CCTV中学生.cn">
     <title lang="zh">千年墨韵传古意十年搨影续薪火</title>
   </programme>
+  <programme start="20261027154900 +0800" stop="20261027173000 +0800" channel="CCTV中学生.cn">
+    <title lang="zh">金牌小主播全国总决选节目展播</title>
+  </programme>
   <programme start="20261027173000 +0800" stop="20261027174200 +0800" channel="CCTV中学生.cn">
     <title lang="zh">海底小纵队11(19)</title>
     <desc lang="zh">该片以海洋作为故事上演的舞台，讲述了八个居住在神秘基地——章鱼堡的可爱小动物，组成海底探险小队，不断解决海底事故、排除困扰的故事。动画以科学性、趣味性、教育性为主导，兼顾孩子的好奇心与求知欲，融合了动作、探险、海洋生物科学课程以及学龄前团队协作等内容，是一部海洋知识大百科。</desc>
@@ -169852,9 +169855,6 @@
   </programme>
   <programme start="20261027190000 +0800" stop="20261027193000 +0800" channel="CCTV中学生.cn">
     <title lang="zh">科影发现</title>
-  </programme>
-  <programme start="20261027193000 +0800" stop="20261027200700 +0800" channel="CCTV中学生.cn">
-    <title lang="zh">优秀节目展播</title>
   </programme>
   <programme start="20261027200700 +0800" stop="20261027211800 +0800" channel="CCTV中学生.cn">
     <title lang="zh">金牌小主播全国总决选节目展播</title>
@@ -170575,7 +170575,7 @@
   <programme start="20261101230700 +0800" stop="20261101231000 +0800" channel="CCTV中学生.cn">
     <title lang="zh">豆神教育课堂:成语篇-大公无私</title>
   </programme>
-  <programme start="20261101231000 +0800" stop="20261102020000 +0800" channel="CCTV中学生.cn">
+  <programme start="20261101231000 +0800" stop="20261102080100 +0800" channel="CCTV中学生.cn">
     <title lang="zh">家国:文天祥</title>
   </programme>
   <programme start="20261102092200 +0800" stop="20261102093500 +0800" channel="CCTV中学生.cn">
@@ -170741,61 +170741,74 @@
     <title lang="zh">纪录片</title>
     <desc lang="zh">关注于各行各业的新兴企业的成长史，将企业鲜为人知的奋斗历程、资源优势、文化理念，以生动易懂的方式娓娓道来。以真实、客观、感人、详尽的纪录片形式呈现在大众面前。</desc>
   </programme>
-  <programme start="20261027072400 +0800" stop="20261027081100 +0800" channel="重温经典.cn">
+  <programme start="20261027072400 +0800" stop="20261027080500 +0800" channel="重温经典.cn">
     <title lang="zh">剧场</title>
   </programme>
-  <programme start="20261027081100 +0800" stop="20261027094400 +0800" channel="重温经典.cn">
-    <title lang="zh">剧场</title>
+  <programme start="20261027080500 +0800" stop="20261027085400 +0800" channel="重温经典.cn">
+    <title lang="zh">情满珠江15</title>
   </programme>
-  <programme start="20261027094400 +0800" stop="20261027103100 +0800" channel="重温经典.cn">
-    <title lang="zh">剧场</title>
+  <programme start="20261027085400 +0800" stop="20261027093900 +0800" channel="重温经典.cn">
+    <title lang="zh">甄嬛传46</title>
   </programme>
-  <programme start="20261027103100 +0800" stop="20261027111800 +0800" channel="重温经典.cn">
-    <title lang="zh">剧场</title>
+  <programme start="20261027093900 +0800" stop="20261027102400 +0800" channel="重温经典.cn">
+    <title lang="zh">甄嬛传47</title>
   </programme>
-  <programme start="20261027111800 +0800" stop="20261027120500 +0800" channel="重温经典.cn">
-    <title lang="zh">剧场</title>
+  <programme start="20261027102400 +0800" stop="20261027111100 +0800" channel="重温经典.cn">
+    <title lang="zh">重案六组 第三部 23</title>
   </programme>
-  <programme start="20261027120500 +0800" stop="20261027125200 +0800" channel="重温经典.cn">
-    <title lang="zh">纪录片</title>
-    <desc lang="zh">关注于各行各业的新兴企业的成长史，将企业鲜为人知的奋斗历程、资源优势、文化理念，以生动易懂的方式娓娓道来。以真实、客观、感人、详尽的纪录片形式呈现在大众面前。</desc>
+  <programme start="20261027111100 +0800" stop="20261027115900 +0800" channel="重温经典.cn">
+    <title lang="zh">重案六组 第三部 24</title>
   </programme>
-  <programme start="20261027125200 +0800" stop="20261027133500 +0800" channel="重温经典.cn">
-    <title lang="zh">剧场</title>
+  <programme start="20261027115900 +0800" stop="20261027121300 +0800" channel="重温经典.cn">
+    <title lang="zh">纪录四川100双手74</title>
   </programme>
-  <programme start="20261027133500 +0800" stop="20261027141700 +0800" channel="重温经典.cn">
-    <title lang="zh">剧场</title>
+  <programme start="20261027121300 +0800" stop="20261027122800 +0800" channel="重温经典.cn">
+    <title lang="zh">纪录四川100双手75</title>
   </programme>
-  <programme start="20261027141700 +0800" stop="20261027150500 +0800" channel="重温经典.cn">
-    <title lang="zh">剧场</title>
+  <programme start="20261027122800 +0800" stop="20261027124300 +0800" channel="重温经典.cn">
+    <title lang="zh">纪录四川100双手76</title>
   </programme>
-  <programme start="20261027150500 +0800" stop="20261027163400 +0800" channel="重温经典.cn">
-    <title lang="zh">剧场</title>
+  <programme start="20261027124300 +0800" stop="20261027133000 +0800" channel="重温经典.cn">
+    <title lang="zh">动什么,别动感情 13</title>
   </programme>
-  <programme start="20261027172300 +0800" stop="20261027175500 +0800" channel="重温经典.cn">
-    <title lang="zh">京剧音配像</title>
+  <programme start="20261027133000 +0800" stop="20261027141800 +0800" channel="重温经典.cn">
+    <title lang="zh">动什么,别动感情 14</title>
   </programme>
-  <programme start="20261027175500 +0800" stop="20261027183300 +0800" channel="重温经典.cn">
-    <title lang="zh">动画片</title>
+  <programme start="20261027141800 +0800" stop="20261027150500 +0800" channel="重温经典.cn">
+    <title lang="zh">动什么,别动感情 15</title>
   </programme>
-  <programme start="20261027183300 +0800" stop="20261027192100 +0800" channel="重温经典.cn">
-    <title lang="zh">纪录片</title>
-    <desc lang="zh">关注于各行各业的新兴企业的成长史，将企业鲜为人知的奋斗历程、资源优势、文化理念，以生动易懂的方式娓娓道来。以真实、客观、感人、详尽的纪录片形式呈现在大众面前。</desc>
+  <programme start="20261027150500 +0800" stop="20261027155100 +0800" channel="重温经典.cn">
+    <title lang="zh">温州两家人13</title>
   </programme>
-  <programme start="20261027192100 +0800" stop="20261027200600 +0800" channel="重温经典.cn">
-    <title lang="zh">剧场</title>
+  <programme start="20261027155100 +0800" stop="20261027163600 +0800" channel="重温经典.cn">
+    <title lang="zh">温州两家人14</title>
   </programme>
-  <programme start="20261027200600 +0800" stop="20261027214000 +0800" channel="重温经典.cn">
-    <title lang="zh">剧场</title>
+  <programme start="20261027163600 +0800" stop="20261027172200 +0800" channel="重温经典.cn">
+    <title lang="zh">温州两家人15</title>
   </programme>
-  <programme start="20261027214000 +0800" stop="20261027222700 +0800" channel="重温经典.cn">
-    <title lang="zh">剧场</title>
+  <programme start="20261027180600 +0800" stop="20261027181800 +0800" channel="重温经典.cn">
+    <title lang="zh">海尔兄弟135</title>
   </programme>
-  <programme start="20261027222700 +0800" stop="20261027231400 +0800" channel="重温经典.cn">
-    <title lang="zh">剧场</title>
+  <programme start="20261027181800 +0800" stop="20261027182900 +0800" channel="重温经典.cn">
+    <title lang="zh">海尔兄弟136</title>
   </programme>
-  <programme start="20261027231400 +0800" stop="20261027235900 +0800" channel="重温经典.cn">
-    <title lang="zh">剧场</title>
+  <programme start="20261027182900 +0800" stop="20261027192000 +0800" channel="重温经典.cn">
+    <title lang="zh">南京·十朝印记 04</title>
+  </programme>
+  <programme start="20261027200900 +0800" stop="20261027205600 +0800" channel="重温经典.cn">
+    <title lang="zh">情满珠江17</title>
+  </programme>
+  <programme start="20261027205600 +0800" stop="20261027214100 +0800" channel="重温经典.cn">
+    <title lang="zh">甄嬛传48</title>
+  </programme>
+  <programme start="20261027214100 +0800" stop="20261027222700 +0800" channel="重温经典.cn">
+    <title lang="zh">甄嬛传49</title>
+  </programme>
+  <programme start="20261027222700 +0800" stop="20261027231300 +0800" channel="重温经典.cn">
+    <title lang="zh">重案六组 第三部 25</title>
+  </programme>
+  <programme start="20261027231300 +0800" stop="20261027235900 +0800" channel="重温经典.cn">
+    <title lang="zh">重案六组 第三部 26</title>
   </programme>
   <programme start="20261027235900 +0800" stop="20261028060200 +0800" channel="重温经典.cn">
     <title lang="zh">结束</title>
