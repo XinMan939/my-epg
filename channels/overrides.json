@@ -146,5 +146,35 @@
     "sourceId": "GDTV-GDTV7",
     "z51SourceId": "e1:1434"
   },
-  "_notes_JiaJiaCartoon.cn": "2026-10-27 第七轮（改）：原先是「无匹配 → z51 兜底」，走不到补天分支，所以永远 2 天。改成 tvmao 做主源（7天 443 条）+ z51 e1:1434 补简介（100%）。⚠️ tvmao 只有 w1/w2 完整（168/159 条到 23:48），w3~w7 上游只给 22~26 条且只到 14~17 点。"
+  "_notes_JiaJiaCartoon.cn": "2026-10-27 第七轮（改）：原先是「无匹配 → z51 兜底」，走不到补天分支，所以永远 2 天。改成 tvmao 做主源（7天 443 条）+ z51 e1:1434 补简介（100%）。⚠️ tvmao 只有 w1/w2 完整（168/159 条到 23:48），w3~w7 上游只给 22~26 条且只到 14~17 点。",
+  "MacauTV.hk": {
+    "source": "tdm",
+    "sourceId": "1",
+    "sourceName": "澳視澳門"
+  },
+  "MacauPortuguese.hk": {
+    "source": "tdm",
+    "sourceId": "2",
+    "sourceName": "澳視葡文"
+  },
+  "MacauSports.hk": {
+    "source": "tdm",
+    "sourceId": "6",
+    "sourceName": "澳門體育"
+  },
+  "MacauInfo.hk": {
+    "source": "tdm",
+    "sourceId": "5",
+    "sourceName": "澳門資訊"
+  },
+  "MacauVariety.hk": {
+    "source": "tdm",
+    "sourceId": "7",
+    "sourceName": "澳門綜藝"
+  },
+  "MacauSatellite.hk": {
+    "source": "tdm",
+    "sourceId": "8",
+    "sourceName": "澳門-Macau"
+  }
 }

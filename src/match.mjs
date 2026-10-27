@@ -75,7 +75,8 @@ export function matchChannels(targets, catalog, opts = {}) {
         ov.source === 'tvsou' ||
         ov.source === 'fengshows' ||
         ov.source === 'webncode' ||
-        ov.source === 'litv'
+        ov.source === 'litv' ||
+        ov.source === 'tdm'
       ) {
         log.warn(
           `[match] ${t.id} 的 overrides 源 ${ov.source}:${ov.sourceId} 不在清单中，按手工指定直接使用（抓不到会自然留空）`

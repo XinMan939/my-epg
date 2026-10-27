@@ -38,10 +38,11 @@ import * as tvsou from './sources/tvsou.mjs'
 import * as fengshows from './sources/fengshows.mjs'
 import * as webncode from './sources/webncode.mjs'
 import * as litv from './sources/litv.mjs'
+import * as tdm from './sources/tdm.mjs'
 import { enrichFromZ51, loadPacks, fillEmptyChannels } from './sources/z51.mjs'
 import { enrichFromKbro } from './sources/kbro.mjs'
 
-const SOURCES = { epgpw, tvmao, tvsou, fengshows, webncode, litv }
+const SOURCES = { epgpw, tvmao, tvsou, fengshows, webncode, litv, tdm }
 
 /**
  * 源优先级：靠前的优先。

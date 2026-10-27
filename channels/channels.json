@@ -2473,6 +2473,56 @@
         "重温经典频道",
         "重溫經典"
       ]
+    },
+    {
+      "id": "MacauPortuguese.hk",
+      "name": "澳门葡文台",
+      "group": "mo",
+      "country": "MO",
+      "aliases": [
+        "澳视葡文",
+        "澳視葡文"
+      ]
+    },
+    {
+      "id": "MacauSports.hk",
+      "name": "澳门体育",
+      "group": "mo",
+      "country": "MO",
+      "aliases": [
+        "澳视体育",
+        "澳視體育"
+      ]
+    },
+    {
+      "id": "MacauInfo.hk",
+      "name": "澳门资讯",
+      "group": "mo",
+      "country": "MO",
+      "aliases": [
+        "澳视资讯",
+        "澳門資訊"
+      ]
+    },
+    {
+      "id": "MacauVariety.hk",
+      "name": "澳门综艺",
+      "group": "mo",
+      "country": "MO",
+      "aliases": [
+        "澳视综艺",
+        "澳門綜藝"
+      ]
+    },
+    {
+      "id": "MacauSatellite.hk",
+      "name": "澳门-Macau",
+      "group": "mo",
+      "country": "MO",
+      "aliases": [
+        "澳門-Macau",
+        "澳门澳门"
+      ]
     }
   ]
 }
