@@ -1,4 +1,4 @@
-name: 探测 Now Player v12（临时）
+name: 探测 Now Player v13（临时）
 on:
   workflow_dispatch:
 jobs:
@@ -6,82 +6,93 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 40
     steps:
-      - name: lang=zh 中文标题验证
+      - name: lang=zh 中文简介覆盖率（决定性验证）
         run: |
           mkdir -p out
           UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36"
           B="https://nowplayer.now.com"
           {
-            echo "===== A. 中文页面 lang 变量 ====="
-            curl -sS --compressed -o /tmp/zh.html --max-time 30 -A "$UA" "$B/tvguide?lang=zh"
-            echo "  大小 $(wc -c < /tmp/zh.html)"
-            grep -oE "var lang = '[a-z]+'" /tmp/zh.html | head -3
-            grep -oE '<html lang="[^"]*"' /tmp/zh.html | head -2
-            grep -oE 'hreflang="[^"]*"' /tmp/zh.html | head -4
-
-            echo
-            echo "===== B. lang=zh 下的 epglist（带 cookie/referer）====="
-            for q in "channelIdList=366&day=2" "channelIdList=332&day=2" "channelIdList=548&day=2"; do
-              curl -sS --compressed -o /tmp/z.json --max-time 25 -A "$UA" -H "Referer: $B/tvguide?lang=zh" "$B/tvguide/epglist?$q"
+            echo "===== A. lang=zh 下 5 台标题样例 ====="
+            for id in 366 548 332 333 331 096 099 102; do
+              curl -sS --compressed -o /tmp/a$id.json --max-time 25 -A "$UA" "$B/tvguide/epglist?channelIdList=$id&day=2&lang=zh"
               node -e "
-                try{const j=JSON.parse(require('fs').readFileSync('/tmp/z.json','utf8'));
-                const ps=j[0]||[];
-                console.log('  [$q] '+ps.length+' 条');
-                ps.slice(0,4).forEach(p=>console.log('     '+p.name));
-                }catch(e){console.log('  [$q] 失败')}
+                try{const j=JSON.parse(require('fs').readFileSync('/tmp/a$id.json','utf8'));
+                const ps=(j[0]||[]);
+                console.log('  $id ('+ps.length+'条): '+ps.slice(0,4).map(p=>p.name).join(' / '));
+                }catch(e){console.log('  $id 失败')}
               "
             done
 
             echo
-            echo "===== C. 带 lang 参数请求 epglist ====="
-            for extra in "&lang=zh" "&lang=zh-hk" "&lang=chi"; do
-              curl -sS --compressed -o /tmp/z2.json --max-time 25 -A "$UA" -H "Referer: $B/tvguide?lang=zh" "$B/tvguide/epglist?channelIdList=366&day=2$extra"
+            echo "===== B. lang=zh 下 epgprogramdetail 中文简介 ====="
+            for id in 366 548 332 333; do
+              curl -sS --compressed -o /tmp/b$id.json --max-time 25 -A "$UA" "$B/tvguide/epglist?channelIdList=$id&day=2&lang=zh"
               node -e "
-                try{const j=JSON.parse(require('fs').readFileSync('/tmp/z2.json','utf8'));
-                const ps=j[0]||[];
-                console.log('  [$extra] '+ps.length+' 条: '+ps.slice(0,3).map(p=>p.name).join(' / '));
-                }catch(e){console.log('  [$extra] 失败')}
+                const j=JSON.parse(require('fs').readFileSync('/tmp/b$id.json','utf8'));
+                const ps=(j[0]||[]).slice(0,12);
+                require('fs').writeFileSync('/tmp/bp$id.txt', ps.map(p=>p.vimProgramId).join('\n'));
+              "
+              HIT=0; TOT=0; SAMP=""
+              for pid in $(cat /tmp/bp$id.txt); do
+                TOT=$((TOT+1))
+                R=$(curl -sS --compressed --max-time 20 -A "$UA" "$B/tvguide/epgprogramdetail?programId=$pid&lang=zh" 2>/dev/null)
+                OUT=$(node -e "
+                  let s=process.argv[1]; try{const d=JSON.parse(s);
+                  const chi=(d.chiSynopsis||'').trim();
+                  const any=(d.synopsis||'').trim();
+                  const eng=(d.engSynopsis||'').trim();
+                  console.log([chi.length,any.length,eng.length,(chi||any||eng).slice(0,40)].join('|'));
+                  }catch(e){console.log('ERR')}" "$R" 2>&1)
+                CL=$(echo "$OUT" | cut -d'|' -f1)
+                if [ "$CL" -gt 20 ] 2>/dev/null; then HIT=$((HIT+1)); [ -z "$SAMP" ] && SAMP=$(echo "$OUT" | cut -d'|' -f4); fi
+                TOT_ALL=$TOT
+              done
+              echo "  $id 中文简介 $HIT/$TOT | 样例: $SAMP"
+            done
+
+            echo
+            echo "===== C. lang=zh 7 天完整抓取 + 每日覆盖（366/548）====="
+            for id in 366 548; do
+              for day in 1 2 3 4 5 6 7; do
+                curl -sS --compressed -o out/zh_${id}_$day.json --max-time 25 -A "$UA" "$B/tvguide/epglist?channelIdList=$id&day=$day&lang=zh"
+              done
+              node -e "
+                const fs=require('fs');
+                const rows=[];
+                for(let d=1;d<=7;d++){const j=JSON.parse(fs.readFileSync('out/zh_${id}_'+d+'.json','utf8'));for(const p of (j[0]||[]))rows.push(p)}
+                const seen=new Set(); const uniq=[];
+                for(const r of rows){const k=r.start+'|'+r.name; if(seen.has(k))continue; seen.add(k); uniq.push(r)}
+                uniq.sort((a,b)=>a.start-b.start);
+                console.log('  ${id}: 原始'+rows.length+' 去重'+uniq.length);
+                const byDay={}, hrs={};
+                for(const r of uniq){const dd=new Date(r.start+8*3600e3).toISOString().slice(0,10); byDay[dd]=(byDay[dd]||0)+1; hrs[dd]=(hrs[dd]||0)+(r.end-r.start)/3600e3}
+                for(const k of Object.keys(byDay).sort()) console.log('    '+k+' '+byDay[k]+'条 '+hrs[k].toFixed(1)+'h');
+                console.log('    首条 '+new Date(uniq[0].start+8*3600e3).toISOString().slice(0,16)+' 末条 '+new Date(uniq[uniq.length-1].end+8*3600e3).toISOString().slice(0,16));
+                let ov=0; for(let i=1;i<uniq.length;i++) if(uniq[i].start<uniq[i-1].end) ov++;
+                console.log('    重叠 '+ov);
+                console.log('    标题样例: '+uniq.slice(0,5).map(p=>p.name).join(' / '));
               "
             done
 
             echo
-            echo "===== D. 带 Cookie 语言偏好 ====="
-            curl -sS --compressed -o /tmp/z3.json --max-time 25 -A "$UA" \
-              -H "Referer: $B/tvguide?lang=zh" -H "Cookie: lang=zh; lang_pref=zh; NOWTV_LANG=zh" \
-              "$B/tvguide/epglist?channelIdList=366&day=2"
-            node -e "
-              try{const j=JSON.parse(require('fs').readFileSync('/tmp/z3.json','utf8'));
-              const ps=j[0]||[];
-              console.log('  cookie=zh '+ps.length+' 条: '+ps.slice(0,3).map(p=>p.name).join(' / '));
-              }catch(e){console.log('  失败')}
-            "
-
-            echo
-            echo "===== E. 中文页面里的频道名（对比英文）====="
-            grep -oE 'class="ch-num">[0-9]+</span>' /tmp/zh.html | head -3
-            grep -oE 'alt="[^"]{2,30}"' /tmp/zh.html | sort -u | head -15
-            echo "  --- 中文页面 channeldetail/366 ---"
-            curl -sS --compressed -o /tmp/zc.html --max-time 25 -A "$UA" "$B/tvguide/channeldetail/366/1?lang=zh"
-            grep -oE '<title>[^<]*</title>' /tmp/zc.html
-
-            echo
-            echo "===== F. 中文节目详情（epgprogramdetail）====="
-            curl -sS --compressed -o /tmp/zz.json --max-time 25 -A "$UA" "$B/tvguide/epglist?channelIdList=366&day=2"
-            PID=$(node -e "const j=JSON.parse(require('fs').readFileSync('/tmp/zz.json','utf8'));console.log(j[0][3].vimProgramId)")
-            echo "  pid=$PID"
-            curl -sS --compressed --max-time 25 -A "$UA" -H "Referer: $B/tvguide?lang=zh" "$B/tvguide/epgprogramdetail?programId=$PID&lang=zh" | head -c 1500
-            echo
-            echo "  --- 详情里的中文字段 ---"
-            curl -sS --compressed -o /tmp/zz2.json --max-time 25 -A "$UA" "$B/tvguide/epgprogramdetail?programId=$PID"
-            node -e "
-              const d=JSON.parse(require('fs').readFileSync('/tmp/zz2.json','utf8'));
-              console.log('  chiProgName: '+d.chiProgName);
-              console.log('  chiSeriesName: '+d.chiSeriesName);
-              console.log('  engProgName: '+d.engProgName);
-              console.log('  chiSynopsis: '+(d.chiSynopsis||'').slice(0,60));
-              console.log('  engSynopsis: '+(d.engSynopsis||'').slice(0,60));
-              console.log('  synopsis: '+(d.synopsis||'').slice(0,60));
-            " 2>&1
+            echo "===== D. 332/333/331 lang=zh 7 天 ====="
+            for id in 332 333 331; do
+              for day in 1 2 3 4 5 6 7; do
+                curl -sS --compressed -o out/zh_${id}_$day.json --max-time 25 -A "$UA" "$B/tvguide/epglist?channelIdList=$id&day=$day&lang=zh"
+              done
+              node -e "
+                const fs=require('fs');
+                const rows=[];
+                for(let d=1;d<=7;d++){const j=JSON.parse(fs.readFileSync('out/zh_${id}_'+d+'.json','utf8'));for(const p of (j[0]||[]))rows.push(p)}
+                const seen=new Set(); const uniq=[];
+                for(const r of rows){const k=r.start+'|'+r.name; if(seen.has(k))continue; seen.add(k); uniq.push(r)}
+                uniq.sort((a,b)=>a.start-b.start);
+                const byDay={}, hrs={};
+                for(const r of uniq){const dd=new Date(r.start+8*3600e3).toISOString().slice(0,10); byDay[dd]=(byDay[dd]||0)+1; hrs[dd]=(hrs[dd]||0)+(r.end-r.start)/3600e3}
+                console.log('  ${id}: 去重'+uniq.length+' | '+Object.keys(byDay).sort().map(k=>k.slice(5)+':'+byDay[k]+'('+hrs[k].toFixed(0)+'h)').join(' '));
+                console.log('    标题: '+uniq.slice(0,4).map(p=>p.name).join(' / '));
+              "
+            done
           } > out/report.txt 2>&1
       - uses: actions/upload-artifact@v4
-        with: { name: np-probe12, path: out/ }
+        with: { name: np-probe13, path: out/ }
