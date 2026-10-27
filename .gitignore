@@ -23,3 +23,7 @@ node_modules/
 
 # 注：.github/workflows/ 曾因本地 token 无 workflow scope 被忽略，
 # 2026-10-27 起改用 gh CLI（token 含 workflow scope）管理，已正常入库，不再忽略。
+
+# 临时比对文件（别用 git add -A，会带进去）
+.rep-*.json
+.tmp-*
