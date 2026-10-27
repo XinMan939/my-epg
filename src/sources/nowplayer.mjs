@@ -107,6 +107,9 @@ const BATCH = 24
 /** 抓详情并发数（实测 8 路 60 条 5 秒，无限速） */
 const DESC_CONCURRENCY = 8
 
+/** 抽样多少组标题来估简介覆盖率（越多越准，越慢；实测 8 组足够稳） */
+const SAMPLE_TITLES = 8
+
 /**
  * 简介缓存：programId → desc
  * 同一节目在 7 天里会重复出现（直播/重播），缓存能省掉大量请求。
@@ -369,12 +372,26 @@ async function fillDescs(rows) {
  *   - days 只算「今天及以后」
  *   - count / withDesc 都是真数，不估
  *
- * ★ 为了省时间，这里**不抓简介**（withDesc 按「该台有没有简介能力」粗估）：
- *   全量 135 台 × 7 天 × 详情抓取会跑几十分钟，超出 CI 预算。
- *   但 withDesc 必须真数，否则 pickBest 排序会被骗（pitfalls §6.7）。
- *   → 折中：只对**每台前 3 个唯一标题**抓详情，按命中率外推。
- *     这是"抽样估计"，会标注在日志里，且只有配了 override/alternative 的台才会被用到，
- *     真实产物里的 withDesc 由 getDayProgrammes 真算。
+ * ★★ withDesc 必须真算，不能填 0（2026-10-28 踩过，别改回去）：
+ *    第一版为了「省时间」把 withDesc 填 0，注释还写着「保守值，宁可排后面」。
+ *    结果 build 日志里 nowplayer **一次都没被用上** —— 因为 webncode 也有
+ *    `nowtv_366/548/332/333/331` 同名台，days 完全一样，按
+ *    `days → withDesc → count` 排序时，nowplayer 的 0 让它永远排在 webncode 后面。
+ *
+ *    但实测质量是反的（CI run 40574446907）：
+ *      鳳凰衛視資訊台  nowplayer 434条 272简介 7天  vs  webncode 383条 **0简介** 6天
+ *      鳳凰衛視中文台  nowplayer 335条 276简介 7天  vs  webncode 293条 **0简介** 6天
+ *      Now新聞台       nowplayer 265条 263简介 5天  vs  webncode 273条 **0简介** 5天
+ *    → 填 0 等于把「唯一有简介的源」排到「零简介源」后面，正好是 pitfalls §6.7
+ *      那个坑的镜像：数字看着保守，实际把好源锁死了。
+ *
+ * ★ 简介怎么省着真算：
+ *    全量 135 台 × 7 天 × 逐条详情会跑几十分钟。这里按**标题分组后加权抽样**：
+ *    对每台取「当天覆盖节目数最多的前 SAMPLE_TITLES 个标题」抓详情，
+ *    再按这些标题**覆盖的节目数**算比例，外推到 count。
+ *    为什么按节目数加权而不是按标题数：366 有 33 个唯一标题，31 个有简介（94%），
+ *    但实际节目级覆盖只有 272/434 = 63% —— 没简介的那 2 个标题各占 80+ 条。
+ *    按标题数算会高估到 94%，按节目数加权才接近真实。
  */
 export async function listChannels() {
   const chs = await fetchChannelList()
@@ -392,42 +409,86 @@ export async function listChannels() {
     perDay.set(d, m)
   }
 
-  const out = []
+  // 先算天数/条数（纯本地，不联网）
+  const stats = []
   for (const ch of chs) {
     const dayset = new Set()
     let count = 0
-
     for (let d = 1; d <= MAX_DAY; d++) {
       const arr = (perDay.get(d) || new Map()).get(ch.sourceId) || []
       if (!arr.length) continue
       const rows = toRows(arr)
       if (!rows.length) continue
-      // day 序号 → 实际日期，只算今天及以后（day>=1 天然满足，但保留判断防口径漂移）
       const ymd = hkYmd(d - 1)
       if (ymd < todayYmd) continue
       dayset.add(ymd)
       count += rows.length
     }
-
-    out.push({
-      source: 'nowplayer',
-      region: 'HK',
-      sourceId: ch.sourceId,
-      name: ch.name || `Now-${ch.sourceId}`,
-      logo: '',
-      days: dayset.size,
-      count,
-      // ★ 抽样估简介：先给 0，真正用到时由 getDayProgrammes 真算
-      //   这里给 0 是**故意的保守值** —— 宁可让它在 pickBest 里排后面，
-      //   也不要给个虚高的估计值骗排序（pitfalls §6.7 的教训）
-      withDesc: 0,
-    })
+    stats.push({ ch, days: dayset.size, count })
   }
+
+  // 再抽样算 withDesc（只对「有节目」的台，抽样标题抓详情）
+  await mapLimit(
+    stats.filter((s) => s.count > 0),
+    DESC_CONCURRENCY,
+    async (s) => {
+      s.withDesc = await estimateDescCount(s.ch.sourceId, s.count, perDay)
+    }
+  )
+
+  const out = stats.map((s) => ({
+    source: 'nowplayer',
+    region: 'HK',
+    sourceId: s.ch.sourceId,
+    name: s.ch.name || `Now-${s.ch.sourceId}`,
+    logo: '',
+    days: s.days,
+    count: s.count,
+    withDesc: s.withDesc || 0,
+  }))
 
   const ok = out.filter((c) => c.days > 0).length
   const tot = out.reduce((s, c) => s + c.count, 0)
-  log.ok(`[nowplayer] ${ok}/${out.length} 个台有节目，共 ${tot} 条（简介走详情接口，withDesc 由产物真算）`)
+  const desc = out.reduce((s, c) => s + c.withDesc, 0)
+  log.ok(
+    `[nowplayer] ${ok}/${out.length} 个台有节目，共 ${tot} 条，抽样估简介 ${desc} 条（${Math.round((desc / (tot || 1)) * 100)}%）`
+  )
   return out
+}
+
+/**
+ * 抽样估计某台的简介条数
+ *
+ * 做法：取「今天」的节目（已经抓过，不用再请求），按标题分组，
+ * 挑覆盖节目数最多的前 N 组抓详情，用它们的**节目数**算比例，外推到 count。
+ *
+ * @returns {number} 估计的带真实简介节目数
+ */
+async function estimateDescCount(sourceId, totalCount, perDay) {
+  const arr = (perDay.get(1) || new Map()).get(sourceId) || []
+  const rows = toRows(arr)
+  if (!rows.length) return 0
+
+  // 按标题分组，记录每组覆盖的节目数
+  const groups = new Map()
+  for (const r of rows) {
+    const g = groups.get(r.title) || { n: 0, pid: r._pid }
+    g.n++
+    groups.set(r.title, g)
+  }
+  const sorted = [...groups.entries()].sort((a, b) => b[1].n - a[1].n).slice(0, SAMPLE_TITLES)
+
+  let covered = 0
+  let withDesc = 0
+  for (const [title, g] of sorted) {
+    covered += g.n
+    const d = await fetchDesc(g.pid)
+    if (hasRealDesc(d, title)) withDesc += g.n
+  }
+  if (!covered) return 0
+
+  const ratio = withDesc / covered
+  return Math.round(totalCount * ratio)
 }
 
 export { log }
