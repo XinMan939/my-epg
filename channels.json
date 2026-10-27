@@ -1801,7 +1801,8 @@
     "name": "NOW新闻",
     "group": "hk",
     "aliases": [
-      "Now新聞台"
+      "Now新聞台",
+      "Now新聞"
     ],
     "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129063901847212_30",
     "hasEpg": true,
@@ -1812,7 +1813,8 @@
     "name": "Now财经",
     "group": "hk",
     "aliases": [
-      "Now財經台"
+      "Now財經台",
+      "Now財經"
     ],
     "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129070159584201_42",
     "hasEpg": true,
@@ -1831,7 +1833,9 @@
     "id": "nowDirect.hk",
     "name": "Now直播台",
     "group": "hk",
-    "aliases": [],
+    "aliases": [
+      "now直播"
+    ],
     "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129061411320352_44",
     "hasEpg": true,
     "programmeCount": 59

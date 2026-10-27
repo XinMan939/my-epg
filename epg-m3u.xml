@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tv generator-info-name="my-epg" generator-info-url="https://github.com/" date="20261028035320 +0800">
+<tv generator-info-name="my-epg" generator-info-url="https://github.com/" date="20261028035746 +0800">
   <channel id="CCTV1">
     <display-name lang="zh">CCTV-1 综合</display-name>
     <display-name lang="zh">CCTV-1</display-name>
@@ -752,11 +752,13 @@
   <channel id="NOW新闻">
     <display-name lang="zh">NOW新闻</display-name>
     <display-name lang="zh">Now新聞台</display-name>
+    <display-name lang="zh">Now新聞</display-name>
     <icon src="https://epg.pw/media/images/epg/2025/01/29/20250129063901847212_30" />
   </channel>
   <channel id="Now财经">
     <display-name lang="zh">Now财经</display-name>
     <display-name lang="zh">Now財經台</display-name>
+    <display-name lang="zh">Now財經</display-name>
     <icon src="https://epg.pw/media/images/epg/2025/01/29/20250129070159584201_42" />
   </channel>
   <channel id="PopC">
@@ -764,6 +766,7 @@
   </channel>
   <channel id="Now直播台">
     <display-name lang="zh">Now直播台</display-name>
+    <display-name lang="zh">now直播</display-name>
     <icon src="https://epg.pw/media/images/epg/2025/01/29/20250129061411320352_44" />
   </channel>
   <channel id="ROCKAction">
