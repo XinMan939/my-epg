@@ -6,26 +6,25 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - name: 验证正确签名
+      - name: 天数覆盖 + 简介接口
         run: |
           mkdir -p out
           B="https://appapi.tdm.com.mo"
           {
-            echo "=== 1) program-list/Channel 带参数 ==="
-            for q in "?lang=zh_TW" "?lang=zh" "?type=1" "?type=0" "?lang=zh_TW&type=1"; do
-              echo "--- $q"
-              curl -sS --max-time 15 "$B/api/v1.0/program-list/Channel$q" | head -c 500; echo
+            echo "=== 1) 天数覆盖（channelId=1） ==="
+            for d in 2026-10-26 2026-10-27 2026-10-28 2026-10-29 2026-10-30 2026-10-31 2026-11-01 2026-11-02 2026-11-03 2026-11-05; do
+              n=$(curl -sSL --max-time 20 "$B/api/v1.0/program-list/$d?channelId=1" 2>/dev/null | python3 -c "import sys,json;print(len(json.load(sys.stdin).get('data') or []))" 2>/dev/null || echo ERR)
+              echo "$d -> $n 条"
             done
             echo
-            echo "=== 2) program-list/{date}?channelId=1 ==="
-            curl -sSL --max-time 20 "$B/api/v1.0/program-list/2026-10-28?channelId=1" -o out/epg1.json
-            wc -c out/epg1.json; head -c 1500 out/epg1.json; echo
-            echo
-            echo "=== 3) 各频道同一天 ==="
-            for cid in 1 2 5 6 7 8 52 49 46; do
-              sz=$(curl -sSL --max-time 20 "$B/api/v1.0/program-list/2026-10-28?channelId=$cid" -o out/epg_$cid.json -w "%{size_download}")
-              echo "channelId=$cid -> ${sz}B"
+            echo "=== 2) 详情接口（带简介） ==="
+            for u in "program/11" "program/detail/11" "program/slug/our_people_our_life" "program/our_people_our_life" "program/11?lang=zh_TW"; do
+              echo "--- /api/v1.0/$u"
+              curl -sS --max-time 15 "$B/api/v1.0/$u" | head -c 500; echo
             done
+            echo
+            echo "=== 3) 用 slug 查详情 ==="
+            curl -sS --max-time 15 "$B/api/v1.0/program/our_people_our_life" | head -c 800; echo
           } > out/report.txt 2>&1
       - uses: actions/upload-artifact@v4
         with: { name: tdm-probe, path: out/ }
