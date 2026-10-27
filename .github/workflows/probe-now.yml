@@ -1,68 +1,105 @@
-name: 探测 MOD epginfob + TBC 备用路径（临时）
+name: 探测 MOD 全量（临时）
 on:
   workflow_dispatch:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 35
     steps:
-      - name: MOD epginfob
+      - name: MOD 全量探测
         run: |
           set +e
           mkdir -p out
           UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36"
+          M="https://modp.cht.com.tw/modinfo/epginfob.php"
           {
-            echo "########## A. epginfob.php 原始页 ##########"
-            curl -sS --compressed -o out/epg6.html -w "  id=6 -> %{http_code}|%{size_download}|%{time_total}s\n" --max-time 30 -A "$UA" -H "Referer: https://mod.cht.com.tw/program.do?id=6" "https://modp.cht.com.tw/modinfo/epginfob.php?id=6"
-            echo "  大小: $(wc -c < out/epg6.html)"
-            echo "  标题: $(grep -oE '<title>[^<]*</title>' out/epg6.html | head -1)"
-            echo
-            echo "  --- 全文前 4000 字节 ---"
-            head -c 4000 out/epg6.html
-            echo
-            echo
-            echo "  --- 关键 class ---"
-            grep -oE 'class="[^"]{2,50}"' out/epg6.html | sort | uniq -c | sort -rn | head -20
-            echo
-            echo "  --- 日期/参数痕迹 ---"
-            grep -oE '(date|day|Date|Day|sel)[^,;<>]{0,70}' out/epg6.html | head -20
-            echo
-            echo "  --- 是否有 JSON ---"
-            grep -cE '\{"' out/epg6.html
-            echo
-            echo "  --- 所有链接/接口 ---"
-            grep -oE "(href|src|url|action)\s*[:=]\s*['\"][^'\"]{3,90}['\"]" out/epg6.html | sort -u | head -30
+            echo "########## A. 从全部频道页提取频道清单 ##########"
+            curl -sS --compressed -o out/all.html --max-time 30 -A "$UA" "https://mod.cht.com.tw/%E9%A0%BB%E9%81%93TV/%E5%85%A8%E9%83%A8.do"
+            node -e "
+              const fs=require('fs');
+              const h=fs.readFileSync('out/all.html','utf8');
+              // 每个 list_item 里有 <div class=\"number\">N</div> 和 <h3>...频道名...</h3>
+              const re=/<div class=\"number\">(\d+)<\/div>[\s\S]{0,900}?<h3><a[^>]*>([^<]+)<\/a><\/h3>/g;
+              const out=[]; let m;
+              while((m=re.exec(h))) out.push({id:m[1], name:m[2].trim()});
+              console.log('  提取到 '+out.length+' 个频道');
+              fs.writeFileSync('out/channels.json', JSON.stringify(out,null,1));
+              out.slice(0,40).forEach(c=>console.log('    '+c.id+' | '+c.name));
+              console.log('    ...');
+              console.log('  最后 10 个:');
+              out.slice(-10).forEach(c=>console.log('    '+c.id+' | '+c.name));
+            " 2>&1
 
             echo
-            echo "########## B. epginfob 带日期参数试探 ##########"
-            for p in "" "&date=2026-10-28" "&d=1" "&day=1" "&dt=20261028" "&selDate=2026-10-28" "&pdate=2026-10-28"; do
-              R=$(curl -sS --compressed -o /tmp/e.html -w "%{http_code}|%{size_download}" --max-time 20 -A "$UA" "https://modp.cht.com.tw/modinfo/epginfob.php?id=6$p" 2>/dev/null || echo ERR)
-              H=$(md5sum /tmp/e.html 2>/dev/null | cut -c1-8)
-              echo "  [$p] -> $R | md5=$H"
+            echo "########## B. w=0 / w=1 覆盖对比（id=6）##########"
+            for w in 0 1 2; do
+              curl -sS --compressed -o out/w$w.html --max-time 25 -A "$UA" "$M?id=6&w=$w"
+              node -e "
+                const fs=require('fs');
+                const h=fs.readFileSync('out/w$w.html','utf8');
+                const days=[...h.matchAll(/<div class='item' style='background-color:#ccc;padding:5px;'>(\d{4}-\d{2}-\d{2})/g)].map(m=>m[1]);
+                const progs=[...h.matchAll(/<div class='(?:past|now|future)'[^>]*><div class='time'>\s*([\d:]+)<\/div><div class='channelTitle'>\s*([^<]+?)\s*<\/div>/g)];
+                console.log('  w=$w -> 天数 '+days.length+' | 节目 '+progs.length);
+                console.log('        日期: '+days.join(', '));
+              " 2>&1
             done
 
             echo
-            echo "########## C. 同目录其他 php 试探 ##########"
-            for f in epginfo.php epg.php epginfob.php epginfoa.php epglist.php; do
-              R=$(curl -sS --compressed -o /tmp/f.html -w "%{http_code}|%{size_download}" --max-time 15 -A "$UA" "https://modp.cht.com.tw/modinfo/$f?id=6" 2>/dev/null || echo ERR)
-              echo "  $f -> $R"
+            echo "########## C. 抽样 12 个台的节目数与天数 ##########"
+            for id in 2 6 7 8 10 15 20 30 50 100 150 200; do
+              curl -sS --compressed -o /tmp/c$id.html --max-time 20 -A "$UA" "$M?id=$id&w=0"
+              node -e "
+                const fs=require('fs');
+                const h=fs.readFileSync('/tmp/c$id.html','utf8');
+                const title=(h.match(/<h3 class=\"heading-area__title--regular\">([^<]+)</)||[])[1]||'?';
+                const days=[...h.matchAll(/<div class='item' style='background-color:#ccc;padding:5px;'>(\d{4}-\d{2}-\d{2})/g)].length;
+                const progs=[...h.matchAll(/<div class='(?:past|now|future)'[^>]*><div class='time'>\s*([\d:]+)<\/div><div class='channelTitle'>\s*([^<]+?)\s*<\/div>/g)].length;
+                console.log('  id=$id | '+title+' | 天'+days+' 条'+progs);
+              " 2>&1
             done
 
             echo
-            echo "########## D. 多频道 id 抽样 ##########"
-            for id in 6 7 8 10 20 50 100; do
-              R=$(curl -sS --compressed -o /tmp/g$id.html -w "%{http_code}|%{size_download}" --max-time 20 -A "$UA" "https://modp.cht.com.tw/modinfo/epginfob.php?id=$id" 2>/dev/null || echo ERR)
-              T=$(grep -oE '<title>[^<]*</title>' /tmp/g$id.html 2>/dev/null | head -1)
-              echo "  id=$id -> $R | $T"
-            done
+            echo "########## D. 是否有简介字段（找 p/desc/description）##########"
+            grep -oE "class='(desc|description|summary|synopsis|intro)[^']*'" out/w0.html | sort -u | head
+            echo "  (空 = 没有简介)"
+            echo
+            echo "  --- channelTitle 里除了标题还有什么 ---"
+            node -e "
+              const fs=require('fs');
+              const h=fs.readFileSync('out/w0.html','utf8');
+              const progs=[...h.matchAll(/<div class='channelTitle'>\s*([^<]+?)\s*<\/div>/g)].map(m=>m[1]);
+              const tails=new Set();
+              for(const p of progs){ const m=p.match(/\([^)]*\)\s*$/); if(m) tails.add(m[0].trim()) }
+              console.log('  末尾括号样例: '+[...tails].slice(0,10).join(' | '));
+              console.log('  总节目 '+progs.length);
+            " 2>&1
 
             echo
-            echo "########## E. TBC 备用路径（不同域名/端口/协议）##########"
-            for u in "http://123.241.238.168/" "https://123.241.238.168/" "http://www.tbc.net.tw/Epg/Epg/indexV2" "https://tbc.net.tw/Epg/Epg/indexV2" "https://www.tbc.net.tw:8080/"; do
-              R=$(curl -sSk -o /tmp/t.html -w "%{http_code}|%{size_download}|%{time_total}s" --max-time 12 -A "$UA" -H "Host: www.tbc.net.tw" "$u" 2>/dev/null || echo TIMEOUT)
-              echo "  $u -> $R"
-            done
+            echo "########## E. 时间轴连续性检查（id=6 第一天）##########"
+            node -e "
+              const fs=require('fs');
+              const h=fs.readFileSync('out/w0.html','utf8');
+              const first=h.split(\"<div class='epgdays'>\")[1]||'';
+              const progs=[...first.matchAll(/<div class='(?:past|now|future)'[^>]*><div class='time'>\s*([\d:]+)<\/div><div class='channelTitle'>\s*([^<]+?)\s*<\/div>/g)].map(m=>({t:m[1],n:m[2]}));
+              console.log('  第一天 '+progs.length+' 条');
+              console.log('  首条 '+progs[0].t+' 末条 '+progs[progs.length-1].t);
+              // 相邻间隔
+              const gaps=[];
+              for(let i=1;i<progs.length;i++){
+                const a=progs[i-1].t.split(':').map(Number), b=progs[i].t.split(':').map(Number);
+                let d=(b[0]*60+b[1])-(a[0]*60+a[1]); if(d<0)d+=1440;
+                gaps.push(d);
+              }
+              console.log('  间隔分布: '+JSON.stringify(gaps.reduce((o,g)=>{o[g]=(o[g]||0)+1;return o},{})));
+            " 2>&1
+
+            echo
+            echo "########## F. 并发探测是否限速（10 个台同时）##########"
+            START=$(date +%s)
+            seq 2 11 | xargs -P 10 -I{} curl -sS --compressed -o /dev/null -w "%{http_code}\n" --max-time 25 -A "$UA" "$M?id={}&w=0" 2>/dev/null | sort | uniq -c
+            END=$(date +%s)
+            echo "  10 个并发耗时 $((END-START)) 秒"
           } > out/report.txt 2>&1
       - uses: actions/upload-artifact@v4
         if: always()
-        with: { name: modepg, path: out/ }
+        with: { name: modfull, path: out/ }
