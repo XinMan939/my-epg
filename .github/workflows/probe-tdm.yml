@@ -6,29 +6,31 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - name: 挖接口
+      - name: 挖全部接口 + 试 common/setting
         run: |
           mkdir -p out
           {
-            echo "### get-domain"
-            curl -sSL --max-time 20 "https://appapi.tdm.com.mo/api/v1/common/get-domain"; echo
+            echo "### common/setting"
+            curl -sSL --max-time 20 "https://appapi.tdm.com.mo/api/v1/common/setting" | head -c 1500; echo
             echo
-            echo "### 所有 /api/v1 接口"
+            echo "### 所有 api 路径（宽匹配）"
             curl -sSL --max-time 25 "https://appapi.tdm.com.mo/" -o /tmp/r.html
             for js in $(grep -oE '/static/js/[A-Za-z0-9._-]+\.js' /tmp/r.html | sort -u); do
               curl -sSL --max-time 30 "https://appapi.tdm.com.mo$js" -o /tmp/j.js 2>/dev/null || continue
-              grep -ohE '/api/v[0-9]+/[a-zA-Z0-9_/{}$.:-]{2,70}' /tmp/j.js 2>/dev/null
-              grep -ohE '"(get|fetch|post)?[A-Z][a-zA-Z]{2,30}(List|Info|Detail|Schedule|Program|Channel|Epg)"' /tmp/j.js 2>/dev/null
-            done | sort -u
+              grep -ohE '"/api/[a-zA-Z0-9_/{}:.$-]{2,80}"' /tmp/j.js
+              grep -ohE 'api/v[0-9]+/[a-zA-Z0-9_/{}:.$-]{2,60}' /tmp/j.js
+            done | tr -d '"' | sort -u
             echo
-            echo "### 节目表页面"
-            for u in "/zh/program/tv_zh" "/program/tv_zh" "/zh/program/tv"; do
-              code=$(curl -sSL -o /tmp/p.html -w "%{http_code}|%{size_download}" --max-time 25 "https://appapi.tdm.com.mo$u" 2>&1 || echo ERR)
-              echo "--- $u -> $code"
+            echo "### 直接试推测的节目单接口"
+            for p in \
+              "api/v1/program/list" "api/v1/program" "api/v1/channel/list" "api/v1/channel" \
+              "api/v1/epg/list" "api/v1/epg" "api/v1/live/list" "api/v1/live" \
+              "api/v1/program/schedule" "api/v1/channel/program" "api/v1/program/getList" \
+              "api/v1/tv/program" "api/v1/tv/list" "api/v1/schedule" ; do
+              body=$(curl -sSL --max-time 15 "https://appapi.tdm.com.mo/$p" 2>/dev/null | head -c 200)
+              echo "/$p -> $body"
             done
           } > out/report.txt 2>&1
           wc -l out/report.txt
       - uses: actions/upload-artifact@v4
-        with:
-          name: tdm-probe
-          path: out/report.txt
+        with: { name: tdm-probe, path: out/report.txt }
