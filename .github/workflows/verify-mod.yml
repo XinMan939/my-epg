@@ -1,0 +1,83 @@
+name: MOD 验证 + catalog 重扫（临时）
+
+# 为什么要单独跑这一步：
+#   channels/catalog.json 是 build 的「频道候选池」缓存（TTL 24h）。
+#   nowplayer.mjs / mod.mjs 是 2026-10-28 才写的，而 catalog.json 生成于 10-27T19:00Z，
+#   里面没有这两个源的条目 → build 复用缓存 → 新源压根不进 pickBest 候选池 → 白写。
+#
+# 而本机对 mod.cht.com.tw / nowplayer.now.com 都是 DNS 污染（curl 000 超时），
+#   只能在 CI 上重扫。跑完把 catalog.json 提交回 main，之后 build 才能用上新源。
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with: { node-version: "22" }
+
+      # epgpw 的 listChannels 要下 3 个整包 XML（CN 9MB / HK 19MB / TW 29MB）
+      - uses: actions/cache@v4
+        with:
+          path: .cache
+          key: epg-cache-${{ github.run_id }}
+          restore-keys: |
+            epg-cache-
+
+      # ① MOD 端到端验证（频道清单 / listChannels 真探 / 时间轴 / 与 channels.json 的匹配）
+      - name: 验证 MOD 源
+        env:
+          TZ: Asia/Shanghai
+        run: node tools/verify-mod.mjs 2>&1 | tee mod-verify.txt
+
+      # ② 强制重扫 catalog（catalog 命令内部就是 force=true）
+      - name: 重扫频道清单
+        env:
+          TZ: Asia/Shanghai
+        run: node src/index.mjs catalog 2>&1 | tail -30
+
+      - name: 核对重扫结果
+        run: |
+          node -e "
+            const fs = require('fs');
+            const c = JSON.parse(fs.readFileSync('channels/catalog.json', 'utf8'));
+            const by = {};
+            for (const x of c.items) by[x.source] = (by[x.source] || 0) + 1;
+            console.log('generatedAt:', c.generatedAt, 'total:', c.total);
+            console.log('按源:', JSON.stringify(by, null, 2));
+            if (!by.nowplayer) { console.error('::error::nowplayer 仍未进 catalog'); process.exit(1); }
+            if (!by.mod) { console.error('::error::mod 仍未进 catalog'); process.exit(1); }
+            const m = c.items.filter((x) => x.source === 'mod');
+            const np = c.items.filter((x) => x.source === 'nowplayer');
+            const md = m.filter((x) => x.days > 0).length;
+            const nd = np.filter((x) => x.days > 0).length;
+            console.log('mod 有天数:', md + '/' + m.length, '| nowplayer 有天数:', nd + '/' + np.length);
+          "
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: mod-verify, path: "mod-verify.json" }
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: mod-verify-txt, path: "mod-verify.txt" }
+
+      # ③ 提交 catalog.json —— 不提交的话下次 build 还是用旧缓存
+      - name: 提交 catalog
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add channels/catalog.json
+          if git diff --cached --quiet; then
+            echo "catalog.json 无变化"
+          else
+            git commit -m "chore(catalog): 重扫纳入 nowplayer + mod（$(date -u +%Y-%m-%dT%H:%MZ)）"
+            git push
+          fi
