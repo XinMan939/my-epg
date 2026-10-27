@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T05:42:35.787Z",
+  "generatedAt": "2026-10-27T06:27:59.635Z",
   "days": 7,
   "dayList": [
     "20261027",
@@ -16,8 +16,8 @@
   "channelsFull": 145,
   "channelsPartial": 130,
   "programmesTotal": 46973,
-  "programmesWithDesc": 29116,
-  "descCoverage": 62,
+  "programmesWithDesc": 28441,
+  "descCoverage": 61,
   "dateRange": [
     "20261027",
     "20261102"
@@ -2919,28 +2919,29 @@
     }
   ],
   "descStats": {
-    "realCoverage": 62,
-    "realCount": 29116,
+    "realCoverage": 60.5,
+    "realCount": 28441,
     "totalCount": 46973,
+    "echoCount": 640,
     "titles": 658,
-    "filled": 13618,
+    "filled": 13629,
     "z51": {
-      "channels": 149,
-      "filled": 11746,
+      "channels": 148,
+      "filled": 11723,
       "packs": [
         {
           "key": "e1",
           "ok": true,
           "channels": 283,
           "programmes": 16790,
-          "descs": 11806
+          "descs": 11782
         },
         {
           "key": "e2",
           "ok": true,
           "channels": 223,
           "programmes": 12926,
-          "descs": 8050
+          "descs": 7874
         }
       ],
       "detail": [
@@ -3235,8 +3236,8 @@
           "status": "ok",
           "mine": 43,
           "key": "e1:40",
-          "inter": 22,
-          "rate": 0.5116279069767442
+          "inter": 23,
+          "rate": 0.5348837209302325
         },
         {
           "id": "SichuanSatelliteTV.cn",
@@ -5441,12 +5442,12 @@
           "rate": 0.2727272727272727
         },
         "ChongqingSatelliteTV.cn": {
-          "filled": 145,
+          "filled": 147,
           "before": 0,
           "stage": "channel+global",
           "source": "e1:40(重庆卫视)",
-          "inter": 22,
-          "rate": 0.5116279069767442
+          "inter": 23,
+          "rate": 0.5348837209302325
         },
         "SichuanSatelliteTV.cn": {
           "filled": 99,
@@ -5657,7 +5658,7 @@
           "rate": 0.5862068965517241
         },
         "SanshaSatelliteTV.cn": {
-          "filled": 60,
+          "filled": 61,
           "before": 0,
           "stage": "channel",
           "source": "e1:72(三沙卫视)",
@@ -5793,7 +5794,7 @@
           "rate": 0.7647058823529411
         },
         "CCTVWorldGeography.cn": {
-          "filled": 161,
+          "filled": 160,
           "before": 0,
           "stage": "channel+global",
           "source": "e1:1649(世界地理)",
@@ -5938,7 +5939,7 @@
         },
         "EBCForeignMovie.tw": {
           "filled": 5,
-          "before": 62,
+          "before": 52,
           "stage": "channel",
           "source": "e2:1506(东森洋片台)",
           "inter": 16,
@@ -5976,6 +5977,14 @@
           "inter": 5,
           "rate": 0.5
         },
+        "纬来综合.tw": {
+          "filled": 2,
+          "before": 143,
+          "stage": "channel",
+          "source": "e2:1466(纬来综合台)",
+          "inter": 9,
+          "rate": 0.24324324324324326
+        },
         "博斯魅力.tw": {
           "filled": 35,
           "before": 0,
@@ -6000,14 +6009,6 @@
           "inter": 14,
           "rate": 0.7
         },
-        "智林体育.tw": {
-          "filled": 17,
-          "before": 0,
-          "stage": "channel",
-          "source": "e2:1806(智林体育)",
-          "inter": 18,
-          "rate": 0.375
-        },
         "湖南电影.cn": {
           "filled": 7,
           "before": 0,
@@ -6015,14 +6016,6 @@
           "source": "e1:1320(湖南电影)",
           "inter": 8,
           "rate": 1
-        },
-        "快乐垂钓.cn": {
-          "filled": 12,
-          "before": 0,
-          "stage": "channel",
-          "source": "e1:1684(快乐垂钓)",
-          "inter": 6,
-          "rate": 0.75
         },
         "广东体育.cn": {
           "filled": 28,
@@ -6267,7 +6260,7 @@
           "source": "全局索引"
         },
         "博斯运动Ⅰ.tw": {
-          "filled": 1,
+          "filled": 3,
           "before": 0,
           "stage": "global",
           "source": "全局索引"
@@ -6321,20 +6314,20 @@
           "source": "e1:20"
         }
       },
-      "coverageBefore": 33.1,
-      "coverageAfter": 58.1
+      "coverageBefore": 31.5,
+      "coverageAfter": 56.5
     },
     "tvmao": {
       "titles": 658,
-      "filled": 922
+      "filled": 924
     },
     "kbro": {
       "channels": 251,
       "aligned": 75,
-      "globalTitles": 2576,
-      "filled": 950,
-      "filledByChannel": 589,
-      "filledByGlobal": 361,
+      "globalTitles": 2565,
+      "filled": 982,
+      "filledByChannel": 622,
+      "filledByGlobal": 360,
       "skippedCrossRegion": 27,
       "promoRemoved": 348,
       "dates": [
@@ -7083,7 +7076,7 @@
           "id": "CCTVStormMusic.cn",
           "name": "CCTV风云音乐",
           "status": "none",
-          "mine": 63
+          "mine": 64
         },
         {
           "id": "CCTVStormFootball.cn",
@@ -8438,6 +8431,12 @@
           "filled": 25
         },
         {
+          "id": "FTVOne.tw",
+          "name": "民视第一台",
+          "channelId": "301",
+          "filled": 1
+        },
+        {
           "id": "TTVFinance.tw",
           "name": "台视财经",
           "channelId": "308",
@@ -8447,7 +8446,7 @@
           "id": "VideolandSports.tw",
           "name": "纬来体育",
           "channelId": "72",
-          "filled": 1
+          "filled": 40
         },
         {
           "id": "纬来精采.tw",
@@ -8495,13 +8494,13 @@
           "id": "DAZN1.uk",
           "name": "DAZN1",
           "channelId": "1098",
-          "filled": 27
+          "filled": 26
         },
         {
           "id": "DAZN2.uk",
           "name": "DAZN2",
           "channelId": "1098",
-          "filled": 53
+          "filled": 51
         },
         {
           "id": "DW德国之声.tw",
@@ -8532,12 +8531,6 @@
           "name": "好消息Ⅱ",
           "channelId": "",
           "filled": 21
-        },
-        {
-          "id": "阿里郎.tw",
-          "name": "阿里郎",
-          "channelId": "306",
-          "filled": 5
         }
       ]
     }
@@ -9789,8 +9782,8 @@
         "20261101": 36,
         "20261102": 0
       },
-      "withDesc": 145,
-      "descRate": 64,
+      "withDesc": 147,
+      "descRate": 65,
       "withCategory": 0,
       "uniqTitles": 58,
       "first": "20261027002800 +0800",
@@ -10828,7 +10821,7 @@
         "20261101": 0,
         "20261102": 44
       },
-      "withDesc": 61,
+      "withDesc": 62,
       "descRate": 47,
       "withCategory": 0,
       "uniqTitles": 19,
@@ -11567,8 +11560,8 @@
         "20261101": 47,
         "20261102": 43
       },
-      "withDesc": 63,
-      "descRate": 20,
+      "withDesc": 55,
+      "descRate": 17,
       "withCategory": 0,
       "uniqTitles": 65,
       "first": "20261027000000 +0800",
@@ -12129,7 +12122,7 @@
         "20261101": 20,
         "20261102": 18
       },
-      "withDesc": 121,
+      "withDesc": 120,
       "descRate": 90,
       "withCategory": 0,
       "uniqTitles": 24,
@@ -12697,7 +12690,7 @@
       "withDesc": 115,
       "descRate": 67,
       "withCategory": 0,
-      "uniqTitles": 63,
+      "uniqTitles": 64,
       "first": "20261027003200 +0800",
       "last": "20261103003200 +0800",
       "usedSource": "tvmao:CCTVPAYFEE-CCTVPAYFEE2(风云音乐)",
@@ -12756,8 +12749,8 @@
         "20261101": 0,
         "20261102": 0
       },
-      "withDesc": 0,
-      "descRate": 0,
+      "withDesc": 2,
+      "descRate": 4,
       "withCategory": 0,
       "uniqTitles": 41,
       "first": "20261027005700 +0800",
@@ -12917,8 +12910,8 @@
         "20261101": 35,
         "20261102": 34
       },
-      "withDesc": 181,
-      "descRate": 84,
+      "withDesc": 180,
+      "descRate": 83,
       "withCategory": 0,
       "uniqTitles": 94,
       "first": "20261027002500 +0800",
@@ -14459,8 +14452,8 @@
         "20261101": 10,
         "20261102": 9
       },
-      "withDesc": 67,
-      "descRate": 100,
+      "withDesc": 57,
+      "descRate": 85,
       "withCategory": 0,
       "uniqTitles": 47,
       "first": "20261027013500 +0800",
@@ -14787,8 +14780,8 @@
         "20261101": 23,
         "20261102": 24
       },
-      "withDesc": 102,
-      "descRate": 61,
+      "withDesc": 80,
+      "descRate": 48,
       "withCategory": 0,
       "uniqTitles": 28,
       "first": "20261027000000 +0800",
@@ -15332,8 +15325,8 @@
         "20261101": 19,
         "20261102": 15
       },
-      "withDesc": 148,
-      "descRate": 98,
+      "withDesc": 145,
+      "descRate": 96,
       "withCategory": 0,
       "uniqTitles": 37,
       "first": "20261027000000 +0800",
@@ -15394,8 +15387,8 @@
         "20261101": 21,
         "20261102": 14
       },
-      "withDesc": 118,
-      "descRate": 86,
+      "withDesc": 110,
+      "descRate": 80,
       "withCategory": 0,
       "uniqTitles": 38,
       "first": "20261027001500 +0800",
@@ -15456,8 +15449,8 @@
         "20261101": 22,
         "20261102": 20
       },
-      "withDesc": 130,
-      "descRate": 98,
+      "withDesc": 108,
+      "descRate": 82,
       "withCategory": 0,
       "uniqTitles": 26,
       "first": "20261027010000 +0800",
@@ -15487,8 +15480,8 @@
         "20261101": 22,
         "20261102": 25
       },
-      "withDesc": 165,
-      "descRate": 100,
+      "withDesc": 155,
+      "descRate": 94,
       "withCategory": 0,
       "uniqTitles": 47,
       "first": "20261027000000 +0800",
@@ -16345,8 +16338,8 @@
         "20261101": 17,
         "20261102": 17
       },
-      "withDesc": 83,
-      "descRate": 77,
+      "withDesc": 46,
+      "descRate": 43,
       "withCategory": 0,
       "uniqTitles": 34,
       "first": "20261027013000 +0800",
@@ -16376,8 +16369,8 @@
         "20261101": 18,
         "20261102": 14
       },
-      "withDesc": 73,
-      "descRate": 69,
+      "withDesc": 61,
+      "descRate": 58,
       "withCategory": 0,
       "uniqTitles": 22,
       "first": "20261027000000 +0800",
@@ -16600,8 +16593,8 @@
         "20261101": 11,
         "20261102": 9
       },
-      "withDesc": 45,
-      "descRate": 96,
+      "withDesc": 32,
+      "descRate": 68,
       "withCategory": 0,
       "uniqTitles": 40,
       "first": "20261027050000 +0800",
@@ -16634,8 +16627,8 @@
         "20261101": 8,
         "20261102": 10
       },
-      "withDesc": 53,
-      "descRate": 100,
+      "withDesc": 0,
+      "descRate": 0,
       "withCategory": 0,
       "uniqTitles": 40,
       "first": "20261027020000 +0800",
@@ -16668,8 +16661,8 @@
         "20261101": 9,
         "20261102": 14
       },
-      "withDesc": 77,
-      "descRate": 100,
+      "withDesc": 0,
+      "descRate": 0,
       "withCategory": 0,
       "uniqTitles": 43,
       "first": "20261027000000 +0800",
@@ -16702,8 +16695,8 @@
         "20261101": 12,
         "20261102": 12
       },
-      "withDesc": 58,
-      "descRate": 85,
+      "withDesc": 3,
+      "descRate": 4,
       "withCategory": 0,
       "uniqTitles": 51,
       "first": "20261027003000 +0800",
@@ -16737,8 +16730,8 @@
         "20261101": 12,
         "20261102": 12
       },
-      "withDesc": 87,
-      "descRate": 100,
+      "withDesc": 40,
+      "descRate": 46,
       "withCategory": 0,
       "uniqTitles": 40,
       "first": "20261027000000 +0800",
@@ -17009,8 +17002,8 @@
         "20261101": 7,
         "20261102": 6
       },
-      "withDesc": 17,
-      "descRate": 31,
+      "withDesc": 0,
+      "descRate": 0,
       "withCategory": 0,
       "uniqTitles": 48,
       "first": "20261027000000 +0800",
@@ -17472,8 +17465,8 @@
         "20261101": 0,
         "20261102": 0
       },
-      "withDesc": 12,
-      "descRate": 63,
+      "withDesc": 0,
+      "descRate": 0,
       "withCategory": 0,
       "uniqTitles": 8,
       "first": "20261027000000 +0800",
@@ -17724,8 +17717,8 @@
         "20261101": 48,
         "20261102": 49
       },
-      "withDesc": 296,
-      "descRate": 83,
+      "withDesc": 24,
+      "descRate": 7,
       "withCategory": 0,
       "uniqTitles": 49,
       "first": "20261027000000 +0800",
@@ -17894,7 +17887,7 @@
       "withDesc": 14,
       "descRate": 4,
       "withCategory": 0,
-      "uniqTitles": 214,
+      "uniqTitles": 215,
       "first": "20261027091900 +0800",
       "last": "20261103080100 +0800",
       "usedSource": "tvmao:CCTVPAYFEE-CCTVPAYFEE35(CCTV中学生频道)",
