@@ -6,59 +6,78 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - name: 探测 CDN JSON
+      - name: 抓原始 JSON
         run: |
-          mkdir -p out
+          mkdir -p out/raw
+          for i in 0 1 2 3 4 5 6 7; do
+            DD=$(TZ=Asia/Taipei date -d "+$i day" +%Y-%m-%d)
+            curl -sS --compressed -o "out/raw/pl_${DD}.json" --max-time 25 \
+              -H "User-Agent: Mozilla/5.0" \
+              "https://piceltaott-elta.cdn.hinet.net/production/json/program_list/program_list_${DD}.json" || echo "$DD 失败"
+          done
+          for i in 1 2 3; do
+            DD=$(TZ=Asia/Taipei date -d "-$i day" +%Y-%m-%d)
+            curl -sS --compressed -o "out/raw/pl_${DD}.json" --max-time 25 \
+              -H "User-Agent: Mozilla/5.0" \
+              "https://piceltaott-elta.cdn.hinet.net/production/json/program_list/program_list_${DD}.json" || echo "$DD 失败"
+          done
+          curl -sS --compressed -o out/raw/channel_list.json --max-time 25 \
+            -H "User-Agent: Mozilla/5.0" \
+            "https://piceltaott-elta.cdn.hinet.net/production/json/channel/channel_list.json"
+          ls -la out/raw/
+      - name: 分析
+        run: |
           {
-            echo "===== DNS ====="
-            getent hosts piceltaott-elta.cdn.hinet.net || echo "DNS 失败"
-            getent hosts eltaott.tv || echo "主站 DNS 失败"
-            echo
-            echo "===== channel_list.json ====="
-            curl -sS --compressed -o /tmp/ch.json -w "HTTP:%{http_code} 大小:%{size_download} 耗时:%{time_total}s\n" \
-              --max-time 25 -H "User-Agent: Mozilla/5.0" \
-              "https://piceltaott-elta.cdn.hinet.net/production/json/channel/channel_list.json" || echo "抓取失败"
-            head -c 1500 /tmp/ch.json 2>/dev/null; echo
-            echo
-            echo "===== channel_list 频道数 ====="
+            echo "===== 每个日期文件：首末时间与条数 ====="
             node -e "
-              const j=require('/tmp/ch.json');
-              console.log('总数:', j.length);
-              const keys=new Set(); for(const c of j) for(const k of Object.keys(c)) keys.add(k);
-              console.log('字段:', [...keys].join(','));
-              const on=j.filter(c=>c.cl_status==1&&c.cl_display==1);
-              console.log('上架且显示:', on.length);
-              for(const c of on) console.log('  cl_num='+c.cl_num, '| cl_no='+c.cl_no, '|', c.cl_title, '| show_type='+c.cp_show_type, '| from='+c.cp_schedule_from_datetime, '| to='+c.cp_schedule_to_datetime);
+              const fs=require('fs');
+              const files=fs.readdirSync('out/raw').filter(f=>f.startsWith('pl_')).sort();
+              const bj=(t)=>new Date(t*1000+8*3600e3).toISOString().slice(0,19).replace('T',' ');
+              for(const f of files){
+                const j=JSON.parse(fs.readFileSync('out/raw/'+f,'utf8'));
+                const ks=Object.keys(j);
+                let tot=0,min=Infinity,max=0,perCh={};
+                for(const k of ks){ const a=j[k]||[]; perCh[k]=a.length; tot+=a.length;
+                  for(const p of a){ if(p.start_time<min)min=p.start_time; if(p.end_time>max)max=p.end_time; } }
+                const counts=Object.values(perCh);
+                console.log(f.replace('pl_','').replace('.json',''),
+                  '| 台'+ks.length, '| 条'+tot,
+                  '| 每台 '+Math.min(...counts)+'~'+Math.max(...counts),
+                  '| 首'+bj(min), '| 末'+bj(max));
+              }
             " 2>&1
             echo
-            echo "===== program_list 今天 ====="
-            D=$(TZ=Asia/Taipei date +%Y-%m-%d)
-            echo "台湾日期: $D"
-            curl -sS --compressed -o /tmp/pl.json -w "HTTP:%{http_code} 大小:%{size_download} 耗时:%{time_total}s\n" \
-              --max-time 25 -H "User-Agent: Mozilla/5.0" \
-              "https://piceltaott-elta.cdn.hinet.net/production/json/program_list/program_list_${D}.json" || echo "抓取失败"
-            echo
-            echo "===== program_list 结构 ====="
+            echo "===== 单台(101)逐日首末，看日期归属 ====="
             node -e "
-              const j=require('/tmp/pl.json');
-              const ks=Object.keys(j);
-              console.log('顶层频道数:', ks.length, '| 频道号:', ks.join(','));
-              const k0=ks[0];
-              console.log('频道'+k0+' 条数:', (j[k0]||[]).length);
-              console.log('样例条目:', JSON.stringify((j[k0]||[])[0], null, 1));
-              const keys=new Set(); for(const k of ks) for(const p of (j[k]||[])) for(const kk of Object.keys(p)) keys.add(kk);
-              console.log('节目字段:', [...keys].join(','));
+              const fs=require('fs');
+              const files=fs.readdirSync('out/raw').filter(f=>f.startsWith('pl_')).sort();
+              const bj=(t)=>new Date(t*1000+8*3600e3).toISOString().slice(5,16).replace('T',' ');
+              for(const f of files){
+                const j=JSON.parse(fs.readFileSync('out/raw/'+f,'utf8'));
+                const a=(j['101']||[]).sort((x,y)=>x.start_time-y.start_time);
+                if(!a.length){console.log(f,'无数据');continue}
+                console.log(f.replace('pl_','').replace('.json',''),
+                  '| 条'+a.length, '| 首'+bj(a[0].start_time), '| 末'+bj(a[a.length-1].end_time));
+              }
             " 2>&1
             echo
-            echo "===== 未来 5 天覆盖探测 ====="
-            for i in 0 1 2 3 4 5; do
-              DD=$(TZ=Asia/Taipei date -d "+$i day" +%Y-%m-%d)
-              R=$(curl -sS --compressed -o /tmp/d$i.json -w "%{http_code}|%{size_download}" --max-time 20 \
-                -H "User-Agent: Mozilla/5.0" \
-                "https://piceltaott-elta.cdn.hinet.net/production/json/program_list/program_list_${DD}.json" 2>&1 || echo "ERR")
-              N=$(node -e "try{const j=require('/tmp/d$i.json');let t=0;for(const k of Object.keys(j))t+=(j[k]||[]).length;console.log(Object.keys(j).length+'台/'+t+'条')}catch(e){console.log('解析失败')}" 2>&1)
-              echo "  $DD → $R | $N"
-            done
+            echo "===== 节目名样例(101 今天) ====="
+            node -e "
+              const fs=require('fs');
+              const files=fs.readdirSync('out/raw').filter(f=>f.startsWith('pl_')).sort();
+              const j=JSON.parse(fs.readFileSync('out/raw/'+files[3],'utf8'));
+              const a=(j['101']||[]).sort((x,y)=>x.start_time-y.start_time);
+              const bj=(t)=>new Date(t*1000+8*3600e3).toISOString().slice(5,16).replace('T',' ');
+              for(const p of a) console.log(' ', bj(p.start_time), '~', bj(p.end_time), '|', p.program_desc, '| sn='+p.program_sn);
+            " 2>&1
+            echo
+            echo "===== contents_order 是否有内容 ====="
+            node -e "
+              const fs=require('fs');
+              const j=JSON.parse(fs.readFileSync('out/raw/channel_list.json','utf8'));
+              let n=0; for(const c of j){ if(c.contents_order!==null&&c.contents_order!==undefined) n++ }
+              console.log('channel_list 里 contents_order 非空:', n, '/', j.length);
+            " 2>&1
           } > out/report.txt 2>&1
       - uses: actions/upload-artifact@v4
         with: { name: elta-probe, path: out/ }
