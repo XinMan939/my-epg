@@ -6,18 +6,26 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
-      - name: DNS + 连通性 + 路径探测
+      - name: 追踪 /api 重定向 + 挖前端 JS 里的 API 定义
         run: |
-          echo "===== DNS ====="
-          getent hosts appapi.tdm.com.mo || echo "DNS 失败"
+          echo "===== /api 重定向目标 ====="
+          curl -sS -i --max-time 20 "https://appapi.tdm.com.mo/api" 2>&1 | grep -iE "^(HTTP|location)"
           echo
-          echo "===== 根路径 ====="
-          for p in "" "api" "epg" "channels" "schedule" "api/epg" "api/channels" "api/v1/epg" "api/program" "program"; do
-            code=$(curl -sS -o /tmp/out.txt -w "%{http_code}|%{size_download}|%{time_total}" \
-              --max-time 20 -H "User-Agent: Mozilla/5.0" "https://appapi.tdm.com.mo/$p" 2>&1 || echo "ERR")
-            echo "/$p → $code"
-            head -c 200 /tmp/out.txt 2>/dev/null | tr -d '\n'; echo
+          echo "===== 根页面里的 JS/资源 ====="
+          curl -sS --max-time 20 "https://appapi.tdm.com.mo/" -o /tmp/root.html
+          grep -oE '(src|href)="[^"]*"' /tmp/root.html | head -20
+          echo
+          echo "===== 抓所有 js chunk 里的 API 路径 ====="
+          for js in $(grep -oE 'src="[^"]*\.js[^"]*"' /tmp/root.html | sed 's/src="//;s/"//' | head -10); do
+            url="https://appapi.tdm.com.mo/${js#/}"
+            echo "--- $js"
+            curl -sS --max-time 25 "$url" -o /tmp/c.js 2>/dev/null
+            grep -oE '"/?(api|v1|v2)/[a-zA-Z0-9_/-]{2,50}"' /tmp/c.js 2>/dev/null | sort -u | head -15
+            grep -oE 'https?://[a-zA-Z0-9._-]*(tdm|api)[a-zA-Z0-9._/-]*' /tmp/c.js 2>/dev/null | sort -u | head -10
           done
           echo
-          echo "===== 主站对照 ====="
-          curl -sS -o /dev/null -w "www.tdm.com.mo → %{http_code} %{time_total}s\n" --max-time 20 https://www.tdm.com.mo/ || echo "主站失败"
+          echo "===== 常见 TDM 接口猜测 ====="
+          for p in "api/live" "api/getLive" "api/channelList" "api/programList" "api/epgList" "api/v1/channel" "api/v2/channel"; do
+            c=$(curl -sS -o /tmp/o.txt -w "%{http_code}|%{size_download}" --max-time 15 "https://appapi.tdm.com.mo/$p" 2>&1||echo ERR)
+            echo "/$p → $c"
+          done
