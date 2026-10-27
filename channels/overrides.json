@@ -176,5 +176,25 @@
     "source": "tdm",
     "sourceId": "8",
     "sourceName": "澳門-Macau"
+  },
+  "爱尔达体育Ⅰ.tw": {
+    "source": "elta",
+    "sourceId": "101",
+    "sourceName": "體育 1 台"
+  },
+  "爱尔达体育Ⅱ.tw": {
+    "source": "elta",
+    "sourceId": "105",
+    "sourceName": "體育 2 台"
+  },
+  "爱尔达体育Ⅲ.tw": {
+    "source": "elta",
+    "sourceId": "110",
+    "sourceName": "體育 3 台"
+  },
+  "爱尔达体育Ⅳ.tw": {
+    "source": "elta",
+    "sourceId": "115",
+    "sourceName": "體育 4 台"
   }
 }
