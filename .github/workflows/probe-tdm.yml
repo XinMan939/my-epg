@@ -4,24 +4,31 @@ on:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 15
     steps:
-      - name: 挖全部接口 + 试 get-domain + 节目表页
+      - name: 挖接口
         run: |
-          echo "===== 1) 试 get-domain ====="
-          curl -sSL --max-time 20 "https://appapi.tdm.com.mo/api/v1/common/get-domain" | head -c 600; echo
-          echo
-          echo "===== 2) 挖所有 chunk 里的 /api/v1 接口 ====="
-          grep -oE '/static/js/[A-Za-z0-9._-]+\.js' /tmp/none 2>/dev/null
-          curl -sSL --max-time 25 "https://appapi.tdm.com.mo/" -o /tmp/r.html
-          for js in $(grep -oE '/static/js/[A-Za-z0-9._-]+\.js' /tmp/r.html | sort -u); do
-            curl -sSL --max-time 30 "https://appapi.tdm.com.mo$js" -o /tmp/j.js 2>/dev/null || continue
-            grep -oE '/api/v[0-9]+/[a-zA-Z0-9_/{}$.-]{2,60}' /tmp/j.js 2>/dev/null
-          done | sort -u | head -60
-          echo
-          echo "===== 3) 节目表页面（SSR 抓） ====="
-          for u in "/zh/program/tv_zh" "/en/program/tv_zh" "/program/tv_zh" "/zh/program/tv"; do
-            c=$(curl -sSL -o /tmp/p.html -w "%{http_code}|%{size_download}" --max-time 25 "https://appapi.tdm.com.mo$u" 2>&1||echo ERR)
-            echo "--- $u → $c"
-            head -c 300 /tmp/p.html 2>/dev/null | tr -d '\n'; echo
-          done
+          mkdir -p out
+          {
+            echo "### get-domain"
+            curl -sSL --max-time 20 "https://appapi.tdm.com.mo/api/v1/common/get-domain"; echo
+            echo
+            echo "### 所有 /api/v1 接口"
+            curl -sSL --max-time 25 "https://appapi.tdm.com.mo/" -o /tmp/r.html
+            for js in $(grep -oE '/static/js/[A-Za-z0-9._-]+\.js' /tmp/r.html | sort -u); do
+              curl -sSL --max-time 30 "https://appapi.tdm.com.mo$js" -o /tmp/j.js 2>/dev/null || continue
+              grep -ohE '/api/v[0-9]+/[a-zA-Z0-9_/{}$.:-]{2,70}' /tmp/j.js 2>/dev/null
+              grep -ohE '"(get|fetch|post)?[A-Z][a-zA-Z]{2,30}(List|Info|Detail|Schedule|Program|Channel|Epg)"' /tmp/j.js 2>/dev/null
+            done | sort -u
+            echo
+            echo "### 节目表页面"
+            for u in "/zh/program/tv_zh" "/program/tv_zh" "/zh/program/tv"; do
+              code=$(curl -sSL -o /tmp/p.html -w "%{http_code}|%{size_download}" --max-time 25 "https://appapi.tdm.com.mo$u" 2>&1 || echo ERR)
+              echo "--- $u -> $code"
+            done
+          } > out/report.txt 2>&1
+          wc -l out/report.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tdm-probe
+          path: out/report.txt
