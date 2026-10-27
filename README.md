@@ -204,7 +204,7 @@ epg.pw 台湾包有一批节目 `<desc>` 就是 `<title>` 本身，长度过 12 
 **四道自动化防线（都已接进 CI）：**
 
 ```bash
-npm test                              # 113 项边界断言（normalize 23 + day-fill 47 + tvmao 33 + match 10），build 之前跑
+npm test                              # 118 项边界断言（normalize 23 + day-fill 52 + tvmao 33 + match 10），build 之前跑
 node test/audit-output.mjs output/epg.xml.gz   # 产物体检，重叠/乱序/零长度/某天半截 → exit 1
 ```
 
@@ -299,7 +299,7 @@ node test/audit-output.mjs output/epg.xml.gz   # 产物体检，重叠/乱序/�
 ##### 新增的第三道防线（`test/day-fill.test.mjs`，47 项断言）
 
 ```bash
-npm test    # 四套：normalize 23 + day-fill 47 + tvmao 33 + match 10 = 113 项
+npm test    # 四套：normalize 23 + day-fill 52 + tvmao 33 + match 10 = 118 项
 ```
 
 关键断言：
