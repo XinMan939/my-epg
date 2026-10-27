@@ -1,61 +1,92 @@
-name: 探测 Now Player（临时）
+name: 探测 Now Player v4（临时）
 on:
   workflow_dispatch:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
-      - name: 实测 epglist 接口
+      - name: 批量格式 + 付费台 + 简介
         run: |
           mkdir -p out
           UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36"
+          B="https://nowplayer.now.com"
           {
-            echo "===== 频道 id 列表（从页面提取）====="
-            curl -sS --compressed -o out/page.html --max-time 30 -A "$UA" "https://nowplayer.now.com/tvguide"
-            grep -oE '/tvguide/channeldetail/[0-9]+/[0-9]+' out/page.html | sort -u | head -50
-            echo "总数: $(grep -oE '/tvguide/channeldetail/[0-9]+/' out/page.html | sort -u | wc -l)"
-            echo
-            echo "===== 页面里的频道名 ====="
-            grep -oE '<span class="ch-name">[^<]*</span>' out/page.html | head -20
-            grep -oE 'alt="[^"]*"' out/page.html | sort -u | head -20
-            echo
-            echo "===== /tvguide/epglist 试探 ====="
-            for ids in "096" "096,099" "96"; do
-              for day in 1 2; do
-                R=$(curl -sS --compressed -o /tmp/e.json -w "%{http_code}|%{size_download}" --max-time 25 -A "$UA" \
-                  -H "Referer: https://nowplayer.now.com/tvguide" \
-                  -H "X-Requested-With: XMLHttpRequest" \
-                  "https://nowplayer.now.com/tvguide/epglist?channelIdList=$ids&day=$day" 2>&1 || echo "ERR")
-                echo "--- ids=$ids day=$day → $R"
-                head -c 700 /tmp/e.json 2>/dev/null; echo; echo
-              done
+            echo "===== A. channelIdList 传参格式对比 ====="
+            for q in "channelIdList=096&channelIdList=099" "channelIdList%5B%5D=096&channelIdList%5B%5D=099" "channelIdList=096,099" "channelIdList%5B%5D=096&channelIdList%5B%5D=099&channelIdList%5B%5D=102"; do
+              R=$(curl -sS --compressed -o /tmp/a.json -w "%{http_code}|%{size_download}" --max-time 25 -A "$UA" \
+                -H "Referer: $B/tvguide" -H "X-Requested-With: XMLHttpRequest" \
+                "$B/tvguide/epglist?$q&day=1" 2>&1 || echo ERR)
+              N=$(node -e "try{const j=JSON.parse(require('fs').readFileSync('/tmp/a.json','utf8'));console.log('顶层'+j.length+' -> '+j.map(x=>Array.isArray(x)?x.length:'?').join('/'))}catch(e){console.log('解析失败')}" 2>&1)
+              echo "  [$q] -> $R | $N"
             done
+
             echo
-            echo "===== 完整抓一个频道看结构 ====="
-            curl -sS --compressed -o out/epg_096_d1.json --max-time 25 -A "$UA" \
-              -H "Referer: https://nowplayer.now.com/tvguide" \
-              "https://nowplayer.now.com/tvguide/epglist?channelIdList=096&day=1"
-            echo "大小: $(wc -c < out/epg_096_d1.json)"
+            echo "===== B. 各台 day=1 条数（096 099 是免费台）====="
+            for id in 096 099 102 105 106 108 111 112 113 114 115 116 119 133 138 150 155 156 168 200 208 209 210 211 212 213 217 218 220 221 222 223 316 319 320 321 322 323 324 325 326 327 328 329 330 331 332 333 336 366; do
+              R=$(curl -sS --compressed -o /tmp/b.json -w "%{http_code}" --max-time 20 -A "$UA" \
+                -H "Referer: $B/tvguide" -H "X-Requested-With: XMLHttpRequest" \
+                "$B/tvguide/epglist?channelIdList=$id&day=1" 2>&1 || echo ERR)
+              N=$(node -e "try{const j=JSON.parse(require('fs').readFileSync('/tmp/b.json','utf8'));console.log((j[0]&&j[0].length)||0)}catch(e){console.log('ERR')}" 2>&1)
+              echo "  $id -> $R | 条数 $N"
+            done
+
+            echo
+            echo "===== C. 节目详情 epgprogramdetail（找简介）====="
+            for pid in 202610215578993 202610215578992; do
+              echo "--- programId=$pid"
+              curl -sS --compressed --max-time 25 -A "$UA" -H "Referer: $B/tvguide" \
+                "$B/tvguide/epgprogramdetail?programId=$pid" 2>&1 | head -c 2000
+              echo; echo
+            done
+
+            echo
+            echo "===== D. 频道详情页（找频道名）====="
+            for id in 096 102; do
+              echo "--- channeldetail/$id"
+              curl -sS --compressed -o /tmp/c$id.html -w "%{http_code}|%{size_download}\n" --max-time 25 -A "$UA" "$B/tvguide/channeldetail/$id/1"
+              grep -oE '<title>[^<]*</title>' /tmp/c$id.html
+              grep -oE 'ch-name[^>]*>[^<]*' /tmp/c$id.html | head -5
+              grep -oE 'alt="[^"]{2,40}"' /tmp/c$id.html | sort -u | head -10
+            done
+
+            echo
+            echo "===== E. /channels ====="
+            curl -sS --compressed -o /tmp/ch.json -w "%{http_code}|%{size_download}\n" --max-time 25 -A "$UA" -H "Referer: $B/tvguide" "$B/channels"
+            head -c 1500 /tmp/ch.json; echo
+
+            echo
+            echo "===== F. 一次传 8 台 ====="
+            Q=""
+            for id in 096 099 102 105 106 108 111 112; do Q="$Q&channelIdList%5B%5D=$id"; done
+            R=$(curl -sS --compressed -o /tmp/f.json -w "%{http_code}|%{size_download}" --max-time 30 -A "$UA" \
+              -H "Referer: $B/tvguide" -H "X-Requested-With: XMLHttpRequest" "$B/tvguide/epglist?day=1$Q" 2>&1 || echo ERR)
+            echo "  8台批量 -> $R"
+            node -e "try{const j=JSON.parse(require('fs').readFileSync('/tmp/f.json','utf8'));console.log('  顶层',j.length,'条数',j.map(x=>x.length).join('/'))}catch(e){console.log('  解析失败')}" 2>&1
+
+            echo
+            echo "===== G. day 范围复核（096 免费 + 102 付费）====="
+            for day in 1 2 3 4 5 6 7 8; do
+              A=$(curl -sS --compressed --max-time 20 -A "$UA" -H "Referer: $B/tvguide" "$B/tvguide/epglist?channelIdList=096&day=$day" 2>/dev/null | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>{try{console.log(JSON.parse(s)[0].length)}catch(e){console.log('ERR')}})")
+              Bq=$(curl -sS --compressed --max-time 20 -A "$UA" -H "Referer: $B/tvguide" "$B/tvguide/epglist?channelIdList=102&day=$day" 2>/dev/null | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>{try{console.log(JSON.parse(s)[0].length)}catch(e){console.log('ERR')}})")
+              echo "  day=$day -> 096:$A | 102:$Bq"
+            done
+
+            echo
+            echo "===== H. 节目是否带简介（全字段名扫描 + synopsis 探测）====="
+            curl -sS --compressed -o /tmp/h.json --max-time 25 -A "$UA" -H "Referer: $B/tvguide" "$B/tvguide/epglist?channelIdList=096&day=2"
             node -e "
-              const j=JSON.parse(require('fs').readFileSync('out/epg_096_d1.json','utf8'));
-              console.log('顶层: 数组长度', j.length);
-              console.log('第0个:', Array.isArray(j[0]) ? '数组长度 '+j[0].length : typeof j[0]);
-              if(j[0]&&j[0][0]){
-                console.log('节目字段:', Object.keys(j[0][0]).join(','));
-                console.log('样例:', JSON.stringify(j[0][0], null, 1));
-                console.log('第2条:', JSON.stringify(j[0][1], null, 1));
-              }
+              const j=JSON.parse(require('fs').readFileSync('/tmp/h.json','utf8'));
+              const keys=new Set();
+              let hasSyn=0, total=0;
+              for(const ch of j) for(const p of ch){ total++; for(const k of Object.keys(p)) keys.add(k);
+                if(['synopsis','desc','description','engSynopsis','chiSynopsis','epgSynopsis'].some(k=>p[k]&&String(p[k]).trim())) hasSyn++; }
+              console.log('  全部字段:', [...keys].join(','));
+              console.log('  节目数', total, '带简介的', hasSyn);
             " 2>&1
-            echo
-            echo "===== 天数覆盖探测 (day 1..10) ====="
-            for day in 1 2 3 4 5 6 7 8 9 10; do
-              R=$(curl -sS --compressed -o /tmp/d.json -w "%{http_code}|%{size_download}" --max-time 25 -A "$UA" \
-                -H "Referer: https://nowplayer.now.com/tvguide" \
-                "https://nowplayer.now.com/tvguide/epglist?channelIdList=096&day=$day" 2>&1 || echo "ERR")
-              N=$(node -e "try{const j=JSON.parse(require('fs').readFileSync('/tmp/d.json','utf8'));console.log('频道'+j.length+'/条'+(j[0]?j[0].length:0))}catch(e){console.log('解析失败')}" 2>&1)
-              echo "  day=$day → $R | $N"
-            done
           } > out/report.txt 2>&1
+          cp /tmp/ch.json out/ 2>/dev/null || true
+          cp /tmp/c096.html out/ 2>/dev/null || true
+          cp /tmp/c102.html out/ 2>/dev/null || true
       - uses: actions/upload-artifact@v4
-        with: { name: np-probe, path: out/ }
+        with: { name: np-probe4, path: out/ }
