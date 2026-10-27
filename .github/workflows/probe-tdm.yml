@@ -1,0 +1,23 @@
+name: 探测 TDM API（临时）
+on:
+  workflow_dispatch:
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: DNS + 连通性 + 路径探测
+        run: |
+          echo "===== DNS ====="
+          getent hosts appapi.tdm.com.mo || echo "DNS 失败"
+          echo
+          echo "===== 根路径 ====="
+          for p in "" "api" "epg" "channels" "schedule" "api/epg" "api/channels" "api/v1/epg" "api/program" "program"; do
+            code=$(curl -sS -o /tmp/out.txt -w "%{http_code}|%{size_download}|%{time_total}" \
+              --max-time 20 -H "User-Agent: Mozilla/5.0" "https://appapi.tdm.com.mo/$p" 2>&1 || echo "ERR")
+            echo "/$p → $code"
+            head -c 200 /tmp/out.txt 2>/dev/null | tr -d '\n'; echo
+          done
+          echo
+          echo "===== 主站对照 ====="
+          curl -sS -o /dev/null -w "www.tdm.com.mo → %{http_code} %{time_total}s\n" --max-time 20 https://www.tdm.com.mo/ || echo "主站失败"
