@@ -6,60 +6,49 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - name: 页面与接口探测
+      - name: 深挖 tv-guide.js 与 catalogapi
         run: |
           mkdir -p out
           UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36"
           {
-            echo "===== DNS ====="
-            getent hosts nowplayer.now.com || echo "DNS 失败"
-            getent hosts now.com || echo "now.com 失败"
+            echo "===== tv-guide.js ====="
+            curl -sS --compressed -o out/tv-guide.js -w "HTTP:%{http_code} 大小:%{size_download}\n" \
+              --max-time 30 -A "$UA" "https://nowplayer.now.com/js/tv-guide.js"
+            echo "--- 里面的 URL / api ---"
+            grep -oE '(https?:)?//[a-zA-Z0-9._/-]+' out/tv-guide.js 2>/dev/null | sort -u | head -40
             echo
-            echo "===== 页面 HTML ====="
-            curl -sS --compressed -o out/page.html -w "HTTP:%{http_code} 大小:%{size_download} 耗时:%{time_total}s\n" \
-              --max-time 30 -A "$UA" "https://nowplayer.now.com/tvguide" || echo "页面失败"
-            echo "--- 前 1500 字节 ---"
-            head -c 1500 out/page.html 2>/dev/null; echo
+            echo "--- ajax / fetch 调用 ---"
+            grep -nE '\.ajax|\.get\(|\.post\(|fetch\(|url:' out/tv-guide.js 2>/dev/null | head -40
             echo
-            echo "===== 页面里的 script / 链接 ====="
-            grep -oE '(src|href)="[^"]*\.(js|json)[^"]*"' out/page.html 2>/dev/null | sort -u | head -30
+            echo "--- 全文前 3000 字节 ---"
+            head -c 3000 out/tv-guide.js 2>/dev/null; echo
             echo
-            echo "===== 页面里的 api 字样 ====="
-            grep -oE '"[^"]*api[^"]*"' out/page.html 2>/dev/null | sort -u | head -30
-            echo
-            echo "===== 常见接口试探 ====="
+            echo "===== catalogapi.nowtv.now.com 试探 ====="
+            getent hosts catalogapi.nowtv.now.com || echo "DNS 失败"
             for p in \
-              "api/nowplayer/GetChannelList" \
-              "api/nowplayer/GetEpg" \
-              "api/nowplayer/GetEpgList" \
-              "api/nowplayer/GetProgrammeList" \
-              "api/tvguide/channels" \
+              "" \
               "api/v1/channels" \
-              "api/channel/list" \
+              "api/v2/channels" \
+              "channels" \
+              "epg" \
               "api/epg" \
-              "api/nowplayer/channel" \
+              "api/v1/epg" \
               ; do
-              R=$(curl -sS --compressed -o /tmp/t.json -w "%{http_code}|%{size_download}" --max-time 15 -A "$UA" \
-                -H "Referer: https://nowplayer.now.com/tvguide" \
-                "https://nowplayer.now.com/$p" 2>&1 || echo "ERR")
+              R=$(curl -sS --compressed -o /tmp/c.json -w "%{http_code}|%{size_download}" --max-time 15 -A "$UA" \
+                "https://catalogapi.nowtv.now.com/$p" 2>&1 || echo "ERR")
               echo "  /$p → $R"
-              head -c 180 /tmp/t.json 2>/dev/null | tr -d '\n'; echo
+              head -c 250 /tmp/c.json 2>/dev/null | tr -d '\n'; echo
             done
             echo
-            echo "===== 找 JS bundle 并搜接口 ====="
-            for js in $(grep -oE 'src="[^"]*\.js"' out/page.html 2>/dev/null | sed 's/src="//;s/"//' | head -8); do
-              case "$js" in
-                http*) URL="$js" ;;
-                //*) URL="https:$js" ;;
-                /*) URL="https://nowplayer.now.com$js" ;;
-                *) URL="https://nowplayer.now.com/$js" ;;
-              esac
-              echo "--- $URL ---"
-              curl -sS --compressed --max-time 20 -A "$UA" "$URL" -o /tmp/b.js 2>/dev/null || { echo "抓取失败"; continue; }
-              echo "大小: $(wc -c < /tmp/b.js)"
-              grep -oE '"/api/[a-zA-Z0-9_/-]*"' /tmp/b.js 2>/dev/null | sort -u | head -20
-              grep -oE 'nowplayer[a-zA-Z0-9_/-]*' /tmp/b.js 2>/dev/null | sort -u | head -15
-            done
+            echo "===== script-min.js 里搜 api ====="
+            curl -sS --compressed -o out/script.js --max-time 30 -A "$UA" "https://nowplayer.now.com/js/script-min.js"
+            echo "大小: $(wc -c < out/script.js)"
+            grep -oE '(https?:)?//[a-zA-Z0-9._/-]*api[a-zA-Z0-9._/-]*' out/script.js 2>/dev/null | sort -u | head -20
+            grep -nE 'tvguide|TvGuide|getEpg|GetEpg|epg' out/script.js 2>/dev/null | head -20
+            echo
+            echo "===== 页面 HTML 里的 tvguide 相关 ====="
+            curl -sS --compressed -o out/page.html --max-time 30 -A "$UA" "https://nowplayer.now.com/tvguide"
+            grep -nE 'tvguide|epg|programme|catalogapi' out/page.html 2>/dev/null | head -25
           } > out/report.txt 2>&1
       - uses: actions/upload-artifact@v4
         with: { name: np-probe, path: out/ }
