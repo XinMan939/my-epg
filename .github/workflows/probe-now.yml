@@ -1,69 +1,14 @@
 name: 验证 nowplayer 模块（临时）
-on:
-  workflow_dispatch:
-jobs:
-  probe:
-    runs-on: ubuntu-latest
+on:/n  workflow_dispatch:/njobs:/n  probe:/n    runs-on: ubuntu-latest
     timeout-minutes: 45
-    steps:
-      - uses: actions/checkout@v4
+    steps:/n      - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with: { node-version: '22' }
+        with: { node-version: "22" }
       - name: 跑模块真实逻辑
         run: |
-          {
-            node -e "
-              import('./src/sources/nowplayer.mjs').then(async m => {
-                console.log('=== fetchChannelList ===')
-                const t0=Date.now()
-                const chs = await m.fetchChannelList()
-                console.log('频道数', chs.length, '耗时', ((Date.now()-t0)/1000).toFixed(1)+'s')
-                console.log('有名字的', chs.filter(c=>c.name).length)
-                for (const c of chs.filter(c=>c.name && /now|viu|phoenix|鳳凰|now|Now/i.test(c.name)).slice(0,30)) {
-                  console.log('  '+c.sourceId+' | '+c.name)
-                }
-                console.log('--- 前 20 个（全部）---')
-                chs.slice(0,20).forEach(c=>console.log('  '+c.sourceId+' | '+c.name))
-              }).catch(e=>{console.error('ERR',e.message);process.exit(1)})
-            " 2>&1
-            echo
-            echo "=== getDayProgrammes 单台验证（332 Now NEWS）==="
-            node -e "
-              import('./src/sources/nowplayer.mjs').then(async m => {
-                const today=new Date(Date.now()+8*3600e3).toISOString().slice(0,10).replace(/-/g,'')
-                const t0=Date.now()
-                const r = await m.getDayProgrammes('332', 1, today)
-                console.log('条数', r.programmes.length, '耗时', ((Date.now()-t0)/1000).toFixed(1)+'s', 'error:', r.error||'-')
-                const withD = r.programmes.filter(p=>p.desc && p.desc.length>20).length
-                console.log('带简介', withD+'/'+r.programmes.length)
-                r.programmes.slice(0,6).forEach(p=>{
-                  const bj=t=>new Date(t+8*3600e3).toISOString().slice(5,16).replace('T',' ')
-                  console.log('  '+bj(p.startTs)+' ~ '+bj(p.stopTs)+'  '+p.title)
-                  if(p.desc) console.log('     简介: '+p.desc.slice(0,60))
-                })
-              }).catch(e=>{console.error('ERR',e.message);process.exit(1)})
-            " 2>&1
-            echo
-            echo "=== listChannels 全量（真探 7 天）==="
-            node -e "
-              import('./src/sources/nowplayer.mjs').then(async m => {
-                const t0=Date.now()
-                const list = await m.listChannels()
-                console.log('耗时', ((Date.now()-t0)/1000).toFixed(1)+'s')
-                const ok = list.filter(c=>c.days>0)
-                console.log('有节目', ok.length+'/'+list.length, '总条数', list.reduce((s,c)=>s+c.count,0))
-                console.log('--- days 分布 ---')
-                const dist={}; list.forEach(c=>dist[c.days]=(dist[c.days]||0)+1)
-                console.log(JSON.stringify(dist))
-                console.log('--- 我们关心的台 ---')
-                for (const id of ['332','333','331','366','548','096','099','102','208','326','327','324','112']) {
-                  const c=list.find(x=>x.sourceId===id)
-                  if(c) console.log('  '+id+' | '+c.name+' | days='+c.days+' count='+c.count)
-                }
-                require('fs').writeFileSync('np-catalog.json', JSON.stringify(list,null,1))
-              }).catch(e=>{console.error('ERR',e.message);process.exit(1)})
-            " 2>&1
-          } > report.txt 2>&1
+          cp .probe/verify.mjs ./verify.mjs 2>/dev/null || true
+          node verify.mjs > report.txt 2>&1 || true
+          cat report.txt
       - uses: actions/upload-artifact@v4
         with: { name: np-mod, path: "*.txt" }
       - uses: actions/upload-artifact@v4
