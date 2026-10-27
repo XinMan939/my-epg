@@ -1,70 +1,115 @@
-name: 探测 Now Player v5（临时）
+name: 探测 Now Player v6（临时）
 on:
   workflow_dispatch:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 35
     steps:
-      - name: 频道名对照 + 简介覆盖
+      - name: 关键台对比 + 简介去重率
         run: |
           mkdir -p out
           UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36"
           B="https://nowplayer.now.com"
-          curl -sS --compressed -o out/page.html --max-time 30 -A "$UA" "$B/tvguide"
-          IDS=$(grep -oE '/tvguide/channeldetail/[0-9]+/' out/page.html | grep -oE '[0-9]+' | sort -u)
-          echo "频道数: $(echo "$IDS" | wc -l)" > out/names.txt
-          echo "===== id | 频道名 =====" >> out/names.txt
-          for id in $IDS; do
-            N=$(curl -sS --compressed --max-time 20 -A "$UA" "$B/tvguide/channeldetail/$id/1" 2>/dev/null \
-              | grep -oE '<title>[^<]*</title>' | head -1 | sed -E 's#</?title>##g; s#Now TV Website - Coming Up > ##')
-            echo "$id | $N" >> out/names.txt
-            echo "$id | $N"
-          done
+          {
+            echo "===== A. 我们现有的 Now 台 / 凤凰台 在 Now Player 的 7 天覆盖 ====="
+            # 331=Now Direct 332=Now NEWS 333=Now Business News 366=Phoenix InfoNews 548=Phoenix Chinese
+            for id in 331 332 333 366 548 096 099 102; do
+              ROWS=""
+              TOT=0
+              for day in 1 2 3 4 5 6 7; do
+                curl -sS --compressed -o /tmp/d.json --max-time 25 -A "$UA" -H "Referer: $B/tvguide" "$B/tvguide/epglist?channelIdList=$id&day=$day" 2>/dev/null
+                N=$(node -e "try{const j=JSON.parse(require('fs').readFileSync('/tmp/d.json','utf8'));console.log((j[0]&&j[0].length)||0)}catch(e){console.log(0)}")
+                ROWS="$ROWS $N"; TOT=$((TOT+N))
+              done
+              echo "  $id -> 7天:$ROWS | 合计 $TOT"
+            done
 
-          echo
-          echo "===== 抽样测 epgprogramdetail 简介覆盖 =====" > out/syn.txt
-          for id in 327 326 324 112 102 208 096; do
-            curl -sS --compressed -o /tmp/p$id.json --max-time 25 -A "$UA" -H "Referer: $B/tvguide" "$B/tvguide/epglist?channelIdList=$id&day=2"
+            echo
+            echo "===== B. vimProgramId 去重率（决定简介要抓多少次）====="
+            for id in 332 333 331; do
+              ALL=""
+              for day in 1 2 3 4 5 6 7; do
+                curl -sS --compressed -o /tmp/d$day.json --max-time 25 -A "$UA" -H "Referer: $B/tvguide" "$B/tvguide/epglist?channelIdList=$id&day=$day" 2>/dev/null
+                node -e "
+                  try{const j=JSON.parse(require('fs').readFileSync('/tmp/d$day.json','utf8'));
+                  for(const p of (j[0]||[])) console.log(p.vimProgramId+'|'+(p.sid||p.cid||''));}catch(e){}
+                " >> /tmp/all$id.txt
+              done
+              TOTL=$(wc -l < /tmp/all$id.txt)
+              UNIQP=$(cut -d'|' -f1 /tmp/all$id.txt | sort -u | wc -l)
+              UNIQS=$(cut -d'|' -f2 /tmp/all$id.txt | sort -u | wc -l)
+              echo "  $id -> 节目行 $TOTL | 唯一 vimProgramId $UNIQP | 唯一 sid $UNIQS"
+            done
+
+            echo
+            echo "===== C. 332 全 7 天合并后的字段完整性 ====="
             node -e "
-              const j=JSON.parse(require('fs').readFileSync('/tmp/p$id.json','utf8'));
-              const ps=j[0]||[];
-              const sids=[...new Set(ps.map(p=>p.sid||p.cid||p.name))];
-              console.log('$id | 节目'+ps.length+' | 唯一sid '+sids.length);
-              require('fs').writeFileSync('/tmp/sids$id.txt', sids.slice(0,25).join('\n'));
-              require('fs').writeFileSync('/tmp/pids$id.txt', ps.slice(0,25).map(p=>p.vimProgramId).join('\n'));
-            " >> out/syn.txt 2>&1
-            # 抓 12 个节目的详情看 synopsis 命中率
-            HIT=0; TOT=0; SAMPLE=""
-            for pid in $(head -12 /tmp/pids$id.txt); do
+              const fs=require('fs');
+              const lines=fs.readFileSync('/tmp/all332.txt','utf8').trim().split('\n');
+              console.log('  行数', lines.length, '唯一pid', new Set(lines.map(l=>l.split('|')[0])).size);
+            " 2>&1
+
+            echo
+            echo "===== D. 332 前 20 个唯一 pid 的简介命中 ====="
+            HIT=0; TOT=0
+            for pid in $(cut -d'|' -f1 /tmp/all332.txt | sort -u | head -20); do
               TOT=$((TOT+1))
               R=$(curl -sS --compressed --max-time 20 -A "$UA" -H "Referer: $B/tvguide" "$B/tvguide/epgprogramdetail?programId=$pid" 2>/dev/null)
               L=$(node -e "
                 let s=process.argv[1]; try{const d=JSON.parse(s);
-                const sy=(d.chiSynopsis||'').trim()||(d.synopsis||'').trim()||(d.engSynopsis||'').trim();
+                const sy=(d.chiSynopsis||'').trim()||(d.synopsis||'').trim();
                 console.log(sy?sy.length:0)}catch(e){console.log(-1)}" "$R" 2>&1)
-              if [ "$L" -gt 20 ] 2>/dev/null; then HIT=$((HIT+1)); SAMPLE="$L"; fi
+              if [ "$L" -gt 20 ] 2>/dev/null; then HIT=$((HIT+1)); fi
+              if [ $TOT -le 3 ]; then echo "  样例 pid=$pid 长度=$L"; fi
             done
-            echo "  $id 简介命中 $HIT/$TOT (样例长度 ${SAMPLE:-0})" >> out/syn.txt
-            echo "  $id 简介命中 $HIT/$TOT"
-          done
+            echo "  332 简介命中 $HIT/$TOT"
 
-          echo
-          echo "===== 全部台 7 天条数矩阵（批量 8 台一组）=====" > out/matrix.txt
-          echo "$IDS" > /tmp/ids.txt
-          IDARR=$(cat /tmp/ids.txt | tr '\n' ' ')
-          Q=""; N=0; GRP=1
-          for id in $IDARR; do
-            Q="$Q&channelIdList%5B%5D=$id"; N=$((N+1))
-            if [ $N -eq 8 ]; then
-              curl -sS --compressed -o /tmp/g.json --max-time 30 -A "$UA" -H "Referer: $B/tvguide" "$B/tvguide/epglist?day=2$Q"
-              node -e "try{const j=JSON.parse(require('fs').readFileSync('/tmp/g.json','utf8'));console.log('组'+$GRP+': '+j.map(x=>x.length).join('/'))}catch(e){console.log('组$GRP 失败')}" >> out/matrix.txt 2>&1
-              Q=""; N=0; GRP=$((GRP+1))
-            fi
-          done
-          if [ $N -gt 0 ]; then
-            curl -sS --compressed -o /tmp/g.json --max-time 30 -A "$UA" -H "Referer: $B/tvguide" "$B/tvguide/epglist?day=2$Q"
-            node -e "try{const j=JSON.parse(require('fs').readFileSync('/tmp/g.json','utf8'));console.log('组$GRP(尾): '+j.map(x=>x.length).join('/'))}catch(e){console.log('组$GRP 失败')}" >> out/matrix.txt 2>&1
-          fi
+            echo
+            echo "===== E. 331 (Now Direct) 前 15 个 pid 的简介命中 ====="
+            HIT=0; TOT=0
+            for pid in $(cut -d'|' -f1 /tmp/all331.txt | sort -u | head -15); do
+              TOT=$((TOT+1))
+              R=$(curl -sS --compressed --max-time 20 -A "$UA" -H "Referer: $B/tvguide" "$B/tvguide/epgprogramdetail?programId=$pid" 2>/dev/null)
+              L=$(node -e "
+                let s=process.argv[1]; try{const d=JSON.parse(s);
+                const sy=(d.chiSynopsis||'').trim()||(d.synopsis||'').trim();
+                console.log(sy?sy.length:0)}catch(e){console.log(-1)}" "$R" 2>&1)
+              if [ "$L" -gt 20 ] 2>/dev/null; then HIT=$((HIT+1)); fi
+              if [ $TOT -le 3 ]; then echo "  样例 pid=$pid 长度=$L"; fi
+            done
+            echo "  331 简介命中 $HIT/$TOT"
+
+            echo
+            echo "===== F. 331 7天完整数据存盘（用于验证时间轴/跨天）====="
+            for day in 1 2 3 4 5 6 7; do
+              curl -sS --compressed -o out/epg_331_d$day.json --max-time 25 -A "$UA" -H "Referer: $B/tvguide" "$B/tvguide/epglist?channelIdList=331&day=$day"
+            done
+            node -e "
+              const fs=require('fs');
+              const rows=[];
+              for(let d=1;d<=7;d++){
+                const j=JSON.parse(fs.readFileSync('out/epg_331_d'+d+'.json','utf8'));
+                for(const p of (j[0]||[])) rows.push({d,...p});
+              }
+              rows.sort((a,b)=>a.start-b.start);
+              console.log('  合并', rows.length, '条');
+              console.log('  首条', new Date(rows[0].start).toISOString(), rows[0].name);
+              console.log('  末条', new Date(rows[rows.length-1].start).toISOString(), rows[rows.length-1].name);
+              const seen=new Set(); let dup=0;
+              for(const r of rows){ const k=r.start+'|'+r.name; if(seen.has(k))dup++; else seen.add(k); }
+              console.log('  start|name 重复', dup);
+              let ov=0;
+              for(let i=1;i<rows.length;i++) if(rows[i].start < rows[i-1].end) ov++;
+              console.log('  时间重叠', ov);
+              // 跨天连续性
+              let gaps=0;
+              for(let i=1;i<rows.length;i++) if(rows[i].start - rows[i-1].end > 3600e3) gaps++;
+              console.log('  大于1小时的断档', gaps);
+              const byDate={};
+              for(const r of rows){ const dd=new Date(r.start+8*3600e3).toISOString().slice(0,10); byDate[dd]=(byDate[dd]||0)+1; }
+              console.log('  按北京日分布', JSON.stringify(byDate));
+            " 2>&1
+          } > out/report.txt 2>&1
       - uses: actions/upload-artifact@v4
-        with: { name: np-probe5, path: out/ }
+        with: { name: np-probe6, path: out/ }
