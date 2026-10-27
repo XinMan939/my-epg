@@ -6,49 +6,56 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - name: 深挖 tv-guide.js 与 catalogapi
+      - name: 实测 epglist 接口
         run: |
           mkdir -p out
           UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36"
           {
-            echo "===== tv-guide.js ====="
-            curl -sS --compressed -o out/tv-guide.js -w "HTTP:%{http_code} 大小:%{size_download}\n" \
-              --max-time 30 -A "$UA" "https://nowplayer.now.com/js/tv-guide.js"
-            echo "--- 里面的 URL / api ---"
-            grep -oE '(https?:)?//[a-zA-Z0-9._/-]+' out/tv-guide.js 2>/dev/null | sort -u | head -40
+            echo "===== 频道 id 列表（从页面提取）====="
+            curl -sS --compressed -o out/page.html --max-time 30 -A "$UA" "https://nowplayer.now.com/tvguide"
+            grep -oE '/tvguide/channeldetail/[0-9]+/[0-9]+' out/page.html | sort -u | head -50
+            echo "总数: $(grep -oE '/tvguide/channeldetail/[0-9]+/' out/page.html | sort -u | wc -l)"
             echo
-            echo "--- ajax / fetch 调用 ---"
-            grep -nE '\.ajax|\.get\(|\.post\(|fetch\(|url:' out/tv-guide.js 2>/dev/null | head -40
+            echo "===== 页面里的频道名 ====="
+            grep -oE '<span class="ch-name">[^<]*</span>' out/page.html | head -20
+            grep -oE 'alt="[^"]*"' out/page.html | sort -u | head -20
             echo
-            echo "--- 全文前 3000 字节 ---"
-            head -c 3000 out/tv-guide.js 2>/dev/null; echo
-            echo
-            echo "===== catalogapi.nowtv.now.com 试探 ====="
-            getent hosts catalogapi.nowtv.now.com || echo "DNS 失败"
-            for p in \
-              "" \
-              "api/v1/channels" \
-              "api/v2/channels" \
-              "channels" \
-              "epg" \
-              "api/epg" \
-              "api/v1/epg" \
-              ; do
-              R=$(curl -sS --compressed -o /tmp/c.json -w "%{http_code}|%{size_download}" --max-time 15 -A "$UA" \
-                "https://catalogapi.nowtv.now.com/$p" 2>&1 || echo "ERR")
-              echo "  /$p → $R"
-              head -c 250 /tmp/c.json 2>/dev/null | tr -d '\n'; echo
+            echo "===== /tvguide/epglist 试探 ====="
+            for ids in "096" "096,099" "96"; do
+              for day in 1 2; do
+                R=$(curl -sS --compressed -o /tmp/e.json -w "%{http_code}|%{size_download}" --max-time 25 -A "$UA" \
+                  -H "Referer: https://nowplayer.now.com/tvguide" \
+                  -H "X-Requested-With: XMLHttpRequest" \
+                  "https://nowplayer.now.com/tvguide/epglist?channelIdList=$ids&day=$day" 2>&1 || echo "ERR")
+                echo "--- ids=$ids day=$day → $R"
+                head -c 700 /tmp/e.json 2>/dev/null; echo; echo
+              done
             done
             echo
-            echo "===== script-min.js 里搜 api ====="
-            curl -sS --compressed -o out/script.js --max-time 30 -A "$UA" "https://nowplayer.now.com/js/script-min.js"
-            echo "大小: $(wc -c < out/script.js)"
-            grep -oE '(https?:)?//[a-zA-Z0-9._/-]*api[a-zA-Z0-9._/-]*' out/script.js 2>/dev/null | sort -u | head -20
-            grep -nE 'tvguide|TvGuide|getEpg|GetEpg|epg' out/script.js 2>/dev/null | head -20
+            echo "===== 完整抓一个频道看结构 ====="
+            curl -sS --compressed -o out/epg_096_d1.json --max-time 25 -A "$UA" \
+              -H "Referer: https://nowplayer.now.com/tvguide" \
+              "https://nowplayer.now.com/tvguide/epglist?channelIdList=096&day=1"
+            echo "大小: $(wc -c < out/epg_096_d1.json)"
+            node -e "
+              const j=JSON.parse(require('fs').readFileSync('out/epg_096_d1.json','utf8'));
+              console.log('顶层: 数组长度', j.length);
+              console.log('第0个:', Array.isArray(j[0]) ? '数组长度 '+j[0].length : typeof j[0]);
+              if(j[0]&&j[0][0]){
+                console.log('节目字段:', Object.keys(j[0][0]).join(','));
+                console.log('样例:', JSON.stringify(j[0][0], null, 1));
+                console.log('第2条:', JSON.stringify(j[0][1], null, 1));
+              }
+            " 2>&1
             echo
-            echo "===== 页面 HTML 里的 tvguide 相关 ====="
-            curl -sS --compressed -o out/page.html --max-time 30 -A "$UA" "https://nowplayer.now.com/tvguide"
-            grep -nE 'tvguide|epg|programme|catalogapi' out/page.html 2>/dev/null | head -25
+            echo "===== 天数覆盖探测 (day 1..10) ====="
+            for day in 1 2 3 4 5 6 7 8 9 10; do
+              R=$(curl -sS --compressed -o /tmp/d.json -w "%{http_code}|%{size_download}" --max-time 25 -A "$UA" \
+                -H "Referer: https://nowplayer.now.com/tvguide" \
+                "https://nowplayer.now.com/tvguide/epglist?channelIdList=096&day=$day" 2>&1 || echo "ERR")
+              N=$(node -e "try{const j=JSON.parse(require('fs').readFileSync('/tmp/d.json','utf8'));console.log('频道'+j.length+'/条'+(j[0]?j[0].length:0))}catch(e){console.log('解析失败')}" 2>&1)
+              echo "  day=$day → $R | $N"
+            done
           } > out/report.txt 2>&1
       - uses: actions/upload-artifact@v4
         with: { name: np-probe, path: out/ }
