@@ -366,13 +366,26 @@ function buildGlobalIndex(byKey) {
  *   ① 频道级（alignByTitles 命中的台）—— 同一个台的简介最可信，优先用
  *   ② 全局级（跨频道标题索引）—— 补那些「整台对不上但节目名对得上」的残余
  *
+ * ★ ③ 标题黑名单（opts.blockTitles）—— 专治「同名不同物」
+ *   「全站唯一」规则无法证明「是同一个节目」，最典型的一例：
+ *     江苏卫视 的「非诚勿扰」是**相亲综艺**（7 天 7 次，常设栏目）
+ *     CatchPlay电影 的「非誠勿擾」是**冯小刚电影**（1 次）
+ *     电影在 51zmt 全站只出现一次 → 成了「唯一答案」→ 灌进江苏卫视
+ *
+ *   为什么不写自动判据（实测三轮，全都有误伤）：
+ *     · 按地区挡（港台来源 → 大陆目标）→ 误伤 800 条（卫视播同部电视剧是对的）
+ *     · 按新闻类型挡 → 误伤 818 条（「新闻联播」各台统一转播，简介相同是对的）
+ *     · 按「来源是电影台 + 目标非电影台」挡 → 误伤 34 条（HBO温馨家庭播电影是对的）
+ *   而真正错的只有 7 条。误伤成本是真错的 4~100 倍，所以只做**显式黑名单**，
+ *   由 overrides.json 的 blockTitles 手工声明，命中就跳过全局兜底。
+ *
  * @param targets   目标频道
  * @param epgMap    Map<tvgId, programmes[]>
- * @param opts      {force}
+ * @param opts      {force, titleMap, blockTitles}
  * @returns {stats, detail, report}
  */
 export async function enrichFromZ51(targets, epgMap, opts = {}) {
-  const { force = false, titleMap = {} } = opts
+  const { force = false, titleMap = {}, blockTitles = {} } = opts
 
   const { byKey } = await loadPacks({ force })
   if (!byKey.size) {
@@ -434,11 +447,18 @@ export async function enrichFromZ51(targets, epgMap, opts = {}) {
   for (const t of targets) {
     const rows = epgMap.get(t.id)
     if (!rows || !rows.length) continue
+    // 本频道的手工黑名单（归一化后的标题），命中就跳过全局兜底
+    const blocked = new Set()
+    for (const bt of blockTitles[t.id] || []) {
+      const nt = normTitleLoose(bt)
+      if (nt) blocked.add(nt)
+    }
     let filled = 0
     for (const r of rows) {
       if (isRealDesc(r.desc)) continue
       const nt = normTitleLoose(r.title)
       if (!nt) continue
+      if (blocked.has(nt)) continue // ★ 同名不同物，见 enrichFromZ51 的注释
       const g = globalIndex.get(nt)
       if (g) {
         r.desc = g.desc

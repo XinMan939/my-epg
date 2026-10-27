@@ -241,12 +241,43 @@ export async function buildChannelIndex(dates) {
   } catch {
     /* 名字只是装饰，拿不到不影响功能 */
   }
+
+  // ★ 剔除「频道宣传语」：同一句 desc 被本台 ≥3 个不同标题复用
+  //
+  // 为什么必须剔（2026-10-27 线上产物实测翻车）：
+  //   台湾有些台把「频道介绍」填进了每个节目的 programdescr：
+  //     鏡電視新聞台HD → 13 个整点新闻共用「鏡電視新聞台，帶領台灣觀眾開啟不一樣的新聞視野…」
+  //     彩虹頻道HD    → 41 个节目共用「彩虹成人數位頻道將家庭的成人娛樂享受高規格化…」
+  //   这些不是节目简介，是频道宣传语。挂到节目上会让人以为每个节目都一样。
+  //
+  // ★ 更致命的是它会**跨地区传染**：全局兜底只认「标题唯一」，
+  //   「晚間新聞」在 kbro 只有鏡電視新聞台有简介 → 被当成唯一答案 →
+  //   灌进 CCTV-1 / 江苏卫视 / 香港各台的「晚間新聞」。实测污染 123 条（CN 72 + HK 51）。
+  //
+  // ★ 判据为什么是「本台 ≥3 个不同标题」而不是「跨台重复」：
+  //   跨台重复会误伤真节目（「台視新聞部製作的專題深入報導」在 2 个台都有，那是同集团共用稿）。
+  //   而本台内 3 个**不同节目**用同一句话，只可能是宣传语 —— 实测 40 组全是宣传语，零误伤。
+  let promoRemoved = 0
+  for (const [, slot] of byChannel) {
+    const cnt = new Map()
+    for (const [, d] of slot.descMap) cnt.set(d, (cnt.get(d) || 0) + 1)
+    const promo = new Set()
+    for (const [d, n] of cnt) if (n >= 3) promo.add(d)
+    if (!promo.size) continue
+    for (const [k, d] of [...slot.descMap]) {
+      if (promo.has(d)) {
+        slot.descMap.delete(k)
+        promoRemoved++
+      }
+    }
+  }
+
   const withDesc = [...byChannel.values()].filter((s) => s.descMap.size > 0).length
   log.ok(
     `[kbro] 频道索引 ${byChannel.size} 个频道 / ${withDesc} 个带简介` +
-      `（扫描 ${scanned} 条节目，其中 ${real} 条带真简介）`
+      `（扫描 ${scanned} 条节目，其中 ${real} 条带真简介；剔除频道宣传语 ${promoRemoved} 条）`
   )
-  return { byChannel, stats: { channels: byChannel.size, scanned, real } }
+  return { byChannel, stats: { channels: byChannel.size, scanned, real, promoRemoved } }
 }
 
 /**
@@ -376,6 +407,13 @@ export function alignByTitles(targets, titlesByTarget, byChannel) {
  *     ① 该标题在 kbro 全站只出现一次 → 无可争议
  *     ② 出现多次但 desc 完全一致 → 说明是通用栏目（天气预报这类）
  *   其余一律跳过，宁缺毋滥。
+ *
+ * ★ 第二个安全规则：**全局索引只能给同地区用**（见 enrichFromKbro 的 regionOf 判断）
+ *   kbro 的 296 个频道**全部是台湾台**（实测：无 CCTV、无湖南/江苏/浙江、无香港翡翠台）。
+ *   所以「全站唯一」这条规则对通用栏目名完全无效 ——
+ *   「晚間新聞」在 kbro 恰好只有鏡電視新聞台给了简介，它就成了「唯一答案」，
+ *   然后被灌进 CCTV-1、江苏卫视、香港各台的「晚間新聞」。
+ *   实测跨区污染 123 条（大陆 72 + 香港 51）。
  */
 export function buildGlobalIndex(byChannel) {
   const raw = new Map()
@@ -429,12 +467,36 @@ export function normKbroTitle(t) {
 }
 
 /**
+ * 目标频道属于哪个地区
+ *
+ * 用来限制全局兜底的作用范围 —— kbro 全是台湾台，不能跨区套用。
+ *
+ * ★ 为什么不能只看 country：channels.json 里大陆频道（cctv/satellite/local）
+ *   大部分没写 country 字段，只有港澳台和一部分大陆台写了。
+ *   所以以 group 为主判据，country 兜底。
+ */
+function regionOf(t) {
+  if (!t) return ''
+  const g = t.group
+  if (g === 'cctv' || g === 'satellite' || g === 'local' || g === 'pay') return 'CN'
+  if (g === 'hk') return 'HK'
+  if (g === 'mo') return 'MO'
+  if (g === 'tw') return 'TW'
+  return (t.country || '').toUpperCase()
+}
+
+/**
  * 端到端：给已抓到的节目补简介
  *
  * 两级策略，先频道级再全局级（与 z51 完全一致的思路）：
  *   ① 频道级（alignByTitles 命中的台）—— 同一个台的简介最可信，优先用
  *   ② 全局级（跨频道标题索引）—— 补那些「整台对不上但节目名对得上」的残余，
  *      且只接受全站唯一 / 全站一致的标题，防止串台
+ *
+ * ★ ② 有地区限制：只对台湾目标生效（kbro 全是台湾台）。
+ *   实测不加这条会跨区污染 123 条：CCTV-1 的「晚间新闻」被套上
+ *   「鏡電視新聞台，帶領台灣觀眾開啟不一樣的新聞視野…」，
+ *   江苏卫视的「非诚勿扰」被套上冯小刚电影的剧情简介。
  *
  * ★ 只在节目还没有真实简介时才填，不覆盖已有内容。
  *
@@ -488,6 +550,7 @@ export async function enrichFromKbro(targets, epgMap, opts = {}) {
   // ---- 补简介 ----
   let filledByChannel = 0
   let filledByGlobal = 0
+  let skippedCrossRegion = 0
   const report = []
 
   for (const t of targets) {
@@ -498,6 +561,8 @@ export async function enrichFromKbro(targets, epgMap, opts = {}) {
     const slot = a ? byChannel.get(a.channelId) : null
     // overrides 里的手工 titleMap：非中文标题（英文/朝鲜语）只能人工映射
     const manual = titleMap[t.id] || null
+    // ★ 全局兜底只给台湾目标用 —— kbro 全是台湾台，跨区套用必串台
+    const allowGlobal = regionOf(t) === 'TW'
 
     let filled = 0
     for (const r of rows) {
@@ -505,20 +570,24 @@ export async function enrichFromKbro(targets, epgMap, opts = {}) {
       const k = normKbroTitle(r.title)
       if (!k) continue
 
-      // ① 频道级
+      // ① 频道级（对齐成功＝同一个台，跨区也无妨，比如 HBO电影.tw ↔ HBO HD頻道）
       let d = slot?.descMap.get(k)
       // ② 手工 titleMap（优先级在频道级之后：人工映射最准，但先让位给同台数据）
       if (!d && manual) {
         const mapKey = Object.keys(manual).find((x) => normKbroTitle(x) === k)
         if (mapKey) d = manual[mapKey]
       }
-      // ③ 全局级
+      // ③ 全局级（仅台湾目标）
       let fromGlobal = false
       if (!d) {
-        const g = globalIndex.get(k)
-        if (g) {
-          d = g.desc
-          fromGlobal = true
+        if (!allowGlobal) {
+          if (globalIndex.has(k)) skippedCrossRegion++
+        } else {
+          const g = globalIndex.get(k)
+          if (g) {
+            d = g.desc
+            fromGlobal = true
+          }
         }
       }
       if (!d) continue
@@ -538,11 +607,14 @@ export async function enrichFromKbro(targets, epgMap, opts = {}) {
     filled: filledByChannel + filledByGlobal,
     filledByChannel,
     filledByGlobal,
+    skippedCrossRegion,
+    promoRemoved: built.stats?.promoRemoved || 0,
     dates,
   }
   log.ok(
     `[kbro] 补简介 ${stats.filled} 条（频道级 ${filledByChannel} / 全局级 ${filledByGlobal}），` +
-      `对齐 ${aligned.size} 个频道`
+      `对齐 ${aligned.size} 个频道` +
+      (skippedCrossRegion ? `；挡掉跨区套用 ${skippedCrossRegion} 条` : '')
   )
   return { stats, detail, report }
 }
