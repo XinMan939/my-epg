@@ -6,26 +6,26 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
-      - name: 追踪 /api 重定向 + 挖前端 JS 里的 API 定义
+      - name: 看 SSR 页面真实内容 + 内联脚本里的 API
         run: |
-          echo "===== /api 重定向目标 ====="
-          curl -sS -i --max-time 20 "https://appapi.tdm.com.mo/api" 2>&1 | grep -iE "^(HTTP|location)"
+          echo "===== /api/?&ssr=off 内容前 800 字 ====="
+          curl -sSL --max-time 25 "https://appapi.tdm.com.mo/api/?&ssr=off" -o /tmp/a.html
+          wc -c /tmp/a.html
+          head -c 800 /tmp/a.html; echo
           echo
-          echo "===== 根页面里的 JS/资源 ====="
-          curl -sS --max-time 20 "https://appapi.tdm.com.mo/" -o /tmp/root.html
-          grep -oE '(src|href)="[^"]*"' /tmp/root.html | head -20
+          echo "===== 根页面前 1500 字 ====="
+          curl -sSL --max-time 25 "https://appapi.tdm.com.mo/" -o /tmp/r.html
+          head -c 1500 /tmp/r.html; echo
           echo
-          echo "===== 抓所有 js chunk 里的 API 路径 ====="
-          for js in $(grep -oE 'src="[^"]*\.js[^"]*"' /tmp/root.html | sed 's/src="//;s/"//' | head -10); do
-            url="https://appapi.tdm.com.mo/${js#/}"
-            echo "--- $js"
-            curl -sS --max-time 25 "$url" -o /tmp/c.js 2>/dev/null
-            grep -oE '"/?(api|v1|v2)/[a-zA-Z0-9_/-]{2,50}"' /tmp/c.js 2>/dev/null | sort -u | head -15
-            grep -oE 'https?://[a-zA-Z0-9._-]*(tdm|api)[a-zA-Z0-9._/-]*' /tmp/c.js 2>/dev/null | sort -u | head -10
-          done
+          echo "===== 页面里所有内联 script 的 key 名 ====="
+          grep -oE '__NUXT__|__NEXT_DATA__|window\.[A-Za-z_]+|createApp|__INITIAL' /tmp/r.html | sort -u | head
           echo
-          echo "===== 常见 TDM 接口猜测 ====="
-          for p in "api/live" "api/getLive" "api/channelList" "api/programList" "api/epgList" "api/v1/channel" "api/v2/channel"; do
-            c=$(curl -sS -o /tmp/o.txt -w "%{http_code}|%{size_download}" --max-time 15 "https://appapi.tdm.com.mo/$p" 2>&1||echo ERR)
+          echo "===== 找所有 api 相关字符串 ====="
+          grep -oiE '[a-z0-9_/.-]{0,40}api[a-z0-9_/.-]{0,60}' /tmp/r.html | sort -u | head -25
+          echo
+          echo "===== 试 SSR 关掉后的常见路径 ====="
+          for p in "api/?&ssr=off" "api/channel?ssr=off" "api/epg?ssr=off" "api/v1?ssr=off"; do
+            c=$(curl -sSL -o /tmp/t.txt -w "%{http_code}|%{size_download}|%{content_type}" --max-time 20 "https://appapi.tdm.com.mo/$p" 2>&1||echo ERR)
             echo "/$p → $c"
+            head -c 150 /tmp/t.txt 2>/dev/null|tr -d '\n'; echo
           done
