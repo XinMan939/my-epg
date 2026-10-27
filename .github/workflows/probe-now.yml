@@ -1,98 +1,70 @@
-name: 探测 Now Player v13（临时）
+name: 验证 nowplayer 模块（临时）
 on:
   workflow_dispatch:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 45
     steps:
-      - name: lang=zh 中文简介覆盖率（决定性验证）
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '22' }
+      - name: 跑模块真实逻辑
         run: |
-          mkdir -p out
-          UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36"
-          B="https://nowplayer.now.com"
           {
-            echo "===== A. lang=zh 下 5 台标题样例 ====="
-            for id in 366 548 332 333 331 096 099 102; do
-              curl -sS --compressed -o /tmp/a$id.json --max-time 25 -A "$UA" "$B/tvguide/epglist?channelIdList=$id&day=2&lang=zh"
-              node -e "
-                try{const j=JSON.parse(require('fs').readFileSync('/tmp/a$id.json','utf8'));
-                const ps=(j[0]||[]);
-                console.log('  $id ('+ps.length+'条): '+ps.slice(0,4).map(p=>p.name).join(' / '));
-                }catch(e){console.log('  $id 失败')}
-              "
-            done
-
+            node -e "
+              import('./src/sources/nowplayer.mjs').then(async m => {
+                console.log('=== fetchChannelList ===')
+                const t0=Date.now()
+                const chs = await m.fetchChannelList()
+                console.log('频道数', chs.length, '耗时', ((Date.now()-t0)/1000).toFixed(1)+'s')
+                console.log('有名字的', chs.filter(c=>c.name).length)
+                for (const c of chs.filter(c=>c.name && /now|viu|phoenix|鳳凰|now|Now/i.test(c.name)).slice(0,30)) {
+                  console.log('  '+c.sourceId+' | '+c.name)
+                }
+                console.log('--- 前 20 个（全部）---')
+                chs.slice(0,20).forEach(c=>console.log('  '+c.sourceId+' | '+c.name))
+              }).catch(e=>{console.error('ERR',e.message);process.exit(1)})
+            " 2>&1
             echo
-            echo "===== B. lang=zh 下 epgprogramdetail 中文简介 ====="
-            for id in 366 548 332 333; do
-              curl -sS --compressed -o /tmp/b$id.json --max-time 25 -A "$UA" "$B/tvguide/epglist?channelIdList=$id&day=2&lang=zh"
-              node -e "
-                const j=JSON.parse(require('fs').readFileSync('/tmp/b$id.json','utf8'));
-                const ps=(j[0]||[]).slice(0,12);
-                require('fs').writeFileSync('/tmp/bp$id.txt', ps.map(p=>p.vimProgramId).join('\n'));
-              "
-              HIT=0; TOT=0; SAMP=""
-              for pid in $(cat /tmp/bp$id.txt); do
-                TOT=$((TOT+1))
-                R=$(curl -sS --compressed --max-time 20 -A "$UA" "$B/tvguide/epgprogramdetail?programId=$pid&lang=zh" 2>/dev/null)
-                OUT=$(node -e "
-                  let s=process.argv[1]; try{const d=JSON.parse(s);
-                  const chi=(d.chiSynopsis||'').trim();
-                  const any=(d.synopsis||'').trim();
-                  const eng=(d.engSynopsis||'').trim();
-                  console.log([chi.length,any.length,eng.length,(chi||any||eng).slice(0,40)].join('|'));
-                  }catch(e){console.log('ERR')}" "$R" 2>&1)
-                CL=$(echo "$OUT" | cut -d'|' -f1)
-                if [ "$CL" -gt 20 ] 2>/dev/null; then HIT=$((HIT+1)); [ -z "$SAMP" ] && SAMP=$(echo "$OUT" | cut -d'|' -f4); fi
-                TOT_ALL=$TOT
-              done
-              echo "  $id 中文简介 $HIT/$TOT | 样例: $SAMP"
-            done
-
+            echo "=== getDayProgrammes 单台验证（332 Now NEWS）==="
+            node -e "
+              import('./src/sources/nowplayer.mjs').then(async m => {
+                const today=new Date(Date.now()+8*3600e3).toISOString().slice(0,10).replace(/-/g,'')
+                const t0=Date.now()
+                const r = await m.getDayProgrammes('332', 1, today)
+                console.log('条数', r.programmes.length, '耗时', ((Date.now()-t0)/1000).toFixed(1)+'s', 'error:', r.error||'-')
+                const withD = r.programmes.filter(p=>p.desc && p.desc.length>20).length
+                console.log('带简介', withD+'/'+r.programmes.length)
+                r.programmes.slice(0,6).forEach(p=>{
+                  const bj=t=>new Date(t+8*3600e3).toISOString().slice(5,16).replace('T',' ')
+                  console.log('  '+bj(p.startTs)+' ~ '+bj(p.stopTs)+'  '+p.title)
+                  if(p.desc) console.log('     简介: '+p.desc.slice(0,60))
+                })
+              }).catch(e=>{console.error('ERR',e.message);process.exit(1)})
+            " 2>&1
             echo
-            echo "===== C. lang=zh 7 天完整抓取 + 每日覆盖（366/548）====="
-            for id in 366 548; do
-              for day in 1 2 3 4 5 6 7; do
-                curl -sS --compressed -o out/zh_${id}_$day.json --max-time 25 -A "$UA" "$B/tvguide/epglist?channelIdList=$id&day=$day&lang=zh"
-              done
-              node -e "
-                const fs=require('fs');
-                const rows=[];
-                for(let d=1;d<=7;d++){const j=JSON.parse(fs.readFileSync('out/zh_${id}_'+d+'.json','utf8'));for(const p of (j[0]||[]))rows.push(p)}
-                const seen=new Set(); const uniq=[];
-                for(const r of rows){const k=r.start+'|'+r.name; if(seen.has(k))continue; seen.add(k); uniq.push(r)}
-                uniq.sort((a,b)=>a.start-b.start);
-                console.log('  ${id}: 原始'+rows.length+' 去重'+uniq.length);
-                const byDay={}, hrs={};
-                for(const r of uniq){const dd=new Date(r.start+8*3600e3).toISOString().slice(0,10); byDay[dd]=(byDay[dd]||0)+1; hrs[dd]=(hrs[dd]||0)+(r.end-r.start)/3600e3}
-                for(const k of Object.keys(byDay).sort()) console.log('    '+k+' '+byDay[k]+'条 '+hrs[k].toFixed(1)+'h');
-                console.log('    首条 '+new Date(uniq[0].start+8*3600e3).toISOString().slice(0,16)+' 末条 '+new Date(uniq[uniq.length-1].end+8*3600e3).toISOString().slice(0,16));
-                let ov=0; for(let i=1;i<uniq.length;i++) if(uniq[i].start<uniq[i-1].end) ov++;
-                console.log('    重叠 '+ov);
-                console.log('    标题样例: '+uniq.slice(0,5).map(p=>p.name).join(' / '));
-              "
-            done
-
-            echo
-            echo "===== D. 332/333/331 lang=zh 7 天 ====="
-            for id in 332 333 331; do
-              for day in 1 2 3 4 5 6 7; do
-                curl -sS --compressed -o out/zh_${id}_$day.json --max-time 25 -A "$UA" "$B/tvguide/epglist?channelIdList=$id&day=$day&lang=zh"
-              done
-              node -e "
-                const fs=require('fs');
-                const rows=[];
-                for(let d=1;d<=7;d++){const j=JSON.parse(fs.readFileSync('out/zh_${id}_'+d+'.json','utf8'));for(const p of (j[0]||[]))rows.push(p)}
-                const seen=new Set(); const uniq=[];
-                for(const r of rows){const k=r.start+'|'+r.name; if(seen.has(k))continue; seen.add(k); uniq.push(r)}
-                uniq.sort((a,b)=>a.start-b.start);
-                const byDay={}, hrs={};
-                for(const r of uniq){const dd=new Date(r.start+8*3600e3).toISOString().slice(0,10); byDay[dd]=(byDay[dd]||0)+1; hrs[dd]=(hrs[dd]||0)+(r.end-r.start)/3600e3}
-                console.log('  ${id}: 去重'+uniq.length+' | '+Object.keys(byDay).sort().map(k=>k.slice(5)+':'+byDay[k]+'('+hrs[k].toFixed(0)+'h)').join(' '));
-                console.log('    标题: '+uniq.slice(0,4).map(p=>p.name).join(' / '));
-              "
-            done
-          } > out/report.txt 2>&1
+            echo "=== listChannels 全量（真探 7 天）==="
+            node -e "
+              import('./src/sources/nowplayer.mjs').then(async m => {
+                const t0=Date.now()
+                const list = await m.listChannels()
+                console.log('耗时', ((Date.now()-t0)/1000).toFixed(1)+'s')
+                const ok = list.filter(c=>c.days>0)
+                console.log('有节目', ok.length+'/'+list.length, '总条数', list.reduce((s,c)=>s+c.count,0))
+                console.log('--- days 分布 ---')
+                const dist={}; list.forEach(c=>dist[c.days]=(dist[c.days]||0)+1)
+                console.log(JSON.stringify(dist))
+                console.log('--- 我们关心的台 ---')
+                for (const id of ['332','333','331','366','548','096','099','102','208','326','327','324','112']) {
+                  const c=list.find(x=>x.sourceId===id)
+                  if(c) console.log('  '+id+' | '+c.name+' | days='+c.days+' count='+c.count)
+                }
+                require('fs').writeFileSync('np-catalog.json', JSON.stringify(list,null,1))
+              }).catch(e=>{console.error('ERR',e.message);process.exit(1)})
+            " 2>&1
+          } > report.txt 2>&1
       - uses: actions/upload-artifact@v4
-        with: { name: np-probe13, path: out/ }
+        with: { name: np-mod, path: "*.txt" }
+      - uses: actions/upload-artifact@v4
+        with: { name: np-cat, path: np-catalog.json }
