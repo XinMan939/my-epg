@@ -765,7 +765,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 20
+    "programmeCount": 40
   },
   {
     "id": "HunanEntertainmentChannel.cn",
@@ -776,7 +776,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 12
+    "programmeCount": 22
   },
   {
     "id": "HunanDramaChannel.cn",
@@ -787,7 +787,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 14
+    "programmeCount": 28
   },
   {
     "id": "HunanCityChannel.cn",
@@ -821,7 +821,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 53
+    "programmeCount": 76
   },
   {
     "id": "ZhejiangMinshengLeisure.cn",
@@ -832,7 +832,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 28
+    "programmeCount": 52
   },
   {
     "id": "ZhejiangFilmEntertainmentChannel.cn",
@@ -854,7 +854,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 24
+    "programmeCount": 48
   },
   {
     "id": "JiangsuCityChannel.cn",
@@ -865,7 +865,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 26
+    "programmeCount": 50
   },
   {
     "id": "JiangsuVarietyChannel.cn",
@@ -876,7 +876,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 20
+    "programmeCount": 42
   },
   {
     "id": "JiangsuMovieChannel.cn",
@@ -887,7 +887,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 23
+    "programmeCount": 48
   },
   {
     "id": "JiangsuPublicNewsChannel.cn",
@@ -898,7 +898,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 1
+    "programmeCount": 42
   },
   {
     "id": "Jade.hk",
@@ -1104,8 +1104,8 @@
       "澳门澳视"
     ],
     "logo": "",
-    "hasEpg": false,
-    "programmeCount": 0
+    "hasEpg": true,
+    "programmeCount": 272
   },
   {
     "id": "MacauLotus.hk",
@@ -1655,7 +1655,7 @@
     ],
     "logo": "https://www.tvsou.com/media/f/3758760354d6/zm48-24",
     "hasEpg": true,
-    "programmeCount": 38
+    "programmeCount": 74
   },
   {
     "id": "魅力足球.cn",
@@ -1727,7 +1727,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 37
+    "programmeCount": 74
   },
   {
     "id": "金色学堂.cn",
@@ -2779,7 +2779,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 70
+    "programmeCount": 140
   },
   {
     "id": "DaAi2.tw",
@@ -2975,7 +2975,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 11
+    "programmeCount": 20
   },
   {
     "id": "GoldenEagleDocumentary.cn",
@@ -2984,7 +2984,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 33
+    "programmeCount": 67
   },
   {
     "id": "快乐垂钓.cn",
@@ -3011,7 +3011,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 41
+    "programmeCount": 79
   },
   {
     "id": "广东民生.cn",
@@ -3020,7 +3020,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 35
+    "programmeCount": 69
   },
   {
     "id": "广州新闻.cn",
@@ -3105,7 +3105,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 22
+    "programmeCount": 41
   },
   {
     "id": "HBO电影.tw",
@@ -3143,5 +3143,65 @@
     "logo": "",
     "hasEpg": true,
     "programmeCount": 168
+  },
+  {
+    "id": "MacauPortuguese.hk",
+    "name": "澳门葡文台",
+    "group": "mo",
+    "aliases": [
+      "澳视葡文",
+      "澳視葡文"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 107
+  },
+  {
+    "id": "MacauSports.hk",
+    "name": "澳门体育",
+    "group": "mo",
+    "aliases": [
+      "澳视体育",
+      "澳視體育"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 107
+  },
+  {
+    "id": "MacauInfo.hk",
+    "name": "澳门资讯",
+    "group": "mo",
+    "aliases": [
+      "澳视资讯",
+      "澳門資訊"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 303
+  },
+  {
+    "id": "MacauVariety.hk",
+    "name": "澳门综艺",
+    "group": "mo",
+    "aliases": [
+      "澳视综艺",
+      "澳門綜藝"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 95
+  },
+  {
+    "id": "MacauSatellite.hk",
+    "name": "澳门-Macau",
+    "group": "mo",
+    "aliases": [
+      "澳門-Macau",
+      "澳门澳门"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 293
   }
 ]
