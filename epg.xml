@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tv generator-info-name="my-epg" generator-info-url="https://github.com/" date="20261028035143 +0800">
+<tv generator-info-name="my-epg" generator-info-url="https://github.com/" date="20261028035320 +0800">
   <channel id="CCTV1.cn">
     <display-name lang="zh">CCTV-1 综合</display-name>
     <display-name lang="zh">CCTV-1</display-name>
