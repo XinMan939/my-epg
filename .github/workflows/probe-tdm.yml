@@ -6,31 +6,30 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - name: 挖全部接口 + 试 common/setting
+      - name: 验证节目单接口
         run: |
           mkdir -p out
+          B="https://appapi.tdm.com.mo"
           {
-            echo "### common/setting"
-            curl -sSL --max-time 20 "https://appapi.tdm.com.mo/api/v1/common/setting" | head -c 1500; echo
+            echo "=== A) program-list/Channel"
+            curl -sSL --max-time 20 "$B/api/v1.0/program-list/Channel" -o out/ch.json
+            wc -c out/ch.json; head -c 1200 out/ch.json; echo
             echo
-            echo "### 所有 api 路径（宽匹配）"
-            curl -sSL --max-time 25 "https://appapi.tdm.com.mo/" -o /tmp/r.html
-            for js in $(grep -oE '/static/js/[A-Za-z0-9._-]+\.js' /tmp/r.html | sort -u); do
-              curl -sSL --max-time 30 "https://appapi.tdm.com.mo$js" -o /tmp/j.js 2>/dev/null || continue
-              grep -ohE '"/api/[a-zA-Z0-9_/{}:.$-]{2,80}"' /tmp/j.js
-              grep -ohE 'api/v[0-9]+/[a-zA-Z0-9_/{}:.$-]{2,60}' /tmp/j.js
-            done | tr -d '"' | sort -u
+            echo "=== B) program-list/categories"
+            curl -sSL --max-time 20 "$B/api/v1.0/program-list/categories" | head -c 600; echo
             echo
-            echo "### 直接试推测的节目单接口"
-            for p in \
-              "api/v1/program/list" "api/v1/program" "api/v1/channel/list" "api/v1/channel" \
-              "api/v1/epg/list" "api/v1/epg" "api/v1/live/list" "api/v1/live" \
-              "api/v1/program/schedule" "api/v1/channel/program" "api/v1/program/getList" \
-              "api/v1/tv/program" "api/v1/tv/list" "api/v1/schedule" ; do
-              body=$(curl -sSL --max-time 15 "https://appapi.tdm.com.mo/$p" 2>/dev/null | head -c 200)
-              echo "/$p -> $body"
+            echo "=== C) live"
+            curl -sSL --max-time 20 "$B/api/v1.0/live" | head -c 600; echo
+            echo
+            echo "=== D) live/categories"
+            curl -sSL --max-time 20 "$B/api/v1.0/live/categories" | head -c 600; echo
+            echo
+            echo "=== E) program-list/Channel 带参数试探"
+            for q in "?date=2026-10-28" "?channelId=1" "?lang=zh" "?page=1&size=50" "?channelCode=1"; do
+              echo "--- $q"
+              curl -sSL --max-time 15 "$B/api/v1.0/program-list/Channel$q" | head -c 250; echo
             done
           } > out/report.txt 2>&1
-          wc -l out/report.txt
+          cp out/ch.json out/channel.json 2>/dev/null
       - uses: actions/upload-artifact@v4
-        with: { name: tdm-probe, path: out/report.txt }
+        with: { name: tdm-probe, path: out/ }
