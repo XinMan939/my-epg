@@ -35,6 +35,7 @@ import * as epgpw from './sources/epgpw.mjs'
 import * as tvmao from './sources/tvmao.mjs'
 import * as tvsou from './sources/tvsou.mjs'
 import { enrichFromZ51, loadPacks, fillEmptyChannels } from './sources/z51.mjs'
+import { enrichFromKbro } from './sources/kbro.mjs'
 
 const SOURCES = { epgpw, tvmao, tvsou }
 
@@ -536,6 +537,30 @@ async function cmdBuild() {
       }
     }
 
+    // ③ 台湾大宽频 kbro —— 台湾/香港频道专用简介源
+    //
+    // 为什么放在 tvmao 之后：
+    //   tvmao 只索引 61 个大陆频道，港澳台完全没有；而 kbro 有 296 个台湾频道、
+    //   212 个带真简介，且大量是 100% 覆盖（CBeebies 164/164、達文西 87/87、
+    //   Discovery 25/25）。实测能补 774 条，简介率 62.3% → 64.0%。
+    //
+    // ★ 它只给 3 天数据，所以只当简介源、不当节目单源（见 kbro.mjs 的 meta.role）。
+    let kbroStats = null
+    if (!process.env.NO_KBRO) {
+      try {
+        log.info('[desc] ③ 用 kbro（台湾大宽频）补港澳台简介...')
+        const r = await enrichFromKbro(targets, epgMap, {})
+        if (r.stats && r.stats.filled) {
+          kbroStats = { ...r.stats, detail: r.detail, report: r.report }
+          log.ok(`[desc] ③ kbro 补了 ${r.stats.filled} 条`)
+        } else {
+          log.info('[desc] ③ kbro 没有可补的简介')
+        }
+      } catch (e) {
+        log.warn(`[desc] ③ kbro 失败，忽略: ${e.message}`)
+      }
+    }
+
     const final = countReal()
     descStats = {
       // 真实简介口径（去掉「暂无节目描述」等占位）
@@ -544,9 +569,10 @@ async function cmdBuild() {
       totalCount: final.n,
       // 历史字段，保留兼容看板
       titles: tvmaoStats?.titles || 0,
-      filled: (z51Stats?.filled || 0) + (tvmaoStats?.filled || 0),
+      filled: (z51Stats?.filled || 0) + (tvmaoStats?.filled || 0) + (kbroStats?.filled || 0),
       z51: z51Stats,
       tvmao: tvmaoStats,
+      kbro: kbroStats,
     }
     log.info(
       `[desc] 最终真实简介覆盖 ${descStats.realCoverage}% (${descStats.realCount}/${descStats.totalCount})`

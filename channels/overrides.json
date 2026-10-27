@@ -67,7 +67,8 @@
   },
   "农林卫视.cn": {
     "source": "epgpw",
-    "sourceId": "570491"
+    "sourceId": "570491",
+    "tvmaoSourceId": "SHXITV/SHXITV9"
   },
   "AsianFood.tw": {
     "source": "epgpw",
@@ -94,6 +95,15 @@
     "source": "epgpw",
     "sourceId": "456655"
   },
+  "CCTV中学生.cn": {
+    "source": "tvmao",
+    "sourceId": "CCTVPAYFEE-CCTVPAYFEE35"
+  },
+  "重温经典.cn": {
+    "source": "tvmao",
+    "sourceId": "BAMC-CWJINGDIAN"
+  },
+  "_notes_tvmao_2026_10_27": "2026-10-27 第二次实测，tvmao 的节目页路径规则又变了：数字付费频道（CCTVPAYFEE-*）和 BAMC-CWJINGDIAN 这类带「分组-频道」连字符的 id，现在都走 /program/，/program_digital/ 返回 404。同时节目行有两种结构——被收录成词条的用 <a> 包标题，没收录的是纯文本 <span>，旧解析器只认前者会丢一大半。修完后：CCTV中学生 19→34 条、重温经典 0→21 条、农林卫视 17→40 条。",
   "_notes_epgpw_misaligned": "epg.pw 里有些 id 的 display-name 与实际节目内容不是同一个台，纯按名字匹配会挂错。实测两个：① 370247 display-name「My Cinema Europe HD 我的歐洲電影」，节目却是 Newshour / Inside Story / Al Jazeera World（半岛英文台）；② 570483 display-name「CGTN西语」，节目却是 剧场 / 寻味中国 / 这就是中国（中文节目）。所以「我的欧洲电影」改用 457377（MCE 我的歐洲電影台，节目为 黑蝶漫舞/聚焦謀殺案，确认是电影台）；「CGTN西班牙语」保持空缺，宁空不挂错台。",
   "_notes_z51_广东珠江": "epg.pw 的 544420（中央台–珠江）只有 20261026 一天数据，构建窗口从 20261027 起 → 等于 0 条。51zmt 的 e1:1759「珠江频道」有 20261027+20261028 两天 42 条、34 条真实简介（今日关注/剧场:云水怒/南海海洋环境预报），明显更好。"
 }

@@ -26,16 +26,38 @@ export const PATHS = {
   digital: '/program_digital/',
 }
 
-/** 由 sourceId 推断路径前缀。sourceId 形如 "CCTV-CCTV1" / "HUNANTV1" / "CCTVPAYFEE-CCTVPAYFEE1" */
+/**
+ * 由 sourceId 推断 URL 前缀（可能返回空字符串，表示 sourceId 自带完整路径）
+ * sourceId 形如 "CCTV-CCTV1" / "HUNANTV1" / "CCTVPAYFEE-CCTVPAYFEE1" / "SHXITV/SHXITV9"
+ */
 export function inferPath(sourceId) {
-  // 2026-10-27 站点改版后实测（三条都返回 200，但只有前两条是正确页面）：
-  //   /program/CCTV-CCTV1-w2.html        68600B  ✓ 央视
-  //   /program/cctv/CCTV-CCTV1-w2.html   34114B  ✗ 尺寸差一半，内容不对
-  //   /program_satellite/HUNANTV1-w2.html        ✓ 卫视
-  //   /program_digital/CCTVPAYFEE-...-w2.html    ✓ 数字付费
-  // 所以带 CCTVPAYFEE- 前缀走 digital，其余央视走 cctv（= /program/），别再加 cctv/ 子目录。
-  if (/^CCTVPAYFEE-/i.test(sourceId)) return PATHS.digital
-  if (/^CCTV-/i.test(sourceId)) return PATHS.cctv
+  // ★ 两段式写法：sourceId 里带 "/"，如 "SHXITV/SHXITV9"（陕西台/农林卫视）
+  //   这类频道不在频道清单页的链接里（清单页只收主频道），
+  //   但节目页真实存在且正确。用户 2026-10-27 直接给了这个 URL，
+  //   说明「清单页没有」不等于「站点没有」。
+  //   实测三条（2026-10-27，w2）：
+  //     /program/SHXITV/SHXITV9-w2.html        72987B ✓ title 农林卫视节目表
+  //     /program_satellite/SHXITV9-w2.html     72990B ✓ 同上（只给尾段也能用）
+  //   走 /program/ 前缀即可，和央视同一条路径规则。
+  if (sourceId.includes('/')) return PATHS.cctv
+
+  // ⚠️⚠️ 2026-10-27 第二次实测：**数字付费频道也走 /program/** 了，
+  //     /program_digital/ 现在返回 404。
+  //     证据（w2，m 站）：
+  //       /program/CCTVPAYFEE-CCTVPAYFEE35-w2.html   200 68862B  ✓ CCTV中学生频道
+  //       /program_digital/CCTVPAYFEE-...-w2.html    404    92B  ✗
+  //       /program/BAMC-CWJINGDIAN-w2.html           200 58942B  ✓ 重温经典频道
+  //       /program_digital/BAMC-CWJINGDIAN-w2.html   404    92B  ✗
+  //     所以「CCTVPAYFEE- 前缀走 digital」这条旧规则已经失效，
+  //     现在唯一可靠的规则是：**带「分组-频道」前缀的一律走 /program/**。
+  //
+  //     这个坑很隐蔽：inferPath 猜错前缀 → 404 → getDayProgrammes 返回 0 条 →
+  //     表现成「这个频道上游没有」，和真的没有一模一样。
+  //     第二次踩：BAMC-CWJINGDIAN（重温经典频道）前缀是 BAMC- 不是 CCTV-，
+  //     被归到 satellite 分支 → 404 → 又以为「上游没有」。实测 /program/ 是 200、58942B。
+  //
+  //     结论：只要 sourceId 形如 `XXX-YYY`（含连字符的二级分组 id），就走 /program/。
+  if (sourceId.includes('-')) return PATHS.cctv
   // 卫视类：形如 HUNANTV1 / ZJTV1 / BTV1
   return PATHS.satellite
 }
@@ -64,14 +86,24 @@ export async function getDayProgrammes(sourceId, weekday, ymd) {
 
   // 校验：页面标题应包含频道名片段，否则是串台
   const rows = []
+
+  // ★ 节目行有两种结构，必须都吃（2026-10-27 实测）：
+  //   A) 节目被电视猫收录成词条，标题是 <a href="/tvcolumn/xxx">节目名</a>
+  //   B) 没收录词条，标题是纯文本 <span class="epg-row-link">动画片</span>
+  //
+  //   旧正则只认 A，B 的行被整条丢掉。后果很隐蔽：
+  //     重温经典频道 22 条全是 B 型 → 一条都抓不到，表现成「这个频道没有节目」
+  //     农林卫视 17 条 A + 34 条 B → 只抓到 17 条，丢了三分之二
+  //   这不是「上游没有数据」，是我们的解析器只认一半。
   const rowRe =
-    /<span class="epg-row-time"\s+data-endtime="([^"]*)"\s*\n?\s*data-time="([^"]*)">[^<]*<\/span>\s*<span class="epg-row-link"><a[^>]*>([^<]*)<\/a>([^<]*)<\/span>/g
+    /<span class="epg-row-time"\s+data-endtime="([^"]*)"\s*\n?\s*data-time="([^"]*)">[^<]*<\/span>\s*<span class="epg-row-link">(?:<a[^>]*>([^<]*)<\/a>([^<]*)|([^<]*))<\/span>/g
 
   let m
   while ((m = rowRe.exec(html))) {
     const endRaw = m[1].trim()
     const startRaw = m[2].trim()
-    const title = m[3].trim()
+    // A 型取 <a> 内文字 + 尾巴；B 型取整段文字
+    const title = (m[3] || m[5] || '').trim()
     const suffix = (m[4] || '').trim()
     const full = (title + suffix).trim()
     if (!full) continue

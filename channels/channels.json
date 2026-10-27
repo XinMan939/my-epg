@@ -2072,7 +2072,9 @@
       "group": "tw",
       "country": "TW",
       "aliases": [
-        "DW德國之聲"
+        "DW德國之聲",
+        "德國之聲",
+        "德国之声"
       ]
     },
     {
@@ -2177,7 +2179,9 @@
       "group": "tw",
       "country": "TW",
       "aliases": [
-        "大爱一台"
+        "大爱一台",
+        "大愛",
+        "大爱"
       ]
     },
     {
@@ -2453,6 +2457,27 @@
       "aliases": [
         "HBO",
         "HBO HD"
+      ]
+    },
+    {
+      "id": "CCTV中学生.cn",
+      "name": "CCTV中学生",
+      "group": "pay",
+      "country": "CN",
+      "aliases": [
+        "中学生频道",
+        "CCTV中学生频道",
+        "CCTV-中学生"
+      ]
+    },
+    {
+      "id": "重温经典.cn",
+      "name": "重温经典",
+      "group": "pay",
+      "country": "CN",
+      "aliases": [
+        "重温经典频道",
+        "重溫經典"
       ]
     }
   ]

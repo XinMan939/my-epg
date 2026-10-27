@@ -93,10 +93,27 @@ async function ensureFile(region) {
     try {
       xml = zlib.gunzipSync(buf).toString('utf8')
     } catch (e) {
+      // ★ 2026-10-27 踩坑：这里原来直接 throw，导致「下载到了坏包」比「下载失败」更致命。
+      //   epg.pw 的 TW 包 21MB，中途断开时 curl 仍算「成功」返回了 523511 字节的半截 gz，
+      //   gunzip 报 "unexpected end of file" → 抛错 → 整个 TW region 数据全丢，
+      //   频道从 1360 掉到 841，日志只有一行 warn，看着像「上游数据变少」。
+      //   而「下载失败」那条分支是会降级用旧缓存的 —— 行为不一致。
+      //   现在两者一致：能用的旧缓存优先于彻底没有。
+      if (fs.existsSync(out)) {
+        log.warn(`[epg.pw] ${region} 解压失败(${e.message})，沿用旧缓存`)
+        return out
+      }
       throw new Error(`epg.pw ${region} 解压失败: ${e.message} (${bytes} bytes)`)
     }
 
-    if (!xml.includes('<tv')) throw new Error(`epg.pw ${region} 内容不是合法 XMLTV`)
+    if (!xml.includes('<tv') || !xml.trimEnd().endsWith('</tv>')) {
+      // 同理：内容不完整也降级，别把残缺 XML 当成正常数据往下传
+      if (fs.existsSync(out)) {
+        log.warn(`[epg.pw] ${region} 内容不完整（缺 <tv 或未以 </tv> 结尾），沿用旧缓存`)
+        return out
+      }
+      throw new Error(`epg.pw ${region} 内容不是合法 XMLTV`)
+    }
     // 先写临时文件再 rename，保证任何时刻读到的都是完整文件
     const tmp = `${out}.tmp`
     fs.writeFileSync(tmp, xml, 'utf8')

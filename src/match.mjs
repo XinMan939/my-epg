@@ -48,6 +48,12 @@ export function matchChannels(targets, catalog) {
           region: hit.region,
           logo: hit.logo || '',
           confidence: 'override',
+          // ★ 手工指定也要有备选：主源常常是「注册了但零节目」的空壳
+          //   （epg.pw 有 19 个这样的频道），没有备选就只能留空。
+          //   优先级：overrides 里显式写的 tvmaoSourceId / z51SourceId
+          //   （这两个是「台名对不上但确实是同一个台」，自动匹配永远找不到）
+          //   → 再拼上自动排名出来的同名备选。
+          alternatives: buildOverrideAlternatives(ov, hit, cands, t),
         })
         stats.override++
         continue
@@ -194,8 +200,48 @@ function rankAlternatives(cands, chosen, target) {
     }))
 }
 
-/** 明显类别错配的排除规则（防止"东方卫视"配到"东方电影台"） */
-const CATEGORY_WORDS = ['电影', '购物', '纪录', '卡通', '少儿', '体育', '戏曲', '音乐', '财经', '新闻']
+/**
+ * 手工指定频道（overrides）的备选链
+ *
+ * 为什么需要：overrides 指定的主源经常是空壳——
+ *   epg.pw 有 19 个「注册了 id 但零节目」的频道（农林卫视 570491、汕头经济 544379 都是），
+ *   光写主源等于给自己挖坑：匹配成功、节目 0 条，日志看起来一切正常。
+ *
+ * 顺序（前面的优先，空节目才往后走）：
+ *   ① overrides.tvmaoSourceId —— 电视猫 id，用于「台名对不上但确实是同一个台」
+ *      且频道清单页没收录的（如农林卫视 SHXITV/SHXITV9，清单页只收陕西台主频道）
+ *   ② overrides.z51SourceId   —— 51zmt 的 e1:N / e2:N
+ *   ③ 自动排名出来的同名备选    —— 同 rankAlternatives
+ *
+ * @returns 备选数组（不含主源自身）
+ */
+function buildOverrideAlternatives(ov, chosen, cands, target) {
+  const out = []
+  const seen = new Set([`${chosen.source}:${chosen.sourceId}`])
+
+  const push = (source, sourceId, sourceName, region, logo) => {
+    const key = `${source}:${sourceId}`
+    if (seen.has(key)) return
+    seen.add(key)
+    out.push({ source, sourceId: String(sourceId), sourceName: sourceName || '', region: region || '', logo: logo || '' })
+  }
+
+  if (ov.tvmaoSourceId) {
+    // 两段式 id（SHXITV/SHXITV9）不会出现在 catalog 里，所以这里不校验存在性，
+    // 直接当候选用；build 时 getDayProgrammes 会真去抓，抓不到就自然跳过。
+    const hit = cands.find((c) => c.source === 'tvmao' && String(c.sourceId) === String(ov.tvmaoSourceId))
+    push('tvmao', ov.tvmaoSourceId, hit?.name || ov.tvmaoSourceId, hit?.region, hit?.logo)
+  }
+
+  // ⚠️ 注意：z51SourceId 不放在这里。
+  //    z51 是独立兜底源，不在 SOURCES/catalog 里，走的是 fillEmptyChannels()，
+  //    那条路自己会读 overrides[t.id].z51SourceId。放进来反而会命中 unknown source。
+  for (const a of rankAlternatives(cands, chosen, target)) push(a.source, a.sourceId, a.sourceName, a.region, a.logo)
+
+  return out
+}
+
+/** 明显类别错配的排除规则（防止"东方卫视"配到"东方电影台"） */const CATEGORY_WORDS = ['电影', '购物', '纪录', '卡通', '少儿', '体育', '戏曲', '音乐', '财经', '新闻']
 
 function isCategoryMismatch(targetName, sourceName) {
   const t = targetName || ''
