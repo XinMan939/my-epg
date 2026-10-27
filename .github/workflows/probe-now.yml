@@ -1,115 +1,107 @@
-name: 探测 Now Player v6（临时）
+name: 探测 Now Player v7（临时）
 on:
   workflow_dispatch:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: 40
     steps:
-      - name: 关键台对比 + 简介去重率
+      - name: 凤凰台简介 + 批量上限 + 日期映射
         run: |
           mkdir -p out
           UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36"
           B="https://nowplayer.now.com"
           {
-            echo "===== A. 我们现有的 Now 台 / 凤凰台 在 Now Player 的 7 天覆盖 ====="
-            # 331=Now Direct 332=Now NEWS 333=Now Business News 366=Phoenix InfoNews 548=Phoenix Chinese
-            for id in 331 332 333 366 548 096 099 102; do
-              ROWS=""
-              TOT=0
-              for day in 1 2 3 4 5 6 7; do
-                curl -sS --compressed -o /tmp/d.json --max-time 25 -A "$UA" -H "Referer: $B/tvguide" "$B/tvguide/epglist?channelIdList=$id&day=$day" 2>/dev/null
-                N=$(node -e "try{const j=JSON.parse(require('fs').readFileSync('/tmp/d.json','utf8'));console.log((j[0]&&j[0].length)||0)}catch(e){console.log(0)}")
-                ROWS="$ROWS $N"; TOT=$((TOT+N))
-              done
-              echo "  $id -> 7天:$ROWS | 合计 $TOT"
-            done
-
-            echo
-            echo "===== B. vimProgramId 去重率（决定简介要抓多少次）====="
-            for id in 332 333 331; do
-              ALL=""
-              for day in 1 2 3 4 5 6 7; do
-                curl -sS --compressed -o /tmp/d$day.json --max-time 25 -A "$UA" -H "Referer: $B/tvguide" "$B/tvguide/epglist?channelIdList=$id&day=$day" 2>/dev/null
-                node -e "
-                  try{const j=JSON.parse(require('fs').readFileSync('/tmp/d$day.json','utf8'));
-                  for(const p of (j[0]||[])) console.log(p.vimProgramId+'|'+(p.sid||p.cid||''));}catch(e){}
-                " >> /tmp/all$id.txt
-              done
-              TOTL=$(wc -l < /tmp/all$id.txt)
-              UNIQP=$(cut -d'|' -f1 /tmp/all$id.txt | sort -u | wc -l)
-              UNIQS=$(cut -d'|' -f2 /tmp/all$id.txt | sort -u | wc -l)
-              echo "  $id -> 节目行 $TOTL | 唯一 vimProgramId $UNIQP | 唯一 sid $UNIQS"
-            done
-
-            echo
-            echo "===== C. 332 全 7 天合并后的字段完整性 ====="
-            node -e "
-              const fs=require('fs');
-              const lines=fs.readFileSync('/tmp/all332.txt','utf8').trim().split('\n');
-              console.log('  行数', lines.length, '唯一pid', new Set(lines.map(l=>l.split('|')[0])).size);
-            " 2>&1
-
-            echo
-            echo "===== D. 332 前 20 个唯一 pid 的简介命中 ====="
-            HIT=0; TOT=0
-            for pid in $(cut -d'|' -f1 /tmp/all332.txt | sort -u | head -20); do
-              TOT=$((TOT+1))
-              R=$(curl -sS --compressed --max-time 20 -A "$UA" -H "Referer: $B/tvguide" "$B/tvguide/epgprogramdetail?programId=$pid" 2>/dev/null)
-              L=$(node -e "
-                let s=process.argv[1]; try{const d=JSON.parse(s);
-                const sy=(d.chiSynopsis||'').trim()||(d.synopsis||'').trim();
-                console.log(sy?sy.length:0)}catch(e){console.log(-1)}" "$R" 2>&1)
-              if [ "$L" -gt 20 ] 2>/dev/null; then HIT=$((HIT+1)); fi
-              if [ $TOT -le 3 ]; then echo "  样例 pid=$pid 长度=$L"; fi
-            done
-            echo "  332 简介命中 $HIT/$TOT"
-
-            echo
-            echo "===== E. 331 (Now Direct) 前 15 个 pid 的简介命中 ====="
-            HIT=0; TOT=0
-            for pid in $(cut -d'|' -f1 /tmp/all331.txt | sort -u | head -15); do
-              TOT=$((TOT+1))
-              R=$(curl -sS --compressed --max-time 20 -A "$UA" -H "Referer: $B/tvguide" "$B/tvguide/epgprogramdetail?programId=$pid" 2>/dev/null)
-              L=$(node -e "
-                let s=process.argv[1]; try{const d=JSON.parse(s);
-                const sy=(d.chiSynopsis||'').trim()||(d.synopsis||'').trim();
-                console.log(sy?sy.length:0)}catch(e){console.log(-1)}" "$R" 2>&1)
-              if [ "$L" -gt 20 ] 2>/dev/null; then HIT=$((HIT+1)); fi
-              if [ $TOT -le 3 ]; then echo "  样例 pid=$pid 长度=$L"; fi
-            done
-            echo "  331 简介命中 $HIT/$TOT"
-
-            echo
-            echo "===== F. 331 7天完整数据存盘（用于验证时间轴/跨天）====="
+            echo "===== A. day 参数 → 实际日期映射 ====="
             for day in 1 2 3 4 5 6 7; do
-              curl -sS --compressed -o out/epg_331_d$day.json --max-time 25 -A "$UA" -H "Referer: $B/tvguide" "$B/tvguide/epglist?channelIdList=331&day=$day"
+              curl -sS --compressed -o /tmp/m.json --max-time 25 -A "$UA" -H "Referer: $B/tvguide" "$B/tvguide/epglist?channelIdList=366&day=$day"
+              node -e "
+                try{const j=JSON.parse(require('fs').readFileSync('/tmp/m.json','utf8'));
+                const ps=j[0]||[];
+                if(!ps.length){console.log('  day=$day -> 空');process.exit(0)}
+                const bj=t=>new Date(t+8*3600e3).toISOString().replace('T',' ').slice(0,16);
+                console.log('  day=$day -> '+ps.length+' 条 | 首 '+bj(ps[0].start)+' | 末 '+bj(ps[ps.length-1].end)+' | date字段 '+[...new Set(ps.map(p=>p.date))].join(','));
+                }catch(e){console.log('  day=$day -> 解析失败')}
+              "
             done
+
+            echo
+            echo "===== B. 366/548 全 7 天原始数据存盘 ====="
+            for id in 366 548 332 333; do
+              for day in 1 2 3 4 5 6 7; do
+                curl -sS --compressed -o out/epg_${id}_d${day}.json --max-time 25 -A "$UA" -H "Referer: $B/tvguide" "$B/tvguide/epglist?channelIdList=$id&day=$day"
+              done
+              echo "  $id 已存 7 天"
+            done
+
+            echo
+            echo "===== C. 366 简介命中率（20 个）====="
             node -e "
               const fs=require('fs');
-              const rows=[];
-              for(let d=1;d<=7;d++){
-                const j=JSON.parse(fs.readFileSync('out/epg_331_d'+d+'.json','utf8'));
-                for(const p of (j[0]||[])) rows.push({d,...p});
-              }
-              rows.sort((a,b)=>a.start-b.start);
-              console.log('  合并', rows.length, '条');
-              console.log('  首条', new Date(rows[0].start).toISOString(), rows[0].name);
-              console.log('  末条', new Date(rows[rows.length-1].start).toISOString(), rows[rows.length-1].name);
-              const seen=new Set(); let dup=0;
-              for(const r of rows){ const k=r.start+'|'+r.name; if(seen.has(k))dup++; else seen.add(k); }
-              console.log('  start|name 重复', dup);
-              let ov=0;
-              for(let i=1;i<rows.length;i++) if(rows[i].start < rows[i-1].end) ov++;
-              console.log('  时间重叠', ov);
-              // 跨天连续性
-              let gaps=0;
-              for(let i=1;i<rows.length;i++) if(rows[i].start - rows[i-1].end > 3600e3) gaps++;
-              console.log('  大于1小时的断档', gaps);
-              const byDate={};
-              for(const r of rows){ const dd=new Date(r.start+8*3600e3).toISOString().slice(0,10); byDate[dd]=(byDate[dd]||0)+1; }
-              console.log('  按北京日分布', JSON.stringify(byDate));
-            " 2>&1
+              const pids=new Set();
+              for(let d=1;d<=7;d++){const j=JSON.parse(fs.readFileSync('out/epg_366_d'+d+'.json','utf8'));for(const p of (j[0]||[]))pids.add(p.vimProgramId)}
+              fs.writeFileSync('/tmp/pids366.txt',[...pids].join('\n'));
+              console.log('  唯一 pid', pids.size);
+            "
+            HIT=0; TOT=0; LENS=""
+            for pid in $(head -20 /tmp/pids366.txt); do
+              TOT=$((TOT+1))
+              R=$(curl -sS --compressed --max-time 20 -A "$UA" -H "Referer: $B/tvguide" "$B/tvguide/epgprogramdetail?programId=$pid" 2>/dev/null)
+              L=$(node -e "
+                let s=process.argv[1]; try{const d=JSON.parse(s);
+                const sy=(d.chiSynopsis||'').trim()||(d.synopsis||'').trim();
+                console.log(sy?sy.length:0)}catch(e){console.log(-1)}" "$R" 2>&1)
+              if [ "$L" -gt 20 ] 2>/dev/null; then HIT=$((HIT+1)); LENS="$LENS $L"; fi
+            done
+            echo "  366 简介命中 $HIT/$TOT | 长度样本:$LENS"
+
+            echo
+            echo "===== D. 548 简介命中率（20 个）====="
+            node -e "
+              const fs=require('fs');
+              const pids=new Set();
+              for(let d=1;d<=7;d++){const j=JSON.parse(fs.readFileSync('out/epg_548_d'+d+'.json','utf8'));for(const p of (j[0]||[]))pids.add(p.vimProgramId)}
+              fs.writeFileSync('/tmp/pids548.txt',[...pids].join('\n'));
+              console.log('  唯一 pid', pids.size);
+            "
+            HIT=0; TOT=0; LENS=""
+            for pid in $(head -20 /tmp/pids548.txt); do
+              TOT=$((TOT+1))
+              R=$(curl -sS --compressed --max-time 20 -A "$UA" -H "Referer: $B/tvguide" "$B/tvguide/epgprogramdetail?programId=$pid" 2>/dev/null)
+              L=$(node -e "
+                let s=process.argv[1]; try{const d=JSON.parse(s);
+                const sy=(d.chiSynopsis||'').trim()||(d.synopsis||'').trim();
+                console.log(sy?sy.length:0)}catch(e){console.log(-1)}" "$R" 2>&1)
+              if [ "$L" -gt 20 ] 2>/dev/null; then HIT=$((HIT+1)); LENS="$LENS $L"; fi
+            done
+            echo "  548 简介命中 $HIT/$TOT | 长度样本:$LENS"
+
+            echo
+            echo "===== E. 批量上限（10 / 16 / 24 / 32 台）====="
+            IDARR="096 099 102 105 106 108 111 112 113 114 115 116 119 133 138 150 155 156 168 200 208 209 210 211 212 213 217 218 220 221 222 223"
+            for LIM in 10 16 24 32; do
+              Q=""; N=0
+              for id in $IDARR; do Q="$Q&channelIdList%5B%5D=$id"; N=$((N+1)); [ $N -eq $LIM ] && break; done
+              R=$(curl -sS --compressed -o /tmp/lim.json -w "%{http_code}|%{size_download}" --max-time 40 -A "$UA" -H "Referer: $B/tvguide" "$B/tvguide/epglist?day=2$Q" 2>&1 || echo ERR)
+              N2=$(node -e "try{const j=JSON.parse(require('fs').readFileSync('/tmp/lim.json','utf8'));console.log('顶层'+j.length+' 非空'+j.filter(x=>x.length).length)}catch(e){console.log('解析失败')}" 2>&1)
+              echo "  $LIM 台 -> $R | $N2"
+            done
+
+            echo
+            echo "===== F. 是否要登录/Referer（去掉 Referer 试一次）====="
+            R1=$(curl -sS --compressed -o /tmp/r1.json -w "%{http_code}|%{size_download}" --max-time 25 -A "$UA" "$B/tvguide/epglist?channelIdList=366&day=2" 2>&1 || echo ERR)
+            echo "  无 Referer -> $R1"
+            R2=$(curl -sS --compressed -o /tmp/r2.json -w "%{http_code}|%{size_download}" --max-time 25 "$B/tvguide/epglist?channelIdList=366&day=2" 2>&1 || echo ERR)
+            echo "  无 UA 无 Referer -> $R2"
+
+            echo
+            echo "===== G. 并发抓 detail 的限速风险（20 个串行耗时）====="
+            START=$(date +%s)
+            for pid in $(head -20 /tmp/pids366.txt); do
+              curl -sS --compressed -o /dev/null --max-time 15 -A "$UA" -H "Referer: $B/tvguide" "$B/tvguide/epgprogramdetail?programId=$pid" 2>/dev/null
+            done
+            END=$(date +%s)
+            echo "  20 个 detail 串行耗时 $((END-START)) 秒"
           } > out/report.txt 2>&1
       - uses: actions/upload-artifact@v4
-        with: { name: np-probe6, path: out/ }
+        with: { name: np-probe7, path: out/ }
