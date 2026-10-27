@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T06:27:59.635Z",
+  "generatedAt": "2026-10-27T08:43:11.042Z",
   "days": 7,
   "dayList": [
     "20261027",
@@ -15,8 +15,8 @@
   "channelsEmpty": 9,
   "channelsFull": 145,
   "channelsPartial": 130,
-  "programmesTotal": 46973,
-  "programmesWithDesc": 28441,
+  "programmesTotal": 46978,
+  "programmesWithDesc": 28444,
   "descCoverage": 61,
   "dateRange": [
     "20261027",
@@ -2885,7 +2885,7 @@
       "id": "GreatSportsChannel.cn",
       "sourceKey": "e1:1287",
       "sourceName": "五星体育频道",
-      "count": 62
+      "count": 63
     },
     {
       "id": "LifestyleChannel.cn",
@@ -2920,14 +2920,14 @@
   ],
   "descStats": {
     "realCoverage": 60.5,
-    "realCount": 28441,
-    "totalCount": 46973,
+    "realCount": 28444,
+    "totalCount": 46978,
     "echoCount": 640,
     "titles": 658,
-    "filled": 13629,
+    "filled": 13632,
     "z51": {
       "channels": 148,
-      "filled": 11723,
+      "filled": 11726,
       "packs": [
         {
           "key": "e1",
@@ -4095,9 +4095,9 @@
           "id": "GreatSportsChannel.cn",
           "name": "五星体育频道",
           "status": "ok",
-          "mine": 35,
+          "mine": 36,
           "key": "e1:1287",
-          "inter": 35,
+          "inter": 36,
           "rate": 1
         },
         {
@@ -4212,10 +4212,10 @@
           "id": "CHCFansMovieChannel.cn",
           "name": "CHC高清电影",
           "status": "ok",
-          "mine": 69,
+          "mine": 70,
           "key": "e1:1639",
-          "inter": 23,
-          "rate": 0.3333333333333333
+          "inter": 24,
+          "rate": 0.34285714285714286
         },
         {
           "id": "EntertainmentNews.hk",
@@ -5746,7 +5746,7 @@
           "rate": 0.46875
         },
         "CCTVWeaponTechnology.cn": {
-          "filled": 171,
+          "filled": 172,
           "before": 0,
           "stage": "channel",
           "source": "e1:1652(兵器科技)",
@@ -5754,7 +5754,7 @@
           "rate": 0.6363636363636364
         },
         "CNDFilmDiscoveryChannel.cn": {
-          "filled": 265,
+          "filled": 266,
           "before": 0,
           "stage": "channel",
           "source": "e1:1677(发现之旅)",
@@ -5802,7 +5802,7 @@
           "rate": 0.9375
         },
         "CGTN.cn": {
-          "filled": 204,
+          "filled": 205,
           "before": 0,
           "stage": "channel",
           "source": "e1:20(CGTN)",
@@ -6326,8 +6326,8 @@
       "aligned": 75,
       "globalTitles": 2565,
       "filled": 982,
-      "filledByChannel": 622,
-      "filledByGlobal": 360,
+      "filledByChannel": 630,
+      "filledByGlobal": 352,
       "skippedCrossRegion": 27,
       "promoRemoved": 348,
       "dates": [
@@ -7118,7 +7118,7 @@
           "id": "CCTVWorldGeography.cn",
           "name": "CCTV世界地理",
           "status": "none",
-          "mine": 90
+          "mine": 89
         },
         {
           "id": "CCTVHealth.cn",
@@ -7226,7 +7226,7 @@
           "id": "GreatSportsChannel.cn",
           "name": "五星体育",
           "status": "none",
-          "mine": 35
+          "mine": 36
         },
         {
           "id": "魅力足球.cn",
@@ -7304,7 +7304,7 @@
           "id": "CHCFansMovieChannel.cn",
           "name": "CHC影迷电影",
           "status": "none",
-          "mine": 69
+          "mine": 70
         },
         {
           "id": "EntertainmentNews.hk",
@@ -7955,8 +7955,8 @@
           "mine": 34,
           "nameEq": true,
           "channelId": "1098",
-          "inter": 16,
-          "rate": 0.47058823529411764
+          "inter": 17,
+          "rate": 0.5
         },
         {
           "id": "DAZN2.uk",
@@ -7965,8 +7965,8 @@
           "mine": 22,
           "nameEq": false,
           "channelId": "1098",
-          "inter": 12,
-          "rate": 0.5454545454545454
+          "inter": 13,
+          "rate": 0.5909090909090909
         },
         {
           "id": "Discovery.tw",
@@ -12546,7 +12546,7 @@
         "兵器科技"
       ],
       "logo": "",
-      "count": 283,
+      "count": 284,
       "days": 7,
       "perDay": {
         "20261027": 39,
@@ -12555,10 +12555,10 @@
         "20261030": 39,
         "20261031": 44,
         "20261101": 45,
-        "20261102": 40
+        "20261102": 41
       },
-      "withDesc": 171,
-      "descRate": 60,
+      "withDesc": 172,
+      "descRate": 61,
       "withCategory": 0,
       "uniqTitles": 91,
       "first": "20261027002100 +0800",
@@ -12621,7 +12621,7 @@
         "20261101": 49,
         "20261102": 43
       },
-      "withDesc": 265,
+      "withDesc": 266,
       "descRate": 76,
       "withCategory": 0,
       "uniqTitles": 47,
@@ -12676,7 +12676,7 @@
         "风云音乐"
       ],
       "logo": "",
-      "count": 171,
+      "count": 172,
       "days": 7,
       "perDay": {
         "20261027": 26,
@@ -12685,7 +12685,7 @@
         "20261030": 22,
         "20261031": 22,
         "20261101": 23,
-        "20261102": 24
+        "20261102": 25
       },
       "withDesc": 115,
       "descRate": 67,
@@ -12707,10 +12707,10 @@
         "风云足球"
       ],
       "logo": "",
-      "count": 132,
+      "count": 133,
       "days": 7,
       "perDay": {
-        "20261027": 18,
+        "20261027": 19,
         "20261028": 19,
         "20261029": 19,
         "20261030": 19,
@@ -12913,7 +12913,7 @@
       "withDesc": 180,
       "descRate": 83,
       "withCategory": 0,
-      "uniqTitles": 94,
+      "uniqTitles": 93,
       "first": "20261027002500 +0800",
       "last": "20261103002500 +0800",
       "usedSource": "tvmao:CCTVPAYFEE-CCTVPAYFEE5(世界地理)",
@@ -13005,7 +13005,7 @@
         "20261101": 43,
         "20261102": 53
       },
-      "withDesc": 204,
+      "withDesc": 205,
       "descRate": 64,
       "withCategory": 0,
       "uniqTitles": 30,
@@ -13209,7 +13209,7 @@
       "group": "pay",
       "aliases": [],
       "logo": "",
-      "count": 366,
+      "count": 367,
       "days": 7,
       "perDay": {
         "20261027": 16,
@@ -13218,7 +13218,7 @@
         "20261030": 100,
         "20261031": 100,
         "20261101": 100,
-        "20261102": 16
+        "20261102": 17
       },
       "withDesc": 298,
       "descRate": 81,
@@ -13449,11 +13449,11 @@
         "五星体育频道"
       ],
       "logo": "https://www.tvsou.com/media/f/3758760354d6/zm48-24",
-      "count": 62,
+      "count": 63,
       "days": 2,
       "perDay": {
         "20261027": 26,
-        "20261028": 36,
+        "20261028": 37,
         "20261029": 0,
         "20261030": 0,
         "20261031": 0,
@@ -13461,9 +13461,9 @@
         "20261102": 0
       },
       "withDesc": 40,
-      "descRate": 65,
+      "descRate": 63,
       "withCategory": 0,
-      "uniqTitles": 35,
+      "uniqTitles": 36,
       "first": "20261027000000 +0800",
       "last": "20261029020000 +0800",
       "usedSource": "z51:e1:1287:五星体育频道(五星体育频道)",
@@ -13862,7 +13862,7 @@
       "withDesc": 21,
       "descRate": 26,
       "withCategory": 0,
-      "uniqTitles": 69,
+      "uniqTitles": 70,
       "first": "20261027011900 +0800",
       "last": "20261103011900 +0800",
       "usedSource": "tvmao:CHC-CHC3(CHC影迷电影)",
