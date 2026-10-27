@@ -55,7 +55,7 @@ for (const p of xml.split('<programme').slice(1)) {
 }
 
 const bad = { overlap: [], unsorted: [], zeroLen: [], negLen: [], noStop: [], badStart: [] }
-const warn = { over6h: 0, under1min: 0 }
+const warn = { over6h: 0, under1min: 0, thinDay: [] }
 const over6hCh = new Set()
 
 for (const [ch, rows] of byCh) {
@@ -91,6 +91,47 @@ for (const [ch, rows] of byCh) {
       if (g < -1) bad.overlap.push(`${ch} 重叠 ${(-g).toFixed(0)}min：${sorted[i - 1].st}→${sorted[i - 1].sp} 与 ${r.st}`)
     }
   }
+
+  // ★ 「补天拼接」体检（2026-10-27 第六轮新增，第七轮改判据）
+  //
+  // 为什么要查：第六轮加了「天数不够时用备选源补齐」，
+  //   按天拼接必然产生「这一天来自 epg.pw、下一天来自 tvmao」的边界。
+  //   如果两个源对同一个台的内容对不上（串台），边界上会露出马脚。
+  //
+  // ⚠️ 第一版判据是「某天条数 < 该频道中位数一半」，实测全是误报：
+  //     求索纪录 10-27 只有 12 条、11-01 只有 14 条（中位数 31），看着像半截，
+  //     实际那两天**覆盖满 24 小时**——只是节目本身长（每条 2 小时）。
+  //     纬来综合 10-31 只有 12 条，同样覆盖满 24 小时。
+  //   条数少 ≠ 内容少。节目粒度不同（电影台一天 10 条、新闻台一天 40 条），
+  //   拿条数当判据必然误报。
+  //
+  // 现在按**时间覆盖**判断：某天覆盖的小时数明显低于该频道其他天 → 才是真半截。
+  if (sorted.length >= 4) {
+    const perDay = new Map() // ymd -> { n, hours }
+    for (const r of sorted) {
+      if (r.a == null) continue
+      const ymd = String(r.st || '').slice(0, 8)
+      const cur = perDay.get(ymd) || { n: 0, hours: 0 }
+      cur.n++
+      cur.hours += (r.b - r.a) / 3600000
+      perDay.set(ymd, cur)
+    }
+    if (perDay.size >= 2) {
+      const hrs = [...perDay.values()].map((v) => v.hours).sort((x, y) => x - y)
+      const medHours = hrs[Math.floor(hrs.length / 2)]
+      // ★ 排除窗口最后一天：上游当天还没出节目是常态
+      const lastYmd = [...perDay.keys()].sort().pop()
+      for (const [ymd, v] of perDay) {
+        if (ymd === lastYmd) continue
+        // 某天覆盖小时数不到中位数一半 → 那天真的只补到一部分
+        if (medHours >= 8 && v.hours < medHours * 0.5) {
+          warn.thinDay.push(
+            `${ch} ${ymd} 只覆盖 ${v.hours.toFixed(1)}h（该频道每天中位数 ${medHours.toFixed(1)}h，${v.n} 条）`
+          )
+        }
+      }
+    }
+  }
 }
 
 console.log(`产物 ${file}`)
@@ -115,6 +156,11 @@ console.log('软指标（已知限制，不阻塞）：')
 console.log(`  时长 > 6 小时：${warn.over6h} 条（涉及 ${over6hCh.size} 个频道）`)
 console.log(`    多为末条 stop 被上游写成「数据窗口末尾」，截到 12h 后覆盖到窗口边界。`)
 console.log(`  时长 < 1 分钟：${warn.under1min} 条（30 秒垫片，上游本来就这样）`)
+if (warn.thinDay.length) {
+  console.log(`  ★ 某天覆盖小时数不足中位数一半：${warn.thinDay.length} 处（补天只补到半天的迹象）`)
+  warn.thinDay.slice(0, 5).forEach((s) => console.log(`      ${s}`))
+  if (warn.thinDay.length > 5) console.log(`      … 另有 ${warn.thinDay.length - 5} 处`)
+}
 
 const hardCount = lines.reduce((a, [, v]) => a + v.length, 0)
 if (hardCount) {

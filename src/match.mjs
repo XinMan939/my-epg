@@ -15,10 +15,11 @@ import { loadOverrides, saveJson, PATHS } from './config.mjs'
 /**
  * @param targets  目标频道 [{id, name, aliases, country}]
  * @param catalog  源频道清单 [{source, sourceId, name, group, region}]
+ * @param opts     { overrides } 可注入 overrides（测试用，不给就现读文件）
  * @returns {Map<tvgId, {source, sourceId, sourceName, confidence}>}
  */
-export function matchChannels(targets, catalog) {
-  const overrides = loadOverrides()
+export function matchChannels(targets, catalog, opts = {}) {
+  const overrides = opts.overrides || loadOverrides()
 
   // 预处理源清单：归一化名 → 候选
   const byNorm = new Map() // norm -> [cand]
@@ -58,6 +59,34 @@ export function matchChannels(targets, catalog) {
         stats.override++
         continue
       }
+
+      // ★★★ 2026-10-27 第七轮：override 指定了 catalog 里没有的 sourceId 时，不能整条丢掉
+      //
+      // 踩到的实例：嘉佳卡通 / 大湾区卫视 用户给的 tvmao id（GDTV-GDTV7 / NANFANG-NANFANG6）
+      //   都不在 catalog 里（catalog 只收频道清单页的链接，这两个不在清单页）。
+      //   旧代码在这里 log.warn 一句就 continue → 该频道变成「无匹配」→
+      //   走 z51 兜底 → 永远 2 天，而且日志看起来「正常跳过」。
+      //
+      // 为什么可以放心用：tvmao 的 getDayProgrammes 会真去抓，
+      //   抓不到就自然返回空；而且现在有 title 校验兜底，串台会被拦。
+      //   「清单页没有」≠「站点没有」，这一点农林卫视（SHXITV/SHXITV9）已经验证过。
+      if (ov.source === 'tvmao' || ov.source === 'tvsou' || ov.source === 'fengshows') {
+        log.warn(
+          `[match] ${t.id} 的 overrides 源 ${ov.source}:${ov.sourceId} 不在清单中，按手工指定直接使用（抓不到会自然留空）`
+        )
+        result.set(t.id, {
+          source: ov.source,
+          sourceId: String(ov.sourceId),
+          sourceName: ov.sourceName || t.name,
+          region: ov.region || '',
+          logo: '',
+          confidence: 'override-unlisted',
+          alternatives: buildOverrideAlternatives(ov, { source: ov.source, sourceId: ov.sourceId }, cands, t),
+        })
+        stats.override++
+        continue
+      }
+
       log.warn(`[match] overrides 指定的 ${t.id} → ${ov.source}:${ov.sourceId} 在源清单中不存在，忽略`)
     }
 

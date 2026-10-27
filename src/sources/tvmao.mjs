@@ -13,7 +13,7 @@
  * 坑：错误 ID 会 200 返回"串台"页面（如 SMG-SMG1 返回 CCTV-1 内容），
  *    所以必须校验返回页面的 <title> 是否与预期频道名一致。
  */
-import { fetchText, parseTimeToTs, log } from '../utils.mjs'
+import { fetchText, parseTimeToTs, normalizeName, decodeEntities, log } from '../utils.mjs'
 
 const BASE = 'https://m.tvmao.com'
 const UA_MOBILE =
@@ -27,99 +27,269 @@ export const PATHS = {
 }
 
 /**
- * 由 sourceId 推断 URL 前缀（可能返回空字符串，表示 sourceId 自带完整路径）
- * sourceId 形如 "CCTV-CCTV1" / "HUNANTV1" / "CCTVPAYFEE-CCTVPAYFEE1" / "SHXITV/SHXITV9"
+ * ★ 路径候选表（2026-10-27 第七轮全量实测后重写）
+ *
+ * 前几轮的错误：拿「sourceId 里有没有连字符」当路径判据。
+ *   这条规则对 CCTV-/BAMC-/CCTVPAYFEE- 成立，但对 SITV-/DOX-/KAMBA-/DIGITAL- 是**错的**。
+ *
+ * 全量实测（2026-10-27，w2，按前缀分组各取代表）：
+ *
+ *   | 前缀组          | /program/            | /program_digital/   | /program_satellite/ |
+ *   |-----------------|----------------------|---------------------|---------------------|
+ *   | BAMC-   (14个)  | 200 54行 ✓优优宝贝   | 404                 | 404                 |
+ *   | CCTV-   (26个)  | 200 42行 ✓CCTV-1综合 | 404                 | 404                 |
+ *   | CCTVPAYFEE-(32) | 200 40行 ✓风云足球   | 404                 | 404                 |
+ *   | CETV-   (4个)   | 200 92行 ✓中国教育   | 404                 | 404                 |
+ *   | CHC-    (3个)   | 200 35行 ✓CHC动作    | 404                 | 404                 |
+ *   | HSCM-   (9个)   | 200 26行 ✓HD探索纪录 | 404                 | 404                 |
+ *   | SITV-   (9个)   | 200  9行 ✗DOX映画    | 200 22行 ✓劲爆体育  | 200 22行 ✓劲爆体育  |
+ *   | DOX-    (1个)   | 200 20行 ✗CCTV-1综合 | 200 20行 ✓DOX院线   | 200 20行 ✓DOX院线   |
+ *   | KAMBA-  (1个)   | 200 20行 ✗CCTV-1综合 | 200 48行 ✓康巴卫视  | 200 48行 ✓康巴卫视  |
+ *   | DIGITAL-(1个)   | 200 20行 ✗CCTV-1综合 | 200 49行 ✓数码时代  | 200 49行 ✓数码时代  |
+ *   | 无连字符(114个) | 200 20行 ✗CCTV-1综合 | 200 40行 ✓安徽卫视  | 200 40行 ✓安徽卫视  |
+ *
+ * 教训：**猜错路径不报 404，而是 200 + 别人的节目单**（串台）。
+ *   生活时尚/动漫秀场补天拿到 0 条就是这个原因 —— 拿回来的是「DOX映画」的 9 条。
+ *   所以路径表只能当「首选」，必须再用 title 校验兜底（见 titleMatchesChannel）。
  */
-export function inferPath(sourceId) {
-  // ★ 两段式写法：sourceId 里带 "/"，如 "SHXITV/SHXITV9"（陕西台/农林卫视）
-  //   这类频道不在频道清单页的链接里（清单页只收主频道），
-  //   但节目页真实存在且正确。用户 2026-10-27 直接给了这个 URL，
-  //   说明「清单页没有」不等于「站点没有」。
-  //   实测三条（2026-10-27，w2）：
-  //     /program/SHXITV/SHXITV9-w2.html        72987B ✓ title 农林卫视节目表
-  //     /program_satellite/SHXITV9-w2.html     72990B ✓ 同上（只给尾段也能用）
-  //   走 /program/ 前缀即可，和央视同一条路径规则。
-  if (sourceId.includes('/')) return PATHS.cctv
+const PATH_BY_PREFIX = {
+  'BAMC-': [PATHS.cctv],
+  'CCTV-': [PATHS.cctv],
+  'CCTVPAYFEE-': [PATHS.cctv],
+  'CETV-': [PATHS.cctv],
+  'CHC-': [PATHS.cctv],
+  'HSCM-': [PATHS.cctv],
+  'SITV-': [PATHS.digital, PATHS.satellite, PATHS.cctv],
+  'DOX-': [PATHS.digital, PATHS.satellite],
+  'KAMBA-': [PATHS.digital, PATHS.satellite],
+  'DIGITAL-': [PATHS.digital, PATHS.satellite],
+}
 
-  // ⚠️⚠️ 2026-10-27 第二次实测：**数字付费频道也走 /program/** 了，
-  //     /program_digital/ 现在返回 404。
-  //     证据（w2，m 站）：
-  //       /program/CCTVPAYFEE-CCTVPAYFEE35-w2.html   200 68862B  ✓ CCTV中学生频道
-  //       /program_digital/CCTVPAYFEE-...-w2.html    404    92B  ✗
-  //       /program/BAMC-CWJINGDIAN-w2.html           200 58942B  ✓ 重温经典频道
-  //       /program_digital/BAMC-CWJINGDIAN-w2.html   404    92B  ✗
-  //     所以「CCTVPAYFEE- 前缀走 digital」这条旧规则已经失效，
-  //     现在唯一可靠的规则是：**带「分组-频道」前缀的一律走 /program/**。
-  //
-  //     这个坑很隐蔽：inferPath 猜错前缀 → 404 → getDayProgrammes 返回 0 条 →
-  //     表现成「这个频道上游没有」，和真的没有一模一样。
-  //     第二次踩：BAMC-CWJINGDIAN（重温经典频道）前缀是 BAMC- 不是 CCTV-，
-  //     被归到 satellite 分支 → 404 → 又以为「上游没有」。实测 /program/ 是 200、58942B。
-  //
-  //     结论：只要 sourceId 形如 `XXX-YYY`（含连字符的二级分组 id），就走 /program/。
-  if (sourceId.includes('-')) return PATHS.cctv
-  // 卫视类：形如 HUNANTV1 / ZJTV1 / BTV1
-  return PATHS.satellite
+/**
+ * 全部合法前缀。顺序即「未知分组」的探测顺序：
+ *   先 /program/（CCTV-/BAMC-/CCTVPAYFEE-/CETV-/CHC-/HSCM- 共 88 个频道走这条），
+ *   再 digital、再 satellite（无连字符的 114 个卫视走 satellite）。
+ */
+const ALL_PATHS = [PATHS.cctv, PATHS.digital, PATHS.satellite]
+const PATHS_ALL = ALL_PATHS
+
+/**
+ * 返回该 sourceId 的路径候选（有序，第一个是首选）
+ * 已解析成功的会记在 resolvedPath 里，后续 7 天直接复用，避免重复探测。
+ *
+ * @param sourceId 电视猫频道 id
+ * @param forcePath 强制路径前缀（来自 overrides 的 tvmaoPath），给「探测也搞不定的」兜底
+ */
+export function inferPathCandidates(sourceId, forcePath) {
+  // overrides 显式指定最优先（如 SITV-* 必须走 digital，但探测顺序被缓存污染时也能纠正）
+  if (forcePath && PATHS_ALL.includes(forcePath)) return [forcePath]
+
+  // 两段式写法：sourceId 里带 "/"，如 "SHXITV/SHXITV9"（陕西台/农林卫视）
+  // 实测 /program/SHXITV/SHXITV9-w2.html 200 72987B ✓ title 农林卫视节目表
+  if (sourceId.includes('/')) return [PATHS.cctv]
+
+  const hit = resolvedPath.get(sourceId)
+  if (hit) return [hit]
+
+  if (sourceId.includes('-')) {
+    const pre = sourceId.split('-')[0] + '-'
+    const known = PATH_BY_PREFIX[pre]
+    if (known) return known
+    // 未知前缀：先试 /program/（多数分组走这条），失败再退到另外两条
+    return ALL_PATHS
+  }
+  // 无连字符：形如 HUNANTV1 / ZJTV1 / BTV1，实测 /program/ 会串台到 CCTV-1综合
+  return [PATHS.satellite, PATHS.digital, PATHS.cctv]
+}
+
+/** 首选路径（保留旧接口，给 listChannels 等调用方用） */
+export function inferPath(sourceId) {
+  return inferPathCandidates(sourceId)[0]
+}
+
+/** sourceId → 已验证可用的路径前缀（进程内缓存，避免每天重探） */
+const resolvedPath = new Map()
+
+/** 记住某个 sourceId 可用的前缀 */
+export function rememberPath(sourceId, prefix) {
+  resolvedPath.set(sourceId, prefix)
+}
+
+/** 清空路径缓存（测试用） */
+export function resetPathCache() {
+  resolvedPath.clear()
+}
+
+/**
+ * 从页面 title 里取频道名
+ *   "生活时尚节目表,生活时尚节目预告_电视猫"        → "生活时尚"
+ *   "CCTV央视台球节目表,央视台球节目预告_电视猫"    → "CCTV央视台球"
+ *   "DOX映画节目表_电视猫"                          → "DOX映画"
+ */
+export function titleChannelName(pageTitle) {
+  const s = String(pageTitle || '').trim()
+  if (!s) return ''
+  return s.split(/节目表|节目预告|节目单|_电视猫|,/)[0].trim()
+}
+
+/**
+ * ★ title 校验：抓回来的页面是不是这个频道
+ *
+ * 为什么必须校验：猜错路径时 tvmao 返回 **200 + 别的频道的节目单**，
+ *   不校验就会把「DOX映画」的节目当成「生活时尚」入库，而且没有任何报错。
+ *
+ * @param pageTitle   页面 <title>
+ * @param expectNames 可接受的频道名（可以是数组，任一命中即通过）
+ *                    支持多名的原因：overrides 里的 sourceId 常常是原始 id
+ *                    （如 NANFANG-NANFANG6 不在 catalog，拿不到中文名），
+ *                    这时必须退到频道表里的 name / aliases 去比。
+ *
+ * 匹配规则（宽松，宁可放过不可错杀）：
+ *   ① 任一期望名与页面名 normalize 后互相包含 → 通过
+ *   ② 页面取不到名字 → 通过（上游改版时别一刀切全废掉）
+ *   ③ 期望名为空 → 通过（调用方没给，无从校验）
+ */
+export function titleMatchesChannel(pageTitle, expectNames) {
+  const got = titleChannelName(pageTitle)
+  if (!got) return true
+
+  const list = (Array.isArray(expectNames) ? expectNames : [expectNames])
+    .filter(Boolean)
+    .map((x) => normalizeName(String(x)))
+    .filter(Boolean)
+  if (!list.length) return true
+
+  const a = normalizeName(got)
+  if (!a) return true
+  return list.some((b) => a.includes(b) || b.includes(a))
 }
 
 /**
  * 抓单频道单日节目
- * @param sourceId  电视猫频道 ID（不含 -wN）
- * @param weekday   1..7（周一..周日），可到 8（下周一）
- * @param ymd       该节目对应的实际日期 YYYYMMDD（用于把 HH:MM 补成时间戳）
+ * @param sourceId    电视猫频道 ID（不含 -wN）
+ * @param weekday     1..7（周一..周日），可到 8（下周一）
+ * @param ymd         该节目对应的实际日期 YYYYMMDD（用于把 HH:MM 补成时间戳）
+ * @param expectNames 期望的频道名（字符串或数组），用于校验页面是否串台（强烈建议传）
+ * @param forcePath   强制路径前缀（'tvmaoPath' override），跳过探测
  * @returns { programmes, pageTitle, error }
  */
-export async function getDayProgrammes(sourceId, weekday, ymd) {
-  const prefix = inferPath(sourceId)
-  const url = `${BASE}${prefix}${sourceId}-w${weekday}.html`
+export async function getDayProgrammes(sourceId, weekday, ymd, expectNames, forcePath) {
+  const candidates = inferPathCandidates(sourceId, forcePath)
 
-  const res = await fetchText(url, {
-    timeout: 20000,
-    retries: 2,
-    headers: { 'User-Agent': UA_MOBILE },
-  })
+  let lastErr = null
+  for (const prefix of candidates) {
+    const url = `${BASE}${prefix}${sourceId}-w${weekday}.html`
 
-  if (!res.ok) return { programmes: [], pageTitle: '', error: `HTTP ${res.status}` }
+    let res
+    try {
+      res = await fetchText(url, {
+        timeout: 20000,
+        retries: 2,
+        headers: { 'User-Agent': UA_MOBILE },
+      })
+    } catch (e) {
+      lastErr = e.message
+      continue
+    }
 
-  const html = res.text
-  const pageTitle = ((html.match(/<title>([^<]*)<\/title>/) || [])[1] || '').trim()
+    if (!res.ok) {
+      lastErr = `HTTP ${res.status}`
+      continue
+    }
 
-  // 校验：页面标题应包含频道名片段，否则是串台
+    const html = res.text
+    const pageTitle = ((html.match(/<title>([^<]*)<\/title>/) || [])[1] || '').trim()
+
+    // ★ 串台校验：路径猜错时 tvmao 返回 200 + 别人的节目单，不校验就会静默污染
+    if (!titleMatchesChannel(pageTitle, expectNames)) {
+      lastErr = `wrong-channel(${titleChannelName(pageTitle) || pageTitle})`
+      continue
+    }
+
+    const rows = parseRows(html, ymd)
+    if (!rows.length) {
+      lastErr = 'no-rows'
+      continue
+    }
+
+    rememberPath(sourceId, prefix)
+    return { programmes: rows, pageTitle, error: null }
+  }
+
+  return { programmes: [], pageTitle: '', error: lastErr || 'no-rows' }
+}
+
+/**
+ * 解析节目行
+ *
+ * ★★ 2026-10-27 第七轮：旧正则漏掉了三分之二的行，是本轮最大的静默 bug。
+ *
+ * 页面里有 **两类** 时间标签，旧正则只认第一类：
+ *   A) <span class="epg-row-time"    data-endtime="01:07" data-time="00:57">00:57</span>
+ *   B) <span class="epg-row-playing" data-endtime="21:43" data-time="20:00">直播中</span>
+ *      ↑ 正在播出的那一条，class 名不同、内文是「直播中」而不是时间
+ *
+ * 而 epg-row-link 里又有三种写法：
+ *   ① <a>独占整行：  <span class="epg-row-link"><a ...>动画片</a></span>
+ *   ② <a>夹在中间：  <span class="epg-row-link">实况录像-2024/2025赛季<a ...>斯诺克世界公开赛</a> 墨菲的147</span>
+ *   ③ 纯文本：      <span class="epg-row-link">动画片</span>
+ * 旧正则只吃 ①③，② 整行丢掉。
+ *
+ * 实测代价（2026-10-27，w2）：
+ *   CCTV央视台球：28 行 → 旧正则 **0 条**（全是 ② 型）→ 表现成「上游没有」
+ *   抽样 24 个 tvmao 频道：15 个在丢数据，共丢 84 条
+ *     CCTV-5体育 6→22、CCTV5+ 4→16、CCTV-7国防军事 29→38、CCTV-12法制 24→30
+ *
+ * 修法：不再用「整行一个大正则」，改成两步 ——
+ *   ① 按 <li class="epg-row"> 切块（块内结构再怎么变都不会漏）
+ *   ② 块内分别取时间、取标题（剥掉 <a> 标签，保留前后文字）
+ */
+export function parseRows(html, ymd) {
   const rows = []
 
-  // ★ 节目行有两种结构，必须都吃（2026-10-27 实测）：
-  //   A) 节目被电视猫收录成词条，标题是 <a href="/tvcolumn/xxx">节目名</a>
-  //   B) 没收录词条，标题是纯文本 <span class="epg-row-link">动画片</span>
-  //
-  //   旧正则只认 A，B 的行被整条丢掉。后果很隐蔽：
-  //     重温经典频道 22 条全是 B 型 → 一条都抓不到，表现成「这个频道没有节目」
-  //     农林卫视 17 条 A + 34 条 B → 只抓到 17 条，丢了三分之二
-  //   这不是「上游没有数据」，是我们的解析器只认一半。
-  const rowRe =
-    /<span class="epg-row-time"\s+data-endtime="([^"]*)"\s*\n?\s*data-time="([^"]*)">[^<]*<\/span>\s*<span class="epg-row-link">(?:<a[^>]*>([^<]*)<\/a>([^<]*)|([^<]*))<\/span>/g
-
+  const liRe = /<li class="epg-row[^"]*">([\s\S]*?)<\/li>/g
   let m
-  while ((m = rowRe.exec(html))) {
-    const endRaw = m[1].trim()
-    const startRaw = m[2].trim()
-    // A 型取 <a> 内文字 + 尾巴；B 型取整段文字
-    const title = (m[3] || m[5] || '').trim()
-    const suffix = (m[4] || '').trim()
-    const full = (title + suffix).trim()
+  while ((m = liRe.exec(html))) {
+    const body = m[1]
+    if (!body) continue
+
+    // 时间：epg-row-time（普通）或 epg-row-playing（直播中）
+    const t =
+      body.match(/<span class="epg-row-(?:time|playing)"\s+data-endtime="([^"]*)"\s+data-time="([^"]*)"/) ||
+      body.match(/<span class="epg-row-(?:time|playing)"\s+data-time="([^"]*)"\s+data-endtime="([^"]*)"/)
+    if (!t) continue
+
+    // 上面两种匹配的字段顺序不同，按实际捕获组取值
+    const isEndFirst = /data-endtime="([^"]*)"\s+data-time=/.test(t[0])
+    const endRaw = (isEndFirst ? t[1] : t[2] || '').trim()
+    const startRaw = (isEndFirst ? t[2] : t[1] || '').trim()
+    if (!startRaw) continue
+
+    // 标题：epg-row-link 整块内容，剥掉所有标签但保留文字
+    const lk = body.match(/<span class="epg-row-link">([\s\S]*?)<\/span>/)
+    if (!lk) continue
+    const full = decodeEntities(
+      lk[1]
+        .replace(/<a[^>]*>([\s\S]*?)<\/a>/g, '$1')
+        .replace(/<[^>]*>/g, '')
+        .replace(/\s+/g, ' ')
+    ).trim()
     if (!full) continue
 
     const startTs = parseTimeToTs(startRaw, ymd)
+    if (!Number.isFinite(startTs)) continue
+
     let stopTs = null
     if (endRaw) {
       stopTs = parseTimeToTs(endRaw, ymd)
       // 跨零点：结束时间小于开始时间 → 顺延一天
-      if (stopTs && startTs && stopTs <= startTs) stopTs += 24 * 3600 * 1000
+      if (stopTs && stopTs <= startTs) stopTs += 24 * 3600 * 1000
     }
 
     rows.push({ startTs, stopTs, title: full })
   }
 
-  return { programmes: rows, pageTitle, error: rows.length ? null : 'no-rows' }
+  return rows
 }
 
 /**

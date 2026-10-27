@@ -107,7 +107,44 @@
   "_notes_epgpw_misaligned": "epg.pw 里有些 id 的 display-name 与实际节目内容不是同一个台，纯按名字匹配会挂错。实测两个：① 370247 display-name「My Cinema Europe HD 我的歐洲電影」，节目却是 Newshour / Inside Story / Al Jazeera World（半岛英文台）；② 570483 display-name「CGTN西语」，节目却是 剧场 / 寻味中国 / 这就是中国（中文节目）。所以「我的欧洲电影」改用 457377（MCE 我的歐洲電影台，节目为 黑蝶漫舞/聚焦謀殺案，确认是电影台）；「CGTN西班牙语」保持空缺，宁空不挂错台。",
   "_notes_z51_广东珠江": "epg.pw 的 544420（中央台–珠江）只有 20261026 一天数据，构建窗口从 20261027 起 → 等于 0 条。51zmt 的 e1:1759「珠江频道」有 20261027+20261028 两天 42 条、34 条真实简介（今日关注/剧场:云水怒/南海海洋环境预报），明显更好。",
   "JiangsuSatelliteTV.cn": {
-    "blockTitles": ["非诚勿扰"]
+    "blockTitles": [
+      "非诚勿扰"
+    ]
   },
-  "_notes_blockTitles": "blockTitles：同名不同物的黑名单，命中的标题跳过 51zmt 全局兜底（不填简介，宁可空着也不挂错）。用法：{ 频道id: { blockTitles: ['标题1', '标题2'] } }。首个案例：江苏卫视的「非诚勿扰」是相亲综艺（7 天 7 次常设栏目），而 51zmt 里同名条目只在「CatchPlay电影」出现一次、内容是冯小刚电影剧情，全局兜底按「全站唯一」把它当成了唯一答案 → 灌到江苏卫视。为什么不做自动判据：实测三轮全有误伤 —— 按地区挡误伤 800 条（卫视播同部电视剧是对的）、按新闻类型挡误伤 818 条（新闻联播各台统一转播是对的）、按「来源是电影台+目标非电影台」挡误伤 34 条（HBO温馨家庭播电影是对的），而真错只有 7 条，误伤是真错的 4~100 倍。所以只做显式黑名单。"
+  "_notes_blockTitles": "blockTitles：同名不同物的黑名单，命中的标题跳过 51zmt 全局兜底（不填简介，宁可空着也不挂错）。用法：{ 频道id: { blockTitles: ['标题1', '标题2'] } }。首个案例：江苏卫视的「非诚勿扰」是相亲综艺（7 天 7 次常设栏目），而 51zmt 里同名条目只在「CatchPlay电影」出现一次、内容是冯小刚电影剧情，全局兜底按「全站唯一」把它当成了唯一答案 → 灌到江苏卫视。为什么不做自动判据：实测三轮全有误伤 —— 按地区挡误伤 800 条（卫视播同部电视剧是对的）、按新闻类型挡误伤 818 条（新闻联播各台统一转播是对的）、按「来源是电影台+目标非电影台」挡误伤 34 条（HBO温馨家庭播电影是对的），而真错只有 7 条，误伤是真错的 4~100 倍。所以只做显式黑名单。",
+  "PhoenixHongKongChannel.hk": {
+    "source": "fengshows",
+    "sourceId": "香港台"
+  },
+  "_notes_PhoenixHongKongChannel.hk": "2026-10-27 实测：epgpw/tvsou/z51/tvmao 四源全无这个台（tvsou 的两个 id 都是 0 条）。凤凰官网 fengshows.com/live 有当天节目单（51 条/天），接口 m.fengshows.com/api/v3/live/{uuid}/resources?date=YYYYMMDD。香港台是粤语本土台，与中文台定位完全不同（中文台是面向全球华人的普通话旗舰），不能用中文台的节目单顶替。",
+  "CCTVBilliards.cn": {
+    "source": "tvmao",
+    "sourceId": "CCTVPAYFEE-CCTVPAYFEE36"
+  },
+  "_notes_CCTVBilliards.cn": "2026-10-27 第七轮：用户给的是 CCTVPAYFEE-CCTVPAYFEE36。原主源 z51:e1:1673 只 2 天 48 条 0% 简介；实测 tvmao /program/ 有 7 天 168 条（20~29/天）。",
+  "GBASatelliteTV.cn": {
+    "source": "epgpw",
+    "sourceId": "544268",
+    "tvmaoSourceId": "NANFANG-NANFANG6"
+  },
+  "_notes_GBASatelliteTV.cn": "2026-10-27 第七轮：用户给的是 NANFANG-NANFANG6（不在 catalog，两段式也无用，走 /program/）。实测 7 天 138 条、title 正确「大湾区卫视」。epgpw 544268 只有 1 天 17 条，作为主源保留（有简介），tvmao 走补天。",
+  "LifestyleChannel.cn": {
+    "z51SourceId": "e1:1281",
+    "tvmaoSourceId": "SITV-FASHION",
+    "tvmaoPath": "/program_digital/"
+  },
+  "_notes_LifestyleChannel.cn": "2026-10-27 第七轮：SITV-* 前缀走 /program/ 会静默串台到「DOX映画」（200 + 9 条别人的节目），必须走 /program_digital/。实测 7 天 390 条。z51 e1:1281 有简介，保留为简介来源。",
+  "AnimationShowChannel.cn": {
+    "source": "epgpw",
+    "sourceId": "539640",
+    "tvmaoSourceId": "SITV-CHILDREN",
+    "tvmaoPath": "/program_digital/"
+  },
+  "_notes_AnimationShowChannel.cn": "2026-10-27 第七轮：同生活时尚，SITV-* 必须走 /program_digital/。实测 7 天 700 条（100/天）。epgpw 539640 只有 1 天 93 条但 98% 有简介，保留主源 + tvmao 补天。",
+  "JiaJiaCartoon.cn": {
+    "source": "tvmao",
+    "sourceId": "GDTV-GDTV7",
+    "z51SourceId": "e1:1434"
+  },
+  "_notes_JiaJiaCartoon.cn": "2026-10-27 第七轮（改）：原先是「无匹配 → z51 兜底」，走不到补天分支，所以永远 2 天。改成 tvmao 做主源（7天 443 条）+ z51 e1:1434 补简介（100%）。⚠️ tvmao 只有 w1/w2 完整（168/159 条到 23:48），w3~w7 上游只给 22~26 条且只到 14~17 点。"
 }

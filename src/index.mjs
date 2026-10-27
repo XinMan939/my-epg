@@ -15,6 +15,7 @@
  */
 import fs from 'node:fs'
 import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 import {
   CONFIG,
   PATHS,
@@ -23,7 +24,7 @@ import {
   saveJson,
   ensureOutputDir,
 } from './config.mjs'
-import { log, mapLimit, isRealDesc, hasRealDesc } from './utils.mjs'
+import { log, mapLimit, isRealDesc, hasRealDesc, sameRegionVersion } from './utils.mjs'
 import { matchChannels } from './match.mjs'
 import { buildDateRange, normalizeProgrammes, mergeDays, dayStartTs } from './normalize.mjs'
 import { buildXmltv, writeOutput, buildReport, writeChannelsJson } from './output.mjs'
@@ -34,10 +35,11 @@ import { parseM3u, alignToM3u, listUnmatched } from './m3u.mjs'
 import * as epgpw from './sources/epgpw.mjs'
 import * as tvmao from './sources/tvmao.mjs'
 import * as tvsou from './sources/tvsou.mjs'
+import * as fengshows from './sources/fengshows.mjs'
 import { enrichFromZ51, loadPacks, fillEmptyChannels } from './sources/z51.mjs'
 import { enrichFromKbro } from './sources/kbro.mjs'
 
-const SOURCES = { epgpw, tvmao, tvsou }
+const SOURCES = { epgpw, tvmao, tvsou, fengshows }
 
 /**
  * 源优先级：靠前的优先。
@@ -195,6 +197,119 @@ async function cmdCheck() {
   console.log(`\n命中 ${matched.size}/${channels.length}，未命中 ${misses.length}`)
 }
 
+/**
+ * ★ 数一个节目数组「真正覆盖了几天」（2026-10-27 第六轮新增）
+ *
+ * 为什么不能只数「这天有没有节目」：
+ *   epg.pw 的 CN 包对 352 个频道只给滚动 24 小时，形态是
+ *   「今天 16 小时 + 明天 8 小时，再往后全空」。
+ *   如果按「有 1 条就算有」来数，明天那 8 小时也算「有数据」，
+ *   于是 44 个频道会被数成「2 天有数据」，而播放器实际从第 2 天下午就没内容了。
+ *
+ * 所以按「这天被覆盖满 minHours 小时」才算 1 天。
+ *
+ * @param {Array} rows        节目数组（startTs / stopTs）
+ * @param {Array} dates       buildDateRange 的结果（含 ts0 / ts1）
+ * @param {number} minHours   一天至少要覆盖多少小时才算「有数据」
+ */
+export function countCoveredDays(rows, dates, minHours) {
+  const hours = new Array(dates.length).fill(0)
+  for (const r of rows) {
+    const a = r.startTs
+    const b = r.stopTs
+    if (!a || !b || b <= a) continue
+    for (let i = 0; i < dates.length; i++) {
+      const oa = Math.max(a, dates[i].ts0)
+      const ob = Math.min(b, dates[i].ts1)
+      if (ob > oa) hours[i] += (ob - oa) / 3600000
+    }
+  }
+  // 同一天可能被多条节目重叠累加，封顶到 24 小时再比较
+  return hours.filter((h) => Math.min(h, 24) >= minHours).length
+}
+
+/**
+ * ★ 从备选源的节目里，只挑出「现有结果还没覆盖的那些时段」（2026-10-27 第六轮新增）
+ *
+ * ⚠️ 第一版是按「天」挑的，注释写「只补没覆盖的时间段」，实现却是「整天塞」，
+ *    当天就踩了：
+ *
+ *    东方卫视 11-01：主源（epgpw）只有 00:00-04:00 这 4 小时，不足 6 小时阈值
+ *    → 这天被判为「需要补」→ tvmao 当天 36 条**全部**塞进来
+ *    → 结果 11-01 变成 62 条（其他天 42 条），时间轴上
+ *      「电视剧：南来北往」和「电视剧：南来北往(25)」交替出现，
+ *      同一时段两条节目并存 —— 播放器上会显示成节目在乱跳。
+ *
+ *    根因：判断用「天」，塞入用「天」，中间缺了「这条节目和已有内容重不重叠」这一层。
+ *
+ * 现在的规则（两段式，宁可少补）：
+ *   ① 先用「天」判断哪些天不足 minHours 小时 → 只在这些天里找
+ *   ② 再逐条检查：**这条节目的时间段与已有内容有任何重叠就整条丢弃**
+ *      （不做裁剪 —— 裁出来的半条节目在播放器上是个假节目）
+ *
+ * 为什么重叠就整条丢、而不是裁剪：
+ *   两个源的节目边界本来就不对齐（epg.pw 08:00-09:55，tvmao 08:00-09:45），
+ *   裁剪会造出「09:45-09:55 的 10 分钟节目」，标题还是前一条的 —— 假数据。
+ *   整条丢的代价是那天可能仍不满 6 小时，但不会产出错误内容。
+ *
+ * 保守点：某天只要已有 minHours 小时覆盖，就完全不碰它。
+ *
+ * @param {Array} candRows     备选源的节目（startTs / stopTs）
+ * @param {Array} existingRows 已确定要保留的节目（主源 + 已补进来的）
+ * @param {Array} dates        buildDateRange 的结果（含 ts0 / ts1）
+ * @param {number} minHours    一天覆盖满这么多小时就算「够」，不补
+ */
+export function pickMissingDays(candRows, existingRows, dates, minHours) {
+  const hours = new Array(dates.length).fill(0)
+  for (const r of existingRows) {
+    if (!r.startTs || !r.stopTs || r.stopTs <= r.startTs) continue
+    for (let i = 0; i < dates.length; i++) {
+      const oa = Math.max(r.startTs, dates[i].ts0)
+      const ob = Math.min(r.stopTs, dates[i].ts1)
+      if (ob > oa) hours[i] += (ob - oa) / 3600000
+    }
+  }
+  const need = new Set()
+  for (let i = 0; i < dates.length; i++) {
+    if (Math.min(hours[i], 24) < minHours) need.add(i)
+  }
+  if (!need.size) return []
+
+  // 已有内容的占用区间（用来判重叠）
+  const taken = existingRows
+    .filter((r) => r.startTs && r.stopTs && r.stopTs > r.startTs)
+    .map((r) => [r.startTs, r.stopTs])
+
+  const out = []
+  for (const r of candRows) {
+    if (!r.startTs || !r.stopTs || r.stopTs <= r.startTs) continue
+    // 这条节目落在哪天就补哪天（跨天节目取「开始时间所在的天」）
+    let dayIdx = -1
+    for (let i = 0; i < dates.length; i++) {
+      if (r.startTs >= dates[i].ts0 && r.startTs < dates[i].ts1) {
+        dayIdx = i
+        break
+      }
+    }
+    if (dayIdx < 0 || !need.has(dayIdx)) continue
+
+    // ★ 与已有内容有任何重叠 → 整条丢弃（不裁剪，见上面的说明）
+    let clash = false
+    for (const [a, b] of taken) {
+      if (r.startTs < b && r.stopTs > a) {
+        clash = true
+        break
+      }
+    }
+    if (clash) continue
+
+    out.push(r)
+    // 补进来的也要占位，避免同一个备选源内部重复（同日两条同源节目本来就重叠）
+    taken.push([r.startTs, r.stopTs])
+  }
+  return out
+}
+
 async function cmdBuild() {
   ensureOutputDir()
   const channels = loadChannels()
@@ -207,6 +322,9 @@ async function cmdBuild() {
   const targets = only ? channels.filter((c) => only.has(c.id)) : channels.filter((c) => c.enabled)
 
   log.info(`目标频道 ${targets.length} 个，覆盖 ${CONFIG.days} 天`)
+
+  // 补天统计（主源天数不够、被备选源补齐的频道）
+  const dayFillStats = []
 
   // 1) 建立匹配
   const catalog = await collectCatalog()
@@ -236,10 +354,36 @@ async function cmdBuild() {
       return { id: ch.id, programmes: [], reason: 'no-match' }
     }
 
-    // 抓单个 (source, sourceId) 组合，返回规整后的节目数组
-    async function tryOne(cand) {
+    /**
+     * 抓单个源，同时返回「规整后的（给产物用）」和「原始行（给补天判断用）」
+     *
+     * 为什么要两套：
+     *   normalizeProgrammes 的输出是 {start, stop} 的 XMLTV 字符串（tsToXmltv 转过了），
+     *   而补天判断要比时间戳（startTs/stopTs）。
+     *   第六轮一开始只拿了 normalized 去算，结果 `r.startTs` 全是 undefined，
+     *   countCoveredDays 恒等于 0 —— 补天逻辑看起来在跑，其实一条都没补上。
+     */
+    async function tryOneRaw(cand) {
       const src = SOURCES[cand.source]
       if (!src) throw new Error(`unknown source ${cand.source}`)
+
+      // ★ 期望的频道名（数组），用于 tvmao 的串台校验（2026-10-27 第七轮新增）
+      //
+      // 为什么必须传：tvmao 路径猜错时返回 **200 + 别的频道的节目单**，
+      //   不校验就会静默污染产物。实测 SITV-FASHION 走 /program/ 拿到的是
+      //   「DOX映画」的 9 条，title 明写着 DOX映画，但旧代码抓了 pageTitle 从不看。
+      //
+      // 为什么给一串名字：overrides 里的 sourceId 常常不在 catalog（如 NANFANG-NANFANG6），
+      //   拿不到中文名；这时必须退到频道表里的 name + aliases 去比，
+      //   否则「大湾区卫视」会因为期望名是裸 id 而全部被判串台。
+      const expectNames = [
+        cand.sourceName,
+        m.sourceName,
+        ch.name,
+        ...(ch.aliases || []),
+      ].filter(Boolean)
+
+      const chOverride = loadOverrides()[ch.id] || {}
 
       let rows = []
       if (cand.source === 'epgpw') {
@@ -253,17 +397,16 @@ async function cmdBuild() {
           category: p.category,
         }))
       } else {
+        // overrides 里显式写 tvmaoPath 时，强制走那条路径（跳过探测）
+        // 注意：loadOverrides 每次都读盘，必须在逐日循环外取一次
+        const forcePath = cand.source === 'tvmao' ? chOverride?.tvmaoPath : undefined
         // 逐日抓取
         for (const d of dates) {
-          const r = await src.getDayProgrammes(cand.sourceId, d.weekday, d.ymd)
+          const r = await src.getDayProgrammes(cand.sourceId, d.weekday, d.ymd, expectNames, forcePath)
           if (r.programmes && r.programmes.length) rows.push(...r.programmes)
         }
       }
-
-      return normalizeProgrammes(rows, {
-        dayStartTs: globalStart,
-        dayEndTs: globalEnd,
-      })
+      return { rows, normalized: normalizeProgrammes(rows, { dayStartTs: globalStart, dayEndTs: globalEnd }) }
     }
 
     try {
@@ -280,17 +423,96 @@ async function cmdBuild() {
       let used = null
       const tried = []
 
+      // 主源结果（两套格式都要留着，见 tryOneRaw 注释）
+      let primaryRows = null
+      let primaryCand = null
+
       for (const cand of chain) {
         try {
-          const list = await tryOne(cand)
-          tried.push(`${cand.source}:${cand.sourceId}=${list.length}`)
-          if (list.length) {
-            normalized = list
+          const { rows, normalized: norm } = await tryOneRaw(cand)
+          tried.push(`${cand.source}:${cand.sourceId}=${norm.length}`)
+          if (norm.length) {
+            normalized = norm
             used = cand
+            primaryRows = rows
+            primaryCand = cand
             break
           }
         } catch (e) {
           tried.push(`${cand.source}:${cand.sourceId}=err(${e.message.slice(0, 40)})`)
+        }
+      }
+
+      // 3.45) ★ 天数不足时用备选源「补天」（2026-10-27 第六轮新增）
+      //
+      // 踩过的坑：降级链是 `if (list.length) break` —— 只要有 1 条节目就停。
+      //   而 epg.pw 的 CN 包对 352 个频道只给「滚动 24 小时」（今天 08:00 → 明天 08:00），
+      //   实测形态是 `16h 8h 0 0 0 0 0`：今天 16 小时 + 明天 8 小时，再往后全空。
+      //   于是 44 个频道在 7 天订阅里只有 1~2 天有节目，播放器从第 3 天起显示「暂无节目」。
+      //
+      // 为什么不是「直接换源」而是「合并」：
+      //   epg.pw 这 44 个频道里 35 个带真实简介（CCTV4美洲 100%、第一剧场 100%），
+      //   而 tvmao 的详情页要逐条抓、这里拿不到 desc。
+      //   换源 = 用「7 天无简介」换掉「1 天有简介」，是拆东墙补西墙。
+      //   合并 = 保留 epg.pw 的简介，同时用 tvmao 把后面 5 天填上。
+      //
+      // 合并规则（保守，宁可少补不可串台）：
+      //   ① 只在「现有覆盖天数 < 目标天数」时触发，够 7 天就完全不跑，省流量；
+      //   ② 只补「现有完全没覆盖」的时间段 —— 已有时段一律保留主源（有简介的那份）；
+      //   ③ 按天判断：某天已有 ≥ minHoursPerDay 小时覆盖就不动那天，避免半截拼接。
+      const wantDays = dates.length
+      if (primaryRows && primaryRows.length && !process.env.NO_DAY_FILL) {
+        const coveredDays = countCoveredDays(primaryRows, dates, CONFIG.dayFillMinHours)
+        if (coveredDays < wantDays) {
+          const alts = (m.alternatives || []).filter(
+            (a) => !(a.source === primaryCand.source && String(a.sourceId) === String(primaryCand.sourceId))
+          )
+          const extra = []
+          const filledBy = []
+          for (const alt of alts) {
+            const missing = wantDays - countCoveredDays([...primaryRows, ...extra], dates, CONFIG.dayFillMinHours)
+            if (missing <= 0) break
+
+            // ★ 区域版本校验：宁可少补，不可串台（2026-10-27 第六轮踩到）
+            //
+            // 实测事故：CCTV4欧洲 / CCTV4美洲 被「CCTV-4 (亚洲)」补齐了 6 天，
+            //   补进来的是国内版电视剧《爱在青山绿水间》，而欧洲版实际放
+            //   《精彩音乐汇（海外版）》《走遍中国》。
+            //   根因是 nameVariants('CCTV4欧洲') 会产出裸 'cctv4'，
+            //   而 nameVariants('CCTV-4 (亚洲)') 也产出 'cctv4'，于是进了备选链。
+            //
+            // 这里只拦「明确是不同区域版本」的，一边没写区域词的不拦
+            //（「CCTV-4」= 默认亚洲版，是正确配对）。
+            if (!sameRegionVersion(primaryCand.sourceName || m.sourceName, alt.sourceName)) {
+              log.warn(
+                `[day-fill] 跳过 ${ch.id}：主源「${primaryCand.sourceName}」与备选「${alt.sourceName}」是不同区域版本`
+              )
+              continue
+            }
+
+            try {
+              const { rows: candRows } = await tryOneRaw(alt)
+              if (!candRows.length) continue
+              // 只取「主源还没覆盖的那些天」的节目
+              const add = pickMissingDays(candRows, [...primaryRows, ...extra], dates, CONFIG.dayFillMinHours)
+              if (!add.length) continue
+              extra.push(...add)
+              filledBy.push(`${alt.source}:${alt.sourceId}+${add.length}`)
+            } catch (e) {
+              // 补天失败不影响主流程
+            }
+          }
+          if (extra.length) {
+            normalized = normalizeProgrammes([...primaryRows, ...extra], {
+              dayStartTs: globalStart,
+              dayEndTs: globalEnd,
+            })
+            const after = countCoveredDays([...primaryRows, ...extra], dates, CONFIG.dayFillMinHours)
+            log.ok(
+              `[day-fill] ${ch.id} ${coveredDays}天→${after}天 (${filledBy.join(' ')})`
+            )
+            dayFillStats.push({ id: ch.id, before: coveredDays, after, sources: filledBy })
+          }
         }
       }
 
@@ -668,6 +890,7 @@ async function cmdBuild() {
     aggregated: aggSources,
     aggregateReport: aggReport,
     z51Filled,
+    dayFillStats,
     descStats,
     dayList: dates.map((d) => d.ymd),
   })
@@ -821,7 +1044,15 @@ async function cmdM3u() {
   console.log('\n下一步：node src/index.mjs build  → 会额外产出 output/epg-m3u.xml')
 }
 
-main().catch((e) => {
-  log.error(e.stack || e.message)
-  process.exit(1)
-})
+// 只在「直接运行」时执行 CLI。
+// 为什么加这个判断：test/day-fill.test.mjs 要 import countCoveredDays / pickMissingDays，
+// 如果不判断，import 就会跑一遍 main()，测试进程直接去抓数据了。
+const isDirectRun =
+  process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)
+
+if (isDirectRun) {
+  main().catch((e) => {
+    log.error(e.stack || e.message)
+    process.exit(1)
+  })
+}
