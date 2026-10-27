@@ -1,0 +1,65 @@
+name: 探测 Now Player（临时）
+on:
+  workflow_dispatch:
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: 页面与接口探测
+        run: |
+          mkdir -p out
+          UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36"
+          {
+            echo "===== DNS ====="
+            getent hosts nowplayer.now.com || echo "DNS 失败"
+            getent hosts now.com || echo "now.com 失败"
+            echo
+            echo "===== 页面 HTML ====="
+            curl -sS --compressed -o out/page.html -w "HTTP:%{http_code} 大小:%{size_download} 耗时:%{time_total}s\n" \
+              --max-time 30 -A "$UA" "https://nowplayer.now.com/tvguide" || echo "页面失败"
+            echo "--- 前 1500 字节 ---"
+            head -c 1500 out/page.html 2>/dev/null; echo
+            echo
+            echo "===== 页面里的 script / 链接 ====="
+            grep -oE '(src|href)="[^"]*\.(js|json)[^"]*"' out/page.html 2>/dev/null | sort -u | head -30
+            echo
+            echo "===== 页面里的 api 字样 ====="
+            grep -oE '"[^"]*api[^"]*"' out/page.html 2>/dev/null | sort -u | head -30
+            echo
+            echo "===== 常见接口试探 ====="
+            for p in \
+              "api/nowplayer/GetChannelList" \
+              "api/nowplayer/GetEpg" \
+              "api/nowplayer/GetEpgList" \
+              "api/nowplayer/GetProgrammeList" \
+              "api/tvguide/channels" \
+              "api/v1/channels" \
+              "api/channel/list" \
+              "api/epg" \
+              "api/nowplayer/channel" \
+              ; do
+              R=$(curl -sS --compressed -o /tmp/t.json -w "%{http_code}|%{size_download}" --max-time 15 -A "$UA" \
+                -H "Referer: https://nowplayer.now.com/tvguide" \
+                "https://nowplayer.now.com/$p" 2>&1 || echo "ERR")
+              echo "  /$p → $R"
+              head -c 180 /tmp/t.json 2>/dev/null | tr -d '\n'; echo
+            done
+            echo
+            echo "===== 找 JS bundle 并搜接口 ====="
+            for js in $(grep -oE 'src="[^"]*\.js"' out/page.html 2>/dev/null | sed 's/src="//;s/"//' | head -8); do
+              case "$js" in
+                http*) URL="$js" ;;
+                //*) URL="https:$js" ;;
+                /*) URL="https://nowplayer.now.com$js" ;;
+                *) URL="https://nowplayer.now.com/$js" ;;
+              esac
+              echo "--- $URL ---"
+              curl -sS --compressed --max-time 20 -A "$UA" "$URL" -o /tmp/b.js 2>/dev/null || { echo "抓取失败"; continue; }
+              echo "大小: $(wc -c < /tmp/b.js)"
+              grep -oE '"/api/[a-zA-Z0-9_/-]*"' /tmp/b.js 2>/dev/null | sort -u | head -20
+              grep -oE 'nowplayer[a-zA-Z0-9_/-]*' /tmp/b.js 2>/dev/null | sort -u | head -15
+            done
+          } > out/report.txt 2>&1
+      - uses: actions/upload-artifact@v4
+        with: { name: np-probe, path: out/ }
