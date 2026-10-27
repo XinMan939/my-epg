@@ -6,30 +6,30 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - name: 验证节目单接口
+      - name: 频道全量 + program-list 参数
         run: |
           mkdir -p out
           B="https://appapi.tdm.com.mo"
+          curl -sSL --max-time 25 "$B/api/v1.0/live/categories" -o out/live.json
+          curl -sSL --max-time 25 "$B/api/v1.0/program-list/categories" -o out/dates.json
           {
-            echo "=== A) program-list/Channel"
-            curl -sSL --max-time 20 "$B/api/v1.0/program-list/Channel" -o out/ch.json
-            wc -c out/ch.json; head -c 1200 out/ch.json; echo
+            echo "=== program-list/Channel 参数试探（POST） ==="
+            for body in '{"channelId":1,"date":"2026-10-28"}' '{"channelId":1}' '{"id":1,"date":"2026-10-28"}' '{"channelCode":"91","date":"2026-10-28"}'; do
+              echo "--- POST $body"
+              curl -sS --max-time 15 -X POST -H "Content-Type: application/json" -d "$body" "$B/api/v1.0/program-list/Channel" | head -c 400; echo
+            done
             echo
-            echo "=== B) program-list/categories"
-            curl -sSL --max-time 20 "$B/api/v1.0/program-list/categories" | head -c 600; echo
+            echo "=== program-list/Channel GET 各种 query ==="
+            for q in "?channelId=1&date=2026-10-28" "?id=1&date=2026-10-28" "?channel=1&date=2026-10-28" "?channelId=1&day=2026-10-28" "?channelId=1&dateStr=2026-10-28"; do
+              echo "--- GET $q"
+              curl -sS --max-time 15 "$B/api/v1.0/program-list/Channel$q" | head -c 300; echo
+            done
             echo
-            echo "=== C) live"
-            curl -sSL --max-time 20 "$B/api/v1.0/live" | head -c 600; echo
-            echo
-            echo "=== D) live/categories"
-            curl -sSL --max-time 20 "$B/api/v1.0/live/categories" | head -c 600; echo
-            echo
-            echo "=== E) program-list/Channel 带参数试探"
-            for q in "?date=2026-10-28" "?channelId=1" "?lang=zh" "?page=1&size=50" "?channelCode=1"; do
+            echo "=== program-list/ 路径带 id ==="
+            for q in "program-list/1" "program-list/1/2026-10-28" "program-list/channel/1"; do
               echo "--- $q"
-              curl -sSL --max-time 15 "$B/api/v1.0/program-list/Channel$q" | head -c 250; echo
+              curl -sS --max-time 15 "$B/api/v1.0/$q" | head -c 300; echo
             done
           } > out/report.txt 2>&1
-          cp out/ch.json out/channel.json 2>/dev/null
       - uses: actions/upload-artifact@v4
         with: { name: tdm-probe, path: out/ }
