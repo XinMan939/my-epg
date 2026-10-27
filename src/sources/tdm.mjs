@@ -232,11 +232,21 @@ export async function getDayProgrammes(sourceId, weekday, ymd) {
  *   - tdm 第一版按「单日条数 × 8 天」外推，自报 1520 条 / 实测 1177 条，虚高 29%。
  *     根因是窗口跟着今天滚动（今天-2 ~ 今天+5），从今天起探 8 天只能探到 6 天。
  *
- *   所以这里**逐日真探** 6 台 × 8 个日期 = 48 个请求，条数和简介数都是真数。
- *   简介请求靠 `_descCache` 跨天复用（同一节目跨天只请求一次），实际开销远小于 48×40。
+ * ★★ 但「真探」还有个口径陷阱（第二次踩，见 pitfalls §6.7c）：
+ *   TDM 的窗口含**过去** 2~3 天（10-25 就有数据），如果把这些也数进 `days`，
+ *   会得到 9 天 > epgpw 的 7 天，于是在 pickBest 里以「天数最多」稳赢所有源——
+ *   可那 3 天是**已经过去**的，产物根本不会用（build 从今天起覆盖 7 天）。
+ *
+ *   口径必须对齐 epgpw：**只数「今天及以后」的天数**。
+ *   过去的天探还是要探（防止上游把今天的数据挂到昨天的 key 上时漏判），但不计入 days/count。
+ *
+ * 所以这里**逐日真探** 6 台 × 9 个日期，条数和简介数都是真数，但只累计未来部分。
+ * 简介请求靠 `_descCache` 跨天复用（同一节目跨天只请求一次），实际开销远小于 9×40。
  */
 export async function listChannels() {
   const out = []
+  // 北京时间「今天」的 0 点，用来切「未来 / 过去」
+  const todayYmd = new Date(Date.now() + 8 * 3600e3).toISOString().slice(0, 10).replace(/-/g, '')
   const dayList = []
   for (let i = -PROBE_BACK; i <= PROBE_AHEAD; i++) {
     const ts = Date.now() + 8 * 3600e3 + i * 86400e3
@@ -249,6 +259,7 @@ export async function listChannels() {
     let count = 0
     let withDesc = 0
     for (const ymd of dayList) {
+      const isFuture = ymd >= todayYmd
       let r
       try {
         r = await getDayProgrammes(String(ch.id), 1, ymd)
@@ -257,6 +268,8 @@ export async function listChannels() {
         continue
       }
       if (!r.programmes.length) continue
+      // ★ 过去的天只探不计数（口径对齐 epgpw，见上方 §6.7c）
+      if (!isFuture) continue
       dayset.add(ymd)
       for (const p of r.programmes) {
         count++
@@ -278,7 +291,7 @@ export async function listChannels() {
   const ok = out.filter((c) => c.days > 0).length
   const tot = out.reduce((s, c) => s + c.count, 0)
   const totD = out.reduce((s, c) => s + c.withDesc, 0)
-  log.ok(`[tdm] ${ok}/${out.length} 个台有节目，共 ${tot} 条，其中 ${totD} 条有真简介（逐日真探）`)
+  log.ok(`[tdm] ${ok}/${out.length} 个台有节目，共 ${tot} 条，其中 ${totD} 条有真简介（逐日真探，只计今天及以后）`)
   return out
 }
 
