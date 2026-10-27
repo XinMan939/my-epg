@@ -38,10 +38,13 @@
  *    `"The value is not valid for channelId."` —— 说明参数叫 channelId，
  *    但 `channelId=1` 放在**路径**里是错的，必须放 query。
  *
- * ④ **只有 8 天数据，且边界外返回 `data: []` 而不是报错**。
- *    实测 channelId=1：10-26~11-02 有 43~47 条，11-03 起是 0 条。
- *    所以 `days` 要给 8（不是 7），但**不能给更大** —— 越界静默返回空数组，
- *    给大了会让 pickBest 误判、触发无谓的补天。
+ * ④ **窗口是「今天 -2 天 ~ 今天 +5 天」共 8 天，越界静默返回 `data: []`**。
+ *    ★★ 这一条我踩了两次，别再看错：
+ *    10-28 手工探测时 10-26~11-02 全有数据（8 天），我就以为「固定给 8 天」。
+ *    结果 CI 里 `listChannels` 从**今天**起算探 8 天（10-28~11-04），只探到 6 天
+ *    （10-28~11-02），却仍然按 `MAX_DAYS=8` 自报 8 天 × 单日条数。
+ *    自报 1520 条 / 实测 1177 条，虚高 29% —— 又一个「自报数据骗排序」（§6.7）。
+ *    **窗口是跟着今天滚动的，不是固定的 8 天**，所以必须逐日真探，不能硬编码天数。
  *
  * ⑤ **简介要二次请求**：节目单里**没有**简介字段，只有 `programmeId` / `id` / `slug`。
  *    逐条请求 `/api/v1.0/program/{id}` 拿 `content`（HTML 片段）。
@@ -91,8 +94,10 @@ export const CHANNELS = [
  */
 const WITH_EPG = new Set([1, 2, 5, 6, 7, 8])
 
-/** 实测可用天数 8（10-26~11-02），越界静默返回空数组 */
-const MAX_DAYS = 8
+/** 探测窗口上界：今天往后最多探几天（实测 +5 天有数据，+6 起空） */
+const PROBE_AHEAD = 6
+/** 探测窗口下界：今天往前最多探几天（实测 -2 天有数据，-3 起空） */
+const PROBE_BACK = 3
 
 /** 简介缓存：key = `${id}|${slug}`，value = 简介文本。跨天/跨频道复用。 */
 const _descCache = new Map()
@@ -221,32 +226,42 @@ export async function getDayProgrammes(sourceId, weekday, ymd) {
 /**
  * 频道清单
  *
- * ★ days / count / withDesc 必须真探（pitfalls §6.7），不能硬编码：
- *   webncode 那次硬编码 days=7 + count=0 骗过 pickBest，
- *   把 Now新聞台 从「6天325条323简介」换成「5天273条133简介」，简介掉一半还不报错。
+ * ★ days / count / withDesc 必须逐日真探（pitfalls §6.7），不能外推：
+ *   - webncode 硬编码 days=7 + count=0，把 Now新聞台 从「6天325条323简介」
+ *     换成「5天273条133简介」，简介掉一半还不报错。
+ *   - tdm 第一版按「单日条数 × 8 天」外推，自报 1520 条 / 实测 1177 条，虚高 29%。
+ *     根因是窗口跟着今天滚动（今天-2 ~ 今天+5），从今天起探 8 天只能探到 6 天。
  *
- *   这里只探 6 个有 EPG 的台 × 1 天（今天），成本很低（6 个请求），
- *   拿到真实条数和真实简介数，再外推到 MAX_DAYS。
+ *   所以这里**逐日真探** 6 台 × 8 个日期 = 48 个请求，条数和简介数都是真数。
+ *   简介请求靠 `_descCache` 跨天复用（同一节目跨天只请求一次），实际开销远小于 48×40。
  */
 export async function listChannels() {
-  const today = new Date(Date.now() + 8 * 3600e3).toISOString().slice(0, 10).replace(/-/g, '')
   const out = []
+  const dayList = []
+  for (let i = -PROBE_BACK; i <= PROBE_AHEAD; i++) {
+    const ts = Date.now() + 8 * 3600e3 + i * 86400e3
+    dayList.push(new Date(ts).toISOString().slice(0, 10).replace(/-/g, ''))
+  }
 
   for (const ch of CHANNELS) {
     if (!WITH_EPG.has(ch.id)) continue
-    let days = 0
+    const dayset = new Set()
     let count = 0
     let withDesc = 0
-    try {
-      const r = await getDayProgrammes(String(ch.id), 1, today)
-      if (r.programmes.length) {
-        // 探到有数据，按实测 MAX_DAYS 记天数
-        days = MAX_DAYS
-        count = r.programmes.length * MAX_DAYS
-        withDesc = r.programmes.filter((p) => hasRealDesc(p.desc, p.title)).length * MAX_DAYS
+    for (const ymd of dayList) {
+      let r
+      try {
+        r = await getDayProgrammes(String(ch.id), 1, ymd)
+      } catch (e) {
+        log.warn(`[tdm] 探测 ${ch.name} ${ymd} 失败：${e.message}`)
+        continue
       }
-    } catch (e) {
-      log.warn(`[tdm] 探测 ${ch.name} 失败：${e.message}`)
+      if (!r.programmes.length) continue
+      dayset.add(ymd)
+      for (const p of r.programmes) {
+        count++
+        if (hasRealDesc(p.desc, p.title)) withDesc++
+      }
     }
     out.push({
       source: 'tdm',
@@ -254,7 +269,7 @@ export async function listChannels() {
       sourceId: String(ch.id),
       name: ch.name,
       logo: '',
-      days,
+      days: dayset.size,
       count,
       withDesc,
     })
@@ -263,7 +278,7 @@ export async function listChannels() {
   const ok = out.filter((c) => c.days > 0).length
   const tot = out.reduce((s, c) => s + c.count, 0)
   const totD = out.reduce((s, c) => s + c.withDesc, 0)
-  log.ok(`[tdm] ${ok}/${out.length} 个台有节目，共 ${tot} 条，其中 ${totD} 条有真简介（探测值 × ${MAX_DAYS} 天）`)
+  log.ok(`[tdm] ${ok}/${out.length} 个台有节目，共 ${tot} 条，其中 ${totD} 条有真简介（逐日真探）`)
   return out
 }
 
