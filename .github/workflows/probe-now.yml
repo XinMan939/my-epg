@@ -1,105 +1,114 @@
-name: 探测 MOD 全量（临时）
+name: 探测 MOD 周末缺失 + 频道完整性（临时）
 on:
   workflow_dispatch:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: 30
     steps:
-      - name: MOD 全量探测
+      - name: MOD 细节
         run: |
           set +e
           mkdir -p out
           UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36"
           M="https://modp.cht.com.tw/modinfo/epginfob.php"
           {
-            echo "########## A. 从全部频道页提取频道清单 ##########"
+            echo "########## A. 周末缺失：直接看 w=0 原始日期块 ##########"
+            curl -sS --compressed -o out/a.html --max-time 25 -A "$UA" "$M?id=6&w=0"
+            node -e "
+              const fs=require('fs');
+              const h=fs.readFileSync('out/a.html','utf8');
+              // 每个 epgdays 块
+              const blocks=h.split(\"<div class='epgdays'>\").slice(1);
+              console.log('  epgdays 块数: '+blocks.length);
+              for(const b of blocks){
+                const d=(b.match(/background-color:#ccc;padding:5px;'>([^<]+)</)||[])[1]||'?';
+                const n=[...b.matchAll(/<div class='(?:past|now|future)'/g)].length;
+                console.log('    '+d+' -> '+n+' 条');
+              }
+            " 2>&1
+            echo
+            echo "  --- 页面里有没有 10-31 / 11-01 字样 ---"
+            grep -c "2026-10-31" out/a.html
+            grep -c "2026-11-01" out/a.html
+            echo "  --- datemenu 原文 ---"
+            grep -oE \"<div class='datemenu'>[^<]*(<a[^>]*>[^<]*</a>[^<]*)+</div>\" out/a.html | head -2
+            grep -oE \"datemenu.{0,400}\" out/a.html | head -1
+
+            echo
+            echo "########## B. 换不同频道看周末是否也缺（id=8 台视 / id=200 ELTA）##########"
+            for id in 8 200 15; do
+              curl -sS --compressed -o /tmp/b$id.html --max-time 25 -A "$UA" "$M?id=$id&w=0"
+              node -e "
+                const fs=require('fs');
+                const h=fs.readFileSync('/tmp/b$id.html','utf8');
+                const days=[...h.matchAll(/background-color:#ccc;padding:5px;'>(\d{4}-\d{2}-\d{2})/g)].map(m=>m[1]);
+                console.log('  id=$id -> '+days.join(', '));
+              " 2>&1
+            done
+
+            echo
+            echo "########## C. w=1 的日期是否接续 w=0 ##########"
+            curl -sS --compressed -o out/c.html --max-time 25 -A "$UA" "$M?id=8&w=1"
+            node -e "
+              const fs=require('fs');
+              const h=fs.readFileSync('out/c.html','utf8');
+              const days=[...h.matchAll(/background-color:#ccc;padding:5px;'>(\d{4}-\d{2}-\d{2})/g)].map(m=>m[1]);
+              console.log('  id=8 w=1 -> '+days.join(', '));
+            " 2>&1
+
+            echo
+            echo "########## D. 频道清单完整性（187 台 vs 页面数字）##########"
             curl -sS --compressed -o out/all.html --max-time 30 -A "$UA" "https://mod.cht.com.tw/%E9%A0%BB%E9%81%93TV/%E5%85%A8%E9%83%A8.do"
             node -e "
               const fs=require('fs');
               const h=fs.readFileSync('out/all.html','utf8');
-              // 每个 list_item 里有 <div class=\"number\">N</div> 和 <h3>...频道名...</h3>
+              const nums=[...h.matchAll(/<div class=\"number\">(\d+)<\/div>/g)].map(m=>m[1]);
+              console.log('  number 元素 '+nums.length+' 个，唯一 '+new Set(nums).size);
+              const names=[...h.matchAll(/<h3><a[^>]*>([^<]+)<\/a><\/h3>/g)].map(m=>m[1].trim());
+              console.log('  h3 名字 '+names.length+' 个');
+              // 配对检查
               const re=/<div class=\"number\">(\d+)<\/div>[\s\S]{0,900}?<h3><a[^>]*>([^<]+)<\/a><\/h3>/g;
               const out=[]; let m;
               while((m=re.exec(h))) out.push({id:m[1], name:m[2].trim()});
-              console.log('  提取到 '+out.length+' 个频道');
-              fs.writeFileSync('out/channels.json', JSON.stringify(out,null,1));
-              out.slice(0,40).forEach(c=>console.log('    '+c.id+' | '+c.name));
-              console.log('    ...');
-              console.log('  最后 10 个:');
-              out.slice(-10).forEach(c=>console.log('    '+c.id+' | '+c.name));
+              console.log('  配对成功 '+out.length);
+              fs.writeFileSync('out/ch.json', JSON.stringify(out,null,1));
+              console.log('  --- 按号段统计 ---');
+              const seg={};
+              for(const c of out){ const k=Math.floor(Number(c.id)/50)*50; seg[k]=(seg[k]||0)+1 }
+              console.log('  '+JSON.stringify(seg));
             " 2>&1
 
             echo
-            echo "########## B. w=0 / w=1 覆盖对比（id=6）##########"
-            for w in 0 1 2; do
-              curl -sS --compressed -o out/w$w.html --max-time 25 -A "$UA" "$M?id=6&w=$w"
-              node -e "
-                const fs=require('fs');
-                const h=fs.readFileSync('out/w$w.html','utf8');
-                const days=[...h.matchAll(/<div class='item' style='background-color:#ccc;padding:5px;'>(\d{4}-\d{2}-\d{2})/g)].map(m=>m[1]);
-                const progs=[...h.matchAll(/<div class='(?:past|now|future)'[^>]*><div class='time'>\s*([\d:]+)<\/div><div class='channelTitle'>\s*([^<]+?)\s*<\/div>/g)];
-                console.log('  w=$w -> 天数 '+days.length+' | 节目 '+progs.length);
-                console.log('        日期: '+days.join(', '));
-              " 2>&1
-            done
-
-            echo
-            echo "########## C. 抽样 12 个台的节目数与天数 ##########"
-            for id in 2 6 7 8 10 15 20 30 50 100 150 200; do
-              curl -sS --compressed -o /tmp/c$id.html --max-time 20 -A "$UA" "$M?id=$id&w=0"
-              node -e "
-                const fs=require('fs');
-                const h=fs.readFileSync('/tmp/c$id.html','utf8');
-                const title=(h.match(/<h3 class=\"heading-area__title--regular\">([^<]+)</)||[])[1]||'?';
-                const days=[...h.matchAll(/<div class='item' style='background-color:#ccc;padding:5px;'>(\d{4}-\d{2}-\d{2})/g)].length;
-                const progs=[...h.matchAll(/<div class='(?:past|now|future)'[^>]*><div class='time'>\s*([\d:]+)<\/div><div class='channelTitle'>\s*([^<]+?)\s*<\/div>/g)].length;
-                console.log('  id=$id | '+title+' | 天'+days+' 条'+progs);
-              " 2>&1
-            done
-
-            echo
-            echo "########## D. 是否有简介字段（找 p/desc/description）##########"
-            grep -oE "class='(desc|description|summary|synopsis|intro)[^']*'" out/w0.html | sort -u | head
-            echo "  (空 = 没有简介)"
-            echo
-            echo "  --- channelTitle 里除了标题还有什么 ---"
+            echo "########## E. 抽样验证频道清单是否都能抓到节目（抽 15 个）##########"
             node -e "
               const fs=require('fs');
-              const h=fs.readFileSync('out/w0.html','utf8');
-              const progs=[...h.matchAll(/<div class='channelTitle'>\s*([^<]+?)\s*<\/div>/g)].map(m=>m[1]);
-              const tails=new Set();
-              for(const p of progs){ const m=p.match(/\([^)]*\)\s*$/); if(m) tails.add(m[0].trim()) }
-              console.log('  末尾括号样例: '+[...tails].slice(0,10).join(' | '));
-              console.log('  总节目 '+progs.length);
-            " 2>&1
+              const ch=JSON.parse(fs.readFileSync('out/ch.json','utf8'));
+              const pick=[];
+              for(let i=0;i<15;i++) pick.push(ch[Math.floor(i*ch.length/15)]);
+              fs.writeFileSync('/tmp/pick.txt', pick.map(c=>c.id+'\t'+c.name).join('\n'));
+            "
+            while IFS=$'\t' read -r id name; do
+              curl -sS --compressed -o /tmp/e.html --max-time 20 -A "$UA" "$M?id=$id&w=0"
+              N=$(node -e "
+                const fs=require('fs');
+                const h=fs.readFileSync('/tmp/e.html','utf8');
+                const progs=[...h.matchAll(/<div class='(?:past|now|future)'/g)].length;
+                const days=[...h.matchAll(/background-color:#ccc;padding:5px;'>(\d{4}-\d{2}-\d{2})/g)].length;
+                console.log(days+'天/'+progs+'条');
+              " 2>&1)
+              echo "  $id | $name | $N"
+            done < /tmp/pick.txt
 
             echo
-            echo "########## E. 时间轴连续性检查（id=6 第一天）##########"
-            node -e "
-              const fs=require('fs');
-              const h=fs.readFileSync('out/w0.html','utf8');
-              const first=h.split(\"<div class='epgdays'>\")[1]||'';
-              const progs=[...first.matchAll(/<div class='(?:past|now|future)'[^>]*><div class='time'>\s*([\d:]+)<\/div><div class='channelTitle'>\s*([^<]+?)\s*<\/div>/g)].map(m=>({t:m[1],n:m[2]}));
-              console.log('  第一天 '+progs.length+' 条');
-              console.log('  首条 '+progs[0].t+' 末条 '+progs[progs.length-1].t);
-              // 相邻间隔
-              const gaps=[];
-              for(let i=1;i<progs.length;i++){
-                const a=progs[i-1].t.split(':').map(Number), b=progs[i].t.split(':').map(Number);
-                let d=(b[0]*60+b[1])-(a[0]*60+a[1]); if(d<0)d+=1440;
-                gaps.push(d);
-              }
-              console.log('  间隔分布: '+JSON.stringify(gaps.reduce((o,g)=>{o[g]=(o[g]||0)+1;return o},{})));
-            " 2>&1
-
-            echo
-            echo "########## F. 并发探测是否限速（10 个台同时）##########"
-            START=$(date +%s)
-            seq 2 11 | xargs -P 10 -I{} curl -sS --compressed -o /dev/null -w "%{http_code}\n" --max-time 25 -A "$UA" "$M?id={}&w=0" 2>/dev/null | sort | uniq -c
-            END=$(date +%s)
-            echo "  10 个并发耗时 $((END-START)) 秒"
+            echo "########## F. 并发限速复核（串行 1 路 vs 3 路 vs 5 路）##########"
+            for P in 1 3 5; do
+              START=$(date +%s)
+              RES=$(seq 6 15 | xargs -P $P -I{} curl -sS --compressed -o /dev/null -w "%{http_code}\n" --max-time 25 -A "$UA" "$M?id={}&w=0" 2>/dev/null | sort | uniq -c | tr '\n' ' ')
+              END=$(date +%s)
+              echo "  P=$P -> $RES | $((END-START))s"
+            done
           } > out/report.txt 2>&1
       - uses: actions/upload-artifact@v4
         if: always()
-        with: { name: modfull, path: out/ }
+        with: { name: modx, path: out/ }
