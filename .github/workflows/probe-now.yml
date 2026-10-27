@@ -10,63 +10,10 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: "22" }
       - name: 跑模块真实逻辑
-        run: |
-          cat > verify.mjs << 'JSEOF'
-import * as m from '../src/sources/nowplayer.mjs'
-import fs from 'fs'
-
-const bj = (t) => new Date(t + 8 * 3600e3).toISOString().slice(5, 16).replace('T', ' ')
-
-console.log('=== fetchChannelList ===')
-let t0 = Date.now()
-const chs = await m.fetchChannelList()
-console.log('频道数', chs.length, '耗时', ((Date.now() - t0) / 1000).toFixed(1) + 's')
-console.log('有名字的', chs.filter((c) => c.name).length)
-console.log('--- 关心的台 ---')
-for (const id of ['332', '333', '331', '366', '548', '096', '099', '102']) {
-  const c = chs.find((x) => x.sourceId === id)
-  if (c) console.log('  ' + c.sourceId + ' | ' + c.name)
-}
-console.log('--- 全部（前 30）---')
-chs.slice(0, 30).forEach((c) => console.log('  ' + c.sourceId + ' | ' + c.name))
-
-console.log('\n=== getDayProgrammes 单台（332 Now NEWS，今天）===')
-const today = new Date(Date.now() + 8 * 3600e3).toISOString().slice(0, 10).replace(/-/g, '')
-t0 = Date.now()
-const r = await m.getDayProgrammes('332', 1, today)
-const withD = r.programmes.filter((p) => p.desc && p.desc.length > 20).length
-console.log(
-  '条数', r.programmes.length,
-  '带简介', withD,
-  '耗时', ((Date.now() - t0) / 1000).toFixed(1) + 's',
-  'error:', r.error || '-'
-)
-r.programmes.slice(0, 6).forEach((p) => {
-  console.log('  ' + bj(p.startTs) + ' ~ ' + bj(p.stopTs) + '  ' + p.title)
-  if (p.desc) console.log('     简介: ' + p.desc.slice(0, 70))
-})
-
-console.log('\n=== listChannels 全量 ===')
-t0 = Date.now()
-const list = await m.listChannels()
-console.log('耗时', ((Date.now() - t0) / 1000).toFixed(1) + 's')
-const ok = list.filter((c) => c.days > 0)
-console.log('有节目', ok.length + '/' + list.length, '总条数', list.reduce((s, c) => s + c.count, 0))
-const dist = {}
-list.forEach((c) => (dist[c.days] = (dist[c.days] || 0) + 1))
-console.log('days 分布', JSON.stringify(dist))
-console.log('--- 关心的台 ---')
-for (const id of ['332', '333', '331', '366', '548', '096', '099', '102', '208', '326', '327', '324', '112']) {
-  const c = list.find((x) => x.sourceId === id)
-  if (c) console.log('  ' + id + ' | ' + c.name + ' | days=' + c.days + ' count=' + c.count)
-}
-fs.writeFileSync('np-catalog.json', JSON.stringify(list, null, 1))
-
-JSEOF
-          node verify.mjs 2>&1 | tee report.txt
-          echo "exit=$?"
+        run: node tools/verify-nowplayer.mjs 2>&1 | tee report.txt
       - uses: actions/upload-artifact@v4
-        with: { name: np-mod, path: "*.txt" }
-      - uses: actions/upload-artifact@v4
-        with: { name: np-cat, path: np-catalog.json }
         if: always()
+        with: { name: np-mod, path: "report.txt" }
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: np-cat, path: np-catalog.json }
