@@ -1,19 +1,75 @@
-name: 对比 webncode vs nowplayer（临时）
+name: 探测 TBC + MOD（临时）
 on:
   workflow_dispatch:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with: { node-version: '22' }
-      - name: 对比
-        run: node tools/compare-now.mjs 2>&1 | tee report.txt
+      - name: TBC + MOD 探测
+        run: |
+          mkdir -p out
+          UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36"
+          {
+            echo "########## 1. DNS 解析对比（判断是不是污染）##########"
+            for h in www.tbc.net.tw mod.cht.com.tw; do
+              echo "--- $h"
+              getent hosts $h || echo "  解析失败"
+            done
+
+            echo
+            echo "########## 2. TBC 首页 ##########"
+            curl -sS --compressed -o out/tbc.html -w "  indexV2 -> %{http_code}|%{size_download}|%{time_total}s\n" --max-time 30 -A "$UA" "https://www.tbc.net.tw/Epg/Epg/indexV2" 2>&1
+            echo "  标题: $(grep -oE '<title>[^<]*</title>' out/tbc.html | head -1)"
+            echo "  --- 页面里的接口路径 ---"
+            grep -oE "(url|href|action)\s*[:=]\s*['\"][^'\"]{3,80}['\"]" out/tbc.html | sort -u | head -40
+            echo "  --- api 关键字 ---"
+            grep -oE "['\"][^'\"]*[Aa]pi[^'\"]*['\"]" out/tbc.html | sort -u | head -20
+            echo "  --- .do / .json / .aspx 路径 ---"
+            grep -oE "/[A-Za-z0-9_\-/]+\.(do|json|aspx|ashx)[^'\" ]*" out/tbc.html | sort -u | head -30
+            echo "  --- script src ---"
+            grep -oE 'src="[^"]+\.js[^"]*"' out/tbc.html | sort -u | head -20
+
+            echo
+            echo "########## 3. MOD 全部频道页 ##########"
+            curl -sS --compressed -o out/mod-all.html -w "  all.do -> %{http_code}|%{size_download}|%{time_total}s\n" --max-time 30 -A "$UA" "https://mod.cht.com.tw/%E9%A0%BB%E9%81%93TV/%E5%85%A8%E9%83%A8.do"
+            echo "  标题: $(grep -oE '<title>[^<]*</title>' out/mod-all.html | head -1)"
+            echo "  --- 频道链接 ---"
+            grep -oE '/program\.do\?id=[0-9]+' out/mod-all.html | sort -u | head -20
+            echo "  频道链接总数: $(grep -oE '/program\.do\?id=[0-9]+' out/mod-all.html | sort -u | wc -l)"
+            echo "  --- 频道名样例 ---"
+            grep -oE '>[^<>]{2,20}</a>' out/mod-all.html | head -20
+
+            echo
+            echo "########## 4. MOD 民视无线台 program.do?id=6 ##########"
+            curl -sS --compressed -o out/mod-6.html -w "  program.do?id=6 -> %{http_code}|%{size_download}|%{time_total}s\n" --max-time 30 -A "$UA" "https://mod.cht.com.tw/program.do?id=6"
+            echo "  标题: $(grep -oE '<title>[^<]*</title>' out/mod-6.html | head -1)"
+            echo "  --- 节目行样例（前 3000 字节正文）---"
+            sed -n 's/<[^>]*>//gp' out/mod-6.html 2>/dev/null | grep -vE '^\s*$' | head -60
+            echo
+            echo "  --- 时间/标题结构 ---"
+            grep -oE 'class="[^"]*(time|program|title|epg|list)[^"]*"' out/mod-6.html | sort -u | head -20
+            echo
+            echo "  --- 是否有 JSON 数据内嵌 ---"
+            grep -cE '\{"' out/mod-6.html
+
+            echo
+            echo "########## 5. MOD 页面里的接口 ##########"
+            grep -oE "/[A-Za-z0-9_\-/%]+\.do[^'\" ]*" out/mod-6.html | sort -u | head -30
+            grep -oE "['\"][^'\"]*[Aa]jax[^'\"]*['\"]" out/mod-6.html | sort -u | head -20
+            grep -oE 'src="[^"]+\.js[^"]*"' out/mod-6.html | sort -u | head -20
+
+            echo
+            echo "########## 6. MOD 试猜接口 ##########"
+            for u in \
+              "https://mod.cht.com.tw/program.do?id=6&date=2026-10-28" \
+              "https://mod.cht.com.tw/api/program?id=6" \
+              "https://mod.cht.com.tw/program/list.do?id=6"; do
+              R=$(curl -sS --compressed -o /tmp/m.json -w "%{http_code}|%{size_download}" --max-time 20 -A "$UA" "$u" 2>&1 || echo ERR)
+              echo "  $u -> $R"
+            done
+          } > out/report.txt 2>&1
+          cp out/tbc.html out/mod-all.html out/mod-6.html out/ 2>/dev/null || true
       - uses: actions/upload-artifact@v4
         if: always()
-        with: { name: np-cmp, path: "*.json" }
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with: { name: np-cmp-txt, path: report.txt }
+        with: { name: tbcmod, path: out/ }
