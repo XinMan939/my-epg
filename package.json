@@ -11,7 +11,8 @@
     "init": "node src/index.mjs init",
     "build": "node src/index.mjs build",
     "catalog": "node src/index.mjs catalog",
-    "check": "node src/index.mjs check"
+    "check": "node src/index.mjs check",
+    "test": "node test/normalize.test.mjs"
   },
   "license": "MIT"
 }
