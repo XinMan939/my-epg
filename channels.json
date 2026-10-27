@@ -12,7 +12,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 221
+    "programmeCount": 227
   },
   {
     "id": "CCTV2.cn",
@@ -25,7 +25,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 230
+    "programmeCount": 229
   },
   {
     "id": "CCTV3.cn",
@@ -38,7 +38,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 130
+    "programmeCount": 134
   },
   {
     "id": "CCTV4Asia.cn",
@@ -55,7 +55,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 257
+    "programmeCount": 265
   },
   {
     "id": "CCTV5.cn",
@@ -68,7 +68,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 142
+    "programmeCount": 144
   },
   {
     "id": "CCTV5Plus.cn",
@@ -81,7 +81,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 107
+    "programmeCount": 108
   },
   {
     "id": "CCTV6.cn",
@@ -94,7 +94,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 110
+    "programmeCount": 126
   },
   {
     "id": "CCTV7.cn",
@@ -107,7 +107,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 206
+    "programmeCount": 205
   },
   {
     "id": "CCTV8.cn",
@@ -120,7 +120,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 235
+    "programmeCount": 240
   },
   {
     "id": "CCTV9.cn",
@@ -133,7 +133,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 171
+    "programmeCount": 170
   },
   {
     "id": "CCTV10.cn",
@@ -146,7 +146,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 221
+    "programmeCount": 220
   },
   {
     "id": "CCTV11.cn",
@@ -159,7 +159,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 106
+    "programmeCount": 105
   },
   {
     "id": "CCTV12.cn",
@@ -173,7 +173,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 181
+    "programmeCount": 182
   },
   {
     "id": "CCTV13.cn",
@@ -212,7 +212,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 100
+    "programmeCount": 99
   },
   {
     "id": "CCTV16.cn",
@@ -225,7 +225,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 138
+    "programmeCount": 140
   },
   {
     "id": "CCTV17.cn",
@@ -251,7 +251,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 388
+    "programmeCount": 387
   },
   {
     "id": "CCTV8K.cn",
@@ -263,7 +263,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 1557
+    "programmeCount": 1556
   },
   {
     "id": "CCTV4Europe.cn",
@@ -278,7 +278,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 257
+    "programmeCount": 40
   },
   {
     "id": "CCTV4America.cn",
@@ -293,7 +293,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 257
+    "programmeCount": 40
   },
   {
     "id": "HunanTV.cn",
@@ -304,7 +304,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 208
+    "programmeCount": 228
   },
   {
     "id": "ZhejiangSatelliteTV.cn",
@@ -315,7 +315,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 212
+    "programmeCount": 211
   },
   {
     "id": "JiangsuSatelliteTV.cn",
@@ -326,7 +326,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 173
+    "programmeCount": 191
   },
   {
     "id": "DragonTV.cn",
@@ -338,7 +338,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 251
+    "programmeCount": 270
   },
   {
     "id": "BeijingSatelliteTV.cn",
@@ -350,7 +350,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 199
+    "programmeCount": 198
   },
   {
     "id": "AnhuiSatelliteTV.cn",
@@ -361,7 +361,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 203
+    "programmeCount": 202
   },
   {
     "id": "ShandongSatelliteTV.cn",
@@ -372,7 +372,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 210
+    "programmeCount": 209
   },
   {
     "id": "GuangdongSatelliteTV.cn",
@@ -383,7 +383,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 183
+    "programmeCount": 182
   },
   {
     "id": "ShenzhenSatelliteTV.cn",
@@ -405,7 +405,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 194
+    "programmeCount": 222
   },
   {
     "id": "ChongqingSatelliteTV.cn",
@@ -416,7 +416,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 226
+    "programmeCount": 225
   },
   {
     "id": "SichuanSatelliteTV.cn",
@@ -427,7 +427,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 200
+    "programmeCount": 199
   },
   {
     "id": "HubeiSatelliteTV.cn",
@@ -438,7 +438,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 279
+    "programmeCount": 295
   },
   {
     "id": "HenanTVSatellite.cn",
@@ -449,7 +449,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 217
+    "programmeCount": 224
   },
   {
     "id": "HebeiSatelliteTV.cn",
@@ -460,7 +460,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 188
+    "programmeCount": 187
   },
   {
     "id": "ShanxiSatelliteTV.cn",
@@ -471,7 +471,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 195
+    "programmeCount": 194
   },
   {
     "id": "ShaanxiSatelliteTV.cn",
@@ -482,7 +482,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 181
+    "programmeCount": 180
   },
   {
     "id": "LiaoningSatelliteTV.cn",
@@ -493,7 +493,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 218
+    "programmeCount": 217
   },
   {
     "id": "JilinSatelliteTV.cn",
@@ -504,7 +504,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 218
+    "programmeCount": 233
   },
   {
     "id": "HeilongjiangSatelliteTV.cn",
@@ -515,7 +515,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 205
+    "programmeCount": 210
   },
   {
     "id": "JiangxiSatelliteTV.cn",
@@ -526,7 +526,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 139
+    "programmeCount": 138
   },
   {
     "id": "FujianSatelliteTV.cn",
@@ -538,7 +538,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 189
+    "programmeCount": 188
   },
   {
     "id": "GuangxiSatelliteTV.cn",
@@ -549,7 +549,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 198
+    "programmeCount": 225
   },
   {
     "id": "YunnanSatelliteTV.cn",
@@ -560,7 +560,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 190
+    "programmeCount": 189
   },
   {
     "id": "GuizhouSatelliteTV.cn",
@@ -582,7 +582,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 228
+    "programmeCount": 227
   },
   {
     "id": "QinghaiSatelliteTV.cn",
@@ -593,7 +593,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 190
+    "programmeCount": 217
   },
   {
     "id": "NingxiaSatelliteChannel.cn",
@@ -604,7 +604,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 240
+    "programmeCount": 239
   },
   {
     "id": "XinjiangSatelliteTV.cn",
@@ -615,7 +615,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 148
+    "programmeCount": 169
   },
   {
     "id": "TibetSatelliteTV.cn",
@@ -626,7 +626,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 269
+    "programmeCount": 300
   },
   {
     "id": "NeiMongolSatelliteTV.cn",
@@ -637,7 +637,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 188
+    "programmeCount": 214
   },
   {
     "id": "HainanSatelliteTV.cn",
@@ -649,7 +649,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 223
+    "programmeCount": 239
   },
   {
     "id": "XiamenSatelliteTV.cn",
@@ -660,7 +660,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 167
+    "programmeCount": 170
   },
   {
     "id": "YanbianSatelliteTV.cn",
@@ -671,7 +671,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 167
+    "programmeCount": 194
   },
   {
     "id": "BingtuanSatelliteTV.cn",
@@ -680,7 +680,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 197
+    "programmeCount": 196
   },
   {
     "id": "KangbaSatelliteTV.cn",
@@ -698,7 +698,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 121
+    "programmeCount": 120
   },
   {
     "id": "HaixiaSatelliteTV.cn",
@@ -709,7 +709,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 231
+    "programmeCount": 230
   },
   {
     "id": "GBASatelliteTV.cn",
@@ -721,7 +721,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 40
+    "programmeCount": 17
   },
   {
     "id": "SanshaSatelliteTV.cn",
@@ -730,7 +730,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 120
+    "programmeCount": 121
   },
   {
     "id": "HunanTVInternational.cn",
@@ -741,8 +741,8 @@
       "湖南国际频道"
     ],
     "logo": "",
-    "hasEpg": false,
-    "programmeCount": 0
+    "hasEpg": true,
+    "programmeCount": 28
   },
   {
     "id": "ZhejiangInternationalChannel.cn",
@@ -765,7 +765,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 40
+    "programmeCount": 20
   },
   {
     "id": "HunanEntertainmentChannel.cn",
@@ -776,7 +776,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 22
+    "programmeCount": 11
   },
   {
     "id": "HunanDramaChannel.cn",
@@ -787,7 +787,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 28
+    "programmeCount": 14
   },
   {
     "id": "HunanCityChannel.cn",
@@ -821,7 +821,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 106
+    "programmeCount": 54
   },
   {
     "id": "ZhejiangMinshengLeisure.cn",
@@ -842,8 +842,8 @@
       "浙江影视娱乐"
     ],
     "logo": "",
-    "hasEpg": false,
-    "programmeCount": 0
+    "hasEpg": true,
+    "programmeCount": 24
   },
   {
     "id": "ZhejiangChildrensChannel.cn",
@@ -854,7 +854,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 48
+    "programmeCount": 24
   },
   {
     "id": "JiangsuCityChannel.cn",
@@ -865,7 +865,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 50
+    "programmeCount": 25
   },
   {
     "id": "JiangsuVarietyChannel.cn",
@@ -876,7 +876,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 43
+    "programmeCount": 24
   },
   {
     "id": "JiangsuMovieChannel.cn",
@@ -887,7 +887,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 48
+    "programmeCount": 26
   },
   {
     "id": "JiangsuPublicNewsChannel.cn",
@@ -911,7 +911,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 267
+    "programmeCount": 311
   },
   {
     "id": "Pearl.hk",
@@ -924,7 +924,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 202
+    "programmeCount": 236
   },
   {
     "id": "TVBNewsChannel.hk",
@@ -936,7 +936,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 324
+    "programmeCount": 377
   },
   {
     "id": "GoldenJade.hk",
@@ -948,7 +948,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 175
+    "programmeCount": 205
   },
   {
     "id": "TVBPlus.hk",
@@ -960,7 +960,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 204
+    "programmeCount": 244
   },
   {
     "id": "ViuTV.hk",
@@ -972,7 +972,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2026/09/01/20260901042303957414_25",
     "hasEpg": true,
-    "programmeCount": 220
+    "programmeCount": 257
   },
   {
     "id": "ViuTVsix.hk",
@@ -984,7 +984,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2026/09/01/20260901040438523505_53",
     "hasEpg": true,
-    "programmeCount": 190
+    "programmeCount": 189
   },
   {
     "id": "RTHKTV31.hk",
@@ -996,7 +996,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 280
+    "programmeCount": 323
   },
   {
     "id": "RTHKTV32.hk",
@@ -1008,7 +1008,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 330
+    "programmeCount": 382
   },
   {
     "id": "RTHKTV33.hk",
@@ -1020,7 +1020,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 222
+    "programmeCount": 256
   },
   {
     "id": "RTHKTV34.hk",
@@ -1032,7 +1032,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 361
+    "programmeCount": 480
   },
   {
     "id": "RTHKTV35.hk",
@@ -1044,7 +1044,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 265
+    "programmeCount": 313
   },
   {
     "id": "HOYTV.hk",
@@ -1070,7 +1070,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129153829170771_55",
     "hasEpg": true,
-    "programmeCount": 295
+    "programmeCount": 343
   },
   {
     "id": "PhoenixInfoNewsChannel.hk",
@@ -1082,7 +1082,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129074347363304_81",
     "hasEpg": true,
-    "programmeCount": 382
+    "programmeCount": 445
   },
   {
     "id": "PhoenixHongKongChannel.hk",
@@ -1139,7 +1139,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917031034704095_77.jpg",
     "hasEpg": true,
-    "programmeCount": 166
+    "programmeCount": 193
   },
   {
     "id": "CTV.tw",
@@ -1152,7 +1152,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917031118563901_35.png",
     "hasEpg": true,
-    "programmeCount": 149
+    "programmeCount": 171
   },
   {
     "id": "CTS.tw",
@@ -1165,7 +1165,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917031155788805_32.png",
     "hasEpg": true,
-    "programmeCount": 136
+    "programmeCount": 161
   },
   {
     "id": "FTV.tw",
@@ -1178,7 +1178,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917030955973578_68.png",
     "hasEpg": true,
-    "programmeCount": 190
+    "programmeCount": 224
   },
   {
     "id": "PTS.tw",
@@ -1191,7 +1191,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919165120743160_73.png",
     "hasEpg": true,
-    "programmeCount": 189
+    "programmeCount": 213
   },
   {
     "id": "TVBS.tw",
@@ -1203,7 +1203,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917032546980305_30.jpg",
     "hasEpg": true,
-    "programmeCount": 117
+    "programmeCount": 134
   },
   {
     "id": "TVBSNews.tw",
@@ -1215,7 +1215,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917032519951049_21.jpg",
     "hasEpg": true,
-    "programmeCount": 109
+    "programmeCount": 126
   },
   {
     "id": "CTiNews.tw",
@@ -1240,7 +1240,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917031949990817_28.png",
     "hasEpg": true,
-    "programmeCount": 117
+    "programmeCount": 136
   },
   {
     "id": "SETNews.tw",
@@ -1253,7 +1253,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917032453282910_33.png",
     "hasEpg": true,
-    "programmeCount": 139
+    "programmeCount": 161
   },
   {
     "id": "SETTaiwan.tw",
@@ -1264,7 +1264,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917031748057162_92.png",
     "hasEpg": true,
-    "programmeCount": 130
+    "programmeCount": 151
   },
   {
     "id": "EBCNews.tw",
@@ -1277,7 +1277,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917032418916390_69.jpg",
     "hasEpg": true,
-    "programmeCount": 134
+    "programmeCount": 155
   },
   {
     "id": "EBCVariety.tw",
@@ -1289,7 +1289,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917031840234354_38.jpg",
     "hasEpg": true,
-    "programmeCount": 131
+    "programmeCount": 151
   },
   {
     "id": "FTVNews.tw",
@@ -1301,7 +1301,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917032436253078_82.jpg",
     "hasEpg": true,
-    "programmeCount": 144
+    "programmeCount": 165
   },
   {
     "id": "CTVNewsChannel.tw",
@@ -1313,7 +1313,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917035002618464_42.jpg",
     "hasEpg": true,
-    "programmeCount": 145
+    "programmeCount": 168
   },
   {
     "id": "CTSNews.tw",
@@ -1324,7 +1324,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2024/06/12/20240612110829650925_83.png",
     "hasEpg": true,
-    "programmeCount": 45
+    "programmeCount": 66
   },
   {
     "id": "TTVNews.tw",
@@ -1335,7 +1335,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917035019942493_61.jpg",
     "hasEpg": true,
-    "programmeCount": 154
+    "programmeCount": 178
   },
   {
     "id": "EBCYOYO.tw",
@@ -1347,7 +1347,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917031636959877_14.jpg",
     "hasEpg": true,
-    "programmeCount": 422
+    "programmeCount": 489
   },
   {
     "id": "CCTVWeaponTechnology.cn",
@@ -1369,7 +1369,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 44
+    "programmeCount": 22
   },
   {
     "id": "CNDFilmDiscoveryChannel.cn",
@@ -1391,7 +1391,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 42
+    "programmeCount": 21
   },
   {
     "id": "CCTVStormMusic.cn",
@@ -1435,7 +1435,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 32
+    "programmeCount": 16
   },
   {
     "id": "CCTVNostalgiaTheater.cn",
@@ -1446,7 +1446,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 38
+    "programmeCount": 19
   },
   {
     "id": "CNDFilmOldStoryChannel.cn",
@@ -1490,7 +1490,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 203
+    "programmeCount": 46
   },
   {
     "id": "CCTVTVGuide.cn",
@@ -1500,8 +1500,8 @@
       "电视指南"
     ],
     "logo": "",
-    "hasEpg": false,
-    "programmeCount": 0
+    "hasEpg": true,
+    "programmeCount": 126
   },
   {
     "id": "CGTN.cn",
@@ -1510,7 +1510,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 307
+    "programmeCount": 316
   },
   {
     "id": "CGTNFrench.cn",
@@ -1519,7 +1519,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 137
+    "programmeCount": 34
   },
   {
     "id": "CGTNDocumentary.cn",
@@ -1528,7 +1528,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 251
+    "programmeCount": 36
   },
   {
     "id": "CETV1.cn",
@@ -1539,7 +1539,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 208
+    "programmeCount": 211
   },
   {
     "id": "CETV2.cn",
@@ -1550,7 +1550,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 139
+    "programmeCount": 144
   },
   {
     "id": "CETV4.cn",
@@ -1561,7 +1561,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 191
+    "programmeCount": 197
   },
   {
     "id": "BRTVKakuChildrensChannel.cn",
@@ -1570,7 +1570,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 436
+    "programmeCount": 69
   },
   {
     "id": "GoldenEagleCartoon.cn",
@@ -1579,7 +1579,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 505
+    "programmeCount": 341
   },
   {
     "id": "哈哈炫动.cn",
@@ -1608,7 +1608,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 24
+    "programmeCount": 12
   },
   {
     "id": "求索纪录.cn",
@@ -1616,8 +1616,8 @@
     "group": "pay",
     "aliases": [],
     "logo": "",
-    "hasEpg": false,
-    "programmeCount": 0
+    "hasEpg": true,
+    "programmeCount": 12
   },
   {
     "id": "求索动物.cn",
@@ -1643,8 +1643,8 @@
     "group": "pay",
     "aliases": [],
     "logo": "",
-    "hasEpg": false,
-    "programmeCount": 0
+    "hasEpg": true,
+    "programmeCount": 12
   },
   {
     "id": "GreatSportsChannel.cn",
@@ -1664,7 +1664,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 80
+    "programmeCount": 19
   },
   {
     "id": "GameChannel.cn",
@@ -1673,7 +1673,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 292
+    "programmeCount": 32
   },
   {
     "id": "劲爆体育.cn",
@@ -1682,7 +1682,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 123
+    "programmeCount": 17
   },
   {
     "id": "乐游.cn",
@@ -1691,7 +1691,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 402
+    "programmeCount": 54
   },
   {
     "id": "AnimationShowChannel.cn",
@@ -1700,7 +1700,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 697
+    "programmeCount": 93
   },
   {
     "id": "CityTheaterChannel.cn",
@@ -1709,7 +1709,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 170
+    "programmeCount": 42
   },
   {
     "id": "ChannelLaw.cn",
@@ -1718,7 +1718,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 115
+    "programmeCount": 40
   },
   {
     "id": "LaughterTheater.cn",
@@ -1727,7 +1727,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 65
+    "programmeCount": 29
   },
   {
     "id": "金色学堂.cn",
@@ -1736,7 +1736,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 154
+    "programmeCount": 88
   },
   {
     "id": "LifestyleChannel.cn",
@@ -1745,7 +1745,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 376
+    "programmeCount": 377
   },
   {
     "id": "CHCAction.cn",
@@ -1754,7 +1754,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 56
+    "programmeCount": 31
   },
   {
     "id": "CHCHomeTheater.cn",
@@ -1762,8 +1762,8 @@
     "group": "pay",
     "aliases": [],
     "logo": "",
-    "hasEpg": false,
-    "programmeCount": 0
+    "hasEpg": true,
+    "programmeCount": 24
   },
   {
     "id": "CHCFansMovieChannel.cn",
@@ -1783,7 +1783,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 289
+    "programmeCount": 336
   },
   {
     "id": "TVB千禧经典.hk",
@@ -1794,7 +1794,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 194
+    "programmeCount": 226
   },
   {
     "id": "nowNews.hk",
@@ -1825,7 +1825,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 89
+    "programmeCount": 88
   },
   {
     "id": "nowDirect.hk",
@@ -1845,7 +1845,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 85
+    "programmeCount": 98
   },
   {
     "id": "Thrill.hk",
@@ -1854,7 +1854,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 103
+    "programmeCount": 118
   },
   {
     "id": "ChineseOperaChannel.hk",
@@ -1865,7 +1865,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 639
+    "programmeCount": 728
   },
   {
     "id": "黄金华剧台.hk",
@@ -1876,7 +1876,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 169
+    "programmeCount": 196
   },
   {
     "id": "MeiAhMovieChannel.hk",
@@ -1887,7 +1887,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 91
+    "programmeCount": 104
   },
   {
     "id": "ZooMoo.sg",
@@ -1896,7 +1896,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 846
+    "programmeCount": 985
   },
   {
     "id": "TVBSEntertainmentChannel.tw",
@@ -1907,7 +1907,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917032145508911_51.jpg",
     "hasEpg": true,
-    "programmeCount": 140
+    "programmeCount": 162
   },
   {
     "id": "TVBS精采.tw",
@@ -1929,7 +1929,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917032603853302_35.jpg",
     "hasEpg": true,
-    "programmeCount": 141
+    "programmeCount": 165
   },
   {
     "id": "EBCSuper.tw",
@@ -1940,7 +1940,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917031857898940_26.jpg",
     "hasEpg": true,
-    "programmeCount": 135
+    "programmeCount": 158
   },
   {
     "id": "EBCMovie.tw",
@@ -1951,7 +1951,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917032728478839_83.jpg",
     "hasEpg": true,
-    "programmeCount": 89
+    "programmeCount": 103
   },
   {
     "id": "ETTVDrama.tw",
@@ -1962,7 +1962,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917032110560998_87.jpg",
     "hasEpg": true,
-    "programmeCount": 141
+    "programmeCount": 163
   },
   {
     "id": "EBCForeignMovie.tw",
@@ -1973,7 +1973,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917032827405129_96.jpg",
     "hasEpg": true,
-    "programmeCount": 59
+    "programmeCount": 67
   },
   {
     "id": "EraNews.tw",
@@ -1984,7 +1984,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917032401871162_38.png",
     "hasEpg": true,
-    "programmeCount": 116
+    "programmeCount": 134
   },
   {
     "id": "UniqueBusinessNews.tw",
@@ -1995,7 +1995,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917032621409180_62.jpg",
     "hasEpg": true,
-    "programmeCount": 149
+    "programmeCount": 176
   },
   {
     "id": "非凡商业.tw",
@@ -2006,7 +2006,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917033430816131_51.jpg",
     "hasEpg": true,
-    "programmeCount": 178
+    "programmeCount": 208
   },
   {
     "id": "寰宇新闻台湾.tw",
@@ -2017,7 +2017,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917051956198153_86.jpg",
     "hasEpg": true,
-    "programmeCount": 145
+    "programmeCount": 168
   },
   {
     "id": "寰宇财经.tw",
@@ -2028,7 +2028,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 144
+    "programmeCount": 168
   },
   {
     "id": "GlobalNews.tw",
@@ -2039,7 +2039,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919172233167837_98.png",
     "hasEpg": true,
-    "programmeCount": 146
+    "programmeCount": 145
   },
   {
     "id": "mnews.tw",
@@ -2050,7 +2050,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917033335614535_52.jpg",
     "hasEpg": true,
-    "programmeCount": 138
+    "programmeCount": 160
   },
   {
     "id": "国会频道①.tw",
@@ -2061,7 +2061,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917034424606790_14.jpg",
     "hasEpg": true,
-    "programmeCount": 73
+    "programmeCount": 84
   },
   {
     "id": "国会频道②.tw",
@@ -2072,7 +2072,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917034438903554_17.jpg",
     "hasEpg": true,
-    "programmeCount": 73
+    "programmeCount": 84
   },
   {
     "id": "SETiNews.tw",
@@ -2083,7 +2083,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917033452979285_81.jpg",
     "hasEpg": true,
-    "programmeCount": 144
+    "programmeCount": 167
   },
   {
     "id": "三立综合.tw",
@@ -2116,7 +2116,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917031805765900_73.png",
     "hasEpg": true,
-    "programmeCount": 138
+    "programmeCount": 160
   },
   {
     "id": "CTVClassic.tw",
@@ -2127,7 +2127,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171222336167_77.png",
     "hasEpg": true,
-    "programmeCount": 157
+    "programmeCount": 185
   },
   {
     "id": "中视菁采.tw",
@@ -2138,7 +2138,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171248960811_15.png",
     "hasEpg": true,
-    "programmeCount": 117
+    "programmeCount": 138
   },
   {
     "id": "CTiEntertainment.tw",
@@ -2149,7 +2149,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917032053206627_49.png",
     "hasEpg": true,
-    "programmeCount": 135
+    "programmeCount": 157
   },
   {
     "id": "CTiAsia.tw",
@@ -2160,7 +2160,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129141524674377_87",
     "hasEpg": true,
-    "programmeCount": 149
+    "programmeCount": 174
   },
   {
     "id": "FTVOne.tw",
@@ -2171,7 +2171,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917034917461812_13.jpg",
     "hasEpg": true,
-    "programmeCount": 194
+    "programmeCount": 224
   },
   {
     "id": "FTVTaiwan.tw",
@@ -2182,7 +2182,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917034945522495_98.jpg",
     "hasEpg": true,
-    "programmeCount": 158
+    "programmeCount": 184
   },
   {
     "id": "FTVDrama.tw",
@@ -2193,7 +2193,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2024/06/12/20240612111450185133_40.png",
     "hasEpg": true,
-    "programmeCount": 40
+    "programmeCount": 59
   },
   {
     "id": "FTVVariety.tw",
@@ -2204,7 +2204,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2024/06/12/20240612111004078240_28.png",
     "hasEpg": true,
-    "programmeCount": 36
+    "programmeCount": 54
   },
   {
     "id": "FTVTravel.tw",
@@ -2215,7 +2215,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2024/06/12/20240612111321930292_24.png",
     "hasEpg": true,
-    "programmeCount": 76
+    "programmeCount": 117
   },
   {
     "id": "PTSTaigi.tw",
@@ -2226,7 +2226,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917031235354496_59.jpg",
     "hasEpg": true,
-    "programmeCount": 149
+    "programmeCount": 173
   },
   {
     "id": "公视戏剧.tw",
@@ -2237,7 +2237,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2024/06/12/20240612111443528309_38.png",
     "hasEpg": true,
-    "programmeCount": 40
+    "programmeCount": 56
   },
   {
     "id": "台视综合.tw",
@@ -2248,7 +2248,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917035053435180_29.jpg",
     "hasEpg": true,
-    "programmeCount": 154
+    "programmeCount": 178
   },
   {
     "id": "TTVFinance.tw",
@@ -2259,7 +2259,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917035036471417_10.jpg",
     "hasEpg": true,
-    "programmeCount": 132
+    "programmeCount": 158
   },
   {
     "id": "纬来综合.tw",
@@ -2270,7 +2270,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917031655265261_11.png",
     "hasEpg": true,
-    "programmeCount": 137
+    "programmeCount": 151
   },
   {
     "id": "VideolandDrama.tw",
@@ -2281,7 +2281,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917032202647189_89.png",
     "hasEpg": true,
-    "programmeCount": 139
+    "programmeCount": 162
   },
   {
     "id": "VideolandJapan.tw",
@@ -2292,7 +2292,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917033108660461_30.png",
     "hasEpg": true,
-    "programmeCount": 125
+    "programmeCount": 137
   },
   {
     "id": "VideolandMovie.tw",
@@ -2303,7 +2303,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917032743418857_37.png",
     "hasEpg": true,
-    "programmeCount": 80
+    "programmeCount": 93
   },
   {
     "id": "VideolandSports.tw",
@@ -2314,7 +2314,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917033004270852_19.png",
     "hasEpg": true,
-    "programmeCount": 113
+    "programmeCount": 132
   },
   {
     "id": "纬来育乐.tw",
@@ -2325,7 +2325,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917032931686009_60.png",
     "hasEpg": true,
-    "programmeCount": 140
+    "programmeCount": 165
   },
   {
     "id": "纬来精采.tw",
@@ -2347,7 +2347,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2024/06/12/20240612110237815701_88.png",
     "hasEpg": true,
-    "programmeCount": 48
+    "programmeCount": 72
   },
   {
     "id": "八大精彩.tw",
@@ -2358,7 +2358,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2024/06/12/20240612111517057071_67.png",
     "hasEpg": true,
-    "programmeCount": 62
+    "programmeCount": 92
   },
   {
     "id": "龙华经典.tw",
@@ -2369,7 +2369,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919173330371551_43.png",
     "hasEpg": true,
-    "programmeCount": 63
+    "programmeCount": 72
   },
   {
     "id": "龙华偶像.tw",
@@ -2380,7 +2380,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171708780431_98.png",
     "hasEpg": true,
-    "programmeCount": 91
+    "programmeCount": 106
   },
   {
     "id": "龙华戏剧.tw",
@@ -2402,7 +2402,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 90
+    "programmeCount": 104
   },
   {
     "id": "Catchplay电影.tw",
@@ -2413,7 +2413,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917032712744454_75.jpg",
     "hasEpg": true,
-    "programmeCount": 94
+    "programmeCount": 108
   },
   {
     "id": "AMC.tw",
@@ -2422,7 +2422,7 @@
     "aliases": [],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917032914589936_26.jpg",
     "hasEpg": true,
-    "programmeCount": 95
+    "programmeCount": 110
   },
   {
     "id": "HollywoodMovieChannel.tw",
@@ -2433,7 +2433,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 71
+    "programmeCount": 81
   },
   {
     "id": "靖天电影.tw",
@@ -2444,7 +2444,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917035253544256_62.jpg",
     "hasEpg": true,
-    "programmeCount": 81
+    "programmeCount": 93
   },
   {
     "id": "龙华电影.tw",
@@ -2455,7 +2455,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919173121682426_53.png",
     "hasEpg": true,
-    "programmeCount": 67
+    "programmeCount": 77
   },
   {
     "id": "龙华洋片.tw",
@@ -2466,7 +2466,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919173210969684_85.png",
     "hasEpg": true,
-    "programmeCount": 80
+    "programmeCount": 92
   },
   {
     "id": "采昌影剧.tw",
@@ -2477,7 +2477,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919173437679814_51.png",
     "hasEpg": true,
-    "programmeCount": 104
+    "programmeCount": 121
   },
   {
     "id": "靖天映画.tw",
@@ -2488,7 +2488,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917034648086712_56.jpg",
     "hasEpg": true,
-    "programmeCount": 73
+    "programmeCount": 84
   },
   {
     "id": "靖天戏剧.tw",
@@ -2510,7 +2510,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917034705563800_19.jpg",
     "hasEpg": true,
-    "programmeCount": 153
+    "programmeCount": 178
   },
   {
     "id": "影迷数位电影.tw",
@@ -2521,7 +2521,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919173450936196_74.png",
     "hasEpg": true,
-    "programmeCount": 84
+    "programmeCount": 97
   },
   {
     "id": "经典电影台.tw",
@@ -2532,7 +2532,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2024/06/12/20240612113519904800_19.png",
     "hasEpg": true,
-    "programmeCount": 27
+    "programmeCount": 38
   },
   {
     "id": "CMusic.tw",
@@ -2541,7 +2541,7 @@
     "aliases": [],
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919165925761257_21.png",
     "hasEpg": true,
-    "programmeCount": 2827
+    "programmeCount": 3000
   },
   {
     "id": "DreamWorks梦工厂动画.tw",
@@ -2552,7 +2552,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2024/06/12/20240612110728162254_39.png",
     "hasEpg": true,
-    "programmeCount": 125
+    "programmeCount": 186
   },
   {
     "id": "CinemaWorld.my",
@@ -2561,7 +2561,7 @@
     "aliases": [],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917035308652770_24.jpg",
     "hasEpg": true,
-    "programmeCount": 87
+    "programmeCount": 100
   },
   {
     "id": "精选动漫台.tw",
@@ -2572,7 +2572,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2024/06/12/20240612113540523500_57.png",
     "hasEpg": true,
-    "programmeCount": 84
+    "programmeCount": 124
   },
   {
     "id": "金光布袋戏.tw",
@@ -2583,7 +2583,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2024/06/12/20240612111604544110_65.png",
     "hasEpg": true,
-    "programmeCount": 32
+    "programmeCount": 48
   },
   {
     "id": "AXN.tw",
@@ -2592,7 +2592,7 @@
     "aliases": [],
     "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129130106814676_93",
     "hasEpg": true,
-    "programmeCount": 160
+    "programmeCount": 187
   },
   {
     "id": "Cinemax.tw",
@@ -2603,7 +2603,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/01/28/20250128120545564707_74",
     "hasEpg": true,
-    "programmeCount": 84
+    "programmeCount": 97
   },
   {
     "id": "DAZN1.uk",
@@ -2614,7 +2614,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917033019444810_34.jpg",
     "hasEpg": true,
-    "programmeCount": 93
+    "programmeCount": 108
   },
   {
     "id": "DAZN2.uk",
@@ -2625,7 +2625,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917033034750310_47.jpg",
     "hasEpg": true,
-    "programmeCount": 92
+    "programmeCount": 106
   },
   {
     "id": "Discovery.tw",
@@ -2634,7 +2634,7 @@
     "aliases": [],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917031417182203_69.jpg",
     "hasEpg": true,
-    "programmeCount": 146
+    "programmeCount": 168
   },
   {
     "id": "DW德国之声.tw",
@@ -2645,7 +2645,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2024/06/12/20240612111756574035_95.png",
     "hasEpg": true,
-    "programmeCount": 147
+    "programmeCount": 218
   },
   {
     "id": "EYETVTravel.tw",
@@ -2676,7 +2676,7 @@
     "aliases": [],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917035558520120_36.jpg",
     "hasEpg": true,
-    "programmeCount": 183
+    "programmeCount": 210
   },
   {
     "id": "博斯魅力.tw",
@@ -2687,7 +2687,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919170116799867_91.png",
     "hasEpg": true,
-    "programmeCount": 79
+    "programmeCount": 91
   },
   {
     "id": "博斯网球.tw",
@@ -2698,7 +2698,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917052057930545_19.jpg",
     "hasEpg": true,
-    "programmeCount": 39
+    "programmeCount": 47
   },
   {
     "id": "博斯无限Ⅰ.tw",
@@ -2709,7 +2709,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917052111304833_18.jpg",
     "hasEpg": true,
-    "programmeCount": 45
+    "programmeCount": 53
   },
   {
     "id": "博斯无限Ⅱ.tw",
@@ -2720,7 +2720,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917052219385831_92.jpg",
     "hasEpg": true,
-    "programmeCount": 64
+    "programmeCount": 77
   },
   {
     "id": "博斯运动Ⅰ.tw",
@@ -2731,7 +2731,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 57
+    "programmeCount": 68
   },
   {
     "id": "博斯运动Ⅱ.tw",
@@ -2742,7 +2742,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 76
+    "programmeCount": 87
   },
   {
     "id": "博斯高球Ⅰ.tw",
@@ -2753,7 +2753,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2026/05/12/20260512050041730740_19.png",
     "hasEpg": true,
-    "programmeCount": 14
+    "programmeCount": 20
   },
   {
     "id": "博斯高球Ⅱ.tw",
@@ -2764,7 +2764,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2026/05/12/20260512050041730740_19.png",
     "hasEpg": true,
-    "programmeCount": 14
+    "programmeCount": 20
   },
   {
     "id": "DaAi1.tw",
@@ -2786,7 +2786,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 288
+    "programmeCount": 337
   },
   {
     "id": "GoodTV.tw",
@@ -2797,7 +2797,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919165151658458_18.png",
     "hasEpg": true,
-    "programmeCount": 276
+    "programmeCount": 324
   },
   {
     "id": "Good2.tw",
@@ -2808,7 +2808,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919165151658458_18.png",
     "hasEpg": true,
-    "programmeCount": 276
+    "programmeCount": 324
   },
   {
     "id": "AsiaTravelTV.tw",
@@ -2819,7 +2819,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917052013256313_13.jpg",
     "hasEpg": true,
-    "programmeCount": 145
+    "programmeCount": 168
   },
   {
     "id": "智林体育.tw",
@@ -2830,7 +2830,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919170258664451_83.png",
     "hasEpg": true,
-    "programmeCount": 49
+    "programmeCount": 55
   },
   {
     "id": "靖天卡通.tw",
@@ -2841,7 +2841,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917052557563478_84.jpg",
     "hasEpg": true,
-    "programmeCount": 263
+    "programmeCount": 310
   },
   {
     "id": "猪哥亮歌厅秀.tw",
@@ -2852,7 +2852,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2024/06/12/20240612111010791311_42.png",
     "hasEpg": true,
-    "programmeCount": 46
+    "programmeCount": 66
   },
   {
     "id": "HBO强档巨献.tw",
@@ -2863,7 +2863,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917035339263398_57.jpg",
     "hasEpg": true,
-    "programmeCount": 83
+    "programmeCount": 94
   },
   {
     "id": "HBO原创巨献.tw",
@@ -2874,7 +2874,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917035405130629_50.jpg",
     "hasEpg": true,
-    "programmeCount": 104
+    "programmeCount": 119
   },
   {
     "id": "HBO温馨家庭.tw",
@@ -2885,7 +2885,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917035427937773_37.jpg",
     "hasEpg": true,
-    "programmeCount": 284
+    "programmeCount": 330
   },
   {
     "id": "爱尔达体育Ⅰ.tw",
@@ -2907,7 +2907,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919170004562118_16.png",
     "hasEpg": true,
-    "programmeCount": 76
+    "programmeCount": 75
   },
   {
     "id": "爱尔达体育Ⅲ.tw",
@@ -2918,7 +2918,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919170017338225_42.png",
     "hasEpg": true,
-    "programmeCount": 68
+    "programmeCount": 67
   },
   {
     "id": "爱尔达影剧.tw",
@@ -2929,7 +2929,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171734740564_46.png",
     "hasEpg": true,
-    "programmeCount": 148
+    "programmeCount": 173
   },
   {
     "id": "爱尔达体育Ⅳ.tw",
@@ -2951,7 +2951,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2024/06/12/20240612110257902484_18.png",
     "hasEpg": true,
-    "programmeCount": 77
+    "programmeCount": 115
   },
   {
     "id": "爱尔达生活旅游.tw",
@@ -2962,7 +2962,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2024/06/12/20240612111416131786_59.png",
     "hasEpg": true,
-    "programmeCount": 76
+    "programmeCount": 112
   },
   {
     "id": "湖南电影.cn",
@@ -2971,7 +2971,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 20
+    "programmeCount": 10
   },
   {
     "id": "GoldenEagleDocumentary.cn",
@@ -2989,7 +2989,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 42
+    "programmeCount": 19
   },
   {
     "id": "广东体育.cn",
@@ -3024,8 +3024,8 @@
     "group": "local",
     "aliases": [],
     "logo": "",
-    "hasEpg": false,
-    "programmeCount": 0
+    "hasEpg": true,
+    "programmeCount": 35
   },
   {
     "id": "广州竞赛.cn",
@@ -3033,8 +3033,8 @@
     "group": "local",
     "aliases": [],
     "logo": "",
-    "hasEpg": false,
-    "programmeCount": 0
+    "hasEpg": true,
+    "programmeCount": 23
   },
   {
     "id": "农林卫视.cn",
@@ -3045,8 +3045,8 @@
       "陕西农林卫视"
     ],
     "logo": "",
-    "hasEpg": false,
-    "programmeCount": 0
+    "hasEpg": true,
+    "programmeCount": 51
   },
   {
     "id": "AsianFood.tw",
@@ -3059,7 +3059,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919170840611834_26.png",
     "hasEpg": true,
-    "programmeCount": 248
+    "programmeCount": 286
   },
   {
     "id": "阿里郎.tw",
@@ -3073,7 +3073,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917035151658357_64.jpg",
     "hasEpg": true,
-    "programmeCount": 310
+    "programmeCount": 358
   },
   {
     "id": "我的欧洲电影.tw",
@@ -3086,7 +3086,7 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919173504365160_58.png",
     "hasEpg": true,
-    "programmeCount": 72
+    "programmeCount": 71
   },
   {
     "id": "汕头经济.cn",
@@ -3097,8 +3097,8 @@
       "汕头经济生活"
     ],
     "logo": "",
-    "hasEpg": false,
-    "programmeCount": 0
+    "hasEpg": true,
+    "programmeCount": 18
   },
   {
     "id": "广东珠江.cn",
@@ -3110,7 +3110,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 42
+    "programmeCount": 27
   },
   {
     "id": "HBO电影.tw",
@@ -3122,6 +3122,6 @@
     ],
     "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917035324057947_34.jpg",
     "hasEpg": true,
-    "programmeCount": 182
+    "programmeCount": 209
   }
 ]
