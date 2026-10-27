@@ -4,27 +4,54 @@ on:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
-      - name: 天数覆盖 + 简介接口
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '22' }
+      - name: 实测 tdm.mjs
         run: |
           mkdir -p out
-          B="https://appapi.tdm.com.mo"
           {
-            echo "=== 1) 天数覆盖（channelId=1） ==="
-            for d in 2026-10-26 2026-10-27 2026-10-28 2026-10-29 2026-10-30 2026-10-31 2026-11-01 2026-11-02 2026-11-03 2026-11-05; do
-              n=$(curl -sSL --max-time 20 "$B/api/v1.0/program-list/$d?channelId=1" 2>/dev/null | python3 -c "import sys,json;print(len(json.load(sys.stdin).get('data') or []))" 2>/dev/null || echo ERR)
-              echo "$d -> $n 条"
-            done
+            echo "=== listChannels ==="
+            node -e "
+              import('./src/sources/tdm.mjs').then(async m => {
+                const l = await m.listChannels();
+                console.log(JSON.stringify(l, null, 1));
+                console.error('共 ' + l.length + ' 台');
+              })
+            " 2>&1
             echo
-            echo "=== 2) 详情接口（带简介） ==="
-            for u in "program/11" "program/detail/11" "program/slug/our_people_our_life" "program/our_people_our_life" "program/11?lang=zh_TW"; do
-              echo "--- /api/v1.0/$u"
-              curl -sS --max-time 15 "$B/api/v1.0/$u" | head -c 500; echo
-            done
+            echo "=== getDayProgrammes 今天 (channelId=1) ==="
+            node -e "
+              import('./src/sources/tdm.mjs').then(async m => {
+                const d = new Date(Date.now()+8*3600e3).toISOString().slice(0,10).replace(/-/g,'');
+                const r = await m.getDayProgrammes('1', 1, d);
+                console.log('条数:', r.programmes.length, '| 标题:', r.pageTitle, '| err:', r.error || '无');
+                const withDesc = r.programmes.filter(p=>p.desc).length;
+                console.log('有简介:', withDesc, '/', r.programmes.length);
+                for (const p of r.programmes.slice(0,6)) {
+                  console.log(' ', new Date(p.startTs).toISOString(), '|', p.title, '|', (p.desc||'').slice(0,50));
+                }
+              })
+            " 2>&1
             echo
-            echo "=== 3) 用 slug 查详情 ==="
-            curl -sS --max-time 15 "$B/api/v1.0/program/our_people_our_life" | head -c 800; echo
+            echo "=== 8 天覆盖 (channelId=1,5,6,7,8,2) ==="
+            node -e "
+              import('./src/sources/tdm.mjs').then(async m => {
+                const base = new Date(Date.now()+8*3600e3);
+                for (const cid of ['1','2','5','6','7','8']) {
+                  let tot=0, days=0, desc=0;
+                  for (let i=0;i<9;i++){
+                    const t=new Date(base.getTime()+i*86400e3);
+                    const ymd=t.toISOString().slice(0,10).replace(/-/g,'');
+                    const r=await m.getDayProgrammes(cid,1,ymd);
+                    if(r.programmes.length){days++;tot+=r.programmes.length;desc+=r.programmes.filter(p=>p.desc).length}
+                  }
+                  console.log('channelId='+cid, '天数='+days, '条数='+tot, '简介='+desc);
+                }
+              })
+            " 2>&1
           } > out/report.txt 2>&1
       - uses: actions/upload-artifact@v4
         with: { name: tdm-probe, path: out/ }
