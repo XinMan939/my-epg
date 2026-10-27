@@ -69,6 +69,15 @@ jobs:
           URL="https://cdn.jsdelivr.net/gh/XinMan939/iptv-api@master/output/result.m3u"
           node src/index.mjs m3u "$URL" || echo "::warning::m3u 对齐失败，沿用 channels/m3u-map.json 里上一次的映射"
 
+      # 单元测试：normalize 的时间轴边界行为（重叠 / 乱序 / 短节目 / 末条超长）
+      #
+      # 为什么必须放在 build 前面：这三类缺陷**都不会让 build 失败**。
+      # 2026-10-27 实测过一次：产物里有 4 处时间轴倒序、632 条短节目一条没修好，
+      # 但 CI 全绿、日志全绿，只有把产物拆开逐条比对才看得出来。
+      # 有了这一步，改 normalize 改坏边界行为会直接卡在构建之前。
+      - name: 单元测试
+        run: npm test
+
       - name: 生成节目表
         env:
           DAYS: ${{ github.event.inputs.days || '7' }}
@@ -97,6 +106,15 @@ jobs:
           fi
           echo "节目总数: $(grep -c '<programme' output/epg.xml)"
           echo "频道总数: $(grep -c '<channel id' output/epg.xml)"
+
+      # 时间轴体检：把「不报错的错」变成红灯
+      #
+      # 为什么需要：2026-10-27 的线上产物里有 4 处节目重叠、2 个频道时间轴倒序，
+      # 但 build 成功、report.json 数字正常、上面「检查产物」那步也全过 ——
+      # 因为那些检查只看「文件非空 + XML 闭合」，不看内容对不对。
+      # 用户按时间翻节目单会看到「02:00 讲武堂」下面接着「00:58 影视背景」。
+      - name: 时间轴体检
+        run: node test/audit-output.mjs output/epg.xml.gz
 
       # 同步看板数据（web/report.json 是 Pages 上 index.html 的数据源）
       - name: 同步看板数据
