@@ -2898,9 +2898,9 @@
     "aliases": [
       "愛爾達體育1台"
     ],
-    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919165947404358_95.png",
+    "logo": "",
     "hasEpg": true,
-    "programmeCount": 71
+    "programmeCount": 125
   },
   {
     "id": "爱尔达体育Ⅱ.tw",
@@ -2909,9 +2909,9 @@
     "aliases": [
       "愛爾達體育2台"
     ],
-    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919170004562118_16.png",
+    "logo": "",
     "hasEpg": true,
-    "programmeCount": 63
+    "programmeCount": 107
   },
   {
     "id": "爱尔达体育Ⅲ.tw",
@@ -2920,9 +2920,9 @@
     "aliases": [
       "愛爾達體育3台"
     ],
-    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919170017338225_42.png",
+    "logo": "",
     "hasEpg": true,
-    "programmeCount": 54
+    "programmeCount": 98
   },
   {
     "id": "爱尔达影剧.tw",
@@ -2942,9 +2942,9 @@
     "aliases": [
       "愛爾達體育4台"
     ],
-    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919170029589080_71.png",
+    "logo": "",
     "hasEpg": true,
-    "programmeCount": 27
+    "programmeCount": 66
   },
   {
     "id": "爱尔达娱乐.tw",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T18:45:07.036Z",
+  "generatedAt": "2026-10-27T18:53:02.348Z",
   "days": 7,
   "dayList": [
     "20261028",
@@ -13,9 +13,9 @@
   "channelsTotal": 288,
   "channelsWithEpg": 278,
   "channelsEmpty": 10,
-  "channelsFull": 195,
-  "channelsPartial": 83,
-  "programmesTotal": 54333,
+  "channelsFull": 199,
+  "channelsPartial": 79,
+  "programmesTotal": 54514,
   "programmesWithDesc": 32503,
   "descCoverage": 60,
   "dateRange": [
@@ -23,12 +23,13 @@
     "20261103"
   ],
   "sourceStats": {
-    "epgpw": 179,
-    "tvmao": 43,
+    "epgpw": 175,
     "webncode": 17,
+    "tvmao": 43,
     "fengshows": 1,
     "litv": 13,
     "tdm": 6,
+    "elta": 4,
     "tvsou": 1
   },
   "fallbacks": [
@@ -2631,25 +2632,31 @@
       "alternatives": []
     },
     "爱尔达体育Ⅰ.tw": {
-      "confidence": "exact",
-      "source": "epgpw",
-      "sourceId": "457243",
-      "sourceName": "愛爾達體育1台",
-      "alternatives": []
+      "confidence": "override-unlisted",
+      "source": "elta",
+      "sourceId": "101",
+      "sourceName": "體育 1 台",
+      "alternatives": [
+        "epgpw:457243(愛爾達體育1台)"
+      ]
     },
     "爱尔达体育Ⅱ.tw": {
-      "confidence": "exact",
-      "source": "epgpw",
-      "sourceId": "457244",
-      "sourceName": "愛爾達體育2台",
-      "alternatives": []
+      "confidence": "override-unlisted",
+      "source": "elta",
+      "sourceId": "105",
+      "sourceName": "體育 2 台",
+      "alternatives": [
+        "epgpw:457244(愛爾達體育2台)"
+      ]
     },
     "爱尔达体育Ⅲ.tw": {
-      "confidence": "exact",
-      "source": "epgpw",
-      "sourceId": "457245",
-      "sourceName": "愛爾達體育3台",
-      "alternatives": []
+      "confidence": "override-unlisted",
+      "source": "elta",
+      "sourceId": "110",
+      "sourceName": "體育 3 台",
+      "alternatives": [
+        "epgpw:457245(愛爾達體育3台)"
+      ]
     },
     "爱尔达影剧.tw": {
       "confidence": "exact",
@@ -2659,11 +2666,13 @@
       "alternatives": []
     },
     "爱尔达体育Ⅳ.tw": {
-      "confidence": "exact",
-      "source": "epgpw",
-      "sourceId": "457246",
-      "sourceName": "愛爾達體育4台",
-      "alternatives": []
+      "confidence": "override-unlisted",
+      "source": "elta",
+      "sourceId": "115",
+      "sourceName": "體育 4 台",
+      "alternatives": [
+        "epgpw:457246(愛爾達體育4台)"
+      ]
     },
     "爱尔达娱乐.tw": {
       "confidence": "exact",
@@ -3068,11 +3077,11 @@
     "HBO强档巨献.tw": "epgpw:456656(HBO 強檔鉅獻)",
     "HBO原创巨献.tw": "epgpw:456657(HBO 原創鉅獻)",
     "HBO温馨家庭.tw": "epgpw:456658(HBO 溫馨家庭)",
-    "爱尔达体育Ⅰ.tw": "epgpw:457243(愛爾達體育1台)",
-    "爱尔达体育Ⅱ.tw": "epgpw:457244(愛爾達體育2台)",
-    "爱尔达体育Ⅲ.tw": "epgpw:457245(愛爾達體育3台)",
+    "爱尔达体育Ⅰ.tw": "elta:101(體育 1 台)",
+    "爱尔达体育Ⅱ.tw": "elta:105(體育 2 台)",
+    "爱尔达体育Ⅲ.tw": "elta:110(體育 3 台)",
     "爱尔达影剧.tw": "epgpw:457316(愛爾達影劇台HD)",
-    "爱尔达体育Ⅳ.tw": "epgpw:457246(愛爾達體育4台)",
+    "爱尔达体育Ⅳ.tw": "elta:115(體育 4 台)",
     "爱尔达娱乐.tw": "epgpw:370149(愛爾達娛樂台)",
     "爱尔达生活旅游.tw": "epgpw:370222(愛爾達生活旅遊台)",
     "快乐垂钓.cn": "tvmao:CCTVPAYFEE-KUAILECHUIDIAO(快乐垂钓)",
@@ -3230,11 +3239,11 @@
   ],
   "dayFillStats": [
     {
-      "id": "CCTV3.cn",
+      "id": "CCTV5Plus.cn",
       "before": 6,
       "after": 7,
       "sources": [
-        "tvmao:CCTV-CCTV3+21"
+        "tvmao:CCTV-CCTV5-PLUS+17"
       ]
     },
     {
@@ -3246,30 +3255,6 @@
       ]
     },
     {
-      "id": "CCTV6.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTV-CCTV6+32"
-      ]
-    },
-    {
-      "id": "CCTV8.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTV-CCTV8+37"
-      ]
-    },
-    {
-      "id": "CCTV5Plus.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTV-CCTV5-PLUS+17"
-      ]
-    },
-    {
       "id": "CCTV5.cn",
       "before": 6,
       "after": 7,
@@ -3278,11 +3263,27 @@
       ]
     },
     {
-      "id": "CCTV11.cn",
+      "id": "CCTV3.cn",
       "before": 6,
       "after": 7,
       "sources": [
-        "tvmao:CCTV-CCTV11+19"
+        "tvmao:CCTV-CCTV3+21"
+      ]
+    },
+    {
+      "id": "CCTV1.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTV-CCTV1+38"
+      ]
+    },
+    {
+      "id": "CCTV6.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTV-CCTV6+32"
       ]
     },
     {
@@ -3294,11 +3295,19 @@
       ]
     },
     {
-      "id": "CCTV12.cn",
+      "id": "CCTV8.cn",
       "before": 6,
       "after": 7,
       "sources": [
-        "tvmao:CCTV-CCTV12+31"
+        "tvmao:CCTV-CCTV8+37"
+      ]
+    },
+    {
+      "id": "CCTV7.cn",
+      "before": 5,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTV-CCTV7+76"
       ]
     },
     {
@@ -3310,11 +3319,19 @@
       ]
     },
     {
-      "id": "CCTV13.cn",
+      "id": "CCTV11.cn",
       "before": 6,
       "after": 7,
       "sources": [
-        "tvmao:CCTV-CCTV13+42"
+        "tvmao:CCTV-CCTV11+19"
+      ]
+    },
+    {
+      "id": "CCTV12.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTV-CCTV12+31"
       ]
     },
     {
@@ -3334,11 +3351,11 @@
       ]
     },
     {
-      "id": "CCTV4Europe.cn",
+      "id": "CCTV13.cn",
       "before": 6,
       "after": 7,
       "sources": [
-        "tvmao:CCTV-CCTVEUROPE+40"
+        "tvmao:CCTV-CCTV13+42"
       ]
     },
     {
@@ -3350,19 +3367,11 @@
       ]
     },
     {
-      "id": "HunanTV.cn",
-      "before": 5,
-      "after": 7,
-      "sources": [
-        "tvmao:HUNANTV1+72"
-      ]
-    },
-    {
-      "id": "ZhejiangSatelliteTV.cn",
+      "id": "CCTV4Europe.cn",
       "before": 6,
       "after": 7,
       "sources": [
-        "tvmao:ZJTV1+46"
+        "tvmao:CCTV-CCTVEUROPE+40"
       ]
     },
     {
@@ -3374,11 +3383,27 @@
       ]
     },
     {
-      "id": "DragonTV.cn",
+      "id": "ZhejiangSatelliteTV.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:ZJTV1+46"
+      ]
+    },
+    {
+      "id": "HunanTV.cn",
       "before": 5,
       "after": 7,
       "sources": [
-        "tvmao:DONGFANG1+83"
+        "tvmao:HUNANTV1+72"
+      ]
+    },
+    {
+      "id": "CCTV4Asia.cn",
+      "before": 5,
+      "after": 6,
+      "sources": [
+        "epgpw:410375+38"
       ]
     },
     {
@@ -3406,6 +3431,22 @@
       ]
     },
     {
+      "id": "DragonTV.cn",
+      "before": 5,
+      "after": 7,
+      "sources": [
+        "tvmao:DONGFANG1+83"
+      ]
+    },
+    {
+      "id": "ChongqingSatelliteTV.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:CCQTV1+38"
+      ]
+    },
+    {
       "id": "GuangdongSatelliteTV.cn",
       "before": 6,
       "after": 7,
@@ -3430,22 +3471,6 @@
       ]
     },
     {
-      "id": "ChongqingSatelliteTV.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:CCQTV1+38"
-      ]
-    },
-    {
-      "id": "SichuanSatelliteTV.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:SCTV1+32"
-      ]
-    },
-    {
       "id": "HubeiSatelliteTV.cn",
       "before": 5,
       "after": 7,
@@ -3462,27 +3487,19 @@
       ]
     },
     {
+      "id": "SichuanSatelliteTV.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:SCTV1+32"
+      ]
+    },
+    {
       "id": "HebeiSatelliteTV.cn",
       "before": 6,
       "after": 7,
       "sources": [
         "tvmao:HEBEI1+31"
-      ]
-    },
-    {
-      "id": "CCTV7.cn",
-      "before": 5,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTV-CCTV7+76"
-      ]
-    },
-    {
-      "id": "ShanxiSatelliteTV.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:SXTV1+28"
       ]
     },
     {
@@ -3502,6 +3519,14 @@
       ]
     },
     {
+      "id": "ShanxiSatelliteTV.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:SXTV1+28"
+      ]
+    },
+    {
       "id": "JilinSatelliteTV.cn",
       "before": 5,
       "after": 7,
@@ -3518,19 +3543,19 @@
       ]
     },
     {
-      "id": "JiangxiSatelliteTV.cn",
-      "before": 5,
-      "after": 7,
-      "sources": [
-        "tvmao:JXTV1+76"
-      ]
-    },
-    {
       "id": "FujianSatelliteTV.cn",
       "before": 6,
       "after": 7,
       "sources": [
         "tvmao:FJTV2+41"
+      ]
+    },
+    {
+      "id": "JiangxiSatelliteTV.cn",
+      "before": 5,
+      "after": 7,
+      "sources": [
+        "tvmao:JXTV1+76"
       ]
     },
     {
@@ -3558,19 +3583,19 @@
       ]
     },
     {
-      "id": "GansuSatelliteTV.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:GSTV1+50"
-      ]
-    },
-    {
       "id": "QinghaiSatelliteTV.cn",
       "before": 6,
       "after": 7,
       "sources": [
         "tvmao:QHTV1+27"
+      ]
+    },
+    {
+      "id": "GansuSatelliteTV.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:GSTV1+50"
       ]
     },
     {
@@ -3598,14 +3623,6 @@
       ]
     },
     {
-      "id": "HainanSatelliteTV.cn",
-      "before": 5,
-      "after": 7,
-      "sources": [
-        "tvmao:TCTC1+77"
-      ]
-    },
-    {
       "id": "XiamenSatelliteTV.cn",
       "before": 6,
       "after": 7,
@@ -3614,11 +3631,11 @@
       ]
     },
     {
-      "id": "YanbianSatelliteTV.cn",
-      "before": 6,
+      "id": "HainanSatelliteTV.cn",
+      "before": 5,
       "after": 7,
       "sources": [
-        "tvmao:YANBIAN1+21"
+        "tvmao:TCTC1+77"
       ]
     },
     {
@@ -3627,6 +3644,14 @@
       "after": 7,
       "sources": [
         "tvmao:BINGTUAN+35"
+      ]
+    },
+    {
+      "id": "YanbianSatelliteTV.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:YANBIAN1+21"
       ]
     },
     {
@@ -3654,27 +3679,11 @@
       ]
     },
     {
-      "id": "CCTV1.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTV-CCTV1+38"
-      ]
-    },
-    {
       "id": "PhoenixHongKongChannel.hk",
       "before": 0,
       "after": 5,
       "sources": [
         "webncode:tvb_hdjade+243"
-      ]
-    },
-    {
-      "id": "CCTV4Asia.cn",
-      "before": 5,
-      "after": 6,
-      "sources": [
-        "epgpw:410375+38"
       ]
     },
     {
@@ -3687,9 +3696,9 @@
     }
   ],
   "descStats": {
-    "realCoverage": 59.8,
+    "realCoverage": 59.6,
     "realCount": 32503,
-    "totalCount": 54333,
+    "totalCount": 54514,
     "echoCount": 633,
     "titles": 956,
     "filled": 17919,
@@ -5814,28 +5823,28 @@
           "id": "爱尔达体育Ⅰ.tw",
           "name": "爱尔达体育1",
           "status": "ok",
-          "mine": 40,
+          "mine": 82,
           "key": "e2:1832",
-          "inter": 23,
-          "rate": 0.575
+          "inter": 14,
+          "rate": 0.17073170731707318
         },
         {
           "id": "爱尔达体育Ⅱ.tw",
           "name": "爱尔达体育2",
           "status": "ok",
-          "mine": 37,
+          "mine": 78,
           "key": "e2:1815",
-          "inter": 18,
-          "rate": 0.4864864864864865
+          "inter": 13,
+          "rate": 0.16666666666666666
         },
         {
           "id": "爱尔达体育Ⅲ.tw",
           "name": "爱尔达体育3",
           "status": "ok",
-          "mine": 25,
+          "mine": 60,
           "key": "e2:1833",
-          "inter": 13,
-          "rate": 0.52
+          "inter": 9,
+          "rate": 0.15
         },
         {
           "id": "爱尔达影剧.tw",
@@ -5850,7 +5859,7 @@
           "id": "爱尔达体育Ⅳ.tw",
           "name": "爱尔达体育Ⅳ",
           "status": "none",
-          "mine": 8
+          "mine": 52
         },
         {
           "id": "爱尔达娱乐.tw",
@@ -7120,7 +7129,7 @@
         }
       },
       "coverageBefore": 26.8,
-      "coverageAfter": 55.3
+      "coverageAfter": 55.1
     },
     "tvmao": {
       "titles": 956,
@@ -9023,19 +9032,19 @@
           "id": "爱尔达体育Ⅰ.tw",
           "name": "爱尔达体育Ⅰ",
           "status": "none",
-          "mine": 43
+          "mine": 82
         },
         {
           "id": "爱尔达体育Ⅱ.tw",
           "name": "爱尔达体育Ⅱ",
           "status": "none",
-          "mine": 41
+          "mine": 79
         },
         {
           "id": "爱尔达体育Ⅲ.tw",
           "name": "爱尔达体育Ⅲ",
           "status": "none",
-          "mine": 29
+          "mine": 62
         },
         {
           "id": "爱尔达影剧.tw",
@@ -9047,7 +9056,7 @@
           "id": "爱尔达体育Ⅳ.tw",
           "name": "爱尔达体育Ⅳ",
           "status": "none",
-          "mine": 8
+          "mine": 52
         },
         {
           "id": "爱尔达娱乐.tw",
@@ -18172,29 +18181,31 @@
       "aliases": [
         "愛爾達體育1台"
       ],
-      "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919165947404358_95.png",
-      "count": 71,
-      "days": 4,
+      "logo": "",
+      "count": 125,
+      "days": 7,
       "perDay": {
-        "20261028": 17,
-        "20261029": 21,
+        "20261028": 18,
+        "20261029": 23,
         "20261030": 17,
         "20261031": 16,
-        "20261101": 0,
-        "20261102": 0,
-        "20261103": 0
+        "20261101": 15,
+        "20261102": 19,
+        "20261103": 17
       },
       "withDesc": 0,
       "descRate": 0,
       "withCategory": 0,
-      "uniqTitles": 43,
+      "uniqTitles": 82,
       "first": "20261028000000 +0800",
-      "last": "20261101000000 +0800",
-      "usedSource": "epgpw:457243(愛爾達體育1台)",
-      "matchConfidence": "exact",
-      "matchedSourceName": "愛爾達體育1台",
-      "alternatives": [],
-      "status": "partial"
+      "last": "20261104000000 +0800",
+      "usedSource": "elta:101(體育 1 台)",
+      "matchConfidence": "override-unlisted",
+      "matchedSourceName": "體育 1 台",
+      "alternatives": [
+        "epgpw:457243(愛爾達體育1台)"
+      ],
+      "status": "full"
     },
     {
       "id": "爱尔达体育Ⅱ.tw",
@@ -18203,30 +18214,32 @@
       "aliases": [
         "愛爾達體育2台"
       ],
-      "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919170004562118_16.png",
-      "count": 63,
-      "days": 5,
+      "logo": "",
+      "count": 107,
+      "days": 8,
       "perDay": {
         "20261027": 1,
-        "20261028": 15,
-        "20261029": 15,
-        "20261030": 16,
+        "20261028": 16,
+        "20261029": 14,
+        "20261030": 14,
         "20261031": 16,
-        "20261101": 0,
-        "20261102": 0,
-        "20261103": 0
+        "20261101": 15,
+        "20261102": 15,
+        "20261103": 16
       },
       "withDesc": 0,
       "descRate": 0,
       "withCategory": 0,
-      "uniqTitles": 41,
+      "uniqTitles": 79,
       "first": "20261027230000 +0800",
-      "last": "20261101000000 +0800",
-      "usedSource": "epgpw:457244(愛爾達體育2台)",
-      "matchConfidence": "exact",
-      "matchedSourceName": "愛爾達體育2台",
-      "alternatives": [],
-      "status": "partial"
+      "last": "20261104002500 +0800",
+      "usedSource": "elta:105(體育 2 台)",
+      "matchConfidence": "override-unlisted",
+      "matchedSourceName": "體育 2 台",
+      "alternatives": [
+        "epgpw:457244(愛爾達體育2台)"
+      ],
+      "status": "full"
     },
     {
       "id": "爱尔达体育Ⅲ.tw",
@@ -18235,29 +18248,31 @@
       "aliases": [
         "愛爾達體育3台"
       ],
-      "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919170017338225_42.png",
-      "count": 54,
-      "days": 4,
+      "logo": "",
+      "count": 98,
+      "days": 7,
       "perDay": {
         "20261028": 14,
-        "20261029": 14,
-        "20261030": 15,
+        "20261029": 13,
+        "20261030": 13,
         "20261031": 11,
-        "20261101": 0,
-        "20261102": 0,
-        "20261103": 0
+        "20261101": 14,
+        "20261102": 18,
+        "20261103": 15
       },
       "withDesc": 0,
       "descRate": 0,
       "withCategory": 0,
-      "uniqTitles": 30,
+      "uniqTitles": 63,
       "first": "20261028000000 +0800",
-      "last": "20261101000000 +0800",
-      "usedSource": "epgpw:457245(愛爾達體育3台)",
-      "matchConfidence": "exact",
-      "matchedSourceName": "愛爾達體育3台",
-      "alternatives": [],
-      "status": "partial"
+      "last": "20261104013000 +0800",
+      "usedSource": "elta:110(體育 3 台)",
+      "matchConfidence": "override-unlisted",
+      "matchedSourceName": "體育 3 台",
+      "alternatives": [
+        "epgpw:457245(愛爾達體育3台)"
+      ],
+      "status": "full"
     },
     {
       "id": "爱尔达影剧.tw",
@@ -18297,29 +18312,32 @@
       "aliases": [
         "愛爾達體育4台"
       ],
-      "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919170029589080_71.png",
-      "count": 27,
-      "days": 4,
+      "logo": "",
+      "count": 66,
+      "days": 8,
       "perDay": {
-        "20261028": 7,
-        "20261029": 6,
-        "20261030": 6,
+        "20261027": 1,
+        "20261028": 10,
+        "20261029": 10,
+        "20261030": 8,
         "20261031": 8,
-        "20261101": 0,
-        "20261102": 0,
-        "20261103": 0
+        "20261101": 12,
+        "20261102": 14,
+        "20261103": 3
       },
       "withDesc": 0,
       "descRate": 0,
       "withCategory": 0,
-      "uniqTitles": 8,
-      "first": "20261028000000 +0800",
-      "last": "20261101000000 +0800",
-      "usedSource": "epgpw:457246(愛爾達體育4台)",
-      "matchConfidence": "exact",
-      "matchedSourceName": "愛爾達體育4台",
-      "alternatives": [],
-      "status": "partial"
+      "uniqTitles": 52,
+      "first": "20261027233000 +0800",
+      "last": "20261104031500 +0800",
+      "usedSource": "elta:115(體育 4 台)",
+      "matchConfidence": "override-unlisted",
+      "matchedSourceName": "體育 4 台",
+      "alternatives": [
+        "epgpw:457246(愛爾達體育4台)"
+      ],
+      "status": "full"
     },
     {
       "id": "爱尔达娱乐.tw",

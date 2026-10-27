@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tv generator-info-name="my-epg" generator-info-url="https://github.com/" date="20261028024506 +0800">
+<tv generator-info-name="my-epg" generator-info-url="https://github.com/" date="20261028025301 +0800">
   <channel id="CCTV1.cn">
     <display-name lang="zh">CCTV-1 综合</display-name>
     <display-name lang="zh">CCTV-1</display-name>
@@ -1180,17 +1180,14 @@
   <channel id="爱尔达体育Ⅰ.tw">
     <display-name lang="zh">爱尔达体育Ⅰ</display-name>
     <display-name lang="zh">愛爾達體育1台</display-name>
-    <icon src="https://epg.pw/media/images/epg/2025/09/19/20250919165947404358_95.png" />
   </channel>
   <channel id="爱尔达体育Ⅱ.tw">
     <display-name lang="zh">爱尔达体育Ⅱ</display-name>
     <display-name lang="zh">愛爾達體育2台</display-name>
-    <icon src="https://epg.pw/media/images/epg/2025/09/19/20250919170004562118_16.png" />
   </channel>
   <channel id="爱尔达体育Ⅲ.tw">
     <display-name lang="zh">爱尔达体育Ⅲ</display-name>
     <display-name lang="zh">愛爾達體育3台</display-name>
-    <icon src="https://epg.pw/media/images/epg/2025/09/19/20250919170017338225_42.png" />
   </channel>
   <channel id="爱尔达影剧.tw">
     <display-name lang="zh">爱尔达影剧</display-name>
@@ -1200,7 +1197,6 @@
   <channel id="爱尔达体育Ⅳ.tw">
     <display-name lang="zh">爱尔达体育Ⅳ</display-name>
     <display-name lang="zh">愛爾達體育4台</display-name>
-    <icon src="https://epg.pw/media/images/epg/2025/09/19/20250919170029589080_71.png" />
   </channel>
   <channel id="爱尔达娱乐.tw">
     <display-name lang="zh">爱尔达娱乐</display-name>
@@ -186345,569 +186341,995 @@
     <title lang="zh">怪獸與牠們的產地</title>
     <desc lang="zh">一名奇獸學家在魔法世界的緊張情勢逐漸升高之際來到紐約市，卻在找回他失蹤怪獸的時候，遭到追捕…</desc>
   </programme>
-  <programme start="20261028000000 +0800" stop="20261028010000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">英超精華 第8輪(普)</title>
+  <programme start="20261028000000 +0800" stop="20261028003000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">歐冠足球誌#8</title>
+  </programme>
+  <programme start="20261028003000 +0800" stop="20261028010000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">體壇最前線 10/27 首播</title>
   </programme>
   <programme start="20261028010000 +0800" stop="20261028030000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">英超 阿斯頓維拉 VS 曼城 第8輪(普)</title>
+    <title lang="zh">英超 阿斯頓維拉 VS 曼城 第8輪</title>
   </programme>
   <programme start="20261028030000 +0800" stop="20261028031500 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">義甲精華 第6輪(普)</title>
+    <title lang="zh">義甲精華 第6輪</title>
   </programme>
   <programme start="20261028031500 +0800" stop="20261028033000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">義甲精華 第7輪(普)</title>
+    <title lang="zh">義甲精華 第7輪</title>
   </programme>
   <programme start="20261028033000 +0800" stop="20261028055000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">LIVE 義甲 AS羅馬 VS 卡里亞利 第9輪(原音)(普)</title>
+    <title lang="zh">義甲 AS羅馬 VS 卡里亞利 第9輪(原音) LIVE</title>
   </programme>
   <programme start="20261028055000 +0800" stop="20261028080000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">英超 曼聯 VS 伯恩茅斯 第8輪(普)</title>
+    <title lang="zh">英超 曼聯 VS 伯恩茅斯 第8輪</title>
   </programme>
   <programme start="20261028080000 +0800" stop="20261028104500 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">LIVE NBA 活塞 VS 尼克 10/28 例行賽(普)</title>
+    <title lang="zh">NBA 活塞 VS 尼克 10/28 例行賽 LIVE</title>
   </programme>
   <programme start="20261028104500 +0800" stop="20261028110000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">法甲精華 第7輪(普)</title>
+    <title lang="zh">法甲精華 第7輪</title>
   </programme>
   <programme start="20261028110000 +0800" stop="20261028120000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">英超精華 第8輪(普)</title>
+    <title lang="zh">英超精華 第8輪</title>
   </programme>
   <programme start="20261028120000 +0800" stop="20261028140000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">NBA 活塞 VS 尼克 10/28 例行賽(普)</title>
+    <title lang="zh">NBA 活塞 VS 尼克 10/28 例行賽 今日最新</title>
   </programme>
   <programme start="20261028140000 +0800" stop="20261028150000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">英超精華 第8輪(普)</title>
+    <title lang="zh">英超精華 第8輪</title>
   </programme>
   <programme start="20261028150000 +0800" stop="20261028173000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">CEV男排歐錦賽 法國 VS 波蘭 金牌戰(普)</title>
+    <title lang="zh">CEV男排歐錦賽 法國 VS 波蘭 金牌戰</title>
   </programme>
-  <programme start="20261028173000 +0800" stop="20261028180000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">英超名人堂 #21 (新)(普)</title>
+  <programme start="20261028173000 +0800" stop="20261028183000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">英超名人堂 #21 Marcus Stewart 屹立不倒 首播</title>
   </programme>
-  <programme start="20261028180000 +0800" stop="20261028200000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">NBA 活塞 VS 尼克 10/28 例行賽(普)</title>
+  <programme start="20261028183000 +0800" stop="20261028203000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">NBA 活塞 VS 尼克 10/28 例行賽 今日最新</title>
   </programme>
-  <programme start="20261028200000 +0800" stop="20261028223000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">MLB 釀酒人 VS 光芒 世界大賽G4 10/28(普)</title>
+  <programme start="20261028203000 +0800" stop="20261028230000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">MLB 釀酒人 VS 光芒 世界大賽G4 10/28 今日最新</title>
   </programme>
-  <programme start="20261028223000 +0800" stop="20261028233000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">英超精華 第8輪(普)</title>
+  <programme start="20261028230000 +0800" stop="20261028233000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">歐冠足球誌#8</title>
   </programme>
   <programme start="20261028233000 +0800" stop="20261029000000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">體壇最前線 10/28 (新)(普)</title>
+    <title lang="zh">體壇最前線 10/28 首播</title>
   </programme>
   <programme start="20261029000000 +0800" stop="20261029003000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">歐冠足球誌#8(普)</title>
+    <title lang="zh">歐冠足球誌#8</title>
   </programme>
   <programme start="20261029003000 +0800" stop="20261029010000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">體壇最前線 10/28(普)</title>
+    <title lang="zh">體壇最前線 10/28</title>
   </programme>
   <programme start="20261029010000 +0800" stop="20261029011500 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">義甲精華 第8輪(普)</title>
+    <title lang="zh">義甲精華 第8輪</title>
   </programme>
   <programme start="20261029011500 +0800" stop="20261029033500 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">LIVE 義甲 AC米蘭 VS 波隆納 第9輪(原音)(普)</title>
+    <title lang="zh">義甲 AC米蘭 VS 波隆納 第9輪(原音) LIVE</title>
   </programme>
-  <programme start="20261029033500 +0800" stop="20261029063000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">CEV歐洲女排錦標賽 義大利 VS 土耳其 金牌戰(普)</title>
+  <programme start="20261029033500 +0800" stop="20261029061000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">CEV歐洲女排錦標賽 義大利 VS 土耳其 金牌戰</title>
   </programme>
-  <programme start="20261029063000 +0800" stop="20261029070000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">英超名人堂 #21(普)</title>
+  <programme start="20261029061000 +0800" stop="20261029063000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">體壇最前線 10/28</title>
+  </programme>
+  <programme start="20261029063000 +0800" stop="20261029064500 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">義甲精華 第6輪</title>
+  </programme>
+  <programme start="20261029064500 +0800" stop="20261029070000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">義甲精華 第7輪</title>
   </programme>
   <programme start="20261029070000 +0800" stop="20261029080000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">歐冠精華 第3比賽日 10/21(普)</title>
+    <title lang="zh">歐冠精華 第3比賽日 10/21</title>
   </programme>
   <programme start="20261029080000 +0800" stop="20261029104500 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">LIVE NBA 勇士 VS 灰狼 10/29 例行賽(普)</title>
+    <title lang="zh">NBA 勇士 VS 灰狼 10/29 例行賽 LIVE</title>
   </programme>
   <programme start="20261029104500 +0800" stop="20261029110000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">義甲精華 第8輪(普)</title>
+    <title lang="zh">義甲精華 第8輪</title>
   </programme>
   <programme start="20261029110000 +0800" stop="20261029120000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">英超精華 第8輪(普)</title>
+    <title lang="zh">英超精華 第8輪</title>
   </programme>
   <programme start="20261029120000 +0800" stop="20261029123000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">體壇最前線 10/28(普)</title>
+    <title lang="zh">體壇最前線 10/28</title>
   </programme>
   <programme start="20261029123000 +0800" stop="20261029133000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">歐冠精華 第3比賽日 10/22(普)</title>
+    <title lang="zh">歐冠精華 第3比賽日 10/22</title>
   </programme>
   <programme start="20261029133000 +0800" stop="20261029140000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">歐冠足球誌#8(普)</title>
+    <title lang="zh">歐冠足球誌#8</title>
   </programme>
   <programme start="20261029140000 +0800" stop="20261029160000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">NBA 勇士 VS 灰狼 10/29 例行賽(普)</title>
+    <title lang="zh">NBA 勇士 VS 灰狼 10/29 例行賽 今日最新</title>
   </programme>
   <programme start="20261029160000 +0800" stop="20261029163000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">體壇最前線 10/28(普)</title>
+    <title lang="zh">體壇最前線 10/28</title>
   </programme>
   <programme start="20261029163000 +0800" stop="20261029190000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">CEV男排歐錦賽 法國 VS 波蘭 金牌戰(普)</title>
+    <title lang="zh">CEV男排歐錦賽 法國 VS 波蘭 金牌戰</title>
   </programme>
   <programme start="20261029190000 +0800" stop="20261029210000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">NBA 勇士 VS 灰狼 10/29 例行賽(普)</title>
+    <title lang="zh">NBA 勇士 VS 灰狼 10/29 例行賽 今日最新</title>
   </programme>
   <programme start="20261029210000 +0800" stop="20261029220000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">英超精華 第8輪(普)</title>
+    <title lang="zh">英超精華 第8輪</title>
   </programme>
   <programme start="20261029220000 +0800" stop="20261029223000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">LIVE 體壇最前線 10/29(普)</title>
+    <title lang="zh">體壇最前線 10/29 LIVE</title>
   </programme>
-  <programme start="20261029223000 +0800" stop="20261029230000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">英超名人堂 #21(普)</title>
+  <programme start="20261029223000 +0800" stop="20261029233000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">英超名人堂 #21 Marcus Stewart 屹立不倒</title>
   </programme>
-  <programme start="20261029230000 +0800" stop="20261030000000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">英超精華 第8輪(普)</title>
+  <programme start="20261029233000 +0800" stop="20261030000000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">體壇最前線 10/29</title>
   </programme>
   <programme start="20261030000000 +0800" stop="20261030020000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">英超 切爾西 VS 托特納姆熱刺 第8輪(普)</title>
+    <title lang="zh">英超 切爾西 VS 托特納姆熱刺 第8輪</title>
   </programme>
   <programme start="20261030020000 +0800" stop="20261030040000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">英超 阿斯頓維拉 VS 曼城 第8輪(普)</title>
+    <title lang="zh">英超 阿斯頓維拉 VS 曼城 第8輪</title>
   </programme>
   <programme start="20261030040000 +0800" stop="20261030063000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">CEV歐洲女排錦標賽 波蘭 VS 塞爾維亞 銅牌戰(普)</title>
+    <title lang="zh">CEV歐洲女排錦標賽 波蘭 VS 塞爾維亞 銅牌戰</title>
   </programme>
   <programme start="20261030063000 +0800" stop="20261030083000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">英超 兵工廠 VS 艾佛頓 第8輪(普)</title>
+    <title lang="zh">英超 兵工廠 VS 艾佛頓 第8輪</title>
   </programme>
   <programme start="20261030083000 +0800" stop="20261030093000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">英超精華 第8輪(普)</title>
+    <title lang="zh">英超精華 第8輪</title>
   </programme>
   <programme start="20261030093000 +0800" stop="20261030100000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">體壇最前線 10/29(普)</title>
+    <title lang="zh">體壇最前線 10/29</title>
   </programme>
   <programme start="20261030100000 +0800" stop="20261030124500 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">LIVE NBA 灰熊 VS 拓荒者 10/30 例行賽(普)</title>
+    <title lang="zh">NBA 灰熊 VS 拓荒者 10/30 例行賽 LIVE</title>
   </programme>
   <programme start="20261030124500 +0800" stop="20261030130000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">義甲精華 第8輪(普)</title>
+    <title lang="zh">義甲精華 第8輪</title>
   </programme>
   <programme start="20261030130000 +0800" stop="20261030150000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">NBA 灰熊 VS 拓荒者 10/30 例行賽(普)</title>
+    <title lang="zh">NBA 灰熊 VS 拓荒者 10/30 例行賽 今日最新</title>
   </programme>
   <programme start="20261030150000 +0800" stop="20261030173000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">CEV歐洲女排錦標賽 波蘭 VS 塞爾維亞 銅牌戰(普)</title>
+    <title lang="zh">CEV歐洲女排錦標賽 波蘭 VS 塞爾維亞 銅牌戰</title>
   </programme>
   <programme start="20261030173000 +0800" stop="20261030174500 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">義甲精華 第8輪(普)</title>
+    <title lang="zh">義甲精華 第8輪</title>
   </programme>
   <programme start="20261030174500 +0800" stop="20261030180000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">法甲精華 第8輪 (新)(普)</title>
+    <title lang="zh">法甲精華 第8輪 首播</title>
   </programme>
   <programme start="20261030180000 +0800" stop="20261030193000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">LIVE 2026 達卡青年奧運(普)</title>
+    <title lang="zh">青年奧運 古巴VS土耳其 五人制棒球 預賽 10/30 LIVE</title>
   </programme>
   <programme start="20261030193000 +0800" stop="20261030210000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">LIVE 2026 達卡青年奧運(普)</title>
+    <title lang="zh">青年奧運 中華VS塞內加爾 五人制棒球 預賽 10/30 LIVE</title>
   </programme>
   <programme start="20261030210000 +0800" stop="20261030213000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">LIVE 體壇最前線 10/30(普)</title>
+    <title lang="zh">體壇最前線 10/30 LIVE</title>
   </programme>
   <programme start="20261030213000 +0800" stop="20261030230000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">2026 達卡青年奧運(普)</title>
+    <title lang="zh">青年奧運 中華VS塞內加爾 五人制棒球 預賽 10/30 今日最新</title>
   </programme>
-  <programme start="20261030230000 +0800" stop="20261031014500 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">亞運 中華隊 田徑 預賽/決賽 9/27(普)</title>
+  <programme start="20261030230000 +0800" stop="20261031002500 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">青年奧運 墨西哥VS敘利亞 五人制棒球 預賽 10/31(原音) LIVE</title>
+  </programme>
+  <programme start="20261031002500 +0800" stop="20261031014500 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">青年奧運 法國VS肯亞 五人制棒球 預賽 10/31(原音) LIVE</title>
   </programme>
   <programme start="20261031014500 +0800" stop="20261031040500 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">LIVE 法甲 勒哈佛 VS 巴黎聖日耳曼 第9輪(原音)(普)</title>
+    <title lang="zh">法甲 勒哈佛 VS 巴黎聖日耳曼 第9輪(原音) LIVE</title>
   </programme>
-  <programme start="20261031040500 +0800" stop="20261031063000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">CEV歐洲女排錦標賽 波蘭 VS 塞爾維亞 銅牌戰(普)</title>
+  <programme start="20261031040500 +0800" stop="20261031060000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">CEV歐洲女排錦標賽 波蘭 VS 塞爾維亞 銅牌戰</title>
   </programme>
-  <programme start="20261031063000 +0800" stop="20261031070000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">英超名人堂 #21(普)</title>
+  <programme start="20261031060000 +0800" stop="20261031070000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">英超名人堂 #21 Marcus Stewart 屹立不倒</title>
   </programme>
   <programme start="20261031070000 +0800" stop="20261031073000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">體壇最前線 10/30(普)</title>
+    <title lang="zh">NBA動態#1 首播</title>
   </programme>
   <programme start="20261031073000 +0800" stop="20261031100000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">LIVE NBA 尼克 VS 76人 10/31 NBA盃(普)</title>
+    <title lang="zh">NBA 尼克 VS 76人 10/31 NBA盃 LIVE</title>
   </programme>
-  <programme start="20261031100000 +0800" stop="20261031124500 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">LIVE NBA 湖人 VS 勇士 10/31 NBA盃(普)</title>
+  <programme start="20261031100000 +0800" stop="20261031130000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">NBA 湖人 VS 勇士 10/31 NBA盃 LIVE</title>
   </programme>
-  <programme start="20261031124500 +0800" stop="20261031131500 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">體壇最前線 10/30(普)</title>
+  <programme start="20261031130000 +0800" stop="20261031140000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">英超精華 第8輪</title>
   </programme>
-  <programme start="20261031131500 +0800" stop="20261031133000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">法甲精華 第8輪(普)</title>
+  <programme start="20261031140000 +0800" stop="20261031143000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">體壇最前線 10/30</title>
   </programme>
-  <programme start="20261031133000 +0800" stop="20261031143000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">英超精華 第8輪(普)</title>
+  <programme start="20261031143000 +0800" stop="20261031170000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">MLB 光芒 VS 釀酒人 世界大賽G6(如有需要) 10/31 今日最新</title>
   </programme>
-  <programme start="20261031143000 +0800" stop="20261031150000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">體壇最前線 10/30(普)</title>
-  </programme>
-  <programme start="20261031150000 +0800" stop="20261031173000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">MLB 光芒 VS 釀酒人 世界大賽G6(如有需要) 10/31(普)</title>
+  <programme start="20261031170000 +0800" stop="20261031173000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">體壇最前線 10/30</title>
   </programme>
   <programme start="20261031173000 +0800" stop="20261031174500 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">法甲精華 第8輪(普)</title>
+    <title lang="zh">法甲精華 第8輪</title>
   </programme>
   <programme start="20261031174500 +0800" stop="20261031202000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">MLB 光芒 VS 釀酒人 世界大賽G6(如有需要) 10/31(普)</title>
+    <title lang="zh">MLB 光芒 VS 釀酒人 世界大賽G6(如有需要) 10/31 今日最新</title>
   </programme>
   <programme start="20261031202000 +0800" stop="20261031223500 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">LIVE 英超 切爾西 VS 曼聯 第9輪(普)</title>
+    <title lang="zh">英超 切爾西 VS 曼聯 第9輪 LIVE</title>
   </programme>
   <programme start="20261031223500 +0800" stop="20261031225000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">義甲精華 第8輪(普)</title>
+    <title lang="zh">義甲精華 第8輪</title>
   </programme>
-  <programme start="20261031225000 +0800" stop="20261101000000 +0800" channel="爱尔达体育Ⅰ.tw">
-    <title lang="zh">LIVE 英超 曼城 VS 布萊頓 第9輪(普)</title>
+  <programme start="20261031225000 +0800" stop="20261101010500 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">英超 曼城 VS 布萊頓 第9輪 LIVE</title>
+  </programme>
+  <programme start="20261101010500 +0800" stop="20261101012000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">德甲精華 第7輪</title>
+  </programme>
+  <programme start="20261101012000 +0800" stop="20261101033000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">德甲 拜仁慕尼黑 VS 多特蒙德 第8輪(原音) LIVE</title>
+  </programme>
+  <programme start="20261101033000 +0800" stop="20261101055000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">義甲 AC米蘭 VS 國際米蘭 第10輪(原音) LIVE</title>
+  </programme>
+  <programme start="20261101055000 +0800" stop="20261101062000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">MLB好球連發#26</title>
+  </programme>
+  <programme start="20261101062000 +0800" stop="20261101073000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">2026 達卡青年奧運 開幕典禮 今日最新</title>
+  </programme>
+  <programme start="20261101073000 +0800" stop="20261101080000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">體壇最前線 10/31 首播</title>
+  </programme>
+  <programme start="20261101080000 +0800" stop="20261101110000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">NBA 灰狼 VS 馬刺 11/1 例行賽 LIVE</title>
+  </programme>
+  <programme start="20261101110000 +0800" stop="20261101111500 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">德甲精華 第7輪</title>
+  </programme>
+  <programme start="20261101111500 +0800" stop="20261101132000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">德甲 拜仁慕尼黑 VS 多特蒙德 第8輪 D-LIVE</title>
+  </programme>
+  <programme start="20261101132000 +0800" stop="20261101152500 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">義甲 AC米蘭 VS 國際米蘭 第10輪 D-LIVE</title>
+  </programme>
+  <programme start="20261101152500 +0800" stop="20261101172500 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">NBA 灰狼 VS 馬刺 11/1 例行賽 今日最新</title>
+  </programme>
+  <programme start="20261101172500 +0800" stop="20261101193000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">青年奧運 朱宥恩 武術 女子太極拳/男子長拳預賽 11/1 LIVE</title>
+  </programme>
+  <programme start="20261101193000 +0800" stop="20261101213000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">NBA 灰狼 VS 馬刺 11/1 例行賽 今日最新</title>
+  </programme>
+  <programme start="20261101213000 +0800" stop="20261101215000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">德甲精華 第7輪</title>
+  </programme>
+  <programme start="20261101215000 +0800" stop="20261102000500 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">英超 阿斯頓維拉 VS 富勒姆 第9輪 LIVE</title>
+  </programme>
+  <programme start="20261102000500 +0800" stop="20261102002000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">義甲精華 第8輪</title>
+  </programme>
+  <programme start="20261102002000 +0800" stop="20261102023500 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">英超 利物浦 VS 兵工廠 第9輪 LIVE</title>
+  </programme>
+  <programme start="20261102023500 +0800" stop="20261102030000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">體壇最前線 11/1 首播</title>
+  </programme>
+  <programme start="20261102030000 +0800" stop="20261102031500 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">義甲精華 第8輪</title>
+  </programme>
+  <programme start="20261102031500 +0800" stop="20261102033000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">法甲精華 第8輪</title>
+  </programme>
+  <programme start="20261102033000 +0800" stop="20261102055000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">義甲 尤文圖斯 VS 拿坡里 第10輪(原音) LIVE</title>
+  </programme>
+  <programme start="20261102055000 +0800" stop="20261102080000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">NBA 灰狼 VS 馬刺 11/1 例行賽</title>
+  </programme>
+  <programme start="20261102080000 +0800" stop="20261102090000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">歐冠精華 第3比賽日 10/21</title>
+  </programme>
+  <programme start="20261102090000 +0800" stop="20261102100000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">歐冠精華 第3比賽日 10/22</title>
+  </programme>
+  <programme start="20261102100000 +0800" stop="20261102124500 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">NBA 暴龍 VS 湖人 11/2 例行賽 LIVE</title>
+  </programme>
+  <programme start="20261102124500 +0800" stop="20261102130000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">德甲精華 第7輪</title>
+  </programme>
+  <programme start="20261102130000 +0800" stop="20261102143000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">青年奧運 古巴VS中華 五人制棒球 預賽 11/2 D-LIVE</title>
+  </programme>
+  <programme start="20261102143000 +0800" stop="20261102163000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">德甲 拜仁慕尼黑 VS 多特蒙德 第8輪</title>
+  </programme>
+  <programme start="20261102163000 +0800" stop="20261102172500 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">歐冠精華 第3比賽日 10/22</title>
+  </programme>
+  <programme start="20261102172500 +0800" stop="20261102193000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">青年奧運 朱宥恩 武術 女子太極拳/男子長拳預賽 11/1 LIVE</title>
+  </programme>
+  <programme start="20261102193000 +0800" stop="20261102213000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">F1 墨西哥站 正賽 今日最新</title>
+  </programme>
+  <programme start="20261102213000 +0800" stop="20261102220000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">體壇最前線 11/2 LIVE</title>
+  </programme>
+  <programme start="20261102220000 +0800" stop="20261102222500 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">Phil Wizard 無限對決</title>
+  </programme>
+  <programme start="20261102222500 +0800" stop="20261103023000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">青年奧運 桌球 11/2(原音) LIVE</title>
+  </programme>
+  <programme start="20261103023000 +0800" stop="20261103030000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">體壇最前線 11/2 首播</title>
+  </programme>
+  <programme start="20261103030000 +0800" stop="20261103033000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">NBA動態#1</title>
+  </programme>
+  <programme start="20261103033000 +0800" stop="20261103035000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">義甲精華 第8輪</title>
+  </programme>
+  <programme start="20261103035000 +0800" stop="20261103060500 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">英超 紐卡索聯 VS 艾佛頓 第9輪(原音) LIVE</title>
+  </programme>
+  <programme start="20261103060500 +0800" stop="20261103080000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">義甲 AC米蘭 VS 國際米蘭 第10輪</title>
+  </programme>
+  <programme start="20261103080000 +0800" stop="20261103090000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">歐冠精華 第3比賽日 10/22</title>
+  </programme>
+  <programme start="20261103090000 +0800" stop="20261103103000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">青年奧運 五人制棒球 四強 11/2 D-LIVE</title>
+  </programme>
+  <programme start="20261103103000 +0800" stop="20261103110000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">體壇最前線 11/2</title>
+  </programme>
+  <programme start="20261103110000 +0800" stop="20261103134500 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">NBA 熱火 VS 湖人 11/3 例行賽 LIVE</title>
+  </programme>
+  <programme start="20261103134500 +0800" stop="20261103140000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">德甲精華 第7輪</title>
+  </programme>
+  <programme start="20261103140000 +0800" stop="20261103160000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">義甲 AC米蘭 VS 國際米蘭 第10輪</title>
+  </programme>
+  <programme start="20261103160000 +0800" stop="20261103175500 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">NBA 熱火 VS 湖人 11/3 例行賽 今日最新</title>
+  </programme>
+  <programme start="20261103175500 +0800" stop="20261103200000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">青年奧運 朱宥恩 武術 女子太極拳/男子長拳決賽1(原音) 11/3 LIVE</title>
+  </programme>
+  <programme start="20261103200000 +0800" stop="20261103210000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">英超精華 第9輪 首播</title>
+  </programme>
+  <programme start="20261103210000 +0800" stop="20261103213000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">歐冠足球誌#9 首播</title>
+  </programme>
+  <programme start="20261103213000 +0800" stop="20261103233000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">NBA 熱火 VS 湖人 11/3 例行賽 今日最新</title>
+  </programme>
+  <programme start="20261103233000 +0800" stop="20261104000000 +0800" channel="爱尔达体育Ⅰ.tw">
+    <title lang="zh">體壇最前線 11/3 首播</title>
   </programme>
   <programme start="20261027230000 +0800" stop="20261028013000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">MLB 釀酒人 VS 光芒 世界大賽G3 10/27(普)</title>
+    <title lang="zh">中華職棒 中信 VS 味全 台灣大賽G6 10/26</title>
   </programme>
-  <programme start="20261028013000 +0800" stop="20261028033000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">亞運 哈薩克VS中華 排球 男子9-12排名賽 10/2(普)</title>
+  <programme start="20261028013000 +0800" stop="20261028020000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">體壇最前線 10/27</title>
   </programme>
-  <programme start="20261028033000 +0800" stop="20261028040000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">體壇最前線 10/27(普)</title>
+  <programme start="20261028020000 +0800" stop="20261028040000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">亞運 哈薩克VS中華 排球 男子9-12排名賽 10/2</title>
   </programme>
   <programme start="20261028040000 +0800" stop="20261028050000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">英超精華 第8輪(普)</title>
+    <title lang="zh">英超精華 第8輪</title>
   </programme>
   <programme start="20261028050000 +0800" stop="20261028073000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">MLB 釀酒人 VS 光芒 世界大賽G3 10/27(普)</title>
+    <title lang="zh">MLB 釀酒人 VS 光芒 世界大賽G3 10/27</title>
   </programme>
   <programme start="20261028073000 +0800" stop="20261028080000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">歐冠足球誌#8(普)</title>
+    <title lang="zh">歐冠足球誌#8</title>
   </programme>
   <programme start="20261028080000 +0800" stop="20261028113000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">LIVE MLB 釀酒人 VS 光芒 世界大賽G4 10/28(普)</title>
+    <title lang="zh">MLB 釀酒人 VS 光芒 世界大賽G4 10/28 LIVE</title>
   </programme>
   <programme start="20261028113000 +0800" stop="20261028120000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">體壇最前線 10/27(普)</title>
+    <title lang="zh">體壇最前線 10/27</title>
   </programme>
   <programme start="20261028120000 +0800" stop="20261028143000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">MLB 釀酒人 VS 光芒 世界大賽G4 10/28(普)</title>
+    <title lang="zh">MLB 釀酒人 VS 光芒 世界大賽G4 10/28 今日最新</title>
   </programme>
   <programme start="20261028143000 +0800" stop="20261028163000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">F1 新加坡站 正賽(普)</title>
+    <title lang="zh">F1 新加坡站 正賽</title>
   </programme>
   <programme start="20261028163000 +0800" stop="20261028190000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">MLB 釀酒人 VS 光芒 世界大賽G4 10/28(普)</title>
+    <title lang="zh">MLB 釀酒人 VS 光芒 世界大賽G4 10/28 今日最新</title>
   </programme>
   <programme start="20261028190000 +0800" stop="20261028191500 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">法甲精華 第7輪(普)</title>
+    <title lang="zh">法甲精華 第7輪</title>
   </programme>
   <programme start="20261028191500 +0800" stop="20261028193000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">義甲精華 第8輪 (新)(普)</title>
+    <title lang="zh">義甲精華 第8輪 首播</title>
   </programme>
   <programme start="20261028193000 +0800" stop="20261028220000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">MLB 釀酒人 VS 光芒 世界大賽G4 10/28(普)</title>
+    <title lang="zh">中華職棒 中信 VS 味全 台灣大賽G6 10/26</title>
   </programme>
   <programme start="20261028220000 +0800" stop="20261028223000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">LIVE 體壇最前線 10/28(普)</title>
+    <title lang="zh">體壇最前線 10/28 LIVE</title>
   </programme>
-  <programme start="20261028223000 +0800" stop="20261029010000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">MLB 釀酒人 VS 光芒 世界大賽G4 10/28(普)</title>
+  <programme start="20261028223000 +0800" stop="20261028230000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">亞運英雄 榮耀回顧#1</title>
   </programme>
-  <programme start="20261029010000 +0800" stop="20261029013000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">體壇最前線 10/28(普)</title>
+  <programme start="20261028230000 +0800" stop="20261029013000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">MLB 釀酒人 VS 光芒 世界大賽G4 10/28 今日最新</title>
   </programme>
   <programme start="20261029013000 +0800" stop="20261029033000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">亞運 中華VS越南 排球 男子9-10排名賽 10/3(普)</title>
+    <title lang="zh">亞運 中華VS越南 排球 男子9-10排名賽 10/3</title>
   </programme>
   <programme start="20261029033000 +0800" stop="20261029055000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">LIVE 義甲 蒙札 VS 拿坡里 第9輪(原音)(普)</title>
+    <title lang="zh">義甲 蒙札 VS 拿坡里 第9輪(原音) LIVE</title>
   </programme>
   <programme start="20261029055000 +0800" stop="20261029080000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">MLB 釀酒人 VS 光芒 世界大賽G4 10/28(普)</title>
+    <title lang="zh">MLB 釀酒人 VS 光芒 世界大賽G4 10/28</title>
   </programme>
   <programme start="20261029080000 +0800" stop="20261029113000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">LIVE MLB 釀酒人 VS 光芒 世界大賽G5(如有需要) 10/29(普)</title>
+    <title lang="zh">MLB 釀酒人 VS 光芒 世界大賽G5(如有需要) 10/29 LIVE</title>
   </programme>
   <programme start="20261029113000 +0800" stop="20261029120000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">體壇最前線 10/28(普)</title>
+    <title lang="zh">體壇最前線 10/28</title>
   </programme>
   <programme start="20261029120000 +0800" stop="20261029143000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">MLB 釀酒人 VS 光芒 世界大賽G5(如有需要) 10/29(普)</title>
+    <title lang="zh">MLB 釀酒人 VS 光芒 世界大賽G5(如有需要) 10/29 今日最新</title>
   </programme>
   <programme start="20261029143000 +0800" stop="20261029150000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">體壇最前線 10/28(普)</title>
+    <title lang="zh">體壇最前線 10/28</title>
   </programme>
   <programme start="20261029150000 +0800" stop="20261029153000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">歐冠足球誌#8(普)</title>
+    <title lang="zh">歐冠足球誌#8</title>
   </programme>
   <programme start="20261029153000 +0800" stop="20261029180000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">MLB 釀酒人 VS 光芒 世界大賽G5(如有需要) 10/29(普)</title>
+    <title lang="zh">MLB 釀酒人 VS 光芒 世界大賽G5(如有需要) 10/29 今日最新</title>
   </programme>
   <programme start="20261029180000 +0800" stop="20261029181500 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">義甲精華 第8輪(普)</title>
+    <title lang="zh">義甲精華 第8輪</title>
   </programme>
   <programme start="20261029181500 +0800" stop="20261029183000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">德甲精華 第7輪 (新)(普)</title>
+    <title lang="zh">德甲精華 第7輪 首播</title>
   </programme>
-  <programme start="20261029183000 +0800" stop="20261029193000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">英超精華 第8輪(普)</title>
+  <programme start="20261029183000 +0800" stop="20261029190000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">歐冠足球誌#8</title>
   </programme>
-  <programme start="20261029193000 +0800" stop="20261029233000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">LIVE WTT冠軍賽 蒙佩利爾站 單打32強 (下)10/29(普)</title>
+  <programme start="20261029190000 +0800" stop="20261029230000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 單打32強 (下)10/29 LIVE</title>
   </programme>
-  <programme start="20261029233000 +0800" stop="20261030000000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">歐冠足球誌#8(普)</title>
+  <programme start="20261029230000 +0800" stop="20261030000000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">英超精華 第8輪</title>
   </programme>
   <programme start="20261030000000 +0800" stop="20261030003000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">體壇最前線 10/29 (首)(普)</title>
+    <title lang="zh">體壇最前線 10/29 首播</title>
   </programme>
   <programme start="20261030003000 +0800" stop="20261030013000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">英超精華 第8輪(普)</title>
+    <title lang="zh">英超精華 第8輪</title>
   </programme>
   <programme start="20261030013000 +0800" stop="20261030050000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">LIVE WTT冠軍賽 蒙佩利爾站 單打16強 (上)10/30(普)</title>
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 單打16強 (上)10/30 LIVE</title>
   </programme>
   <programme start="20261030050000 +0800" stop="20261030053000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">體壇最前線 10/29(普)</title>
+    <title lang="zh">體壇最前線 10/29</title>
   </programme>
-  <programme start="20261030053000 +0800" stop="20261030073000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">【WTT 世界桌球巡迴賽 暫用】(普)</title>
+  <programme start="20261030053000 +0800" stop="20261030080000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">中華職棒 中信 VS 味全 台灣大賽G5 10/25(精華版)</title>
   </programme>
-  <programme start="20261030073000 +0800" stop="20261030100000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">MLB 釀酒人 VS 光芒 世界大賽G5(如有需要) 10/29(普)</title>
+  <programme start="20261030080000 +0800" stop="20261030103000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">中華職棒 中信 VS 味全 台灣大賽G6 10/26</title>
   </programme>
-  <programme start="20261030100000 +0800" stop="20261030103000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">體壇最前線 10/29(普)</title>
-  </programme>
-  <programme start="20261030103000 +0800" stop="20261030123000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">【WTT 世界桌球巡迴賽 暫用】(普)</title>
-  </programme>
-  <programme start="20261030123000 +0800" stop="20261030130000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">MLB好球連發#29(普)</title>
+  <programme start="20261030103000 +0800" stop="20261030130000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">MLB 釀酒人 VS 光芒 世界大賽G5(如有需要) 10/29</title>
   </programme>
   <programme start="20261030130000 +0800" stop="20261030133000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">體壇最前線 10/29(普)</title>
+    <title lang="zh">體壇最前線 10/29</title>
   </programme>
   <programme start="20261030133000 +0800" stop="20261030160000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">MLB 釀酒人 VS 光芒 世界大賽G5(如有需要) 10/29(普)</title>
+    <title lang="zh">MLB 釀酒人 VS 光芒 世界大賽G5(如有需要) 10/29</title>
   </programme>
   <programme start="20261030160000 +0800" stop="20261030170000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">英超精華 第8輪(普)</title>
+    <title lang="zh">英超精華 第8輪</title>
   </programme>
   <programme start="20261030170000 +0800" stop="20261030190000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">【WTT 世界桌球巡迴賽 暫用】(普)</title>
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 單打32/16強回顧 今日最新</title>
   </programme>
   <programme start="20261030190000 +0800" stop="20261030230000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">LIVE WTT冠軍賽 蒙佩利爾站 單打16強 (下) 10/30(普)</title>
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 單打16強 (下) 10/30 LIVE</title>
   </programme>
   <programme start="20261030230000 +0800" stop="20261030233000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">體壇最前線 10/30 (首)(普)</title>
+    <title lang="zh">體壇最前線 10/30 首播</title>
   </programme>
   <programme start="20261030233000 +0800" stop="20261031013000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">NBA 灰熊 VS 拓荒者 10/30 例行賽(普)</title>
+    <title lang="zh">NBA 灰熊 VS 拓荒者 10/30 例行賽 今日最新</title>
   </programme>
   <programme start="20261031013000 +0800" stop="20261031053000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">LIVE WTT冠軍賽 蒙佩利爾站 單打16強 10/31(普)</title>
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 單打16強 10/31 LIVE</title>
   </programme>
-  <programme start="20261031053000 +0800" stop="20261031063000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">2026 Crufts 與狗共舞賽 精華回顧(普)</title>
+  <programme start="20261031053000 +0800" stop="20261031062500 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">2026 Crufts 與狗共舞賽 精華回顧</title>
   </programme>
-  <programme start="20261031063000 +0800" stop="20261031090000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">CEV歐洲女排錦標賽 義大利 VS 土耳其 金牌戰(普)</title>
+  <programme start="20261031062500 +0800" stop="20261031090000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">CEV歐洲女排錦標賽 義大利 VS 土耳其 金牌戰</title>
   </programme>
   <programme start="20261031090000 +0800" stop="20261031103000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">LIVE ISU花式滑冰大獎賽 加拿大站 男子短曲 10/31(普)</title>
+    <title lang="zh">ISU花式滑冰大獎賽 加拿大站 男子短曲 10/31(原音) LIVE</title>
   </programme>
   <programme start="20261031103000 +0800" stop="20261031110000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">LIVE ISU花式滑冰大獎賽 加拿大站 開幕典禮 10/31(普)</title>
+    <title lang="zh">ISU花式滑冰大獎賽 加拿大站 開幕典禮 10/31(原音) LIVE</title>
   </programme>
   <programme start="20261031110000 +0800" stop="20261031111500 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">世界羽球戰報第八季 #10(普)</title>
+    <title lang="zh">世界羽球戰報第八季 #10</title>
   </programme>
   <programme start="20261031111500 +0800" stop="20261031123000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">LIVE ISU花式滑冰大獎賽 加拿大站 雙人短曲 10/31(普)</title>
+    <title lang="zh">ISU花式滑冰大獎賽 加拿大站 雙人短曲 10/31(原音) LIVE</title>
   </programme>
   <programme start="20261031123000 +0800" stop="20261031130000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">2026 BWF世界羽球雜誌#10 (新)(普)</title>
+    <title lang="zh">2026 BWF世界羽球雜誌#10 首播</title>
   </programme>
   <programme start="20261031130000 +0800" stop="20261031133000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">體壇最前線 10/30(普)</title>
+    <title lang="zh">體壇最前線 10/30</title>
   </programme>
   <programme start="20261031133000 +0800" stop="20261031153000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">NBA 尼克 VS 76人 10/31 NBA盃(普)</title>
+    <title lang="zh">NBA 尼克 VS 76人 10/31 NBA盃 今日最新</title>
   </programme>
-  <programme start="20261031153000 +0800" stop="20261031160000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">體壇最前線 10/30(普)</title>
+  <programme start="20261031153000 +0800" stop="20261031163000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">青年奧運 中華VS塞內加爾 五人制棒球 預賽 10/30</title>
   </programme>
-  <programme start="20261031160000 +0800" stop="20261031180000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">NBA 湖人 VS 勇士 10/31 NBA盃(普)</title>
+  <programme start="20261031163000 +0800" stop="20261031170000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">體壇最前線 10/30</title>
   </programme>
-  <programme start="20261031180000 +0800" stop="20261031190000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">2026 達卡青年奧運(普)</title>
+  <programme start="20261031170000 +0800" stop="20261031190000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">NBA 湖人 VS 勇士 10/31 NBA盃 今日最新</title>
   </programme>
   <programme start="20261031190000 +0800" stop="20261031223000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">LIVE WTT冠軍賽 蒙佩利爾站 單打八強 10/31(普)</title>
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 單打八強 10/31 LIVE</title>
   </programme>
   <programme start="20261031223000 +0800" stop="20261031230000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">體壇最前線 10/31 (首)(普)</title>
+    <title lang="zh">體壇最前線 10/31 首播</title>
   </programme>
-  <programme start="20261031230000 +0800" stop="20261101000000 +0800" channel="爱尔达体育Ⅱ.tw">
-    <title lang="zh">NBA 尼克 VS 76人 10/31 NBA盃(普)</title>
+  <programme start="20261031230000 +0800" stop="20261101010000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">NBA 尼克 VS 76人 10/31 NBA盃 今日最新</title>
+  </programme>
+  <programme start="20261101010000 +0800" stop="20261101050000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 單打八強 11/1 LIVE</title>
+  </programme>
+  <programme start="20261101050000 +0800" stop="20261101053000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">歐冠足球誌#8</title>
+  </programme>
+  <programme start="20261101053000 +0800" stop="20261101060000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">體壇最前線 10/31</title>
+  </programme>
+  <programme start="20261101060000 +0800" stop="20261101061500 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">BWF世界羽球週報#35</title>
+  </programme>
+  <programme start="20261101061500 +0800" stop="20261101074000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">ISU花式滑冰大獎賽 加拿大站 男子短曲 10/31</title>
+  </programme>
+  <programme start="20261101074000 +0800" stop="20261101093000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">ISU花式滑冰大獎賽 加拿大站 男子長曲 11/1(原音) LIVE</title>
+  </programme>
+  <programme start="20261101093000 +0800" stop="20261101094500 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">BWF世界羽球週報#35</title>
+  </programme>
+  <programme start="20261101094500 +0800" stop="20261101104500 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">ISU花式滑冰大獎賽 加拿大站 雙人長曲 11/1(原音) LIVE</title>
+  </programme>
+  <programme start="20261101104500 +0800" stop="20261101120000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">2026 達卡青年奧運 開幕典禮 今日最新</title>
+  </programme>
+  <programme start="20261101120000 +0800" stop="20261101140000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 單打16強/八強回顧 今日最新</title>
+  </programme>
+  <programme start="20261101140000 +0800" stop="20261101160000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">NBA 湖人 VS 勇士 10/31 NBA盃</title>
+  </programme>
+  <programme start="20261101160000 +0800" stop="20261101180000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 單打16強/八強回顧 今日最新</title>
+  </programme>
+  <programme start="20261101180000 +0800" stop="20261101220000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 單打四強 11/1 LIVE</title>
+  </programme>
+  <programme start="20261101220000 +0800" stop="20261101222500 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">體壇最前線 11/1 LIVE</title>
+  </programme>
+  <programme start="20261101222500 +0800" stop="20261102003000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">青年奧運 桌球 男/女單打預賽 11/1 LIVE</title>
+  </programme>
+  <programme start="20261102003000 +0800" stop="20261102013000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 女單決賽 11/2 LIVE</title>
+  </programme>
+  <programme start="20261102013000 +0800" stop="20261102030000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 男單決賽 11/2 LIVE</title>
+  </programme>
+  <programme start="20261102030000 +0800" stop="20261102033000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">體壇最前線 11/1</title>
+  </programme>
+  <programme start="20261102033000 +0800" stop="20261102060000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">F1 墨西哥站 正賽 LIVE</title>
+  </programme>
+  <programme start="20261102060000 +0800" stop="20261102080000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">義甲 AC米蘭 VS 國際米蘭 第10輪</title>
+  </programme>
+  <programme start="20261102080000 +0800" stop="20261102083000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">體壇最前線 11/1</title>
+  </programme>
+  <programme start="20261102083000 +0800" stop="20261102103000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">F1 墨西哥站 正賽 今日最新</title>
+  </programme>
+  <programme start="20261102103000 +0800" stop="20261102114500 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 女單決賽 11/2 今日最新</title>
+  </programme>
+  <programme start="20261102114500 +0800" stop="20261102130000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 男單決賽 11/2 今日最新</title>
+  </programme>
+  <programme start="20261102130000 +0800" stop="20261102150000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">F1 墨西哥站 正賽 今日最新</title>
+  </programme>
+  <programme start="20261102150000 +0800" stop="20261102170000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">NBA 湖人 VS 勇士 10/31 NBA盃</title>
+  </programme>
+  <programme start="20261102170000 +0800" stop="20261102185500 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">NBA 暴龍 VS 湖人 11/2 例行賽 今日最新</title>
+  </programme>
+  <programme start="20261102185500 +0800" stop="20261102210000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">青年奧運 李瀚/温楚庭 游泳 預賽 11/2 LIVE</title>
+  </programme>
+  <programme start="20261102210000 +0800" stop="20261102225500 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">NBA 暴龍 VS 湖人 11/2 例行賽 今日最新</title>
+  </programme>
+  <programme start="20261102225500 +0800" stop="20261103002500 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">青年奧運 五人制棒球 四強 11/2(原音) LIVE</title>
+  </programme>
+  <programme start="20261103002500 +0800" stop="20261103020000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">青年奧運 五人制棒球 四強 11/2(原音) LIVE</title>
+  </programme>
+  <programme start="20261103020000 +0800" stop="20261103023000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">體壇最前線 11/2</title>
+  </programme>
+  <programme start="20261103023000 +0800" stop="20261103050000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">中華職棒 中信 VS 味全 台灣大賽G6 10/26</title>
+  </programme>
+  <programme start="20261103050000 +0800" stop="20261103070000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">英超 切爾西 VS 曼聯 第9輪</title>
+  </programme>
+  <programme start="20261103070000 +0800" stop="20261103090000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">F1 墨西哥站 正賽</title>
+  </programme>
+  <programme start="20261103090000 +0800" stop="20261103120000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">MLB 光芒 VS 釀酒人 世界大賽G1 10/24</title>
+  </programme>
+  <programme start="20261103120000 +0800" stop="20261103123000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">體壇最前線 11/2</title>
+  </programme>
+  <programme start="20261103123000 +0800" stop="20261103150000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">中華職棒 中信 VS 味全 台灣大賽G6 10/26</title>
+  </programme>
+  <programme start="20261103150000 +0800" stop="20261103153000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">體壇最前線 11/2</title>
+  </programme>
+  <programme start="20261103153000 +0800" stop="20261103174000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">英超 利物浦 VS 兵工廠 第9輪</title>
+  </programme>
+  <programme start="20261103174000 +0800" stop="20261103175500 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">義甲精華 第9輪 首播</title>
+  </programme>
+  <programme start="20261103175500 +0800" stop="20261103200000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">青年奧運 李耀霖 柔道 預賽 11/3 LIVE</title>
+  </programme>
+  <programme start="20261103200000 +0800" stop="20261103220000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">青年奧運 朱宥恩 武術 女子太極拳/男子長拳決賽1 11/3 D-LIVE</title>
+  </programme>
+  <programme start="20261103220000 +0800" stop="20261103223000 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">體壇最前線 11/3 LIVE</title>
+  </programme>
+  <programme start="20261103223000 +0800" stop="20261103225500 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">Phil Wizard 無限對決</title>
+  </programme>
+  <programme start="20261103225500 +0800" stop="20261104002500 +0800" channel="爱尔达体育Ⅱ.tw">
+    <title lang="zh">青年奧運 五人制棒球 銅牌戰 11/3 LIVE</title>
   </programme>
   <programme start="20261028000000 +0800" stop="20261028003000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">體壇最前線 10/27 (新)(普)</title>
+    <title lang="zh">體壇最前線 10/27 首播</title>
   </programme>
   <programme start="20261028003000 +0800" stop="20261028013000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">2026 Crufts 敏捷障礙賽 青少年組 精華回顧(普)</title>
+    <title lang="zh">2026 Crufts 敏捷障礙賽 青少年組 精華回顧</title>
   </programme>
   <programme start="20261028013000 +0800" stop="20261028050000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">LIVE WTT冠軍賽 蒙佩利爾站 單打32強 (上) 10/28(普)</title>
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 彭郁涵 單打32強 (上) 10/28 LIVE</title>
   </programme>
   <programme start="20261028050000 +0800" stop="20261028060000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">體壇最前線 10/27(普)</title>
+    <title lang="zh">2026 Crufts 敏捷障礙賽 青少年組 精華回顧</title>
   </programme>
   <programme start="20261028060000 +0800" stop="20261028083000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">CEV歐洲女排錦標賽 波蘭 VS 塞爾維亞 銅牌戰(普)</title>
+    <title lang="zh">CEV歐洲女排錦標賽 波蘭 VS 塞爾維亞 銅牌戰</title>
   </programme>
   <programme start="20261028083000 +0800" stop="20261028090000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">體壇最前線 10/27(普)</title>
+    <title lang="zh">體壇最前線 10/27</title>
   </programme>
   <programme start="20261028090000 +0800" stop="20261028110000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">WTT冠軍賽 蒙佩利爾站 單打32強第一日回顧(普)</title>
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 單打32強第一日回顧 中華隊 今日最新</title>
   </programme>
   <programme start="20261028110000 +0800" stop="20261028130000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">WTT冠軍賽 蒙佩利爾站 單打32強第一日回顧(普)</title>
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 單打32強第一日回顧 中華隊 今日最新</title>
   </programme>
   <programme start="20261028130000 +0800" stop="20261028133000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">體壇最前線 10/27(普)</title>
+    <title lang="zh">體壇最前線 10/27</title>
   </programme>
   <programme start="20261028133000 +0800" stop="20261028153000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">CEV男排歐錦賽 芬蘭 VS 斯洛維尼亞 銅牌戰(普)</title>
+    <title lang="zh">CEV男排歐錦賽 芬蘭 VS 斯洛維尼亞 銅牌戰</title>
   </programme>
   <programme start="20261028153000 +0800" stop="20261028160000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">體壇最前線 10/27(普)</title>
+    <title lang="zh">體壇最前線 10/27</title>
   </programme>
   <programme start="20261028160000 +0800" stop="20261028170000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">2026 Crufts 敏捷障礙賽 青少年組 精華回顧(普)</title>
+    <title lang="zh">2026 Crufts 敏捷障礙賽 青少年組 精華回顧</title>
   </programme>
   <programme start="20261028170000 +0800" stop="20261028190000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">WTT冠軍賽 蒙佩利爾站 單打32強第一日回顧(普)</title>
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 單打32強第一日回顧 中華隊 今日最新</title>
   </programme>
   <programme start="20261028190000 +0800" stop="20261029000000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">LIVE WTT冠軍賽 蒙佩利爾站 單打32強 (下) 10/28(普)</title>
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 單打32強 (下) 10/28 LIVE</title>
   </programme>
   <programme start="20261029000000 +0800" stop="20261029003000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">體壇最前線 10/28 (新)(普)</title>
+    <title lang="zh">體壇最前線 10/28 首播</title>
   </programme>
   <programme start="20261029003000 +0800" stop="20261029013000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">2026 Crufts 敏捷錦標賽 小&amp;中型犬組 / 中大&amp;大型犬組 精華回顧(普)</title>
+    <title lang="zh">2026 Crufts 敏捷錦標賽 小&amp;中型犬組 / 中大&amp;大型犬組 精華回顧</title>
   </programme>
   <programme start="20261029013000 +0800" stop="20261029050000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">LIVE WTT冠軍賽 蒙佩利爾站 單打32強 (上) 10/29(普)</title>
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 單打32強 (上) 10/29 LIVE</title>
   </programme>
-  <programme start="20261029050000 +0800" stop="20261029073000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">CEV歐洲女排錦標賽 義大利 VS 土耳其 金牌戰(普)</title>
-  </programme>
-  <programme start="20261029073000 +0800" stop="20261029080000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">體壇最前線 10/28(普)</title>
+  <programme start="20261029050000 +0800" stop="20261029080000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">CEV歐洲女排錦標賽 義大利 VS 土耳其 金牌戰</title>
   </programme>
   <programme start="20261029080000 +0800" stop="20261029100000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">WTT冠軍賽 蒙佩利爾站 單打32強第二日回顧(普)</title>
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 單打32強第二日回顧 今日最新</title>
   </programme>
   <programme start="20261029100000 +0800" stop="20261029120000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">WTT冠軍賽 蒙佩利爾站 單打32強第二日回顧(普)</title>
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 單打32強第二日回顧 今日最新</title>
   </programme>
   <programme start="20261029120000 +0800" stop="20261029121500 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">BWF世界羽球週報#35 (新)(普)</title>
+    <title lang="zh">BWF世界羽球週報#35 首播</title>
   </programme>
   <programme start="20261029121500 +0800" stop="20261029123000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">BWF世界羽球週報#34(普)</title>
+    <title lang="zh">BWF世界羽球週報#34</title>
   </programme>
   <programme start="20261029123000 +0800" stop="20261029130000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">體壇最前線 10/28(普)</title>
+    <title lang="zh">體壇最前線 10/28</title>
   </programme>
   <programme start="20261029130000 +0800" stop="20261029150000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">WTT冠軍賽 蒙佩利爾站 單打32強第二日回顧(普)</title>
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 單打32強第二日回顧 今日最新</title>
   </programme>
   <programme start="20261029150000 +0800" stop="20261029170000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">WTT冠軍賽 蒙佩利爾站 單打32強第二日回顧(普)</title>
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 單打32強第二日回顧 今日最新</title>
   </programme>
   <programme start="20261029170000 +0800" stop="20261029210000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">LIVE 【BWF 世界羽球巡迴賽 暫用】(普)</title>
+    <title lang="zh">BWF 薩爾步呂肯公開賽 16強(上) 10/29 LIVE</title>
   </programme>
   <programme start="20261029210000 +0800" stop="20261030010000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">LIVE 【BWF 世界羽球巡迴賽 暫用】(普)</title>
+    <title lang="zh">BWF 薩爾步呂肯公開賽 16強(下) 10/29 LIVE</title>
   </programme>
-  <programme start="20261030010000 +0800" stop="20261030011500 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">BWF世界羽球週報#34(普)</title>
+  <programme start="20261030010000 +0800" stop="20261030013000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">體壇最前線 10/29 首播</title>
   </programme>
-  <programme start="20261030011500 +0800" stop="20261030013000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">BWF世界羽球週報#35(普)</title>
+  <programme start="20261030013000 +0800" stop="20261030033000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">BWF 薩爾步呂肯公開賽 16強回顧 今日最新</title>
   </programme>
-  <programme start="20261030013000 +0800" stop="20261030020000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">體壇最前線 10/29 (新)(普)</title>
+  <programme start="20261030033000 +0800" stop="20261030053000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">BWF 薩爾步呂肯公開賽 16強回顧 今日最新</title>
   </programme>
-  <programme start="20261030020000 +0800" stop="20261030040000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">【BWF 世界羽球巡迴賽 暫用】(普)</title>
-  </programme>
-  <programme start="20261030040000 +0800" stop="20261030060000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">【BWF 世界羽球巡迴賽 暫用】(普)</title>
+  <programme start="20261030053000 +0800" stop="20261030060000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">2026 BWF世界羽球雜誌#9 世錦賽五大難忘時刻</title>
   </programme>
   <programme start="20261030060000 +0800" stop="20261030063000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">體壇最前線 10/29(普)</title>
+    <title lang="zh">體壇最前線 10/29</title>
   </programme>
   <programme start="20261030063000 +0800" stop="20261030083000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">WTT冠軍賽 蒙佩利爾站 單打32強第三日回顧(普)</title>
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 單打32/16強回顧 今日最新</title>
   </programme>
   <programme start="20261030083000 +0800" stop="20261030103000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">【BWF 世界羽球巡迴賽 暫用】(普)</title>
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 單打32/16強回顧 今日最新</title>
   </programme>
   <programme start="20261030103000 +0800" stop="20261030123000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">【BWF 世界羽球巡迴賽 暫用】(普)</title>
+    <title lang="zh">BWF 薩爾步呂肯公開賽 16強回顧 今日最新</title>
   </programme>
   <programme start="20261030123000 +0800" stop="20261030130000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">體壇最前線 10/29(普)</title>
+    <title lang="zh">體壇最前線 10/29</title>
   </programme>
   <programme start="20261030130000 +0800" stop="20261030150000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">WTT冠軍賽 蒙佩利爾站 單打32強第三日回顧(普)</title>
+    <title lang="zh">BWF 薩爾步呂肯公開賽 16強回顧 今日最新</title>
   </programme>
   <programme start="20261030150000 +0800" stop="20261030170000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">【BWF 世界羽球巡迴賽 暫用】(普)</title>
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 單打32/16強回顧 今日最新</title>
   </programme>
-  <programme start="20261030170000 +0800" stop="20261030190000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">【BWF 世界羽球巡迴賽 暫用】(普)</title>
+  <programme start="20261030170000 +0800" stop="20261030200000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">BWF 薩爾步呂肯公開賽 16強回顧 今日最新</title>
   </programme>
-  <programme start="20261030190000 +0800" stop="20261030230000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">LIVE 【BWF 世界羽球巡迴賽 暫用】(普)</title>
+  <programme start="20261030200000 +0800" stop="20261031000000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">BWF 薩爾步呂肯公開賽 八強 10/30 LIVE</title>
   </programme>
-  <programme start="20261030230000 +0800" stop="20261031030000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">LIVE 【BWF 世界羽球巡迴賽 暫用】(普)</title>
+  <programme start="20261031000000 +0800" stop="20261031040000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">BWF 薩爾步呂肯公開賽 八強(下) 10/30 LIVE</title>
   </programme>
-  <programme start="20261031030000 +0800" stop="20261031033000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">2026 BWF世界羽球雜誌#9 世錦賽五大難忘時刻(普)</title>
+  <programme start="20261031040000 +0800" stop="20261031043000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">2026 BWF世界羽球雜誌#9 世錦賽五大難忘時刻</title>
   </programme>
-  <programme start="20261031033000 +0800" stop="20261031040000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">體壇最前線 10/30 (新)(普)</title>
-  </programme>
-  <programme start="20261031040000 +0800" stop="20261031050000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">2026 Crufts 與狗共舞賽 精華回顧(普)</title>
+  <programme start="20261031043000 +0800" stop="20261031050000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">體壇最前線 10/30 首播</title>
   </programme>
   <programme start="20261031050000 +0800" stop="20261031080000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">MLB 釀酒人 VS 光芒 世界大賽G5(如有需要) 10/29(普)</title>
+    <title lang="zh">MLB 釀酒人 VS 光芒 世界大賽G5(如有需要) 10/29</title>
   </programme>
   <programme start="20261031080000 +0800" stop="20261031113000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">LIVE MLB 光芒 VS 釀酒人 世界大賽G6(如有需要) 10/31(普)</title>
+    <title lang="zh">MLB 光芒 VS 釀酒人 世界大賽G6(如有需要) 10/31 LIVE</title>
   </programme>
   <programme start="20261031113000 +0800" stop="20261031120000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">MLB好球連發#26(普)</title>
+    <title lang="zh">MLB好球連發#26</title>
   </programme>
   <programme start="20261031120000 +0800" stop="20261031143000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">MLB 光芒 VS 釀酒人 世界大賽G6(如有需要) 10/31(普)</title>
+    <title lang="zh">MLB 光芒 VS 釀酒人 世界大賽G6(如有需要) 10/31 今日最新</title>
   </programme>
   <programme start="20261031143000 +0800" stop="20261031162500 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">【BWF 世界羽球巡迴賽 暫用】(普)</title>
+    <title lang="zh">BWF 薩爾步呂肯公開賽 八強回顧 今日最新</title>
   </programme>
   <programme start="20261031162500 +0800" stop="20261031175500 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">LIVE 2026 達卡青年奧運(普)</title>
+    <title lang="zh">青年奧運 中華VS土耳其 五人制棒球 預賽 10/31 LIVE</title>
   </programme>
   <programme start="20261031175500 +0800" stop="20261031210000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">LIVE 2026 達卡青年奧運(普)</title>
+    <title lang="zh">青年奧運 桌球 混雙32強 10/31 LIVE</title>
   </programme>
-  <programme start="20261031210000 +0800" stop="20261101000000 +0800" channel="爱尔达体育Ⅲ.tw">
-    <title lang="zh">LIVE 【BWF 世界羽球巡迴賽 暫用】(普)</title>
+  <programme start="20261031210000 +0800" stop="20261101010000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">BWF 薩爾步呂肯公開賽 四強(上) 10/31 LIVE</title>
+  </programme>
+  <programme start="20261101010000 +0800" stop="20261101050000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">BWF 薩爾步呂肯公開賽 四強(下) 10/31 LIVE</title>
+  </programme>
+  <programme start="20261101050000 +0800" stop="20261101051500 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">BWF世界羽球週報#34</title>
+  </programme>
+  <programme start="20261101051500 +0800" stop="20261101053000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">BWF世界羽球週報#35</title>
+  </programme>
+  <programme start="20261101053000 +0800" stop="20261101060000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">體壇最前線 10/31 首播</title>
+  </programme>
+  <programme start="20261101060000 +0800" stop="20261101080000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 單打16強/八強回顧 今日最新</title>
+  </programme>
+  <programme start="20261101080000 +0800" stop="20261101113000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">MLB 光芒 VS 釀酒人 世界大賽G7(如有需要) 11/1 LIVE</title>
+  </programme>
+  <programme start="20261101113000 +0800" stop="20261101120000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">MLB好球連發#26</title>
+  </programme>
+  <programme start="20261101120000 +0800" stop="20261101123000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">體壇最前線 11/1</title>
+  </programme>
+  <programme start="20261101123000 +0800" stop="20261101143000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">BWF 薩爾步呂肯公開賽 四強回顧 今日最新</title>
+  </programme>
+  <programme start="20261101143000 +0800" stop="20261101160000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">2026 達卡青年奧運 開幕典禮 今日最新</title>
+  </programme>
+  <programme start="20261101160000 +0800" stop="20261101163000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">體壇最前線 11/1</title>
+  </programme>
+  <programme start="20261101163000 +0800" stop="20261101165500 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">MLB好球連發#26</title>
+  </programme>
+  <programme start="20261101165500 +0800" stop="20261101210000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">青年奧運 羽球 男/女單打小組賽 11/1 LIVE</title>
+  </programme>
+  <programme start="20261101210000 +0800" stop="20261102030000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">BWF 薩爾步呂肯公開賽 決賽 11/1 LIVE</title>
+  </programme>
+  <programme start="20261102030000 +0800" stop="20261102031500 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">BWF世界羽球週報#34</title>
+  </programme>
+  <programme start="20261102031500 +0800" stop="20261102033000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">BWF世界羽球週報#35</title>
+  </programme>
+  <programme start="20261102033000 +0800" stop="20261102040000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">體壇最前線 11/1 首播</title>
+  </programme>
+  <programme start="20261102040000 +0800" stop="20261102053000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">ISU花式滑冰大獎賽 加拿大站 冰舞長曲 11/2(原音) LIVE</title>
+  </programme>
+  <programme start="20261102053000 +0800" stop="20261102055000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">BWF世界羽球週報#34</title>
+  </programme>
+  <programme start="20261102055000 +0800" stop="20261102072000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">ISU花式滑冰大獎賽 加拿大站 女子長曲 11/2(原音) LIVE</title>
+  </programme>
+  <programme start="20261102072000 +0800" stop="20261102083000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 男單決賽 11/2 今日最新</title>
+  </programme>
+  <programme start="20261102083000 +0800" stop="20261102094500 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 男單決賽 11/2 今日最新</title>
+  </programme>
+  <programme start="20261102094500 +0800" stop="20261102104500 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">青年奧運 朱宥恩 武術 女子太極拳/男子長拳預賽 11/1</title>
+  </programme>
+  <programme start="20261102104500 +0800" stop="20261102134500 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">BWF 薩爾步呂肯公開賽 男單/女單/男雙決賽 今日最新</title>
+  </programme>
+  <programme start="20261102134500 +0800" stop="20261102150000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 女單決賽 11/2 今日最新</title>
+  </programme>
+  <programme start="20261102150000 +0800" stop="20261102161500 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 男單決賽 11/2 今日最新</title>
+  </programme>
+  <programme start="20261102161500 +0800" stop="20261102182500 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">BWF 薩爾步呂肯公開賽 男單/女單決賽 今日最新</title>
+  </programme>
+  <programme start="20261102182500 +0800" stop="20261102195500 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">青年奧運 五人制棒球 八強 11/2(原音) LIVE</title>
+  </programme>
+  <programme start="20261102195500 +0800" stop="20261102213000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">青年奧運 五人制棒球 八強 11/2(原音) LIVE</title>
+  </programme>
+  <programme start="20261102213000 +0800" stop="20261102222500 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 男單決賽 11/2 今日最新</title>
+  </programme>
+  <programme start="20261102222500 +0800" stop="20261102234500 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">青年奧運 游泳 決賽 11/2 LIVE</title>
+  </programme>
+  <programme start="20261102234500 +0800" stop="20261103014500 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">F1 墨西哥站 正賽 今日最新</title>
+  </programme>
+  <programme start="20261103014500 +0800" stop="20261103021500 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">體壇最前線 11/2 首播</title>
+  </programme>
+  <programme start="20261103021500 +0800" stop="20261103051500 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">BWF 薩爾步呂肯公開賽 男單/女單/男雙決賽</title>
+  </programme>
+  <programme start="20261103051500 +0800" stop="20261103053000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">BWF世界羽球週報#35</title>
+  </programme>
+  <programme start="20261103053000 +0800" stop="20261103064500 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 女單決賽 11/1</title>
+  </programme>
+  <programme start="20261103064500 +0800" stop="20261103080000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 男單決賽 11/2</title>
+  </programme>
+  <programme start="20261103080000 +0800" stop="20261103100000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">德甲 拜仁慕尼黑 VS 多特蒙德 第8輪</title>
+  </programme>
+  <programme start="20261103100000 +0800" stop="20261103103000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">體壇最前線 11/2</title>
+  </programme>
+  <programme start="20261103103000 +0800" stop="20261103114500 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 女單決賽 11/1</title>
+  </programme>
+  <programme start="20261103114500 +0800" stop="20261103130000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 男單決賽 11/2</title>
+  </programme>
+  <programme start="20261103130000 +0800" stop="20261103133000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">體壇最前線 11/2</title>
+  </programme>
+  <programme start="20261103133000 +0800" stop="20261103163000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">BWF 薩爾步呂肯公開賽 男單/女單/男雙決賽</title>
+  </programme>
+  <programme start="20261103163000 +0800" stop="20261103174500 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 女單決賽 11/1</title>
+  </programme>
+  <programme start="20261103174500 +0800" stop="20261103190000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">WTT冠軍賽 蒙佩利爾站 男單決賽 11/2</title>
+  </programme>
+  <programme start="20261103190000 +0800" stop="20261103235500 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">WTT冠軍賽 法蘭克福站 單打32強 11/3 LIVE</title>
+  </programme>
+  <programme start="20261103235500 +0800" stop="20261104013000 +0800" channel="爱尔达体育Ⅲ.tw">
+    <title lang="zh">青年奧運 柔道 決賽 11/3 LIVE</title>
   </programme>
   <programme start="20261028000000 +0800" stop="20261028010000 +0800" channel="爱尔达影剧.tw">
     <title lang="zh">野狗骨頭 (重)(15)(普)</title>
@@ -187353,86 +187775,203 @@
   <programme start="20261102230000 +0800" stop="20261103000000 +0800" channel="爱尔达影剧.tw">
     <title lang="zh">玉茗茶骨 (重)(22)(普)</title>
   </programme>
-  <programme start="20261028000000 +0800" stop="20261028020000 +0800" channel="爱尔达体育Ⅳ.tw">
-    <title lang="zh">亞運 射箭 女子個人複合弓八強/四強/決賽 10/1(普)</title>
+  <programme start="20261027233000 +0800" stop="20261028021500 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">亞運 中國VS日本 桌球 女團金牌戰 9/24</title>
   </programme>
-  <programme start="20261028020000 +0800" stop="20261028053000 +0800" channel="爱尔达体育Ⅳ.tw">
-    <title lang="zh">WBC棒球經典賽 中華 VS 南韓 3/8 C組預賽(普)</title>
+  <programme start="20261028021500 +0800" stop="20261028051500 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">WBC棒球經典賽 中華 VS 南韓 3/8 C組預賽</title>
   </programme>
-  <programme start="20261028053000 +0800" stop="20261028100000 +0800" channel="爱尔达体育Ⅳ.tw">
-    <title lang="zh">亞運 精彩賽事(普)</title>
+  <programme start="20261028051500 +0800" stop="20261028081500 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">亞運 田徑 馬拉松決賽 9/26</title>
   </programme>
-  <programme start="20261028100000 +0800" stop="20261028110000 +0800" channel="爱尔达体育Ⅳ.tw">
-    <title lang="zh">2026 WEC世界耐久錦標賽特輯#7 - 巴塞隆納6小時(原音)(普)</title>
+  <programme start="20261028081500 +0800" stop="20261028111500 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">亞運 烏茲別克VS日本 足球 男子四強 9/30</title>
   </programme>
-  <programme start="20261028110000 +0800" stop="20261028153000 +0800" channel="爱尔达体育Ⅳ.tw">
-    <title lang="zh">亞運 精彩賽事(普)</title>
+  <programme start="20261028111500 +0800" stop="20261028121500 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">2026 WEC世界耐久錦標賽特輯#7 - 巴塞隆納6小時(原音) 首播</title>
   </programme>
-  <programme start="20261028153000 +0800" stop="20261028200000 +0800" channel="爱尔达体育Ⅳ.tw">
-    <title lang="zh">亞運 精彩賽事(普)</title>
+  <programme start="20261028121500 +0800" stop="20261028143000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">U15棒球世界盃 尼加拉瓜 VS 中華 預賽 9/25</title>
   </programme>
-  <programme start="20261028200000 +0800" stop="20261029000000 +0800" channel="爱尔达体育Ⅳ.tw">
-    <title lang="zh">亞運 精彩賽事(普)</title>
+  <programme start="20261028143000 +0800" stop="20261028161500 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">U15棒球世界盃 委內瑞拉 VS 中華 預賽 9/27</title>
   </programme>
-  <programme start="20261029000000 +0800" stop="20261029020000 +0800" channel="爱尔达体育Ⅳ.tw">
-    <title lang="zh">亞運 張正韋/陳界綸 射箭 男子個人複合弓八強/四強/決賽 10/1(普)</title>
+  <programme start="20261028161500 +0800" stop="20261028174500 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">2026 登峰造極籃球邀請賽 世新大學VS文化大學 首播</title>
   </programme>
-  <programme start="20261029020000 +0800" stop="20261029053000 +0800" channel="爱尔达体育Ⅳ.tw">
-    <title lang="zh">WBC棒球經典賽 中華 VS 南韓 3/8 C組預賽(普)</title>
+  <programme start="20261028174500 +0800" stop="20261028194000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">2026 登峰造極籃球邀請賽 虎尾科大VS國立體大 首播</title>
   </programme>
-  <programme start="20261029053000 +0800" stop="20261029100000 +0800" channel="爱尔达体育Ⅳ.tw">
-    <title lang="zh">亞運 精彩賽事(普)</title>
+  <programme start="20261028194000 +0800" stop="20261028213000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">2026 登峰造極籃球邀請賽 上海交大VS政治大學 首播</title>
   </programme>
-  <programme start="20261029100000 +0800" stop="20261029143000 +0800" channel="爱尔达体育Ⅳ.tw">
-    <title lang="zh">亞運 精彩賽事(普)</title>
+  <programme start="20261028213000 +0800" stop="20261029000000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">日本職業桌球T.League 琉球未來太陽 VS 東京木下大師 10/17 例行賽</title>
   </programme>
-  <programme start="20261029143000 +0800" stop="20261029190000 +0800" channel="爱尔达体育Ⅳ.tw">
-    <title lang="zh">亞運 精彩賽事(普)</title>
+  <programme start="20261029000000 +0800" stop="20261029021500 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">日本職業桌球T.League 神奈川阿碧艾露 VS 京都輝夜 10/17 例行賽</title>
   </programme>
-  <programme start="20261029190000 +0800" stop="20261030000000 +0800" channel="爱尔达体育Ⅳ.tw">
-    <title lang="zh">亞運 精彩賽事(普)</title>
+  <programme start="20261029021500 +0800" stop="20261029051500 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">WBC棒球經典賽 中華 VS 南韓 3/8 C組預賽</title>
   </programme>
-  <programme start="20261030000000 +0800" stop="20261030020000 +0800" channel="爱尔达体育Ⅳ.tw">
-    <title lang="zh">亞運 中華隊 射箭 男子團體反曲弓四強/決賽 10/2(普)</title>
+  <programme start="20261029051500 +0800" stop="20261029073000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">亞運 中華隊 韻律體操 團體全能決賽 10/3</title>
   </programme>
-  <programme start="20261030020000 +0800" stop="20261030053000 +0800" channel="爱尔达体育Ⅳ.tw">
-    <title lang="zh">WBC棒球經典賽 中華 VS 南韓 3/8 C組預賽(普)</title>
+  <programme start="20261029073000 +0800" stop="20261029101500 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">U15棒球世界盃 中華 VS 捷克 預賽 9/28</title>
   </programme>
-  <programme start="20261030053000 +0800" stop="20261030100000 +0800" channel="爱尔达体育Ⅳ.tw">
-    <title lang="zh">亞運 精彩賽事(普)</title>
+  <programme start="20261029101500 +0800" stop="20261029123000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">U15棒球世界盃 中華 VS 澳大利亞 預賽 9/30</title>
   </programme>
-  <programme start="20261030100000 +0800" stop="20261030143000 +0800" channel="爱尔达体育Ⅳ.tw">
-    <title lang="zh">亞運 精彩賽事(普)</title>
+  <programme start="20261029123000 +0800" stop="20261029144500 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">U15棒球世界盃 墨西哥 VS 中華 超級循環賽 10/2</title>
   </programme>
-  <programme start="20261030143000 +0800" stop="20261030190000 +0800" channel="爱尔达体育Ⅳ.tw">
-    <title lang="zh">亞運 精彩賽事(普)</title>
+  <programme start="20261029144500 +0800" stop="20261029172000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">U15棒球世界盃 日本 VS 中華 超級循環賽 10/3</title>
   </programme>
-  <programme start="20261030190000 +0800" stop="20261031000000 +0800" channel="爱尔达体育Ⅳ.tw">
-    <title lang="zh">亞運 精彩賽事(普)</title>
+  <programme start="20261029172000 +0800" stop="20261029203000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">U15棒球世界盃 中華 VS 多明尼加 超級循環賽 10/4</title>
+  </programme>
+  <programme start="20261029203000 +0800" stop="20261029213000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">2026 WEC世界耐久錦標賽特輯#7 - 巴塞隆納6小時(原音)</title>
+  </programme>
+  <programme start="20261029213000 +0800" stop="20261030000000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">日本職業桌球T.League 岡山鉚釘 VS 東京木下大師 10/18 例行賽</title>
+  </programme>
+  <programme start="20261030000000 +0800" stop="20261030030000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">日本職業桌球T.League 神奈川阿碧艾露 VS 日本塗料10/18 例行賽</title>
+  </programme>
+  <programme start="20261030030000 +0800" stop="20261030060000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">WBC棒球經典賽 中華 VS 南韓 3/8 C組預賽</title>
+  </programme>
+  <programme start="20261030060000 +0800" stop="20261030080000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">亞運 精彩賽事</title>
+  </programme>
+  <programme start="20261030080000 +0800" stop="20261030103000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">IFSC世界運動攀登系列賽 先鋒賽 布拉格站 準決賽(原音) 首播</title>
+  </programme>
+  <programme start="20261030103000 +0800" stop="20261030130000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">IFSC世界運動攀登系列賽 先鋒賽 布拉格站 決賽(原音) 首播</title>
+  </programme>
+  <programme start="20261030130000 +0800" stop="20261030153000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">IFSC世界運動攀登系列賽 抱石賽 布拉格站 男子組準決賽(原音) 首播</title>
+  </programme>
+  <programme start="20261030153000 +0800" stop="20261030180000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">IFSC世界運動攀登系列賽 抱石賽 布拉格站 男子組決賽(原音) 首播</title>
+  </programme>
+  <programme start="20261030180000 +0800" stop="20261031000000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">亞運 精彩賽事</title>
   </programme>
   <programme start="20261031000000 +0800" stop="20261031023000 +0800" channel="爱尔达体育Ⅳ.tw">
-    <title lang="zh">亞運 湯智鈞 射箭 男子個人反曲弓八強/四強/決賽 10/3(普)</title>
+    <title lang="zh">亞運 湯智鈞 射箭 男子個人反曲弓八強/四強/決賽 10/3</title>
   </programme>
   <programme start="20261031023000 +0800" stop="20261031060000 +0800" channel="爱尔达体育Ⅳ.tw">
-    <title lang="zh">WBC棒球經典賽 中華 VS 南韓 3/8 C組預賽(普)</title>
+    <title lang="zh">WBC棒球經典賽 中華 VS 南韓 3/8 C組預賽</title>
   </programme>
   <programme start="20261031060000 +0800" stop="20261031080000 +0800" channel="爱尔达体育Ⅳ.tw">
-    <title lang="zh">亞運 精彩賽事(普)</title>
+    <title lang="zh">亞運 精彩賽事</title>
   </programme>
-  <programme start="20261031080000 +0800" stop="20261031100000 +0800" channel="爱尔达体育Ⅳ.tw">
-    <title lang="zh">【WTT 世界桌球巡迴賽 暫用】(普)</title>
+  <programme start="20261031080000 +0800" stop="20261031103000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">IFSC世界運動攀登系列賽 抱石賽 布拉格站 女子組準決賽(原音) 首播</title>
   </programme>
-  <programme start="20261031100000 +0800" stop="20261031120000 +0800" channel="爱尔达体育Ⅳ.tw">
-    <title lang="zh">【WTT 世界桌球巡迴賽 暫用】(普)</title>
+  <programme start="20261031103000 +0800" stop="20261031130000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">IFSC世界運動攀登系列賽 抱石賽 布拉格站 女子組決賽(原音) 首播</title>
   </programme>
-  <programme start="20261031120000 +0800" stop="20261031180000 +0800" channel="爱尔达体育Ⅳ.tw">
-    <title lang="zh">亞運 精彩賽事(普)</title>
+  <programme start="20261031130000 +0800" stop="20261031162500 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">亞運 精彩賽事</title>
   </programme>
-  <programme start="20261031180000 +0800" stop="20261031233000 +0800" channel="爱尔达体育Ⅳ.tw">
-    <title lang="zh">亞運 精彩賽事(普)</title>
+  <programme start="20261031162500 +0800" stop="20261031231500 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">青年奧運 沙灘排球 男/女預賽 10/31(原音) LIVE</title>
   </programme>
-  <programme start="20261031233000 +0800" stop="20261101000000 +0800" channel="爱尔达体育Ⅳ.tw">
-    <title lang="zh">WBC棒球經典賽 中華 VS 南韓 3/8 C組預賽(普)</title>
+  <programme start="20261031231500 +0800" stop="20261101022500 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">WBC棒球經典賽 中華 VS 南韓 3/8 C組預賽</title>
+  </programme>
+  <programme start="20261101022500 +0800" stop="20261101040000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">2026 達卡青年奧運 開幕典禮 LIVE</title>
+  </programme>
+  <programme start="20261101040000 +0800" stop="20261101044500 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">2026 WEC世界耐久錦標賽特輯#7 - 巴塞隆納6小時(原音)</title>
+  </programme>
+  <programme start="20261101044500 +0800" stop="20261101063000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">F1 墨西哥站 排位賽 LIVE</title>
+  </programme>
+  <programme start="20261101063000 +0800" stop="20261101070000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">2026 BWF世界羽球雜誌#9 世錦賽五大難忘時刻</title>
+  </programme>
+  <programme start="20261101070000 +0800" stop="20261101100000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">日本職業桌球T.League 琉球未來太陽 VS 東京木下大師 10/17 例行賽</title>
+  </programme>
+  <programme start="20261101100000 +0800" stop="20261101130000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">新竹棒球場50週年交流賽 韓國尚武 VS 國立體大 11/1 LIVE</title>
+  </programme>
+  <programme start="20261101130000 +0800" stop="20261101150000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">U15棒球世界盃 多明尼加 VS 美國 金牌戰 10/5</title>
+  </programme>
+  <programme start="20261101150000 +0800" stop="20261101160000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">新竹市立棒球場50週年交流賽 開幕表演 11/1 LIVE</title>
+  </programme>
+  <programme start="20261101160000 +0800" stop="20261101190000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">新竹棒球場50週年交流賽 日本枥木 VS 新竹城市 11/1 LIVE</title>
+  </programme>
+  <programme start="20261101190000 +0800" stop="20261101200000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">新竹市立棒球場50週年交流賽 賽後表演 11/1 LIVE</title>
+  </programme>
+  <programme start="20261101200000 +0800" stop="20261101225500 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">新竹棒球場50週年交流賽 韓國尚武 VS 國立體大 11/1 今日最新</title>
+  </programme>
+  <programme start="20261101225500 +0800" stop="20261102002500 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">青年奧運 土耳其VS塞內加爾 五人制棒球 預賽 11/1(原音) LIVE</title>
+  </programme>
+  <programme start="20261102002500 +0800" stop="20261102020000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">青年奧運 古巴VS中華 五人制棒球 預賽 11/2(原音) LIVE</title>
+  </programme>
+  <programme start="20261102020000 +0800" stop="20261102023000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">2026 BWF世界羽球雜誌#9 世錦賽五大難忘時刻</title>
+  </programme>
+  <programme start="20261102023000 +0800" stop="20261102053000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">WBC棒球經典賽 中華 VS 南韓 3/8 C組預賽</title>
+  </programme>
+  <programme start="20261102053000 +0800" stop="20261102060000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">歐冠足球誌#8</title>
+  </programme>
+  <programme start="20261102060000 +0800" stop="20261102090000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">新竹棒球場50週年交流賽 日本枥木 VS 新竹城市 11/1</title>
+  </programme>
+  <programme start="20261102090000 +0800" stop="20261102093000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">2026 BWF世界羽球雜誌#9 世錦賽五大難忘時刻</title>
+  </programme>
+  <programme start="20261102093000 +0800" stop="20261102123000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">新竹棒球場50週年交流賽 韓國尚武 VS 國立體大 11/1</title>
+  </programme>
+  <programme start="20261102123000 +0800" stop="20261102133000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">2026 WEC世界耐久錦標賽特輯#7 - 巴塞隆納6小時(原音)</title>
+  </programme>
+  <programme start="20261102133000 +0800" stop="20261102163000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">新竹棒球場50週年交流賽 韓國尚武 VS 日本枥木 11/2 LIVE</title>
+  </programme>
+  <programme start="20261102163000 +0800" stop="20261102170000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">2026 BWF世界羽球雜誌#9 世錦賽五大難忘時刻</title>
+  </programme>
+  <programme start="20261102170000 +0800" stop="20261102183000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">2026 達卡青年奧運 開幕典禮</title>
+  </programme>
+  <programme start="20261102183000 +0800" stop="20261102213000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">新竹棒球場50週年交流賽 國立體大 VS 新竹城市 11/2 LIVE</title>
+  </programme>
+  <programme start="20261102213000 +0800" stop="20261102220000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">英超名人堂 #20 守門員進化史</title>
+  </programme>
+  <programme start="20261102220000 +0800" stop="20261103003000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">新竹棒球場50週年交流賽 韓國尚武 VS 日本枥木 11/2 今日最新</title>
+  </programme>
+  <programme start="20261103010000 +0800" stop="20261103033000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">新竹棒球場50週年交流賽 國立體大 VS 新竹城市 11/2 今日最新</title>
+  </programme>
+  <programme start="20261103183000 +0800" stop="20261103213000 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">新竹棒球場50週年交流賽 韓國尚武 VS 新竹城市 11/3 LIVE</title>
+  </programme>
+  <programme start="20261103221000 +0800" stop="20261104031500 +0800" channel="爱尔达体育Ⅳ.tw">
+    <title lang="zh">青年奧運 桌球 11/3(原音) LIVE</title>
   </programme>
   <programme start="20261027235900 +0800" stop="20261028002500 +0800" channel="爱尔达娱乐.tw">
     <title lang="zh">扶手椅冒險家</title>
