@@ -70,7 +70,13 @@ export function matchChannels(targets, catalog, opts = {}) {
       // 为什么可以放心用：tvmao 的 getDayProgrammes 会真去抓，
       //   抓不到就自然返回空；而且现在有 title 校验兜底，串台会被拦。
       //   「清单页没有」≠「站点没有」，这一点农林卫视（SHXITV/SHXITV9）已经验证过。
-      if (ov.source === 'tvmao' || ov.source === 'tvsou' || ov.source === 'fengshows') {
+      if (
+        ov.source === 'tvmao' ||
+        ov.source === 'tvsou' ||
+        ov.source === 'fengshows' ||
+        ov.source === 'webncode' ||
+        ov.source === 'litv'
+      ) {
         log.warn(
           `[match] ${t.id} 的 overrides 源 ${ov.source}:${ov.sourceId} 不在清单中，按手工指定直接使用（抓不到会自然留空）`
         )
@@ -179,8 +185,22 @@ export function matchChannels(targets, catalog, opts = {}) {
  * 排序依据（依次比较）：
  *   1. 数据覆盖天数（days 大者优先）—— epg.pw 同一频道常有多个 id，
  *      有的只给当天 1 天、有的给满 7 天，不按这个选卫视就只剩 1 天
- *   2. 节目条数（count 大者优先）
- *   3. 名字长度最接近目标名
+ *   2. ★ 真简介条数（withDesc 大者优先）—— 2026-10-28 新增
+ *   3. 节目条数（count 大者优先）
+ *   4. 名字长度最接近目标名
+ *
+ * ★ 为什么必须加 withDesc（2026-10-28 实测，别删）：
+ *   Now財經台 原本选 epgpw「6天291条286简介」，接了 webncode 后被换成
+ *   「6天306条136简介」—— 只多 15 条节目，却丢掉 150 条简介，简介率从 98% 掉到 44%。
+ *   Now新聞台 更惨：323 → 133。
+ *   只看天数+条数时，**条数多但简介全空的源会稳定赢**，
+ *   而简介恰恰是这个项目最稀缺的资源（整体才 60%）。
+ *
+ *   放在天数之后、条数之前：天数不够是硬伤（订阅 7 天就缺天），
+ *   简介和条数之间则简介更重要。
+ *
+ *   注意 withDesc 缺失（旧 catalog 缓存）时按 0 处理，
+ *   等价于退回旧行为，不会误伤——但要记得 catalog 有 TTL，会自己重扫。
  */
 function pickBest(list, target) {
   if (list.length === 1) return list[0]
@@ -189,6 +209,9 @@ function pickBest(list, target) {
     const da = a.days || 0
     const db = b.days || 0
     if (da !== db) return db - da
+    const wa = a.withDesc || 0
+    const wb = b.withDesc || 0
+    if (wa !== wb) return wb - wa
     const ca = a.count || 0
     const cb = b.count || 0
     if (ca !== cb) return cb - ca
@@ -219,13 +242,22 @@ function rankAlternatives(cands, chosen, target) {
   )
 
   return pool
-    .sort((a, b) => (b.days || 0) - (a.days || 0) || (b.count || 0) - (a.count || 0))
+    .sort(
+      (a, b) =>
+        (b.days || 0) - (a.days || 0) ||
+        (b.withDesc || 0) - (a.withDesc || 0) ||
+        (b.count || 0) - (a.count || 0)
+    )
     .map((c) => ({
       source: c.source,
       sourceId: String(c.sourceId),
       sourceName: c.name,
       region: c.region,
       logo: c.logo || '',
+      // ★ 带上完整度指标，供 build 降级时比较（不然只能靠天数盲选）
+      days: c.days || 0,
+      count: c.count || 0,
+      withDesc: c.withDesc || 0,
     }))
 }
 

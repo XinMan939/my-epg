@@ -307,11 +307,17 @@ export function tsToHM(ts) {
 /**
  * 频道名归一化，用于匹配：去空格、全角转半角、去括号后缀、小写
  *
- * ⚠️ 两个必须保留的"语义字符"，删掉就会错台：
+ * ⚠️ 三个必须保留的"语义字符"，删掉就会错台：
  *   - 加号：CCTV5+ 是独立频道，若把 + 当噪声删掉就变成 CCTV5，会把体育赛事频道
  *     的节目挂到 CCTV-5 体育上（2026-10-26 聚合器实测踩到）
  *   - 4k/8k：CCTV-4K 是独立频道，只有"高清/HD/超清/标清/蓝光"这类才是可忽略的
  *     画质后缀，4K/8K 是频道名的一部分，必须保留
+ *   - **罗马数字 Ⅰ~Ⅻ**：2026-10-27 第八轮踩到。
+ *     「好消息Ⅰ」「好消息Ⅱ」归一化后都变成 `好消息`，于是两个台指向同一个 sourceId，
+ *     后一个台拿到的节目是前一个台的 —— 错台且**完全静默**（日志只有一行 exact）。
+ *     实测同时中招的：好消息Ⅰ/Ⅱ、大爱Ⅰ/Ⅱ、博斯运动Ⅰ/Ⅱ、博斯高球Ⅰ/Ⅱ。
+ *     ★ 注意不能简单保留原字符：`Ⅰ` 是 U+2160 区块，会被最后的
+ *     `[^a-z0-9+\u4e00-\u9fa5]` 白名单删掉，所以必须**先转成普通数字**再走白名单。
  */
 export function normalizeName(name) {
   if (!name) return ''
@@ -319,6 +325,9 @@ export function normalizeName(name) {
   // 全角转半角
   s = s.replace(/[\uff01-\uff5e]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0xfee0))
   s = s.replace(/\u3000/g, ' ')
+  // ★ 罗马数字 → 阿拉伯数字（必须在白名单过滤之前，否则会被当噪声删掉）
+  s = s.replace(/[ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫ]/g, (c) => String('ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫ'.indexOf(c) + 1))
+  s = s.replace(/[ⅰⅱⅲⅳⅴⅵⅶⅷⅸⅹ]/g, (c) => String('ⅰⅱⅲⅳⅴⅵⅶⅷⅸⅹ'.indexOf(c) + 1))
   s = s.toLowerCase()
   // 全角加号已在上面转成半角 +，这里把"5加"/"5plus"也统一成 5+
   s = s.replace(/(\d)\s*(?:plus|加)$/, '$1+')
@@ -365,6 +374,19 @@ const REGION_WORDS = [
 ]
 
 /**
+ * 「具体分版」区域词 —— 出现即说明该台有明确的区域分版，裸名一定不是它
+ *
+ * 与 REGION_WORDS 的区别：
+ *   - REGION_WORDS 是「所有能识别区域的词」，用于判断"两边是否写明了同一区域"
+ *   - SPECIFIC_REGION 是其中的子集，只收「一看就是另一个版本」的词
+ *
+ * 为什么「亚洲/香港/台湾/大陆」不在里面：
+ *   裸 `CCTV-4` 就是亚洲版、裸 `翡翠台` 就是香港版、裸 `CCTV-1` 就是大陆版，
+ *   把这些当"具体分版"会挡掉大量正确配对（实测会误拒 20+ 个台）。
+ */
+const SPECIFIC_REGION = new Set(['欧洲', '美洲', '欧版', '美版', '海外', '境外', '北美', '南美', '西欧', '东欧'])
+
+/**
  * 区域词的同义归一
  *
  * 「CCTV-4中文国际（欧）」和「CCTV4欧洲」是同一个台，但前者写「欧」后者写「欧洲」，
@@ -393,14 +415,38 @@ export function regionTags(name) {
 /**
  * 两个频道名是否指向「同一个区域版本」
  *
- * 返回 false 表示「明确是不同版本」，补天时必须拒绝。
+ * 返回 false 表示「明确是不同版本」，补天/降级时必须拒绝。
+ *
+ * ★ 2026-10-28 收紧：「一边有区域词、另一边没有」不再无条件放行。
+ *
+ *   原规则是「无区域词 = 默认版，兼容任何版本」。这对「CCTV-4」是错的：
+ *   裸 `CCTV-4` 恰恰就是**亚洲版**，不是"通用版"。
+ *   于是 CCTV4欧洲 / CCTV4美洲 在 epgpw 抓空时会降级到 `CCTV-4`（亚洲版），
+ *   播出来的全是国内版节目，而报表上一切正常（278 条 7 天，看着比原来源还完整）。
+ *   实测：本地一次 epgpw 抽风，三台全部串到 `webncode:nowtv_542(CCTV-4)`。
+ *
+ *   现在的规则：
+ *   - 两边都有区域词 → 必须重合，否则拒（原有逻辑）
+ *   - 一边有、一边没有 → **只有「具体区域」才拒**；「亚洲/香港/台湾」这类
+ *     默认区域仍放行（裸 `CCTV-4` = 亚洲版、裸 `翡翠台` = 香港版，都是正确配对）
+ *
+ *   判定「具体区域」= 明确是"另一个版本"的区域：欧洲 / 美洲 / 海外 / 国际。
+ *   这些词一出现，就说明该台有明确的区域分版，裸名一定不是它。
  */
 export function sameRegionVersion(a, b) {
   const A = regionTags(a)
   const B = regionTags(b)
-  if (!A.size || !B.size) return true // 一边没写区域 → 视为默认版，兼容
-  for (const w of A) if (B.has(w)) return true
-  return false // 两边都有区域词，但完全不重合 → 不同版本
+  if (!A.size && !B.size) return true
+
+  if (A.size && B.size) {
+    for (const w of A) if (B.has(w)) return true
+    return false // 两边都有区域词，但完全不重合 → 不同版本
+  }
+
+  // 一边有一边没有：看有词的那边是不是「具体分版」
+  const tags = A.size ? A : B
+  for (const w of tags) if (SPECIFIC_REGION.has(w)) return false
+  return true
 }
 
 /**

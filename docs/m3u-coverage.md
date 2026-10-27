@@ -1230,3 +1230,163 @@ https://m.fengshows.com/api/v3/live/{liveId}/resources?dir=asc&date=YYYYMMDD&pag
 - **tvmao 全量频道重新对一遍**：本轮只抽样 24 个，还有 190 个没验证新解析器的收益
 - **`DOX-`/`KAMBA-`/`DIGITAL-` 这 3 个单频道组**：路径已修但没进产物验证
 - **浙江国际（cztv）**：纯 SPA + 全压缩分包，本机无 playwright，仍未破解
+
+---
+
+## 十四、2026-10-28 第八轮：两个新源 + 三个「自报数据骗排序」
+
+本轮起因：用户给了 4 条线索 + 1 个 APK，并**纠正了我一个错误结论**。
+
+### 14.1 四条线索的结论
+
+| 线索 | 结论 |
+|---|---|
+| `litv.tv/channel/watch/litv-ftv07` | ✅ **破解成功**，94 直播台 / 14073 条 / 6 天 / 44.6% 简介 |
+| `cctv.com/football/.../4.shtml` | ❌ **2006 年死存档**，页面年份只有 2006，无简介字段 |
+| `cpt.kbro.com.tw/.../catv-table_18_2717_3017.html` | ❌ **只是搜索页**，正文只有「請選擇系統台/套餐/關鍵字」表单 |
+| 广州竞赛频道 | ❌ **2024-11-23 已停播**，已从 `channels.json` 移除（284→283） |
+| `TV Guide.apk`（用户提供） | ✅ 逆向出 `tv.webncode.com`，**246 频道**，补上 HOY TV 缺口 |
+
+### 14.2 ★ litv 破解：页面没数据 ≠ 站点没数据
+
+**我的错误结论**：页面 HTML 1.1MB 里 `\d\d:\d\d` 一个都没有、`__NEXT_DATA__` 只有 lineup
+→ 下结论「纯 SPA，需要 playwright，破不了」。
+
+**用户纠正**（原话）：「我没有登录一样可以看到节目单阿 滚动式的不滚动式的都有，甚至还有简介」+ 两张截图。
+
+**真实解法**：从 `_app-1c6ee1cf8e469226.js` 里挖出 4 个 URL 定义，节目单是**静态 JSON 包**：
+
+| 包 | 内容 | 要不要 |
+|---|---|---|
+| `vod_channel/schedule_pc.json.zlib.{schedule_hash}` | 317 个 **VOD 频道**（点播轮播，非电视台） | ❌ 不要 |
+| `vod_channel/description.json.zlib.{description_hash}` | 简介包 12750 条 | 备用 |
+| **`litvpc/ScheduleAllWithMediumPrograms.json.zlib`** | **94 个真直播台** | ✅ 要这个 |
+| `litvpc/StationCategories.json.zlib` | 台分类 | ❌ |
+
+结构：`{Channels:[{CdnCode,Name,Schedule:[{ProgramId,AirDateTime,Duration}]}], Programs:{pid:{Title,Description}}}`
+- 节目名要**二次查表** `Programs[pid]`，`Schedule[]` 里只有 id
+- `AirDateTime` 是 UTC 带 Z，`Duration` 是**秒**不是分钟
+- 两个包都是 **gzip（头 `1f8b`）但扩展名写 `.zlib`**，直接 `gunzipSync`
+
+**教训（已写进 `litv.mjs` 文件头）**：页面没数据 ≠ 站点没数据，要继续翻 JS chunk 里的 URL 定义。
+
+### 14.3 ★ webncode：从 APK 逆向到 246 频道
+
+APK 是 Expo/React Native，`assets/index.android.bundle` 是 Hermes 字节码**不可读**，
+但域名在字符串表里明文可见 → `https://tv.webncode.com`（Spring Boot 后端）。
+
+接口（逐个猜出来的，404 返回标准 `timestamp/status/error/path` JSON）：
+```
+GET /api/channels                    → 6 个台组
+GET /api/channels/{provider}         → 该组频道列表
+GET /api/schedule/{channelId}        → 今天
+GET /api/schedule/{channelId}/{Y-M-D} → 指定日 ★ 日期只认路径
+```
+
+⚠️ **日期参数只认路径形式**：`?date=` `?day=` `?d=` `?dt=` `?ymd=` `?start=` `?offset=` `?days=`
+七种 query 名**全部被静默忽略、仍返回今天**，且 HTTP 200 + 46 条数据看着完全正常。
+
+⚠️ **mytvsuper 内地国际频道是占位数据**：浙江国际/湖南国际每天 7 条，
+标题和简介都是同一句「XX電視台國際頻道全日24小時為你送上精彩節目」，切成 4 小时一块。
+**看着 100% 有简介，实际零信息量** → 用 `PLACEHOLDER_TITLE` 整条丢弃。
+
+### 14.4 ★★★ 三个「自报数据骗排序」（本轮最危险的发现）
+
+接完新源第一次 build，产物数字**变好了**（60.3% vs 59.4%），但里面藏着两个退步：
+
+| 频道 | 修前（epgpw） | 修后（webncode 自报 days=7） | 损失 |
+|---|---|---|---|
+| Now新聞台 | 6天 325条 **323简介** | 5天 273条 133简介 | **简介 -190** |
+| Now財經台 | 6天 291条 **286简介** | 5天 306条 136简介 | **简介 -150** |
+
+根因三条，全部修掉：
+
+**① `days` 硬编码**：webncode `listChannels` 给 `days: 7`（注释还写着"保守值"，其实一点不保守），
+骗过 `pickBest` 的天数优先。→ 改为真探 `availableDates.length`（246 台 ×1 请求，6 并发 ~30s，进 catalog 缓存）。
+
+**② `count` 恒 0**：litv / webncode 都给 `count: 0`，比条数时永远输或永远赢，两种都不对。
+→ litv 包已在内存里**零成本精确统计**；webncode 用「当天条数 × 天数」外推，口径对齐 epgpw 全期总条数。
+
+**③ `pickBest` 没有简介维度**：只有「天数 → 条数」时，**条数多但简介全空的源会稳定赢**，
+而简介恰恰是本项目最稀缺的资源。→ 加 `withDesc` 维度，排序变为
+`days → withDesc → count → 名字长度`，`rankAlternatives` 同序。
+
+修后 Now 两台回到 epgpw（323 / 286 简介），其余 14 台仍走新源。
+
+### 14.5 ★★ 降级链缺区域校验 → CCTV4 三版串台
+
+本地 build 时 epgpw 抽风，`CCTV4Europe` / `CCTV4America` 的主源（539832 / 539751）抓空，
+降级链顺着备选降到 `webncode:nowtv_542(CCTV-4)` —— **那是亚洲版**。
+
+结果：三台全播国内版节目，报表显示「278 条 7 天」，**比原来源还完整，日志零异常**。
+→ 这类错误比"节目少"危险得多：**数据看着更好，内容是错的**。
+
+根因：第六轮只在「补天」分支加了 `sameRegionVersion`，**降级链漏了**。
+且旧规则「一边没区域词 = 默认版，一律放行」本身也错——**裸 `CCTV-4` 恰恰就是亚洲版**。
+
+修复两层：
+1. `sameRegionVersion` 收紧：一边有词一边没有时，若**有词那侧是「具体分版」**
+   （欧洲/美洲/海外/境外/北美/南美/西欧/东欧）→ 拒；是「默认区域」（亚洲/香港/台湾/大陆/内地）→ 放行
+2. 降级链 chain filter 加同款校验（主源 idx 0 永远保留）
+
+修后拦截效果：
+
+| 目标 | 保留 | 拦截 |
+|---|---|---|
+| CCTV4欧洲 | 欧洲版×3（epgpw/tvmao/tvsou） | 亚洲版×3 + 美洲版×1 + 裸CCTV-4×2 |
+| CCTV4美洲 | 美洲版×3 | 亚洲版×3 + 欧洲版×1 + 裸CCTV-4×2 |
+| CCTV4亚洲 | 亚洲版×4 | 欧洲版×2 + 美洲版×2 |
+
+⚠️ 「国际」**不能**放进 `SPECIFIC_REGION`：tvmao 把亚洲版叫「CCTV-4国际」，放进去会误拒一批正确配对。
+
+### 14.6 新增/修改文件
+
+| 文件 | 改动 |
+|---|---|
+| `src/sources/litv.mjs` | **新建**，175 行，文件头记录 4 个坑 |
+| `src/sources/webncode.mjs` | **新建**，约 260 行，文件头记录 4 个坑 + `probeStat` 真探 |
+| `src/utils.mjs` | `normalizeName` 加罗马数字转换；`sameRegionVersion` 收紧 + `SPECIFIC_REGION` |
+| `src/match.mjs` | `pickBest` / `rankAlternatives` 加 `withDesc` 维度 |
+| `src/index.mjs` | 注册两源；降级链加区域校验 |
+| `src/sources/epgpw.mjs` | `listChannels` 加 `withDesc` |
+| `channels/channels.json` | 移除广州竞赛（284→283），保持 CRLF |
+| `test/day-fill.test.mjs` | +5 条区域回归用例（47→52） |
+
+### 14.7 ★ 罗马数字归一化 bug（顺手发现的第 4 个静默 bug）
+
+`normalizeName` 末尾白名单 `[^a-z0-9+\u4e00-\u9fa5]` 把 `Ⅰ`(U+2160)~`Ⅻ` 当噪声删掉，
+于是「好消息Ⅰ」「好消息Ⅱ」归一化后都是 `好消息` → **两个台指向同一 sourceId，
+后一个台拿到前一个台的节目，完全静默**。
+
+全量扫出 **4 处重复映射**：博斯运动Ⅰ/Ⅱ、博斯高球Ⅰ/Ⅱ、大爱Ⅰ/Ⅱ、好消息Ⅰ/Ⅱ。
+
+修复：在 `s.toLowerCase()` 之前插入罗马数字→阿拉伯数字转换（大小写两套），
+现在输出 `博斯高球1` / `博斯高球2`，4 处重复映射 → **0**。
+
+### 14.8 本轮产物（本机 build，非 CI 口径）
+
+⚠️ **本机网络比 Actions 差**，epgpw 只拿到 177 个台（CI 是 233~248），
+所以绝对数字不能和 CI 比，只能看**新源贡献的相对量**。
+
+新源覆盖 **32 个频道 / 7059 条节目 / 5164 条简介**，其中 23 个频道 100% 有简介。
+高价值样本：
+
+| 频道 | 源 | 条数 | 天 | 简介 |
+|---|---|---|---|---|
+| ZooMoo | webncode:mytvsuper_ZOO | 1113 | 7 | 1089 |
+| 戲曲台 | webncode:mytvsuper_CCOC | 676 | 7 | 676 |
+| TVBNewsChannel | webncode:tvb_inews | 377 | 7 | 46 |
+| Jade 翡翠台 | webncode:tvb_jade | 312 | 7 | 217 |
+| CCTV4Asia | webncode:nowtv_542 | 238 | 6 | 221 |
+| HOYTV | webncode:fantv_77 | 197 | 6 | 41 |
+| 中天新聞 | litv:4gtv-4gtv009 | 105 | 5 | 103 |
+| 華視新聞 | litv:4gtv-4gtv052 | 112 | 5 | 111 |
+
+### 14.9 下次查什么
+
+- **litv 26 个 0 简介台**：豬哥亮歌廳秀、黃金八點檔、八大精彩/綜藝、民視旅遊/影劇/綜藝、
+  客家電視台、國會頻道①②、時尚運動X、TRACE —— 可用 kbro/z51 补
+- **webncode 12 个空台**：234/246 有节目，剩 12 个探不到（越界/下架）
+- **tvmao 剩 190 个频道未全量重验**（第七轮只抽样 24 个）
+- **CI 跑一轮验证**：本机 epgpw 不稳，真实收益要等 Actions 产物
+

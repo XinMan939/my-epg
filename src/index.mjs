@@ -36,10 +36,12 @@ import * as epgpw from './sources/epgpw.mjs'
 import * as tvmao from './sources/tvmao.mjs'
 import * as tvsou from './sources/tvsou.mjs'
 import * as fengshows from './sources/fengshows.mjs'
+import * as webncode from './sources/webncode.mjs'
+import * as litv from './sources/litv.mjs'
 import { enrichFromZ51, loadPacks, fillEmptyChannels } from './sources/z51.mjs'
 import { enrichFromKbro } from './sources/kbro.mjs'
 
-const SOURCES = { epgpw, tvmao, tvsou, fengshows }
+const SOURCES = { epgpw, tvmao, tvsou, fengshows, webncode, litv }
 
 /**
  * 源优先级：靠前的优先。
@@ -414,10 +416,30 @@ async function cmdBuild() {
       // 原因：epg.pw 里有大量"注册了但零节目"的空壳频道（如三沙卫视 539632、
       // 浙江民生休闲 539891），名字匹配上了却拿不到任何节目，
       // 必须能自动换到 tvmao / tvsou 的同名频道。
+      //
+      // ★ 降级链必须做区域版本校验（2026-10-28 踩过，别删）：
+      //   第六轮只在「补天」分支加了 sameRegionVersion，降级链漏了。
+      //   本地一次 epgpw 抽风，CCTV4欧洲 / CCTV4美洲 的主源（539832 / 539751）抓空，
+      //   于是顺着备选链降到了 `webncode:nowtv_542(CCTV-4)` —— 那是**亚洲版**。
+      //   结果：三台都播国内版节目，报表显示「278 条 7 天」，比原来还完整，
+      //   日志里没有任何异常。这是本项目最危险的一类错误：数据看着更好，内容是错的。
+      //
+      //   注意备选链两个方向都会串：
+      //     CCTV4欧洲 → CCTV-4（亚洲）    ← 主源抓空时
+      //     CCTV4亚洲 → CCTV-4 (美洲)     ← 亚洲版抓空时
+      //   所以校验要双向做，不能只在"有区域词降级到无区域词"时拦。
+      const baseName = m.sourceName || ch.name
       const chain = [
         { source: m.source, sourceId: m.sourceId, region: m.region, sourceName: m.sourceName },
         ...(m.alternatives || []),
-      ]
+      ].filter((cand, idx) => {
+        if (idx === 0) return true // 主源自身永远保留
+        if (sameRegionVersion(baseName, cand.sourceName)) return true
+        log.warn(
+          `[match] ${ch.id} 跳过备选 ${cand.source}:${cand.sourceId}(「${cand.sourceName}」)：与主源「${baseName}」是不同区域版本`
+        )
+        return false
+      })
 
       let normalized = []
       let used = null

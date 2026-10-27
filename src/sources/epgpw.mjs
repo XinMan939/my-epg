@@ -22,7 +22,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import zlib from 'node:zlib'
-import { fetchBuffer, log, decodeEntities as decodeEntitiesUtil } from '../utils.mjs'
+import { fetchBuffer, log, decodeEntities as decodeEntitiesUtil, hasRealDesc } from '../utils.mjs'
 import { PATHS, ensureCacheDir } from '../config.mjs'
 
 const BASE = 'https://epg.pw/xmltv'
@@ -231,6 +231,11 @@ export async function listChannels() {
         // 让 match 模块优先挑数据最全的那个 id，否则卫视会只剩 1 天。
         const days = new Set()
         for (const p of list) if (p.startTs) days.add(new Date(p.startTs + 8 * 3600e3).toISOString().slice(0, 10))
+        // ★ 简介率也要带出去（2026-10-28 新增）：
+        //   只按天数+条数选源会挑到「条数多但简介全空」的源，
+        //   Now財經台 就是这样被 webncode(306条/136简介) 顶掉 epgpw(291条/286简介) 的。
+        //   pickBest 需要这个维度才能选对。
+        const withDesc = list.filter((p) => hasRealDesc(p.desc, p.title)).length
         out.push({
           source: 'epgpw',
           region,
@@ -239,6 +244,7 @@ export async function listChannels() {
           logo: c.icon,
           days: days.size,
           count: list.length,
+          withDesc,
         })
       }
     } catch (e) {
