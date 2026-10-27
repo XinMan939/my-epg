@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T19:02:29.609Z",
+  "generatedAt": "2026-10-27T19:51:45.192Z",
   "days": 7,
   "dayList": [
     "20261028",
@@ -13,10 +13,10 @@
   "channelsTotal": 288,
   "channelsWithEpg": 278,
   "channelsEmpty": 10,
-  "channelsFull": 199,
-  "channelsPartial": 79,
-  "programmesTotal": 54514,
-  "programmesWithDesc": 32503,
+  "channelsFull": 203,
+  "channelsPartial": 75,
+  "programmesTotal": 54518,
+  "programmesWithDesc": 32504,
   "descCoverage": 60,
   "dateRange": [
     "20261028",
@@ -24,8 +24,8 @@
   ],
   "sourceStats": {
     "epgpw": 175,
-    "tvmao": 43,
     "webncode": 17,
+    "tvmao": 43,
     "fengshows": 1,
     "litv": 13,
     "tdm": 6,
@@ -3247,14 +3247,6 @@
   ],
   "dayFillStats": [
     {
-      "id": "CCTV3.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTV-CCTV3+21"
-      ]
-    },
-    {
       "id": "CCTV2.cn",
       "before": 6,
       "after": 7,
@@ -3279,11 +3271,11 @@
       ]
     },
     {
-      "id": "CCTV7.cn",
-      "before": 5,
+      "id": "CCTV3.cn",
+      "before": 6,
       "after": 7,
       "sources": [
-        "tvmao:CCTV-CCTV7+76"
+        "tvmao:CCTV-CCTV3+21"
       ]
     },
     {
@@ -3303,19 +3295,27 @@
       ]
     },
     {
+      "id": "CCTV1.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTV-CCTV1+38"
+      ]
+    },
+    {
+      "id": "CCTV7.cn",
+      "before": 5,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTV-CCTV7+76"
+      ]
+    },
+    {
       "id": "CCTV9.cn",
       "before": 6,
       "after": 7,
       "sources": [
         "tvmao:CCTV-CCTV9+34"
-      ]
-    },
-    {
-      "id": "CCTV11.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTV-CCTV11+19"
       ]
     },
     {
@@ -3335,6 +3335,14 @@
       ]
     },
     {
+      "id": "CCTV11.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTV-CCTV11+19"
+      ]
+    },
+    {
       "id": "CCTV13.cn",
       "before": 6,
       "after": 7,
@@ -3351,11 +3359,11 @@
       ]
     },
     {
-      "id": "CCTV16.cn",
+      "id": "CCTV4America.cn",
       "before": 6,
       "after": 7,
       "sources": [
-        "tvmao:CCTV-CCTVOLY+23"
+        "tvmao:CCTV-CCTVAMERICAS+40"
       ]
     },
     {
@@ -3367,19 +3375,19 @@
       ]
     },
     {
+      "id": "CCTV16.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTV-CCTVOLY+23"
+      ]
+    },
+    {
       "id": "CCTV4Europe.cn",
       "before": 6,
       "after": 7,
       "sources": [
         "tvmao:CCTV-CCTVEUROPE+40"
-      ]
-    },
-    {
-      "id": "CCTV4America.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTV-CCTVAMERICAS+40"
       ]
     },
     {
@@ -3399,19 +3407,19 @@
       ]
     },
     {
-      "id": "DragonTV.cn",
-      "before": 5,
-      "after": 7,
-      "sources": [
-        "tvmao:DONGFANG1+83"
-      ]
-    },
-    {
       "id": "JiangsuSatelliteTV.cn",
       "before": 5,
       "after": 7,
       "sources": [
         "tvmao:JSTV1+60"
+      ]
+    },
+    {
+      "id": "DragonTV.cn",
+      "before": 5,
+      "after": 7,
+      "sources": [
+        "tvmao:DONGFANG1+83"
       ]
     },
     {
@@ -3431,19 +3439,19 @@
       ]
     },
     {
-      "id": "ShenzhenSatelliteTV.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:SZTV1+44"
-      ]
-    },
-    {
       "id": "GuangdongSatelliteTV.cn",
       "before": 6,
       "after": 7,
       "sources": [
         "tvmao:GDTV1+36"
+      ]
+    },
+    {
+      "id": "ShenzhenSatelliteTV.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:SZTV1+44"
       ]
     },
     {
@@ -3471,14 +3479,6 @@
       ]
     },
     {
-      "id": "HubeiSatelliteTV.cn",
-      "before": 5,
-      "after": 7,
-      "sources": [
-        "tvmao:HUBEI1+66"
-      ]
-    },
-    {
       "id": "HenanTVSatellite.cn",
       "before": 5,
       "after": 7,
@@ -3487,11 +3487,11 @@
       ]
     },
     {
-      "id": "HebeiSatelliteTV.cn",
-      "before": 6,
+      "id": "HubeiSatelliteTV.cn",
+      "before": 5,
       "after": 7,
       "sources": [
-        "tvmao:HEBEI1+31"
+        "tvmao:HUBEI1+66"
       ]
     },
     {
@@ -3503,19 +3503,19 @@
       ]
     },
     {
+      "id": "HebeiSatelliteTV.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:HEBEI1+31"
+      ]
+    },
+    {
       "id": "ShanxiSatelliteTV.cn",
       "before": 6,
       "after": 7,
       "sources": [
         "tvmao:SXTV1+28"
-      ]
-    },
-    {
-      "id": "LiaoningSatelliteTV.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:LNTV1+41"
       ]
     },
     {
@@ -3527,11 +3527,11 @@
       ]
     },
     {
-      "id": "CCTV1.cn",
-      "before": 6,
+      "id": "JiangxiSatelliteTV.cn",
+      "before": 5,
       "after": 7,
       "sources": [
-        "tvmao:CCTV-CCTV1+38"
+        "tvmao:JXTV1+76"
       ]
     },
     {
@@ -3543,11 +3543,11 @@
       ]
     },
     {
-      "id": "JiangxiSatelliteTV.cn",
-      "before": 5,
+      "id": "LiaoningSatelliteTV.cn",
+      "before": 6,
       "after": 7,
       "sources": [
-        "tvmao:JXTV1+76"
+        "tvmao:LNTV1+41"
       ]
     },
     {
@@ -3567,6 +3567,14 @@
       ]
     },
     {
+      "id": "GansuSatelliteTV.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:GSTV1+50"
+      ]
+    },
+    {
       "id": "YunnanSatelliteTV.cn",
       "before": 6,
       "after": 7,
@@ -3580,14 +3588,6 @@
       "after": 7,
       "sources": [
         "tvmao:GUIZOUTV1+38"
-      ]
-    },
-    {
-      "id": "GansuSatelliteTV.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:GSTV1+50"
       ]
     },
     {
@@ -3607,19 +3607,19 @@
       ]
     },
     {
-      "id": "XinjiangSatelliteTV.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:XJTV1+34"
-      ]
-    },
-    {
       "id": "TibetSatelliteTV.cn",
       "before": 5,
       "after": 7,
       "sources": [
         "tvmao:XIZANGTV2+91"
+      ]
+    },
+    {
+      "id": "XinjiangSatelliteTV.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:XJTV1+34"
       ]
     },
     {
@@ -3639,27 +3639,11 @@
       ]
     },
     {
-      "id": "YanbianSatelliteTV.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:YANBIAN1+21"
-      ]
-    },
-    {
       "id": "BingtuanSatelliteTV.cn",
       "before": 6,
       "after": 7,
       "sources": [
         "tvmao:BINGTUAN+35"
-      ]
-    },
-    {
-      "id": "KangbaSatelliteTV.cn",
-      "before": 5,
-      "after": 7,
-      "sources": [
-        "tvmao:KAMBA-TV+88"
       ]
     },
     {
@@ -3671,11 +3655,35 @@
       ]
     },
     {
+      "id": "YanbianSatelliteTV.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:YANBIAN1+21"
+      ]
+    },
+    {
+      "id": "KangbaSatelliteTV.cn",
+      "before": 5,
+      "after": 7,
+      "sources": [
+        "tvmao:KAMBA-TV+88"
+      ]
+    },
+    {
       "id": "HaixiaSatelliteTV.cn",
       "before": 5,
       "after": 7,
       "sources": [
         "tvmao:HXTV+83"
+      ]
+    },
+    {
+      "id": "PhoenixInfoNewsChannel.hk",
+      "before": 6,
+      "after": 6,
+      "sources": [
+        "webncode:nowtv_366+1"
       ]
     },
     {
@@ -3687,11 +3695,19 @@
       ]
     },
     {
-      "id": "CCTV4Asia.cn",
-      "before": 5,
+      "id": "PhoenixChineseChannel.hk",
+      "before": 6,
       "after": 6,
       "sources": [
-        "epgpw:410375+38"
+        "webncode:nowtv_548+1"
+      ]
+    },
+    {
+      "id": "CTiAsia.tw",
+      "before": 6,
+      "after": 6,
+      "sources": [
+        "webncode:nowtv_538+1"
       ]
     },
     {
@@ -3701,18 +3717,26 @@
       "sources": [
         "epgpw:457352+303"
       ]
+    },
+    {
+      "id": "AsianFood.tw",
+      "before": 6,
+      "after": 6,
+      "sources": [
+        "webncode:nowtv_527+1"
+      ]
     }
   ],
   "descStats": {
     "realCoverage": 59.6,
-    "realCount": 32503,
-    "totalCount": 54514,
+    "realCount": 32504,
+    "totalCount": 54518,
     "echoCount": 633,
     "titles": 956,
-    "filled": 17919,
+    "filled": 17920,
     "z51": {
-      "channels": 151,
-      "filled": 15480,
+      "channels": 152,
+      "filled": 15481,
       "packs": [
         {
           "key": "e1",
@@ -4472,10 +4496,10 @@
           "id": "PhoenixChineseChannel.hk",
           "name": "凤凰中文",
           "status": "ok",
-          "mine": 65,
+          "mine": 66,
           "key": "e1:141",
           "inter": 18,
-          "rate": 0.27692307692307694
+          "rate": 0.2727272727272727
         },
         {
           "id": "PhoenixInfoNewsChannel.hk",
@@ -5945,10 +5969,10 @@
           "id": "AsianFood.tw",
           "name": "亚洲美食频道",
           "status": "weak",
-          "mine": 50,
+          "mine": 51,
           "key": "e2:1589",
           "inter": 6,
-          "rate": 0.12
+          "rate": 0.11764705882352941
         },
         {
           "id": "阿里郎.tw",
@@ -6500,6 +6524,14 @@
           "source": "e2:121(明珠台)",
           "inter": 19,
           "rate": 0.3392857142857143
+        },
+        "PhoenixInfoNewsChannel.hk": {
+          "filled": 1,
+          "before": 240,
+          "stage": "channel",
+          "source": "e1:142(凤凰资讯)",
+          "inter": 23,
+          "rate": 0.71875
         },
         "PhoenixHongKongChannel.hk": {
           "filled": 56,
@@ -7690,7 +7722,7 @@
           "id": "PhoenixChineseChannel.hk",
           "name": "鳳凰衛視中文台",
           "status": "none",
-          "mine": 65
+          "mine": 66
         },
         {
           "id": "PhoenixInfoNewsChannel.hk",
@@ -9124,7 +9156,7 @@
           "id": "AsianFood.tw",
           "name": "AsianFood",
           "status": "none",
-          "mine": 50
+          "mine": 51
         },
         {
           "id": "阿里郎.tw",
@@ -9514,7 +9546,7 @@
       "withCategory": 0,
       "uniqTitles": 22,
       "first": "20261028004000 +0800",
-      "last": "20261103000000 +0800",
+      "last": "20261103004000 +0800",
       "usedSource": "webncode:nowtv_542(CCTV-4)",
       "matchConfidence": "exact",
       "matchedSourceName": "CCTV-4",
@@ -12640,8 +12672,8 @@
         "凤凰中文"
       ],
       "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129153829170771_55",
-      "count": 294,
-      "days": 6,
+      "count": 295,
+      "days": 7,
       "perDay": {
         "20261028": 49,
         "20261029": 50,
@@ -12649,14 +12681,14 @@
         "20261031": 49,
         "20261101": 49,
         "20261102": 48,
-        "20261103": 0
+        "20261103": 1
       },
       "withDesc": 242,
       "descRate": 82,
       "withCategory": 0,
-      "uniqTitles": 65,
+      "uniqTitles": 66,
       "first": "20261028000000 +0800",
-      "last": "20261103000000 +0800",
+      "last": "20261103005700 +0800",
       "usedSource": "epgpw:410378(鳳凰衛視中文台)",
       "matchConfidence": "exact",
       "matchedSourceName": "鳳凰衛視中文台",
@@ -12666,7 +12698,7 @@
         "tvsou:65e0f71a(凤凰卫视)",
         "tvsou:f679053a(凤凰卫视（高清）)"
       ],
-      "status": "partial"
+      "status": "full"
     },
     {
       "id": "PhoenixInfoNewsChannel.hk",
@@ -12677,8 +12709,8 @@
         "凤凰资讯"
       ],
       "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129074347363304_81",
-      "count": 382,
-      "days": 6,
+      "count": 383,
+      "days": 7,
       "perDay": {
         "20261028": 63,
         "20261029": 63,
@@ -12686,14 +12718,14 @@
         "20261031": 65,
         "20261101": 65,
         "20261102": 63,
-        "20261103": 0
+        "20261103": 1
       },
-      "withDesc": 240,
+      "withDesc": 241,
       "descRate": 63,
       "withCategory": 0,
       "uniqTitles": 32,
       "first": "20261028000000 +0800",
-      "last": "20261103000000 +0800",
+      "last": "20261103005700 +0800",
       "usedSource": "epgpw:410355(鳳凰衛視資訊台)",
       "matchConfidence": "exact",
       "matchedSourceName": "鳳凰衛視資訊台",
@@ -12701,7 +12733,7 @@
         "webncode:nowtv_366(鳳凰衛視資訊台)",
         "fengshows:資訊台(鳳凰衛視資訊台)"
       ],
-      "status": "partial"
+      "status": "full"
     },
     {
       "id": "PhoenixHongKongChannel.hk",
@@ -15945,8 +15977,8 @@
         "中天亞洲台"
       ],
       "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129141524674377_87",
-      "count": 149,
-      "days": 6,
+      "count": 150,
+      "days": 7,
       "perDay": {
         "20261028": 24,
         "20261029": 25,
@@ -15954,14 +15986,14 @@
         "20261031": 25,
         "20261101": 26,
         "20261102": 25,
-        "20261103": 0
+        "20261103": 1
       },
       "withDesc": 20,
       "descRate": 13,
       "withCategory": 0,
       "uniqTitles": 28,
       "first": "20261028000000 +0800",
-      "last": "20261103000000 +0800",
+      "last": "20261103010000 +0800",
       "usedSource": "epgpw:410372(中天亞洲台)",
       "matchConfidence": "exact",
       "matchedSourceName": "中天亞洲台",
@@ -15969,7 +16001,7 @@
         "webncode:nowtv_538(中天亞洲台)",
         "litv:4gtv-4gtv109(中天亞洲台)"
       ],
-      "status": "partial"
+      "status": "full"
     },
     {
       "id": "FTVOne.tw",
@@ -18669,8 +18701,8 @@
         "亞洲美食台"
       ],
       "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919170840611834_26.png",
-      "count": 243,
-      "days": 6,
+      "count": 244,
+      "days": 7,
       "perDay": {
         "20261028": 43,
         "20261029": 41,
@@ -18678,14 +18710,14 @@
         "20261031": 42,
         "20261101": 37,
         "20261102": 38,
-        "20261103": 0
+        "20261103": 1
       },
       "withDesc": 39,
       "descRate": 16,
       "withCategory": 0,
-      "uniqTitles": 50,
+      "uniqTitles": 51,
       "first": "20261028000000 +0800",
-      "last": "20261103000000 +0800",
+      "last": "20261103005500 +0800",
       "usedSource": "epgpw:457281(亞洲美食頻道)",
       "matchConfidence": "override",
       "matchedSourceName": "亞洲美食頻道",
@@ -18693,7 +18725,7 @@
         "epgpw:410370(亞洲美食台)",
         "webncode:nowtv_527(亞洲美食台)"
       ],
-      "status": "partial"
+      "status": "full"
     },
     {
       "id": "阿里郎.tw",
