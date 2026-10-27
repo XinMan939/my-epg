@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T17:06:47.235Z",
+  "generatedAt": "2026-10-27T17:43:27.676Z",
   "days": 7,
   "dayList": [
     "20261028",
@@ -3074,7 +3074,7 @@
       "name": "老张的EPG",
       "url": "http://epg.51zmt.top:8000/e.xml.gz",
       "ok": true,
-      "channels": 100,
+      "channels": 101,
       "matched": 0
     }
   ],
@@ -3190,27 +3190,11 @@
   ],
   "dayFillStats": [
     {
-      "id": "CCTV5.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTV-CCTV5+23"
-      ]
-    },
-    {
       "id": "CCTV3.cn",
       "before": 6,
       "after": 7,
       "sources": [
         "tvmao:CCTV-CCTV3+21"
-      ]
-    },
-    {
-      "id": "CCTV5Plus.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTV-CCTV5-PLUS+17"
       ]
     },
     {
@@ -3222,27 +3206,27 @@
       ]
     },
     {
+      "id": "CCTV5.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTV-CCTV5+23"
+      ]
+    },
+    {
+      "id": "CCTV5Plus.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTV-CCTV5-PLUS+17"
+      ]
+    },
+    {
       "id": "CCTV1.cn",
       "before": 6,
       "after": 7,
       "sources": [
         "tvmao:CCTV-CCTV1+38"
-      ]
-    },
-    {
-      "id": "CCTV7.cn",
-      "before": 5,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTV-CCTV7+76"
-      ]
-    },
-    {
-      "id": "CCTV8.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTV-CCTV8+37"
       ]
     },
     {
@@ -3254,11 +3238,27 @@
       ]
     },
     {
+      "id": "CCTV8.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTV-CCTV8+37"
+      ]
+    },
+    {
       "id": "CCTV9.cn",
       "before": 6,
       "after": 7,
       "sources": [
         "tvmao:CCTV-CCTV9+34"
+      ]
+    },
+    {
+      "id": "CCTV7.cn",
+      "before": 5,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTV-CCTV7+76"
       ]
     },
     {
@@ -3270,19 +3270,11 @@
       ]
     },
     {
-      "id": "CCTV12.cn",
+      "id": "CCTV13.cn",
       "before": 6,
       "after": 7,
       "sources": [
-        "tvmao:CCTV-CCTV12+31"
-      ]
-    },
-    {
-      "id": "CCTV14.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTV-CCTV15+21"
+        "tvmao:CCTV-CCTV13+42"
       ]
     },
     {
@@ -3294,11 +3286,19 @@
       ]
     },
     {
-      "id": "CCTV13.cn",
+      "id": "CCTV14.cn",
       "before": 6,
       "after": 7,
       "sources": [
-        "tvmao:CCTV-CCTV13+42"
+        "tvmao:CCTV-CCTV15+21"
+      ]
+    },
+    {
+      "id": "CCTV12.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTV-CCTV12+31"
       ]
     },
     {
@@ -3307,14 +3307,6 @@
       "after": 7,
       "sources": [
         "tvmao:CCTV-CCTV16+17"
-      ]
-    },
-    {
-      "id": "CCTV4America.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTV-CCTVAMERICAS+40"
       ]
     },
     {
@@ -3342,19 +3334,19 @@
       ]
     },
     {
+      "id": "CCTV4America.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTV-CCTVAMERICAS+40"
+      ]
+    },
+    {
       "id": "ZhejiangSatelliteTV.cn",
       "before": 6,
       "after": 7,
       "sources": [
         "tvmao:ZJTV1+46"
-      ]
-    },
-    {
-      "id": "JiangsuSatelliteTV.cn",
-      "before": 5,
-      "after": 7,
-      "sources": [
-        "tvmao:JSTV1+60"
       ]
     },
     {
@@ -3366,11 +3358,11 @@
       ]
     },
     {
-      "id": "CCTV4Asia.cn",
+      "id": "JiangsuSatelliteTV.cn",
       "before": 5,
-      "after": 6,
+      "after": 7,
       "sources": [
-        "epgpw:410375+38"
+        "tvmao:JSTV1+60"
       ]
     },
     {
@@ -3382,19 +3374,19 @@
       ]
     },
     {
-      "id": "AnhuiSatelliteTV.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:AHTV1+36"
-      ]
-    },
-    {
       "id": "GuangdongSatelliteTV.cn",
       "before": 6,
       "after": 7,
       "sources": [
         "tvmao:GDTV1+36"
+      ]
+    },
+    {
+      "id": "AnhuiSatelliteTV.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:AHTV1+36"
       ]
     },
     {
@@ -3406,19 +3398,19 @@
       ]
     },
     {
-      "id": "ChongqingSatelliteTV.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:CCQTV1+38"
-      ]
-    },
-    {
       "id": "ShenzhenSatelliteTV.cn",
       "before": 6,
       "after": 7,
       "sources": [
         "tvmao:SZTV1+44"
+      ]
+    },
+    {
+      "id": "CCTV4Asia.cn",
+      "before": 5,
+      "after": 6,
+      "sources": [
+        "epgpw:410375+38"
       ]
     },
     {
@@ -3430,19 +3422,19 @@
       ]
     },
     {
-      "id": "SichuanSatelliteTV.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:SCTV1+32"
-      ]
-    },
-    {
       "id": "HubeiSatelliteTV.cn",
       "before": 5,
       "after": 7,
       "sources": [
         "tvmao:HUBEI1+66"
+      ]
+    },
+    {
+      "id": "SichuanSatelliteTV.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:SCTV1+32"
       ]
     },
     {
@@ -3454,19 +3446,11 @@
       ]
     },
     {
-      "id": "ShanxiSatelliteTV.cn",
+      "id": "ChongqingSatelliteTV.cn",
       "before": 6,
       "after": 7,
       "sources": [
-        "tvmao:SXTV1+28"
-      ]
-    },
-    {
-      "id": "ShaanxiSatelliteTV.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:SHXITV1+31"
+        "tvmao:CCQTV1+38"
       ]
     },
     {
@@ -3475,6 +3459,14 @@
       "after": 7,
       "sources": [
         "tvmao:HEBEI1+31"
+      ]
+    },
+    {
+      "id": "ShanxiSatelliteTV.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:SXTV1+28"
       ]
     },
     {
@@ -3494,6 +3486,14 @@
       ]
     },
     {
+      "id": "ShaanxiSatelliteTV.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:SHXITV1+31"
+      ]
+    },
+    {
       "id": "JiangxiSatelliteTV.cn",
       "before": 5,
       "after": 7,
@@ -3510,27 +3510,19 @@
       ]
     },
     {
-      "id": "FujianSatelliteTV.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:FJTV2+41"
-      ]
-    },
-    {
-      "id": "GuangxiSatelliteTV.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:GUANXI1+31"
-      ]
-    },
-    {
       "id": "GuizhouSatelliteTV.cn",
       "before": 6,
       "after": 7,
       "sources": [
         "tvmao:GUIZOUTV1+38"
+      ]
+    },
+    {
+      "id": "FujianSatelliteTV.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:FJTV2+41"
       ]
     },
     {
@@ -3542,19 +3534,27 @@
       ]
     },
     {
+      "id": "GuangxiSatelliteTV.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:GUANXI1+31"
+      ]
+    },
+    {
+      "id": "YunnanSatelliteTV.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:YNTV1+26"
+      ]
+    },
+    {
       "id": "QinghaiSatelliteTV.cn",
       "before": 6,
       "after": 7,
       "sources": [
         "tvmao:QHTV1+27"
-      ]
-    },
-    {
-      "id": "NingxiaSatelliteChannel.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:NXTV2+41"
       ]
     },
     {
@@ -3566,11 +3566,11 @@
       ]
     },
     {
-      "id": "YunnanSatelliteTV.cn",
+      "id": "NingxiaSatelliteChannel.cn",
       "before": 6,
       "after": 7,
       "sources": [
-        "tvmao:YNTV1+26"
+        "tvmao:NXTV2+41"
       ]
     },
     {
@@ -3614,11 +3614,11 @@
       ]
     },
     {
-      "id": "KangbaSatelliteTV.cn",
+      "id": "HaixiaSatelliteTV.cn",
       "before": 5,
       "after": 7,
       "sources": [
-        "tvmao:KAMBA-TV+88"
+        "tvmao:HXTV+83"
       ]
     },
     {
@@ -3630,11 +3630,11 @@
       ]
     },
     {
-      "id": "HaixiaSatelliteTV.cn",
+      "id": "KangbaSatelliteTV.cn",
       "before": 5,
       "after": 7,
       "sources": [
-        "tvmao:HXTV+83"
+        "tvmao:KAMBA-TV+88"
       ]
     },
     {
