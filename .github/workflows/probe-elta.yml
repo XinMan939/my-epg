@@ -1,83 +1,77 @@
 name: 探测 ELTA OTT API（临时）
 on:
   workflow_dispatch:
+    inputs:
+      full:
+        description: 'true = 跑 catalog 重扫 + build'
+        required: false
+        default: 'false'
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 40
     steps:
-      - name: 抓原始 JSON
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '22' }
+      - name: 缓存数据源
+        uses: actions/cache@v4
+        with:
+          path: .cache
+          key: epg-cache-${{ github.run_id }}
+          restore-keys: |
+            epg-cache-
+      - name: 实测 elta.mjs
         run: |
-          mkdir -p out/raw
-          for i in 0 1 2 3 4 5 6 7; do
-            DD=$(TZ=Asia/Taipei date -d "+$i day" +%Y-%m-%d)
-            curl -sS --compressed -o "out/raw/pl_${DD}.json" --max-time 25 \
-              -H "User-Agent: Mozilla/5.0" \
-              "https://piceltaott-elta.cdn.hinet.net/production/json/program_list/program_list_${DD}.json" || echo "$DD 失败"
-          done
-          for i in 1 2 3; do
-            DD=$(TZ=Asia/Taipei date -d "-$i day" +%Y-%m-%d)
-            curl -sS --compressed -o "out/raw/pl_${DD}.json" --max-time 25 \
-              -H "User-Agent: Mozilla/5.0" \
-              "https://piceltaott-elta.cdn.hinet.net/production/json/program_list/program_list_${DD}.json" || echo "$DD 失败"
-          done
-          curl -sS --compressed -o out/raw/channel_list.json --max-time 25 \
-            -H "User-Agent: Mozilla/5.0" \
-            "https://piceltaott-elta.cdn.hinet.net/production/json/channel/channel_list.json"
-          ls -la out/raw/
-      - name: 分析
-        run: |
+          mkdir -p out
           {
-            echo "===== 每个日期文件：首末时间与条数 ====="
+            echo "===== listChannels ====="
             node -e "
-              const fs=require('fs');
-              const files=fs.readdirSync('out/raw').filter(f=>f.startsWith('pl_')).sort();
-              const bj=(t)=>new Date(t*1000+8*3600e3).toISOString().slice(0,19).replace('T',' ');
-              for(const f of files){
-                const j=JSON.parse(fs.readFileSync('out/raw/'+f,'utf8'));
-                const ks=Object.keys(j);
-                let tot=0,min=Infinity,max=0,perCh={};
-                for(const k of ks){ const a=j[k]||[]; perCh[k]=a.length; tot+=a.length;
-                  for(const p of a){ if(p.start_time<min)min=p.start_time; if(p.end_time>max)max=p.end_time; } }
-                const counts=Object.values(perCh);
-                console.log(f.replace('pl_','').replace('.json',''),
-                  '| 台'+ks.length, '| 条'+tot,
-                  '| 每台 '+Math.min(...counts)+'~'+Math.max(...counts),
-                  '| 首'+bj(min), '| 末'+bj(max));
-              }
+              import('./src/sources/elta.mjs').then(async m => {
+                const l = await m.listChannels();
+                console.log(JSON.stringify(l, null, 1));
+                const t = l.reduce((s,c)=>s+c.count,0);
+                const d = l.reduce((s,c)=>s+c.days,0);
+                console.error('共 ' + l.length + ' 台 / ' + t + ' 条 / 天数合计 ' + d);
+              })
             " 2>&1
             echo
-            echo "===== 单台(101)逐日首末，看日期归属 ====="
+            echo "===== getDayProgrammes 今天 101 ====="
             node -e "
-              const fs=require('fs');
-              const files=fs.readdirSync('out/raw').filter(f=>f.startsWith('pl_')).sort();
-              const bj=(t)=>new Date(t*1000+8*3600e3).toISOString().slice(5,16).replace('T',' ');
-              for(const f of files){
-                const j=JSON.parse(fs.readFileSync('out/raw/'+f,'utf8'));
-                const a=(j['101']||[]).sort((x,y)=>x.start_time-y.start_time);
-                if(!a.length){console.log(f,'无数据');continue}
-                console.log(f.replace('pl_','').replace('.json',''),
-                  '| 条'+a.length, '| 首'+bj(a[0].start_time), '| 末'+bj(a[a.length-1].end_time));
-              }
-            " 2>&1
-            echo
-            echo "===== 节目名样例(101 今天) ====="
-            node -e "
-              const fs=require('fs');
-              const files=fs.readdirSync('out/raw').filter(f=>f.startsWith('pl_')).sort();
-              const j=JSON.parse(fs.readFileSync('out/raw/'+files[3],'utf8'));
-              const a=(j['101']||[]).sort((x,y)=>x.start_time-y.start_time);
-              const bj=(t)=>new Date(t*1000+8*3600e3).toISOString().slice(5,16).replace('T',' ');
-              for(const p of a) console.log(' ', bj(p.start_time), '~', bj(p.end_time), '|', p.program_desc, '| sn='+p.program_sn);
-            " 2>&1
-            echo
-            echo "===== contents_order 是否有内容 ====="
-            node -e "
-              const fs=require('fs');
-              const j=JSON.parse(fs.readFileSync('out/raw/channel_list.json','utf8'));
-              let n=0; for(const c of j){ if(c.contents_order!==null&&c.contents_order!==undefined) n++ }
-              console.log('channel_list 里 contents_order 非空:', n, '/', j.length);
+              import('./src/sources/elta.mjs').then(async m => {
+                const d = new Date(Date.now()+8*3600e3).toISOString().slice(0,10).replace(/-/g,'');
+                const r = await m.getDayProgrammes('101', 1, d);
+                console.log('条数:', r.programmes.length, '| err:', r.error || '无');
+                const bj = t => new Date(t+8*3600e3).toISOString().slice(5,16).replace('T',' ');
+                for (const p of r.programmes.slice(0,8)) {
+                  console.log(' ', bj(p.startTs), '~', bj(p.stopTs), '|', p.title);
+                }
+                // 时长检查
+                const bad = r.programmes.filter(p=>p.stopTs<=p.startTs).length;
+                console.log('无效时长:', bad);
+              })
             " 2>&1
           } > out/report.txt 2>&1
+      - name: catalog + build
+        if: github.event.inputs.full == 'true'
+        run: |
+          npm test 2>&1 | tail -25 >> out/report.txt
+          echo "" >> out/report.txt
+          echo "===== catalog 重扫 =====" >> out/report.txt
+          node src/index.mjs catalog 2>&1 | tail -30 >> out/report.txt
+          echo "" >> out/report.txt
+          echo "===== build =====" >> out/report.txt
+          DAYS=7 node src/index.mjs build 2>&1 | grep -E "\[elta\]|\[match\].*爱尔达|\[match\].*爱爾達|错误|失败|覆盖" >> out/report.txt
+          echo "" >> out/report.txt
+          echo "===== 爱尔达各台结果 =====" >> out/report.txt
+          node -e "
+            const r=require('./output/report.json');
+            console.log('全站: 频道', r.channelsTotal, '有节目', r.channelsWithEpg, '空', r.channelsEmpty, '满7天', r.channelsFull);
+            console.log('节目', r.programmesTotal, '简介', r.programmesWithDesc, r.descCoverage+'%');
+            const rows=(r.detail||[]).filter(x=>String(x.name||'').includes('爱尔达')||String(x.name||'').includes('爱爾達'));
+            for(const x of rows) console.log(' ', String(x.id).padEnd(22), '条', String(x.count).padStart(4), '天', x.days, '简', String(x.withDesc).padStart(3), x.status, '|', x.usedSource);
+          " >> out/report.txt 2>&1
+          cp channels/catalog.json out/catalog-new.json 2>/dev/null || true
+          cp output/report.json out/report-full.json 2>/dev/null || true
       - uses: actions/upload-artifact@v4
         with: { name: elta-probe, path: out/ }
