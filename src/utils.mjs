@@ -187,6 +187,41 @@ export function esc(s) {
     .replace(/'/g, '&apos;')
 }
 
+/**
+ * 解码 XML / HTML 实体。
+ *
+ * ★ 必须「先解 &amp; 再解其他」，或者反复解到稳定 —— 顺序错了就会漏。
+ *   踩过的坑（2026-10-27 线上产物实测 405 条乱码）：
+ *     源里存的是 `&amp;quot;融媒体&amp;quot;`（上游自己把 `&quot;` 又转义了一遍）
+ *     旧实现按 `&quot;` → `&amp;` 的顺序，先跑 `&quot;` 时字符串里还没有 `&quot;`
+ *     （它是 `&amp;quot;`），等最后把 `&amp;` 换成 `&`，才变成 `&quot;` —— 但已经跑完了，
+ *     于是产物里留着字面的 `&quot;融媒体&quot;`、`&lt;甘肃新闻&gt;`，用户看到的就是乱码。
+ *
+ *   解法：循环解码直到不再变化（最多 3 轮，防死循环）。
+ *   实测 405 条双重转义一次全解干净，且对正常文本零影响
+ *   （正常文本解一轮就稳定，第二轮不匹配任何实体）。
+ */
+export function decodeEntities(s) {
+  if (s == null) return ''
+  let out = String(s)
+  const once = (t) =>
+    t
+      .replace(/&lt;/g, '<')
+      .replace(/&gt;/g, '>')
+      .replace(/&quot;/g, '"')
+      .replace(/&apos;/g, "'")
+      .replace(/&nbsp;/g, ' ')
+      .replace(/&#(\d+);/g, (_, d) => String.fromCharCode(Number(d)))
+      .replace(/&#x([0-9a-fA-F]+);/g, (_, h) => String.fromCharCode(parseInt(h, 16)))
+      .replace(/&amp;/g, '&')
+  for (let i = 0; i < 3; i++) {
+    const next = once(out)
+    if (next === out) break
+    out = next
+  }
+  return out
+}
+
 /** 去掉 XML 非法控制字符 */
 export function stripInvalidXml(s) {
   if (s == null) return ''
@@ -511,4 +546,70 @@ export function isRealDesc(d) {
   if (PLACEHOLDER_DESC_RE.test(s)) return false
   if (/^暂无/.test(s)) return false
   return true
+}
+
+/**
+ * 「复读型」简介：<desc> 就是把 <title> 抄了一遍，零信息量。
+ *
+ * 为什么必须单独判（2026-10-27 线上产物实测）：
+ *   epg.pw 有 799 条节目的 desc 就是标题本身：
+ *     博斯無限台   「2025-26 司諾克賽季 世界大獎賽 四強(1)ZHA vs WAK」
+ *               → desc 也是「2025-26 司諾克賽季 世界大獎賽 四強(1)ZHA vs WAK」
+ *     韓國阿里郎   「Gugak The Music Of Korea」→ desc 同样
+ *   这些 desc 长度都超过 12 字，isRealDesc() 拦不住，被当成真简介。
+ *
+ * ★ 危害不止「数字虚高」，更要命的是它会**锁死补简介的位置**：
+ *   三个补简介源（z51 / tvmao / kbro）的循环都是
+ *     if (isRealDesc(r.desc)) continue   // 已有简介，不动
+ *   复读 desc 骗过了这道判断 → 真简介永远补不进来。
+ *   实测 799 条里 kbro 本来能给 138 条真简介（DAZN1 46 条、纬来体育 48 条），
+ *   全被这 799 条复读挡住了。
+ *
+ * 判据（两档，都要求归一化后标题 ≥4 字）：
+ *   ① 完全相等：归一化 desc === 归一化 title
+ *   ② 标题 + 纯序号：desc = title + 「第八季 EP17」「10月29日」「#8」这类，
+ *      剥掉数字与 EP/季/集 后剩余 ≤2 字
+ *
+ * ★ 为什么不把「desc 以标题开头」一律判复读：
+ *   那样会误伤真简介 —— 港台电视35「The World Today」→「The World Today is the core
+ *   rolling news service of CGTN…」，甘肃卫视「雄关剧场」→「雄关剧场是一档播放各类
+ *   精彩影剧作品的节目。」，都是正常的「栏目名 + 栏目介绍」写法。
+ *   实测这类有 1177 条，全是对的，一条都不能碰。
+ */
+const ECHO_STRIP_RE = /[\s\u3000]/g
+const ECHO_PUNCT_RE = /[（(][^）)]*[）)]|[:：·・\-—–_|/、,，.。！!？?"'「」『』]/g
+const ECHO_TAIL_RE = /[0-9]/g
+const ECHO_WORD_RE = /ep|s[0-9]|第|季|集|集数|回|話|话/gi
+
+/** 归一化：去空白、去括号内容、去标点、小写 */
+function echoNorm(s) {
+  return String(s || '').replace(ECHO_STRIP_RE, '').replace(ECHO_PUNCT_RE, '').toLowerCase()
+}
+
+/**
+ * @param desc   <desc> 内容
+ * @param title  <title> 内容
+ * @returns {boolean} true = 这是标题复读，不是简介
+ */
+export function isEchoDesc(desc, title) {
+  if (!desc || !title) return false
+  const nd = echoNorm(desc)
+  const nt = echoNorm(title)
+  if (!nt || nt.length < 4) return false
+  if (nd === nt) return true
+  // 标题 + 纯序号（前或后）
+  const tail = nd.startsWith(nt) ? nd.slice(nt.length) : nd.endsWith(nt) ? nd.slice(0, nd.length - nt.length) : null
+  if (tail === null) return false
+  const rest = tail.replace(ECHO_TAIL_RE, '').replace(ECHO_WORD_RE, '')
+  return rest.length <= 2
+}
+
+/**
+ * 「真简介」的完整判据 = 非占位 且 非标题复读。
+ *
+ * ★ 统计口径、补简介前的「是否已有简介」判断，都应该用这个而不是 isRealDesc。
+ *   只传 desc 的老接口（isRealDesc）保留，用于确实拿不到标题的场合。
+ */
+export function hasRealDesc(desc, title) {
+  return isRealDesc(desc) && !isEchoDesc(desc, title)
 }

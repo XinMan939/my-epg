@@ -5,7 +5,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import zlib from 'node:zlib'
 import { CONFIG, PATHS, ensureOutputDir } from './config.mjs'
-import { esc, isRealDesc } from './utils.mjs'
+import { esc, isRealDesc, hasRealDesc, isEchoDesc } from './utils.mjs'
 
 /**
  * 生成 XMLTV 字符串
@@ -64,7 +64,11 @@ export function buildXmltv(channels, epgMap, opts = {}) {
         `  <programme start="${p.start}" stop="${p.stop}" channel="${esc(outId(c))}">`
       )
       lines.push(`    <title lang="zh">${esc(p.title)}</title>`)
-      if (p.desc) lines.push(`    <desc lang="zh">${esc(p.desc)}</desc>`)
+      // ★ 「宁空不挂错」：desc 只是标题复读的，直接不输出。
+      //   用户点开节目看到「2025-26司諾克賽季 世界大獎賽 四強(1)ZHA vs WAK」
+      //   和标题一模一样，比不显示简介更糟 —— 前者是废话，后者是「暂无信息」。
+      //   这些条目的上游（epg.pw 台湾包）本来就只给标题当 desc，补不进来就别硬塞。
+      if (p.desc && !isEchoDesc(p.desc, p.title)) lines.push(`    <desc lang="zh">${esc(p.desc)}</desc>`)
       if (p.category) lines.push(`    <category lang="zh">${esc(p.category)}</category>`)
       lines.push('  </programme>')
     }
@@ -168,7 +172,10 @@ export function buildReport(channels, epgMap, extra = {}) {
     //    51zmt 的 e1 里 70% 的 <desc> 是「暂无节目描述」「此阶段播放精彩电视剧内容」
     //    这类占位文本，只要非空就计数的话，覆盖率会虚高到 99%，用户看到的全是废话。
     //    统一走 isRealDesc 判定，看板和实际体验才对得上。
-    const withDesc = list.filter((p) => isRealDesc(p.desc)).length
+    //
+    //    ★ 还要再排除「复读标题」：epg.pw 有 799 条 desc 就是标题本身，
+    //      长度够、不算占位，但零信息量。hasRealDesc = 非占位 + 非复读。
+    const withDesc = list.filter((p) => hasRealDesc(p.desc, p.title)).length
     const withCategory = list.filter((p) => p.category && p.category.trim()).length
     const uniqTitles = new Set(list.map((p) => p.title)).size
 

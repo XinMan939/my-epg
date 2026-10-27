@@ -30,7 +30,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import zlib from 'node:zlib'
 import { PATHS, ensureCacheDir } from '../config.mjs'
-import { fetchBuffer, log, toSimplified, isRealDesc } from '../utils.mjs'
+import { fetchBuffer, log, toSimplified, isRealDesc, hasRealDesc, decodeEntities as decodeEntitiesUtil } from '../utils.mjs'
 
 const DAY = 24 * 3600 * 1000
 
@@ -125,13 +125,8 @@ async function ensurePack(key, url, { force = false } = {}) {
 
 function decodeEntities(s) {
   if (!s) return ''
-  return String(s)
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .replace(/&quot;/g, '"')
-    .replace(/&apos;/g, "'")
-    .replace(/&#(\d+);/g, (_, d) => String.fromCharCode(Number(d)))
-    .replace(/&amp;/g, '&')
+  // 统一走 utils 的循环解码版（旧实现顺序有 bug，会漏掉 &amp;quot; 这类双重转义）
+  return decodeEntitiesUtil(s)
 }
 
 /**
@@ -188,9 +183,12 @@ function parsePack(xml, key) {
     const nt = normTitleLoose(title)
     if (nt) {
       o.titles.add(nt)
-      if (isRealDesc(desc) && !o.descMap.has(nt)) o.descMap.set(nt, desc)
+      // ★ 用 hasRealDesc 而不是 isRealDesc：e2 包里「博斯運動二台以綜合運動賽事轉播為主…」
+      //   这类频道宣传语、以及 desc 直接复读标题的条目，都不能进简介索引，
+      //   否则会被灌到每一个节目上。见 utils.isEchoDesc 的注释。
+      if (hasRealDesc(desc, title) && !o.descMap.has(nt)) o.descMap.set(nt, desc)
     }
-    if (isRealDesc(desc)) descCount++
+    if (hasRealDesc(desc, title)) descCount++
 
     // 完整节目（补空频道节目单用）
     const startTs = parseZ51Time(start)
@@ -420,7 +418,8 @@ export async function enrichFromZ51(targets, epgMap, opts = {}) {
     let filled = 0
     let before = 0
     for (const r of rows) {
-      if (isRealDesc(r.desc)) {
+      // ★ 复读标题的 desc 也算「没有简介」，允许被真简介覆盖
+      if (hasRealDesc(r.desc, r.title)) {
         before++
         continue
       }
@@ -455,7 +454,7 @@ export async function enrichFromZ51(targets, epgMap, opts = {}) {
     }
     let filled = 0
     for (const r of rows) {
-      if (isRealDesc(r.desc)) continue
+      if (hasRealDesc(r.desc, r.title)) continue
       const nt = normTitleLoose(r.title)
       if (!nt) continue
       if (blocked.has(nt)) continue // ★ 同名不同物，见 enrichFromZ51 的注释
@@ -508,13 +507,13 @@ export async function enrichFromZ51(targets, epgMap, opts = {}) {
 
       let filled = 0
       for (const r of rows) {
-        if (isRealDesc(r.desc)) continue
+        if (hasRealDesc(r.desc, r.title)) continue
         const zh = map.titles[r.title]
         if (!zh) continue
         const nt = normTitleLoose(zh)
         if (!nt) continue
         const d = srcObj ? srcObj.descMap.get(nt) : (gIndex.get(nt) || {}).desc
-        if (!d || !isRealDesc(d)) continue
+        if (!d || !hasRealDesc(d, zh)) continue
         r.desc = d
         filled++
       }

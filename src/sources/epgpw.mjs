@@ -22,7 +22,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import zlib from 'node:zlib'
-import { fetchBuffer, log } from '../utils.mjs'
+import { fetchBuffer, log, decodeEntities as decodeEntitiesUtil } from '../utils.mjs'
 import { PATHS, ensureCacheDir } from '../config.mjs'
 
 const BASE = 'https://epg.pw/xmltv'
@@ -213,13 +213,8 @@ function loadRegion(region) {
 
 
 function decodeEntities(s) {
-  return s
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .replace(/&quot;/g, '"')
-    .replace(/&apos;/g, "'")
-    .replace(/&#(\d+);/g, (_, d) => String.fromCharCode(Number(d)))
-    .replace(/&amp;/g, '&')
+  // 统一走 utils 的循环解码版（旧实现顺序有 bug，会漏掉 &amp;quot; 这类双重转义）
+  return decodeEntitiesUtil(s)
 }
 
 /** 加载所有地区的频道清单（用于自动匹配） */

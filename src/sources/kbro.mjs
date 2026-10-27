@@ -32,7 +32,7 @@
  */
 import fs from 'node:fs'
 import path from 'node:path'
-import { fetchText, log, isRealDesc, toSimplified } from '../utils.mjs'
+import { fetchText, log, isRealDesc, hasRealDesc, isEchoDesc, toSimplified } from '../utils.mjs'
 import { PATHS } from '../config.mjs'
 
 const BASE = 'https://epg.kbro.com.tw:2543/epg'
@@ -226,7 +226,8 @@ export async function buildChannelIndex(dates) {
         slot.titles.add(key)
         if (!desc) continue
         // ★ 简介等于标题 = 没写简介（「收播」「再見」这类），丢掉
-        if (desc === title) continue
+        //   isEchoDesc 比 desc === title 更严：连「标题 + 纯集数」也一并挡掉
+        if (isEchoDesc(desc, title)) continue
         if (desc.length < 12) continue
         const old = slot.descMap.get(key)
         if (!old || desc.length > old.length) slot.descMap.set(key, desc)
@@ -566,7 +567,7 @@ export async function enrichFromKbro(targets, epgMap, opts = {}) {
 
     let filled = 0
     for (const r of rows) {
-      if (isRealDesc(r.desc)) continue // 已有真实简介，不动
+      if (hasRealDesc(r.desc, r.title)) continue // 已有真实简介，不动（复读标题的也算没有）
       const k = normKbroTitle(r.title)
       if (!k) continue
 

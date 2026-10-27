@@ -23,7 +23,7 @@ import {
   saveJson,
   ensureOutputDir,
 } from './config.mjs'
-import { log, mapLimit, isRealDesc } from './utils.mjs'
+import { log, mapLimit, isRealDesc, hasRealDesc } from './utils.mjs'
 import { matchChannels } from './match.mjs'
 import { buildDateRange, normalizeProgrammes, mergeDays, dayStartTs } from './normalize.mjs'
 import { buildXmltv, writeOutput, buildReport, writeChannelsJson } from './output.mjs'
@@ -464,16 +464,22 @@ async function cmdBuild() {
     // ⚠️ 统计口径必须和 output.mjs / 看板完全一致，否则日志报 63.9%、
     //    report.json 里却是 62.1%，两个数字对不上会让人不知道该信哪个。
     //    统一走 utils 的 isRealDesc（要求 ≥12 字且非占位文本）。
+    //    ★ 再加上「非标题复读」：epg.pw 有 799 条 desc 就是把标题抄一遍，
+    //      长度够但零信息量，光靠 isRealDesc 拦不住。见 utils.isEchoDesc。
     const countReal = () => {
       let n = 0
       let real = 0
+      let echo = 0
       for (const [, rows] of epgMap) {
         for (const r of rows) {
           n++
-          if (isRealDesc(r.desc)) real++
+          if (isRealDesc(r.desc)) {
+            if (hasRealDesc(r.desc, r.title)) real++
+            else echo++
+          }
         }
       }
-      return { n, real }
+      return { n, real, echo }
     }
 
     const base = countReal()
@@ -531,9 +537,10 @@ async function cmdBuild() {
           let filled = 0
           for (const [, rows] of epgMap) {
             for (const r of rows) {
-              if (r.desc && r.desc.trim()) continue
+              // ★ 复读标题也算「没有简介」，要给它补的机会
+              if (hasRealDesc(r.desc, r.title)) continue
               const d = descMap.get(r.title)
-              if (d) {
+              if (d && hasRealDesc(d, r.title)) {
                 r.desc = d
                 filled++
               }
@@ -575,10 +582,12 @@ async function cmdBuild() {
 
     const final = countReal()
     descStats = {
-      // 真实简介口径（去掉「暂无节目描述」等占位）
+      // 真实简介口径（去掉「暂无节目描述」等占位，以及「desc 复读标题」）
       realCoverage: +(final.real / final.n * 100).toFixed(1),
       realCount: final.real,
       totalCount: final.n,
+      // 有 desc 但只是标题复读 —— 不计入真实简介，单独记出来
+      echoCount: final.echo,
       // 历史字段，保留兼容看板
       titles: tvmaoStats?.titles || 0,
       filled: (z51Stats?.filled || 0) + (tvmaoStats?.filled || 0) + (kbroStats?.filled || 0),
@@ -587,7 +596,8 @@ async function cmdBuild() {
       kbro: kbroStats,
     }
     log.info(
-      `[desc] 最终真实简介覆盖 ${descStats.realCoverage}% (${descStats.realCount}/${descStats.totalCount})`
+      `[desc] 最终真实简介覆盖 ${descStats.realCoverage}% (${descStats.realCount}/${descStats.totalCount})` +
+        (final.echo ? `，另有 ${final.echo} 条 desc 只是复读标题（不计入）` : '')
     )
   }
 

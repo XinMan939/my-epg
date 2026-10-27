@@ -20,7 +20,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import zlib from 'node:zlib'
-import { fetchBuffer, normalizeName, nameVariants, log, mapLimit } from './utils.mjs'
+import { fetchBuffer, normalizeName, nameVariants, log, mapLimit, decodeEntities as decodeEntitiesUtil } from './utils.mjs'
 import { PATHS, CONFIG } from './config.mjs'
 
 /**
@@ -89,13 +89,8 @@ export function parseXmltvTime(s) {
 
 function decodeEntities(s) {
   if (!s) return ''
-  return String(s)
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .replace(/&quot;/g, '"')
-    .replace(/&apos;/g, "'")
-    .replace(/&#(\d+);/g, (_, d) => String.fromCharCode(Number(d)))
-    .replace(/&amp;/g, '&')
+  // 统一走 utils 的循环解码版（旧实现顺序有 bug，会漏掉 &amp;quot; 这类双重转义）
+  return decodeEntitiesUtil(s)
 }
 
 /** 读取源清单 */
