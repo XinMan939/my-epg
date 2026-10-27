@@ -1,19 +1,19 @@
-name: 验证 nowplayer 模块（临时）
+name: 对比 webncode vs nowplayer（临时）
 on:
   workflow_dispatch:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with: { node-version: "22" }
-      - name: 跑模块真实逻辑
-        run: node tools/verify-nowplayer.mjs 2>&1 | tee report.txt
+        with: { node-version: '22' }
+      - name: 对比
+        run: node tools/compare-now.mjs 2>&1 | tee report.txt
       - uses: actions/upload-artifact@v4
         if: always()
-        with: { name: np-mod, path: "report.txt" }
+        with: { name: np-cmp, path: "*.json" }
       - uses: actions/upload-artifact@v4
         if: always()
-        with: { name: np-cat, path: np-catalog.json }
+        with: { name: np-cmp-txt, path: report.txt }
