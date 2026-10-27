@@ -1397,7 +1397,8 @@
       "group": "hk",
       "country": "HK",
       "aliases": [
-        "Now新聞台"
+        "Now新聞台",
+        "Now新聞"
       ]
     },
     {
@@ -1406,7 +1407,8 @@
       "group": "hk",
       "country": "HK",
       "aliases": [
-        "Now財經台"
+        "Now財經台",
+        "Now財經"
       ]
     },
     {
@@ -1419,7 +1421,10 @@
       "id": "nowDirect.hk",
       "name": "Now直播台",
       "group": "hk",
-      "country": "HK"
+      "country": "HK",
+      "aliases": [
+        "now直播"
+      ]
     },
     {
       "id": "ROCKAction.sg",
