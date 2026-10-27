@@ -6,27 +6,25 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - name: 用真实id试 + 挖前端调用代码
+      - name: 验证正确签名
         run: |
           mkdir -p out
           B="https://appapi.tdm.com.mo"
           {
-            echo "=== A) program-list 用真实 channelId ==="
-            for q in "program-list/1" "program-list/52" "program-list/1?date=2026-10-28" "program-list/1/2026-10-28" \
-                     "program-list/Channel?channelId=1" "program-list/Channel?channelId=52&date=2026-10-28"; do
+            echo "=== 1) program-list/Channel 带参数 ==="
+            for q in "?lang=zh_TW" "?lang=zh" "?type=1" "?type=0" "?lang=zh_TW&type=1"; do
               echo "--- $q"
-              curl -sS --max-time 15 "$B/api/v1.0/$q" | head -c 400; echo
+              curl -sS --max-time 15 "$B/api/v1.0/program-list/Channel$q" | head -c 500; echo
             done
             echo
-            echo "=== B) 前端 chunk 里 program-list 的调用上下文 ==="
-            curl -sSL --max-time 25 "$B/" -o /tmp/r.html
-            for js in $(grep -oE '/static/js/[A-Za-z0-9._-]+\.js' /tmp/r.html | sort -u); do
-              curl -sSL --max-time 30 "$B$js" -o /tmp/j.js 2>/dev/null || continue
-              if grep -q "program-list" /tmp/j.js 2>/dev/null; then
-                echo "### FOUND in $js"
-                grep -oE '.{0,180}program-list.{0,220}' /tmp/j.js | head -8
-                echo
-              fi
+            echo "=== 2) program-list/{date}?channelId=1 ==="
+            curl -sSL --max-time 20 "$B/api/v1.0/program-list/2026-10-28?channelId=1" -o out/epg1.json
+            wc -c out/epg1.json; head -c 1500 out/epg1.json; echo
+            echo
+            echo "=== 3) 各频道同一天 ==="
+            for cid in 1 2 5 6 7 8 52 49 46; do
+              sz=$(curl -sSL --max-time 20 "$B/api/v1.0/program-list/2026-10-28?channelId=$cid" -o out/epg_$cid.json -w "%{size_download}")
+              echo "channelId=$cid -> ${sz}B"
             done
           } > out/report.txt 2>&1
       - uses: actions/upload-artifact@v4
