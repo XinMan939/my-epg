@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T18:53:02.348Z",
+  "generatedAt": "2026-10-27T19:02:29.609Z",
   "days": 7,
   "dayList": [
     "20261028",
@@ -24,8 +24,8 @@
   ],
   "sourceStats": {
     "epgpw": 175,
-    "webncode": 17,
     "tvmao": 43,
+    "webncode": 17,
     "fengshows": 1,
     "litv": 13,
     "tdm": 6,
@@ -1325,6 +1325,7 @@
       "alternatives": [
         "epgpw:457340(民視新聞台HD)",
         "litv:litv-ftv13(民視新聞台)",
+        "elta:902(民視新聞台)",
         "epgpw:370172(民視新聞台)",
         "epgpw:501119(民視新聞台)"
       ]
@@ -1915,6 +1916,7 @@
       "alternatives": [
         "litv:4gtv-4gtv156(寰宇新聞台灣台)",
         "epgpw:457335(寰宇新聞台灣台HD)",
+        "elta:920(寰宇新聞台灣台)",
         "epgpw:408104(寰宇新聞台灣台)"
       ]
     },
@@ -1926,6 +1928,7 @@
       "alternatives": [
         "epgpw:457342(寰宇財經HD)",
         "litv:4gtv-4gtv158(寰宇財經台)",
+        "elta:919(寰宇財經台)",
         "epgpw:565677(寰宇財經台)"
       ]
     },
@@ -1936,6 +1939,7 @@
       "sourceName": "寰宇新聞台",
       "alternatives": [
         "epgpw:457334(寰宇新聞HD)",
+        "elta:918(寰宇新聞台)",
         "epgpw:370179(寰宇新聞台)",
         "epgpw:571820(寰宇新聞台)"
       ]
@@ -1948,6 +1952,7 @@
       "alternatives": [
         "epgpw:457341(鏡電視新聞台)",
         "litv:mnews(鏡電視新聞台)",
+        "elta:915(鏡電視新聞台)",
         "epgpw:370169(鏡電視新聞台)"
       ]
     },
@@ -2043,6 +2048,7 @@
       "sourceName": "民視第一台",
       "alternatives": [
         "litv:4gtv-4gtv003(民視第一台)",
+        "elta:904(民視第一台)",
         "epgpw:370137(民視第一台)",
         "epgpw:501114(民視第一台)",
         "epgpw:457304(民視第一台HD)"
@@ -2577,6 +2583,7 @@
       "alternatives": [
         "epgpw:457283(亞洲旅遊HD)",
         "litv:4gtv-4gtv076(亞洲旅遊台)",
+        "elta:921(亞洲旅遊台)",
         "epgpw:408106(亞洲旅遊台)",
         "epgpw:501124(亞洲旅遊台)"
       ]
@@ -2588,6 +2595,7 @@
       "sourceName": "智林體育HD",
       "alternatives": [
         "litv:4gtv-4gtv101(智林體育台)",
+        "elta:914(智林體育台)",
         "epgpw:370208(智林體育台)"
       ]
     },
@@ -2632,7 +2640,7 @@
       "alternatives": []
     },
     "爱尔达体育Ⅰ.tw": {
-      "confidence": "override-unlisted",
+      "confidence": "override",
       "source": "elta",
       "sourceId": "101",
       "sourceName": "體育 1 台",
@@ -2641,7 +2649,7 @@
       ]
     },
     "爱尔达体育Ⅱ.tw": {
-      "confidence": "override-unlisted",
+      "confidence": "override",
       "source": "elta",
       "sourceId": "105",
       "sourceName": "體育 2 台",
@@ -2650,7 +2658,7 @@
       ]
     },
     "爱尔达体育Ⅲ.tw": {
-      "confidence": "override-unlisted",
+      "confidence": "override",
       "source": "elta",
       "sourceId": "110",
       "sourceName": "體育 3 台",
@@ -2666,7 +2674,7 @@
       "alternatives": []
     },
     "爱尔达体育Ⅳ.tw": {
-      "confidence": "override-unlisted",
+      "confidence": "override",
       "source": "elta",
       "sourceId": "115",
       "sourceName": "體育 4 台",
@@ -3239,11 +3247,11 @@
   ],
   "dayFillStats": [
     {
-      "id": "CCTV5Plus.cn",
+      "id": "CCTV3.cn",
       "before": 6,
       "after": 7,
       "sources": [
-        "tvmao:CCTV-CCTV5-PLUS+17"
+        "tvmao:CCTV-CCTV3+21"
       ]
     },
     {
@@ -3263,43 +3271,11 @@
       ]
     },
     {
-      "id": "CCTV3.cn",
+      "id": "CCTV5Plus.cn",
       "before": 6,
       "after": 7,
       "sources": [
-        "tvmao:CCTV-CCTV3+21"
-      ]
-    },
-    {
-      "id": "CCTV1.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTV-CCTV1+38"
-      ]
-    },
-    {
-      "id": "CCTV6.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTV-CCTV6+32"
-      ]
-    },
-    {
-      "id": "CCTV9.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTV-CCTV9+34"
-      ]
-    },
-    {
-      "id": "CCTV8.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTV-CCTV8+37"
+        "tvmao:CCTV-CCTV5-PLUS+17"
       ]
     },
     {
@@ -3311,11 +3287,27 @@
       ]
     },
     {
-      "id": "CCTV10.cn",
+      "id": "CCTV6.cn",
       "before": 6,
       "after": 7,
       "sources": [
-        "tvmao:CCTV-CCTV10+37"
+        "tvmao:CCTV-CCTV6+32"
+      ]
+    },
+    {
+      "id": "CCTV8.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTV-CCTV8+37"
+      ]
+    },
+    {
+      "id": "CCTV9.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTV-CCTV9+34"
       ]
     },
     {
@@ -3327,27 +3319,19 @@
       ]
     },
     {
+      "id": "CCTV10.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTV-CCTV10+37"
+      ]
+    },
+    {
       "id": "CCTV12.cn",
       "before": 6,
       "after": 7,
       "sources": [
         "tvmao:CCTV-CCTV12+31"
-      ]
-    },
-    {
-      "id": "CCTV14.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTV-CCTV15+21"
-      ]
-    },
-    {
-      "id": "CCTV15.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTV-CCTV16+17"
       ]
     },
     {
@@ -3359,11 +3343,27 @@
       ]
     },
     {
+      "id": "CCTV14.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTV-CCTV15+21"
+      ]
+    },
+    {
       "id": "CCTV16.cn",
       "before": 6,
       "after": 7,
       "sources": [
         "tvmao:CCTV-CCTVOLY+23"
+      ]
+    },
+    {
+      "id": "CCTV15.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTV-CCTV16+17"
       ]
     },
     {
@@ -3383,14 +3383,6 @@
       ]
     },
     {
-      "id": "ZhejiangSatelliteTV.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:ZJTV1+46"
-      ]
-    },
-    {
       "id": "HunanTV.cn",
       "before": 5,
       "after": 7,
@@ -3399,35 +3391,11 @@
       ]
     },
     {
-      "id": "CCTV4Asia.cn",
-      "before": 5,
-      "after": 6,
-      "sources": [
-        "epgpw:410375+38"
-      ]
-    },
-    {
-      "id": "JiangsuSatelliteTV.cn",
-      "before": 5,
-      "after": 7,
-      "sources": [
-        "tvmao:JSTV1+60"
-      ]
-    },
-    {
-      "id": "AnhuiSatelliteTV.cn",
+      "id": "ZhejiangSatelliteTV.cn",
       "before": 6,
       "after": 7,
       "sources": [
-        "tvmao:AHTV1+36"
-      ]
-    },
-    {
-      "id": "BeijingSatelliteTV.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:BTV1+33"
+        "tvmao:ZJTV1+46"
       ]
     },
     {
@@ -3439,19 +3407,27 @@
       ]
     },
     {
-      "id": "ChongqingSatelliteTV.cn",
-      "before": 6,
+      "id": "JiangsuSatelliteTV.cn",
+      "before": 5,
       "after": 7,
       "sources": [
-        "tvmao:CCQTV1+38"
+        "tvmao:JSTV1+60"
       ]
     },
     {
-      "id": "GuangdongSatelliteTV.cn",
+      "id": "BeijingSatelliteTV.cn",
       "before": 6,
       "after": 7,
       "sources": [
-        "tvmao:GDTV1+36"
+        "tvmao:BTV1+33"
+      ]
+    },
+    {
+      "id": "AnhuiSatelliteTV.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:AHTV1+36"
       ]
     },
     {
@@ -3463,11 +3439,35 @@
       ]
     },
     {
+      "id": "GuangdongSatelliteTV.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:GDTV1+36"
+      ]
+    },
+    {
       "id": "TianjinSatelliteTV.cn",
       "before": 6,
       "after": 7,
       "sources": [
         "tvmao:TJTV1+34"
+      ]
+    },
+    {
+      "id": "ChongqingSatelliteTV.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:CCQTV1+38"
+      ]
+    },
+    {
+      "id": "SichuanSatelliteTV.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:SCTV1+32"
       ]
     },
     {
@@ -3487,14 +3487,6 @@
       ]
     },
     {
-      "id": "SichuanSatelliteTV.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:SCTV1+32"
-      ]
-    },
-    {
       "id": "HebeiSatelliteTV.cn",
       "before": 6,
       "after": 7,
@@ -3511,19 +3503,19 @@
       ]
     },
     {
-      "id": "LiaoningSatelliteTV.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:LNTV1+41"
-      ]
-    },
-    {
       "id": "ShanxiSatelliteTV.cn",
       "before": 6,
       "after": 7,
       "sources": [
         "tvmao:SXTV1+28"
+      ]
+    },
+    {
+      "id": "LiaoningSatelliteTV.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:LNTV1+41"
       ]
     },
     {
@@ -3535,6 +3527,14 @@
       ]
     },
     {
+      "id": "CCTV1.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTV-CCTV1+38"
+      ]
+    },
+    {
       "id": "HeilongjiangSatelliteTV.cn",
       "before": 5,
       "after": 7,
@@ -3543,19 +3543,19 @@
       ]
     },
     {
-      "id": "FujianSatelliteTV.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:FJTV2+41"
-      ]
-    },
-    {
       "id": "JiangxiSatelliteTV.cn",
       "before": 5,
       "after": 7,
       "sources": [
         "tvmao:JXTV1+76"
+      ]
+    },
+    {
+      "id": "FujianSatelliteTV.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:FJTV2+41"
       ]
     },
     {
@@ -3583,19 +3583,19 @@
       ]
     },
     {
-      "id": "QinghaiSatelliteTV.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:QHTV1+27"
-      ]
-    },
-    {
       "id": "GansuSatelliteTV.cn",
       "before": 6,
       "after": 7,
       "sources": [
         "tvmao:GSTV1+50"
+      ]
+    },
+    {
+      "id": "QinghaiSatelliteTV.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:QHTV1+27"
       ]
     },
     {
@@ -3623,14 +3623,6 @@
       ]
     },
     {
-      "id": "XiamenSatelliteTV.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:XMTV5+39"
-      ]
-    },
-    {
       "id": "HainanSatelliteTV.cn",
       "before": 5,
       "after": 7,
@@ -3639,11 +3631,11 @@
       ]
     },
     {
-      "id": "BingtuanSatelliteTV.cn",
+      "id": "XiamenSatelliteTV.cn",
       "before": 6,
       "after": 7,
       "sources": [
-        "tvmao:BINGTUAN+35"
+        "tvmao:XMTV5+39"
       ]
     },
     {
@@ -3652,6 +3644,14 @@
       "after": 7,
       "sources": [
         "tvmao:YANBIAN1+21"
+      ]
+    },
+    {
+      "id": "BingtuanSatelliteTV.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:BINGTUAN+35"
       ]
     },
     {
@@ -3684,6 +3684,14 @@
       "after": 5,
       "sources": [
         "webncode:tvb_hdjade+243"
+      ]
+    },
+    {
+      "id": "CCTV4Asia.cn",
+      "before": 5,
+      "after": 6,
+      "sources": [
+        "epgpw:410375+38"
       ]
     },
     {
@@ -13303,6 +13311,7 @@
       "alternatives": [
         "epgpw:457340(民視新聞台HD)",
         "litv:litv-ftv13(民視新聞台)",
+        "elta:902(民視新聞台)",
         "epgpw:370172(民視新聞台)",
         "epgpw:501119(民視新聞台)"
       ],
@@ -15524,6 +15533,7 @@
       "alternatives": [
         "litv:4gtv-4gtv156(寰宇新聞台灣台)",
         "epgpw:457335(寰宇新聞台灣台HD)",
+        "elta:920(寰宇新聞台灣台)",
         "epgpw:408104(寰宇新聞台灣台)"
       ],
       "status": "full"
@@ -15559,6 +15569,7 @@
       "alternatives": [
         "epgpw:457342(寰宇財經HD)",
         "litv:4gtv-4gtv158(寰宇財經台)",
+        "elta:919(寰宇財經台)",
         "epgpw:565677(寰宇財經台)"
       ],
       "status": "partial"
@@ -15593,6 +15604,7 @@
       "matchedSourceName": "寰宇新聞台",
       "alternatives": [
         "epgpw:457334(寰宇新聞HD)",
+        "elta:918(寰宇新聞台)",
         "epgpw:370179(寰宇新聞台)",
         "epgpw:571820(寰宇新聞台)"
       ],
@@ -15629,6 +15641,7 @@
       "alternatives": [
         "epgpw:457341(鏡電視新聞台)",
         "litv:mnews(鏡電視新聞台)",
+        "elta:915(鏡電視新聞台)",
         "epgpw:370169(鏡電視新聞台)"
       ],
       "status": "full"
@@ -15988,6 +16001,7 @@
       "matchedSourceName": "民視第一台",
       "alternatives": [
         "litv:4gtv-4gtv003(民視第一台)",
+        "elta:904(民視第一台)",
         "epgpw:370137(民視第一台)",
         "epgpw:501114(民視第一台)",
         "epgpw:457304(民視第一台HD)"
@@ -17972,6 +17986,7 @@
       "alternatives": [
         "epgpw:457283(亞洲旅遊HD)",
         "litv:4gtv-4gtv076(亞洲旅遊台)",
+        "elta:921(亞洲旅遊台)",
         "epgpw:408106(亞洲旅遊台)",
         "epgpw:501124(亞洲旅遊台)"
       ],
@@ -18007,6 +18022,7 @@
       "matchedSourceName": "智林體育HD",
       "alternatives": [
         "litv:4gtv-4gtv101(智林體育台)",
+        "elta:914(智林體育台)",
         "epgpw:370208(智林體育台)"
       ],
       "status": "partial"
@@ -18200,7 +18216,7 @@
       "first": "20261028000000 +0800",
       "last": "20261104000000 +0800",
       "usedSource": "elta:101(體育 1 台)",
-      "matchConfidence": "override-unlisted",
+      "matchConfidence": "override",
       "matchedSourceName": "體育 1 台",
       "alternatives": [
         "epgpw:457243(愛爾達體育1台)"
@@ -18234,7 +18250,7 @@
       "first": "20261027230000 +0800",
       "last": "20261104002500 +0800",
       "usedSource": "elta:105(體育 2 台)",
-      "matchConfidence": "override-unlisted",
+      "matchConfidence": "override",
       "matchedSourceName": "體育 2 台",
       "alternatives": [
         "epgpw:457244(愛爾達體育2台)"
@@ -18267,7 +18283,7 @@
       "first": "20261028000000 +0800",
       "last": "20261104013000 +0800",
       "usedSource": "elta:110(體育 3 台)",
-      "matchConfidence": "override-unlisted",
+      "matchConfidence": "override",
       "matchedSourceName": "體育 3 台",
       "alternatives": [
         "epgpw:457245(愛爾達體育3台)"
@@ -18332,7 +18348,7 @@
       "first": "20261027233000 +0800",
       "last": "20261104031500 +0800",
       "usedSource": "elta:115(體育 4 台)",
-      "matchConfidence": "override-unlisted",
+      "matchConfidence": "override",
       "matchedSourceName": "體育 4 台",
       "alternatives": [
         "epgpw:457246(愛爾達體育4台)"
