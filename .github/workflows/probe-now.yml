@@ -1,4 +1,4 @@
-name: 探测 Now Player v8（临时）
+name: 探测 Now Player v9（临时）
 on:
   workflow_dispatch:
 jobs:
@@ -6,102 +6,81 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 40
     steps:
-      - name: sid 复用可行性 + day1 滚动边界
+      - name: 同标题简介一致性 + 按北京日覆盖
         run: |
           mkdir -p out
           UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36"
           B="https://nowplayer.now.com"
           {
-            echo "===== A. 各台唯一 sid / 唯一标题 / 总行数（决定简介抓取成本）====="
-            for id in 366 548 332 333 331; do
+            echo "===== A. 同标题不同 pid 的简介是否一致 ====="
+            for id in 366 548 332 333; do
               for day in 1 2 3 4 5 6 7; do
-                curl -sS --compressed -o /tmp/s${id}_$day.json --max-time 25 -A "$UA" "$B/tvguide/epglist?channelIdList=$id&day=$day"
+                curl -sS --compressed -o /tmp/x${id}_$day.json --max-time 25 -A "$UA" "$B/tvguide/epglist?channelIdList=$id&day=$day"
               done
               node -e "
                 const fs=require('fs');
                 const rows=[];
-                for(let d=1;d<=7;d++){const j=JSON.parse(fs.readFileSync('/tmp/s${id}_'+d+'.json','utf8'));for(const p of (j[0]||[]))rows.push(p)}
-                const sid=new Set(), name=new Set(), pid=new Set();
-                let noSid=0;
-                for(const r of rows){ pid.add(r.vimProgramId); if(r.sid)sid.add(r.sid); else noSid++; name.add(r.name) }
-                console.log('  ${id} -> 行'+rows.length+' 唯一pid'+pid.size+' 唯一sid'+sid.size+' 唯一标题'+name.size+' 无sid'+noSid);
-                fs.writeFileSync('/tmp/sid${id}.txt',[...sid].join('\n'));
+                for(let d=1;d<=7;d++){const j=JSON.parse(fs.readFileSync('/tmp/x${id}_'+d+'.json','utf8'));for(const p of (j[0]||[]))rows.push(p)}
+                const byName={};
+                for(const r of rows){ (byName[r.name]=byName[r.name]||[]).push(r.vimProgramId) }
+                const groups=Object.entries(byName).filter(([k,v])=>v.length>=3).slice(0,5);
+                fs.writeFileSync('/tmp/g${id}.txt', groups.map(([k,v])=>v[0]+','+v[1]+','+v[Math.floor(v.length/2)]+'\t'+k).join('\n'));
+                console.log('  ${id}: 唯一标题'+Object.keys(byName).length+' / 行'+rows.length+' / 可测组'+Object.entries(byName).filter(([k,v])=>v.length>=3).length);
+              "
+              while IFS=$'\t' read -r PIDS NAME; do
+                [ -z "$PIDS" ] && continue
+                echo "  --- [$NAME]"
+                H=""
+                for pid in $(echo "$PIDS" | tr ',' ' '); do
+                  R=$(curl -sS --compressed --max-time 20 -A "$UA" "$B/tvguide/epgprogramdetail?programId=$pid" 2>/dev/null)
+                  H="$H $(node -e "
+                    let s=process.argv[1]; try{const d=JSON.parse(s);
+                    const sy=((d.chiSynopsis||'').trim()||(d.synopsis||'').trim());
+                    console.log(require('crypto').createHash('md5').update(sy).digest('hex').slice(0,6)+':'+sy.length)}catch(e){console.log('ERR')}" "$R" 2>&1)"
+                done
+                echo "     hash:$H"
+              done < /tmp/g${id}.txt
+            done
+
+            echo
+            echo "===== B. day1~7 按北京日合并后的每日条数 ====="
+            for id in 366 548 332 333 331; do
+              for day in 1 2 3 4 5 6 7; do
+                curl -sS --compressed -o /tmp/y${id}_$day.json --max-time 25 -A "$UA" "$B/tvguide/epglist?channelIdList=$id&day=$day"
+              done
+              node -e "
+                const fs=require('fs');
+                const rows=[];
+                for(let d=1;d<=7;d++){const j=JSON.parse(fs.readFileSync('/tmp/y${id}_'+d+'.json','utf8'));for(const p of (j[0]||[]))rows.push(p)}
+                // 源内按 start|name 去重
+                const seen=new Set(); const uniq=[];
+                for(const r of rows){const k=r.start+'|'+r.name; if(seen.has(k))continue; seen.add(k); uniq.push(r)}
+                uniq.sort((a,b)=>a.start-b.start);
+                const byDay={};
+                let hours={};
+                for(const r of uniq){
+                  const dd=new Date(r.start+8*3600e3).toISOString().slice(0,10);
+                  byDay[dd]=(byDay[dd]||0)+1;
+                  hours[dd]=(hours[dd]||0)+(r.end-r.start)/3600e3;
+                }
+                console.log('  ${id}: 原始'+rows.length+' 去重后'+uniq.length);
+                for(const k of Object.keys(byDay).sort()) console.log('    '+k+' -> '+byDay[k]+' 条 / '+hours[k].toFixed(1)+' 小时');
               "
             done
 
             echo
-            echo "===== B. 同一 sid 不同 pid 的简介是否一致（332 抽 3 组）====="
-            node -e "
-              const fs=require('fs');
-              const rows=[];
-              for(let d=1;d<=7;d++){const j=JSON.parse(fs.readFileSync('/tmp/s332_'+d+'.json','utf8'));for(const p of (j[0]||[]))rows.push(p)}
-              const bySid={};
-              for(const r of rows){ if(!r.sid) continue; (bySid[r.sid]=bySid[r.sid]||[]).push(r.vimProgramId) }
-              const multi=Object.entries(bySid).filter(([k,v])=>v.length>=3).slice(0,3);
-              fs.writeFileSync('/tmp/groups.txt', multi.map(([k,v])=>k+':'+v.slice(0,3).join(',')).join('\n'));
-              console.log('  多 pid 的 sid 组数', Object.entries(bySid).filter(([k,v])=>v.length>=3).length);
-            "
-            cat /tmp/groups.txt 2>/dev/null | while IFS=: read -r SID PIDS; do
-              echo "  --- sid=$SID"
-              for pid in $(echo "$PIDS" | tr ',' ' '); do
-                R=$(curl -sS --compressed --max-time 20 -A "$UA" "$B/tvguide/epgprogramdetail?programId=$pid" 2>/dev/null)
-                node -e "
-                  let s=process.argv[1]; try{const d=JSON.parse(s);
-                  const sy=((d.chiSynopsis||'').trim()||(d.synopsis||'').trim());
-                  console.log('    pid='+d.programId+' 长度'+sy.length+' hash'+require('crypto').createHash('md5').update(sy).digest('hex').slice(0,8)+' 前30='+sy.slice(0,30));}catch(e){console.log('    解析失败')}" "$R" 2>&1
-              done
+            echo "===== C. 简介按标题去重的总成本估算 ====="
+            for id in 366 548 332 333 331; do
+              node -e "
+                const fs=require('fs');
+                const rows=[];
+                for(let d=1;d<=7;d++){const j=JSON.parse(fs.readFileSync('/tmp/y${id}_'+d+'.json','utf8'));for(const p of (j[0]||[]))rows.push(p)}
+                const seen=new Set(); const uniq=[];
+                for(const r of rows){const k=r.start+'|'+r.name; if(seen.has(k))continue; seen.add(k); uniq.push(r)}
+                const names=new Set(uniq.map(r=>r.name));
+                console.log('  ${id}: 去重节目 '+uniq.length+' → 唯一标题 '+names.size+' （省 '+(100-Math.round(names.size/uniq.length*100))+'%）');
+              "
             done
-
-            echo
-            echo "===== C. 366 抽 3 组（凤凰资讯是否同样规律）====="
-            node -e "
-              const fs=require('fs');
-              const rows=[];
-              for(let d=1;d<=7;d++){const j=JSON.parse(fs.readFileSync('/tmp/s366_'+d+'.json','utf8'));for(const p of (j[0]||[]))rows.push(p)}
-              const bySid={};
-              for(const r of rows){ if(!r.sid) continue; (bySid[r.sid]=bySid[r.sid]||[]).push(r.vimProgramId) }
-              const multi=Object.entries(bySid).filter(([k,v])=>v.length>=3).slice(0,3);
-              fs.writeFileSync('/tmp/groups366.txt', multi.map(([k,v])=>k+':'+v.slice(0,3).join(',')).join('\n'));
-              console.log('  多 pid 的 sid 组数', Object.entries(bySid).filter(([k,v])=>v.length>=3).length);
-            "
-            cat /tmp/groups366.txt 2>/dev/null | while IFS=: read -r SID PIDS; do
-              echo "  --- sid=$SID"
-              for pid in $(echo "$PIDS" | tr ',' ' '); do
-                R=$(curl -sS --compressed --max-time 20 -A "$UA" "$B/tvguide/epgprogramdetail?programId=$pid" 2>/dev/null)
-                node -e "
-                  let s=process.argv[1]; try{const d=JSON.parse(s);
-                  const sy=((d.chiSynopsis||'').trim()||(d.synopsis||'').trim());
-                  console.log('    pid='+d.programId+' 长度'+sy.length+' hash'+require('crypto').createHash('md5').update(sy).digest('hex').slice(0,8)+' 前30='+sy.slice(0,30));}catch(e){console.log('    解析失败')}" "$R" 2>&1
-              done
-            done
-
-            echo
-            echo "===== D. day=1 的滚动起点（连续两次抓，看首条是否变化）====="
-            curl -sS --compressed -o /tmp/t1.json --max-time 25 -A "$UA" "$B/tvguide/epglist?channelIdList=366&day=1"
-            sleep 30
-            curl -sS --compressed -o /tmp/t2.json --max-time 25 -A "$UA" "$B/tvguide/epglist?channelIdList=366&day=1"
-            node -e "
-              const fs=require('fs');
-              const a=JSON.parse(fs.readFileSync('/tmp/t1.json','utf8'))[0]||[];
-              const b=JSON.parse(fs.readFileSync('/tmp/t2.json','utf8'))[0]||[];
-              const bj=t=>new Date(t+8*3600e3).toISOString().replace('T',' ').slice(0,16);
-              console.log('  第1次: '+a.length+' 条, 首 '+bj(a[0].start)+' 末 '+bj(a[a.length-1].end));
-              console.log('  第2次: '+b.length+' 条, 首 '+bj(b[0].start)+' 末 '+bj(b[b.length-1].end));
-              console.log('  day=1 是否含今天 00:00 之前的节目: ' + (a[0].start < Date.parse(new Date(Date.now()).toISOString().slice(0,10)+'T00:00:00+08:00') ? '是' : '否'));
-            "
-
-            echo
-            echo "===== E. 并发 8 路抓 detail 是否被限速（60 个）====="
-            node -e "
-              const fs=require('fs');
-              const pids=new Set();
-              for(let d=1;d<=7;d++){const j=JSON.parse(fs.readFileSync('/tmp/s548_'+d+'.json','utf8'));for(const p of (j[0]||[]))pids.add(p.vimProgramId)}
-              fs.writeFileSync('/tmp/p548.txt',[...pids].slice(0,60).join('\n'));
-            "
-            START=$(date +%s)
-            cat /tmp/p548.txt | xargs -P 8 -I{} curl -sS --compressed -o /dev/null -w "%{http_code}\n" --max-time 20 -A "$UA" "$B/tvguide/epgprogramdetail?programId={}" 2>/dev/null | sort | uniq -c
-            END=$(date +%s)
-            echo "  60 个 detail 并发8路耗时 $((END-START)) 秒"
           } > out/report.txt 2>&1
       - uses: actions/upload-artifact@v4
-        with: { name: np-probe8, path: out/ }
+        with: { name: np-probe9, path: out/ }
