@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-27T18:22:49.671Z",
-  "total": 2398,
+  "generatedAt": "2026-10-27T18:52:00.648Z",
+  "total": 2438,
   "items": [
     {
       "source": "epgpw",
@@ -19918,8 +19918,8 @@
       "sourceId": "rthk_dtt31",
       "name": "港台電視 31",
       "logo": "",
-      "days": 7,
-      "count": 329,
+      "days": 8,
+      "count": 376,
       "withDesc": 0
     },
     {
@@ -19928,8 +19928,8 @@
       "sourceId": "rthk_dtt32",
       "name": "港台電視 32",
       "logo": "",
-      "days": 7,
-      "count": 434,
+      "days": 8,
+      "count": 496,
       "withDesc": 0
     },
     {
@@ -19938,8 +19938,8 @@
       "sourceId": "rthk_dtt33",
       "name": "港台電視 33",
       "logo": "",
-      "days": 7,
-      "count": 231,
+      "days": 8,
+      "count": 264,
       "withDesc": 0
     },
     {
@@ -19948,8 +19948,8 @@
       "sourceId": "rthk_dtt34",
       "name": "港台電視 34",
       "logo": "",
-      "days": 7,
-      "count": 504,
+      "days": 8,
+      "count": 576,
       "withDesc": 0
     },
     {
@@ -19958,8 +19958,8 @@
       "sourceId": "rthk_dtt35",
       "name": "港台電視 35",
       "logo": "",
-      "days": 7,
-      "count": 315,
+      "days": 8,
+      "count": 360,
       "withDesc": 0
     },
     {
@@ -20091,6 +20091,16 @@
       "days": 9,
       "count": 261,
       "withDesc": 252
+    },
+    {
+      "source": "webncode",
+      "region": "HK",
+      "sourceId": "mytvsuper_C28",
+      "name": "互動賽馬台",
+      "logo": "",
+      "days": 9,
+      "count": 72,
+      "withDesc": 9
     },
     {
       "source": "webncode",
@@ -20888,8 +20898,8 @@
       "sourceId": "fantv_76",
       "name": "HOY 國際財經台",
       "logo": "",
-      "days": 8,
-      "count": 152,
+      "days": 9,
+      "count": 171,
       "withDesc": 0
     },
     {
@@ -20908,9 +20918,19 @@
       "sourceId": "fantv_78",
       "name": "HOY 資訊台",
       "logo": "",
-      "days": 8,
-      "count": 344,
-      "withDesc": 16
+      "days": 9,
+      "count": 387,
+      "withDesc": 18
+    },
+    {
+      "source": "webncode",
+      "region": "HK",
+      "sourceId": "fantv_1",
+      "name": "瑞典超級足球聯賽 - AIK蘇納 對 艾夫斯堡 (中文評述) (深夜1:55)",
+      "logo": "",
+      "days": 0,
+      "count": 0,
+      "withDesc": 0
     },
     {
       "source": "litv",
@@ -21911,6 +21931,386 @@
       "days": 6,
       "count": 293,
       "withDesc": 33
+    },
+    {
+      "source": "elta",
+      "region": "TW",
+      "sourceId": "101",
+      "name": "體育 1 台",
+      "logo": "",
+      "days": 5,
+      "count": 94,
+      "withDesc": 0
+    },
+    {
+      "source": "elta",
+      "region": "TW",
+      "sourceId": "105",
+      "name": "體育 2 台",
+      "logo": "",
+      "days": 5,
+      "count": 80,
+      "withDesc": 0
+    },
+    {
+      "source": "elta",
+      "region": "TW",
+      "sourceId": "110",
+      "name": "體育 3 台",
+      "logo": "",
+      "days": 5,
+      "count": 70,
+      "withDesc": 0
+    },
+    {
+      "source": "elta",
+      "region": "TW",
+      "sourceId": "115",
+      "name": "體育 4 台",
+      "logo": "",
+      "days": 5,
+      "count": 53,
+      "withDesc": 0
+    },
+    {
+      "source": "elta",
+      "region": "TW",
+      "sourceId": "540",
+      "name": "體育MAX1台",
+      "logo": "",
+      "days": 5,
+      "count": 36,
+      "withDesc": 0
+    },
+    {
+      "source": "elta",
+      "region": "TW",
+      "sourceId": "541",
+      "name": "體育MAX2台",
+      "logo": "",
+      "days": 5,
+      "count": 33,
+      "withDesc": 0
+    },
+    {
+      "source": "elta",
+      "region": "TW",
+      "sourceId": "542",
+      "name": "體育MAX3台",
+      "logo": "",
+      "days": 5,
+      "count": 33,
+      "withDesc": 0
+    },
+    {
+      "source": "elta",
+      "region": "TW",
+      "sourceId": "543",
+      "name": "體育MAX4台",
+      "logo": "",
+      "days": 5,
+      "count": 27,
+      "withDesc": 0
+    },
+    {
+      "source": "elta",
+      "region": "TW",
+      "sourceId": "544",
+      "name": "體育MAX5台",
+      "logo": "",
+      "days": 5,
+      "count": 36,
+      "withDesc": 0
+    },
+    {
+      "source": "elta",
+      "region": "TW",
+      "sourceId": "545",
+      "name": "體育MAX6台",
+      "logo": "",
+      "days": 5,
+      "count": 32,
+      "withDesc": 0
+    },
+    {
+      "source": "elta",
+      "region": "TW",
+      "sourceId": "546",
+      "name": "體育MAX7台",
+      "logo": "",
+      "days": 5,
+      "count": 27,
+      "withDesc": 0
+    },
+    {
+      "source": "elta",
+      "region": "TW",
+      "sourceId": "547",
+      "name": "體育MAX8台",
+      "logo": "",
+      "days": 5,
+      "count": 29,
+      "withDesc": 0
+    },
+    {
+      "source": "elta",
+      "region": "TW",
+      "sourceId": "548",
+      "name": "體育MAX9台",
+      "logo": "",
+      "days": 5,
+      "count": 35,
+      "withDesc": 0
+    },
+    {
+      "source": "elta",
+      "region": "TW",
+      "sourceId": "549",
+      "name": "體育MAX10台",
+      "logo": "",
+      "days": 5,
+      "count": 44,
+      "withDesc": 0
+    },
+    {
+      "source": "elta",
+      "region": "TW",
+      "sourceId": "102",
+      "name": "影劇台",
+      "logo": "",
+      "days": 5,
+      "count": 128,
+      "withDesc": 0
+    },
+    {
+      "source": "elta",
+      "region": "TW",
+      "sourceId": "103",
+      "name": "綜合台",
+      "logo": "",
+      "days": 5,
+      "count": 130,
+      "withDesc": 0
+    },
+    {
+      "source": "elta",
+      "region": "TW",
+      "sourceId": "108",
+      "name": "日韓台",
+      "logo": "",
+      "days": 5,
+      "count": 135,
+      "withDesc": 0
+    },
+    {
+      "source": "elta",
+      "region": "TW",
+      "sourceId": "104",
+      "name": "寵物運動台",
+      "logo": "",
+      "days": 5,
+      "count": 133,
+      "withDesc": 0
+    },
+    {
+      "source": "elta",
+      "region": "TW",
+      "sourceId": "701",
+      "name": "Ginx電競頻道",
+      "logo": "",
+      "days": 5,
+      "count": 132,
+      "withDesc": 0
+    },
+    {
+      "source": "elta",
+      "region": "TW",
+      "sourceId": "704",
+      "name": "INULTRA",
+      "logo": "",
+      "days": 5,
+      "count": 198,
+      "withDesc": 0
+    },
+    {
+      "source": "elta",
+      "region": "TW",
+      "sourceId": "93",
+      "name": "Travel Channel",
+      "logo": "",
+      "days": 5,
+      "count": 190,
+      "withDesc": 0
+    },
+    {
+      "source": "elta",
+      "region": "TW",
+      "sourceId": "116",
+      "name": "Mezzo Live",
+      "logo": "",
+      "days": 5,
+      "count": 92,
+      "withDesc": 0
+    },
+    {
+      "source": "elta",
+      "region": "TW",
+      "sourceId": "117",
+      "name": "TRACE Urban",
+      "logo": "",
+      "days": 5,
+      "count": 65,
+      "withDesc": 0
+    },
+    {
+      "source": "elta",
+      "region": "TW",
+      "sourceId": "186",
+      "name": "TRACE Sport Stars",
+      "logo": "",
+      "days": 5,
+      "count": 245,
+      "withDesc": 0
+    },
+    {
+      "source": "elta",
+      "region": "TW",
+      "sourceId": "702",
+      "name": "PET CLUB TV",
+      "logo": "",
+      "days": 5,
+      "count": 139,
+      "withDesc": 0
+    },
+    {
+      "source": "elta",
+      "region": "TW",
+      "sourceId": "901",
+      "name": "民視",
+      "logo": "",
+      "days": 4,
+      "count": 133,
+      "withDesc": 0
+    },
+    {
+      "source": "elta",
+      "region": "TW",
+      "sourceId": "902",
+      "name": "民視新聞台",
+      "logo": "",
+      "days": 4,
+      "count": 99,
+      "withDesc": 0
+    },
+    {
+      "source": "elta",
+      "region": "TW",
+      "sourceId": "904",
+      "name": "民視第一台",
+      "logo": "",
+      "days": 4,
+      "count": 133,
+      "withDesc": 0
+    },
+    {
+      "source": "elta",
+      "region": "TW",
+      "sourceId": "909",
+      "name": "華視無線台",
+      "logo": "",
+      "days": 4,
+      "count": 94,
+      "withDesc": 0
+    },
+    {
+      "source": "elta",
+      "region": "TW",
+      "sourceId": "910",
+      "name": "華視新聞資訊台",
+      "logo": "",
+      "days": 4,
+      "count": 92,
+      "withDesc": 0
+    },
+    {
+      "source": "elta",
+      "region": "TW",
+      "sourceId": "915",
+      "name": "鏡電視新聞台",
+      "logo": "",
+      "days": 4,
+      "count": 96,
+      "withDesc": 0
+    },
+    {
+      "source": "elta",
+      "region": "TW",
+      "sourceId": "918",
+      "name": "寰宇新聞台",
+      "logo": "",
+      "days": 4,
+      "count": 101,
+      "withDesc": 0
+    },
+    {
+      "source": "elta",
+      "region": "TW",
+      "sourceId": "920",
+      "name": "寰宇新聞台灣台",
+      "logo": "",
+      "days": 4,
+      "count": 100,
+      "withDesc": 0
+    },
+    {
+      "source": "elta",
+      "region": "TW",
+      "sourceId": "919",
+      "name": "寰宇財經台",
+      "logo": "",
+      "days": 4,
+      "count": 100,
+      "withDesc": 0
+    },
+    {
+      "source": "elta",
+      "region": "TW",
+      "sourceId": "921",
+      "name": "亞洲旅遊台",
+      "logo": "",
+      "days": 4,
+      "count": 100,
+      "withDesc": 0
+    },
+    {
+      "source": "elta",
+      "region": "TW",
+      "sourceId": "912",
+      "name": "韓國娛樂台",
+      "logo": "",
+      "days": 4,
+      "count": 151,
+      "withDesc": 0
+    },
+    {
+      "source": "elta",
+      "region": "TW",
+      "sourceId": "914",
+      "name": "智林體育台",
+      "logo": "",
+      "days": 4,
+      "count": 36,
+      "withDesc": 0
+    },
+    {
+      "source": "elta",
+      "region": "TW",
+      "sourceId": "917",
+      "name": "客家電視台",
+      "logo": "",
+      "days": 4,
+      "count": 150,
+      "withDesc": 0
     }
   ]
 }
