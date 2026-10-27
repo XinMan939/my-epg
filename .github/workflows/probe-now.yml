@@ -1,92 +1,70 @@
-name: 探测 Now Player v4（临时）
+name: 探测 Now Player v5（临时）
 on:
   workflow_dispatch:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 30
     steps:
-      - name: 批量格式 + 付费台 + 简介
+      - name: 频道名对照 + 简介覆盖
         run: |
           mkdir -p out
           UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36"
           B="https://nowplayer.now.com"
-          {
-            echo "===== A. channelIdList 传参格式对比 ====="
-            for q in "channelIdList=096&channelIdList=099" "channelIdList%5B%5D=096&channelIdList%5B%5D=099" "channelIdList=096,099" "channelIdList%5B%5D=096&channelIdList%5B%5D=099&channelIdList%5B%5D=102"; do
-              R=$(curl -sS --compressed -o /tmp/a.json -w "%{http_code}|%{size_download}" --max-time 25 -A "$UA" \
-                -H "Referer: $B/tvguide" -H "X-Requested-With: XMLHttpRequest" \
-                "$B/tvguide/epglist?$q&day=1" 2>&1 || echo ERR)
-              N=$(node -e "try{const j=JSON.parse(require('fs').readFileSync('/tmp/a.json','utf8'));console.log('顶层'+j.length+' -> '+j.map(x=>Array.isArray(x)?x.length:'?').join('/'))}catch(e){console.log('解析失败')}" 2>&1)
-              echo "  [$q] -> $R | $N"
-            done
+          curl -sS --compressed -o out/page.html --max-time 30 -A "$UA" "$B/tvguide"
+          IDS=$(grep -oE '/tvguide/channeldetail/[0-9]+/' out/page.html | grep -oE '[0-9]+' | sort -u)
+          echo "频道数: $(echo "$IDS" | wc -l)" > out/names.txt
+          echo "===== id | 频道名 =====" >> out/names.txt
+          for id in $IDS; do
+            N=$(curl -sS --compressed --max-time 20 -A "$UA" "$B/tvguide/channeldetail/$id/1" 2>/dev/null \
+              | grep -oE '<title>[^<]*</title>' | head -1 | sed -E 's#</?title>##g; s#Now TV Website - Coming Up > ##')
+            echo "$id | $N" >> out/names.txt
+            echo "$id | $N"
+          done
 
-            echo
-            echo "===== B. 各台 day=1 条数（096 099 是免费台）====="
-            for id in 096 099 102 105 106 108 111 112 113 114 115 116 119 133 138 150 155 156 168 200 208 209 210 211 212 213 217 218 220 221 222 223 316 319 320 321 322 323 324 325 326 327 328 329 330 331 332 333 336 366; do
-              R=$(curl -sS --compressed -o /tmp/b.json -w "%{http_code}" --max-time 20 -A "$UA" \
-                -H "Referer: $B/tvguide" -H "X-Requested-With: XMLHttpRequest" \
-                "$B/tvguide/epglist?channelIdList=$id&day=1" 2>&1 || echo ERR)
-              N=$(node -e "try{const j=JSON.parse(require('fs').readFileSync('/tmp/b.json','utf8'));console.log((j[0]&&j[0].length)||0)}catch(e){console.log('ERR')}" 2>&1)
-              echo "  $id -> $R | 条数 $N"
-            done
-
-            echo
-            echo "===== C. 节目详情 epgprogramdetail（找简介）====="
-            for pid in 202610215578993 202610215578992; do
-              echo "--- programId=$pid"
-              curl -sS --compressed --max-time 25 -A "$UA" -H "Referer: $B/tvguide" \
-                "$B/tvguide/epgprogramdetail?programId=$pid" 2>&1 | head -c 2000
-              echo; echo
-            done
-
-            echo
-            echo "===== D. 频道详情页（找频道名）====="
-            for id in 096 102; do
-              echo "--- channeldetail/$id"
-              curl -sS --compressed -o /tmp/c$id.html -w "%{http_code}|%{size_download}\n" --max-time 25 -A "$UA" "$B/tvguide/channeldetail/$id/1"
-              grep -oE '<title>[^<]*</title>' /tmp/c$id.html
-              grep -oE 'ch-name[^>]*>[^<]*' /tmp/c$id.html | head -5
-              grep -oE 'alt="[^"]{2,40}"' /tmp/c$id.html | sort -u | head -10
-            done
-
-            echo
-            echo "===== E. /channels ====="
-            curl -sS --compressed -o /tmp/ch.json -w "%{http_code}|%{size_download}\n" --max-time 25 -A "$UA" -H "Referer: $B/tvguide" "$B/channels"
-            head -c 1500 /tmp/ch.json; echo
-
-            echo
-            echo "===== F. 一次传 8 台 ====="
-            Q=""
-            for id in 096 099 102 105 106 108 111 112; do Q="$Q&channelIdList%5B%5D=$id"; done
-            R=$(curl -sS --compressed -o /tmp/f.json -w "%{http_code}|%{size_download}" --max-time 30 -A "$UA" \
-              -H "Referer: $B/tvguide" -H "X-Requested-With: XMLHttpRequest" "$B/tvguide/epglist?day=1$Q" 2>&1 || echo ERR)
-            echo "  8台批量 -> $R"
-            node -e "try{const j=JSON.parse(require('fs').readFileSync('/tmp/f.json','utf8'));console.log('  顶层',j.length,'条数',j.map(x=>x.length).join('/'))}catch(e){console.log('  解析失败')}" 2>&1
-
-            echo
-            echo "===== G. day 范围复核（096 免费 + 102 付费）====="
-            for day in 1 2 3 4 5 6 7 8; do
-              A=$(curl -sS --compressed --max-time 20 -A "$UA" -H "Referer: $B/tvguide" "$B/tvguide/epglist?channelIdList=096&day=$day" 2>/dev/null | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>{try{console.log(JSON.parse(s)[0].length)}catch(e){console.log('ERR')}})")
-              Bq=$(curl -sS --compressed --max-time 20 -A "$UA" -H "Referer: $B/tvguide" "$B/tvguide/epglist?channelIdList=102&day=$day" 2>/dev/null | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>{try{console.log(JSON.parse(s)[0].length)}catch(e){console.log('ERR')}})")
-              echo "  day=$day -> 096:$A | 102:$Bq"
-            done
-
-            echo
-            echo "===== H. 节目是否带简介（全字段名扫描 + synopsis 探测）====="
-            curl -sS --compressed -o /tmp/h.json --max-time 25 -A "$UA" -H "Referer: $B/tvguide" "$B/tvguide/epglist?channelIdList=096&day=2"
+          echo
+          echo "===== 抽样测 epgprogramdetail 简介覆盖 =====" > out/syn.txt
+          for id in 327 326 324 112 102 208 096; do
+            curl -sS --compressed -o /tmp/p$id.json --max-time 25 -A "$UA" -H "Referer: $B/tvguide" "$B/tvguide/epglist?channelIdList=$id&day=2"
             node -e "
-              const j=JSON.parse(require('fs').readFileSync('/tmp/h.json','utf8'));
-              const keys=new Set();
-              let hasSyn=0, total=0;
-              for(const ch of j) for(const p of ch){ total++; for(const k of Object.keys(p)) keys.add(k);
-                if(['synopsis','desc','description','engSynopsis','chiSynopsis','epgSynopsis'].some(k=>p[k]&&String(p[k]).trim())) hasSyn++; }
-              console.log('  全部字段:', [...keys].join(','));
-              console.log('  节目数', total, '带简介的', hasSyn);
-            " 2>&1
-          } > out/report.txt 2>&1
-          cp /tmp/ch.json out/ 2>/dev/null || true
-          cp /tmp/c096.html out/ 2>/dev/null || true
-          cp /tmp/c102.html out/ 2>/dev/null || true
+              const j=JSON.parse(require('fs').readFileSync('/tmp/p$id.json','utf8'));
+              const ps=j[0]||[];
+              const sids=[...new Set(ps.map(p=>p.sid||p.cid||p.name))];
+              console.log('$id | 节目'+ps.length+' | 唯一sid '+sids.length);
+              require('fs').writeFileSync('/tmp/sids$id.txt', sids.slice(0,25).join('\n'));
+              require('fs').writeFileSync('/tmp/pids$id.txt', ps.slice(0,25).map(p=>p.vimProgramId).join('\n'));
+            " >> out/syn.txt 2>&1
+            # 抓 12 个节目的详情看 synopsis 命中率
+            HIT=0; TOT=0; SAMPLE=""
+            for pid in $(head -12 /tmp/pids$id.txt); do
+              TOT=$((TOT+1))
+              R=$(curl -sS --compressed --max-time 20 -A "$UA" -H "Referer: $B/tvguide" "$B/tvguide/epgprogramdetail?programId=$pid" 2>/dev/null)
+              L=$(node -e "
+                let s=process.argv[1]; try{const d=JSON.parse(s);
+                const sy=(d.chiSynopsis||'').trim()||(d.synopsis||'').trim()||(d.engSynopsis||'').trim();
+                console.log(sy?sy.length:0)}catch(e){console.log(-1)}" "$R" 2>&1)
+              if [ "$L" -gt 20 ] 2>/dev/null; then HIT=$((HIT+1)); SAMPLE="$L"; fi
+            done
+            echo "  $id 简介命中 $HIT/$TOT (样例长度 ${SAMPLE:-0})" >> out/syn.txt
+            echo "  $id 简介命中 $HIT/$TOT"
+          done
+
+          echo
+          echo "===== 全部台 7 天条数矩阵（批量 8 台一组）=====" > out/matrix.txt
+          echo "$IDS" > /tmp/ids.txt
+          IDARR=$(cat /tmp/ids.txt | tr '\n' ' ')
+          Q=""; N=0; GRP=1
+          for id in $IDARR; do
+            Q="$Q&channelIdList%5B%5D=$id"; N=$((N+1))
+            if [ $N -eq 8 ]; then
+              curl -sS --compressed -o /tmp/g.json --max-time 30 -A "$UA" -H "Referer: $B/tvguide" "$B/tvguide/epglist?day=2$Q"
+              node -e "try{const j=JSON.parse(require('fs').readFileSync('/tmp/g.json','utf8'));console.log('组'+$GRP+': '+j.map(x=>x.length).join('/'))}catch(e){console.log('组$GRP 失败')}" >> out/matrix.txt 2>&1
+              Q=""; N=0; GRP=$((GRP+1))
+            fi
+          done
+          if [ $N -gt 0 ]; then
+            curl -sS --compressed -o /tmp/g.json --max-time 30 -A "$UA" -H "Referer: $B/tvguide" "$B/tvguide/epglist?day=2$Q"
+            node -e "try{const j=JSON.parse(require('fs').readFileSync('/tmp/g.json','utf8'));console.log('组$GRP(尾): '+j.map(x=>x.length).join('/'))}catch(e){console.log('组$GRP 失败')}" >> out/matrix.txt 2>&1
+          fi
       - uses: actions/upload-artifact@v4
-        with: { name: np-probe4, path: out/ }
+        with: { name: np-probe5, path: out/ }
