@@ -170,6 +170,8 @@ export async function fetchChannelList() {
     while ((m = re2.exec(html))) ids.add(m[1])
   }
 
+  const out = [...ids].sort().map((id) => ({ sourceId: id, name: '', num: id }))
+
   // 频道名只能从 channeldetail 页的 <title> 拿，逐台抓（并发 8 路，135 台约 10 秒）
   await mapLimit(out, DESC_CONCURRENCY, async (c) => {
     try {
