@@ -77,7 +77,10 @@ jobs:
           git add channels/catalog.json
           if git diff --cached --quiet; then
             echo "catalog.json 无变化"
-          else
-            git commit -m "chore(catalog): 重扫纳入 nowplayer + mod（$(date -u +%Y-%m-%dT%H:%MZ)）"
-            git push
+            exit 0
           fi
+          git commit -m "chore(catalog): 重扫纳入 nowplayer + mod（$(date -u +%Y-%m-%dT%H:%MZ)）"
+          # ★ 重扫要跑几十秒，期间可能有人推了 main，所以 push 前先 rebase
+          for i in 1 2 3; do
+            git pull --rebase -q origin main && git push && break || sleep 5
+          done
