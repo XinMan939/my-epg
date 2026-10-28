@@ -751,9 +751,9 @@
     "aliases": [
       "浙江国际频道"
     ],
-    "logo": "",
-    "hasEpg": false,
-    "programmeCount": 0
+    "logo": "http://oss.cztv.com/ucc/20200123/ad3c07c7910e475a8631e4cff5a9431c.png",
+    "hasEpg": true,
+    "programmeCount": 81
   },
   {
     "id": "HunanEconomyChannel.cn",
@@ -821,7 +821,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 52
+    "programmeCount": 120
   },
   {
     "id": "ZhejiangMinshengLeisure.cn",
@@ -852,9 +852,9 @@
     "aliases": [
       "浙江少儿频道"
     ],
-    "logo": "",
+    "logo": "http://oss.cztv.com/ucc/20200123/312d8aea2f2a4f678b084d2bd8dbcb05.png",
     "hasEpg": true,
-    "programmeCount": 24
+    "programmeCount": 185
   },
   {
     "id": "JiangsuCityChannel.cn",
@@ -972,7 +972,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 237
+    "programmeCount": 236
   },
   {
     "id": "ViuTVsix.hk",
@@ -1806,7 +1806,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 348
+    "programmeCount": 347
   },
   {
     "id": "nowBusinessNewsChannel.hk",
@@ -2609,7 +2609,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 87
+    "programmeCount": 86
   },
   {
     "id": "DAZN1.uk",
@@ -2917,7 +2917,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 106
+    "programmeCount": 105
   },
   {
     "id": "爱尔达体育Ⅲ.tw",
@@ -2928,7 +2928,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 97
+    "programmeCount": 96
   },
   {
     "id": "爱尔达影剧.tw",
