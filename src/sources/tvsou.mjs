@@ -199,6 +199,8 @@ export async function listChannels() {
         days: 0,
         count: 0,
         withDesc: 0,
+        // ★ 只做备选，不参与主源竞争（见 match.mjs pickBest 的第 0 条注释）
+        fallbackOnly: true,
       })
     }
     while ((m = reB.exec(res.text))) {
@@ -214,6 +216,8 @@ export async function listChannels() {
         days: 0,
         count: 0,
         withDesc: 0,
+        // ★ 只做备选，不参与主源竞争（见 match.mjs pickBest 的第 0 条注释）
+        fallbackOnly: true,
       })
     }
   }

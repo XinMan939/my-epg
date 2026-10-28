@@ -49,6 +49,8 @@ for (const it of items) {
   it.days = n.days
   it.count = n.count
   if (Object.prototype.hasOwnProperty.call(n, 'withDesc')) it.withDesc = n.withDesc
+  // ★ fallbackOnly 也要带进来：它决定这个源能不能当主源（见 match.mjs pickBest）
+  if (Object.prototype.hasOwnProperty.call(n, 'fallbackOnly')) it.fallbackOnly = n.fallbackOnly
   merged++
   if (!hadDays) fromMissing++
   const line = `${it.source}:${it.sourceId} ${it.name} ${hadDays ? before + '天' : '(缺字段)'} → ${n.days}天/${n.count}条`

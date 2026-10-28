@@ -157,5 +157,30 @@ console.log('\n[4] 源码护栏：listChannels 必须带 days / count，且不�
   check('★ 缓存命中条件包含「当天」（跨天必须失效，周栅格会错位）', /j\.ymd\s*!==\s*dateInCST\(\)/.test(pc))
 }
 
+console.log('\n[5] fallbackOnly：周栅格源不许靠天数把有简介的源顶下去')
+{
+  const { matchChannels } = await import('../src/match.mjs')
+  const target = [{ id: 'T1', name: '测试卫视', aliases: [] }]
+  const grid = { source: 'tvsou', sourceId: 'h1', name: '测试卫视', days: 7, withDesc: 0, count: 400, fallbackOnly: true }
+  const window = { source: 'epgpw', sourceId: '1', name: '测试卫视', days: 6, withDesc: 200, count: 230 }
+
+  const a = matchChannels(target, [window, grid], { overrides: {} }).matched.get('T1')
+  check('★ 有简介的源当主源（哪怕少 1 天）', a.source === 'epgpw', `${a.source}:${a.sourceId}`)
+
+  // 反证：去掉 fallbackOnly 后 tvsou 会靠 7 天赢 —— 这就是实测的 9 个台简介掉 20~86 条的成因
+  const { fallbackOnly, ...gridNoFlag } = grid
+  const b = matchChannels(target, [window, gridNoFlag], { overrides: {} }).matched.get('T1')
+  check('（反证）去掉 fallbackOnly 后无简介源会赢 —— 实测安徽卫视 216→130 条简介', b.source === 'tvsou', b.source)
+
+  // fallbackOnly 只影响「主源竞争」，不影响「唯一候选时仍被选中」
+  const c = matchChannels(target, [grid], { overrides: {} }).matched.get('T1')
+  check('★ 唯一候选是 fallbackOnly 时照样选中（否则广东体育这类台会变成无源）', c && c.source === 'tvsou', c && c.source)
+
+  for (const f of ['tvsou.mjs', 'tvmao.mjs']) {
+    const src = fs.readFileSync(new URL(`../src/sources/${f}`, import.meta.url), 'utf8')
+    check(`${f}: 条目带 fallbackOnly: true`, /fallbackOnly: true/.test(src))
+  }
+}
+
 console.log(`\n=== ${pass} 通过 / ${fail} 失败 ===\n`)
 if (fail) process.exit(1)

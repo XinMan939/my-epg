@@ -252,14 +252,20 @@ ELTA 特别说明：它的 `體育 1~4 台` 对应我们的 `爱尔达体育Ⅰ~
 - **澳门 3 台（澳门电视台 / 澳门莲花 / 澳亚卫视）实测 0/7 天 0 条** —— 补 `days` **救不了它们**，
   它们本来就是空的（§八早有「无 MO 包」的记录）。改变的是**说得清了**，不是**有数据了**。
   顺带查清 tvsou 476 条里 **412 个是空壳**（86.6%），`difang`（地方）分类 44/44 全空。
-- ★★ **副作用必须记账**：这两个源从此有能力赢下主源，288 个目标里 **81 个主源翻转**
-  （epgpw 6 天 → tvmao 7 天）。抽 10 个台在**同一份 epgpw 缓存**上只改 catalog 跑前后对比：
-  **节目 1421 → 1605（+184）、真简介 720 → 819（+99）、覆盖率 51% → 51%**。
-  翻转不丢简介，因为简介主要来自**按标题查的 desc-cache**（与主源无关），
-  唯一小亏是 CCTV-1（简介 151 → 146，tvmao 标题与 epgpw 不完全一致，缓存命中少几条）。
+- ★★ **副作用踩了一次坑，结论被 CI 推翻过，必须看这段**：补完 days 后这两个源第一次有能力赢下主源，
+  离线重放 `pickBest` 显示 288 个目标里 **81 个主源翻转**（epgpw 6 天 → tvmao/tvsou 7 天）。
+  本机抽 10 个台跑对照（同一份 epgpw 缓存，只改 catalog）看着是净赚（1421→1605 条、720→819 简介）；
+  **CI 全量一跑（run `40670824718`）才发现 9 个台是「拿简介换天数」**：
+  安徽卫视 216→130 条简介、海南卫视 207→137、北京卫视 209→157、江西卫视 160→103、
+  海峡卫视 244→197、青海卫视 180→139、吉林 −27、广西 −21、湖南 −1。
+  而这 9 个台的**产物天数前后都是 7 天** —— 「多出来的一天」根本没兑现，白掉 50~86 条简介。
+  根因：**两种源的 `days` 不可比**（周栅格的 7 个槽位 vs epgpw 滚动窗口的真探快照）。
+  → 给这两个源的条目打 `fallbackOnly: true`，`pickBest` 第 0 条排序键把它们排到所有能当主源的源之后；
+  改完重放：**翻转 0 个**，同一份缓存的对照 build 回到 **1421/720（逐台一致）**，
+  而「唯一候选就是 tvsou」的台（广东体育）仍然照常选中。
 - 探测结果落 `.cache/{tvsou,tvmao}-probe.json`，**按「北京时间当天」失效 + 带口径版本号**
   （周栅格跨天会整体错位一天，小时级 TTL 会把隔夜栅格当今天的用）。
-- 新增 `test/tvsou-days.test.mjs`（37 项）+ `src/probe-cache.mjs`，`npm test` 229 → **266 项 / 11 文件**。
+- 新增 `test/tvsou-days.test.mjs`（42 项）+ `src/probe-cache.mjs`，`npm test` 229 → **271 项 / 11 文件**。
 - 顺手加了两个工具：`tools/refresh-days.mjs`（只重探这两个源、增量并进 catalog，
   不用为它重下 19MB 的 epgpw 包）、`tools/preview-days-flip.mjs`（离线重放 `pickBest`，
   把「主源会翻转」的台列出来后再决定要不要真跑 build）。
@@ -393,7 +399,7 @@ epg.pw 台湾包有一批节目 `<desc>` 就是 `<title>` 本身，长度过 12 
 **两道自动化防线（都已接进 CI）：**
 
 ```bash
-npm test                              # 266 项断言（11 个文件），build 之前跑
+npm test                              # 271 项断言（11 个文件），build 之前跑
 node test/audit-output.mjs output/epg.xml.gz   # 产物体检，重叠/乱序/零长度/某天半截 → exit 1
 ```
 
@@ -489,8 +495,8 @@ node test/audit-output.mjs output/epg.xml.gz   # 产物体检，重叠/乱序/�
 
 ```bash
 npm test    # 十一道：normalize 23 + day-fill 52 + tvmao 33 + match 10
-            #       + timezone 23 + days-source 6 + tvsou-days 37 + litv-desc 25
-            #       + override-desc 6 + cztv 20 + kbro 31 = 266 项
+            #       + timezone 23 + days-source 6 + tvsou-days 42 + litv-desc 25
+            #       + override-desc 6 + cztv 20 + kbro 31 = 271 项
 ```
 
 关键断言：
