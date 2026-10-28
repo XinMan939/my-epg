@@ -156,10 +156,33 @@ async function probeStat(sourceId) {
     if (!res.ok) return { days: 0, count: 0, withDesc: 0 }
     const j = JSON.parse(res.text)
     if (!Array.isArray(j.availableDates)) return { days: 0, count: 0, withDesc: 0 }
-    const days = j.availableDates.length
+
+    // ★★ 只数「今天及以后」的日期（pitfalls §6.7c，2026-10-28 第十二轮回归）
+    //
+    // 踩到的回归：`days = availableDates.length` 把**已经过去的天**也算进去了。
+    //   实测 webncode:nowtv_332 报 6 天，而产物里 perDay 是
+    //   {10-28..11-01 有数据, 11-02:0, 11-03:0} —— 实际可用只有 5 天。
+    //
+    //   后果比「数字虚高」严重得多：它让 webncode 以 6 天压过 epgpw 的 5 天，
+    //   成了 nowNews.hk 的主源，而 webncode 那台**简介是 0**
+    //   （catalog: withDesc=0，产物 descRate=0），
+    //   于是简介从 271 条直接掉到 0 —— 报表只显示「匹配成功」。
+    //
+    //   这就是 §6.7 / §6.7b / §6.7c 那条硬规则第 4 次中招：
+    //   凡是「窗口大小」推断出来的天数，都必须先切掉过去的天再计数。
+    const todayYmd = new Date(Date.now() + 8 * 3600e3).toISOString().slice(0, 10).replace(/-/g, '')
+    const futureDates = j.availableDates
+      .map((d) => String(d).replace(/-/g, '').slice(0, 8))
+      .filter((d) => /^\d{8}$/.test(d) && d >= todayYmd)
+    const days = futureDates.length
+    if (!days) return { days: 0, count: 0, withDesc: 0 }
+
     const arr = Array.isArray(j.schedule) ? j.schedule : []
     // 当天条数当密度样本（占位数据已在 getDayProgrammes 过滤，这里只做量级估计）
-    const perDay = arr.length
+    const perDay = arr.filter((x) => {
+      const t = String(x.name || '').trim()
+      return t && !PLACEHOLDER_TITLE.test(t) && x.start
+    }).length
     // 当天真简介比例，外推到全期
     const descPerDay = arr.filter((x) => {
       const t = String(x.name || '').trim()
