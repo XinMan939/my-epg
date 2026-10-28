@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-28T03:18:56.531Z",
+  "generatedAt": "2026-10-28T03:31:25.250Z",
   "days": 7,
   "dayList": [
     "20261028",
@@ -15,21 +15,21 @@
   "channelsEmpty": 5,
   "channelsFull": 229,
   "channelsPartial": 54,
-  "programmesTotal": 57299,
-  "programmesWithDesc": 33388,
-  "descCoverage": 58,
+  "programmesTotal": 57319,
+  "programmesWithDesc": 34106,
+  "descCoverage": 60,
   "dateRange": [
     "20261028",
     "20261103"
   ],
   "sourceStats": {
-    "webncode": 22,
-    "epgpw": 219,
+    "epgpw": 224,
+    "webncode": 15,
     "tvmao": 9,
-    "litv": 12,
     "fengshows": 1,
+    "litv": 12,
     "tdm": 6,
-    "nowplayer": 2,
+    "nowplayer": 4,
     "mod": 1,
     "elta": 4,
     "tvsou": 1
@@ -65,9 +65,9 @@
       "sourceId": "545932",
       "sourceName": "CCTV-1 综合",
       "alternatives": [
-        "webncode:nowtv_541(CCTV-1)",
         "nowplayer:541(CCTV-1)",
         "epgpw:410374(CCTV-1)",
+        "webncode:nowtv_541(CCTV-1)",
         "epgpw:572136(CCTV-1综合)",
         "epgpw:572141(CCTV-1（高清）)",
         "epgpw:577874(CCTV1)",
@@ -106,12 +106,12 @@
     },
     "CCTV4Asia.cn": {
       "confidence": "exact",
-      "source": "webncode",
-      "sourceId": "nowtv_542",
+      "source": "epgpw",
+      "sourceId": "410375",
       "sourceName": "CCTV-4",
       "alternatives": [
-        "epgpw:410375(CCTV-4)",
         "nowplayer:542(CCTV-4)",
+        "webncode:nowtv_542(CCTV-4)",
         "epgpw:545935(CCTV-4 (亚洲))",
         "epgpw:545952(CCTV-4 (美洲))",
         "epgpw:545951(CCTV-4 (欧洲))",
@@ -329,9 +329,9 @@
       "sourceId": "539832",
       "sourceName": "CCTV4欧洲",
       "alternatives": [
-        "webncode:nowtv_542(CCTV-4)",
         "epgpw:410375(CCTV-4)",
         "nowplayer:542(CCTV-4)",
+        "webncode:nowtv_542(CCTV-4)",
         "epgpw:545935(CCTV-4 (亚洲))",
         "epgpw:545952(CCTV-4 (美洲))",
         "epgpw:545951(CCTV-4 (欧洲))",
@@ -350,9 +350,9 @@
       "sourceId": "539751",
       "sourceName": "CCTV4美洲",
       "alternatives": [
-        "webncode:nowtv_542(CCTV-4)",
         "epgpw:410375(CCTV-4)",
         "nowplayer:542(CCTV-4)",
+        "webncode:nowtv_542(CCTV-4)",
         "epgpw:545935(CCTV-4 (亚洲))",
         "epgpw:545952(CCTV-4 (美洲))",
         "epgpw:545951(CCTV-4 (欧洲))",
@@ -1032,12 +1032,12 @@
     },
     "ViuTV.hk": {
       "confidence": "exact",
-      "source": "webncode",
-      "sourceId": "viutv_99",
+      "source": "nowplayer",
+      "sourceId": "099",
       "sourceName": "ViuTV",
       "alternatives": [
-        "nowplayer:099(ViuTV)",
         "epgpw:565569(ViuTV)",
+        "webncode:viutv_99(ViuTV)",
         "webncode:nowtv_99(ViuTV)"
       ]
     },
@@ -1096,12 +1096,12 @@
     },
     "PhoenixChineseChannel.hk": {
       "confidence": "exact",
-      "source": "webncode",
-      "sourceId": "nowtv_548",
+      "source": "epgpw",
+      "sourceId": "410378",
       "sourceName": "鳳凰衛視中文台",
       "alternatives": [
-        "epgpw:410378(鳳凰衛視中文台)",
         "nowplayer:548(鳳凰衛視中文台)",
+        "webncode:nowtv_548(鳳凰衛視中文台)",
         "epgpw:577957(凤凰中文)",
         "fengshows:中文台(鳳凰衛視中文台)",
         "tvsou:65e0f71a(凤凰卫视)",
@@ -1110,12 +1110,12 @@
     },
     "PhoenixInfoNewsChannel.hk": {
       "confidence": "exact",
-      "source": "webncode",
-      "sourceId": "nowtv_366",
+      "source": "epgpw",
+      "sourceId": "410355",
       "sourceName": "鳳凰衛視資訊台",
       "alternatives": [
-        "epgpw:410355(鳳凰衛視資訊台)",
         "nowplayer:366(鳳凰衛視資訊台)",
+        "webncode:nowtv_366(鳳凰衛視資訊台)",
         "epgpw:577958(凤凰资讯)",
         "fengshows:資訊台(鳳凰衛視資訊台)"
       ]
@@ -1713,22 +1713,22 @@
     },
     "nowNews.hk": {
       "confidence": "exact",
-      "source": "webncode",
-      "sourceId": "nowtv_332",
+      "source": "nowplayer",
+      "sourceId": "332",
       "sourceName": "Now新聞台",
       "alternatives": [
         "epgpw:410344(Now新聞台)",
-        "nowplayer:332(Now新聞台)"
+        "webncode:nowtv_332(Now新聞台)"
       ]
     },
     "nowBusinessNewsChannel.hk": {
       "confidence": "exact",
-      "source": "webncode",
-      "sourceId": "nowtv_333",
+      "source": "epgpw",
+      "sourceId": "410345",
       "sourceName": "Now財經台",
       "alternatives": [
-        "epgpw:410345(Now財經台)",
-        "nowplayer:333(Now財經台)"
+        "nowplayer:333(Now財經台)",
+        "webncode:nowtv_333(Now財經台)"
       ]
     },
     "PopC.hk": {
@@ -1746,8 +1746,8 @@
       "sourceId": "331",
       "sourceName": "Now直播台",
       "alternatives": [
-        "webncode:nowtv_331(Now直播台)",
-        "epgpw:410343(Now直播台)"
+        "epgpw:410343(Now直播台)",
+        "webncode:nowtv_331(Now直播台)"
       ]
     },
     "ROCKAction.sg": {
@@ -2031,12 +2031,12 @@
     },
     "CTiAsia.tw": {
       "confidence": "exact",
-      "source": "webncode",
-      "sourceId": "nowtv_538",
+      "source": "epgpw",
+      "sourceId": "410372",
       "sourceName": "中天亞洲台",
       "alternatives": [
-        "epgpw:410372(中天亞洲台)",
         "nowplayer:538(中天亞洲台)",
+        "webncode:nowtv_538(中天亞洲台)",
         "litv:4gtv-4gtv109(中天亞洲台)"
       ]
     },
@@ -2487,11 +2487,11 @@
       "sourceId": "456663",
       "sourceName": "HITS",
       "alternatives": [
-        "webncode:nowtv_513(HITS)",
         "epgpw:412204(HITS)",
         "nowplayer:513(HITS)",
         "epgpw:457369(HITS HD)",
-        "mod:620(HITS HD)"
+        "mod:620(HITS HD)",
+        "webncode:nowtv_513(HITS)"
       ]
     },
     "博斯魅力.tw": {
@@ -2797,9 +2797,9 @@
       "sourceId": "457281",
       "sourceName": "亞洲美食頻道",
       "alternatives": [
-        "webncode:nowtv_527(亞洲美食台)",
         "epgpw:410370(亞洲美食台)",
         "nowplayer:527(亞洲美食台)",
+        "webncode:nowtv_527(亞洲美食台)",
         "mod:276(亞洲美食頻道)"
       ]
     },
@@ -2901,7 +2901,7 @@
     "CCTV1.cn": "epgpw:545932(CCTV-1 综合)",
     "CCTV2.cn": "epgpw:545933(CCTV-2 财经)",
     "CCTV3.cn": "epgpw:545934(CCTV-3 综艺)",
-    "CCTV4Asia.cn": "webncode:nowtv_542(CCTV-4)",
+    "CCTV4Asia.cn": "epgpw:410375(CCTV-4)",
     "CCTV5.cn": "epgpw:545936(CCTV-5 体育)",
     "CCTV5Plus.cn": "epgpw:545937(CCTV-5+ 体育赛事)",
     "CCTV6.cn": "epgpw:545938(CCTV-6 电影)",
@@ -2976,7 +2976,7 @@
     "TVBNewsChannel.hk": "webncode:tvb_inews(無綫新聞台)",
     "GoldenJade.hk": "epgpw:368358(黃金翡翠台)",
     "TVBPlus.hk": "webncode:tvb_j2(TVB Plus)",
-    "ViuTV.hk": "webncode:viutv_99(ViuTV)",
+    "ViuTV.hk": "nowplayer:099(ViuTV)",
     "ViuTVsix.hk": "webncode:viutv_96(ViuTVsix)",
     "RTHKTV31.hk": "epgpw:368550(港台电视31)",
     "RTHKTV32.hk": "epgpw:368551(港台电视32)",
@@ -2984,8 +2984,8 @@
     "RTHKTV34.hk": "epgpw:368553(港台电视34)",
     "RTHKTV35.hk": "epgpw:574572(港台电视35)",
     "HOYTV.hk": "webncode:fantv_77(HOY TV)",
-    "PhoenixChineseChannel.hk": "webncode:nowtv_548(鳳凰衛視中文台)",
-    "PhoenixInfoNewsChannel.hk": "webncode:nowtv_366(鳳凰衛視資訊台)",
+    "PhoenixChineseChannel.hk": "epgpw:410378(鳳凰衛視中文台)",
+    "PhoenixInfoNewsChannel.hk": "epgpw:410355(鳳凰衛視資訊台)",
     "PhoenixHongKongChannel.hk": "fengshows:香港台(鳳凰衛視香港台)",
     "MacauTV.hk": "tdm:1(澳視澳門)",
     "TTV.tw": "epgpw:456505(台視)",
@@ -3050,8 +3050,8 @@
     "CHCFansMovieChannel.cn": "epgpw:577974(CHC影迷电影)",
     "EntertainmentNews.hk": "epgpw:368323(娛樂新聞台)",
     "TVB千禧经典.hk": "webncode:mytvsuper_CTVC(千禧經典台)",
-    "nowNews.hk": "webncode:nowtv_332(Now新聞台)",
-    "nowBusinessNewsChannel.hk": "webncode:nowtv_333(Now財經台)",
+    "nowNews.hk": "nowplayer:332(Now新聞台)",
+    "nowBusinessNewsChannel.hk": "epgpw:410345(Now財經台)",
     "PopC.hk": "webncode:mytvsuper_POPC(PopC)",
     "nowDirect.hk": "nowplayer:331(Now直播台)",
     "ROCKAction.sg": "webncode:mytvsuper_CRTX(ROCK Action)",
@@ -3083,7 +3083,7 @@
     "CTVClassic.tw": "epgpw:457296(中視經典台HD)",
     "中视菁采.tw": "epgpw:457298(中視菁采台HD)",
     "CTiEntertainment.tw": "epgpw:456539(中天娛樂台)",
-    "CTiAsia.tw": "webncode:nowtv_538(中天亞洲台)",
+    "CTiAsia.tw": "epgpw:410372(中天亞洲台)",
     "FTVOne.tw": "epgpw:456642(民視第一台)",
     "FTVTaiwan.tw": "epgpw:456643(民視台灣台)",
     "FTVDrama.tw": "litv:litv-ftv09(民視影劇台)",
@@ -3232,19 +3232,11 @@
   ],
   "dayFillStats": [
     {
-      "id": "CCTV4Asia.cn",
+      "id": "CCTV2.cn",
       "before": 6,
       "after": 7,
       "sources": [
-        "epgpw:410375+40"
-      ]
-    },
-    {
-      "id": "CCTV5.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTV-CCTV5+23"
+        "tvmao:CCTV-CCTV2+41"
       ]
     },
     {
@@ -3256,35 +3248,11 @@
       ]
     },
     {
-      "id": "CCTV2.cn",
+      "id": "CCTV5.cn",
       "before": 6,
       "after": 7,
       "sources": [
-        "tvmao:CCTV-CCTV2+41"
-      ]
-    },
-    {
-      "id": "CCTV5Plus.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTV-CCTV5-PLUS+17"
-      ]
-    },
-    {
-      "id": "CCTV1.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "nowplayer:541+3"
-      ]
-    },
-    {
-      "id": "CCTV8.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTV-CCTV8+37"
+        "tvmao:CCTV-CCTV5+23"
       ]
     },
     {
@@ -3296,11 +3264,27 @@
       ]
     },
     {
+      "id": "CCTV5Plus.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTV-CCTV5-PLUS+17"
+      ]
+    },
+    {
       "id": "CCTV9.cn",
       "before": 6,
       "after": 7,
       "sources": [
         "tvmao:CCTV-CCTV9+34"
+      ]
+    },
+    {
+      "id": "CCTV8.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTV-CCTV8+37"
       ]
     },
     {
@@ -3320,14 +3304,6 @@
       ]
     },
     {
-      "id": "CCTV15.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTV-CCTV16+17"
-      ]
-    },
-    {
       "id": "CCTV12.cn",
       "before": 6,
       "after": 7,
@@ -3336,19 +3312,19 @@
       ]
     },
     {
-      "id": "CCTV16.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTV-CCTVOLY+23"
-      ]
-    },
-    {
       "id": "CCTV14.cn",
       "before": 6,
       "after": 7,
       "sources": [
         "tvmao:CCTV-CCTV15+21"
+      ]
+    },
+    {
+      "id": "CCTV16.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTV-CCTVOLY+23"
       ]
     },
     {
@@ -3361,11 +3337,11 @@
       ]
     },
     {
-      "id": "HunanTV.cn",
-      "before": 5,
+      "id": "CCTV15.cn",
+      "before": 6,
       "after": 7,
       "sources": [
-        "tvmao:HUNANTV1+72"
+        "tvmao:CCTV-CCTV16+17"
       ]
     },
     {
@@ -3375,6 +3351,14 @@
       "sources": [
         "epgpw:545952+179",
         "tvmao:CCTV-CCTVAMERICAS+40"
+      ]
+    },
+    {
+      "id": "HunanTV.cn",
+      "before": 5,
+      "after": 7,
+      "sources": [
+        "tvmao:HUNANTV1+72"
       ]
     },
     {
@@ -3442,19 +3426,19 @@
       ]
     },
     {
-      "id": "XiamenSatelliteTV.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:XMTV5+39"
-      ]
-    },
-    {
       "id": "HainanSatelliteTV.cn",
       "before": 5,
       "after": 7,
       "sources": [
         "tvmao:TCTC1+77"
+      ]
+    },
+    {
+      "id": "XiamenSatelliteTV.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:XMTV5+39"
       ]
     },
     {
@@ -3482,19 +3466,11 @@
       ]
     },
     {
-      "id": "PhoenixChineseChannel.hk",
-      "before": 6,
+      "id": "GBASatelliteTV.cn",
+      "before": 1,
       "after": 7,
       "sources": [
-        "epgpw:410378+48"
-      ]
-    },
-    {
-      "id": "PhoenixInfoNewsChannel.hk",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "epgpw:410355+62"
+        "tvmao:NANFANG-NANFANG6+117"
       ]
     },
     {
@@ -3506,11 +3482,11 @@
       ]
     },
     {
-      "id": "GBASatelliteTV.cn",
-      "before": 1,
+      "id": "CCTV1.cn",
+      "before": 6,
       "after": 7,
       "sources": [
-        "tvmao:NANFANG-NANFANG6+117"
+        "nowplayer:541+3"
       ]
     },
     {
@@ -3522,19 +3498,11 @@
       ]
     },
     {
-      "id": "CNDFilmDiscoveryChannel.cn",
+      "id": "CCTVWeaponTechnology.cn",
       "before": 2,
       "after": 7,
       "sources": [
-        "tvmao:CCTVPAYFEE-CCTVFXZL+250"
-      ]
-    },
-    {
-      "id": "CCTVStormMusic.cn",
-      "before": 2,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTVPAYFEE-CCTVPAYFEE2+127"
+        "tvmao:CCTVPAYFEE-CCTVPAYFEE8+206"
       ]
     },
     {
@@ -3547,11 +3515,11 @@
       ]
     },
     {
-      "id": "CCTVWeaponTechnology.cn",
+      "id": "CNDFilmDiscoveryChannel.cn",
       "before": 2,
       "after": 7,
       "sources": [
-        "tvmao:CCTVPAYFEE-CCTVPAYFEE8+206"
+        "tvmao:CCTVPAYFEE-CCTVFXZL+250"
       ]
     },
     {
@@ -3564,11 +3532,27 @@
       ]
     },
     {
+      "id": "CCTVStormMusic.cn",
+      "before": 2,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTVPAYFEE-CCTVPAYFEE2+127"
+      ]
+    },
+    {
       "id": "CCTVStormFootball.cn",
       "before": 2,
       "after": 7,
       "sources": [
         "tvmao:CCTVPAYFEE-CCTVPAYFEE1+179"
+      ]
+    },
+    {
+      "id": "CCTVGolfTennis.cn",
+      "before": 2,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTVPAYFEE-CCTVPAYFEE13+80"
       ]
     },
     {
@@ -3581,11 +3565,11 @@
       ]
     },
     {
-      "id": "CCTVGolfTennis.cn",
+      "id": "CCTVWomensFashion.cn",
       "before": 2,
       "after": 7,
       "sources": [
-        "tvmao:CCTVPAYFEE-CCTVPAYFEE13+80"
+        "tvmao:CCTVPAYFEE-CCTVPAYFEE9+115"
       ]
     },
     {
@@ -3605,14 +3589,6 @@
       ]
     },
     {
-      "id": "CCTVWomensFashion.cn",
-      "before": 2,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTVPAYFEE-CCTVPAYFEE9+115"
-      ]
-    },
-    {
       "id": "CCTVTVGuide.cn",
       "before": 1,
       "after": 7,
@@ -3621,19 +3597,19 @@
       ]
     },
     {
-      "id": "CGTNDocumentary.cn",
-      "before": 1,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTV-CCTV18+216"
-      ]
-    },
-    {
       "id": "CGTNFrench.cn",
       "before": 1,
       "after": 7,
       "sources": [
         "tvmao:CCTV-CCTVF+196"
+      ]
+    },
+    {
+      "id": "CGTNDocumentary.cn",
+      "before": 1,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTV-CCTV18+216"
       ]
     },
     {
@@ -3653,19 +3629,19 @@
       ]
     },
     {
-      "id": "求索纪录.cn",
-      "before": 1,
-      "after": 7,
-      "sources": [
-        "tvmao:HSCM-QSJL+182"
-      ]
-    },
-    {
       "id": "LiyuanTV.cn",
       "before": 2,
       "after": 7,
       "sources": [
         "tvmao:CCTVPAYFEE-CCTVPAYFEE20+60"
+      ]
+    },
+    {
+      "id": "求索纪录.cn",
+      "before": 1,
+      "after": 7,
+      "sources": [
+        "tvmao:HSCM-QSJL+182"
       ]
     },
     {
@@ -3693,19 +3669,19 @@
       ]
     },
     {
-      "id": "AnimationShowChannel.cn",
-      "before": 1,
-      "after": 7,
-      "sources": [
-        "tvmao:SITV-CHILDREN+600"
-      ]
-    },
-    {
       "id": "乐游.cn",
       "before": 1,
       "after": 7,
       "sources": [
         "tvmao:SITV-DOCUMENTARY+395"
+      ]
+    },
+    {
+      "id": "AnimationShowChannel.cn",
+      "before": 1,
+      "after": 7,
+      "sources": [
+        "tvmao:SITV-CHILDREN+600"
       ]
     },
     {
@@ -3717,11 +3693,11 @@
       ]
     },
     {
-      "id": "LifestyleChannel.cn",
+      "id": "ChannelLaw.cn",
       "before": 1,
       "after": 7,
       "sources": [
-        "tvmao:SITV-FASHION+335"
+        "tvmao:SITV3+290"
       ]
     },
     {
@@ -3733,19 +3709,11 @@
       ]
     },
     {
-      "id": "ChannelLaw.cn",
+      "id": "LifestyleChannel.cn",
       "before": 1,
       "after": 7,
       "sources": [
-        "tvmao:SITV3+290"
-      ]
-    },
-    {
-      "id": "CHCHomeTheater.cn",
-      "before": 1,
-      "after": 7,
-      "sources": [
-        "tvmao:CHC-CHC2+148"
+        "tvmao:SITV-FASHION+335"
       ]
     },
     {
@@ -3757,19 +3725,19 @@
       ]
     },
     {
+      "id": "CHCHomeTheater.cn",
+      "before": 1,
+      "after": 7,
+      "sources": [
+        "tvmao:CHC-CHC2+148"
+      ]
+    },
+    {
       "id": "CHCFansMovieChannel.cn",
       "before": 2,
       "after": 7,
       "sources": [
         "tvmao:CHC-CHC3+69"
-      ]
-    },
-    {
-      "id": "CTiAsia.tw",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "epgpw:410372+24"
       ]
     },
     {
@@ -3789,32 +3757,32 @@
       ]
     },
     {
-      "id": "农林卫视.cn",
-      "before": 1,
-      "after": 7,
-      "sources": [
-        "tvmao:SHXITV/SHXITV9+201"
-      ]
-    },
-    {
       "id": "快乐垂钓.cn",
       "before": 2,
       "after": 4,
       "sources": [
         "tvmao:CCTVPAYFEE-KUAILECHUIDIAO+38"
       ]
+    },
+    {
+      "id": "农林卫视.cn",
+      "before": 1,
+      "after": 7,
+      "sources": [
+        "tvmao:SHXITV/SHXITV9+201"
+      ]
     }
   ],
   "descStats": {
-    "realCoverage": 58.3,
-    "realCount": 33388,
-    "totalCount": 57299,
+    "realCoverage": 59.5,
+    "realCount": 34106,
+    "totalCount": 57319,
     "echoCount": 728,
     "titles": 941,
-    "filled": 18720,
+    "filled": 18395,
     "z51": {
-      "channels": 165,
-      "filled": 16107,
+      "channels": 163,
+      "filled": 15782,
       "packs": [
         {
           "key": "e1",
@@ -4526,10 +4494,10 @@
           "id": "ViuTV.hk",
           "name": "ViuTV",
           "status": "weak",
-          "mine": 178,
+          "mine": 170,
           "key": "e2:187",
           "inter": 6,
-          "rate": 0.033707865168539325
+          "rate": 0.03529411764705882
         },
         {
           "id": "ViuTVsix.hk",
@@ -4580,10 +4548,10 @@
           "id": "PhoenixChineseChannel.hk",
           "name": "凤凰中文",
           "status": "ok",
-          "mine": 133,
+          "mine": 69,
           "key": "e1:141",
-          "inter": 47,
-          "rate": 0.3533834586466165
+          "inter": 18,
+          "rate": 0.2608695652173913
         },
         {
           "id": "PhoenixInfoNewsChannel.hk",
@@ -5156,13 +5124,13 @@
           "id": "nowNews.hk",
           "name": "NOW新闻",
           "status": "none",
-          "mine": 48
+          "mine": 50
         },
         {
           "id": "nowBusinessNewsChannel.hk",
           "name": "Now财经",
           "status": "none",
-          "mine": 88
+          "mine": 25
         },
         {
           "id": "PopC.hk",
@@ -6670,22 +6638,6 @@
           "inter": 19,
           "rate": 0.3392857142857143
         },
-        "PhoenixChineseChannel.hk": {
-          "filled": 114,
-          "before": 40,
-          "stage": "channel",
-          "source": "e1:141(凤凰中文)",
-          "inter": 47,
-          "rate": 0.3533834586466165
-        },
-        "PhoenixInfoNewsChannel.hk": {
-          "filled": 211,
-          "before": 38,
-          "stage": "channel",
-          "source": "e1:142(凤凰资讯)",
-          "inter": 23,
-          "rate": 0.71875
-        },
         "PhoenixHongKongChannel.hk": {
           "filled": 56,
           "before": 0,
@@ -7365,8 +7317,8 @@
           "source": "e1:20"
         }
       },
-      "coverageBefore": 25.6,
-      "coverageAfter": 53.7
+      "coverageBefore": 27.4,
+      "coverageAfter": 54.9
     },
     "tvmao": {
       "titles": 941,
@@ -7879,7 +7831,7 @@
           "id": "ViuTV.hk",
           "name": "ViuTV",
           "status": "none",
-          "mine": 178
+          "mine": 170
         },
         {
           "id": "ViuTVsix.hk",
@@ -7927,7 +7879,7 @@
           "id": "PhoenixChineseChannel.hk",
           "name": "鳳凰衛視中文台",
           "status": "none",
-          "mine": 133
+          "mine": 69
         },
         {
           "id": "PhoenixInfoNewsChannel.hk",
@@ -8401,13 +8353,13 @@
           "id": "nowNews.hk",
           "name": "NOW新闻",
           "status": "none",
-          "mine": 30
+          "mine": 32
         },
         {
           "id": "nowBusinessNewsChannel.hk",
           "name": "Now财经",
           "status": "none",
-          "mine": 66
+          "mine": 21
         },
         {
           "id": "PopC.hk",
@@ -9654,9 +9606,9 @@
       "matchConfidence": "exact",
       "matchedSourceName": "CCTV-1 综合",
       "alternatives": [
-        "webncode:nowtv_541(CCTV-1)",
         "nowplayer:541(CCTV-1)",
         "epgpw:410374(CCTV-1)",
+        "webncode:nowtv_541(CCTV-1)",
         "epgpw:572136(CCTV-1综合)",
         "epgpw:572141(CCTV-1（高清）)",
         "epgpw:577874(CCTV1)",
@@ -9759,7 +9711,7 @@
         "CCTV4A",
         "CCTV-4A"
       ],
-      "logo": "",
+      "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129145556253811_19",
       "count": 278,
       "days": 7,
       "perDay": {
@@ -9777,12 +9729,12 @@
       "uniqTitles": 22,
       "first": "20261028004000 +0800",
       "last": "20261104000000 +0800",
-      "usedSource": "webncode:nowtv_542(CCTV-4)",
+      "usedSource": "epgpw:410375(CCTV-4)",
       "matchConfidence": "exact",
       "matchedSourceName": "CCTV-4",
       "alternatives": [
-        "epgpw:410375(CCTV-4)",
         "nowplayer:542(CCTV-4)",
+        "webncode:nowtv_542(CCTV-4)",
         "epgpw:545935(CCTV-4 (亚洲))",
         "epgpw:545952(CCTV-4 (美洲))",
         "epgpw:545951(CCTV-4 (欧洲))",
@@ -10444,9 +10396,9 @@
       "matchConfidence": "exact",
       "matchedSourceName": "CCTV4欧洲",
       "alternatives": [
-        "webncode:nowtv_542(CCTV-4)",
         "epgpw:410375(CCTV-4)",
         "nowplayer:542(CCTV-4)",
+        "webncode:nowtv_542(CCTV-4)",
         "epgpw:545935(CCTV-4 (亚洲))",
         "epgpw:545952(CCTV-4 (美洲))",
         "epgpw:545951(CCTV-4 (欧洲))",
@@ -10493,9 +10445,9 @@
       "matchConfidence": "exact",
       "matchedSourceName": "CCTV4美洲",
       "alternatives": [
-        "webncode:nowtv_542(CCTV-4)",
         "epgpw:410375(CCTV-4)",
         "nowplayer:542(CCTV-4)",
+        "webncode:nowtv_542(CCTV-4)",
         "epgpw:545935(CCTV-4 (亚洲))",
         "epgpw:545952(CCTV-4 (美洲))",
         "epgpw:545951(CCTV-4 (欧洲))",
@@ -12651,10 +12603,10 @@
         "ViuTV99"
       ],
       "logo": "",
-      "count": 257,
+      "count": 244,
       "days": 7,
       "perDay": {
-        "20261028": 36,
+        "20261028": 23,
         "20261029": 36,
         "20261030": 36,
         "20261031": 34,
@@ -12662,18 +12614,18 @@
         "20261102": 38,
         "20261103": 36
       },
-      "withDesc": 163,
-      "descRate": 63,
+      "withDesc": 172,
+      "descRate": 70,
       "withCategory": 0,
-      "uniqTitles": 178,
-      "first": "20261028003000 +0800",
-      "last": "20261104000000 +0800",
-      "usedSource": "webncode:viutv_99(ViuTV)",
+      "uniqTitles": 170,
+      "first": "20261028113000 +0800",
+      "last": "20261104003000 +0800",
+      "usedSource": "nowplayer:099(ViuTV)",
       "matchConfidence": "exact",
       "matchedSourceName": "ViuTV",
       "alternatives": [
-        "nowplayer:099(ViuTV)",
         "epgpw:565569(ViuTV)",
+        "webncode:viutv_99(ViuTV)",
         "webncode:nowtv_99(ViuTV)"
       ],
       "status": "full"
@@ -12916,30 +12868,30 @@
         "凤凰卫视中文台",
         "凤凰中文"
       ],
-      "logo": "",
-      "count": 341,
+      "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129153829170771_55",
+      "count": 343,
       "days": 7,
       "perDay": {
         "20261028": 49,
         "20261029": 50,
         "20261030": 49,
         "20261031": 49,
-        "20261101": 47,
+        "20261101": 49,
         "20261102": 48,
         "20261103": 49
       },
-      "withDesc": 154,
-      "descRate": 45,
+      "withDesc": 283,
+      "descRate": 83,
       "withCategory": 0,
-      "uniqTitles": 133,
+      "uniqTitles": 69,
       "first": "20261028000000 +0800",
       "last": "20261104000000 +0800",
-      "usedSource": "webncode:nowtv_548(鳳凰衛視中文台)",
+      "usedSource": "epgpw:410378(鳳凰衛視中文台)",
       "matchConfidence": "exact",
       "matchedSourceName": "鳳凰衛視中文台",
       "alternatives": [
-        "epgpw:410378(鳳凰衛視中文台)",
         "nowplayer:548(鳳凰衛視中文台)",
+        "webncode:nowtv_548(鳳凰衛視中文台)",
         "epgpw:577957(凤凰中文)",
         "fengshows:中文台(鳳凰衛視中文台)",
         "tvsou:65e0f71a(凤凰卫视)",
@@ -12955,7 +12907,7 @@
         "凤凰卫视资讯台",
         "凤凰资讯"
       ],
-      "logo": "",
+      "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129074347363304_81",
       "count": 445,
       "days": 7,
       "perDay": {
@@ -12967,18 +12919,18 @@
         "20261102": 63,
         "20261103": 63
       },
-      "withDesc": 249,
-      "descRate": 56,
+      "withDesc": 279,
+      "descRate": 63,
       "withCategory": 0,
       "uniqTitles": 32,
       "first": "20261028000000 +0800",
       "last": "20261104000000 +0800",
-      "usedSource": "webncode:nowtv_366(鳳凰衛視資訊台)",
+      "usedSource": "epgpw:410355(鳳凰衛視資訊台)",
       "matchConfidence": "exact",
       "matchedSourceName": "鳳凰衛視資訊台",
       "alternatives": [
-        "epgpw:410355(鳳凰衛視資訊台)",
         "nowplayer:366(鳳凰衛視資訊台)",
+        "webncode:nowtv_366(鳳凰衛視資訊台)",
         "epgpw:577958(凤凰资讯)",
         "fengshows:資訊台(鳳凰衛視資訊台)"
       ],
@@ -15167,29 +15119,29 @@
         "Now新聞"
       ],
       "logo": "",
-      "count": 273,
-      "days": 5,
+      "count": 306,
+      "days": 6,
       "perDay": {
-        "20261028": 52,
+        "20261028": 33,
         "20261029": 52,
         "20261030": 52,
         "20261031": 59,
         "20261101": 58,
         "20261102": 0,
-        "20261103": 0
+        "20261103": 52
       },
-      "withDesc": 0,
-      "descRate": 0,
+      "withDesc": 304,
+      "descRate": 99,
       "withCategory": 0,
-      "uniqTitles": 48,
-      "first": "20261028000000 +0800",
-      "last": "20261102103000 +0800",
-      "usedSource": "webncode:nowtv_332(Now新聞台)",
+      "uniqTitles": 50,
+      "first": "20261028093000 +0800",
+      "last": "20261104000000 +0800",
+      "usedSource": "nowplayer:332(Now新聞台)",
       "matchConfidence": "exact",
       "matchedSourceName": "Now新聞台",
       "alternatives": [
         "epgpw:410344(Now新聞台)",
-        "nowplayer:332(Now新聞台)"
+        "webncode:nowtv_332(Now新聞台)"
       ],
       "status": "partial"
     },
@@ -15201,30 +15153,30 @@
         "Now財經台",
         "Now財經"
       ],
-      "logo": "",
-      "count": 252,
+      "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129070159584201_42",
+      "count": 251,
       "days": 5,
       "perDay": {
         "20261028": 51,
         "20261029": 40,
-        "20261030": 52,
+        "20261030": 51,
         "20261031": 51,
         "20261101": 58,
         "20261102": 0,
         "20261103": 0
       },
-      "withDesc": 0,
-      "descRate": 0,
+      "withDesc": 247,
+      "descRate": 98,
       "withCategory": 0,
-      "uniqTitles": 88,
+      "uniqTitles": 25,
       "first": "20261028000000 +0800",
-      "last": "20261102103000 +0800",
-      "usedSource": "webncode:nowtv_333(Now財經台)",
+      "last": "20261102000000 +0800",
+      "usedSource": "epgpw:410345(Now財經台)",
       "matchConfidence": "exact",
       "matchedSourceName": "Now財經台",
       "alternatives": [
-        "epgpw:410345(Now財經台)",
-        "nowplayer:333(Now財經台)"
+        "nowplayer:333(Now財經台)",
+        "webncode:nowtv_333(Now財經台)"
       ],
       "status": "partial"
     },
@@ -15288,8 +15240,8 @@
       "matchConfidence": "exact",
       "matchedSourceName": "Now直播台",
       "alternatives": [
-        "webncode:nowtv_331(Now直播台)",
-        "epgpw:410343(Now直播台)"
+        "epgpw:410343(Now直播台)",
+        "webncode:nowtv_331(Now直播台)"
       ],
       "status": "full"
     },
@@ -16271,7 +16223,7 @@
       "aliases": [
         "中天亞洲台"
       ],
-      "logo": "",
+      "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129141524674377_87",
       "count": 174,
       "days": 7,
       "perDay": {
@@ -16289,12 +16241,12 @@
       "uniqTitles": 30,
       "first": "20261028000000 +0800",
       "last": "20261104000000 +0800",
-      "usedSource": "webncode:nowtv_538(中天亞洲台)",
+      "usedSource": "epgpw:410372(中天亞洲台)",
       "matchConfidence": "exact",
       "matchedSourceName": "中天亞洲台",
       "alternatives": [
-        "epgpw:410372(中天亞洲台)",
         "nowplayer:538(中天亞洲台)",
+        "webncode:nowtv_538(中天亞洲台)",
         "litv:4gtv-4gtv109(中天亞洲台)"
       ],
       "status": "full"
@@ -17637,10 +17589,10 @@
         "CINEMAX"
       ],
       "logo": "",
-      "count": 90,
+      "count": 89,
       "days": 7,
       "perDay": {
-        "20261028": 9,
+        "20261028": 8,
         "20261029": 14,
         "20261030": 13,
         "20261031": 13,
@@ -17648,11 +17600,11 @@
         "20261102": 14,
         "20261103": 13
       },
-      "withDesc": 90,
+      "withDesc": 89,
       "descRate": 100,
       "withCategory": 0,
       "uniqTitles": 61,
-      "first": "20261028092500 +0800",
+      "first": "20261028110500 +0800",
       "last": "20261104010500 +0800",
       "usedSource": "nowplayer:113(CINEMAX)",
       "matchConfidence": "exact",
@@ -17887,11 +17839,11 @@
       "matchConfidence": "exact",
       "matchedSourceName": "HITS",
       "alternatives": [
-        "webncode:nowtv_513(HITS)",
         "epgpw:412204(HITS)",
         "nowplayer:513(HITS)",
         "epgpw:457369(HITS HD)",
-        "mod:620(HITS HD)"
+        "mod:620(HITS HD)",
+        "webncode:nowtv_513(HITS)"
       ],
       "status": "full"
     },
@@ -19044,9 +18996,9 @@
       "matchConfidence": "override",
       "matchedSourceName": "亞洲美食頻道",
       "alternatives": [
-        "webncode:nowtv_527(亞洲美食台)",
         "epgpw:410370(亞洲美食台)",
         "nowplayer:527(亞洲美食台)",
+        "webncode:nowtv_527(亞洲美食台)",
         "mod:276(亞洲美食頻道)"
       ],
       "status": "full"

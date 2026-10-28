@@ -53,7 +53,7 @@
       "CCTV4A",
       "CCTV-4A"
     ],
-    "logo": "",
+    "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129145556253811_19",
     "hasEpg": true,
     "programmeCount": 278
   },
@@ -972,7 +972,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 257
+    "programmeCount": 244
   },
   {
     "id": "ViuTVsix.hk",
@@ -1068,9 +1068,9 @@
       "凤凰卫视中文台",
       "凤凰中文"
     ],
-    "logo": "",
+    "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129153829170771_55",
     "hasEpg": true,
-    "programmeCount": 341
+    "programmeCount": 343
   },
   {
     "id": "PhoenixInfoNewsChannel.hk",
@@ -1080,7 +1080,7 @@
       "凤凰卫视资讯台",
       "凤凰资讯"
     ],
-    "logo": "",
+    "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129074347363304_81",
     "hasEpg": true,
     "programmeCount": 445
   },
@@ -1806,7 +1806,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 273
+    "programmeCount": 306
   },
   {
     "id": "nowBusinessNewsChannel.hk",
@@ -1816,9 +1816,9 @@
       "Now財經台",
       "Now財經"
     ],
-    "logo": "",
+    "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129070159584201_42",
     "hasEpg": true,
-    "programmeCount": 252
+    "programmeCount": 251
   },
   {
     "id": "PopC.hk",
@@ -2162,7 +2162,7 @@
     "aliases": [
       "中天亞洲台"
     ],
-    "logo": "",
+    "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129141524674377_87",
     "hasEpg": true,
     "programmeCount": 174
   },
@@ -2607,7 +2607,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 90
+    "programmeCount": 89
   },
   {
     "id": "DAZN1.uk",
