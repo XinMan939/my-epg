@@ -305,6 +305,40 @@ export function tsToHM(ts) {
 }
 
 /**
+ * ★ 数「这些行覆盖了几天」，按**每天覆盖满 minHours 小时**判，不按条数
+ *
+ * 为什么不能数条数（pitfalls §4 硬规则）：
+ *   nowplayer 的 Now新聞台 332 第 6 天只有 1 条「11-01 23:30 ~ 11-02 10:30」，
+ *   时长 11 小时、**只有 1 条**。按「有节目就算 1 天」会把这天算进去，
+ *   于是 catalog 报 6 天，实际第 6 天只有一条跨天节目，播放器上等于没有节目单。
+ *
+ *   MOD 侧同理：某台某天只有 2 条 30 分钟的垫片，也会被算成「1 天」。
+ *
+ * 和 index.mjs 的 countCoveredDays 是同一套口径，区别是那个吃 buildDateRange
+ * 的 [{ts0,ts1}]，这个吃「北京日 YYYYMMDD 列表」，供各源的 listChannels 用。
+ *
+ * @param {Array} rows        [{startTs, stopTs}]
+ * @param {string[]} ymds     要统计的北京日（YYYYMMDD）
+ * @param {number} minHours   每天覆盖满这么多小时才算 1 天
+ * @returns {number}
+ */
+export function countCoveredYmds(rows, ymds, minHours = 6) {
+  const hours = new Array(ymds.length).fill(0)
+  const ts0s = ymds.map((y) => Date.parse(`${y.slice(0, 4)}-${y.slice(4, 6)}-${y.slice(6, 8)}T00:00:00+08:00`))
+  for (const r of rows) {
+    const a = r.startTs
+    const b = r.stopTs
+    if (!a || !b || b <= a) continue
+    for (let i = 0; i < ymds.length; i++) {
+      const oa = Math.max(a, ts0s[i])
+      const ob = Math.min(b, ts0s[i] + 86400e3)
+      if (ob > oa) hours[i] += (ob - oa) / 3600e3
+    }
+  }
+  return hours.filter((h) => Math.min(h, 24) >= minHours).length
+}
+
+/**
  * 频道名归一化，用于匹配：去空格、全角转半角、去括号后缀、小写
  *
  * ⚠️ 三个必须保留的"语义字符"，删掉就会错台：

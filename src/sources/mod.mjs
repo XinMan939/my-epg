@@ -64,7 +64,8 @@
  *   它没有简介，拿它当主源会把有简介的 epgpw 换掉。但对「epgpw 只给 1~2 天的台湾本土台」，
  *   它能补到 7 天，这正是本项目最大的缺口。
  */
-import { fetchText, log, hasRealDesc, mapLimit } from '../utils.mjs'
+import { fetchText, log, hasRealDesc, mapLimit, countCoveredYmds } from '../utils.mjs'
+import { CONFIG } from '../config.mjs'
 
 const LIST_URL = 'https://mod.cht.com.tw/%E9%A0%BB%E9%81%93TV/%E5%85%A8%E9%83%A8.do'
 const EPG_BASE = 'https://modp.cht.com.tw/modinfo/epginfob.php'
@@ -283,11 +284,17 @@ function dayDiff(a, b) {
  * 频道清单 + 真实覆盖统计（对外标准接口）
  *
  * 按硬规则 11/14/17：真探 days、只算今天及以后、count 真数。
- * withDesc 恒 0（坑③），但**必须显式写 0 而不是省略** —— 省略会让 pickBest 拿到 undefined。
+ * withDesc 恒 0（坑③，已确认为 0 非未探测），但**必须显式写 0 而不是省略**
+ * —— 省略会让 pickBest 拿到 undefined。
+ *
+ * ★ 天数按「覆盖满 6 小时」判，不按「有节目」判（pitfalls §4）。
+ *   MOD 有大量「某天只有 2~3 条垫片」的情况，按条数会把半天空白算成 1 天。
  */
 export async function listChannels() {
   const chs = await fetchChannelList()
   const todayYmd = twYmd(0)
+  const allYmds = []
+  for (let i = 0; i < 7; i++) allYmds.push(twYmd(i))
 
   const out = []
   await mapLimit(chs, CONCURRENCY, async (ch) => {
@@ -298,14 +305,14 @@ export async function listChannels() {
       log.warn(`[mod] 探测 ${ch.name} 失败：${e.message}`)
       return
     }
-    const dayset = new Set()
+    const rowsAll = []
     let count = 0
     let withDesc = 0
     for (const d of days) {
       if (d.date < todayYmd) continue // 只算今天及以后（pitfalls §6.7c）
       const rows = buildRows(days, d.date)
       if (!rows.length) continue
-      dayset.add(d.date)
+      rowsAll.push(...rows)
       count += rows.length
       for (const r of rows) if (hasRealDesc(r.desc, r.title)) withDesc++
     }
@@ -315,7 +322,7 @@ export async function listChannels() {
       sourceId: ch.sourceId,
       name: ch.name,
       logo: '',
-      days: dayset.size,
+      days: countCoveredYmds(rowsAll, allYmds, CONFIG.dayFillMinHours),
       count,
       withDesc,
     })

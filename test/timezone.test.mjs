@@ -15,6 +15,7 @@
  * 跑法：node test/timezone.test.mjs
  */
 import { parseEpgHtml, buildRows } from '../src/sources/mod.mjs'
+import { countCoveredYmds } from '../src/utils.mjs'
 
 let pass = 0
 let fail = 0
@@ -146,6 +147,40 @@ console.log('\n[5] MOD buildRows：单条超 6 小时视为上游异常并丢弃
   const days = [{ date: '20261028', items: [{ hhmm: '01:30', title: 'A' }] }]
   const rows = buildRows(days, '20261028')
   check('★ 22.5 小时的「节目」被丢弃（宁缺勿错）', rows.length === 0, `实际 ${rows.length} 条`)
+}
+
+console.log('\n[6] countCoveredYmds：天数按「覆盖满 6 小时」判，不按条数')
+{
+  const ymds = ['20261028', '20261029', '20261030']
+  const at = (s) => Date.parse(s)
+
+  // 反例：nowplayer 332 的第 6 天只有 1 条 11 小时的跨天节目（实测 CI run 40623856220）
+  // 「有节目就算 1 天」会算成 3 天；按小时口径应该只有 2 天（前两天满覆盖）
+  const rows = [
+    { startTs: at('2026-10-28T00:00:00+08:00'), stopTs: at('2026-10-28T23:59:00+08:00') },
+    { startTs: at('2026-10-29T00:00:00+08:00'), stopTs: at('2026-10-29T23:59:00+08:00') },
+    // 10-30 只被这条覆盖 10.5 小时 —— 单条长节目，覆盖够但只有 1 条
+    { startTs: at('2026-10-30T01:00:00+08:00'), stopTs: at('2026-10-30T11:30:00+08:00') },
+  ]
+  check('★ 10-30 被单条覆盖 10.5h → 仍算 1 天（口径只看小时，不看条数）', countCoveredYmds(rows, ymds, 6) === 3)
+
+  // 真正的碎片：每天只有 2 条 30 分钟的垫片 → 只覆盖 1 小时，不满 6 小时
+  const frag = []
+  for (const d of ymds) {
+    frag.push({ startTs: at(`${d.slice(0, 4)}-${d.slice(4, 6)}-${d.slice(6, 8)}T02:00:00+08:00`), stopTs: at(`${d.slice(0, 4)}-${d.slice(4, 6)}-${d.slice(6, 8)}T02:30:00+08:00`) })
+    frag.push({ startTs: at(`${d.slice(0, 4)}-${d.slice(4, 6)}-${d.slice(6, 8)}T03:00:00+08:00`), stopTs: at(`${d.slice(0, 4)}-${d.slice(4, 6)}-${d.slice(6, 8)}T03:30:00+08:00`) })
+  }
+  check('★ 每天只有 1 小时垫片 → 0 天（不是 3 天）', countCoveredYmds(frag, ymds, 6) === 0, `实际 ${countCoveredYmds(frag, ymds, 6)}`)
+
+  // 空输入
+  check('空 rows → 0 天', countCoveredYmds([], ymds, 6) === 0)
+
+  // 重叠累加要封顶 24 小时（同一天两条完全重叠不该算 48 小时）
+  const overlap = [
+    { startTs: at('2026-10-28T00:00:00+08:00'), stopTs: at('2026-10-28T23:00:00+08:00') },
+    { startTs: at('2026-10-28T00:00:00+08:00'), stopTs: at('2026-10-28T23:00:00+08:00') },
+  ]
+  check('重叠封顶到 24h（不因累加而虚高）', countCoveredYmds(overlap, ['20261028'], 6) === 1)
 }
 
 console.log(`\n=== ${pass} 通过 / ${fail} 失败 ===\n`)

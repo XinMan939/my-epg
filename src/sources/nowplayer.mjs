@@ -91,7 +91,8 @@
  *    - 本源的优势是**能补到 7 天**（epgpw 只给 6 天）。
  *    → 走 `alternatives` 补天链，让 pickMissingDays 只补空缺时段，不动主源内容。
  */
-import { fetchText, log, hasRealDesc, mapLimit } from '../utils.mjs'
+import { fetchText, log, hasRealDesc, mapLimit, countCoveredYmds } from '../utils.mjs'
+import { CONFIG } from '../config.mjs'
 
 const BASE = 'https://nowplayer.now.com'
 const PAGE = `${BASE}/tvguide`
@@ -410,9 +411,21 @@ export async function listChannels() {
   }
 
   // 先算天数/条数（纯本地，不联网）
+  //
+  // ★ 天数必须按「覆盖满 6 小时」判，不能按「有节目」判（pitfalls §4 / §6.7）。
+  //   实测踩到（2026-10-28，CI run 40623856220 诊断）：
+  //     Now新聞台 332 的 day=6 只返回 1 条「11-01 23:30 ~ 11-02 10:30」，
+  //     一条 11 小时的跨天节目。按「有节目就算 1 天」→ 报 6 天，
+  //     但实际第 6 天只有这一条，播放器上等于没有节目单。
+  //   修正后按 6 小时口径 → 5 天，与 epgpw 的 5 天一致（补不上是上游真没有）。
   const stats = []
+  const allYmds = []
+  for (let d = 1; d <= MAX_DAY; d++) {
+    const ymd = hkYmd(d - 1)
+    if (ymd >= todayYmd) allYmds.push(ymd)
+  }
   for (const ch of chs) {
-    const dayset = new Set()
+    const rowsAll = []
     let count = 0
     for (let d = 1; d <= MAX_DAY; d++) {
       const arr = (perDay.get(d) || new Map()).get(ch.sourceId) || []
@@ -421,10 +434,10 @@ export async function listChannels() {
       if (!rows.length) continue
       const ymd = hkYmd(d - 1)
       if (ymd < todayYmd) continue
-      dayset.add(ymd)
+      rowsAll.push(...rows)
       count += rows.length
     }
-    stats.push({ ch, days: dayset.size, count })
+    stats.push({ ch, days: countCoveredYmds(rowsAll, allYmds, CONFIG.dayFillMinHours), count })
   }
 
   // 再抽样算 withDesc（只对「有节目」的台，抽样标题抓详情）
