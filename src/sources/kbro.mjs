@@ -19,6 +19,18 @@
  * ★ appid=TFM 与 KBRO 返回内容完全相同（差 1 字节），TFM 是台湾大宽频自己。
  * ★ 只给 3 天：今天 + 2 天。再往后（+3 天起）返回 0 字节，不是接口挂了。
  *
+ * ★ 同一个后端还挂了两个「频道表页面」用的接口（我们**没用**，查过对 EPG 无增益）：
+ *   GET epg.kbro.com.tw:2543/epg/epg_channelinfo.php     → 342 条
+ *       {UNIQUE_ID, PHONE, WEBSITE, DESCRIPTION, LOGO_LOCATION, CH_TYPE}
+ *       **没有频道名**，只有台介绍/官网/台标模板；比 epg_channel 多 96 个 id
+ *   GET epg.kbro.com.tw:2543/epg/epg_packagechannel.php  → 套餐 → CHLIST
+ *       so → {「數位有線電視頻道表」「AV全餐」「豔夜套餐」「HD148高畫質A餐」…} → 频道 id 列表
+ *       比 epg_channel 多 53 个 id，全是付费套餐专属（成人/高画质加购），
+ *       **今天节目包里一条都没有**，所以补不了节目单。别费劲。
+ *
+ * ★★★ epg_channel.php 的 DATA 是「按经营区 so 分组」的（20 个区），
+ *   页面只是拿 ?so= 挑一组显示。**必须合并全部区**，详见 mergeChannelData 的注释。
+ *
  * 定位（关键）：
  *   这个源**不是节目单主力**，而是**简介补充源**。
  *   它最大的价值是 programdescr 是真简介（电影剧情、节目内容），
@@ -85,12 +97,34 @@ async function loadJson(url, file, { force = false } = {}) {
   return JSON.parse(res.text)
 }
 
-/** 频道清单：合并所有 so 分组，同一 channelid 只留第一次出现的 */
-export async function loadChannels({ force = false } = {}) {
-  const file = path.join(cacheDir(), 'channels.json')
-  const j = await loadJson(`${BASE}/epg_channel.php?appid=${APPID_CH}`, file, { force })
+/**
+ * 把 epg_channel.php 的 DATA（按「经营区 so」分组的对象）合并成一张表
+ *
+ * ★★★ 必须合并**全部**经营区，绝不能只取某一个 so（第十六轮核实，别"优化"掉）
+ *
+ * 2026-10-28 用户发来 `cpt.kbro.com.tw/K04/catv-table_18_2717_3017.html?so=10`，
+ * 说「我感觉比上次发的要多几个频道」。核实结果：
+ *
+ *   · 两个页面（cpt.kbro 的 K04 / twmbroadband 的 T01）打的是**同一个后端**
+ *     `epg.kbro.com.tw:2543/epg/epg_channel.php?appid=WEB`，一次就返回全部 20 个经营区；
+ *     页面上的第几台只是拿 `?so=` 去 DATA 里挑一个分组显示（见 js/v2/channel.js 的
+ *     `data.DATA[currentSO]`）。所以「页面频道数」是**筛选后的视图**，不是接口的全集。
+ *
+ *   · 用户感觉没错，但差得很少：T01→so=61（永佳樂）显示 244 台，
+ *     K04→so=10（豐盟/台中）显示 246 台，多的 2 个是
+ *     `豐盟綜合台HD` / `豐盟台中台HD` / `大台中生活頻道HD` / `公用頻道HD` / `節目表HD`
+ *     这类**本地系统台**（同时少掉 3 个永佳樂的同类台）。
+ *
+ *   · 并集才是 296（4884 条 ÷ 20 区）。其中 56 个是「公用頻道 / 節目表 / 各區生活台」，
+ *     真正的频道约 240。**这些本地台没有任何节目单**，进我们的清单只会去撞同名。
+ *
+ * 所以这里的合并**不筛地区、不按 so 过滤**——对齐是靠「节目标题交集」做的，
+ * 多出来的空台不会误伤；漏掉一个区反而可能漏掉一个真频道。
+ */
+export function mergeChannelData(data) {
   const byId = new Map()
-  for (const arr of Object.values(j.DATA || {})) {
+  for (const arr of Object.values(data || {})) {
+    if (!Array.isArray(arr)) continue
     for (const c of arr) {
       if (byId.has(c.CHANNELID)) continue
       byId.set(c.CHANNELID, {
@@ -102,7 +136,14 @@ export async function loadChannels({ force = false } = {}) {
       })
     }
   }
-  return { byId, updatedAt: j.UPDATETIME || '' }
+  return byId
+}
+
+/** 频道清单：合并所有 so 分组，同一 channelid 只留第一次出现的 */
+export async function loadChannels({ force = false } = {}) {
+  const file = path.join(cacheDir(), 'channels.json')
+  const j = await loadJson(`${BASE}/epg_channel.php?appid=${APPID_CH}`, file, { force })
+  return { byId: mergeChannelData(j.DATA), updatedAt: j.UPDATETIME || '' }
 }
 
 /**

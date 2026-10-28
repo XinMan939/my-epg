@@ -12,7 +12,7 @@
     "build": "node src/index.mjs build",
     "catalog": "node src/index.mjs catalog",
     "check": "node src/index.mjs check",
-    "test": "node test/normalize.test.mjs && node test/day-fill.test.mjs && node test/tvmao.test.mjs && node test/match.test.mjs && node test/timezone.test.mjs && node test/days-source.test.mjs && node test/litv-desc.test.mjs && node test/override-desc.test.mjs && node test/cztv.test.mjs"
+    "test": "node test/normalize.test.mjs && node test/day-fill.test.mjs && node test/tvmao.test.mjs && node test/match.test.mjs && node test/timezone.test.mjs && node test/days-source.test.mjs && node test/litv-desc.test.mjs && node test/override-desc.test.mjs && node test/cztv.test.mjs && node test/kbro.test.mjs"
   },
   "license": "MIT"
 }

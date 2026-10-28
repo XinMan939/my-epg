@@ -205,6 +205,30 @@ ELTA 特别说明：它的 `體育 1~4 台` 对应我们的 `爱尔达体育Ⅰ~
 有简介的浙江民生休闲继续走 epgpw，空台浙江国际和 0 简介的浙江少儿自动换到 cztv。
 已加 `test/cztv.test.mjs`（20 项，假 fetch 打桩不联网），`npm test` 178 → **198 项 / 9 文件**。
 
+**第十六轮（两条线索：kbro 核实「多了几个台」、gdtv 荔枝网）**：
+
+① [kbro 频道表页面](https://cpt.kbro.com.tw/K04/catv-table_18_2717_3017.html?so=10)
+—— 用户说「我感觉比上次发的要多几个频道」。**感觉是对的，但不用改代码**：
+那个页面和上次的 twmbroadband 页面打的是**同一个** `epg.kbro.com.tw:2543/epg/epg_channel.php?appid=WEB`，
+一次返回全部 **20 个经营区**（4884 条 / **296 个唯一台**），页面只是拿 `?so=` 挑一组显示。
+上次 T01→so=61 永佳樂 显示 244 台，这次 K04→so=10 豐盟台中 显示 246 台，多的 2 个是
+`豐盟綜合台HD` / `豐盟台中台HD` / `大台中生活頻道HD` / `公用頻道HD` / `節目表HD` 这类**本地系统台**
+（同时少掉 3 个永佳樂的同类台）。我们早就是并集 —— **296 台，比任何单个页面都多**
+（其中 56 个是「公用頻道 / 節目表」，真正的频道约 240）。
+
+→ 把合并逻辑抽成 `mergeChannelData()`，加 `test/kbro.test.mjs`（31 项）锁死「**不许按单区取**」：
+真改成 `DATA[so]` 会一声不响少掉 50 多个台，报表上只微微掉一点简介，根本看不出来。
+顺手查清了同后端的 `epg_channelinfo.php`(342 条) 和 `epg_packagechannel.php`(293 条)、
+今天的节目包里只有 251 个 channelid —— **多出来的那些全都没有节目单**，补不了。详见 §7.1h。
+
+② [广东台荔枝网节目表](https://www.gdtv.cn/programTable) —— **接口挖到底了，但不接**。
+真接口是 `https://gdtv-api.gdtv.cn/api/tv/v2/tvMenu?tvChannelPk=&beginAt=&endAt=`
+（`beginAt/endAt` 是相对今天的天偏移，前端给 -3..3）和 `/api/tv/v2/tvChannel`，
+但**全站 401**：每次请求都得带 `itouchtv_webqs` 那个 WASM（wasm2js 版在 `vendor_w_fallback_00aa955c.js`）
+算出来的 `X-ITOUCHTV-*` 签名头。把页面自带的请求头构造器搬进 Node 能加载、但跑不通（wasm 内部 `abort`，
+报在读浏览器指纹的 `getTimezoneOffset`），换蜘蛛 UA 也没有 SSR（503）。
+能补的只有广东珠江 / 广东新闻从 2 天到 7 天，广东体育是 tvsou 已有的 7 天 —— **3 个台、1 个没增益，不值**。详见 §7.1i。
+
 ### 节目简介：真实覆盖 61%（35100 / 57878）
 
 > ⚠️ **口径说明**：这里统计的是「**真实简介**」，要同时满足三条：
@@ -334,7 +358,7 @@ epg.pw 台湾包有一批节目 `<desc>` 就是 `<title>` 本身，长度过 12 
 **两道自动化防线（都已接进 CI）：**
 
 ```bash
-npm test                              # 198 项断言（9 个文件），build 之前跑
+npm test                              # 229 项断言（10 个文件），build 之前跑
 node test/audit-output.mjs output/epg.xml.gz   # 产物体检，重叠/乱序/零长度/某天半截 → exit 1
 ```
 
@@ -429,9 +453,9 @@ node test/audit-output.mjs output/epg.xml.gz   # 产物体检，重叠/乱序/�
 ##### 新增的第三道防线（`test/day-fill.test.mjs`，47 项断言）
 
 ```bash
-npm test    # 九套：normalize 23 + day-fill 52 + tvmao 33 + match 10
+npm test    # 十套：normalize 23 + day-fill 52 + tvmao 33 + match 10
             #       + timezone 23 + days-source 6 + litv-desc 25 + override-desc 6
-            #       + cztv 20 = 198 项
+            #       + cztv 20 + kbro 31 = 229 项
 ```
 
 关键断言：
@@ -514,7 +538,9 @@ npm test    # 九套：normalize 23 + day-fill 52 + tvmao 33 + match 10
 | 老张的 EPG `e`（旧包） | ❌ 不接 | 100 频道 / 7374 节目 / **0 条 desc** |
 | 电视猫 tvmao | 补充 | 详情页有简介，但要逐条抓；无省级地面频道 |
 | 搜视网 tvsou | 兜底 | 节目表有，无简介 |
-| **台湾大宽频 kbro** | ★ 港台简介主力 | 296 频道 / 251 有节目 / 213 带真简介，大量 100%；**只给 3 天**，所以只当简介源 |
+| **台湾大宽频 kbro** | ★ 港台简介主力 | 296 频道 / 251 有节目 / 213 带真简介，大量 100%；**只给 3 天**，所以只当简介源。★ 296 是 **20 个经营区的并集**，频道表页面按 `?so=` 显示单区（244~246 台），别照页面数去改抓取逻辑（§7.1h） |
+| 广东台官网 gdtv（荔枝网） | ⏸ 接口已挖到底，不接 | `gdtv-api.gdtv.cn/api/tv/v2/tvMenu?tvChannelPk=&beginAt=&endAt=`（真接口，天偏移）+`/api/tv/v2/tvChannel`，但全站 **401**，靠 `itouchtv_webqs` WASM 算 `X-ITOUCHTV-*` 签名头；蜘蛛 UA 也 503。能补的只有广东珠江/广东新闻 2 天→7 天（广东体育 tvsou 已 7 天），性价比太低（§7.1i） |
+| kbro 频道表页面（cpt.kbro.com.tw） | ✅ 不是缺口 | 与 twmbroadband 页面**同一个后端**，`epg_channel.php` 一次返回 20 个经营区；我们已取并集 296 台，比任何单页（244~246）都多（§7.1h） |
 | mytvsuper（香港官方） | ⏸ 暂不接 | 128 频道 / 满 7 天 / 带真简介，但对我方增益极小（能对上的 16 个里 13 个已 100%）；国际台全是「全日24小時為你送上精彩節目」占位 |
 | CNTV 官方接口 | ❌ 不接 | 央视覆盖好（cctv8k 258 条），但**无 desc**；`column_url` 指向的栏目页实测 7 个里只有 1 个有「栏目介绍」正文，命中率太低 |
 | 百度 EPG 接口 | ❌ 不接 | 多天数据（CCTV1 232 条）但**无 desc**，GBK 编码 |

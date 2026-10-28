@@ -1026,6 +1026,176 @@ GET https://p.cztv.com/api/paas/program/{station_code}/{yyyymmdd}
 即「有简介的台自动不被抢，空台和 0 简介的低条数台自动被补」。
 ★ 这也再次印证 §6.7h：**要保护高简介源，靠排序/职责分离，不靠 override 硬顶。**
 
+### 7.1h ★★ 「页面上的频道数」≠「接口里的频道数」（kbro 经营区，2026-10-28 第十六轮）
+
+用户发来 `https://cpt.kbro.com.tw/K04/catv-table_18_2717_3017.html?so=10&plan=數位有線電視頻道表`
+并说：「台湾的这个，我感觉比上次发的要多几个频道，你看看」。
+
+**用户的感觉是对的，但结论是「不用动代码」。** 核实过程：
+
+```bash
+# 那个页面是 JS 空壳（81KB，0 个 <table>），但 <base href="/"> 说明了脚本在哪
+curl https://cpt.kbro.com.tw/K04/catv-table_18_2717_3017.html | grep -o 'src="[^"]*"'
+#   → js/v2/channel.js   （⚠️ 注意 <base href="/"，真实路径是 站根/js/v2/channel.js，
+#                          拼成 /K04/js/v2/channel.js 会 404 —— 这个 404 骗过我一次）
+curl https://cpt.kbro.com.tw/js/v2/channel.js | grep -oE 'https://[^"]+' | sort -u
+#   → https://epg.kbro.com.tw:2543/epg/epg_channel.php
+#     https://epg.kbro.com.tw:2543/epg/epg_channelinfo.php
+#     https://epg.kbro.com.tw:2543/epg/epg_packagechannel.php
+#     https://epg.kbro.com.tw:2543/epg/epg_program.php
+```
+
+**关键：两个页面打的是同一个后端、同一个接口。**
+
+`epg_channel.php?appid=WEB` 一次返回 **全部 20 个经营区（so）**，共 4884 条 / **296 个唯一 channelid**。
+页面只是拿 `?so=` 去 `data.DATA[currentSO]` 里挑**一组**显示（`channel.js` 里的 `currentSo`）。
+所以「页面上有多少台」是**筛选后的视图**，跟接口的全集没关系。
+
+`channel.js` 里的 urlkey → so 映射（想复现用户看到的东西时用得上）：
+
+```
+K01→3 新台北  K02→2 陽明山  K03→3 新台北  K04→4 金頻道  K05→5 大安文山
+K06→6 全聯    K07→7 新唐城  K08→9 振道    K09→8 北桃園  K10→10 豐盟
+K11→11 新頻道 K12→12 南天   K13→13 觀昇   K14→14 屏南
+T01/T02→61 永佳樂  T03→63 觀天下  T04→62 紅樹林  T05→64 聯禾  T06→65 鳳信
+CG→15
+```
+
+**「多几个」到底多几个：**
+
+| 页面 | urlkey | 默认/指定 so | 频道数 |
+|---|---|---|---|
+| 上次 `twmbroadband.com/T01/...` | T01 | 61 永佳樂 | **244** |
+| 这次 `cpt.kbro.com.tw/K04/...?so=10` | K04 | 10 豐盟（台中） | **246** |
+
+多 2 个，但**换来换去都是本地系统台**：
+so=10 独有 `豐盟綜合台HD` / `豐盟台中台HD` / `大台中生活頻道HD` / `公用頻道HD` / `節目表HD`，
+so=61 独有 `永佳樂生活頻道HD` / `公用頻道HD` / `節目表HD`。**没有一个是能上 EPG 的台。**
+
+★ 并集 296 里有 **56 个**是「公用頻道 / 節目表HD / 各區生活台」，真正的频道约 **240**。
+
+**结论 / 已做的事**：源早就是并集，**不需要改抓取逻辑**。但因为「看起来可以按区取」这个诱惑太大，
+把合并抽成了 `mergeChannelData(data)` 并加 `test/kbro.test.mjs` 锁死：
+输入多个区、各区放一条独有的台，结果必须是并集；源码里也不许出现 `DATA[defaultSO]` 这种写法。
+（真改成单区，会一声不响少掉 50 多个台，报表上只会微微掉一点简介，看不出来。）
+
+**顺手查清的两个接口（都没用，别费劲）**
+
+```
+GET epg_channelinfo.php      → 342 条 {UNIQUE_ID, PHONE, WEBSITE, DESCRIPTION, LOGO_LOCATION, CH_TYPE}
+                               ★ 没有频道名；比 epg_channel 多 96 个 id
+GET epg_packagechannel.php   → so → 套餐名 → CHLIST[]  （「數位有線電視頻道表」「AV全餐」
+                               「豔夜套餐」「松視套餐」「HD148高畫質A餐」…）
+                               ★ 比 epg_channel 多 53 个 id，全是付费套餐专属（成人/高画质加购）
+```
+
+判据不是「有没有节目单」的猜测，是实测：**今天（20261028）的 `epg_program.php` 里只有 251 个
+channelid 有节目，且这 251 个全部落在 epg_channel 的 296 里**（唯一例外是 `557`，27 条，查无此台）。
+342 里多出来的 96 个、套餐里多出来的 53 个，**一条节目都没有**。
+
+### 7.1i ★★★ 接口找到了，但被 **WASM 请求签名**挡住（gdtv 荔枝网，2026-10-28 第十六轮）
+
+用户给了 `https://www.gdtv.cn/programTable`（广东台官网节目表），问能不能接。**结论：暂不接，但接口已挖到底。**
+
+**第一步：这不是「纯 SPA 抓不到」，是 webpack 单包 + 请求签名。**
+
+```bash
+curl --compressed https://www.gdtv.cn/programTable        # ★ 必须 --compressed，否则拿到 gzip 二进制
+# → 1130B 壳，<div id="root"></div>，5 个 js：
+#   manifest_00aa955c.js / chunk-libs_1787209110108_00aa955c.js /
+#   commons_00aa955c.js / client_00aa955c.js(5MB) / vendor_00aa955c.js
+```
+
+★ 和 §7.1g 的 cztv 不一样：cztv 是 `import()` 真分包，gdtv 是**所有路由组件都在这 5MB 里**
+（路由表写的是 `loader:()=>Promise.resolve().then(n.t.bind(null,414,7))`，是同步 resolve，
+`webpack:function(){return[414]}` 里的是**模块 id 不是 chunk id**）。
+我一开始按 chunk id 去猜 `414_00aa955c.js`，全 404，**白猜了一轮**。
+
+**★★★ 别用正则解析 minified bundle，直接把 webpack 跑起来**（本轮最值得记的方法）：
+
+```js
+// 1) 用 vm 跑这几个 js，只把 window.webpackJsonp 换成一个「只收集不执行」的数组
+const p = { push: (...args) => captured.push(args) }
+vm.runInContext(code, vm.createContext({ window: { webpackJsonp: p }, ... }))
+// → 一次就拿到全部 1633 个模块（commons 49 + client 1472 + vendor 40 + chunk-libs 72）
+
+// 2) 自己实现一个迷你 __webpack_require__，把 4 个文件的模块表合起来
+// 3) 然后 req(88).apiAction.toString() / req(204).default —— 想看哪个模块看哪个
+```
+
+比正则强太多：模块表是**稀疏数组** `[,,function(e,t,n){…},…]`，下标就是模块 id，
+文本解析会被字符串/正则里的逗号搞崩（我第一次扫只切出 4 个元素）。
+
+**第二步：API 常量模块（204）明文写着主机**
+
+```js
+e.isProd = true
+BASENAME = { 'www.gdtv.cn': 'https://gdtv-api.gdtv.cn', … }   // 生产
+api = BASENAME[hostname] + '/api'
+tcdn = 'https://tcdn-api.itouchtv.cn'
+```
+
+**第三步：接口（`src/sources/../` 不用找了，就是这两个）**
+
+```
+GET https://gdtv-api.gdtv.cn/api/tv/v2/tvChannel
+    ?category=0&statusList=1,2&filterNoHaveDataChannel=1     → 电视频道表（category=1 是广播）
+GET https://gdtv-api.gdtv.cn/api/tv/v2/tvMenu
+    ?tvChannelPk=<pk>&beginAt=<天序号>&endAt=<天序号>          → ★ 节目单，beginAt/endAt 是
+                                                               相对今天的天偏移（前端给 -3..3）
+GET https://gdtv-api.gdtv.cn/api/tv/v2/tvChannel/<pk>          → 单台详情
+```
+
+**第四步：全站 401，签名墙**
+
+```
+$ curl -H 'Referer: https://www.gdtv.cn/programTable' \
+    'https://gdtv-api.gdtv.cn/api/tv/v2/tvChannel?category=0'
+{"errorCode":401,"errorMessage":"Unauthorized access!"}     ← 连 /api/v1/seoConfig、/api/hotnews 都一样
+```
+
+签名不在业务代码里，在 `vendor_w(_fallback)_00aa955c.js`：
+
+- 模块 **725** 是请求头构造器，`callApi` 每次请求都先 `await buildHeaders(method, url, body)`；
+- 它 `n.e(6).then(n.t.bind(null,264,7))` 去加载 **chunk 6 = `vendor_w_fallback_00aa955c.js`**
+  （浏览器有 WebAssembly 时先试 chunk 5，但**实际用的是 chunk 6**）；
+- chunk 6 里是 `itouchtv_webqs_bg` 的 **wasm2js 翻译版**（Rust + wasm-bindgen，368KB），
+  返回一组 `X-ITOUCHTV-*` 头（头名只存在于 wasm 数据段里，JS 里 grep 不到）。
+
+**在 Node 里跑它：能加载，跑不通。** 我把 725 原样调起来（补齐 `module.require` / `TextDecoder` /
+`localStorage` / `crypto`，`n.t` 按 webpack 语义实现），结果是：
+
+```
+buildHeaders('GET', url) → Error: abort          ← wasm 内部断言失败
+直接调导出 a(...)        → 5 个参数时才进到逻辑里，死在
+                            Cannot read properties of undefined (reading 'getTimezoneOffset')
+```
+
+（`getTimezoneOffset` 说明它在读浏览器环境指纹，我们的假环境缺东西。**不是参数个数问题**：
+`a` 在 1~4 个参数时是 JS 包装层就报 `undefined.length`，5 个才进 wasm。）
+
+**另外两条死路**（省得下次再试）：
+
+- **蜘蛛 UA 拿 SSR**：`Baiduspider` → **503**；`www.gdtv.cn` 和 `m.gdtv.cn` 都是纯壳，没有预渲染。
+- **换主机**：`gdtv-api.itouchtv.cn:7443` 端口不可达（→ §7.1c 第②类）；
+  `m.gdtv.cn` 是同一个 `gdtv-api.gdtv.cn/api`，没差别；
+  `tcdn-api.itouchtv.cn/getParam` 免鉴权，但只返回 CDN 节点 token，跟 EPG 无关。
+
+**值不值得为它啃 wasm？——不值。** 能补的只有：
+
+| 目标 | 现状 | gdtv 能给 |
+|---|---|---|
+| 广东珠江 | z51 **2 天** / 22 条 | 7 天 |
+| 广东新闻 | z51 **2 天** / 41 条 | 7 天 |
+| 广东体育 | tvsou **7 天** / 152 条 | 7 天（不比现在好） |
+
+3 个台、其中 1 个没增益。**签名是客户端算的（理论上可复现），但要在 Node 里伪造完整浏览器指纹，
+脆得一碰就碎——不如把这时间花在 §7.3 的 tvsou/tvmao catalog 补探上。**
+
+★ 方法论沉淀：**「接口未破解」和「接口被签名挡住」要分开记**。
+前者是我没找到（cztv，§7.1g），后者是找到了、实测过、明确权衡后不接入（gdtv、TBC §7.1d）。
+写文档时必须写清是哪一种，否则下一次会为了一个不存在的「没找到」再挖一遍。
+
 ### 7.2 行尾
 
 `channels.json` / `index.mjs` / `README.md` 是 CRLF，其余 LF。
@@ -1035,8 +1205,9 @@ Python `io.open(p,'w')` 会转 CRLF，必须 `newline='\n'`。
 ### 7.3 两道防线
 
 ```bash
-npm test    # 198 项 / 9 文件（normalize 23 + day-fill 52 + tvmao 33 + match 10
-            #   + timezone 23 + days-source 6 + litv-desc 25 + override-desc 6 + cztv 20）
+npm test    # 229 项 / 10 文件（normalize 23 + day-fill 52 + tvmao 33 + match 10
+            #   + timezone 23 + days-source 6 + litv-desc 25 + override-desc 6
+            #   + cztv 20 + kbro 31）
 node test/audit-output.mjs output/epg.xml.gz   # 重叠/乱序/零长度/某天半截 → exit 1
 ```
 
@@ -1077,5 +1248,13 @@ node test/audit-output.mjs output/epg.xml.gz   # 重叠/乱序/零长度/某天�
 - 三沙卫视 tvmao w3~w6 全空（3 天是上限）
 
 **勿当缺口**（已有简介）：公視、港台35/32、CCTV-5+、華視新聞。
+
+**试过但放弃（★ 不是「没找到」，是「找到了但代价不值」）**
+
+- **广东台官网 gdtv / 荔枝网**：接口是 `https://gdtv-api.gdtv.cn/api/tv/v2/tvMenu?tvChannelPk=&beginAt=&endAt=`，
+  但全站 401，靠 `itouchtv_webqs` 的 WASM 算 `X-ITOUCHTV-*` 签名头。
+  能补的只有广东珠江/广东新闻从 2 天到 7 天（广东体育已有 tvsou 7 天），**性价比太低**（§7.1i）
+- **kbro 的频道表页面**：不是缺口。两个页面（K04/T01）打的是同一个 `epg_channel.php`，
+  我们早就是 20 个经营区的并集（296 个）——比任何单个页面都多（§7.1h）
 
 **不可用别重试的数据源**：CNTV、百度 EPG、timetv、tv-8、erw.cc、tbit.top。
