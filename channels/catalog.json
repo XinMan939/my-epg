@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-28T03:15:03.272Z",
+  "generatedAt": "2026-10-28T03:29:08.387Z",
   "total": 2863,
   "items": [
     {
@@ -19485,9 +19485,9 @@
       "sourceId": "tvb_jade",
       "name": "翡翠台",
       "logo": "",
-      "days": 10,
-      "count": 450,
-      "withDesc": 290
+      "days": 9,
+      "count": 405,
+      "withDesc": 261
     },
     {
       "source": "webncode",
@@ -19495,9 +19495,9 @@
       "sourceId": "tvb_j2",
       "name": "TVB Plus",
       "logo": "",
-      "days": 10,
-      "count": 320,
-      "withDesc": 240
+      "days": 9,
+      "count": 288,
+      "withDesc": 216
     },
     {
       "source": "webncode",
@@ -19505,9 +19505,9 @@
       "sourceId": "tvb_inews",
       "name": "無綫新聞台",
       "logo": "",
-      "days": 10,
-      "count": 580,
-      "withDesc": 50
+      "days": 9,
+      "count": 522,
+      "withDesc": 45
     },
     {
       "source": "webncode",
@@ -19515,9 +19515,9 @@
       "sourceId": "tvb_pearl",
       "name": "明珠台",
       "logo": "",
-      "days": 10,
-      "count": 350,
-      "withDesc": 60
+      "days": 9,
+      "count": 315,
+      "withDesc": 54
     },
     {
       "source": "webncode",
@@ -19525,8 +19525,8 @@
       "sourceId": "tvb_hdjade",
       "name": "鳳凰衛視香港台",
       "logo": "",
-      "days": 6,
-      "count": 300,
+      "days": 5,
+      "count": 250,
       "withDesc": 0
     },
     {
@@ -19535,9 +19535,9 @@
       "sourceId": "viutv_96",
       "name": "ViuTVsix",
       "logo": "",
-      "days": 8,
-      "count": 256,
-      "withDesc": 224
+      "days": 7,
+      "count": 224,
+      "withDesc": 196
     },
     {
       "source": "webncode",
@@ -19545,9 +19545,9 @@
       "sourceId": "viutv_99",
       "name": "ViuTV",
       "logo": "",
-      "days": 8,
-      "count": 288,
-      "withDesc": 192
+      "days": 7,
+      "count": 252,
+      "withDesc": 168
     },
     {
       "source": "webncode",
@@ -19555,8 +19555,8 @@
       "sourceId": "nowtv_96",
       "name": "ViuTVsix",
       "logo": "",
-      "days": 7,
-      "count": 224,
+      "days": 6,
+      "count": 192,
       "withDesc": 0
     },
     {
@@ -19565,8 +19565,8 @@
       "sourceId": "nowtv_99",
       "name": "ViuTV",
       "logo": "",
-      "days": 7,
-      "count": 252,
+      "days": 6,
+      "count": 216,
       "withDesc": 0
     },
     {
@@ -19575,8 +19575,8 @@
       "sourceId": "nowtv_102",
       "name": "Viu 頻道",
       "logo": "",
-      "days": 8,
-      "count": 192,
+      "days": 7,
+      "count": 168,
       "withDesc": 0
     },
     {
@@ -19585,8 +19585,8 @@
       "sourceId": "nowtv_105",
       "name": "Now華劇台",
       "logo": "",
-      "days": 7,
-      "count": 168,
+      "days": 6,
+      "count": 144,
       "withDesc": 0
     },
     {
@@ -19595,8 +19595,8 @@
       "sourceId": "nowtv_106",
       "name": "Now 影視點播站",
       "logo": "",
-      "days": 8,
-      "count": 96,
+      "days": 7,
+      "count": 84,
       "withDesc": 0
     },
     {
@@ -19605,8 +19605,8 @@
       "sourceId": "nowtv_108",
       "name": "NowJelli",
       "logo": "",
-      "days": 8,
-      "count": 160,
+      "days": 7,
+      "count": 140,
       "withDesc": 0
     },
     {
@@ -19615,8 +19615,8 @@
       "sourceId": "nowtv_111",
       "name": "HBO Hits",
       "logo": "",
-      "days": 7,
-      "count": 98,
+      "days": 6,
+      "count": 84,
       "withDesc": 0
     },
     {
@@ -19625,8 +19625,8 @@
       "sourceId": "nowtv_112",
       "name": "HBO Family",
       "logo": "",
-      "days": 7,
-      "count": 350,
+      "days": 6,
+      "count": 300,
       "withDesc": 0
     },
     {
@@ -19635,8 +19635,8 @@
       "sourceId": "nowtv_113",
       "name": "CINEMAX",
       "logo": "",
-      "days": 7,
-      "count": 98,
+      "days": 6,
+      "count": 84,
       "withDesc": 0
     },
     {
@@ -19645,8 +19645,8 @@
       "sourceId": "nowtv_114",
       "name": "HBO Signature",
       "logo": "",
-      "days": 8,
-      "count": 144,
+      "days": 7,
+      "count": 126,
       "withDesc": 0
     },
     {
@@ -19655,8 +19655,8 @@
       "sourceId": "nowtv_115",
       "name": "HBO",
       "logo": "",
-      "days": 7,
-      "count": 98,
+      "days": 6,
+      "count": 84,
       "withDesc": 0
     },
     {
@@ -19665,8 +19665,8 @@
       "sourceId": "nowtv_116",
       "name": "MOVIE MOVIE",
       "logo": "",
-      "days": 7,
-      "count": 98,
+      "days": 6,
+      "count": 84,
       "withDesc": 0
     },
     {
@@ -19675,8 +19675,8 @@
       "sourceId": "nowtv_119",
       "name": "HITS MOVIES",
       "logo": "",
-      "days": 8,
-      "count": 88,
+      "days": 7,
+      "count": 77,
       "withDesc": 0
     },
     {
@@ -19685,8 +19685,8 @@
       "sourceId": "nowtv_133",
       "name": "Now 爆谷台",
       "logo": "",
-      "days": 8,
-      "count": 128,
+      "days": 7,
+      "count": 112,
       "withDesc": 0
     },
     {
@@ -19695,8 +19695,8 @@
       "sourceId": "nowtv_138",
       "name": "Now爆谷星影台",
       "logo": "",
-      "days": 7,
-      "count": 112,
+      "days": 6,
+      "count": 96,
       "withDesc": 0
     },
     {
@@ -19705,8 +19705,8 @@
       "sourceId": "nowtv_150",
       "name": "Animax",
       "logo": "",
-      "days": 8,
-      "count": 384,
+      "days": 7,
+      "count": 336,
       "withDesc": 0
     },
     {
@@ -19715,8 +19715,8 @@
       "sourceId": "nowtv_155",
       "name": "tvN",
       "logo": "",
-      "days": 8,
-      "count": 144,
+      "days": 7,
+      "count": 126,
       "withDesc": 0
     },
     {
@@ -19725,8 +19725,8 @@
       "sourceId": "nowtv_156",
       "name": "KBS World",
       "logo": "",
-      "days": 6,
-      "count": 198,
+      "days": 5,
+      "count": 165,
       "withDesc": 0
     },
     {
@@ -19735,8 +19735,8 @@
       "sourceId": "nowtv_168",
       "name": "MOOV 演唱會/MV台",
       "logo": "",
-      "days": 8,
-      "count": 96,
+      "days": 7,
+      "count": 84,
       "withDesc": 0
     },
     {
@@ -19745,8 +19745,8 @@
       "sourceId": "nowtv_200",
       "name": "熊貓 TV",
       "logo": "",
-      "days": 8,
-      "count": 32,
+      "days": 7,
+      "count": 28,
       "withDesc": 0
     },
     {
@@ -19755,8 +19755,8 @@
       "sourceId": "nowtv_208",
       "name": "Discovery Asia",
       "logo": "",
-      "days": 8,
-      "count": 280,
+      "days": 7,
+      "count": 245,
       "withDesc": 0
     },
     {
@@ -19765,8 +19765,8 @@
       "sourceId": "nowtv_209",
       "name": "Discovery Channel",
       "logo": "",
-      "days": 7,
-      "count": 189,
+      "days": 6,
+      "count": 162,
       "withDesc": 0
     },
     {
@@ -19775,8 +19775,8 @@
       "sourceId": "nowtv_210",
       "name": "動物星球頻道",
       "logo": "",
-      "days": 7,
-      "count": 210,
+      "days": 6,
+      "count": 180,
       "withDesc": 0
     },
     {
@@ -19785,8 +19785,8 @@
       "sourceId": "nowtv_211",
       "name": "Discovery 科學頻道",
       "logo": "",
-      "days": 8,
-      "count": 312,
+      "days": 7,
+      "count": 273,
       "withDesc": 0
     },
     {
@@ -19795,8 +19795,8 @@
       "sourceId": "nowtv_212",
       "name": "DMAX",
       "logo": "",
-      "days": 7,
-      "count": 238,
+      "days": 6,
+      "count": 204,
       "withDesc": 0
     },
     {
@@ -19805,8 +19805,8 @@
       "sourceId": "nowtv_213",
       "name": "TLC旅遊生活頻道",
       "logo": "",
-      "days": 8,
-      "count": 320,
+      "days": 7,
+      "count": 280,
       "withDesc": 0
     },
     {
@@ -19815,8 +19815,8 @@
       "sourceId": "nowtv_217",
       "name": "Love Nature",
       "logo": "",
-      "days": 7,
-      "count": 189,
+      "days": 6,
+      "count": 162,
       "withDesc": 0
     },
     {
@@ -19825,8 +19825,8 @@
       "sourceId": "nowtv_218",
       "name": "Love Nature 4K",
       "logo": "",
-      "days": 7,
-      "count": 189,
+      "days": 6,
+      "count": 162,
       "withDesc": 0
     },
     {
@@ -19835,8 +19835,8 @@
       "sourceId": "nowtv_220",
       "name": "BBC Earth",
       "logo": "",
-      "days": 7,
-      "count": 182,
+      "days": 6,
+      "count": 156,
       "withDesc": 0
     },
     {
@@ -19845,8 +19845,8 @@
       "sourceId": "nowtv_221",
       "name": "戶外頻道",
       "logo": "",
-      "days": 8,
-      "count": 312,
+      "days": 7,
+      "count": 273,
       "withDesc": 0
     },
     {
@@ -19855,8 +19855,8 @@
       "sourceId": "nowtv_222",
       "name": "罪案 + 偵緝",
       "logo": "",
-      "days": 8,
-      "count": 224,
+      "days": 7,
+      "count": 196,
       "withDesc": 0
     },
     {
@@ -19865,8 +19865,8 @@
       "sourceId": "nowtv_223",
       "name": "HISTORY",
       "logo": "",
-      "days": 7,
-      "count": 182,
+      "days": 6,
+      "count": 156,
       "withDesc": 0
     },
     {
@@ -19875,8 +19875,8 @@
       "sourceId": "nowtv_316",
       "name": "CNN 國際新聞網絡",
       "logo": "",
-      "days": 8,
-      "count": 224,
+      "days": 7,
+      "count": 196,
       "withDesc": 0
     },
     {
@@ -19885,8 +19885,8 @@
       "sourceId": "nowtv_319",
       "name": "CNBC",
       "logo": "",
-      "days": 8,
-      "count": 344,
+      "days": 7,
+      "count": 301,
       "withDesc": 0
     },
     {
@@ -19895,8 +19895,8 @@
       "sourceId": "nowtv_320",
       "name": "BBC News",
       "logo": "",
-      "days": 8,
-      "count": 400,
+      "days": 7,
+      "count": 350,
       "withDesc": 0
     },
     {
@@ -19905,8 +19905,8 @@
       "sourceId": "nowtv_321",
       "name": "Bloomberg Television",
       "logo": "",
-      "days": 8,
-      "count": 128,
+      "days": 7,
+      "count": 112,
       "withDesc": 0
     },
     {
@@ -19915,8 +19915,8 @@
       "sourceId": "nowtv_322",
       "name": "亞洲新聞台",
       "logo": "",
-      "days": 8,
-      "count": 184,
+      "days": 7,
+      "count": 161,
       "withDesc": 0
     },
     {
@@ -19925,8 +19925,8 @@
       "sourceId": "nowtv_323",
       "name": "Sky News",
       "logo": "",
-      "days": 8,
-      "count": 312,
+      "days": 7,
+      "count": 273,
       "withDesc": 0
     },
     {
@@ -19935,8 +19935,8 @@
       "sourceId": "nowtv_324",
       "name": "DW (English)",
       "logo": "",
-      "days": 8,
-      "count": 504,
+      "days": 7,
+      "count": 441,
       "withDesc": 0
     },
     {
@@ -19945,8 +19945,8 @@
       "sourceId": "nowtv_325",
       "name": "半島電視台英語頻道",
       "logo": "",
-      "days": 8,
-      "count": 280,
+      "days": 7,
+      "count": 245,
       "withDesc": 0
     },
     {
@@ -19955,8 +19955,8 @@
       "sourceId": "nowtv_326",
       "name": "euronews",
       "logo": "",
-      "days": 7,
-      "count": 525,
+      "days": 6,
+      "count": 450,
       "withDesc": 0
     },
     {
@@ -19965,8 +19965,8 @@
       "sourceId": "nowtv_327",
       "name": "France 24",
       "logo": "",
-      "days": 8,
-      "count": 952,
+      "days": 7,
+      "count": 833,
       "withDesc": 0
     },
     {
@@ -19975,8 +19975,8 @@
       "sourceId": "nowtv_328",
       "name": "NHK WORLD-JAPAN",
       "logo": "",
-      "days": 8,
-      "count": 488,
+      "days": 7,
+      "count": 427,
       "withDesc": 0
     },
     {
@@ -19995,8 +19995,8 @@
       "sourceId": "nowtv_330",
       "name": "中國環球電視網",
       "logo": "",
-      "days": 8,
-      "count": 360,
+      "days": 7,
+      "count": 315,
       "withDesc": 0
     },
     {
@@ -20005,8 +20005,8 @@
       "sourceId": "nowtv_331",
       "name": "Now直播台",
       "logo": "",
-      "days": 6,
-      "count": 60,
+      "days": 5,
+      "count": 50,
       "withDesc": 0
     },
     {
@@ -20015,8 +20015,8 @@
       "sourceId": "nowtv_332",
       "name": "Now新聞台",
       "logo": "",
-      "days": 6,
-      "count": 312,
+      "days": 5,
+      "count": 260,
       "withDesc": 0
     },
     {
@@ -20025,8 +20025,8 @@
       "sourceId": "nowtv_333",
       "name": "Now財經台",
       "logo": "",
-      "days": 6,
-      "count": 306,
+      "days": 5,
+      "count": 255,
       "withDesc": 0
     },
     {
@@ -20035,8 +20035,8 @@
       "sourceId": "nowtv_336",
       "name": "Now報價台",
       "logo": "",
-      "days": 8,
-      "count": 96,
+      "days": 7,
+      "count": 84,
       "withDesc": 0
     },
     {
@@ -20045,8 +20045,8 @@
       "sourceId": "nowtv_366",
       "name": "鳳凰衛視資訊台",
       "logo": "",
-      "days": 8,
-      "count": 504,
+      "days": 7,
+      "count": 441,
       "withDesc": 0
     },
     {
@@ -20095,8 +20095,8 @@
       "sourceId": "nowtv_443",
       "name": "Cartoon Network",
       "logo": "",
-      "days": 8,
-      "count": 256,
+      "days": 7,
+      "count": 224,
       "withDesc": 0
     },
     {
@@ -20105,8 +20105,8 @@
       "sourceId": "nowtv_444",
       "name": "Nickelodeon",
       "logo": "",
-      "days": 8,
-      "count": 544,
+      "days": 7,
+      "count": 476,
       "withDesc": 0
     },
     {
@@ -20115,8 +20115,8 @@
       "sourceId": "nowtv_447",
       "name": "CBeebies",
       "logo": "",
-      "days": 8,
-      "count": 1312,
+      "days": 7,
+      "count": 1148,
       "withDesc": 0
     },
     {
@@ -20125,8 +20125,8 @@
       "sourceId": "nowtv_449",
       "name": "Nick Jr.",
       "logo": "",
-      "days": 8,
-      "count": 640,
+      "days": 7,
+      "count": 560,
       "withDesc": 0
     },
     {
@@ -20135,8 +20135,8 @@
       "sourceId": "nowtv_502",
       "name": "BBC Lifestyle",
       "logo": "",
-      "days": 7,
-      "count": 203,
+      "days": 6,
+      "count": 174,
       "withDesc": 0
     },
     {
@@ -20145,8 +20145,8 @@
       "sourceId": "nowtv_512",
       "name": "AXN",
       "logo": "",
-      "days": 7,
-      "count": 196,
+      "days": 6,
+      "count": 168,
       "withDesc": 0
     },
     {
@@ -20155,8 +20155,8 @@
       "sourceId": "nowtv_513",
       "name": "HITS",
       "logo": "",
-      "days": 8,
-      "count": 232,
+      "days": 7,
+      "count": 203,
       "withDesc": 0
     },
     {
@@ -20165,8 +20165,8 @@
       "sourceId": "nowtv_517",
       "name": "ROCK Entertainment",
       "logo": "",
-      "days": 8,
-      "count": 248,
+      "days": 7,
+      "count": 217,
       "withDesc": 0
     },
     {
@@ -20185,8 +20185,8 @@
       "sourceId": "nowtv_526",
       "name": "Food Network",
       "logo": "",
-      "days": 7,
-      "count": 280,
+      "days": 6,
+      "count": 240,
       "withDesc": 0
     },
     {
@@ -20195,8 +20195,8 @@
       "sourceId": "nowtv_527",
       "name": "亞洲美食台",
       "logo": "",
-      "days": 8,
-      "count": 344,
+      "days": 7,
+      "count": 301,
       "withDesc": 0
     },
     {
@@ -20205,8 +20205,8 @@
       "sourceId": "nowtv_535",
       "name": "Netflix",
       "logo": "",
-      "days": 8,
-      "count": 96,
+      "days": 7,
+      "count": 84,
       "withDesc": 0
     },
     {
@@ -20215,8 +20215,8 @@
       "sourceId": "nowtv_538",
       "name": "中天亞洲台",
       "logo": "",
-      "days": 8,
-      "count": 192,
+      "days": 7,
+      "count": 168,
       "withDesc": 0
     },
     {
@@ -20225,8 +20225,8 @@
       "sourceId": "nowtv_540",
       "name": "深圳衛視",
       "logo": "",
-      "days": 8,
-      "count": 248,
+      "days": 7,
+      "count": 217,
       "withDesc": 0
     },
     {
@@ -20235,8 +20235,8 @@
       "sourceId": "nowtv_541",
       "name": "CCTV-1",
       "logo": "",
-      "days": 7,
-      "count": 245,
+      "days": 6,
+      "count": 210,
       "withDesc": 0
     },
     {
@@ -20245,8 +20245,8 @@
       "sourceId": "nowtv_542",
       "name": "CCTV-4",
       "logo": "",
-      "days": 7,
-      "count": 287,
+      "days": 6,
+      "count": 246,
       "withDesc": 0
     },
     {
@@ -20255,8 +20255,8 @@
       "sourceId": "nowtv_543",
       "name": "大灣區衛視",
       "logo": "",
-      "days": 7,
-      "count": 140,
+      "days": 6,
+      "count": 120,
       "withDesc": 0
     },
     {
@@ -20265,8 +20265,8 @@
       "sourceId": "nowtv_545",
       "name": "中央電視台新聞頻道",
       "logo": "",
-      "days": 8,
-      "count": 216,
+      "days": 7,
+      "count": 189,
       "withDesc": 0
     },
     {
@@ -20275,8 +20275,8 @@
       "sourceId": "nowtv_548",
       "name": "鳳凰衛視中文台",
       "logo": "",
-      "days": 8,
-      "count": 392,
+      "days": 7,
+      "count": 343,
       "withDesc": 0
     },
     {
@@ -20305,8 +20305,8 @@
       "sourceId": "nowtv_561",
       "name": "ABC Australia",
       "logo": "",
-      "days": 8,
-      "count": 232,
+      "days": 7,
+      "count": 203,
       "withDesc": 0
     },
     {
@@ -20325,8 +20325,8 @@
       "sourceId": "nowtv_611",
       "name": "Now Sports 4K 1",
       "logo": "",
-      "days": 8,
-      "count": 192,
+      "days": 7,
+      "count": 168,
       "withDesc": 0
     },
     {
@@ -20335,8 +20335,8 @@
       "sourceId": "nowtv_612",
       "name": "Now Sports 4K 2",
       "logo": "",
-      "days": 8,
-      "count": 96,
+      "days": 7,
+      "count": 84,
       "withDesc": 0
     },
     {
@@ -20345,8 +20345,8 @@
       "sourceId": "nowtv_613",
       "name": "Now Sports 4K 3",
       "logo": "",
-      "days": 8,
-      "count": 96,
+      "days": 7,
+      "count": 84,
       "withDesc": 0
     },
     {
@@ -20355,8 +20355,8 @@
       "sourceId": "nowtv_620",
       "name": "Now Sports Premier League TV",
       "logo": "",
-      "days": 8,
-      "count": 256,
+      "days": 7,
+      "count": 224,
       "withDesc": 0
     },
     {
@@ -20365,8 +20365,8 @@
       "sourceId": "nowtv_621",
       "name": "Now Sports 英超1台",
       "logo": "",
-      "days": 8,
-      "count": 128,
+      "days": 7,
+      "count": 112,
       "withDesc": 0
     },
     {
@@ -20375,8 +20375,8 @@
       "sourceId": "nowtv_622",
       "name": "Now Sports 英超2台",
       "logo": "",
-      "days": 8,
-      "count": 48,
+      "days": 7,
+      "count": 42,
       "withDesc": 0
     },
     {
@@ -20385,8 +20385,8 @@
       "sourceId": "nowtv_623",
       "name": "Now Sports 英超3台",
       "logo": "",
-      "days": 8,
-      "count": 48,
+      "days": 7,
+      "count": 42,
       "withDesc": 0
     },
     {
@@ -20395,8 +20395,8 @@
       "sourceId": "nowtv_624",
       "name": "Now Sports 英超4台",
       "logo": "",
-      "days": 8,
-      "count": 48,
+      "days": 7,
+      "count": 42,
       "withDesc": 0
     },
     {
@@ -20405,8 +20405,8 @@
       "sourceId": "nowtv_625",
       "name": "Now Sports 英超5台",
       "logo": "",
-      "days": 8,
-      "count": 48,
+      "days": 7,
+      "count": 42,
       "withDesc": 0
     },
     {
@@ -20415,8 +20415,8 @@
       "sourceId": "nowtv_626",
       "name": "Now Sports 英超6台",
       "logo": "",
-      "days": 8,
-      "count": 48,
+      "days": 7,
+      "count": 42,
       "withDesc": 0
     },
     {
@@ -20425,8 +20425,8 @@
       "sourceId": "nowtv_627",
       "name": "Now Sports 英超7台",
       "logo": "",
-      "days": 8,
-      "count": 48,
+      "days": 7,
+      "count": 42,
       "withDesc": 0
     },
     {
@@ -20435,8 +20435,8 @@
       "sourceId": "nowtv_628",
       "name": "Now Sports 英超8台",
       "logo": "",
-      "days": 8,
-      "count": 48,
+      "days": 7,
+      "count": 42,
       "withDesc": 0
     },
     {
@@ -20445,8 +20445,8 @@
       "sourceId": "nowtv_629",
       "name": "Now Sports 英超9台",
       "logo": "",
-      "days": 8,
-      "count": 96,
+      "days": 7,
+      "count": 84,
       "withDesc": 0
     },
     {
@@ -20455,8 +20455,8 @@
       "sourceId": "nowtv_630",
       "name": "Now Sports 精選",
       "logo": "",
-      "days": 8,
-      "count": 224,
+      "days": 7,
+      "count": 196,
       "withDesc": 0
     },
     {
@@ -20465,8 +20465,8 @@
       "sourceId": "nowtv_631",
       "name": "Now Sports 1",
       "logo": "",
-      "days": 8,
-      "count": 216,
+      "days": 7,
+      "count": 189,
       "withDesc": 0
     },
     {
@@ -20475,8 +20475,8 @@
       "sourceId": "nowtv_632",
       "name": "Now Sports 2",
       "logo": "",
-      "days": 8,
-      "count": 120,
+      "days": 7,
+      "count": 105,
       "withDesc": 0
     },
     {
@@ -20485,8 +20485,8 @@
       "sourceId": "nowtv_633",
       "name": "Now Sports 3",
       "logo": "",
-      "days": 8,
-      "count": 280,
+      "days": 7,
+      "count": 245,
       "withDesc": 0
     },
     {
@@ -20495,8 +20495,8 @@
       "sourceId": "nowtv_634",
       "name": "Now Sports 4",
       "logo": "",
-      "days": 8,
-      "count": 328,
+      "days": 7,
+      "count": 287,
       "withDesc": 0
     },
     {
@@ -20505,8 +20505,8 @@
       "sourceId": "nowtv_635",
       "name": "Now Sports 5",
       "logo": "",
-      "days": 7,
-      "count": 105,
+      "days": 6,
+      "count": 90,
       "withDesc": 0
     },
     {
@@ -20515,8 +20515,8 @@
       "sourceId": "nowtv_636",
       "name": "Now Sports 6",
       "logo": "",
-      "days": 7,
-      "count": 203,
+      "days": 6,
+      "count": 174,
       "withDesc": 0
     },
     {
@@ -20525,8 +20525,8 @@
       "sourceId": "nowtv_637",
       "name": "Now Sports 7",
       "logo": "",
-      "days": 8,
-      "count": 208,
+      "days": 7,
+      "count": 182,
       "withDesc": 0
     },
     {
@@ -20535,8 +20535,8 @@
       "sourceId": "nowtv_638",
       "name": "beIN SPORTS 1",
       "logo": "",
-      "days": 8,
-      "count": 152,
+      "days": 7,
+      "count": 133,
       "withDesc": 0
     },
     {
@@ -20545,8 +20545,8 @@
       "sourceId": "nowtv_639",
       "name": "beIN SPORTS 2",
       "logo": "",
-      "days": 7,
-      "count": 168,
+      "days": 6,
+      "count": 144,
       "withDesc": 0
     },
     {
@@ -20555,8 +20555,8 @@
       "sourceId": "nowtv_640",
       "name": "曼聯電視頻道",
       "logo": "",
-      "days": 8,
-      "count": 304,
+      "days": 7,
+      "count": 266,
       "withDesc": 0
     },
     {
@@ -20565,8 +20565,8 @@
       "sourceId": "nowtv_641",
       "name": "Now Sports 641",
       "logo": "",
-      "days": 8,
-      "count": 104,
+      "days": 7,
+      "count": 91,
       "withDesc": 0
     },
     {
@@ -20575,8 +20575,8 @@
       "sourceId": "nowtv_642",
       "name": "NBA TV",
       "logo": "",
-      "days": 8,
-      "count": 248,
+      "days": 7,
+      "count": 217,
       "withDesc": 0
     },
     {
@@ -20585,8 +20585,8 @@
       "sourceId": "nowtv_643",
       "name": "beIN SPORTS 3",
       "logo": "",
-      "days": 8,
-      "count": 192,
+      "days": 7,
+      "count": 168,
       "withDesc": 0
     },
     {
@@ -20595,8 +20595,8 @@
       "sourceId": "nowtv_644",
       "name": "beIN SPORTS 4",
       "logo": "",
-      "days": 8,
-      "count": 48,
+      "days": 7,
+      "count": 42,
       "withDesc": 0
     },
     {
@@ -20605,8 +20605,8 @@
       "sourceId": "nowtv_645",
       "name": "beIN SPORTS 5",
       "logo": "",
-      "days": 8,
-      "count": 48,
+      "days": 7,
+      "count": 42,
       "withDesc": 0
     },
     {
@@ -20615,8 +20615,8 @@
       "sourceId": "nowtv_646",
       "name": "beIN SPORTS 6",
       "logo": "",
-      "days": 8,
-      "count": 48,
+      "days": 7,
+      "count": 42,
       "withDesc": 0
     },
     {
@@ -20625,8 +20625,8 @@
       "sourceId": "nowtv_647",
       "name": "Now Sports 647",
       "logo": "",
-      "days": 8,
-      "count": 96,
+      "days": 7,
+      "count": 84,
       "withDesc": 0
     },
     {
@@ -20645,8 +20645,8 @@
       "sourceId": "nowtv_651",
       "name": "Now Sports 651",
       "logo": "",
-      "days": 8,
-      "count": 96,
+      "days": 7,
+      "count": 84,
       "withDesc": 0
     },
     {
@@ -20655,8 +20655,8 @@
       "sourceId": "nowtv_652",
       "name": "Now Sports 652",
       "logo": "",
-      "days": 8,
-      "count": 96,
+      "days": 7,
+      "count": 84,
       "withDesc": 0
     },
     {
@@ -20665,8 +20665,8 @@
       "sourceId": "nowtv_668",
       "name": "Now668",
       "logo": "",
-      "days": 8,
-      "count": 136,
+      "days": 7,
+      "count": 119,
       "withDesc": 0
     },
     {
@@ -20675,8 +20675,8 @@
       "sourceId": "nowtv_674",
       "name": "Cricbuzz",
       "logo": "",
-      "days": 8,
-      "count": 216,
+      "days": 7,
+      "count": 189,
       "withDesc": 0
     },
     {
@@ -20695,8 +20695,8 @@
       "sourceId": "nowtv_679",
       "name": "Premier Sports",
       "logo": "",
-      "days": 7,
-      "count": 168,
+      "days": 6,
+      "count": 144,
       "withDesc": 0
     },
     {
@@ -20705,8 +20705,8 @@
       "sourceId": "nowtv_680",
       "name": "Now Sports Plus",
       "logo": "",
-      "days": 8,
-      "count": 48,
+      "days": 7,
+      "count": 42,
       "withDesc": 0
     },
     {
@@ -20715,8 +20715,8 @@
       "sourceId": "nowtv_683",
       "name": "Now Golf 2",
       "logo": "",
-      "days": 8,
-      "count": 64,
+      "days": 7,
+      "count": 56,
       "withDesc": 0
     },
     {
@@ -20725,8 +20725,8 @@
       "sourceId": "nowtv_684",
       "name": "Now Golf 3",
       "logo": "",
-      "days": 8,
-      "count": 120,
+      "days": 7,
+      "count": 105,
       "withDesc": 0
     },
     {
@@ -20735,8 +20735,8 @@
       "sourceId": "nowtv_711",
       "name": "NHK World Premium",
       "logo": "",
-      "days": 8,
-      "count": 536,
+      "days": 7,
+      "count": 469,
       "withDesc": 0
     },
     {
@@ -20745,8 +20745,8 @@
       "sourceId": "nowtv_713",
       "name": "TV5MONDE Style",
       "logo": "",
-      "days": 8,
-      "count": 408,
+      "days": 7,
+      "count": 357,
       "withDesc": 0
     },
     {
@@ -20755,8 +20755,8 @@
       "sourceId": "nowtv_714",
       "name": "TV5MONDE ASIE",
       "logo": "",
-      "days": 7,
-      "count": 315,
+      "days": 6,
+      "count": 270,
       "withDesc": 0
     },
     {
@@ -20765,8 +20765,8 @@
       "sourceId": "nowtv_715",
       "name": "France 24 (French)",
       "logo": "",
-      "days": 8,
-      "count": 824,
+      "days": 7,
+      "count": 721,
       "withDesc": 0
     },
     {
@@ -20775,8 +20775,8 @@
       "sourceId": "nowtv_720",
       "name": "GMA Pinoy TV",
       "logo": "",
-      "days": 8,
-      "count": 232,
+      "days": 7,
+      "count": 203,
       "withDesc": 0
     },
     {
@@ -20785,8 +20785,8 @@
       "sourceId": "nowtv_721",
       "name": "GMA Life TV",
       "logo": "",
-      "days": 8,
-      "count": 208,
+      "days": 7,
+      "count": 182,
       "withDesc": 0
     },
     {
@@ -20795,8 +20795,8 @@
       "sourceId": "nowtv_722",
       "name": "GMA News TV",
       "logo": "",
-      "days": 7,
-      "count": 217,
+      "days": 6,
+      "count": 186,
       "withDesc": 0
     },
     {
@@ -20805,8 +20805,8 @@
       "sourceId": "nowtv_725",
       "name": "TFC",
       "logo": "",
-      "days": 4,
-      "count": 112,
+      "days": 3,
+      "count": 84,
       "withDesc": 0
     },
     {
@@ -20815,8 +20815,8 @@
       "sourceId": "nowtv_771",
       "name": "Sony TV (India)",
       "logo": "",
-      "days": 8,
-      "count": 224,
+      "days": 7,
+      "count": 196,
       "withDesc": 0
     },
     {
@@ -20825,8 +20825,8 @@
       "sourceId": "nowtv_772",
       "name": "Sony MAX",
       "logo": "",
-      "days": 7,
-      "count": 77,
+      "days": 6,
+      "count": 66,
       "withDesc": 0
     },
     {
@@ -20835,8 +20835,8 @@
       "sourceId": "nowtv_774",
       "name": "Sony SAB",
       "logo": "",
-      "days": 8,
-      "count": 432,
+      "days": 7,
+      "count": 378,
       "withDesc": 0
     },
     {
@@ -20845,8 +20845,8 @@
       "sourceId": "nowtv_779",
       "name": "MTV India",
       "logo": "",
-      "days": 8,
-      "count": 128,
+      "days": 7,
+      "count": 112,
       "withDesc": 0
     },
     {
@@ -20855,8 +20855,8 @@
       "sourceId": "nowtv_780",
       "name": "COLORS",
       "logo": "",
-      "days": 8,
-      "count": 352,
+      "days": 7,
+      "count": 308,
       "withDesc": 0
     },
     {
@@ -20865,8 +20865,8 @@
       "sourceId": "nowtv_781",
       "name": "Zee Cinema International",
       "logo": "",
-      "days": 7,
-      "count": 56,
+      "days": 6,
+      "count": 48,
       "withDesc": 0
     },
     {
@@ -20875,8 +20875,8 @@
       "sourceId": "nowtv_782",
       "name": "Zee TV",
       "logo": "",
-      "days": 8,
-      "count": 304,
+      "days": 7,
+      "count": 266,
       "withDesc": 0
     },
     {
@@ -20885,8 +20885,8 @@
       "sourceId": "nowtv_785",
       "name": "Zee News",
       "logo": "",
-      "days": 5,
-      "count": 240,
+      "days": 4,
+      "count": 192,
       "withDesc": 0
     },
     {
@@ -20895,8 +20895,8 @@
       "sourceId": "nowtv_793",
       "name": "Star Gold",
       "logo": "",
-      "days": 7,
-      "count": 77,
+      "days": 6,
+      "count": 66,
       "withDesc": 0
     },
     {
@@ -20905,8 +20905,8 @@
       "sourceId": "nowtv_794",
       "name": "STAR PLUS",
       "logo": "",
-      "days": 8,
-      "count": 384,
+      "days": 7,
+      "count": 336,
       "withDesc": 0
     },
     {
@@ -20915,8 +20915,8 @@
       "sourceId": "nowtv_797",
       "name": "Star Bharat",
       "logo": "",
-      "days": 8,
-      "count": 296,
+      "days": 7,
+      "count": 259,
       "withDesc": 0
     },
     {
@@ -20925,8 +20925,8 @@
       "sourceId": "nowtv_901",
       "name": "冰火頻道",
       "logo": "",
-      "days": 8,
-      "count": 96,
+      "days": 7,
+      "count": 84,
       "withDesc": 0
     },
     {
@@ -20935,8 +20935,8 @@
       "sourceId": "nowtv_903",
       "name": "成人極品台",
       "logo": "",
-      "days": 8,
-      "count": 192,
+      "days": 7,
+      "count": 168,
       "withDesc": 0
     },
     {
@@ -20945,8 +20945,8 @@
       "sourceId": "rthk_dtt31",
       "name": "港台電視 31",
       "logo": "",
-      "days": 8,
-      "count": 376,
+      "days": 7,
+      "count": 329,
       "withDesc": 0
     },
     {
@@ -20955,8 +20955,8 @@
       "sourceId": "rthk_dtt32",
       "name": "港台電視 32",
       "logo": "",
-      "days": 8,
-      "count": 496,
+      "days": 7,
+      "count": 434,
       "withDesc": 0
     },
     {
@@ -20965,8 +20965,8 @@
       "sourceId": "rthk_dtt33",
       "name": "港台電視 33",
       "logo": "",
-      "days": 8,
-      "count": 264,
+      "days": 7,
+      "count": 231,
       "withDesc": 0
     },
     {
@@ -20975,8 +20975,8 @@
       "sourceId": "rthk_dtt34",
       "name": "港台電視 34",
       "logo": "",
-      "days": 8,
-      "count": 576,
+      "days": 7,
+      "count": 504,
       "withDesc": 0
     },
     {
@@ -20985,8 +20985,8 @@
       "sourceId": "rthk_dtt35",
       "name": "港台電視 35",
       "logo": "",
-      "days": 8,
-      "count": 360,
+      "days": 7,
+      "count": 315,
       "withDesc": 0
     },
     {
@@ -21005,9 +21005,9 @@
       "sourceId": "mytvsuper_CWIN",
       "name": "SUPER FREE (免費)",
       "logo": "",
-      "days": 10,
-      "count": 350,
-      "withDesc": 350
+      "days": 9,
+      "count": 315,
+      "withDesc": 315
     },
     {
       "source": "webncode",
@@ -21015,9 +21015,9 @@
       "sourceId": "mytvsuper_SVAR",
       "name": "SUPER Game Show (免費)",
       "logo": "",
-      "days": 10,
-      "count": 410,
-      "withDesc": 410
+      "days": 9,
+      "count": 369,
+      "withDesc": 369
     },
     {
       "source": "webncode",
@@ -21025,9 +21025,9 @@
       "sourceId": "mytvsuper_SEYT",
       "name": "愛．回家SUPER煲 (免費)",
       "logo": "",
-      "days": 10,
-      "count": 630,
-      "withDesc": 630
+      "days": 9,
+      "count": 567,
+      "withDesc": 567
     },
     {
       "source": "webncode",
@@ -21035,9 +21035,9 @@
       "sourceId": "mytvsuper_SFOO",
       "name": "SUPER識食 (免費)",
       "logo": "",
-      "days": 10,
-      "count": 640,
-      "withDesc": 640
+      "days": 9,
+      "count": 576,
+      "withDesc": 576
     },
     {
       "source": "webncode",
@@ -21045,9 +21045,9 @@
       "sourceId": "mytvsuper_STRA",
       "name": "SUPER資訊娛樂 (免費)",
       "logo": "",
-      "days": 10,
-      "count": 560,
-      "withDesc": 560
+      "days": 9,
+      "count": 504,
+      "withDesc": 504
     },
     {
       "source": "webncode",
@@ -21055,9 +21055,9 @@
       "sourceId": "mytvsuper_SMUS",
       "name": "SUPER Music (免費)",
       "logo": "",
-      "days": 10,
-      "count": 220,
-      "withDesc": 210
+      "days": 9,
+      "count": 198,
+      "withDesc": 189
     },
     {
       "source": "webncode",
@@ -21065,9 +21065,9 @@
       "sourceId": "mytvsuper_SGOL",
       "name": "SUPER靈異 (免費)",
       "logo": "",
-      "days": 10,
-      "count": 530,
-      "withDesc": 440
+      "days": 9,
+      "count": 477,
+      "withDesc": 396
     },
     {
       "source": "webncode",
@@ -21075,9 +21075,9 @@
       "sourceId": "mytvsuper_SSIT",
       "name": "SUPER處境劇 (免費)",
       "logo": "",
-      "days": 10,
-      "count": 620,
-      "withDesc": 620
+      "days": 9,
+      "count": 558,
+      "withDesc": 558
     },
     {
       "source": "webncode",
@@ -21085,9 +21085,9 @@
       "sourceId": "mytvsuper_STVM",
       "name": "SUPER亞視劇 (免費)",
       "logo": "",
-      "days": 10,
-      "count": 300,
-      "withDesc": 300
+      "days": 9,
+      "count": 270,
+      "withDesc": 270
     },
     {
       "source": "webncode",
@@ -21095,9 +21095,9 @@
       "sourceId": "mytvsuper_SDOC",
       "name": "真情SUPER煲 (免費)",
       "logo": "",
-      "days": 10,
-      "count": 660,
-      "withDesc": 660
+      "days": 9,
+      "count": 594,
+      "withDesc": 594
     },
     {
       "source": "webncode",
@@ -21105,9 +21105,9 @@
       "sourceId": "mytvsuper_SSPT",
       "name": "SUPER Sports (免費)",
       "logo": "",
-      "days": 10,
-      "count": 190,
-      "withDesc": 60
+      "days": 9,
+      "count": 171,
+      "withDesc": 54
     },
     {
       "source": "webncode",
@@ -21115,9 +21115,9 @@
       "sourceId": "mytvsuper_C18",
       "name": "myTV SUPER 18台",
       "logo": "",
-      "days": 10,
-      "count": 290,
-      "withDesc": 280
+      "days": 9,
+      "count": 261,
+      "withDesc": 252
     },
     {
       "source": "webncode",
@@ -21125,9 +21125,9 @@
       "sourceId": "mytvsuper_C28",
       "name": "互動賽馬台",
       "logo": "",
-      "days": 10,
-      "count": 80,
-      "withDesc": 10
+      "days": 9,
+      "count": 72,
+      "withDesc": 9
     },
     {
       "source": "webncode",
@@ -21135,9 +21135,9 @@
       "sourceId": "mytvsuper_TVG",
       "name": "黃金翡翠台 (免費)",
       "logo": "",
-      "days": 10,
-      "count": 300,
-      "withDesc": 300
+      "days": 9,
+      "count": 270,
+      "withDesc": 270
     },
     {
       "source": "webncode",
@@ -21145,9 +21145,9 @@
       "sourceId": "mytvsuper_J",
       "name": "翡翠台 (免費)",
       "logo": "",
-      "days": 10,
-      "count": 450,
-      "withDesc": 290
+      "days": 9,
+      "count": 405,
+      "withDesc": 261
     },
     {
       "source": "webncode",
@@ -21155,9 +21155,9 @@
       "sourceId": "mytvsuper_B",
       "name": "TVB Plus (免費)",
       "logo": "",
-      "days": 10,
-      "count": 320,
-      "withDesc": 240
+      "days": 9,
+      "count": 288,
+      "withDesc": 216
     },
     {
       "source": "webncode",
@@ -21165,9 +21165,9 @@
       "sourceId": "mytvsuper_C",
       "name": "無綫新聞台 (免費)",
       "logo": "",
-      "days": 10,
-      "count": 580,
-      "withDesc": 50
+      "days": 9,
+      "count": 522,
+      "withDesc": 45
     },
     {
       "source": "webncode",
@@ -21175,9 +21175,9 @@
       "sourceId": "mytvsuper_P",
       "name": "明珠台 (免費)",
       "logo": "",
-      "days": 10,
-      "count": 350,
-      "withDesc": 60
+      "days": 9,
+      "count": 315,
+      "withDesc": 54
     },
     {
       "source": "webncode",
@@ -21185,9 +21185,9 @@
       "sourceId": "mytvsuper_CTVC",
       "name": "千禧經典台",
       "logo": "",
-      "days": 10,
-      "count": 340,
-      "withDesc": 340
+      "days": 9,
+      "count": 306,
+      "withDesc": 306
     },
     {
       "source": "webncode",
@@ -21195,9 +21195,9 @@
       "sourceId": "mytvsuper_CTVS",
       "name": "亞洲劇台",
       "logo": "",
-      "days": 10,
-      "count": 250,
-      "withDesc": 250
+      "days": 9,
+      "count": 225,
+      "withDesc": 225
     },
     {
       "source": "webncode",
@@ -21205,9 +21205,9 @@
       "sourceId": "mytvsuper_CDR3",
       "name": "華語劇台",
       "logo": "",
-      "days": 10,
-      "count": 300,
-      "withDesc": 300
+      "days": 9,
+      "count": 270,
+      "withDesc": 270
     },
     {
       "source": "webncode",
@@ -21215,9 +21215,9 @@
       "sourceId": "mytvsuper_TVO",
       "name": "黃金華劇台",
       "logo": "",
-      "days": 10,
-      "count": 280,
-      "withDesc": 280
+      "days": 9,
+      "count": 252,
+      "withDesc": 252
     },
     {
       "source": "webncode",
@@ -21225,9 +21225,9 @@
       "sourceId": "mytvsuper_CTVE",
       "name": "娛樂新聞台 (免費)",
       "logo": "",
-      "days": 10,
-      "count": 480,
-      "withDesc": 480
+      "days": 9,
+      "count": 432,
+      "withDesc": 432
     },
     {
       "source": "webncode",
@@ -21235,9 +21235,9 @@
       "sourceId": "mytvsuper_CCOC",
       "name": "戲曲台",
       "logo": "",
-      "days": 10,
-      "count": 1420,
-      "withDesc": 1420
+      "days": 9,
+      "count": 1278,
+      "withDesc": 1278
     },
     {
       "source": "webncode",
@@ -21245,9 +21245,9 @@
       "sourceId": "mytvsuper_KID",
       "name": "SUPER Kids Channel",
       "logo": "",
-      "days": 10,
-      "count": 710,
-      "withDesc": 600
+      "days": 9,
+      "count": 639,
+      "withDesc": 540
     },
     {
       "source": "webncode",
@@ -21255,9 +21255,9 @@
       "sourceId": "mytvsuper_ZOO",
       "name": "ZooMoo",
       "logo": "",
-      "days": 10,
-      "count": 1500,
-      "withDesc": 1500
+      "days": 9,
+      "count": 1350,
+      "withDesc": 1350
     },
     {
       "source": "webncode",
@@ -21265,9 +21265,9 @@
       "sourceId": "mytvsuper_CNIKO",
       "name": "Nickelodeon",
       "logo": "",
-      "days": 10,
-      "count": 680,
-      "withDesc": 680
+      "days": 9,
+      "count": 612,
+      "withDesc": 612
     },
     {
       "source": "webncode",
@@ -21275,9 +21275,9 @@
       "sourceId": "mytvsuper_CNIJR",
       "name": "Nick Jr",
       "logo": "",
-      "days": 10,
-      "count": 810,
-      "withDesc": 810
+      "days": 9,
+      "count": 729,
+      "withDesc": 729
     },
     {
       "source": "webncode",
@@ -21285,9 +21285,9 @@
       "sourceId": "mytvsuper_CCLM",
       "name": "粵語片台",
       "logo": "",
-      "days": 10,
-      "count": 140,
-      "withDesc": 140
+      "days": 9,
+      "count": 126,
+      "withDesc": 126
     },
     {
       "source": "webncode",
@@ -21295,9 +21295,9 @@
       "sourceId": "mytvsuper_CMAM",
       "name": "美亞電影台",
       "logo": "",
-      "days": 10,
-      "count": 150,
-      "withDesc": 150
+      "days": 9,
+      "count": 135,
+      "withDesc": 135
     },
     {
       "source": "webncode",
@@ -21305,9 +21305,9 @@
       "sourceId": "mytvsuper_CTHR",
       "name": "Thrill",
       "logo": "",
-      "days": 10,
-      "count": 170,
-      "withDesc": 170
+      "days": 9,
+      "count": 153,
+      "withDesc": 153
     },
     {
       "source": "webncode",
@@ -21315,9 +21315,9 @@
       "sourceId": "mytvsuper_CCCM",
       "name": "天映經典頻道",
       "logo": "",
-      "days": 10,
-      "count": 140,
-      "withDesc": 140
+      "days": 9,
+      "count": 126,
+      "withDesc": 126
     },
     {
       "source": "webncode",
@@ -21325,9 +21325,9 @@
       "sourceId": "mytvsuper_CMC",
       "name": "中國電影頻道",
       "logo": "",
-      "days": 10,
-      "count": 270,
-      "withDesc": 160
+      "days": 9,
+      "count": 243,
+      "withDesc": 144
     },
     {
       "source": "webncode",
@@ -21335,9 +21335,9 @@
       "sourceId": "mytvsuper_CRTX",
       "name": "ROCK Action",
       "logo": "",
-      "days": 10,
-      "count": 140,
-      "withDesc": 140
+      "days": 9,
+      "count": 126,
+      "withDesc": 126
     },
     {
       "source": "webncode",
@@ -21345,9 +21345,9 @@
       "sourceId": "mytvsuper_POPC",
       "name": "PopC",
       "logo": "",
-      "days": 10,
-      "count": 180,
-      "withDesc": 180
+      "days": 9,
+      "count": 162,
+      "withDesc": 162
     },
     {
       "source": "webncode",
@@ -21355,9 +21355,9 @@
       "sourceId": "mytvsuper_ACTM",
       "name": "Action Hollywood Movies (免費)",
       "logo": "",
-      "days": 10,
-      "count": 120,
-      "withDesc": 120
+      "days": 9,
+      "count": 108,
+      "withDesc": 108
     },
     {
       "source": "webncode",
@@ -21365,9 +21365,9 @@
       "sourceId": "mytvsuper_RCM",
       "name": "Rialto Classic Movies (RCM) (免費)",
       "logo": "",
-      "days": 10,
-      "count": 120,
-      "withDesc": 120
+      "days": 9,
+      "count": 108,
+      "withDesc": 108
     },
     {
       "source": "webncode",
@@ -21375,9 +21375,9 @@
       "sourceId": "mytvsuper_CKIX",
       "name": "KIX",
       "logo": "",
-      "days": 10,
-      "count": 170,
-      "withDesc": 170
+      "days": 9,
+      "count": 153,
+      "withDesc": 153
     },
     {
       "source": "webncode",
@@ -21385,9 +21385,9 @@
       "sourceId": "mytvsuper_TRSP",
       "name": "TRACE Sport Stars (免費)",
       "logo": "",
-      "days": 10,
-      "count": 480,
-      "withDesc": 480
+      "days": 9,
+      "count": 432,
+      "withDesc": 432
     },
     {
       "source": "webncode",
@@ -21395,9 +21395,9 @@
       "sourceId": "mytvsuper_LNH",
       "name": "Love Nature HD",
       "logo": "",
-      "days": 10,
-      "count": 270,
-      "withDesc": 270
+      "days": 9,
+      "count": 243,
+      "withDesc": 243
     },
     {
       "source": "webncode",
@@ -21405,9 +21405,9 @@
       "sourceId": "mytvsuper_LN4",
       "name": "Love Nature 4K",
       "logo": "",
-      "days": 10,
-      "count": 270,
-      "withDesc": 270
+      "days": 9,
+      "count": 243,
+      "withDesc": 243
     },
     {
       "source": "webncode",
@@ -21415,9 +21415,9 @@
       "sourceId": "mytvsuper_SMS",
       "name": "Global Trekker",
       "logo": "",
-      "days": 10,
-      "count": 280,
-      "withDesc": 280
+      "days": 9,
+      "count": 252,
+      "withDesc": 252
     },
     {
       "source": "webncode",
@@ -21425,9 +21425,9 @@
       "sourceId": "mytvsuper_PETC",
       "name": "Pet Club TV (免費)",
       "logo": "",
-      "days": 10,
-      "count": 280,
-      "withDesc": 280
+      "days": 9,
+      "count": 252,
+      "withDesc": 252
     },
     {
       "source": "webncode",
@@ -21435,9 +21435,9 @@
       "sourceId": "mytvsuper_GLBT",
       "name": "Globetrotter (免費)",
       "logo": "",
-      "days": 10,
-      "count": 320,
-      "withDesc": 320
+      "days": 9,
+      "count": 288,
+      "withDesc": 288
     },
     {
       "source": "webncode",
@@ -21445,9 +21445,9 @@
       "sourceId": "mytvsuper_DOCV",
       "name": "Docsville (免費)",
       "logo": "",
-      "days": 10,
-      "count": 130,
-      "withDesc": 130
+      "days": 9,
+      "count": 117,
+      "withDesc": 117
     },
     {
       "source": "webncode",
@@ -21455,9 +21455,9 @@
       "sourceId": "mytvsuper_PULS",
       "name": "Wild Stuff (免費)",
       "logo": "",
-      "days": 10,
-      "count": 300,
-      "withDesc": 300
+      "days": 9,
+      "count": 270,
+      "withDesc": 270
     },
     {
       "source": "webncode",
@@ -21465,9 +21465,9 @@
       "sourceId": "mytvsuper_CRTE",
       "name": "ROCK綜藝娛樂",
       "logo": "",
-      "days": 10,
-      "count": 310,
-      "withDesc": 310
+      "days": 9,
+      "count": 279,
+      "withDesc": 279
     },
     {
       "source": "webncode",
@@ -21475,9 +21475,9 @@
       "sourceId": "mytvsuper_RKEX",
       "name": "ROCK X Stream",
       "logo": "",
-      "days": 10,
-      "count": 230,
-      "withDesc": 230
+      "days": 9,
+      "count": 207,
+      "withDesc": 207
     },
     {
       "source": "webncode",
@@ -21485,9 +21485,9 @@
       "sourceId": "mytvsuper_CJTV",
       "name": "tvN",
       "logo": "",
-      "days": 10,
-      "count": 180,
-      "withDesc": 180
+      "days": 9,
+      "count": 162,
+      "withDesc": 162
     },
     {
       "source": "webncode",
@@ -21495,9 +21495,9 @@
       "sourceId": "mytvsuper_CTS1",
       "name": "無線衛星亞洲台",
       "logo": "",
-      "days": 10,
-      "count": 220,
-      "withDesc": 220
+      "days": 9,
+      "count": 198,
+      "withDesc": 198
     },
     {
       "source": "webncode",
@@ -21505,9 +21505,9 @@
       "sourceId": "mytvsuper_CRE",
       "name": "創世電視 (免費)",
       "logo": "",
-      "days": 10,
-      "count": 270,
-      "withDesc": 270
+      "days": 9,
+      "count": 243,
+      "withDesc": 243
     },
     {
       "source": "webncode",
@@ -21515,8 +21515,8 @@
       "sourceId": "mytvsuper_CC1",
       "name": "中央電視台綜合頻道 (港澳版) (免費)",
       "logo": "",
-      "days": 10,
-      "count": 90,
+      "days": 9,
+      "count": 81,
       "withDesc": 0
     },
     {
@@ -21525,8 +21525,8 @@
       "sourceId": "mytvsuper_CGD",
       "name": "CGTN (中國環球電視網)記錄頻道 (免費)",
       "logo": "",
-      "days": 10,
-      "count": 720,
+      "days": 9,
+      "count": 648,
       "withDesc": 0
     },
     {
@@ -21535,9 +21535,9 @@
       "sourceId": "mytvsuper_CGE",
       "name": "CGTN (中國環球電視網)英語頻道 (免費)",
       "logo": "",
-      "days": 10,
-      "count": 450,
-      "withDesc": 450
+      "days": 9,
+      "count": 405,
+      "withDesc": 405
     },
     {
       "source": "webncode",
@@ -21545,8 +21545,8 @@
       "sourceId": "mytvsuper_DTV",
       "name": "東方衛視國際頻道 (免費)",
       "logo": "",
-      "days": 10,
-      "count": 410,
+      "days": 9,
+      "count": 369,
       "withDesc": 0
     },
     {
@@ -21555,8 +21555,8 @@
       "sourceId": "mytvsuper_CC4",
       "name": "中國中央電視台中文國際頻道 (免費)",
       "logo": "",
-      "days": 10,
-      "count": 70,
+      "days": 9,
+      "count": 0,
       "withDesc": 0
     },
     {
@@ -21565,8 +21565,8 @@
       "sourceId": "mytvsuper_CCE",
       "name": "中國中央電視台娛樂頻道 (免費)",
       "logo": "",
-      "days": 10,
-      "count": 70,
+      "days": 9,
+      "count": 0,
       "withDesc": 0
     },
     {
@@ -21575,8 +21575,8 @@
       "sourceId": "mytvsuper_CCO",
       "name": "中國中央電視台戲曲頻道 (免費)",
       "logo": "",
-      "days": 10,
-      "count": 70,
+      "days": 9,
+      "count": 0,
       "withDesc": 0
     },
     {
@@ -21585,8 +21585,8 @@
       "sourceId": "mytvsuper_YNTV",
       "name": "雲南瀾湄國際衛視 (免費)",
       "logo": "",
-      "days": 10,
-      "count": 70,
+      "days": 9,
+      "count": 0,
       "withDesc": 0
     },
     {
@@ -21595,8 +21595,8 @@
       "sourceId": "mytvsuper_AHTV",
       "name": "安徽廣播電視台國際頻道 (免費)",
       "logo": "",
-      "days": 10,
-      "count": 70,
+      "days": 9,
+      "count": 0,
       "withDesc": 0
     },
     {
@@ -21605,8 +21605,8 @@
       "sourceId": "mytvsuper_BJTV",
       "name": "北京電視台國際頻道 (免費)",
       "logo": "",
-      "days": 10,
-      "count": 70,
+      "days": 9,
+      "count": 0,
       "withDesc": 0
     },
     {
@@ -21615,8 +21615,8 @@
       "sourceId": "mytvsuper_FJTV",
       "name": "福建海峽衛視國際頻道 (免費)",
       "logo": "",
-      "days": 10,
-      "count": 70,
+      "days": 9,
+      "count": 0,
       "withDesc": 0
     },
     {
@@ -21625,8 +21625,8 @@
       "sourceId": "mytvsuper_HNTV",
       "name": "湖南電視台國際頻道 (免費)",
       "logo": "",
-      "days": 10,
-      "count": 70,
+      "days": 9,
+      "count": 0,
       "withDesc": 0
     },
     {
@@ -21635,8 +21635,8 @@
       "sourceId": "mytvsuper_JSTV",
       "name": "江蘇電視台國際頻道 (免費)",
       "logo": "",
-      "days": 10,
-      "count": 70,
+      "days": 9,
+      "count": 0,
       "withDesc": 0
     },
     {
@@ -21645,8 +21645,8 @@
       "sourceId": "mytvsuper_GBTV",
       "name": "廣東廣播電視台大灣區衛視頻道 (免費)",
       "logo": "",
-      "days": 10,
-      "count": 70,
+      "days": 9,
+      "count": 0,
       "withDesc": 0
     },
     {
@@ -21655,8 +21655,8 @@
       "sourceId": "mytvsuper_ZJTV",
       "name": "浙江電視台國際頻道 (免費)",
       "logo": "",
-      "days": 10,
-      "count": 70,
+      "days": 9,
+      "count": 0,
       "withDesc": 0
     },
     {
@@ -21665,8 +21665,8 @@
       "sourceId": "mytvsuper_SZTV",
       "name": "深圳衛視國際頻道 (免費)",
       "logo": "",
-      "days": 10,
-      "count": 70,
+      "days": 9,
+      "count": 0,
       "withDesc": 0
     },
     {
@@ -21675,9 +21675,9 @@
       "sourceId": "mytvsuper_NOW7",
       "name": "that's 70s (免費)",
       "logo": "",
-      "days": 10,
-      "count": 160,
-      "withDesc": 160
+      "days": 9,
+      "count": 144,
+      "withDesc": 144
     },
     {
       "source": "webncode",
@@ -21685,9 +21685,9 @@
       "sourceId": "mytvsuper_NOW8",
       "name": "that's 80s (免費)",
       "logo": "",
-      "days": 10,
-      "count": 140,
-      "withDesc": 140
+      "days": 9,
+      "count": 126,
+      "withDesc": 126
     },
     {
       "source": "webncode",
@@ -21695,9 +21695,9 @@
       "sourceId": "mytvsuper_NOWR",
       "name": "that's Rock (免費)",
       "logo": "",
-      "days": 10,
-      "count": 130,
-      "withDesc": 130
+      "days": 9,
+      "count": 117,
+      "withDesc": 117
     },
     {
       "source": "webncode",
@@ -21705,9 +21705,9 @@
       "sourceId": "mytvsuper_NOW9",
       "name": "that's 90s00s (免費)",
       "logo": "",
-      "days": 10,
-      "count": 140,
-      "withDesc": 140
+      "days": 9,
+      "count": 126,
+      "withDesc": 126
     },
     {
       "source": "webncode",
@@ -21715,9 +21715,9 @@
       "sourceId": "mytvsuper_CONC",
       "name": "Concerto (免費)",
       "logo": "",
-      "days": 10,
-      "count": 240,
-      "withDesc": 240
+      "days": 9,
+      "count": 216,
+      "withDesc": 216
     },
     {
       "source": "webncode",
@@ -21725,9 +21725,9 @@
       "sourceId": "mytvsuper_TRUR",
       "name": "TRACE Urban (免費)",
       "logo": "",
-      "days": 10,
-      "count": 140,
-      "withDesc": 140
+      "days": 9,
+      "count": 126,
+      "withDesc": 126
     },
     {
       "source": "webncode",
@@ -21735,8 +21735,8 @@
       "sourceId": "mytvsuper_NWDR",
       "name": "NewTV古裝劇場 (免費)",
       "logo": "",
-      "days": 10,
-      "count": 320,
+      "days": 9,
+      "count": 288,
       "withDesc": 0
     },
     {
@@ -21745,8 +21745,8 @@
       "sourceId": "mytvsuper_NWED",
       "name": "New TV科教 (免費)",
       "logo": "",
-      "days": 10,
-      "count": 440,
+      "days": 9,
+      "count": 396,
       "withDesc": 0
     },
     {
@@ -21755,8 +21755,8 @@
       "sourceId": "mytvsuper_NWHE",
       "name": "NewTV養生 (免費)",
       "logo": "",
-      "days": 10,
-      "count": 340,
+      "days": 9,
+      "count": 306,
       "withDesc": 0
     },
     {
@@ -21765,9 +21765,9 @@
       "sourceId": "mytvsuper_NWMA",
       "name": "NewTV功夫 (免費)",
       "logo": "",
-      "days": 10,
-      "count": 410,
-      "withDesc": 410
+      "days": 9,
+      "count": 369,
+      "withDesc": 369
     },
     {
       "source": "webncode",
@@ -21775,8 +21775,8 @@
       "sourceId": "mytvsuper_CTSN",
       "name": "無線衛星新聞台",
       "logo": "",
-      "days": 10,
-      "count": 240,
+      "days": 9,
+      "count": 216,
       "withDesc": 0
     },
     {
@@ -21785,9 +21785,9 @@
       "sourceId": "mytvsuper_CCNA",
       "name": "亞洲新聞台",
       "logo": "",
-      "days": 10,
-      "count": 230,
-      "withDesc": 230
+      "days": 9,
+      "count": 207,
+      "withDesc": 207
     },
     {
       "source": "webncode",
@@ -21795,9 +21795,9 @@
       "sourceId": "mytvsuper_CJAZ",
       "name": "半島電視台英語頻道",
       "logo": "",
-      "days": 10,
-      "count": 350,
-      "withDesc": 350
+      "days": 9,
+      "count": 315,
+      "withDesc": 315
     },
     {
       "source": "webncode",
@@ -21805,8 +21805,8 @@
       "sourceId": "mytvsuper_CF24",
       "name": "France 24",
       "logo": "",
-      "days": 10,
-      "count": 240,
+      "days": 9,
+      "count": 216,
       "withDesc": 0
     },
     {
@@ -21815,9 +21815,9 @@
       "sourceId": "mytvsuper_CDW1",
       "name": "DW",
       "logo": "",
-      "days": 10,
-      "count": 620,
-      "withDesc": 280
+      "days": 9,
+      "count": 558,
+      "withDesc": 252
     },
     {
       "source": "webncode",
@@ -21825,9 +21825,9 @@
       "sourceId": "mytvsuper_CNHK",
       "name": "NHK World-Japan",
       "logo": "",
-      "days": 10,
-      "count": 610,
-      "withDesc": 610
+      "days": 9,
+      "count": 549,
+      "withDesc": 549
     },
     {
       "source": "webncode",
@@ -21835,8 +21835,8 @@
       "sourceId": "mytvsuper_CARI",
       "name": "Arirang TV",
       "logo": "",
-      "days": 10,
-      "count": 550,
+      "days": 9,
+      "count": 495,
       "withDesc": 0
     },
     {
@@ -21845,9 +21845,9 @@
       "sourceId": "mytvsuper_NSWD",
       "name": "NewsWorld (免費)",
       "logo": "",
-      "days": 10,
-      "count": 480,
-      "withDesc": 480
+      "days": 9,
+      "count": 432,
+      "withDesc": 432
     },
     {
       "source": "webncode",
@@ -21855,9 +21855,9 @@
       "sourceId": "mytvsuper_INDO",
       "name": "The Indonesia Channel (免費)",
       "logo": "",
-      "days": 10,
-      "count": 230,
-      "withDesc": 230
+      "days": 9,
+      "count": 207,
+      "withDesc": 207
     },
     {
       "source": "webncode",
@@ -21865,9 +21865,9 @@
       "sourceId": "mytvsuper_EVT2",
       "name": "myTV SUPER直播足球2台",
       "logo": "",
-      "days": 10,
-      "count": 80,
-      "withDesc": 10
+      "days": 9,
+      "count": 72,
+      "withDesc": 9
     },
     {
       "source": "webncode",
@@ -21875,9 +21875,9 @@
       "sourceId": "mytvsuper_EVT3",
       "name": "myTV SUPER直播足球3台",
       "logo": "",
-      "days": 10,
-      "count": 90,
-      "withDesc": 10
+      "days": 9,
+      "count": 81,
+      "withDesc": 9
     },
     {
       "source": "webncode",
@@ -21885,8 +21885,8 @@
       "sourceId": "mytvsuper_EVT4",
       "name": "myTV SUPER直播足球4台",
       "logo": "",
-      "days": 10,
-      "count": 80,
+      "days": 9,
+      "count": 72,
       "withDesc": 0
     },
     {
@@ -21895,8 +21895,8 @@
       "sourceId": "mytvsuper_EVT5",
       "name": "myTV SUPER直播足球5台",
       "logo": "",
-      "days": 10,
-      "count": 80,
+      "days": 9,
+      "count": 72,
       "withDesc": 0
     },
     {
@@ -21905,8 +21905,8 @@
       "sourceId": "mytvsuper_EVT6",
       "name": "myTV SUPER直播足球6台",
       "logo": "",
-      "days": 10,
-      "count": 80,
+      "days": 9,
+      "count": 72,
       "withDesc": 0
     },
     {
@@ -21915,8 +21915,8 @@
       "sourceId": "mytvsuper_EVT7",
       "name": "myTV SUPER直播足球7台",
       "logo": "",
-      "days": 10,
-      "count": 80,
+      "days": 9,
+      "count": 72,
       "withDesc": 0
     },
     {
@@ -21925,8 +21925,8 @@
       "sourceId": "fantv_76",
       "name": "HOY 國際財經台",
       "logo": "",
-      "days": 9,
-      "count": 171,
+      "days": 8,
+      "count": 152,
       "withDesc": 0
     },
     {
@@ -21935,9 +21935,9 @@
       "sourceId": "fantv_77",
       "name": "HOY TV",
       "logo": "",
-      "days": 7,
-      "count": 273,
-      "withDesc": 84
+      "days": 6,
+      "count": 234,
+      "withDesc": 72
     },
     {
       "source": "webncode",
@@ -21945,9 +21945,9 @@
       "sourceId": "fantv_78",
       "name": "HOY 資訊台",
       "logo": "",
-      "days": 9,
-      "count": 387,
-      "withDesc": 18
+      "days": 8,
+      "count": 344,
+      "withDesc": 16
     },
     {
       "source": "webncode",
@@ -23805,9 +23805,9 @@
       "sourceId": "332",
       "name": "Now新聞台",
       "logo": "",
-      "days": 5,
-      "count": 259,
-      "withDesc": 259
+      "days": 6,
+      "count": 311,
+      "withDesc": 311
     },
     {
       "source": "nowplayer",
@@ -24692,26 +24692,6 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "6",
-      "name": "民視HD",
-      "logo": "",
-      "days": 7,
-      "count": 224,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
-      "sourceId": "2",
-      "name": "頻道總表",
-      "logo": "",
-      "days": 0,
-      "count": 0,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "8",
       "name": "台視HD",
       "logo": "",
@@ -24727,6 +24707,26 @@
       "logo": "",
       "days": 7,
       "count": 217,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "2",
+      "name": "頻道總表",
+      "logo": "",
+      "days": 0,
+      "count": 0,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "6",
+      "name": "民視HD",
+      "logo": "",
+      "days": 7,
+      "count": 224,
       "withDesc": 0
     },
     {
@@ -24752,16 +24752,6 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "9",
-      "name": "大愛電視HD",
-      "logo": "",
-      "days": 7,
-      "count": 452,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "13",
       "name": "公視(HD)",
       "logo": "",
@@ -24782,11 +24772,11 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "15",
-      "name": "好消息HD",
+      "sourceId": "9",
+      "name": "大愛電視HD",
       "logo": "",
       "days": 7,
-      "count": 324,
+      "count": 452,
       "withDesc": 0
     },
     {
@@ -24797,6 +24787,26 @@
       "logo": "",
       "days": 7,
       "count": 199,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "15",
+      "name": "好消息HD",
+      "logo": "",
+      "days": 7,
+      "count": 324,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "96",
+      "name": "華視教育體育文化台",
+      "logo": "",
+      "days": 5,
+      "count": 219,
       "withDesc": 0
     },
     {
@@ -24822,31 +24832,21 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "98",
-      "name": "公視兒少台HD",
-      "logo": "",
-      "days": 7,
-      "count": 325,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
-      "sourceId": "96",
-      "name": "華視教育體育文化台",
-      "logo": "",
-      "days": 5,
-      "count": 219,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "99",
       "name": "大愛二台HD",
       "logo": "",
       "days": 7,
       "count": 337,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "98",
+      "name": "公視兒少台HD",
+      "logo": "",
+      "days": 7,
+      "count": 325,
       "withDesc": 0
     },
     {
@@ -24882,6 +24882,16 @@
     {
       "source": "mod",
       "region": "TW",
+      "sourceId": "106",
+      "name": "靖洋卡通台Nice Bingo HD",
+      "logo": "",
+      "days": 7,
+      "count": 315,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
       "sourceId": "105",
       "name": "尼克兒童頻道HD",
       "logo": "",
@@ -24897,16 +24907,6 @@
       "logo": "",
       "days": 7,
       "count": 306,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
-      "sourceId": "106",
-      "name": "靖洋卡通台Nice Bingo HD",
-      "logo": "",
-      "days": 7,
-      "count": 315,
       "withDesc": 0
     },
     {
@@ -24932,21 +24932,21 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "110",
-      "name": "Nick Jr.",
-      "logo": "",
-      "days": 7,
-      "count": 568,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "111",
       "name": "DREAMWORKS",
       "logo": "",
       "days": 7,
       "count": 439,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "110",
+      "name": "Nick Jr.",
+      "logo": "",
+      "days": 7,
+      "count": 568,
       "withDesc": 0
     },
     {
@@ -24982,16 +24982,6 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "154",
-      "name": "MTV綜合台HD",
-      "logo": "",
-      "days": 7,
-      "count": 336,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "152",
       "name": "Medici-arts HD",
       "logo": "",
@@ -25007,6 +24997,16 @@
       "logo": "",
       "days": 7,
       "count": 124,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "154",
+      "name": "MTV綜合台HD",
+      "logo": "",
+      "days": 7,
+      "count": 336,
       "withDesc": 0
     },
     {
@@ -25062,11 +25062,11 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "158",
-      "name": "CMusic",
+      "sourceId": "204",
+      "name": "博斯高球一台",
       "logo": "",
-      "days": 7,
-      "count": 3293,
+      "days": 6,
+      "count": 44,
       "withDesc": 0
     },
     {
@@ -25082,16 +25082,6 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "204",
-      "name": "博斯高球一台",
-      "logo": "",
-      "days": 6,
-      "count": 44,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "205",
       "name": "博斯高球二台",
       "logo": "",
@@ -25102,21 +25092,11 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "206",
-      "name": "博斯網球HD",
+      "sourceId": "158",
+      "name": "CMusic",
       "logo": "",
-      "days": 6,
-      "count": 41,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
-      "sourceId": "208",
-      "name": "博斯無限台HD",
-      "logo": "",
-      "days": 6,
-      "count": 60,
+      "days": 7,
+      "count": 3293,
       "withDesc": 0
     },
     {
@@ -25127,6 +25107,16 @@
       "logo": "",
       "days": 6,
       "count": 82,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "208",
+      "name": "博斯無限台HD",
+      "logo": "",
+      "days": 6,
+      "count": 60,
       "withDesc": 0
     },
     {
@@ -25152,6 +25142,16 @@
     {
       "source": "mod",
       "region": "TW",
+      "sourceId": "206",
+      "name": "博斯網球HD",
+      "logo": "",
+      "days": 6,
+      "count": 41,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
       "sourceId": "211",
       "name": "DAZN 3",
       "logo": "",
@@ -25172,31 +25172,21 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "213",
-      "name": "博斯運動二台HD",
-      "logo": "",
-      "days": 6,
-      "count": 83,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
-      "sourceId": "216",
-      "name": "EUROSPORT HD",
-      "logo": "",
-      "days": 7,
-      "count": 111,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "214",
       "name": "DAZN 2",
       "logo": "",
       "days": 7,
       "count": 105,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "213",
+      "name": "博斯運動二台HD",
+      "logo": "",
+      "days": 6,
+      "count": 83,
       "withDesc": 0
     },
     {
@@ -25212,11 +25202,11 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "250",
-      "name": "麥哲倫頻道 HD",
+      "sourceId": "216",
+      "name": "EUROSPORT HD",
       "logo": "",
       "days": 7,
-      "count": 226,
+      "count": 111,
       "withDesc": 0
     },
     {
@@ -25232,21 +25222,21 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "252",
-      "name": "BBC Earth HD",
+      "sourceId": "250",
+      "name": "麥哲倫頻道 HD",
       "logo": "",
       "days": 7,
-      "count": 178,
+      "count": 226,
       "withDesc": 0
     },
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "254",
-      "name": "Discovery科學HD",
+      "sourceId": "252",
+      "name": "BBC Earth HD",
       "logo": "",
       "days": 7,
-      "count": 274,
+      "count": 178,
       "withDesc": 0
     },
     {
@@ -25262,18 +25252,18 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "255",
-      "name": "DMAX HD",
+      "sourceId": "254",
+      "name": "Discovery科學HD",
       "logo": "",
       "days": 7,
-      "count": 247,
+      "count": 274,
       "withDesc": 0
     },
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "256",
-      "name": "EVE HD",
+      "sourceId": "255",
+      "name": "DMAX HD",
       "logo": "",
       "days": 7,
       "count": 247,
@@ -25292,11 +25282,11 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "258",
-      "name": "歷史頻道HD",
+      "sourceId": "256",
+      "name": "EVE HD",
       "logo": "",
       "days": 7,
-      "count": 186,
+      "count": 247,
       "withDesc": 0
     },
     {
@@ -25312,11 +25302,11 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "260",
-      "name": "BBC Lifestyle HD",
+      "sourceId": "258",
+      "name": "歷史頻道HD",
       "logo": "",
       "days": 7,
-      "count": 200,
+      "count": 186,
       "withDesc": 0
     },
     {
@@ -25342,6 +25332,26 @@
     {
       "source": "mod",
       "region": "TW",
+      "sourceId": "263",
+      "name": "LUXE TV HD",
+      "logo": "",
+      "days": 7,
+      "count": 344,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "264",
+      "name": "Lifetime HD",
+      "logo": "",
+      "days": 7,
+      "count": 162,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
       "sourceId": "265",
       "name": "KLT-靖天國際台HD",
       "logo": "",
@@ -25362,41 +25372,11 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "264",
-      "name": "Lifetime HD",
-      "logo": "",
-      "days": 7,
-      "count": 162,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
-      "sourceId": "263",
-      "name": "LUXE TV HD",
-      "logo": "",
-      "days": 7,
-      "count": 344,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "267",
       "name": "滾動力 rollor",
       "logo": "",
       "days": 7,
       "count": 168,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
-      "sourceId": "268",
-      "name": "HGTV居家樂活頻道",
-      "logo": "",
-      "days": 7,
-      "count": 284,
       "withDesc": 0
     },
     {
@@ -25412,11 +25392,11 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "275",
-      "name": "美食星球HD",
+      "sourceId": "268",
+      "name": "HGTV居家樂活頻道",
       "logo": "",
       "days": 7,
-      "count": 168,
+      "count": 284,
       "withDesc": 0
     },
     {
@@ -25447,6 +25427,16 @@
       "logo": "",
       "days": 7,
       "count": 147,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "275",
+      "name": "美食星球HD",
+      "logo": "",
+      "days": 7,
+      "count": 168,
       "withDesc": 0
     },
     {
@@ -25502,6 +25492,16 @@
     {
       "source": "mod",
       "region": "TW",
+      "sourceId": "260",
+      "name": "BBC Lifestyle HD",
+      "logo": "",
+      "days": 7,
+      "count": 200,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
       "sourceId": "301",
       "name": "三立綜合台HD",
       "logo": "",
@@ -25522,21 +25522,21 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "303",
-      "name": "靖天綜合台HD",
-      "logo": "",
-      "days": 5,
-      "count": 126,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "304",
       "name": "靖天育樂HD",
       "logo": "",
       "days": 7,
       "count": 203,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "303",
+      "name": "靖天綜合台HD",
+      "logo": "",
+      "days": 5,
+      "count": 126,
       "withDesc": 0
     },
     {
@@ -25582,21 +25582,21 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "309",
-      "name": "寰宇HD綜合",
-      "logo": "",
-      "days": 7,
-      "count": 147,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "310",
       "name": "中視菁采台HD",
       "logo": "",
       "days": 7,
       "count": 138,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "309",
+      "name": "寰宇HD綜合",
+      "logo": "",
+      "days": 7,
+      "count": 147,
       "withDesc": 0
     },
     {
@@ -25612,21 +25612,21 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "312",
-      "name": "壹電視綜合 HD",
-      "logo": "",
-      "days": 7,
-      "count": 187,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "313",
       "name": "緯來精采HD",
       "logo": "",
       "days": 7,
       "count": 151,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "312",
+      "name": "壹電視綜合 HD",
+      "logo": "",
+      "days": 7,
+      "count": 187,
       "withDesc": 0
     },
     {
@@ -25647,6 +25647,16 @@
       "logo": "",
       "days": 4,
       "count": 91,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "316",
+      "name": "民視第一台HD",
+      "logo": "",
+      "days": 5,
+      "count": 162,
       "withDesc": 0
     },
     {
@@ -25702,21 +25712,21 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "349",
-      "name": "東森購物3台HD",
-      "logo": "",
-      "days": 4,
-      "count": 96,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "348",
       "name": "momo2台HD",
       "logo": "",
       "days": 7,
       "count": 252,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "349",
+      "name": "東森購物3台HD",
+      "logo": "",
+      "days": 4,
+      "count": 96,
       "withDesc": 0
     },
     {
@@ -25732,21 +25742,21 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "352",
-      "name": "龍華戲劇HD",
-      "logo": "",
-      "days": 7,
-      "count": 93,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "351",
       "name": "台灣戲劇HD",
       "logo": "",
       "days": 7,
       "count": 180,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "352",
+      "name": "龍華戲劇HD",
+      "logo": "",
+      "days": 7,
+      "count": 93,
       "withDesc": 0
     },
     {
@@ -25762,31 +25772,21 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "354",
-      "name": "龍華影劇HD",
-      "logo": "",
-      "days": 7,
-      "count": 104,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
-      "sourceId": "316",
-      "name": "民視第一台HD",
-      "logo": "",
-      "days": 5,
-      "count": 162,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "355",
       "name": "愛爾達影劇台HD",
       "logo": "",
       "days": 7,
       "count": 173,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "354",
+      "name": "龍華影劇HD",
+      "logo": "",
+      "days": 7,
+      "count": 104,
       "withDesc": 0
     },
     {
@@ -25802,21 +25802,21 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "358",
-      "name": "EYE TV戲劇台HD",
-      "logo": "",
-      "days": 7,
-      "count": 168,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "357",
       "name": "靖洋戲劇HD",
       "logo": "",
       "days": 5,
       "count": 126,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "358",
+      "name": "EYE TV戲劇台HD",
+      "logo": "",
+      "days": 7,
+      "count": 168,
       "withDesc": 0
     },
     {
@@ -25842,11 +25842,11 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "374",
-      "name": "Animax",
+      "sourceId": "372",
+      "name": "曼迪日本台HD",
       "logo": "",
       "days": 7,
-      "count": 336,
+      "count": 325,
       "withDesc": 0
     },
     {
@@ -25862,11 +25862,11 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "372",
-      "name": "曼迪日本台HD",
+      "sourceId": "374",
+      "name": "Animax",
       "logo": "",
       "days": 7,
-      "count": 325,
+      "count": 336,
       "withDesc": 0
     },
     {
@@ -25942,21 +25942,21 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "398",
-      "name": "momo1台HD",
-      "logo": "",
-      "days": 7,
-      "count": 252,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "399",
       "name": "東森購物4台HD",
       "logo": "",
       "days": 4,
       "count": 96,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "398",
+      "name": "momo1台HD",
+      "logo": "",
+      "days": 7,
+      "count": 252,
       "withDesc": 0
     },
     {
@@ -25982,21 +25982,21 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "502",
-      "name": "寰宇新聞台灣台HD",
-      "logo": "",
-      "days": 7,
-      "count": 168,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "503",
       "name": "台視新聞HD",
       "logo": "",
       "days": 7,
       "count": 179,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "502",
+      "name": "寰宇新聞台灣台HD",
+      "logo": "",
+      "days": 7,
+      "count": 168,
       "withDesc": 0
     },
     {
@@ -26052,16 +26052,6 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "520",
-      "name": "寰宇財經HD",
-      "logo": "",
-      "days": 7,
-      "count": 168,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "521",
       "name": "台視財經HD",
       "logo": "",
@@ -26082,11 +26072,11 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "546",
-      "name": "東森購物5台HD",
+      "sourceId": "520",
+      "name": "寰宇財經HD",
       "logo": "",
-      "days": 4,
-      "count": 96,
+      "days": 7,
+      "count": 168,
       "withDesc": 0
     },
     {
@@ -26102,41 +26092,11 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "553",
-      "name": "Channel NewsAsia",
-      "logo": "",
-      "days": 7,
-      "count": 211,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
-      "sourceId": "554",
-      "name": "CNBC Asia",
-      "logo": "",
-      "days": 7,
-      "count": 283,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "552",
       "name": "Bloomberg",
       "logo": "",
       "days": 7,
       "count": 162,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
-      "sourceId": "555",
-      "name": "Euronews",
-      "logo": "",
-      "days": 7,
-      "count": 575,
       "withDesc": 0
     },
     {
@@ -26152,11 +26112,41 @@
     {
       "source": "mod",
       "region": "TW",
+      "sourceId": "553",
+      "name": "Channel NewsAsia",
+      "logo": "",
+      "days": 7,
+      "count": 211,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
       "sourceId": "556",
       "name": "德國之聲",
       "logo": "",
       "days": 7,
       "count": 521,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "555",
+      "name": "Euronews",
+      "logo": "",
+      "days": 7,
+      "count": 575,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "554",
+      "name": "CNBC Asia",
+      "logo": "",
+      "days": 7,
+      "count": 283,
       "withDesc": 0
     },
     {
@@ -26272,6 +26262,16 @@
     {
       "source": "mod",
       "region": "TW",
+      "sourceId": "546",
+      "name": "東森購物5台HD",
+      "logo": "",
+      "days": 4,
+      "count": 96,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
       "sourceId": "617",
       "name": "ROCK Action HD",
       "logo": "",
@@ -26342,21 +26342,21 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "627",
-      "name": "CinemaWorld HD",
-      "logo": "",
-      "days": 7,
-      "count": 100,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "626",
       "name": "CatchPlay HD",
       "logo": "",
       "days": 5,
       "count": 80,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "627",
+      "name": "CinemaWorld HD",
+      "logo": "",
+      "days": 7,
+      "count": 100,
       "withDesc": 0
     },
     {
@@ -26402,16 +26402,6 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "701",
-      "name": "佛衛慈悲台",
-      "logo": "",
-      "days": 7,
-      "count": 216,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "700",
       "name": "唯心電視HD",
       "logo": "",
@@ -26422,11 +26412,11 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "702",
-      "name": "華藏衛視HD",
+      "sourceId": "701",
+      "name": "佛衛慈悲台",
       "logo": "",
       "days": 7,
-      "count": 191,
+      "count": 216,
       "withDesc": 0
     },
     {
@@ -26437,6 +26427,16 @@
       "logo": "",
       "days": 7,
       "count": 168,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "702",
+      "name": "華藏衛視HD",
+      "logo": "",
+      "days": 7,
+      "count": 191,
       "withDesc": 0
     },
     {
@@ -26472,21 +26472,21 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "731",
-      "name": "信吉藝文台HD",
-      "logo": "",
-      "days": 7,
-      "count": 91,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "732",
       "name": "大立電視台 HD",
       "logo": "",
       "days": 7,
       "count": 168,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "731",
+      "name": "信吉藝文台HD",
+      "logo": "",
+      "days": 7,
+      "count": 91,
       "withDesc": 0
     },
     {
@@ -26512,21 +26512,21 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "736",
-      "name": "番薯電視台",
-      "logo": "",
-      "days": 7,
-      "count": 14,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "735",
       "name": "天良綜合台 HD",
       "logo": "",
       "days": 7,
       "count": 105,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "736",
+      "name": "番薯電視台",
+      "logo": "",
+      "days": 7,
+      "count": 14,
       "withDesc": 0
     },
     {
