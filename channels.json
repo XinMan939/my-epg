@@ -753,7 +753,7 @@
     ],
     "logo": "http://oss.cztv.com/ucc/20200123/ad3c07c7910e475a8631e4cff5a9431c.png",
     "hasEpg": true,
-    "programmeCount": 81
+    "programmeCount": 159
   },
   {
     "id": "HunanEconomyChannel.cn",
@@ -821,7 +821,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 120
+    "programmeCount": 240
   },
   {
     "id": "ZhejiangMinshengLeisure.cn",
@@ -832,7 +832,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 28
+    "programmeCount": 145
   },
   {
     "id": "ZhejiangFilmEntertainmentChannel.cn",
@@ -854,7 +854,7 @@
     ],
     "logo": "http://oss.cztv.com/ucc/20200123/312d8aea2f2a4f678b084d2bd8dbcb05.png",
     "hasEpg": true,
-    "programmeCount": 185
+    "programmeCount": 374
   },
   {
     "id": "JiangsuCityChannel.cn",
@@ -2210,7 +2210,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 103
+    "programmeCount": 102
   },
   {
     "id": "FTVTravel.tw",
@@ -2609,7 +2609,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 85
+    "programmeCount": 95
   },
   {
     "id": "DAZN1.uk",
@@ -2695,7 +2695,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 70
+    "programmeCount": 69
   },
   {
     "id": "博斯网球.tw",
@@ -2862,7 +2862,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 124
+    "programmeCount": 123
   },
   {
     "id": "HBO强档巨献.tw",
