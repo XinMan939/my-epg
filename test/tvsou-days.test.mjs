@@ -13,6 +13,9 @@
  *   [3] tvmao.probeWeek：半月（只 3 天有）必须如实报 3 天，不能虚报 7
  *   [4] 源码护栏：listChannels 推出去的条目必须带 days / count，
  *       且不许出现硬编码的非零天数（天数只能来自探测）
+ *   [5] fallbackOnly：周栅格源不许靠天数把「有简介的源」顶下去（2026-10-28 加）
+ *   [6] 港澳台目录壳护栏：tvsou 那 30 条永不发节目单的条目必须被剔除，
+ *       且这个名单**只许出现在 tvsou.mjs**（2026-10-28 加）
  *
  * 跑法：node test/tvsou-days.test.mjs
  */
@@ -179,6 +182,92 @@ console.log('\n[5] fallbackOnly：周栅格源不许靠天数把有简介的源�
   for (const f of ['tvsou.mjs', 'tvmao.mjs']) {
     const src = fs.readFileSync(new URL(`../src/sources/${f}`, import.meta.url), 'utf8')
     check(`${f}: 条目带 fallbackOnly: true`, /fallbackOnly: true/.test(src))
+  }
+}
+
+console.log('\n[6] 港澳台目录壳护栏：只属于 tvsou，绝不许上移')
+{
+  // ── 名单本身 ───────────────────────────────────────────────────────────
+  check('★ 名单命中澳门莲花 b6d548b0', tvsou.isDeadOverseas('b6d548b0'))
+  check('★ 名单命中澳亚卫视 d5f45f0e', tvsou.isDeadOverseas('d5f45f0e'))
+  check(
+    '繁体/不同写法的港台台也在名单里（大爱 / 寰宇财经 / 凤凰）',
+    ['36cbcaa4', 'a77c8f78', '65e0f71a'].every((id) => tvsou.isDeadOverseas(id))
+  )
+  check(
+    '★ 名单恰好 30 条（手滑改长/改短，这条会立刻炸）',
+    tvsou.DEAD_OVERSEAS_IDS.length === 30,
+    String(tvsou.DEAD_OVERSEAS_IDS.length)
+  )
+
+  // ── 反证：真在供数据的大陆台绝不能被误伤 ────────────────────────────────
+  for (const [id, name] of [
+    ['b3666b9d', 'CCTV-1（综合）'],
+    ['c5717c2d', 'CCTV-2（财经）'],
+    ['7d4daf1f', '湖南卫视'],
+    ['64e4e458', '广东体育'],
+    ['06a195fd', '安徽卫视'],
+    ['c3758372', '发现之旅'],
+  ]) {
+    check(`★ 不许误伤大陆台：${name}`, !tvsou.isDeadOverseas(id))
+  }
+  check('空 id / null / undefined 不崩也不误判', !tvsou.isDeadOverseas('') && !tvsou.isDeadOverseas(null) && !tvsou.isDeadOverseas(undefined))
+
+  // ── 探测必须一个请求都不发 ─────────────────────────────────────────────
+  let shellCalls = 0
+  const stShell = await tvsou.probeWeek('b6d548b0', {
+    fetch: () => {
+      shellCalls++
+      return { ok: true, status: 200, text: pageOf(5) }
+    },
+  })
+  check(
+    '★ 目录壳探测发 0 个请求（否则每次 catalog 重扫白烧 30×7 次）',
+    shellCalls === 0,
+    `实际 ${shellCalls} 个`
+  )
+  check('目录壳返回 {days:0, count:0}', stShell.days === 0 && stShell.count === 0, JSON.stringify(stShell))
+
+  // ── 源码护栏：剔除要发生在 listChannels 的两种 HTML 结构里 ─────────────
+  const src = fs.readFileSync(new URL('../src/sources/tvsou.mjs', import.meta.url), 'utf8')
+  const guardCount = [...src.matchAll(/if \(isDeadOverseas\(hash\)\)/g)].length
+  check(
+    '★ listChannels 的两个分支都要剔除（漏一个就漏一批：reA 有台标 / reB 只有名字）',
+    guardCount === 2,
+    `实际 ${guardCount} 处`
+  )
+  check(
+    '剔除是 continue（不是只打日志然后照push）',
+    /if \(isDeadOverseas\(hash\)\) \{[\s\S]{0,60}?continue/.test(src)
+  )
+
+  // ── ★★★ 越界护栏：这个名单只许出现在 tvsou.mjs ───────────────────────
+  const srcDir = new URL('../src/sources/', import.meta.url)
+  const files = fs.readdirSync(srcDir).filter((f) => f.endsWith('.mjs'))
+  const carriers = files.filter((f) => fs.readFileSync(new URL(f, srcDir), 'utf8').includes('NO_EPG_SOURCE_IDS'))
+  check(
+    '★★★ 名单只出现在 tvsou.mjs —— 上移到公共层会砍掉 521 个真有节目的港台条目',
+    carriers.length === 1 && carriers[0] === 'tvsou.mjs',
+    carriers.join(',')
+  )
+  for (const f of ['probe-cache.mjs', 'match.mjs']) {
+    const s2 = fs.readFileSync(new URL(`../src/${f}`, import.meta.url), 'utf8')
+    check(`★ ${f} 里没有「按名字判境外」的护栏（那是全局性的错）`, !/isDeadOverseas|NO_EPG_SOURCE_IDS/.test(s2))
+  }
+  // 其他源不许有等价的手写名单（港台正是它们的供数主力）
+  for (const f of ['webncode.mjs', 'litv.mjs', 'mod.mjs', 'nowplayer.mjs', 'elta.mjs', 'tdm.mjs', 'epgpw.mjs']) {
+    const s3 = fs.readFileSync(new URL(`../src/sources/${f}`, import.meta.url), 'utf8')
+    check(`★ ${f} 不参与这次剔除（港台是它的供数主力）`, !/NO_EPG_SOURCE_IDS|isDeadOverseas/.test(s3))
+  }
+
+  // ── 体检：只报告，不判失败（catalog 有 24h TTL，属外部可变状态，见 §7.3c）──
+  try {
+    const cat = JSON.parse(fs.readFileSync(new URL('../channels/catalog.json', import.meta.url), 'utf8')).items
+    const left = cat.filter((c) => c.source === 'tvsou' && tvsou.isDeadOverseas(c.sourceId))
+    const all = cat.filter((c) => c.source === 'tvsou').length
+    console.log(`  info catalog: tvsou ${all} 条，其中目录壳残留 ${left.length} 条（剔后应为 446 / 0）`)
+  } catch {
+    /* 没有 catalog 就跳过 */
   }
 }
 

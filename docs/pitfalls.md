@@ -1257,6 +1257,7 @@ build 把「目标日期」映射成 weekday（周一到周日）再去请求 `/
   补完之后报表从 `empty(tvsou:xxx=0)` 变成 `0 天 / 0 条`，差别是**说得清了**，不是**有数据了**。
 - tvsou 476 个条目里 **412 个是空壳**（86.6%），`difang`（地方）分类 44/44 全空。
   这批死台唯一的用处是把 catalog 撑大，别指望它们。
+  （其中港澳台那 30 个已在第十八轮按静态名单剔除，见下面 7.1j-补；剩下 446 条仍有 382 个空壳。）
 - ★★ 补完 days 的**副作用**：这两个源第一次有能力赢下主源，288 个目标里 **81 个主源翻转**
   （epgpw 6 天 → tvmao/tvsou 7 天）。**这一步是踩坑点，结论被 CI 推翻过一次，必须写清**：
   - 我先在本机抽样 10 个台做前后对比（同一份 epgpw 缓存，只改 catalog）：
@@ -1292,6 +1293,60 @@ build 把「目标日期」映射成 weekday（周一到周日）再去请求 `/
     （19/81/24/12/39/18 条）—— 它们上游只给「当天窗口」。所以「还缺 N 个频道」必须带时刻，
     否则第二天就自相矛盾（§7.1b 同一个坑，这次踩在文档上：README 曾把 4 个空频道写成 10 个）。
 
+#### 7.1j-补 ★★ tvsou 的港澳台条目是「目录壳」，永久剔除（2026-10-28 第十八轮）
+
+补完 days 之后才看清：**tvsou 的港澳台条目有入口、有台标，但上游从来不录节目单。**
+这不是抓取问题，也不是我们解析错了，是**上游不给**（政策原因，2026-10-28 与用户确认，
+短期内不会变）。所以「补 days 就能救澳门莲花 / 澳亚卫视」这条路**到此为止**。
+
+实测对账（`channels/catalog.json`，2026-10-28）：
+
+| 源 | 港台名条目 | 其中有节目 | 说明 |
+|---|---|---|---|
+| **tvsou** | **30** | **0** | 目录壳 |
+| epgpw | 268 | 266 | 正常 |
+| mod | 71 | 71 | 正常 |
+| webncode | 65 | 63 | 正常 |
+| litv | 60 | 60 | 正常 |
+| nowplayer | 44 | 43 | 正常 |
+| elta | 9 | 9 | 正常 |
+| tdm | 5 | 5 | 正常 |
+| fengshows | 3 | 3 | 正常 |
+| tvmao | 1 | 1 | 正常（那条其实是大陆的央视购物） |
+
+非 tvsou 一侧合计 **521 个港台条目真有节目**，正是我们 119 个台湾台 / 28 个香港台 /
+6 个澳门台的供数主力。**这张表就是「护栏为什么只能属于 tvsou」的证据。**
+
+改动（`src/sources/tvsou.mjs`）：
+
+1. 加静态名单 `NO_EPG_SOURCE_IDS`（**30 个 sourceId**，逐条带分类 + 台名注释）。
+2. `listChannels()` 的**两个**解析分支都在 `push` 前 `continue` 掉（reA 带台标 / reB 只有名字，
+   漏一个就漏一批），并打一行「跳过 N 个港澳台目录壳」。
+3. `probeWeek()` 开头直接返回 `{days:0,count:0}` —— 一个请求都不发，防止有人绕过 `listChannels` 调用它。
+4. `channels/catalog.json` 同步剔除这 30 条（items 2872 → 2842，tvsou 476 → 446）。
+
+**★ 判据为什么是静态名单、不是名字正则**：名单里 `cf937bd2 · CCTV中视购物` 带「中视」，
+其实是央视的购物频道，正则一匹配就误伤（它恰好也是死壳，所以今天无害，但明天不一定）。
+
+**★★★ 护栏为什么只许写在 tvsou.mjs**：一旦上移到 `probe-cache.mjs` / `match.mjs` 这类
+「按名字判境外」的公共层，上面那 521 个真在供数据的港台条目会被一起砍掉，产物直接少一半。
+`test/tvsou-days.test.mjs` [6] 用三条断言锁死：①名单只出现在 `tvsou.mjs` 里；
+②`probe-cache.mjs` / `match.mjs` 不含该符号；③另外 7 个源的源文件都不许出现它。
+这是硬规则 11（「写了文档也会再踩，必须落测试」）的又一次应用。
+
+**离线复放**（`matchChannels` 对比剔除前后，288 个目标，主源变化共 4 台）：
+
+```
+MacauLotus.hk      澳门莲花电视台   tvsou:b6d548b0 → no-match
+AsiaSatelliteTV.hk 澳亚卫视        tvsou:d5f45f0e → no-match
+DaAi1.tw           大爱Ⅰ           tvsou:36cbcaa4 → no-match（本来就靠 z51:e2:1450 供 140 条）
+寰宇财经.tw        寰宇财经         tvsou:a77c8f78 → epgpw:457342（原来这条是「先试死源再兜底」）
+```
+
+→ **产物零变化**：大爱Ⅰ 仍由 z51 补 140 条（`fillEmptyChannels` 只跳过「已有节目」的台，
+不要求匹配成功）、寰宇财经本来就落到 `epgpw:457342`、澳门莲花 / 澳亚本来就是 0 条。
+变的只是**它们现在真的以 `no-match` / 真源的身份出现**，「有源却抓不到」这个类别消失了。
+
 ### 7.2 行尾
 
 `channels.json` / `index.mjs` / `README.md` 是 CRLF，其余 LF。
@@ -1301,8 +1356,8 @@ Python `io.open(p,'w')` 会转 CRLF，必须 `newline='\n'`。
 ### 7.3 两道防线
 
 ```bash
-npm test    # 271 项 / 11 文件（normalize 23 + day-fill 52 + tvmao 33 + match 10
-            #   + timezone 23 + days-source 6 + tvsou-days 42 + litv-desc 25
+npm test    # 296 项 / 11 文件（normalize 23 + day-fill 52 + tvmao 33 + match 10
+            #   + timezone 23 + days-source 6 + tvsou-days 67 + litv-desc 25
             #   + override-desc 6 + cztv 20 + kbro 31）
 node test/audit-output.mjs output/epg.xml.gz   # 重叠/乱序/零长度/某天半截 → exit 1
 ```

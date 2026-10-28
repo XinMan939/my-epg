@@ -7,6 +7,7 @@
  *   - w1..w7 对应周一..周日
  *   - 只有开始时间，没有结束时间 → 结束时间由"下一条的开始时间"推算
  *   - 港澳台频道有入口但节目表全空（实测 TVB/凤凰/港台 均 0 条）
+ *     → 2026-10-28 已把这 30 条按静态名单永久剔除，见下面 `NO_EPG_SOURCE_IDS`
  *
  * 注意：直连偶发 000（连接被重置），必须带重试；走代理反而更容易失败。
  *
@@ -45,6 +46,68 @@ const PROBE_VER = 1
 
 /** 探测并发（tvsou 实测 ~1 请求/秒就压不上去了，别指望调大能快多少） */
 const PROBE_CONC = Number(process.env.TVSOU_PROBE_CONC || 6)
+
+/**
+ * ★★ tvsou 的港澳台条目是「目录壳」：有入口、有台标，**上游永远不录节目单**。
+ *
+ * 证据（2026-10-28 第十七轮逐台真探，476 条 × w1..w7）：名字像港台/境外的 30 条，
+ * `days` **全是 0**；同一批台在别的源上都有数据 ——
+ * epgpw 266 / mod 71 / webncode 63 / litv 60 / nowplayer 43 / elta 9 / tdm 5 / fengshows 3
+ * （合计 **521 个港台条目真有节目**）。所以这不是「我们没抓到」，是**上游不给**：
+ * 政策原因，短期不会变（2026-10-28 与用户确认）。
+ *
+ * 由此三条约束，改之前先看完：
+ *   ① 这 30 条**不再进 catalog**：不参与匹配，也不再每周白探 30 次请求。
+ *      效果是报表更诚实 —— 澳门莲花 / 澳亚卫视 从 `empty(tvsou:b6d548b0=0)`
+ *      变成 `no-match`（无源），不再伪装成「有源却抓不到」。
+ *   ② 判据必须是**静态 sourceId 名单**，不能用名字正则：
+ *      名单里 `cf937bd2 · CCTV中视购物` 带「中视」，其实是央视的购物频道，
+ *      正则一匹配就会误伤（它恰好也是死壳，所以今天无害，但明天不一定）。
+ *   ③ ★★★ 这条护栏**只属于 tvsou**。绝对不许上移到 `probe-cache.mjs` / `match.mjs`
+ *      或任何「按名字判境外」的公共层：一旦上移，会把上面那 521 个真在供数据的
+ *      港台条目一起砍掉，产物直接少一半（119 个台湾台 + 28 个香港台 + 6 个澳门台）。
+ *      `test/tvsou-days.test.mjs` [6] 有断言锁死「名单只出现在 tvsou.mjs 里」。
+ */
+const NO_EPG_SOURCE_IDS = new Set([
+  '46aa983c', // difang · 澳门电视台（我们有 TDM，见 tdm 源）
+  'b6d548b0', // difang · 澳门莲花电视台
+  'd5f45f0e', // difang · 澳亚卫视
+  '2a6dd8fd', // difang · 八大电视台
+  '4cd4c945', // difang · 博斯运动频道
+  '36cbcaa4', // difang · 大爱电视台
+  '5c939061', // difang · 东森电视台
+  'e8b05688', // difang · 非凡电视台
+  '3f5867dd', // difang · 好消息卫星电视台
+  'f11b2c62', // difang · 华视电视台
+  'a77c8f78', // difang · 寰宇财经台
+  'b7c61942', // difang · 靖天电视台
+  'd8df14e3', // difang · 龙华电视台
+  'e39ab7b8', // difang · 民视电视台
+  '6b5dcf12', // difang · 年代电视台
+  '6969cca5', // difang · 霹雳台湾台
+  '1cc690ff', // difang · 三立电视台
+  'e98015c8', // difang · 台湾超视
+  'e3ed3a88', // difang · 台湾电视台
+  'd8c63507', // difang · 台湾公视
+  'c405d7a2', // difang · 纬来电视台
+  '47a0ed58', // difang · 香港电台
+  '0814b435', // difang · 香港有线电视台
+  '95445003', // difang · 中视电视台
+  '8be4a756', // difang · 中天电视台
+  '51e1655d', // difang · TVB无线电视
+  '802a7467', // difang · TVBS
+  'f679053a', // gaoqing · 凤凰卫视（高清）
+  '65e0f71a', // shuzi · 凤凰卫视
+  'cf937bd2', // shuzi · CCTV中视购物（大陆台，但同为死壳；名字带「中视」正是不用正则的理由）
+])
+
+/** 这个 tvsou 条目是不是「永远不会发节目单」的港澳台目录壳（见上方注释 ③：仅限 tvsou） */
+export function isDeadOverseas(sourceId) {
+  return NO_EPG_SOURCE_IDS.has(String(sourceId || '').trim())
+}
+
+/** 只读快照，给单测用（防止名单被手滑改长/改短） */
+export const DEAD_OVERSEAS_IDS = Object.freeze([...NO_EPG_SOURCE_IDS])
 
 /**
  * 从频道日页解析节目行
@@ -123,6 +186,9 @@ export function cstWeekday(date = new Date()) {
  * @returns {Promise<{days: number, count: number}>} 失败/空台一律 {days:0, count:0}
  */
 export async function probeWeek(sourceId, opts = {}) {
+  // ★ 港澳台目录壳一个请求都不发（它们 0/7 天是上游从来不给，不是某天漏了）
+  if (isDeadOverseas(sourceId)) return { days: 0, count: 0 }
+
   // fetch 可注入（单测里用假 fetch 打桩，见 test/tvsou-days.test.mjs）
   const doFetch = opts.fetch || fetchText
   const cur = opts.weekday || cstWeekday()
@@ -169,6 +235,7 @@ async function mapLimit(items, n, fn) {
 export async function listChannels() {
   const out = []
   const seen = new Set()
+  let deadSkipped = 0
 
   for (const cat of CATEGORIES) {
     const res = await fetchText(`${BASE}/epg/${cat}/`, { timeout: 25000, retries: 3 })
@@ -189,6 +256,11 @@ export async function listChannels() {
       const [, hash, logo, name] = m
       if (seen.has(hash)) continue
       seen.add(hash)
+      // ★ 港澳台目录壳：不进 catalog（见 NO_EPG_SOURCE_IDS 注释 ①/③）
+      if (isDeadOverseas(hash)) {
+        deadSkipped++
+        continue
+      }
       out.push({
         source: 'tvsou',
         group: cat,
@@ -207,6 +279,11 @@ export async function listChannels() {
       const [, hash, name] = m
       if (seen.has(hash)) continue
       seen.add(hash)
+      // ★ 同上：港澳台目录壳不进 catalog
+      if (isDeadOverseas(hash)) {
+        deadSkipped++
+        continue
+      }
       out.push({
         source: 'tvsou',
         group: cat,
@@ -223,6 +300,11 @@ export async function listChannels() {
   }
 
   // ★ 逐台真探 days / count（见 probeWeek 注释，别改回「不探」或「硬编码 7」）
+  if (deadSkipped) {
+    log.info(
+      `[tvsou] 跳过 ${deadSkipped} 个港澳台目录壳（上游永不发节目单，见 NO_EPG_SOURCE_IDS 注释）`
+    )
+  }
   if (probeDisabled('TVSOU_PROBE')) {
     log.warn('[tvsou] 探测已关闭（TVSOU_PROBE=0 / NO_SOURCE_PROBE=1），days 全为 0')
     return out
