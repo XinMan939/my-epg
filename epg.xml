@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tv generator-info-name="my-epg" generator-info-url="https://github.com/" date="20261028111301 +0800">
+<tv generator-info-name="my-epg" generator-info-url="https://github.com/" date="20261028111855 +0800">
   <channel id="CCTV1.cn">
     <display-name lang="zh">CCTV-1 综合</display-name>
     <display-name lang="zh">CCTV-1</display-name>
@@ -126784,1911 +126784,1580 @@
     <title lang="zh">熟男有惑 #10 [粵]</title>
     <desc lang="zh">多春等偷聽拔冠講電話，跟蹤後發現拔冠師傅是盧甦。爵士勸盧甦回歸，但被堅拒。盧甦把離婚協議書送給麗莎，並表示已把另一份送了給多春；多春來到斥麗莎不念舊情。嘉婷看見嘉瑩在會議室工作，表示要爭取讓妹妹使用盧甦的辦公室，但爵士拒絕謂盧甦定會回到盛藍。嘉婷指公司亂七八糟，爵士意會她的話，與她起爭執。盛況和盛意在電視看到盛鳴，嘉婷決定飛到美國找盛鳴；嘉瑩代嘉婷發出行政指令，文具、廁紙等都要配給，使眾人極不習慣。麗莎在公司看見尤蜜，出言侮辱，卻發現指定請尤蜜打官司的，竟是麗莎的細叔伯……</desc>
   </programme>
+  <programme start="20261028000000 +0800" stop="20261028003000 +0800" channel="nowNews.hk">
+    <title lang="zh">Now深宵新聞</title>
+  </programme>
+  <programme start="20261028003000 +0800" stop="20261028010000 +0800" channel="nowNews.hk">
+    <title lang="zh">Now深宵新聞</title>
+  </programme>
+  <programme start="20261028010000 +0800" stop="20261028013000 +0800" channel="nowNews.hk">
+    <title lang="zh">Now深宵新聞</title>
+  </programme>
+  <programme start="20261028013000 +0800" stop="20261028020000 +0800" channel="nowNews.hk">
+    <title lang="zh">Now深宵新聞</title>
+  </programme>
+  <programme start="20261028020000 +0800" stop="20261028023000 +0800" channel="nowNews.hk">
+    <title lang="zh">Now深宵新聞</title>
+  </programme>
+  <programme start="20261028023000 +0800" stop="20261028030000 +0800" channel="nowNews.hk">
+    <title lang="zh">Now深宵新聞</title>
+  </programme>
+  <programme start="20261028030000 +0800" stop="20261028033000 +0800" channel="nowNews.hk">
+    <title lang="zh">Now深宵新聞</title>
+  </programme>
+  <programme start="20261028033000 +0800" stop="20261028040000 +0800" channel="nowNews.hk">
+    <title lang="zh">Now深宵新聞</title>
+  </programme>
+  <programme start="20261028040000 +0800" stop="20261028043000 +0800" channel="nowNews.hk">
+    <title lang="zh">Now深宵新聞</title>
+  </programme>
+  <programme start="20261028043000 +0800" stop="20261028050000 +0800" channel="nowNews.hk">
+    <title lang="zh">Now深宵新聞</title>
+  </programme>
+  <programme start="20261028050000 +0800" stop="20261028053000 +0800" channel="nowNews.hk">
+    <title lang="zh">Now深宵新聞</title>
+  </programme>
+  <programme start="20261028053000 +0800" stop="20261028060000 +0800" channel="nowNews.hk">
+    <title lang="zh">Now深宵新聞</title>
+  </programme>
+  <programme start="20261028060000 +0800" stop="20261028063000 +0800" channel="nowNews.hk">
+    <title lang="zh">Now早晨 -20261028 第一節[直播]</title>
+  </programme>
+  <programme start="20261028063000 +0800" stop="20261028070000 +0800" channel="nowNews.hk">
+    <title lang="zh">Now早晨 -20261028 第一節</title>
+  </programme>
+  <programme start="20261028070000 +0800" stop="20261028073000 +0800" channel="nowNews.hk">
+    <title lang="zh">Now早晨 -20261028 第二節[直播]</title>
+  </programme>
+  <programme start="20261028073000 +0800" stop="20261028080000 +0800" channel="nowNews.hk">
+    <title lang="zh">Now早晨 -20261028 第二節</title>
+  </programme>
+  <programme start="20261028080000 +0800" stop="20261028083000 +0800" channel="nowNews.hk">
+    <title lang="zh">Now早晨 -20261028 第三節[直播]</title>
+  </programme>
+  <programme start="20261028083000 +0800" stop="20261028090000 +0800" channel="nowNews.hk">
+    <title lang="zh">Now早晨 -20261028 第三節</title>
+  </programme>
+  <programme start="20261028090000 +0800" stop="20261028093000 +0800" channel="nowNews.hk">
+    <title lang="zh">Now新聞報道[直播]</title>
+  </programme>
   <programme start="20261028093000 +0800" stop="20261028120000 +0800" channel="nowNews.hk">
     <title lang="zh">時事全方位 -20261028[直播]</title>
-    <desc lang="zh">主持與學者、官員、議員及不同立場人士就具爭議性的話題及政府政策, 深入討論, 剖析背景, 讓觀眾可以更加深入了解事件。</desc>
   </programme>
   <programme start="20261028120000 +0800" stop="20261028123000 +0800" channel="nowNews.hk">
     <title lang="zh">Now午間新聞[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261028123000 +0800" stop="20261028130000 +0800" channel="nowNews.hk">
     <title lang="zh">Now午間新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261028130000 +0800" stop="20261028133000 +0800" channel="nowNews.hk">
     <title lang="zh">Now午間新聞[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261028133000 +0800" stop="20261028140000 +0800" channel="nowNews.hk">
     <title lang="zh">Now午間新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261028140000 +0800" stop="20261028142500 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261028142500 +0800" stop="20261028143000 +0800" channel="nowNews.hk">
     <title lang="zh">世味天下</title>
-    <desc lang="zh">「世味天下」每日從全球報章中揀選特別的時事報道, 有趣的花邊新聞, 助你擴闊視野。</desc>
   </programme>
   <programme start="20261028143000 +0800" stop="20261028145500 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261028145500 +0800" stop="20261028150000 +0800" channel="nowNews.hk">
     <title lang="zh">世味天下</title>
-    <desc lang="zh">「世味天下」每日從全球報章中揀選特別的時事報道, 有趣的花邊新聞, 助你擴闊視野。</desc>
   </programme>
   <programme start="20261028150000 +0800" stop="20261028153000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261028153000 +0800" stop="20261028160000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261028160000 +0800" stop="20261028162000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261028162000 +0800" stop="20261028163000 +0800" channel="nowNews.hk">
     <title lang="zh">國際兩岸評論</title>
-    <desc lang="zh">世界局勢風雲變幻, 兩岸四地互動頻繁, 每個動作息息相關。「國際兩岸評論」, 有不同專家由淺入深, 助你掌握發展脈絡, 解構大趨勢, 洞察新領域。</desc>
   </programme>
   <programme start="20261028163000 +0800" stop="20261028165000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261028165000 +0800" stop="20261028170000 +0800" channel="nowNews.hk">
     <title lang="zh">國際兩岸評論</title>
-    <desc lang="zh">世界局勢風雲變幻, 兩岸四地互動頻繁, 每個動作息息相關。「國際兩岸評論」, 有不同專家由淺入深, 助你掌握發展脈絡, 解構大趨勢, 洞察新領域。</desc>
   </programme>
   <programme start="20261028170000 +0800" stop="20261028172500 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261028172500 +0800" stop="20261028173000 +0800" channel="nowNews.hk">
     <title lang="zh">世味天下</title>
-    <desc lang="zh">「世味天下」每日從全球報章中揀選特別的時事報道, 有趣的花邊新聞, 助你擴闊視野。</desc>
   </programme>
   <programme start="20261028173000 +0800" stop="20261028175500 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261028175500 +0800" stop="20261028180000 +0800" channel="nowNews.hk">
     <title lang="zh">世味天下</title>
-    <desc lang="zh">「世味天下」每日從全球報章中揀選特別的時事報道, 有趣的花邊新聞, 助你擴闊視野。</desc>
   </programme>
   <programme start="20261028180000 +0800" stop="20261028183000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261028183000 +0800" stop="20261028190000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261028190000 +0800" stop="20261028192500 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261028192500 +0800" stop="20261028193000 +0800" channel="nowNews.hk">
     <title lang="zh">世味天下</title>
-    <desc lang="zh">「世味天下」每日從全球報章中揀選特別的時事報道, 有趣的花邊新聞, 助你擴闊視野。</desc>
   </programme>
   <programme start="20261028193000 +0800" stop="20261028195500 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261028195500 +0800" stop="20261028200000 +0800" channel="nowNews.hk">
     <title lang="zh">世味天下</title>
-    <desc lang="zh">「世味天下」每日從全球報章中揀選特別的時事報道, 有趣的花邊新聞, 助你擴闊視野。</desc>
   </programme>
   <programme start="20261028200000 +0800" stop="20261028203000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261028203000 +0800" stop="20261028210000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261028210000 +0800" stop="20261028213000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261028213000 +0800" stop="20261028220000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261028220000 +0800" stop="20261028223000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261028223000 +0800" stop="20261028230000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261028230000 +0800" stop="20261028233000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261028233000 +0800" stop="20261029000000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029000000 +0800" stop="20261029003000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029003000 +0800" stop="20261029010000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029010000 +0800" stop="20261029013000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029013000 +0800" stop="20261029020000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029020000 +0800" stop="20261029023000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029023000 +0800" stop="20261029030000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029030000 +0800" stop="20261029033000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029033000 +0800" stop="20261029040000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029040000 +0800" stop="20261029043000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029043000 +0800" stop="20261029050000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029050000 +0800" stop="20261029053000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029053000 +0800" stop="20261029060000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029060000 +0800" stop="20261029063000 +0800" channel="nowNews.hk">
     <title lang="zh">Now早晨 -20261029 第一節[直播]</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261029063000 +0800" stop="20261029070000 +0800" channel="nowNews.hk">
     <title lang="zh">Now早晨 -20261029 第一節</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261029070000 +0800" stop="20261029073000 +0800" channel="nowNews.hk">
     <title lang="zh">Now早晨 -20261029 第二節[直播]</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261029073000 +0800" stop="20261029080000 +0800" channel="nowNews.hk">
     <title lang="zh">Now早晨 -20261029 第二節</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261029080000 +0800" stop="20261029083000 +0800" channel="nowNews.hk">
     <title lang="zh">Now早晨 -20261029 第三節[直播]</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261029083000 +0800" stop="20261029090000 +0800" channel="nowNews.hk">
     <title lang="zh">Now早晨 -20261029 第三節</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261029090000 +0800" stop="20261029093000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029093000 +0800" stop="20261029120000 +0800" channel="nowNews.hk">
     <title lang="zh">時事全方位 -20261029[直播]</title>
-    <desc lang="zh">主持與學者、官員、議員及不同立場人士就具爭議性的話題及政府政策, 深入討論, 剖析背景, 讓觀眾可以更加深入了解事件。</desc>
   </programme>
   <programme start="20261029120000 +0800" stop="20261029123000 +0800" channel="nowNews.hk">
     <title lang="zh">Now午間新聞[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029123000 +0800" stop="20261029130000 +0800" channel="nowNews.hk">
     <title lang="zh">Now午間新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029130000 +0800" stop="20261029133000 +0800" channel="nowNews.hk">
     <title lang="zh">Now午間新聞[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029133000 +0800" stop="20261029140000 +0800" channel="nowNews.hk">
     <title lang="zh">Now午間新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029140000 +0800" stop="20261029142500 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029142500 +0800" stop="20261029143000 +0800" channel="nowNews.hk">
     <title lang="zh">世味天下</title>
-    <desc lang="zh">「世味天下」每日從全球報章中揀選特別的時事報道, 有趣的花邊新聞, 助你擴闊視野。</desc>
   </programme>
   <programme start="20261029143000 +0800" stop="20261029145500 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029145500 +0800" stop="20261029150000 +0800" channel="nowNews.hk">
     <title lang="zh">世味天下</title>
-    <desc lang="zh">「世味天下」每日從全球報章中揀選特別的時事報道, 有趣的花邊新聞, 助你擴闊視野。</desc>
   </programme>
   <programme start="20261029150000 +0800" stop="20261029153000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029153000 +0800" stop="20261029160000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029160000 +0800" stop="20261029162000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029162000 +0800" stop="20261029163000 +0800" channel="nowNews.hk">
     <title lang="zh">國際兩岸評論</title>
-    <desc lang="zh">世界局勢風雲變幻, 兩岸四地互動頻繁, 每個動作息息相關。「國際兩岸評論」, 有不同專家由淺入深, 助你掌握發展脈絡, 解構大趨勢, 洞察新領域。</desc>
   </programme>
   <programme start="20261029163000 +0800" stop="20261029165000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029165000 +0800" stop="20261029170000 +0800" channel="nowNews.hk">
     <title lang="zh">國際兩岸評論</title>
-    <desc lang="zh">世界局勢風雲變幻, 兩岸四地互動頻繁, 每個動作息息相關。「國際兩岸評論」, 有不同專家由淺入深, 助你掌握發展脈絡, 解構大趨勢, 洞察新領域。</desc>
   </programme>
   <programme start="20261029170000 +0800" stop="20261029172500 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029172500 +0800" stop="20261029173000 +0800" channel="nowNews.hk">
     <title lang="zh">世味天下</title>
-    <desc lang="zh">「世味天下」每日從全球報章中揀選特別的時事報道, 有趣的花邊新聞, 助你擴闊視野。</desc>
   </programme>
   <programme start="20261029173000 +0800" stop="20261029175500 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029175500 +0800" stop="20261029180000 +0800" channel="nowNews.hk">
     <title lang="zh">世味天下</title>
-    <desc lang="zh">「世味天下」每日從全球報章中揀選特別的時事報道, 有趣的花邊新聞, 助你擴闊視野。</desc>
   </programme>
   <programme start="20261029180000 +0800" stop="20261029183000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029183000 +0800" stop="20261029190000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029190000 +0800" stop="20261029192500 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029192500 +0800" stop="20261029193000 +0800" channel="nowNews.hk">
     <title lang="zh">世味天下</title>
-    <desc lang="zh">「世味天下」每日從全球報章中揀選特別的時事報道, 有趣的花邊新聞, 助你擴闊視野。</desc>
   </programme>
   <programme start="20261029193000 +0800" stop="20261029195500 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029195500 +0800" stop="20261029200000 +0800" channel="nowNews.hk">
     <title lang="zh">世味天下</title>
-    <desc lang="zh">「世味天下」每日從全球報章中揀選特別的時事報道, 有趣的花邊新聞, 助你擴闊視野。</desc>
   </programme>
   <programme start="20261029200000 +0800" stop="20261029203000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029203000 +0800" stop="20261029210000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029210000 +0800" stop="20261029213000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029213000 +0800" stop="20261029220000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029220000 +0800" stop="20261029223000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029223000 +0800" stop="20261029230000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029230000 +0800" stop="20261029233000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029233000 +0800" stop="20261030000000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030000000 +0800" stop="20261030003000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030003000 +0800" stop="20261030010000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030010000 +0800" stop="20261030013000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030013000 +0800" stop="20261030020000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030020000 +0800" stop="20261030023000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030023000 +0800" stop="20261030030000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030030000 +0800" stop="20261030033000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030033000 +0800" stop="20261030040000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030040000 +0800" stop="20261030043000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030043000 +0800" stop="20261030050000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030050000 +0800" stop="20261030053000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030053000 +0800" stop="20261030060000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030060000 +0800" stop="20261030063000 +0800" channel="nowNews.hk">
     <title lang="zh">Now早晨 -20261030 第一節[直播]</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261030063000 +0800" stop="20261030070000 +0800" channel="nowNews.hk">
     <title lang="zh">Now早晨 -20261030 第一節</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261030070000 +0800" stop="20261030073000 +0800" channel="nowNews.hk">
     <title lang="zh">Now早晨 -20261030 第二節[直播]</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261030073000 +0800" stop="20261030080000 +0800" channel="nowNews.hk">
     <title lang="zh">Now早晨 -20261030 第二節</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261030080000 +0800" stop="20261030083000 +0800" channel="nowNews.hk">
     <title lang="zh">Now早晨 -20261030 第三節[直播]</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261030083000 +0800" stop="20261030090000 +0800" channel="nowNews.hk">
     <title lang="zh">Now早晨 -20261030 第三節</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261030090000 +0800" stop="20261030093000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030093000 +0800" stop="20261030120000 +0800" channel="nowNews.hk">
     <title lang="zh">時事全方位 -20261030[直播]</title>
-    <desc lang="zh">主持與學者、官員、議員及不同立場人士就具爭議性的話題及政府政策, 深入討論, 剖析背景, 讓觀眾可以更加深入了解事件。</desc>
   </programme>
   <programme start="20261030120000 +0800" stop="20261030123000 +0800" channel="nowNews.hk">
     <title lang="zh">Now午間新聞[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030123000 +0800" stop="20261030130000 +0800" channel="nowNews.hk">
     <title lang="zh">Now午間新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030130000 +0800" stop="20261030133000 +0800" channel="nowNews.hk">
     <title lang="zh">Now午間新聞[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030133000 +0800" stop="20261030140000 +0800" channel="nowNews.hk">
     <title lang="zh">Now午間新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030140000 +0800" stop="20261030142500 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030142500 +0800" stop="20261030143000 +0800" channel="nowNews.hk">
     <title lang="zh">世味天下</title>
-    <desc lang="zh">「世味天下」每日從全球報章中揀選特別的時事報道, 有趣的花邊新聞, 助你擴闊視野。</desc>
   </programme>
   <programme start="20261030143000 +0800" stop="20261030145500 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030145500 +0800" stop="20261030150000 +0800" channel="nowNews.hk">
     <title lang="zh">世味天下</title>
-    <desc lang="zh">「世味天下」每日從全球報章中揀選特別的時事報道, 有趣的花邊新聞, 助你擴闊視野。</desc>
   </programme>
   <programme start="20261030150000 +0800" stop="20261030153000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030153000 +0800" stop="20261030160000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030160000 +0800" stop="20261030162000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030162000 +0800" stop="20261030163000 +0800" channel="nowNews.hk">
     <title lang="zh">國際兩岸評論</title>
-    <desc lang="zh">世界局勢風雲變幻, 兩岸四地互動頻繁, 每個動作息息相關。「國際兩岸評論」, 有不同專家由淺入深, 助你掌握發展脈絡, 解構大趨勢, 洞察新領域。</desc>
   </programme>
   <programme start="20261030163000 +0800" stop="20261030165000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030165000 +0800" stop="20261030170000 +0800" channel="nowNews.hk">
     <title lang="zh">國際兩岸評論</title>
-    <desc lang="zh">世界局勢風雲變幻, 兩岸四地互動頻繁, 每個動作息息相關。「國際兩岸評論」, 有不同專家由淺入深, 助你掌握發展脈絡, 解構大趨勢, 洞察新領域。</desc>
   </programme>
   <programme start="20261030170000 +0800" stop="20261030172500 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030172500 +0800" stop="20261030173000 +0800" channel="nowNews.hk">
     <title lang="zh">世味天下</title>
-    <desc lang="zh">「世味天下」每日從全球報章中揀選特別的時事報道, 有趣的花邊新聞, 助你擴闊視野。</desc>
   </programme>
   <programme start="20261030173000 +0800" stop="20261030175500 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030175500 +0800" stop="20261030180000 +0800" channel="nowNews.hk">
     <title lang="zh">世味天下</title>
-    <desc lang="zh">「世味天下」每日從全球報章中揀選特別的時事報道, 有趣的花邊新聞, 助你擴闊視野。</desc>
   </programme>
   <programme start="20261030180000 +0800" stop="20261030183000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030183000 +0800" stop="20261030190000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030190000 +0800" stop="20261030193000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030193000 +0800" stop="20261030195500 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030195500 +0800" stop="20261030200000 +0800" channel="nowNews.hk">
     <title lang="zh">世味天下</title>
-    <desc lang="zh">「世味天下」每日從全球報章中揀選特別的時事報道, 有趣的花邊新聞, 助你擴闊視野。</desc>
   </programme>
   <programme start="20261030200000 +0800" stop="20261030203000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030203000 +0800" stop="20261030210000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030210000 +0800" stop="20261030211600 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030211600 +0800" stop="20261030213000 +0800" channel="nowNews.hk">
     <title lang="zh">杏林在線 -20261030</title>
-    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261030213000 +0800" stop="20261030220000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030220000 +0800" stop="20261030223000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030223000 +0800" stop="20261030230000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030230000 +0800" stop="20261030233000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030233000 +0800" stop="20261031000000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031000000 +0800" stop="20261031003000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031003000 +0800" stop="20261031010000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031010000 +0800" stop="20261031013000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031013000 +0800" stop="20261031020000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031020000 +0800" stop="20261031023000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031023000 +0800" stop="20261031030000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031030000 +0800" stop="20261031033000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031033000 +0800" stop="20261031040000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031040000 +0800" stop="20261031043000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031043000 +0800" stop="20261031050000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031050000 +0800" stop="20261031053000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031053000 +0800" stop="20261031060000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031060000 +0800" stop="20261031063000 +0800" channel="nowNews.hk">
     <title lang="zh">Now早晨 -20261031 第一節[直播]</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261031063000 +0800" stop="20261031065400 +0800" channel="nowNews.hk">
     <title lang="zh">Now早晨 -20261031 第一節</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261031065400 +0800" stop="20261031070000 +0800" channel="nowNews.hk">
     <title lang="zh">杏林在線</title>
-    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261031070000 +0800" stop="20261031073000 +0800" channel="nowNews.hk">
     <title lang="zh">Now早晨 -20261031 第二節[直播]</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261031073000 +0800" stop="20261031075400 +0800" channel="nowNews.hk">
     <title lang="zh">Now早晨 -20261031 第二節</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261031075400 +0800" stop="20261031080000 +0800" channel="nowNews.hk">
     <title lang="zh">杏林在線</title>
-    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261031080000 +0800" stop="20261031083000 +0800" channel="nowNews.hk">
     <title lang="zh">Now早晨 -20261031 第三節[直播]</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261031083000 +0800" stop="20261031085400 +0800" channel="nowNews.hk">
     <title lang="zh">Now早晨 -20261031 第三節</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261031085400 +0800" stop="20261031090000 +0800" channel="nowNews.hk">
     <title lang="zh">杏林在線</title>
-    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261031090000 +0800" stop="20261031093000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031093000 +0800" stop="20261031100000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031100000 +0800" stop="20261031101600 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031101600 +0800" stop="20261031103000 +0800" channel="nowNews.hk">
     <title lang="zh">杏林在線 -20261030</title>
-    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261031103000 +0800" stop="20261031110000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031110000 +0800" stop="20261031113000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031113000 +0800" stop="20261031120000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031120000 +0800" stop="20261031123000 +0800" channel="nowNews.hk">
     <title lang="zh">Now午間新聞[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031123000 +0800" stop="20261031130000 +0800" channel="nowNews.hk">
     <title lang="zh">Now午間新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031130000 +0800" stop="20261031132100 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031132100 +0800" stop="20261031133000 +0800" channel="nowNews.hk">
     <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
-    <desc lang="zh">理財有方每集提供各項理財投資的實用知識, 滿足投資者的不同需要。</desc>
   </programme>
   <programme start="20261031133000 +0800" stop="20261031141600 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031141600 +0800" stop="20261031143000 +0800" channel="nowNews.hk">
     <title lang="zh">杏林在線 -20261026</title>
-    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261031143000 +0800" stop="20261031150000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031150000 +0800" stop="20261031152100 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031152100 +0800" stop="20261031153000 +0800" channel="nowNews.hk">
     <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
-    <desc lang="zh">理財有方每集提供各項理財投資的實用知識, 滿足投資者的不同需要。</desc>
   </programme>
   <programme start="20261031153000 +0800" stop="20261031154600 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031154600 +0800" stop="20261031160000 +0800" channel="nowNews.hk">
     <title lang="zh">杏林在線 -20261030</title>
-    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261031160000 +0800" stop="20261031161600 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031161600 +0800" stop="20261031163000 +0800" channel="nowNews.hk">
     <title lang="zh">杏林在線 -20261026</title>
-    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261031163000 +0800" stop="20261031164600 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031164600 +0800" stop="20261031170000 +0800" channel="nowNews.hk">
     <title lang="zh">杏林在線 -20261030</title>
-    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261031170000 +0800" stop="20261031172400 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031172400 +0800" stop="20261031173000 +0800" channel="nowNews.hk">
     <title lang="zh">氣象冷知識</title>
   </programme>
   <programme start="20261031173000 +0800" stop="20261031175400 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031175400 +0800" stop="20261031180000 +0800" channel="nowNews.hk">
     <title lang="zh">氣象冷知識</title>
   </programme>
   <programme start="20261031180000 +0800" stop="20261031183000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031183000 +0800" stop="20261031190000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031190000 +0800" stop="20261031193000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031193000 +0800" stop="20261031200000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031200000 +0800" stop="20261031203000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031203000 +0800" stop="20261031210000 +0800" channel="nowNews.hk">
     <title lang="zh">大鳴大放</title>
-    <desc lang="zh">識英雄重英雄, 請來各界重磅名人, 拋出論點, 言無不盡, 深入討論時事, 跨越維港神州, 宏觀全世界。</desc>
   </programme>
   <programme start="20261031210000 +0800" stop="20261031213000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031213000 +0800" stop="20261031220000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031220000 +0800" stop="20261031223000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031223000 +0800" stop="20261031230000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031230000 +0800" stop="20261031233000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031233000 +0800" stop="20261101000000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101000000 +0800" stop="20261101003000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101003000 +0800" stop="20261101010000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101010000 +0800" stop="20261101013000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101013000 +0800" stop="20261101020000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101020000 +0800" stop="20261101023000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101023000 +0800" stop="20261101030000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101030000 +0800" stop="20261101033000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101033000 +0800" stop="20261101040000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101040000 +0800" stop="20261101043000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101043000 +0800" stop="20261101050000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101050000 +0800" stop="20261101053000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101053000 +0800" stop="20261101060000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101060000 +0800" stop="20261101063000 +0800" channel="nowNews.hk">
     <title lang="zh">Now早晨 -20261101 第一節[直播]</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261101063000 +0800" stop="20261101065400 +0800" channel="nowNews.hk">
     <title lang="zh">Now早晨 -20261101 第一節</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261101065400 +0800" stop="20261101070000 +0800" channel="nowNews.hk">
     <title lang="zh">杏林在線</title>
-    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261101070000 +0800" stop="20261101073000 +0800" channel="nowNews.hk">
     <title lang="zh">Now早晨 -20261101 第二節[直播]</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261101073000 +0800" stop="20261101075400 +0800" channel="nowNews.hk">
     <title lang="zh">Now早晨 -20261101 第二節</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261101075400 +0800" stop="20261101080000 +0800" channel="nowNews.hk">
     <title lang="zh">杏林在線</title>
-    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261101080000 +0800" stop="20261101083000 +0800" channel="nowNews.hk">
     <title lang="zh">Now早晨 -20261101 第三節[直播]</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261101083000 +0800" stop="20261101085400 +0800" channel="nowNews.hk">
     <title lang="zh">Now早晨 -20261101 第三節</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261101085400 +0800" stop="20261101090000 +0800" channel="nowNews.hk">
     <title lang="zh">杏林在線</title>
-    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261101090000 +0800" stop="20261101093000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101093000 +0800" stop="20261101100000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101100000 +0800" stop="20261101101600 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101101600 +0800" stop="20261101103000 +0800" channel="nowNews.hk">
     <title lang="zh">杏林在線 -20261030</title>
-    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261101103000 +0800" stop="20261101110000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101110000 +0800" stop="20261101113000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101113000 +0800" stop="20261101120000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101120000 +0800" stop="20261101123000 +0800" channel="nowNews.hk">
     <title lang="zh">Now午間新聞[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101123000 +0800" stop="20261101130000 +0800" channel="nowNews.hk">
     <title lang="zh">Now午間新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101130000 +0800" stop="20261101132100 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101132100 +0800" stop="20261101133000 +0800" channel="nowNews.hk">
     <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
-    <desc lang="zh">理財有方每集提供各項理財投資的實用知識, 滿足投資者的不同需要。</desc>
   </programme>
   <programme start="20261101133000 +0800" stop="20261101141600 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101141600 +0800" stop="20261101143000 +0800" channel="nowNews.hk">
     <title lang="zh">杏林在線 -20261026</title>
-    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261101143000 +0800" stop="20261101150000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101150000 +0800" stop="20261101152100 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101152100 +0800" stop="20261101153000 +0800" channel="nowNews.hk">
     <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
-    <desc lang="zh">理財有方每集提供各項理財投資的實用知識, 滿足投資者的不同需要。</desc>
   </programme>
   <programme start="20261101153000 +0800" stop="20261101154600 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101154600 +0800" stop="20261101160000 +0800" channel="nowNews.hk">
     <title lang="zh">杏林在線 -20261030</title>
-    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261101160000 +0800" stop="20261101161600 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101161600 +0800" stop="20261101163000 +0800" channel="nowNews.hk">
     <title lang="zh">杏林在線 -20261026</title>
-    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261101163000 +0800" stop="20261101164600 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101164600 +0800" stop="20261101170000 +0800" channel="nowNews.hk">
     <title lang="zh">杏林在線 -20261030</title>
-    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261101170000 +0800" stop="20261101173000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101173000 +0800" stop="20261101180000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101180000 +0800" stop="20261101183000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101183000 +0800" stop="20261101190000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101190000 +0800" stop="20261101193000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101193000 +0800" stop="20261101200000 +0800" channel="nowNews.hk">
     <title lang="zh">華泰國際金融控股有限公司 呈獻: 一語千金 - 港好創科 -專訪創新科技及工業局局長 孫東</title>
-    <desc lang="zh">科技．轉變時代；創新．領導未來!《信報財經新聞》聯乘《Now TV》製作跨媒體節目《一語千金-港好創科》, 信報總編輯鄧傳鏘、主持余穎恒, 每星期請嚟創科界領軍人物, 出謀獻策 為香港貢獻力量, 嘉賓真知灼見, 一語值千金。</desc>
   </programme>
   <programme start="20261101200000 +0800" stop="20261101203000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101203000 +0800" stop="20261101210000 +0800" channel="nowNews.hk">
     <title lang="zh">大鳴大放</title>
-    <desc lang="zh">識英雄重英雄, 請來各界重磅名人, 拋出論點, 言無不盡, 深入討論時事, 跨越維港神州, 宏觀全世界。</desc>
   </programme>
   <programme start="20261101210000 +0800" stop="20261101213000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101213000 +0800" stop="20261101214600 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101214600 +0800" stop="20261101220000 +0800" channel="nowNews.hk">
     <title lang="zh">杏林在線</title>
-    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261101220000 +0800" stop="20261101223000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101223000 +0800" stop="20261101230000 +0800" channel="nowNews.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101230000 +0800" stop="20261101233000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101233000 +0800" stop="20261102103000 +0800" channel="nowNews.hk">
     <title lang="zh">Now深宵新聞[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261028000000 +0800" stop="20261028010000 +0800" channel="nowBusinessNewsChannel.hk">
+    <title lang="zh">港股今日睇 -20261027</title>
+  </programme>
+  <programme start="20261028010000 +0800" stop="20261028012100 +0800" channel="nowBusinessNewsChannel.hk">
+    <title lang="zh">Now財經新聞</title>
+  </programme>
+  <programme start="20261028012100 +0800" stop="20261028013000 +0800" channel="nowBusinessNewsChannel.hk">
+    <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
+  </programme>
+  <programme start="20261028013000 +0800" stop="20261028015100 +0800" channel="nowBusinessNewsChannel.hk">
+    <title lang="zh">Now財經新聞</title>
+  </programme>
+  <programme start="20261028015100 +0800" stop="20261028020000 +0800" channel="nowBusinessNewsChannel.hk">
+    <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
+  </programme>
+  <programme start="20261028020000 +0800" stop="20261028022100 +0800" channel="nowBusinessNewsChannel.hk">
+    <title lang="zh">樓市每日睇 -20261027</title>
+  </programme>
+  <programme start="20261028022100 +0800" stop="20261028023000 +0800" channel="nowBusinessNewsChannel.hk">
+    <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
+  </programme>
+  <programme start="20261028023000 +0800" stop="20261028030000 +0800" channel="nowBusinessNewsChannel.hk">
+    <title lang="zh">環球金融快線 -20261027</title>
+  </programme>
+  <programme start="20261028030000 +0800" stop="20261028032100 +0800" channel="nowBusinessNewsChannel.hk">
+    <title lang="zh">Now財經新聞</title>
+  </programme>
+  <programme start="20261028032100 +0800" stop="20261028033000 +0800" channel="nowBusinessNewsChannel.hk">
+    <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
+  </programme>
+  <programme start="20261028033000 +0800" stop="20261028035100 +0800" channel="nowBusinessNewsChannel.hk">
+    <title lang="zh">Now財經新聞</title>
+  </programme>
+  <programme start="20261028035100 +0800" stop="20261028040000 +0800" channel="nowBusinessNewsChannel.hk">
+    <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
+  </programme>
+  <programme start="20261028040000 +0800" stop="20261028042100 +0800" channel="nowBusinessNewsChannel.hk">
+    <title lang="zh">Now財經新聞</title>
+  </programme>
+  <programme start="20261028042100 +0800" stop="20261028043000 +0800" channel="nowBusinessNewsChannel.hk">
+    <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
+  </programme>
+  <programme start="20261028043000 +0800" stop="20261028045100 +0800" channel="nowBusinessNewsChannel.hk">
+    <title lang="zh">Now財經新聞</title>
+  </programme>
+  <programme start="20261028045100 +0800" stop="20261028050000 +0800" channel="nowBusinessNewsChannel.hk">
+    <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
+  </programme>
+  <programme start="20261028050000 +0800" stop="20261028052100 +0800" channel="nowBusinessNewsChannel.hk">
+    <title lang="zh">Now財經新聞</title>
+  </programme>
+  <programme start="20261028052100 +0800" stop="20261028053000 +0800" channel="nowBusinessNewsChannel.hk">
+    <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
+  </programme>
+  <programme start="20261028053000 +0800" stop="20261028055100 +0800" channel="nowBusinessNewsChannel.hk">
+    <title lang="zh">Now財經新聞</title>
+  </programme>
+  <programme start="20261028055100 +0800" stop="20261028060000 +0800" channel="nowBusinessNewsChannel.hk">
+    <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
+  </programme>
+  <programme start="20261028060000 +0800" stop="20261028063000 +0800" channel="nowBusinessNewsChannel.hk">
+    <title lang="zh">Now早晨 -20261028 第一節[直播]</title>
+  </programme>
+  <programme start="20261028063000 +0800" stop="20261028070000 +0800" channel="nowBusinessNewsChannel.hk">
+    <title lang="zh">Now早晨 -20261028 第一節</title>
+  </programme>
+  <programme start="20261028070000 +0800" stop="20261028073000 +0800" channel="nowBusinessNewsChannel.hk">
+    <title lang="zh">Now早晨 -20261028 第二節[直播]</title>
+  </programme>
+  <programme start="20261028073000 +0800" stop="20261028080000 +0800" channel="nowBusinessNewsChannel.hk">
+    <title lang="zh">Now早晨 -20261028 第二節</title>
+  </programme>
+  <programme start="20261028080000 +0800" stop="20261028083000 +0800" channel="nowBusinessNewsChannel.hk">
+    <title lang="zh">Now早晨 -20261028 第三節[直播]</title>
+  </programme>
+  <programme start="20261028083000 +0800" stop="20261028090000 +0800" channel="nowBusinessNewsChannel.hk">
+    <title lang="zh">Now早晨 -20261028 第三節</title>
+  </programme>
+  <programme start="20261028090000 +0800" stop="20261028093000 +0800" channel="nowBusinessNewsChannel.hk">
+    <title lang="zh">牛熊先機[直播]</title>
+  </programme>
+  <programme start="20261028093000 +0800" stop="20261028110000 +0800" channel="nowBusinessNewsChannel.hk">
+    <title lang="zh">交易時段 -20261028 第一節[直播]</title>
   </programme>
   <programme start="20261028110000 +0800" stop="20261028120000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">交易時段 -20261028 第二節[直播]</title>
-    <desc lang="zh">要掌握第一手市場資訊, 各路財經專家與主持緊貼大市走勢, 為你提供全面訊息, 分析港股焦點新聞消息。</desc>
   </programme>
   <programme start="20261028120000 +0800" stop="20261028122100 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">午間股評 -20261028[直播]</title>
-    <desc lang="zh">專家檢討早市整體表現, 探討個別股票成敗得失, 專業分析員提供買賣資訊, 輔助投資者進一步掌握股壇形勢, 部署下午再戰。</desc>
   </programme>
   <programme start="20261028122100 +0800" stop="20261028123000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
-    <desc lang="zh">理財有方每集提供各項理財投資的實用知識, 滿足投資者的不同需要。</desc>
   </programme>
   <programme start="20261028123000 +0800" stop="20261028130000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now午間新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261028130000 +0800" stop="20261028150000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">交易時段 -20261028 第三節[直播]</title>
-    <desc lang="zh">要掌握第一手市場資訊, 各路財經專家與主持緊貼大市走勢, 為你提供全面訊息, 分析港股焦點新聞消息。</desc>
   </programme>
   <programme start="20261028150000 +0800" stop="20261028160000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">交易時段 -20261028 第四節[直播]</title>
-    <desc lang="zh">要掌握第一手市場資訊, 各路財經專家與主持緊貼大市走勢, 為你提供全面訊息, 分析港股焦點新聞消息。</desc>
   </programme>
   <programme start="20261028160000 +0800" stop="20261028165100 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">收市檢討 -20261028[直播]</title>
-    <desc lang="zh">即日市況, 作出深入淺出的分析, 並會為接聽觀眾電話, 為投資者提供中肯的買賣策略。</desc>
   </programme>
   <programme start="20261028165100 +0800" stop="20261028170000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
-    <desc lang="zh">理財有方每集提供各項理財投資的實用知識, 滿足投資者的不同需要。</desc>
   </programme>
   <programme start="20261028170000 +0800" stop="20261028172500 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261028172500 +0800" stop="20261028173000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">世味天下</title>
-    <desc lang="zh">「世味天下」每日從全球報章中揀選特別的時事報道, 有趣的花邊新聞, 助你擴闊視野。</desc>
   </programme>
   <programme start="20261028173000 +0800" stop="20261028175500 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261028175500 +0800" stop="20261028180000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">世味天下</title>
-    <desc lang="zh">「世味天下」每日從全球報章中揀選特別的時事報道, 有趣的花邊新聞, 助你擴闊視野。</desc>
   </programme>
   <programme start="20261028180000 +0800" stop="20261028183000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261028183000 +0800" stop="20261028190000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261028190000 +0800" stop="20261028193000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now財經新聞[直播]</title>
-    <desc lang="zh">逢交易日為你報道最新本地、內地及環球財經消息、市場動態、匯市形勢等。</desc>
   </programme>
   <programme start="20261028193000 +0800" stop="20261028195500 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261028195500 +0800" stop="20261028200000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">世味天下</title>
-    <desc lang="zh">「世味天下」每日從全球報章中揀選特別的時事報道, 有趣的花邊新聞, 助你擴闊視野。</desc>
   </programme>
   <programme start="20261028200000 +0800" stop="20261028210000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now財經新聞</title>
-    <desc lang="zh">逢交易日為你報道最新本地、內地及環球財經消息、市場動態、匯市形勢等。</desc>
   </programme>
   <programme start="20261028210000 +0800" stop="20261028213000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">樓市每日睇 -20261028</title>
-    <desc lang="zh">請來真正地產界資深行家, 提供獨到行內人貼士, 報道及剖析每日樓市動態、最新一二手樓市資訊、成交紀錄等。</desc>
   </programme>
   <programme start="20261028213000 +0800" stop="20261028223000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">港股今日睇 -20261028</title>
-    <desc lang="zh">總結大市每日形勢、分析技術圖表、追蹤大戶動向, 更會請來專業評論員即時分析市場第一手資訊, 亦會接聽觀眾電話詢問股市概況, 為您仔細分析大市走勢。</desc>
   </programme>
   <programme start="20261028223000 +0800" stop="20261028230000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">環球金融快線 -20261028[直播]</title>
-    <desc lang="zh">要投資有道, 就請留意環球金融快線。每晚請來不同資深財經評論家為你把關, 全面審視美股開市前後形勢、外圍氣氛、歐洲股市、匯市、債市、油價和現貨金等市場因素, 深入分析環球市況。</desc>
   </programme>
   <programme start="20261028230000 +0800" stop="20261028233000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now財經新聞[直播]</title>
-    <desc lang="zh">逢交易日為你報道最新本地、內地及環球財經消息、市場動態、匯市形勢等。</desc>
   </programme>
   <programme start="20261028233000 +0800" stop="20261029000000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">交易時段精華 -20261028</title>
   </programme>
   <programme start="20261029000000 +0800" stop="20261029010000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">港股今日睇 -20261028</title>
-    <desc lang="zh">總結大市每日形勢、分析技術圖表、追蹤大戶動向, 更會請來專業評論員即時分析市場第一手資訊, 亦會接聽觀眾電話詢問股市概況, 為您仔細分析大市走勢。</desc>
   </programme>
   <programme start="20261029010000 +0800" stop="20261029020000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now財經新聞</title>
-    <desc lang="zh">逢交易日為你報道最新本地、內地及環球財經消息、市場動態、匯市形勢等。</desc>
   </programme>
   <programme start="20261029020000 +0800" stop="20261029023000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">樓市每日睇 -20261028</title>
-    <desc lang="zh">請來真正地產界資深行家, 提供獨到行內人貼士, 報道及剖析每日樓市動態、最新一二手樓市資訊、成交紀錄等。</desc>
   </programme>
   <programme start="20261029023000 +0800" stop="20261029030000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">環球金融快線 -20261028</title>
-    <desc lang="zh">要投資有道, 就請留意環球金融快線。每晚請來不同資深財經評論家為你把關, 全面審視美股開市前後形勢、外圍氣氛、歐洲股市、匯市、債市、油價和現貨金等市場因素, 深入分析環球市況。</desc>
   </programme>
   <programme start="20261029030000 +0800" stop="20261029060000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now財經新聞</title>
-    <desc lang="zh">逢交易日為你報道最新本地、內地及環球財經消息、市場動態、匯市形勢等。</desc>
   </programme>
   <programme start="20261029060000 +0800" stop="20261029063000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now早晨 -20261029 第一節[直播]</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261029063000 +0800" stop="20261029070000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now早晨 -20261029 第一節</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261029070000 +0800" stop="20261029073000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now早晨 -20261029 第二節[直播]</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261029073000 +0800" stop="20261029080000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now早晨 -20261029 第二節</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261029080000 +0800" stop="20261029083000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now早晨 -20261029 第三節[直播]</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261029083000 +0800" stop="20261029090000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now早晨 -20261029 第三節</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261029090000 +0800" stop="20261029093000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">牛熊先機[直播]</title>
-    <desc lang="zh">每朝開市前主持聯同各方專家點出左右市埸主要因素, 總結股市、金市、匯市、油價等表現, 開市是牛是熊, 為你全面剖析。</desc>
   </programme>
   <programme start="20261029093000 +0800" stop="20261029110000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">交易時段 -20261029 第一節[直播]</title>
-    <desc lang="zh">要掌握第一手市場資訊, 各路財經專家與主持緊貼大市走勢, 為你提供全面訊息, 分析港股焦點新聞消息。</desc>
   </programme>
   <programme start="20261029110000 +0800" stop="20261029120000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">交易時段 -20261029 第二節[直播]</title>
-    <desc lang="zh">要掌握第一手市場資訊, 各路財經專家與主持緊貼大市走勢, 為你提供全面訊息, 分析港股焦點新聞消息。</desc>
   </programme>
   <programme start="20261029120000 +0800" stop="20261029123000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">午間股評 -20261029[直播]</title>
-    <desc lang="zh">專家檢討早市整體表現, 探討個別股票成敗得失, 專業分析員提供買賣資訊, 輔助投資者進一步掌握股壇形勢, 部署下午再戰。</desc>
   </programme>
   <programme start="20261029123000 +0800" stop="20261029130000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now午間新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029130000 +0800" stop="20261029150000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">交易時段 -20261029 第三節[直播]</title>
-    <desc lang="zh">要掌握第一手市場資訊, 各路財經專家與主持緊貼大市走勢, 為你提供全面訊息, 分析港股焦點新聞消息。</desc>
   </programme>
   <programme start="20261029150000 +0800" stop="20261029160000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">交易時段 -20261029 第四節[直播]</title>
-    <desc lang="zh">要掌握第一手市場資訊, 各路財經專家與主持緊貼大市走勢, 為你提供全面訊息, 分析港股焦點新聞消息。</desc>
   </programme>
   <programme start="20261029160000 +0800" stop="20261029170000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">收市檢討 -20261029[直播]</title>
-    <desc lang="zh">即日市況, 作出深入淺出的分析, 並會為接聽觀眾電話, 為投資者提供中肯的買賣策略。</desc>
   </programme>
   <programme start="20261029170000 +0800" stop="20261029172500 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029172500 +0800" stop="20261029173000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">世味天下</title>
-    <desc lang="zh">「世味天下」每日從全球報章中揀選特別的時事報道, 有趣的花邊新聞, 助你擴闊視野。</desc>
   </programme>
   <programme start="20261029173000 +0800" stop="20261029175500 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029175500 +0800" stop="20261029180000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">世味天下</title>
-    <desc lang="zh">「世味天下」每日從全球報章中揀選特別的時事報道, 有趣的花邊新聞, 助你擴闊視野。</desc>
   </programme>
   <programme start="20261029180000 +0800" stop="20261029183000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029183000 +0800" stop="20261029190000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029190000 +0800" stop="20261029192100 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now財經新聞[直播]</title>
-    <desc lang="zh">逢交易日為你報道最新本地、內地及環球財經消息、市場動態、匯市形勢等。</desc>
   </programme>
   <programme start="20261029192100 +0800" stop="20261029193000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
-    <desc lang="zh">理財有方每集提供各項理財投資的實用知識, 滿足投資者的不同需要。</desc>
   </programme>
   <programme start="20261029193000 +0800" stop="20261029195500 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261029195500 +0800" stop="20261029200000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">世味天下</title>
-    <desc lang="zh">「世味天下」每日從全球報章中揀選特別的時事報道, 有趣的花邊新聞, 助你擴闊視野。</desc>
   </programme>
   <programme start="20261029200000 +0800" stop="20261029202100 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now財經新聞</title>
-    <desc lang="zh">逢交易日為你報道最新本地、內地及環球財經消息、市場動態、匯市形勢等。</desc>
   </programme>
   <programme start="20261029202100 +0800" stop="20261029203000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
-    <desc lang="zh">理財有方每集提供各項理財投資的實用知識, 滿足投資者的不同需要。</desc>
   </programme>
   <programme start="20261029203000 +0800" stop="20261029205100 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now財經新聞</title>
-    <desc lang="zh">逢交易日為你報道最新本地、內地及環球財經消息、市場動態、匯市形勢等。</desc>
   </programme>
   <programme start="20261029205100 +0800" stop="20261029210000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
-    <desc lang="zh">理財有方每集提供各項理財投資的實用知識, 滿足投資者的不同需要。</desc>
   </programme>
   <programme start="20261029210000 +0800" stop="20261029212100 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">樓市每日睇 -20261029</title>
-    <desc lang="zh">請來真正地產界資深行家, 提供獨到行內人貼士, 報道及剖析每日樓市動態、最新一二手樓市資訊、成交紀錄等。</desc>
   </programme>
   <programme start="20261029212100 +0800" stop="20261029213000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
-    <desc lang="zh">理財有方每集提供各項理財投資的實用知識, 滿足投資者的不同需要。</desc>
   </programme>
   <programme start="20261029213000 +0800" stop="20261029223000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">港股今日睇 -20261029</title>
-    <desc lang="zh">總結大市每日形勢、分析技術圖表、追蹤大戶動向, 更會請來專業評論員即時分析市場第一手資訊, 亦會接聽觀眾電話詢問股市概況, 為您仔細分析大市走勢。</desc>
   </programme>
   <programme start="20261029223000 +0800" stop="20261029230000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">環球金融快線 -20261029[直播]</title>
-    <desc lang="zh">要投資有道, 就請留意環球金融快線。每晚請來不同資深財經評論家為你把關, 全面審視美股開市前後形勢、外圍氣氛、歐洲股市、匯市、債市、油價和現貨金等市場因素, 深入分析環球市況。</desc>
   </programme>
   <programme start="20261029230000 +0800" stop="20261029232100 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now財經新聞[直播]</title>
-    <desc lang="zh">逢交易日為你報道最新本地、內地及環球財經消息、市場動態、匯市形勢等。</desc>
   </programme>
   <programme start="20261029232100 +0800" stop="20261029233000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
-    <desc lang="zh">理財有方每集提供各項理財投資的實用知識, 滿足投資者的不同需要。</desc>
   </programme>
   <programme start="20261029233000 +0800" stop="20261030000000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">交易時段精華 -20261029</title>
   </programme>
   <programme start="20261030000000 +0800" stop="20261030010000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">港股今日睇 -20261029</title>
-    <desc lang="zh">總結大市每日形勢、分析技術圖表、追蹤大戶動向, 更會請來專業評論員即時分析市場第一手資訊, 亦會接聽觀眾電話詢問股市概況, 為您仔細分析大市走勢。</desc>
   </programme>
   <programme start="20261030010000 +0800" stop="20261030012100 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now財經新聞</title>
-    <desc lang="zh">逢交易日為你報道最新本地、內地及環球財經消息、市場動態、匯市形勢等。</desc>
   </programme>
   <programme start="20261030012100 +0800" stop="20261030013000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
-    <desc lang="zh">理財有方每集提供各項理財投資的實用知識, 滿足投資者的不同需要。</desc>
   </programme>
   <programme start="20261030013000 +0800" stop="20261030015100 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now財經新聞</title>
-    <desc lang="zh">逢交易日為你報道最新本地、內地及環球財經消息、市場動態、匯市形勢等。</desc>
   </programme>
   <programme start="20261030015100 +0800" stop="20261030020000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
-    <desc lang="zh">理財有方每集提供各項理財投資的實用知識, 滿足投資者的不同需要。</desc>
   </programme>
   <programme start="20261030020000 +0800" stop="20261030022100 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">樓市每日睇 -20261029</title>
-    <desc lang="zh">請來真正地產界資深行家, 提供獨到行內人貼士, 報道及剖析每日樓市動態、最新一二手樓市資訊、成交紀錄等。</desc>
   </programme>
   <programme start="20261030022100 +0800" stop="20261030023000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
-    <desc lang="zh">理財有方每集提供各項理財投資的實用知識, 滿足投資者的不同需要。</desc>
   </programme>
   <programme start="20261030023000 +0800" stop="20261030030000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">環球金融快線 -20261029</title>
-    <desc lang="zh">要投資有道, 就請留意環球金融快線。每晚請來不同資深財經評論家為你把關, 全面審視美股開市前後形勢、外圍氣氛、歐洲股市、匯市、債市、油價和現貨金等市場因素, 深入分析環球市況。</desc>
   </programme>
   <programme start="20261030030000 +0800" stop="20261030032100 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now財經新聞</title>
-    <desc lang="zh">逢交易日為你報道最新本地、內地及環球財經消息、市場動態、匯市形勢等。</desc>
   </programme>
   <programme start="20261030032100 +0800" stop="20261030033000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
-    <desc lang="zh">理財有方每集提供各項理財投資的實用知識, 滿足投資者的不同需要。</desc>
   </programme>
   <programme start="20261030033000 +0800" stop="20261030035100 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now財經新聞</title>
-    <desc lang="zh">逢交易日為你報道最新本地、內地及環球財經消息、市場動態、匯市形勢等。</desc>
   </programme>
   <programme start="20261030035100 +0800" stop="20261030040000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
-    <desc lang="zh">理財有方每集提供各項理財投資的實用知識, 滿足投資者的不同需要。</desc>
   </programme>
   <programme start="20261030040000 +0800" stop="20261030042100 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now財經新聞</title>
-    <desc lang="zh">逢交易日為你報道最新本地、內地及環球財經消息、市場動態、匯市形勢等。</desc>
   </programme>
   <programme start="20261030042100 +0800" stop="20261030043000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
-    <desc lang="zh">理財有方每集提供各項理財投資的實用知識, 滿足投資者的不同需要。</desc>
   </programme>
   <programme start="20261030043000 +0800" stop="20261030045100 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now財經新聞</title>
-    <desc lang="zh">逢交易日為你報道最新本地、內地及環球財經消息、市場動態、匯市形勢等。</desc>
   </programme>
   <programme start="20261030045100 +0800" stop="20261030050000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
-    <desc lang="zh">理財有方每集提供各項理財投資的實用知識, 滿足投資者的不同需要。</desc>
   </programme>
   <programme start="20261030050000 +0800" stop="20261030052100 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now財經新聞</title>
-    <desc lang="zh">逢交易日為你報道最新本地、內地及環球財經消息、市場動態、匯市形勢等。</desc>
   </programme>
   <programme start="20261030052100 +0800" stop="20261030053000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
-    <desc lang="zh">理財有方每集提供各項理財投資的實用知識, 滿足投資者的不同需要。</desc>
   </programme>
   <programme start="20261030053000 +0800" stop="20261030055100 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now財經新聞</title>
-    <desc lang="zh">逢交易日為你報道最新本地、內地及環球財經消息、市場動態、匯市形勢等。</desc>
   </programme>
   <programme start="20261030055100 +0800" stop="20261030060000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
-    <desc lang="zh">理財有方每集提供各項理財投資的實用知識, 滿足投資者的不同需要。</desc>
   </programme>
   <programme start="20261030060000 +0800" stop="20261030063000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now早晨 -20261030 第一節[直播]</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261030063000 +0800" stop="20261030070000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now早晨 -20261030 第一節</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261030070000 +0800" stop="20261030073000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now早晨 -20261030 第二節[直播]</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261030073000 +0800" stop="20261030080000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now早晨 -20261030 第二節</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261030080000 +0800" stop="20261030083000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now早晨 -20261030 第三節[直播]</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261030083000 +0800" stop="20261030090000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now早晨 -20261030 第三節</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261030090000 +0800" stop="20261030093000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">牛熊先機[直播]</title>
-    <desc lang="zh">每朝開市前主持聯同各方專家點出左右市埸主要因素, 總結股市、金市、匯市、油價等表現, 開市是牛是熊, 為你全面剖析。</desc>
   </programme>
   <programme start="20261030093000 +0800" stop="20261030110000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">交易時段 -20261030 第一節[直播]</title>
-    <desc lang="zh">要掌握第一手市場資訊, 各路財經專家與主持緊貼大市走勢, 為你提供全面訊息, 分析港股焦點新聞消息。</desc>
   </programme>
   <programme start="20261030110000 +0800" stop="20261030120000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">交易時段 -20261030 第二節[直播]</title>
-    <desc lang="zh">要掌握第一手市場資訊, 各路財經專家與主持緊貼大市走勢, 為你提供全面訊息, 分析港股焦點新聞消息。</desc>
   </programme>
   <programme start="20261030120000 +0800" stop="20261030122100 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">午間股評 -20261030[直播]</title>
-    <desc lang="zh">專家檢討早市整體表現, 探討個別股票成敗得失, 專業分析員提供買賣資訊, 輔助投資者進一步掌握股壇形勢, 部署下午再戰。</desc>
   </programme>
   <programme start="20261030122100 +0800" stop="20261030123000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
-    <desc lang="zh">理財有方每集提供各項理財投資的實用知識, 滿足投資者的不同需要。</desc>
   </programme>
   <programme start="20261030123000 +0800" stop="20261030130000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now午間新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030130000 +0800" stop="20261030150000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">交易時段 -20261030 第三節[直播]</title>
-    <desc lang="zh">要掌握第一手市場資訊, 各路財經專家與主持緊貼大市走勢, 為你提供全面訊息, 分析港股焦點新聞消息。</desc>
   </programme>
   <programme start="20261030150000 +0800" stop="20261030160000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">交易時段 -20261030 第四節[直播]</title>
-    <desc lang="zh">要掌握第一手市場資訊, 各路財經專家與主持緊貼大市走勢, 為你提供全面訊息, 分析港股焦點新聞消息。</desc>
   </programme>
   <programme start="20261030160000 +0800" stop="20261030165100 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">收市檢討 -20261030[直播]</title>
-    <desc lang="zh">即日市況, 作出深入淺出的分析, 並會為接聽觀眾電話, 為投資者提供中肯的買賣策略。</desc>
   </programme>
   <programme start="20261030165100 +0800" stop="20261030170000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
-    <desc lang="zh">理財有方每集提供各項理財投資的實用知識, 滿足投資者的不同需要。</desc>
   </programme>
   <programme start="20261030170000 +0800" stop="20261030172500 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030172500 +0800" stop="20261030173000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">世味天下</title>
-    <desc lang="zh">「世味天下」每日從全球報章中揀選特別的時事報道, 有趣的花邊新聞, 助你擴闊視野。</desc>
   </programme>
   <programme start="20261030173000 +0800" stop="20261030175500 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030175500 +0800" stop="20261030180000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">世味天下</title>
-    <desc lang="zh">「世味天下」每日從全球報章中揀選特別的時事報道, 有趣的花邊新聞, 助你擴闊視野。</desc>
   </programme>
   <programme start="20261030180000 +0800" stop="20261030183000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030183000 +0800" stop="20261030190000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030190000 +0800" stop="20261030193000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now財經新聞[直播]</title>
-    <desc lang="zh">逢交易日為你報道最新本地、內地及環球財經消息、市場動態、匯市形勢等。</desc>
   </programme>
   <programme start="20261030193000 +0800" stop="20261030195500 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261030195500 +0800" stop="20261030200000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">世味天下</title>
-    <desc lang="zh">「世味天下」每日從全球報章中揀選特別的時事報道, 有趣的花邊新聞, 助你擴闊視野。</desc>
   </programme>
   <programme start="20261030200000 +0800" stop="20261030203000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now財經新聞</title>
-    <desc lang="zh">逢交易日為你報道最新本地、內地及環球財經消息、市場動態、匯市形勢等。</desc>
   </programme>
   <programme start="20261030203000 +0800" stop="20261030210000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">勞力士 呈獻: 帆船精髓系列 之 並肩起航 第21集</title>
-    <desc lang="zh">《帆船精髓系列》深入了解全球不同重要的帆船比賽，給你帶來最佳最時刻、場地及出色人物。讓觀眾重溫每個帆船比賽的精采。</desc>
   </programme>
   <programme start="20261030210000 +0800" stop="20261030213000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">樓市每日睇 -20261030</title>
-    <desc lang="zh">請來真正地產界資深行家, 提供獨到行內人貼士, 報道及剖析每日樓市動態、最新一二手樓市資訊、成交紀錄等。</desc>
   </programme>
   <programme start="20261030213000 +0800" stop="20261030223000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">港股今日睇 -20261030</title>
-    <desc lang="zh">總結大市每日形勢、分析技術圖表、追蹤大戶動向, 更會請來專業評論員即時分析市場第一手資訊, 亦會接聽觀眾電話詢問股市概況, 為您仔細分析大市走勢。</desc>
   </programme>
   <programme start="20261030223000 +0800" stop="20261030230000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">環球金融快線 -20261030[直播]</title>
-    <desc lang="zh">要投資有道, 就請留意環球金融快線。每晚請來不同資深財經評論家為你把關, 全面審視美股開市前後形勢、外圍氣氛、歐洲股市、匯市、債市、油價和現貨金等市場因素, 深入分析環球市況。</desc>
   </programme>
   <programme start="20261030230000 +0800" stop="20261030233000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now財經新聞[直播]</title>
-    <desc lang="zh">逢交易日為你報道最新本地、內地及環球財經消息、市場動態、匯市形勢等。</desc>
   </programme>
   <programme start="20261030233000 +0800" stop="20261031000000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">交易時段精華 -20261030</title>
   </programme>
   <programme start="20261031000000 +0800" stop="20261031010000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">港股今日睇 -20261030</title>
-    <desc lang="zh">總結大市每日形勢、分析技術圖表、追蹤大戶動向, 更會請來專業評論員即時分析市場第一手資訊, 亦會接聽觀眾電話詢問股市概況, 為您仔細分析大市走勢。</desc>
   </programme>
   <programme start="20261031010000 +0800" stop="20261031020000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now財經新聞</title>
-    <desc lang="zh">逢交易日為你報道最新本地、內地及環球財經消息、市場動態、匯市形勢等。</desc>
   </programme>
   <programme start="20261031020000 +0800" stop="20261031023000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">樓市每日睇 -20261030</title>
-    <desc lang="zh">請來真正地產界資深行家, 提供獨到行內人貼士, 報道及剖析每日樓市動態、最新一二手樓市資訊、成交紀錄等。</desc>
   </programme>
   <programme start="20261031023000 +0800" stop="20261031030000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">環球金融快線 -20261030</title>
-    <desc lang="zh">要投資有道, 就請留意環球金融快線。每晚請來不同資深財經評論家為你把關, 全面審視美股開市前後形勢、外圍氣氛、歐洲股市、匯市、債市、油價和現貨金等市場因素, 深入分析環球市況。</desc>
   </programme>
   <programme start="20261031030000 +0800" stop="20261031060000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now財經新聞</title>
-    <desc lang="zh">逢交易日為你報道最新本地、內地及環球財經消息、市場動態、匯市形勢等。</desc>
   </programme>
   <programme start="20261031060000 +0800" stop="20261031063000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now早晨 -20261031 第一節[直播]</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261031063000 +0800" stop="20261031065400 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now早晨 -20261031 第一節</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261031065400 +0800" stop="20261031070000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">杏林在線</title>
-    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261031070000 +0800" stop="20261031073000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now早晨 -20261031 第二節[直播]</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261031073000 +0800" stop="20261031075400 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now早晨 -20261031 第二節</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261031075400 +0800" stop="20261031080000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">杏林在線</title>
-    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261031080000 +0800" stop="20261031083000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now早晨 -20261031 第三節[直播]</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261031083000 +0800" stop="20261031085400 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now早晨 -20261031 第三節</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261031085400 +0800" stop="20261031090000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">杏林在線</title>
-    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261031090000 +0800" stop="20261031093000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031093000 +0800" stop="20261031100000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">一周睇樓團 -20261031</title>
-    <desc lang="zh">為大家搜羅香港最新地產資訊, 包括新盤介紹、二手放盤, 以及特色的家居設計。</desc>
   </programme>
   <programme start="20261031100000 +0800" stop="20261031101600 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031101600 +0800" stop="20261031103000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">杏林在線 -20261030</title>
-    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261031103000 +0800" stop="20261031110000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031110000 +0800" stop="20261031113000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031113000 +0800" stop="20261031120000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031120000 +0800" stop="20261031123000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now午間新聞[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031123000 +0800" stop="20261031130000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now午間新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031130000 +0800" stop="20261031132100 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031132100 +0800" stop="20261031133000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
-    <desc lang="zh">理財有方每集提供各項理財投資的實用知識, 滿足投資者的不同需要。</desc>
   </programme>
   <programme start="20261031133000 +0800" stop="20261031141600 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031141600 +0800" stop="20261031143000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">杏林在線 -20261026</title>
-    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261031143000 +0800" stop="20261031150000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031150000 +0800" stop="20261031152100 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031152100 +0800" stop="20261031153000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
-    <desc lang="zh">理財有方每集提供各項理財投資的實用知識, 滿足投資者的不同需要。</desc>
   </programme>
   <programme start="20261031153000 +0800" stop="20261031154600 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031154600 +0800" stop="20261031160000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">杏林在線 -20261030</title>
-    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261031160000 +0800" stop="20261031161600 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031161600 +0800" stop="20261031163000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">杏林在線 -20261026</title>
-    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261031163000 +0800" stop="20261031164600 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031164600 +0800" stop="20261031170000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">杏林在線 -20261030</title>
-    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261031170000 +0800" stop="20261031172400 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031172400 +0800" stop="20261031173000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">氣象冷知識</title>
   </programme>
   <programme start="20261031173000 +0800" stop="20261031180000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">一周睇樓團 -20261031</title>
-    <desc lang="zh">為大家搜羅香港最新地產資訊, 包括新盤介紹、二手放盤, 以及特色的家居設計。</desc>
   </programme>
   <programme start="20261031180000 +0800" stop="20261031183000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031183000 +0800" stop="20261031190000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031190000 +0800" stop="20261031193000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031193000 +0800" stop="20261031200000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">大鳴大放</title>
-    <desc lang="zh">識英雄重英雄, 請來各界重磅名人, 拋出論點, 言無不盡, 深入討論時事, 跨越維港神州, 宏觀全世界。</desc>
   </programme>
   <programme start="20261031200000 +0800" stop="20261031203000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031203000 +0800" stop="20261031210000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031210000 +0800" stop="20261031213000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031213000 +0800" stop="20261031220000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031220000 +0800" stop="20261031223000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031223000 +0800" stop="20261031230000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">杏林在線 -20261031</title>
-    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261031230000 +0800" stop="20261031233000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now深宵新聞[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261031233000 +0800" stop="20261101000000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now深宵新聞[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101000000 +0800" stop="20261101003000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101003000 +0800" stop="20261101010000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101010000 +0800" stop="20261101013000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101013000 +0800" stop="20261101020000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">大鳴大放 -20261031</title>
-    <desc lang="zh">識英雄重英雄, 請來各界重磅名人, 拋出論點, 言無不盡, 深入討論時事, 跨越維港神州, 宏觀全世界。</desc>
   </programme>
   <programme start="20261101020000 +0800" stop="20261101023000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101023000 +0800" stop="20261101030000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">杏林在線 -20261031</title>
-    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261101030000 +0800" stop="20261101033000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101033000 +0800" stop="20261101040000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">大鳴大放 -20261031</title>
-    <desc lang="zh">識英雄重英雄, 請來各界重磅名人, 拋出論點, 言無不盡, 深入討論時事, 跨越維港神州, 宏觀全世界。</desc>
   </programme>
   <programme start="20261101040000 +0800" stop="20261101043000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101043000 +0800" stop="20261101050000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">杏林在線 -20261031</title>
-    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261101050000 +0800" stop="20261101053000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101053000 +0800" stop="20261101060000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now深宵新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101060000 +0800" stop="20261101063000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now早晨 -20261101 第一節[直播]</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261101063000 +0800" stop="20261101065400 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now早晨 -20261101 第一節</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261101065400 +0800" stop="20261101070000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">杏林在線</title>
-    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261101070000 +0800" stop="20261101073000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now早晨 -20261101 第二節[直播]</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261101073000 +0800" stop="20261101075400 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now早晨 -20261101 第二節</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261101075400 +0800" stop="20261101080000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">杏林在線</title>
-    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261101080000 +0800" stop="20261101083000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now早晨 -20261101 第三節[直播]</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261101083000 +0800" stop="20261101085400 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now早晨 -20261101 第三節</title>
-    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
   </programme>
   <programme start="20261101085400 +0800" stop="20261101090000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">杏林在線</title>
-    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261101090000 +0800" stop="20261101093000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101093000 +0800" stop="20261101100000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">一周睇樓團 -20261031</title>
-    <desc lang="zh">為大家搜羅香港最新地產資訊, 包括新盤介紹、二手放盤, 以及特色的家居設計。</desc>
   </programme>
   <programme start="20261101100000 +0800" stop="20261101101600 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101101600 +0800" stop="20261101103000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">杏林在線 -20261030</title>
-    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261101103000 +0800" stop="20261101110000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101110000 +0800" stop="20261101113000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101113000 +0800" stop="20261101120000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101120000 +0800" stop="20261101123000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now午間新聞[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101123000 +0800" stop="20261101130000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now午間新聞</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101130000 +0800" stop="20261101132100 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101132100 +0800" stop="20261101133000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
-    <desc lang="zh">理財有方每集提供各項理財投資的實用知識, 滿足投資者的不同需要。</desc>
   </programme>
   <programme start="20261101133000 +0800" stop="20261101141600 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101141600 +0800" stop="20261101143000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">杏林在線 -20261026</title>
-    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261101143000 +0800" stop="20261101150000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101150000 +0800" stop="20261101152100 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101152100 +0800" stop="20261101153000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
-    <desc lang="zh">理財有方每集提供各項理財投資的實用知識, 滿足投資者的不同需要。</desc>
   </programme>
   <programme start="20261101153000 +0800" stop="20261101154600 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101154600 +0800" stop="20261101160000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">杏林在線 -20261030</title>
-    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261101160000 +0800" stop="20261101161600 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101161600 +0800" stop="20261101163000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">杏林在線 -20261026</title>
-    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261101163000 +0800" stop="20261101164600 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101164600 +0800" stop="20261101170000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">杏林在線 -20261030</title>
-    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261101170000 +0800" stop="20261101173000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101173000 +0800" stop="20261101180000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">一周睇樓團 -20261031</title>
-    <desc lang="zh">為大家搜羅香港最新地產資訊, 包括新盤介紹、二手放盤, 以及特色的家居設計。</desc>
   </programme>
   <programme start="20261101180000 +0800" stop="20261101183000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101183000 +0800" stop="20261101190000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101190000 +0800" stop="20261101193000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101193000 +0800" stop="20261101200000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">大鳴大放</title>
-    <desc lang="zh">識英雄重英雄, 請來各界重磅名人, 拋出論點, 言無不盡, 深入討論時事, 跨越維港神州, 宏觀全世界。</desc>
   </programme>
   <programme start="20261101200000 +0800" stop="20261101203000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101203000 +0800" stop="20261101210000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">華泰國際金融控股有限公司 呈獻: 一語千金 - 港好創科 -專訪創新科技及工業局局長 孫東</title>
-    <desc lang="zh">科技．轉變時代；創新．領導未來!《信報財經新聞》聯乘《Now TV》製作跨媒體節目《一語千金-港好創科》, 信報總編輯鄧傳鏘、主持余穎恒, 每星期請嚟創科界領軍人物, 出謀獻策 為香港貢獻力量, 嘉賓真知灼見, 一語值千金。</desc>
   </programme>
   <programme start="20261101210000 +0800" stop="20261101213000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101213000 +0800" stop="20261101214600 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101214600 +0800" stop="20261101220000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">杏林在線</title>
-    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261101220000 +0800" stop="20261101223000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now新聞報道[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101223000 +0800" stop="20261101230000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">經緯線 -20261101</title>
-    <desc lang="zh">社會矛盾, 意見紛紜, 《經緯線》由民生、政治、經濟、以至國際焦點, 以求真和不偏不倚態度, 記錄一個個人物故事, 深入剖析各個社會議題, 為社會把脈。</desc>
   </programme>
   <programme start="20261101230000 +0800" stop="20261101233000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now深宵新聞[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261101233000 +0800" stop="20261102103000 +0800" channel="nowBusinessNewsChannel.hk">
     <title lang="zh">Now深宵新聞[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261028000000 +0800" stop="20261028012000 +0800" channel="PopC.hk">
     <title lang="zh">變種狂蜥</title>
