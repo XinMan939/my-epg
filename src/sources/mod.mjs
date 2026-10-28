@@ -164,7 +164,25 @@ function toMin(hhmm) {
 /**
  * 把「只有开始时刻」的节目串成带 stopTs 的行
  *
- * ★ 坑④：结束时间 = 下一条的开始时间。
+ * ★★ 坑④-1（2026-10-28 产物实测发现，最严重的一个）：**时区**。
+ *   页面给的 `HH:MM` 是**台湾本地时间（UTC+8）**，不是 UTC。
+ *   第一版写 `baseTs = Date.UTC(y, m, d)` 当当天 00:00 —— 那其实是北京 08:00，
+ *   于是全部节目**整体晚 8 小时**，而且跨天：10-28 的 00:00 节目变成 10-28 08:00，
+ *   10-28 的 20:00 节目溢出到 10-29 04:00。
+ *
+ *   实测证据（产物 epg.xml，三立综合台主源换成 mod:301 之后）：
+ *     MOD 页面：`<div class='time'> 00:00</div>`（台湾 10-28 00:00）
+ *     产物 XML：`<programme start="20261028080000 +0800"`  ← 晚了 8 小时
+ *
+ *   ⚠️ 这个 bug 的隐蔽性：`countCoveredDays` 按「小时覆盖」算，
+ *      偏移 8 小时后每天仍覆盖 24 小时，所以「满 7 天」指标**不降反升**（203→224），
+ *      报表好看、日志全绿，只有把 XML 拆开看具体时刻才看得出来。
+ *      属于 pitfalls §6.7 那类「数据看着更好，内容是错的」。
+ *
+ *   正确写法：`Date.UTC(y, m, d) - 8 * 3600e3` = 台湾当天 00:00 的 UTC 时刻。
+ *   （对照 kbro.mjs 的 `parseKbroTime`：`Date.UTC(+y, +mo-1, +d, +h-8, +mi, +se)`）
+ *
+ * ★ 坑④-2：结束时间 = 下一条的开始时间。
  *   当天最后一条的结束时间 = 次日首条开始时间（若次日首条是 00:00 则就是 24:00）。
  *   没有次日数据时按 24:00 收（pitfalls §3：宁可短，不要瞎延）。
  *
@@ -176,11 +194,14 @@ export function buildRows(days, ymd) {
   const target = days.find((d) => d.date === ymd)
   if (!target || !target.items.length) return []
 
-  const baseTs = Date.UTC(
-    Number(ymd.slice(0, 4)),
-    Number(ymd.slice(4, 6)) - 1,
-    Number(ymd.slice(6, 8))
-  )
+  // ★★ 坑④-1：减 8 小时，把「台湾当天 00:00」换成正确的 UTC 时刻
+  const baseTs =
+    Date.UTC(
+      Number(ymd.slice(0, 4)),
+      Number(ymd.slice(4, 6)) - 1,
+      Number(ymd.slice(6, 8))
+    ) -
+    8 * 3600e3
   const rows = []
   for (let i = 0; i < target.items.length; i++) {
     const it = target.items[i]
