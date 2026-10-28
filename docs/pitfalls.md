@@ -440,6 +440,69 @@ nowplayer 在 `days` 上已经赢了（7 > 6），本来应该直接选中。
 12. 判断方法：`catalog.json` 里某源的 `withDesc` **恰好全是 0 且 count 很大**，
     先怀疑是没探测，别急着当成「无简介源」。
 
+#### 6.7g ★★★ webncode 的 `availableDates` 含过去的天 —— **§6.7c 的第 4 次回归**（2026-10-28 第十二轮）
+
+**同一个坑，同一个源，第 4 次踩。** 说明 §6.7c 写成「硬规则」还不够，必须落成测试。
+
+现象（CI run 40625776572 产物）：
+
+```
+nowNews.hk              简介 271 → 0
+nowBusinessNewsChannel.hk  简介 247 → 0
+```
+
+两台都还有节目（5 天 / 273 条），只是**简介全没了**。报表上「简介覆盖率」从 60% 掉到 58%，
+没有任何报错，`audit-output` 也全绿。
+
+**根因链**（四步，缺一步都不会中招）：
+
+1. `webncode.probeStat()` 用 `j.availableDates.length` 当天数 —— 这个数组**含已经过去的天**。
+2. `webncode:nowtv_332` 因此报 **6 天**，压过 `epgpw:410344` 的 **5 天**，在 `pickBest` 里以天数取胜。
+3. 而 webncode 那一台的 `withDesc` 是 **0**（它只给标题，不给简介）。
+4. 排序是 `days → withDesc → count`，**天数先决**，所以简介这一维根本没机会参与比较。
+
+**决定性证据**：把产物拆开看 `nowNews.hk` 的 `perDay`：
+
+```
+{ 20261028: 有数据, 20261029: 有数据, 20261030: 有数据, 20261031: 有数据,
+  20261101: 有数据, 20261102: 0, 20261103: 0 }
+```
+
+`availableDates` 报 6 天，但**实际可用只有 5 天** —— 它把「今天之前的那一天」也算进去了。
+
+**修法**（`webncode.mjs` 的 `probeStat`）：
+
+```js
+// ★★ 只数「今天及以后」的日期（pitfalls §6.7c 硬规则 7）
+const todayYmd = new Date(Date.now() + 8 * 3600e3).toISOString().slice(0, 10).replace(/-/g, '')
+const futureDates = j.availableDates
+  .map((d) => String(d).replace(/-/g, '').slice(0, 8))
+  .filter((d) => /^\d{8}$/.test(d) && d >= todayYmd)
+const days = futureDates.length
+if (!days) return { days: 0, count: 0, withDesc: 0 }
+```
+
+顺带把 `perDay` 也改了：原来数的是 `schedule.length`（含占位标题、含无 `start` 的行），
+改成「过滤掉占位标题 + 必须有 `start`」的真条数。
+
+**这次终于落成测试**（`test/days-source.test.mjs` 的 [2] 项）：
+
+```js
+// 静态读 webncode.mjs 源码，断言 probeStat 里必须出现 todayYmd 过滤
+assert(/todayYmd/.test(src), 'webncode.probeStat 必须按 todayYmd 过滤过去的天')
+assert(/d >= todayYmd/.test(src), '过滤条件必须是 d >= todayYmd')
+```
+
+**教训（比 bug 本身重要）**：
+
+★★ **同一个坑踩到第 4 次，说明「写进文档」这个手段已经失效了。**
+前三次都是「写进 pitfalls → 下次又踩」。这次改成「静态检查源码里有没有那行过滤」，
+虽然粗暴（正则匹配源码很脆），但它是**唯一不依赖我记性的手段**。
+
+★ **`pickBest` 的 `days` 是硬门槛，会掩盖后面所有维度。**
+只要某个源的 `days` 虚高一天，它的 `withDesc=0` 就永远不会被追究。
+所以**天数口径的 bug 优先级高于简介口径的 bug** —— 前者会让后者静默失效。
+
 ### 6.8 ★★ 罗马数字 Ⅰ~Ⅻ 必须先转阿拉伯数字（2026-10-28 新增）
 
 `normalizeName` 末尾的白名单 `s.replace(/[^a-z0-9+\u4e00-\u9fa5]/g, '')`
