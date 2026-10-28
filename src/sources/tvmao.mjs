@@ -13,11 +13,19 @@
  * 坑：错误 ID 会 200 返回"串台"页面（如 SMG-SMG1 返回 CCTV-1 内容），
  *    所以必须校验返回页面的 <title> 是否与预期频道名一致。
  */
-import { fetchText, parseTimeToTs, normalizeName, decodeEntities, log } from '../utils.mjs'
+import { fetchText, parseTimeToTs, normalizeName, decodeEntities, dateInCST, log } from '../utils.mjs'
+import { probeDisabled, readProbeCache, writeProbeCache, makeProgress } from '../probe-cache.mjs'
 
 const BASE = 'https://m.tvmao.com'
 const UA_MOBILE =
   'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1'
+
+/** 探测缓存文件名 + 口径版本（改 probeWeek 的算法必须 +1，否则旧缓存会让改动静默失效） */
+const PROBE_CACHE = 'tvmao-probe'
+const PROBE_VER = 1
+
+/** 探测并发（实测 tvmao 很快：40 个请求 2.8 秒，4 并发足够且不显眼） */
+const PROBE_CONC = Number(process.env.TVMAO_PROBE_CONC || 4)
 
 /** 三类频道页路径 */
 export const PATHS = {
@@ -293,11 +301,76 @@ export function parseRows(html, ymd) {
 }
 
 /**
+ * 探测单个频道：w1..w7 里有几天有节目、一共多少条
+ *
+ * 必须逐天探（见 listChannels 上方「半月」实测，只探一天会稳定虚报）。
+ * 路径探测 / 串台校验全部复用 getDayProgrammes，探完顺便预热 resolvedPath。
+ *
+ * @param sourceId 电视猫频道 id
+ * @param name     频道名，用于 title 串台校验（缺了会把别人的节目当成自己的）
+ * @returns {Promise<{days: number, count: number}>} 失败/空台一律 {days:0, count:0}
+ */
+export async function probeWeek(sourceId, name, opts = {}) {
+  // 抓取函数可注入（单测里用假 getDay 打桩，见 test/tvsou-days.test.mjs）
+  const getDay = opts.getDay || getDayProgrammes
+  // ymd 只用来把 HH:MM 补成时间戳；探测只数条数，取今天即可
+  const ymd = dateInCST()
+  let days = 0
+  let count = 0
+  for (let w = 1; w <= 7; w++) {
+    const r = await getDay(sourceId, w, ymd, name)
+    if (r.programmes && r.programmes.length) {
+      days++
+      count += r.programmes.length
+    }
+  }
+  return { days, count }
+}
+
+/** 简单并发限流 */
+async function mapLimit(items, n, fn) {
+  const out = new Array(items.length)
+  let i = 0
+  await Promise.all(
+    Array.from({ length: Math.max(1, Math.min(n, items.length)) }, async () => {
+      while (i < items.length) {
+        const idx = i++
+        out[idx] = await fn(items[idx], idx)
+      }
+    })
+  )
+  return out
+}
+
+/**
  * 列出电视猫频道（供自动匹配用）
  * 实测可用的三个入口页：
  *   /program/duration/satellite/w1-h16.html  卫星（43 个）
  *   /program/duration/digital/w1-h16.html    数字（83 个）
  *   /program/duration/cctv/w1-h16.html       央视
+ *
+ * ─── 2026-10-28 第十七轮：补真探 days / count ───────────────────────────────
+ *
+ * ★ 之前的缺陷：只从榜单页抓 id + 名字，214 条 catalog 全都没有 days 字段。
+ *   match.mjs 的 pickBest 用 `a.days || 0`，「缺字段」= 0 天 → tvmao 永远垫底。
+ *   后果和 tvsou 那次一样：报表里只有 `empty(tvmao:xxx=0)`，
+ *   看不出「源本身没有」还是「路径猜错拿不到」。
+ *
+ * ★★ 为什么 tvmao 必须逐天探（不能只看一天）：
+ *   它**真的有半月**。2026-10-28 实测：
+ *     三沙卫视   w1:46 w2:46 w3:46 w4:0 w5:0 w6:0 w7:0  → 3 天
+ *     快乐垂钓   w1:19 w2:19 w3:19 w4:22 w5:0 w6:0 w7:0 → 4 天
+ *     湖南卫视   w1..w7 全有                              → 7 天
+ *   跟 tvsou 的「全有 / 全无」不同，这里**只探一天会稳定虚报**，
+ *   所以老老实实 7 个 weekday 各探一次（实测很快：40 个请求 2.8 秒）。
+ *
+ * ★ days 口径 = w1..w7 里有节目的 weekday 数，与 tvsou 一致：
+ *   build 把 7 个目标日期映射成 7 个 weekday 去抓，所以「有节目的 weekday 数」
+ *   就是产物里能覆盖的天数。w8（下周一）不探 —— build 从不请求 w8，
+ *   探了会把 days 报高（三沙卫视 w8 有 46 条但 w4..w7 全空，正是这个坑）。
+ *
+ * ★ 探测时顺手把 resolvedPath 预热了（getDayProgrammes 内部 rememberPath），
+ *   所以真正 build 的时候每个台第一次就命中正确路径，不再 3 条路径乱试。
  */
 export async function listChannels() {
   const out = []
@@ -335,10 +408,59 @@ export async function listChannels() {
       const name = m[3].trim().replace(/(?:节目单|节目预告|节目表)$/, '').trim()
       if (seen.has(sourceId)) continue
       seen.add(sourceId)
-      out.push({ source: 'tvmao', group, sourceId, name, logo: '' })
+      out.push({
+        source: 'tvmao',
+        group,
+        sourceId,
+        name,
+        logo: '',
+        // 真探前先给 0：pickBest 里 0 是安全默认（垫底），不会骗排序
+        days: 0,
+        count: 0,
+        withDesc: 0,
+      })
     }
   }
 
+  if (probeDisabled('TVMAO_PROBE')) {
+    log.warn('[tvmao] 探测已关闭（TVMAO_PROBE=0 / NO_SOURCE_PROBE=1），days 全为 0')
+    return out
+  }
+
+  const cache = readProbeCache(PROBE_CACHE, PROBE_VER)
+  const stats = { ...cache.stats }
+  const todo = out.filter((c) => !(c.sourceId in stats))
+
+  if (cache.hit) {
+    log.info(`[tvmao] 复用今日探测缓存：${out.length - todo.length}/${out.length} 个频道（${cache.ymd}）`)
+  }
+  if (todo.length) {
+    const tick = makeProgress('tvmao', todo.length, 50)
+    await mapLimit(todo, PROBE_CONC, async (c) => {
+      try {
+        stats[c.sourceId] = await probeWeek(c.sourceId, c.name)
+      } catch {
+        stats[c.sourceId] = { days: 0, count: 0 }
+      }
+      tick()
+    })
+    writeProbeCache(PROBE_CACHE, PROBE_VER, stats)
+  }
+
+  for (const c of out) {
+    const st = stats[c.sourceId]
+    if (st) {
+      c.days = st.days || 0
+      c.count = st.count || 0
+    }
+  }
+
+  const live = out.filter((c) => c.days > 0)
+  log.ok(
+    `[tvmao] 探测真实覆盖：${live.length}/${out.length} 个台有节目，` +
+      `最多 ${Math.max(0, ...out.map((c) => c.days))} 天，共 ${out.reduce((s, c) => s + c.count, 0)} 条` +
+      `（无简介源，withDesc 恒 0）`
+  )
   return out
 }
 
