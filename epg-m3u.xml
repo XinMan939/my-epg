@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tv generator-info-name="my-epg" generator-info-url="https://github.com/" date="20261028113124 +0800">
+<tv generator-info-name="my-epg" generator-info-url="https://github.com/" date="20261028124529 +0800">
   <channel id="CCTV1">
     <display-name lang="zh">CCTV-1 综合</display-name>
     <display-name lang="zh">CCTV-1</display-name>
@@ -8370,7 +8370,7 @@
   <programme start="20261103230600 +0800" stop="20261103232700 +0800" channel="CCTV9">
     <title lang="zh">9视频(300):最&apos;贵&apos;的绝招(2)</title>
   </programme>
-  <programme start="20261103232700 +0800" stop="20261104003200 +0800" channel="CCTV9">
+  <programme start="20261103232700 +0800" stop="20261104002100 +0800" channel="CCTV9">
     <title lang="zh">寰宇视野(301):大猫的王国(2)</title>
   </programme>
   <programme start="20261028003030 +0800" stop="20261028010030 +0800" channel="CCTV10">
@@ -59498,13 +59498,6 @@
   <programme start="20261103233000 +0800" stop="20261104005000 +0800" channel="TVBPlus">
     <title lang="zh">賽馬預測[粵][馬會]</title>
   </programme>
-  <programme start="20261028113000 +0800" stop="20261028120000 +0800" channel="ViuTV">
-    <title lang="zh">努力得嚟志在食 第5集 -勝出Cosplay路跑任食痛風鍋</title>
-    <desc lang="zh">吳肇軒最後一日，特意「盛裝」留低招呼剛到步日本的麥子樂。娟姐和子樂參加Cosplay跑步比賽，穿著一身奇怪裝束完成1.6公里賽道，勝出者可以任食「痛風鍋」。超豐富的痛風鍋滿載白子鮟鱇魚肝和蠔，衝擊視覺之外亦相當美味，不過真正的痛風患者不宜常吃。</desc>
-  </programme>
-  <programme start="20261028120000 +0800" stop="20261028123000 +0800" channel="ViuTV">
-    <title lang="zh">午間新聞</title>
-  </programme>
   <programme start="20261028123000 +0800" stop="20261028125500 +0800" channel="ViuTV">
     <title lang="zh">FWD 富衛保險呈獻: CHILL CLUB 推介 第1666集</title>
     <desc lang="zh">一首歌背後嘅故事、花咗好多心機嘅MV、歌手同幕後音樂人嘅心血… 《CHILL CLUB 推介》星期一至五晚一於全部都推介俾你！</desc>
@@ -97946,22 +97939,47 @@
   <programme start="20261103235500 +0800" stop="20261104000000 +0800" channel="CCTV电视指南">
     <title lang="zh">请您欣赏-海南风光</title>
   </programme>
-  <programme start="20261028000000 +0800" stop="20261028010000 +0800" channel="CGTN">
-    <title lang="zh">全球财经</title>
-  </programme>
-  <programme start="20261028010000 +0800" stop="20261028020000 +0800" channel="CGTN">
-    <title lang="zh">非洲直播室</title>
-    <desc lang="zh">《非洲直播室》是由中国中央电视台的新闻制作中心在肯尼亚和非洲的新闻和观点，以及国际新闻的重点。</desc>
-  </programme>
-  <programme start="20261028020000 +0800" stop="20261028030000 +0800" channel="CGTN">
-    <title lang="zh">全球财经</title>
-  </programme>
-  <programme start="20261028030000 +0800" stop="20261028033000 +0800" channel="CGTN">
+  <programme start="20261028000000 +0800" stop="20261028002700 +0800" channel="CGTN">
     <title lang="zh">今日世界</title>
     <desc lang="zh">The World Today is the core rolling news service of CGTN. Regular updates from Beijing and Washington D.C. keep viewers up-to-date with all the world’s top stories as they happen. The World Today delivers breaking news, live event, in-depth reporting, expert analysis and sustained coverage.</desc>
   </programme>
+  <programme start="20261028002700 +0800" stop="20261028003000 +0800" channel="CGTN">
+    <title lang="zh">天气预报</title>
+    <desc lang="zh">《天气预报》为您提供天气气象信息,及时发布天气预报、灾害预警、气象云图、台风、暴雨雪等气象信息,为人民的生产生活提供全面精确的气象服务。 天气预报播出时间 全部时间》 10-28周三 10-29周四 10-30周五 10-31周六 11-01周日 11-02周一 11-03周二 00:10 石家庄电视台城市服务频道 天气预报 00:13 新余电视台新闻综合频道</desc>
+  </programme>
+  <programme start="20261028003000 +0800" stop="20261028005800 +0800" channel="CGTN">
+    <title lang="zh">全球财经</title>
+  </programme>
+  <programme start="20261028005800 +0800" stop="20261028010000 +0800" channel="CGTN">
+    <title lang="zh">天气预报</title>
+    <desc lang="zh">《天气预报》为您提供天气气象信息,及时发布天气预报、灾害预警、气象云图、台风、暴雨雪等气象信息,为人民的生产生活提供全面精确的气象服务。 天气预报播出时间 全部时间》 10-28周三 10-29周四 10-30周五 10-31周六 11-01周日 11-02周一 11-03周二 00:10 石家庄电视台城市服务频道 天气预报 00:13 新余电视台新闻综合频道</desc>
+  </programme>
+  <programme start="20261028010000 +0800" stop="20261028015700 +0800" channel="CGTN">
+    <title lang="zh">非洲直播室</title>
+    <desc lang="zh">《非洲直播室》是由中国中央电视台的新闻制作中心在肯尼亚和非洲的新闻和观点，以及国际新闻的重点。</desc>
+  </programme>
+  <programme start="20261028015700 +0800" stop="20261028020000 +0800" channel="CGTN">
+    <title lang="zh">天气预报</title>
+    <desc lang="zh">《天气预报》为您提供天气气象信息,及时发布天气预报、灾害预警、气象云图、台风、暴雨雪等气象信息,为人民的生产生活提供全面精确的气象服务。 天气预报播出时间 全部时间》 10-28周三 10-29周四 10-30周五 10-31周六 11-01周日 11-02周一 11-03周二 00:10 石家庄电视台城市服务频道 天气预报 00:13 新余电视台新闻综合频道</desc>
+  </programme>
+  <programme start="20261028020000 +0800" stop="20261028025900 +0800" channel="CGTN">
+    <title lang="zh">全球财经</title>
+  </programme>
+  <programme start="20261028025900 +0800" stop="20261028030000 +0800" channel="CGTN">
+    <title lang="zh">天气预报</title>
+    <desc lang="zh">《天气预报》为您提供天气气象信息,及时发布天气预报、灾害预警、气象云图、台风、暴雨雪等气象信息,为人民的生产生活提供全面精确的气象服务。 天气预报播出时间 全部时间》 10-28周三 10-29周四 10-30周五 10-31周六 11-01周日 11-02周一 11-03周二 00:10 石家庄电视台城市服务频道 天气预报 00:13 新余电视台新闻综合频道</desc>
+  </programme>
+  <programme start="20261028030000 +0800" stop="20261028032800 +0800" channel="CGTN">
+    <title lang="zh">今日世界</title>
+    <desc lang="zh">The World Today is the core rolling news service of CGTN. Regular updates from Beijing and Washington D.C. keep viewers up-to-date with all the world’s top stories as they happen. The World Today delivers breaking news, live event, in-depth reporting, expert analysis and sustained coverage.</desc>
+  </programme>
+  <programme start="20261028032800 +0800" stop="20261028033000 +0800" channel="CGTN">
+    <title lang="zh">天气预报</title>
+    <desc lang="zh">《天气预报》为您提供天气气象信息,及时发布天气预报、灾害预警、气象云图、台风、暴雨雪等气象信息,为人民的生产生活提供全面精确的气象服务。 天气预报播出时间 全部时间》 10-28周三 10-29周四 10-30周五 10-31周六 11-01周日 11-02周一 11-03周二 00:10 石家庄电视台城市服务频道 天气预报 00:13 新余电视台新闻综合频道</desc>
+  </programme>
   <programme start="20261028033000 +0800" stop="20261028040000 +0800" channel="CGTN">
-    <title lang="zh">从共享历史到共享未来</title>
+    <title lang="zh">今日世界</title>
+    <desc lang="zh">The World Today is the core rolling news service of CGTN. Regular updates from Beijing and Washington D.C. keep viewers up-to-date with all the world’s top stories as they happen. The World Today delivers breaking news, live event, in-depth reporting, expert analysis and sustained coverage.</desc>
   </programme>
   <programme start="20261028040000 +0800" stop="20261028043000 +0800" channel="CGTN">
     <title lang="zh">今日世界</title>
@@ -97971,16 +97989,24 @@
     <title lang="zh">对话</title>
     <desc lang="zh">《对话》栏目是中国中央电视台2000年推出的一档演播室谈话节目，时长60分钟，是中央电视台创立最早、影响力最大的高端精英谈话节目。 《对话》致力于为新闻人物、企业精英、政府官员、经济专家和投资者提供一个交流和对话的平台。受邀嘉宾均来自世界政要、行业领先者、具有强势话语权的标志性人物。每次节目由突发事件、热门人物、热门话题或某一经济现象导入，捕捉鲜活经济事件、探讨新潮理念、演绎故事冲突，着重突出思想的交锋与智慧的碰撞。 《对话》自开播以来，一直秉承高端、前沿、新锐、求实的节目风格，拥有了稳定的观众群，并在激烈的媒介市场竞争中占据自己独特的难以超越的位置，成为中央电视台最具影响力和核心品牌价值的王牌谈话节目。</desc>
   </programme>
-  <programme start="20261028050000 +0800" stop="20261028053000 +0800" channel="CGTN">
+  <programme start="20261028050000 +0800" stop="20261028052800 +0800" channel="CGTN">
     <title lang="zh">全球财经</title>
+  </programme>
+  <programme start="20261028052800 +0800" stop="20261028053000 +0800" channel="CGTN">
+    <title lang="zh">天气预报</title>
+    <desc lang="zh">《天气预报》为您提供天气气象信息,及时发布天气预报、灾害预警、气象云图、台风、暴雨雪等气象信息,为人民的生产生活提供全面精确的气象服务。 天气预报播出时间 全部时间》 10-28周三 10-29周四 10-30周五 10-31周六 11-01周日 11-02周一 11-03周二 00:10 石家庄电视台城市服务频道 天气预报 00:13 新余电视台新闻综合频道</desc>
   </programme>
   <programme start="20261028053000 +0800" stop="20261028060000 +0800" channel="CGTN">
     <title lang="zh">舆论纵贯线</title>
     <desc lang="zh">栏目在议题设置、话题选择、嘉宾面孔等方面突出新锐化、年轻化表达，创新中国“外宣”话语，为全球年轻人搭建对话平台，在观点的碰撞中增进对彼此的了解，从而打造Z世代喜闻乐见、有新时代中国特色和全球实质影响力的融媒体产品。《舆论纵贯线》以“展示真实、立体、全面的中国”，“塑造可信、可爱、可敬的中国形象”为宗旨，加强国际传播能力建设，精心构建对外话语体系，努力增强对外话语的创造力、感召力、公信力，讲好中国故事，传播好中国声音，阐释好中国特色。</desc>
   </programme>
-  <programme start="20261028060000 +0800" stop="20261028063000 +0800" channel="CGTN">
+  <programme start="20261028060000 +0800" stop="20261028062800 +0800" channel="CGTN">
     <title lang="zh">今日世界</title>
     <desc lang="zh">The World Today is the core rolling news service of CGTN. Regular updates from Beijing and Washington D.C. keep viewers up-to-date with all the world’s top stories as they happen. The World Today delivers breaking news, live event, in-depth reporting, expert analysis and sustained coverage.</desc>
+  </programme>
+  <programme start="20261028062800 +0800" stop="20261028063000 +0800" channel="CGTN">
+    <title lang="zh">天气预报</title>
+    <desc lang="zh">《天气预报》为您提供天气气象信息,及时发布天气预报、灾害预警、气象云图、台风、暴雨雪等气象信息,为人民的生产生活提供全面精确的气象服务。 天气预报播出时间 全部时间》 10-28周三 10-29周四 10-30周五 10-31周六 11-01周日 11-02周一 11-03周二 00:10 石家庄电视台城市服务频道 天气预报 00:13 新余电视台新闻综合频道</desc>
   </programme>
   <programme start="20261028063000 +0800" stop="20261028070000 +0800" channel="CGTN">
     <title lang="zh">中国再发现</title>
@@ -97989,24 +98015,44 @@
   <programme start="20261028070000 +0800" stop="20261028073000 +0800" channel="CGTN">
     <title lang="zh">热点</title>
   </programme>
-  <programme start="20261028073000 +0800" stop="20261028080000 +0800" channel="CGTN">
+  <programme start="20261028073000 +0800" stop="20261028075800 +0800" channel="CGTN">
     <title lang="zh">今日世界</title>
     <desc lang="zh">The World Today is the core rolling news service of CGTN. Regular updates from Beijing and Washington D.C. keep viewers up-to-date with all the world’s top stories as they happen. The World Today delivers breaking news, live event, in-depth reporting, expert analysis and sustained coverage.</desc>
   </programme>
-  <programme start="20261028080000 +0800" stop="20261028090000 +0800" channel="CGTN">
+  <programme start="20261028075800 +0800" stop="20261028080000 +0800" channel="CGTN">
+    <title lang="zh">天气预报</title>
+    <desc lang="zh">《天气预报》为您提供天气气象信息,及时发布天气预报、灾害预警、气象云图、台风、暴雨雪等气象信息,为人民的生产生活提供全面精确的气象服务。 天气预报播出时间 全部时间》 10-28周三 10-29周四 10-30周五 10-31周六 11-01周日 11-02周一 11-03周二 00:10 石家庄电视台城市服务频道 天气预报 00:13 新余电视台新闻综合频道</desc>
+  </programme>
+  <programme start="20261028080000 +0800" stop="20261028085800 +0800" channel="CGTN">
     <title lang="zh">全球财经</title>
   </programme>
-  <programme start="20261028090000 +0800" stop="20261028093000 +0800" channel="CGTN">
+  <programme start="20261028085800 +0800" stop="20261028090000 +0800" channel="CGTN">
+    <title lang="zh">天气预报</title>
+    <desc lang="zh">《天气预报》为您提供天气气象信息,及时发布天气预报、灾害预警、气象云图、台风、暴雨雪等气象信息,为人民的生产生活提供全面精确的气象服务。 天气预报播出时间 全部时间》 10-28周三 10-29周四 10-30周五 10-31周六 11-01周日 11-02周一 11-03周二 00:10 石家庄电视台城市服务频道 天气预报 00:13 新余电视台新闻综合频道</desc>
+  </programme>
+  <programme start="20261028090000 +0800" stop="20261028092800 +0800" channel="CGTN">
     <title lang="zh">今日世界</title>
     <desc lang="zh">The World Today is the core rolling news service of CGTN. Regular updates from Beijing and Washington D.C. keep viewers up-to-date with all the world’s top stories as they happen. The World Today delivers breaking news, live event, in-depth reporting, expert analysis and sustained coverage.</desc>
   </programme>
-  <programme start="20261028093000 +0800" stop="20261028100000 +0800" channel="CGTN">
+  <programme start="20261028092800 +0800" stop="20261028093000 +0800" channel="CGTN">
+    <title lang="zh">天气预报</title>
+    <desc lang="zh">《天气预报》为您提供天气气象信息,及时发布天气预报、灾害预警、气象云图、台风、暴雨雪等气象信息,为人民的生产生活提供全面精确的气象服务。 天气预报播出时间 全部时间》 10-28周三 10-29周四 10-30周五 10-31周六 11-01周日 11-02周一 11-03周二 00:10 石家庄电视台城市服务频道 天气预报 00:13 新余电视台新闻综合频道</desc>
+  </programme>
+  <programme start="20261028093000 +0800" stop="20261028095800 +0800" channel="CGTN">
     <title lang="zh">中国24小时</title>
     <desc lang="zh">深度报道栏目《中国24小时》要进一步强化节目定位，加强新闻的深度解读和调查类新闻的制作，继续完善细节，使节目更加精致。</desc>
   </programme>
-  <programme start="20261028100000 +0800" stop="20261028103000 +0800" channel="CGTN">
+  <programme start="20261028095800 +0800" stop="20261028100000 +0800" channel="CGTN">
+    <title lang="zh">天气预报</title>
+    <desc lang="zh">《天气预报》为您提供天气气象信息,及时发布天气预报、灾害预警、气象云图、台风、暴雨雪等气象信息,为人民的生产生活提供全面精确的气象服务。 天气预报播出时间 全部时间》 10-28周三 10-29周四 10-30周五 10-31周六 11-01周日 11-02周一 11-03周二 00:10 石家庄电视台城市服务频道 天气预报 00:13 新余电视台新闻综合频道</desc>
+  </programme>
+  <programme start="20261028100000 +0800" stop="20261028102800 +0800" channel="CGTN">
     <title lang="zh">今日世界</title>
     <desc lang="zh">The World Today is the core rolling news service of CGTN. Regular updates from Beijing and Washington D.C. keep viewers up-to-date with all the world’s top stories as they happen. The World Today delivers breaking news, live event, in-depth reporting, expert analysis and sustained coverage.</desc>
+  </programme>
+  <programme start="20261028102800 +0800" stop="20261028103000 +0800" channel="CGTN">
+    <title lang="zh">天气预报</title>
+    <desc lang="zh">《天气预报》为您提供天气气象信息,及时发布天气预报、灾害预警、气象云图、台风、暴雨雪等气象信息,为人民的生产生活提供全面精确的气象服务。 天气预报播出时间 全部时间》 10-28周三 10-29周四 10-30周五 10-31周六 11-01周日 11-02周一 11-03周二 00:10 石家庄电视台城市服务频道 天气预报 00:13 新余电视台新闻综合频道</desc>
   </programme>
   <programme start="20261028103000 +0800" stop="20261028110000 +0800" channel="CGTN">
     <title lang="zh">世界观察</title>
@@ -110373,7 +110419,7 @@
     <title lang="zh">西甲联赛第4轮:巴列卡诺-桑坦德</title>
     <desc lang="zh">西班牙足球甲级联赛（Primera división de Liga，简称 La Liga，毕尔巴鄂比斯开银行为西甲的赞助商冠名为Liga BBVA），通常简称“西甲”，是西班牙最高等级的职业足球联赛，也是欧洲及世界最高水平的职业足球联赛之一。目前西甲有20支球队，联赛成绩最差的三队将会降级到西班牙乙级联赛，乙级联赛的前三名则晋升到西</desc>
   </programme>
-  <programme start="20261103235000 +0800" stop="20261104065500 +0800" channel="魅力足球">
+  <programme start="20261103235000 +0800" stop="20261104111000 +0800" channel="魅力足球">
     <title lang="zh">西甲联赛:毕尔巴鄂竞技-埃尔切</title>
     <desc lang="zh">西班牙足球甲级联赛（Primera división de Liga，简称 La Liga，毕尔巴鄂比斯开银行为西甲的赞助商冠名为Liga BBVA），通常简称“西甲”，是西班牙最高等级的职业足球联赛，也是欧洲及世界最高水平的职业足球联赛之一。目前西甲有20支球队，联赛成绩最差的三队将会降级到西班牙乙级联赛，乙级联赛的前三名则晋升到西</desc>
   </programme>
@@ -126977,14 +127023,6 @@
     <title lang="zh">熟男有惑 #10 [粵]</title>
     <desc lang="zh">多春等偷聽拔冠講電話，跟蹤後發現拔冠師傅是盧甦。爵士勸盧甦回歸，但被堅拒。盧甦把離婚協議書送給麗莎，並表示已把另一份送了給多春；多春來到斥麗莎不念舊情。嘉婷看見嘉瑩在會議室工作，表示要爭取讓妹妹使用盧甦的辦公室，但爵士拒絕謂盧甦定會回到盛藍。嘉婷指公司亂七八糟，爵士意會她的話，與她起爭執。盛況和盛意在電視看到盛鳴，嘉婷決定飛到美國找盛鳴；嘉瑩代嘉婷發出行政指令，文具、廁紙等都要配給，使眾人極不習慣。麗莎在公司看見尤蜜，出言侮辱，卻發現指定請尤蜜打官司的，竟是麗莎的細叔伯……</desc>
   </programme>
-  <programme start="20261028093000 +0800" stop="20261028120000 +0800" channel="NOW新闻">
-    <title lang="zh">時事全方位 -20261028[直播]</title>
-    <desc lang="zh">主持與學者、官員、議員及不同立場人士就具爭議性的話題及政府政策, 深入討論, 剖析背景, 讓觀眾可以更加深入了解事件。</desc>
-  </programme>
-  <programme start="20261028120000 +0800" stop="20261028123000 +0800" channel="NOW新闻">
-    <title lang="zh">Now午間新聞[直播]</title>
-    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
-  </programme>
   <programme start="20261028123000 +0800" stop="20261028130000 +0800" channel="NOW新闻">
     <title lang="zh">Now午間新聞</title>
     <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
@@ -127987,7 +128025,215 @@
     <title lang="zh">Now深宵新聞[直播]</title>
     <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
-  <programme start="20261101233000 +0800" stop="20261102103000 +0800" channel="NOW新闻">
+  <programme start="20261101233000 +0800" stop="20261102000000 +0800" channel="NOW新闻">
+    <title lang="zh">Now深宵新聞[直播]</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102000000 +0800" stop="20261102003000 +0800" channel="NOW新闻">
+    <title lang="zh">Now深宵新聞</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102003000 +0800" stop="20261102010000 +0800" channel="NOW新闻">
+    <title lang="zh">Now深宵新聞</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102010000 +0800" stop="20261102013000 +0800" channel="NOW新闻">
+    <title lang="zh">Now深宵新聞</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102013000 +0800" stop="20261102020000 +0800" channel="NOW新闻">
+    <title lang="zh">Now深宵新聞</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102020000 +0800" stop="20261102023000 +0800" channel="NOW新闻">
+    <title lang="zh">Now深宵新聞</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102023000 +0800" stop="20261102030000 +0800" channel="NOW新闻">
+    <title lang="zh">Now深宵新聞</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102030000 +0800" stop="20261102033000 +0800" channel="NOW新闻">
+    <title lang="zh">Now深宵新聞</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102033000 +0800" stop="20261102040000 +0800" channel="NOW新闻">
+    <title lang="zh">Now深宵新聞</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102040000 +0800" stop="20261102043000 +0800" channel="NOW新闻">
+    <title lang="zh">Now深宵新聞</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102043000 +0800" stop="20261102050000 +0800" channel="NOW新闻">
+    <title lang="zh">Now深宵新聞</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102050000 +0800" stop="20261102053000 +0800" channel="NOW新闻">
+    <title lang="zh">Now深宵新聞</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102053000 +0800" stop="20261102060000 +0800" channel="NOW新闻">
+    <title lang="zh">Now深宵新聞</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102060000 +0800" stop="20261102063000 +0800" channel="NOW新闻">
+    <title lang="zh">Now早晨 -20261102 第一節[直播]</title>
+    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
+  </programme>
+  <programme start="20261102063000 +0800" stop="20261102070000 +0800" channel="NOW新闻">
+    <title lang="zh">Now早晨 -20261102 第一節</title>
+    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
+  </programme>
+  <programme start="20261102070000 +0800" stop="20261102073000 +0800" channel="NOW新闻">
+    <title lang="zh">Now早晨 -20261102 第二節[直播]</title>
+    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
+  </programme>
+  <programme start="20261102073000 +0800" stop="20261102080000 +0800" channel="NOW新闻">
+    <title lang="zh">Now早晨 -20261102 第二節</title>
+    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
+  </programme>
+  <programme start="20261102080000 +0800" stop="20261102083000 +0800" channel="NOW新闻">
+    <title lang="zh">Now早晨 -20261102 第三節[直播]</title>
+    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
+  </programme>
+  <programme start="20261102083000 +0800" stop="20261102090000 +0800" channel="NOW新闻">
+    <title lang="zh">Now早晨 -20261102 第三節</title>
+    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
+  </programme>
+  <programme start="20261102090000 +0800" stop="20261102093000 +0800" channel="NOW新闻">
+    <title lang="zh">Now新聞報道[直播]</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102093000 +0800" stop="20261102120000 +0800" channel="NOW新闻">
+    <title lang="zh">時事全方位 -20261102[直播]</title>
+    <desc lang="zh">主持與學者、官員、議員及不同立場人士就具爭議性的話題及政府政策, 深入討論, 剖析背景, 讓觀眾可以更加深入了解事件。</desc>
+  </programme>
+  <programme start="20261102120000 +0800" stop="20261102123000 +0800" channel="NOW新闻">
+    <title lang="zh">Now午間新聞[直播]</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102123000 +0800" stop="20261102130000 +0800" channel="NOW新闻">
+    <title lang="zh">Now午間新聞</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102130000 +0800" stop="20261102133000 +0800" channel="NOW新闻">
+    <title lang="zh">Now午間新聞[直播]</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102133000 +0800" stop="20261102140000 +0800" channel="NOW新闻">
+    <title lang="zh">經緯線 -20261101</title>
+    <desc lang="zh">社會矛盾, 意見紛紜, 《經緯線》由民生、政治、經濟、以至國際焦點, 以求真和不偏不倚態度, 記錄一個個人物故事, 深入剖析各個社會議題, 為社會把脈。</desc>
+  </programme>
+  <programme start="20261102140000 +0800" stop="20261102142500 +0800" channel="NOW新闻">
+    <title lang="zh">Now新聞報道[直播]</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102142500 +0800" stop="20261102143000 +0800" channel="NOW新闻">
+    <title lang="zh">世味天下</title>
+    <desc lang="zh">「世味天下」每日從全球報章中揀選特別的時事報道, 有趣的花邊新聞, 助你擴闊視野。</desc>
+  </programme>
+  <programme start="20261102143000 +0800" stop="20261102145500 +0800" channel="NOW新闻">
+    <title lang="zh">Now新聞報道</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102145500 +0800" stop="20261102150000 +0800" channel="NOW新闻">
+    <title lang="zh">世味天下</title>
+    <desc lang="zh">「世味天下」每日從全球報章中揀選特別的時事報道, 有趣的花邊新聞, 助你擴闊視野。</desc>
+  </programme>
+  <programme start="20261102150000 +0800" stop="20261102153000 +0800" channel="NOW新闻">
+    <title lang="zh">Now新聞報道[直播]</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102153000 +0800" stop="20261102160000 +0800" channel="NOW新闻">
+    <title lang="zh">Now新聞報道</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102160000 +0800" stop="20261102161600 +0800" channel="NOW新闻">
+    <title lang="zh">Now新聞報道[直播]</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102161600 +0800" stop="20261102163000 +0800" channel="NOW新闻">
+    <title lang="zh">杏林在線 -20261030</title>
+    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
+  </programme>
+  <programme start="20261102163000 +0800" stop="20261102165000 +0800" channel="NOW新闻">
+    <title lang="zh">Now新聞報道</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102165000 +0800" stop="20261102170000 +0800" channel="NOW新闻">
+    <title lang="zh">國際兩岸評論</title>
+    <desc lang="zh">世界局勢風雲變幻, 兩岸四地互動頻繁, 每個動作息息相關。「國際兩岸評論」, 有不同專家由淺入深, 助你掌握發展脈絡, 解構大趨勢, 洞察新領域。</desc>
+  </programme>
+  <programme start="20261102170000 +0800" stop="20261102172500 +0800" channel="NOW新闻">
+    <title lang="zh">Now新聞報道[直播]</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102172500 +0800" stop="20261102173000 +0800" channel="NOW新闻">
+    <title lang="zh">世味天下</title>
+    <desc lang="zh">「世味天下」每日從全球報章中揀選特別的時事報道, 有趣的花邊新聞, 助你擴闊視野。</desc>
+  </programme>
+  <programme start="20261102173000 +0800" stop="20261102175500 +0800" channel="NOW新闻">
+    <title lang="zh">Now新聞報道</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102175500 +0800" stop="20261102180000 +0800" channel="NOW新闻">
+    <title lang="zh">世味天下</title>
+    <desc lang="zh">「世味天下」每日從全球報章中揀選特別的時事報道, 有趣的花邊新聞, 助你擴闊視野。</desc>
+  </programme>
+  <programme start="20261102180000 +0800" stop="20261102183000 +0800" channel="NOW新闻">
+    <title lang="zh">Now新聞報道[直播]</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102183000 +0800" stop="20261102190000 +0800" channel="NOW新闻">
+    <title lang="zh">Now新聞報道</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102190000 +0800" stop="20261102193000 +0800" channel="NOW新闻">
+    <title lang="zh">Now新聞報道[直播]</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102193000 +0800" stop="20261102195500 +0800" channel="NOW新闻">
+    <title lang="zh">Now新聞報道</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102195500 +0800" stop="20261102200000 +0800" channel="NOW新闻">
+    <title lang="zh">世味天下</title>
+    <desc lang="zh">「世味天下」每日從全球報章中揀選特別的時事報道, 有趣的花邊新聞, 助你擴闊視野。</desc>
+  </programme>
+  <programme start="20261102200000 +0800" stop="20261102203000 +0800" channel="NOW新闻">
+    <title lang="zh">Now新聞報道[直播]</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102203000 +0800" stop="20261102210000 +0800" channel="NOW新闻">
+    <title lang="zh">華泰國際金融控股有限公司 呈獻: 一語千金 - 港好創科 -專訪創新科技及工業局局長 - 孫 東</title>
+    <desc lang="zh">科技．轉變時代；創新．領導未來!《信報財經新聞》聯乘《Now TV》製作跨媒體節目《一語千金-港好創科》, 信報總編輯鄧傳鏘、主持余穎恒, 每星期請嚟創科界領軍人物, 出謀獻策 為香港貢獻力量, 嘉賓真知灼見, 一語值千金。</desc>
+  </programme>
+  <programme start="20261102210000 +0800" stop="20261102211600 +0800" channel="NOW新闻">
+    <title lang="zh">Now新聞報道[直播]</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102211600 +0800" stop="20261102213000 +0800" channel="NOW新闻">
+    <title lang="zh">杏林在線 -20261102</title>
+    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
+  </programme>
+  <programme start="20261102213000 +0800" stop="20261102220000 +0800" channel="NOW新闻">
+    <title lang="zh">Now新聞報道</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102220000 +0800" stop="20261102223000 +0800" channel="NOW新闻">
+    <title lang="zh">Now新聞報道[直播]</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102223000 +0800" stop="20261102230000 +0800" channel="NOW新闻">
+    <title lang="zh">經緯線 -20261101</title>
+    <desc lang="zh">社會矛盾, 意見紛紜, 《經緯線》由民生、政治、經濟、以至國際焦點, 以求真和不偏不倚態度, 記錄一個個人物故事, 深入剖析各個社會議題, 為社會把脈。</desc>
+  </programme>
+  <programme start="20261102230000 +0800" stop="20261102233000 +0800" channel="NOW新闻">
+    <title lang="zh">Now深宵新聞[直播]</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102233000 +0800" stop="20261103000000 +0800" channel="NOW新闻">
     <title lang="zh">Now深宵新聞[直播]</title>
     <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
@@ -129199,6 +129445,324 @@
     <title lang="zh">Now深宵新聞[直播]</title>
     <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
+  <programme start="20261102000000 +0800" stop="20261102003000 +0800" channel="Now财经">
+    <title lang="zh">Now深宵新聞</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102003000 +0800" stop="20261102010000 +0800" channel="Now财经">
+    <title lang="zh">華泰國際金融控股有限公司 呈獻: 一語千金 - 港好創科 -專訪創新科技及工業局局長 - 孫 東</title>
+    <desc lang="zh">科技．轉變時代；創新．領導未來!《信報財經新聞》聯乘《Now TV》製作跨媒體節目《一語千金-港好創科》, 信報總編輯鄧傳鏘、主持余穎恒, 每星期請嚟創科界領軍人物, 出謀獻策 為香港貢獻力量, 嘉賓真知灼見, 一語值千金。</desc>
+  </programme>
+  <programme start="20261102010000 +0800" stop="20261102013000 +0800" channel="Now财经">
+    <title lang="zh">Now深宵新聞</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102013000 +0800" stop="20261102020000 +0800" channel="Now财经">
+    <title lang="zh">大鳴大放 -20261101</title>
+    <desc lang="zh">識英雄重英雄, 請來各界重磅名人, 拋出論點, 言無不盡, 深入討論時事, 跨越維港神州, 宏觀全世界。</desc>
+  </programme>
+  <programme start="20261102020000 +0800" stop="20261102023000 +0800" channel="Now财经">
+    <title lang="zh">Now深宵新聞</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102023000 +0800" stop="20261102030000 +0800" channel="Now财经">
+    <title lang="zh">經緯線 -20261101</title>
+    <desc lang="zh">社會矛盾, 意見紛紜, 《經緯線》由民生、政治、經濟、以至國際焦點, 以求真和不偏不倚態度, 記錄一個個人物故事, 深入剖析各個社會議題, 為社會把脈。</desc>
+  </programme>
+  <programme start="20261102030000 +0800" stop="20261102033000 +0800" channel="Now财经">
+    <title lang="zh">Now深宵新聞</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102033000 +0800" stop="20261102040000 +0800" channel="Now财经">
+    <title lang="zh">大鳴大放 -20261101</title>
+    <desc lang="zh">識英雄重英雄, 請來各界重磅名人, 拋出論點, 言無不盡, 深入討論時事, 跨越維港神州, 宏觀全世界。</desc>
+  </programme>
+  <programme start="20261102040000 +0800" stop="20261102043000 +0800" channel="Now财经">
+    <title lang="zh">Now深宵新聞</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102043000 +0800" stop="20261102050000 +0800" channel="Now财经">
+    <title lang="zh">經緯線 -20261101</title>
+    <desc lang="zh">社會矛盾, 意見紛紜, 《經緯線》由民生、政治、經濟、以至國際焦點, 以求真和不偏不倚態度, 記錄一個個人物故事, 深入剖析各個社會議題, 為社會把脈。</desc>
+  </programme>
+  <programme start="20261102050000 +0800" stop="20261102053000 +0800" channel="Now财经">
+    <title lang="zh">Now深宵新聞</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102053000 +0800" stop="20261102060000 +0800" channel="Now财经">
+    <title lang="zh">一周睇樓團 -20261031</title>
+    <desc lang="zh">為大家搜羅香港最新地產資訊, 包括新盤介紹、二手放盤, 以及特色的家居設計。</desc>
+  </programme>
+  <programme start="20261102060000 +0800" stop="20261102063000 +0800" channel="Now财经">
+    <title lang="zh">Now早晨 -20261102 第一節[直播]</title>
+    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
+  </programme>
+  <programme start="20261102063000 +0800" stop="20261102070000 +0800" channel="Now财经">
+    <title lang="zh">Now早晨 -20261102 第一節</title>
+    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
+  </programme>
+  <programme start="20261102070000 +0800" stop="20261102073000 +0800" channel="Now财经">
+    <title lang="zh">Now早晨 -20261102 第二節[直播]</title>
+    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
+  </programme>
+  <programme start="20261102073000 +0800" stop="20261102080000 +0800" channel="Now财经">
+    <title lang="zh">Now早晨 -20261102 第二節</title>
+    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
+  </programme>
+  <programme start="20261102080000 +0800" stop="20261102081500 +0800" channel="Now财经">
+    <title lang="zh">Now早晨 -20261102 第三節[直播]</title>
+    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
+  </programme>
+  <programme start="20261102081500 +0800" stop="20261102090000 +0800" channel="Now财经">
+    <title lang="zh">市場信析</title>
+    <desc lang="zh">2026市場風雲色變, 股、樓、金、匯、債、AI、虛疑貨幣那個範疇值得投資? 《信報》聯乘《Now財經台》打造全新節目-【市場信析】, 《信報》分析員、投資專家, 逢星期一早上8:30, 一齊同大家焦點拆局。</desc>
+  </programme>
+  <programme start="20261102090000 +0800" stop="20261102093000 +0800" channel="Now财经">
+    <title lang="zh">牛熊先機[直播]</title>
+    <desc lang="zh">每朝開市前主持聯同各方專家點出左右市埸主要因素, 總結股市、金市、匯市、油價等表現, 開市是牛是熊, 為你全面剖析。</desc>
+  </programme>
+  <programme start="20261102093000 +0800" stop="20261102110000 +0800" channel="Now财经">
+    <title lang="zh">交易時段 -20261102 第一節[直播]</title>
+    <desc lang="zh">要掌握第一手市場資訊, 各路財經專家與主持緊貼大市走勢, 為你提供全面訊息, 分析港股焦點新聞消息。</desc>
+  </programme>
+  <programme start="20261102110000 +0800" stop="20261102120000 +0800" channel="Now财经">
+    <title lang="zh">交易時段 -20261102 第二節[直播]</title>
+    <desc lang="zh">要掌握第一手市場資訊, 各路財經專家與主持緊貼大市走勢, 為你提供全面訊息, 分析港股焦點新聞消息。</desc>
+  </programme>
+  <programme start="20261102120000 +0800" stop="20261102123000 +0800" channel="Now财经">
+    <title lang="zh">午間股評 -20261102[直播]</title>
+    <desc lang="zh">專家檢討早市整體表現, 探討個別股票成敗得失, 專業分析員提供買賣資訊, 輔助投資者進一步掌握股壇形勢, 部署下午再戰。</desc>
+  </programme>
+  <programme start="20261102123000 +0800" stop="20261102130000 +0800" channel="Now财经">
+    <title lang="zh">Now午間新聞</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102130000 +0800" stop="20261102150000 +0800" channel="Now财经">
+    <title lang="zh">交易時段 -20261102 第三節[直播]</title>
+    <desc lang="zh">要掌握第一手市場資訊, 各路財經專家與主持緊貼大市走勢, 為你提供全面訊息, 分析港股焦點新聞消息。</desc>
+  </programme>
+  <programme start="20261102150000 +0800" stop="20261102160000 +0800" channel="Now财经">
+    <title lang="zh">交易時段 -20261102 第四節[直播]</title>
+    <desc lang="zh">要掌握第一手市場資訊, 各路財經專家與主持緊貼大市走勢, 為你提供全面訊息, 分析港股焦點新聞消息。</desc>
+  </programme>
+  <programme start="20261102160000 +0800" stop="20261102170000 +0800" channel="Now财经">
+    <title lang="zh">收市檢討 -20261102[直播]</title>
+    <desc lang="zh">即日市況, 作出深入淺出的分析, 並會為接聽觀眾電話, 為投資者提供中肯的買賣策略。</desc>
+  </programme>
+  <programme start="20261102170000 +0800" stop="20261102172500 +0800" channel="Now财经">
+    <title lang="zh">Now新聞報道[直播]</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102172500 +0800" stop="20261102173000 +0800" channel="Now财经">
+    <title lang="zh">世味天下</title>
+    <desc lang="zh">「世味天下」每日從全球報章中揀選特別的時事報道, 有趣的花邊新聞, 助你擴闊視野。</desc>
+  </programme>
+  <programme start="20261102173000 +0800" stop="20261102180000 +0800" channel="Now财经">
+    <title lang="zh">華泰國際金融控股有限公司 呈獻: 一語千金 - 港好創科 -專訪創新科技及工業局局長 - 孫 東</title>
+    <desc lang="zh">科技．轉變時代；創新．領導未來!《信報財經新聞》聯乘《Now TV》製作跨媒體節目《一語千金-港好創科》, 信報總編輯鄧傳鏘、主持余穎恒, 每星期請嚟創科界領軍人物, 出謀獻策 為香港貢獻力量, 嘉賓真知灼見, 一語值千金。</desc>
+  </programme>
+  <programme start="20261102180000 +0800" stop="20261102183000 +0800" channel="Now财经">
+    <title lang="zh">Now新聞報道[直播]</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102183000 +0800" stop="20261102190000 +0800" channel="Now财经">
+    <title lang="zh">Now新聞報道</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102190000 +0800" stop="20261102193000 +0800" channel="Now财经">
+    <title lang="zh">Now財經新聞[直播]</title>
+    <desc lang="zh">逢交易日為你報道最新本地、內地及環球財經消息、市場動態、匯市形勢等。</desc>
+  </programme>
+  <programme start="20261102193000 +0800" stop="20261102195500 +0800" channel="Now财经">
+    <title lang="zh">Now新聞報道</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261102195500 +0800" stop="20261102200000 +0800" channel="Now财经">
+    <title lang="zh">世味天下</title>
+    <desc lang="zh">「世味天下」每日從全球報章中揀選特別的時事報道, 有趣的花邊新聞, 助你擴闊視野。</desc>
+  </programme>
+  <programme start="20261102200000 +0800" stop="20261102210000 +0800" channel="Now财经">
+    <title lang="zh">Now財經新聞</title>
+    <desc lang="zh">逢交易日為你報道最新本地、內地及環球財經消息、市場動態、匯市形勢等。</desc>
+  </programme>
+  <programme start="20261102210000 +0800" stop="20261102213000 +0800" channel="Now财经">
+    <title lang="zh">樓市每日睇 -20261102</title>
+    <desc lang="zh">請來真正地產界資深行家, 提供獨到行內人貼士, 報道及剖析每日樓市動態、最新一二手樓市資訊、成交紀錄等。</desc>
+  </programme>
+  <programme start="20261102213000 +0800" stop="20261102223000 +0800" channel="Now财经">
+    <title lang="zh">港股今日睇 -20261102</title>
+    <desc lang="zh">總結大市每日形勢、分析技術圖表、追蹤大戶動向, 更會請來專業評論員即時分析市場第一手資訊, 亦會接聽觀眾電話詢問股市概況, 為您仔細分析大市走勢。</desc>
+  </programme>
+  <programme start="20261102223000 +0800" stop="20261102230000 +0800" channel="Now财经">
+    <title lang="zh">環球金融快線 -20261102[直播]</title>
+    <desc lang="zh">要投資有道, 就請留意環球金融快線。每晚請來不同資深財經評論家為你把關, 全面審視美股開市前後形勢、外圍氣氛、歐洲股市、匯市、債市、油價和現貨金等市場因素, 深入分析環球市況。</desc>
+  </programme>
+  <programme start="20261102230000 +0800" stop="20261102233000 +0800" channel="Now财经">
+    <title lang="zh">Now財經新聞[直播]</title>
+    <desc lang="zh">逢交易日為你報道最新本地、內地及環球財經消息、市場動態、匯市形勢等。</desc>
+  </programme>
+  <programme start="20261102233000 +0800" stop="20261103000000 +0800" channel="Now财经">
+    <title lang="zh">交易時段精華 -20261102</title>
+  </programme>
+  <programme start="20261103000000 +0800" stop="20261103010000 +0800" channel="Now财经">
+    <title lang="zh">港股今日睇 -20261102</title>
+    <desc lang="zh">總結大市每日形勢、分析技術圖表、追蹤大戶動向, 更會請來專業評論員即時分析市場第一手資訊, 亦會接聽觀眾電話詢問股市概況, 為您仔細分析大市走勢。</desc>
+  </programme>
+  <programme start="20261103010000 +0800" stop="20261103020000 +0800" channel="Now财经">
+    <title lang="zh">Now財經新聞</title>
+    <desc lang="zh">逢交易日為你報道最新本地、內地及環球財經消息、市場動態、匯市形勢等。</desc>
+  </programme>
+  <programme start="20261103020000 +0800" stop="20261103023000 +0800" channel="Now财经">
+    <title lang="zh">樓市每日睇 -20261102</title>
+    <desc lang="zh">請來真正地產界資深行家, 提供獨到行內人貼士, 報道及剖析每日樓市動態、最新一二手樓市資訊、成交紀錄等。</desc>
+  </programme>
+  <programme start="20261103023000 +0800" stop="20261103030000 +0800" channel="Now财经">
+    <title lang="zh">環球金融快線 -20261102</title>
+    <desc lang="zh">要投資有道, 就請留意環球金融快線。每晚請來不同資深財經評論家為你把關, 全面審視美股開市前後形勢、外圍氣氛、歐洲股市、匯市、債市、油價和現貨金等市場因素, 深入分析環球市況。</desc>
+  </programme>
+  <programme start="20261103030000 +0800" stop="20261103060000 +0800" channel="Now财经">
+    <title lang="zh">Now財經新聞</title>
+    <desc lang="zh">逢交易日為你報道最新本地、內地及環球財經消息、市場動態、匯市形勢等。</desc>
+  </programme>
+  <programme start="20261103060000 +0800" stop="20261103063000 +0800" channel="Now财经">
+    <title lang="zh">Now早晨 -20261103 第一節[直播]</title>
+    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
+  </programme>
+  <programme start="20261103063000 +0800" stop="20261103070000 +0800" channel="Now财经">
+    <title lang="zh">Now早晨 -20261103 第一節</title>
+    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
+  </programme>
+  <programme start="20261103070000 +0800" stop="20261103073000 +0800" channel="Now财经">
+    <title lang="zh">Now早晨 -20261103 第二節[直播]</title>
+    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
+  </programme>
+  <programme start="20261103073000 +0800" stop="20261103080000 +0800" channel="Now财经">
+    <title lang="zh">Now早晨 -20261103 第二節</title>
+    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
+  </programme>
+  <programme start="20261103080000 +0800" stop="20261103083000 +0800" channel="Now财经">
+    <title lang="zh">Now早晨 -20261103 第三節[直播]</title>
+    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
+  </programme>
+  <programme start="20261103083000 +0800" stop="20261103090000 +0800" channel="Now财经">
+    <title lang="zh">Now早晨 -20261103 第三節</title>
+    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
+  </programme>
+  <programme start="20261103090000 +0800" stop="20261103093000 +0800" channel="Now财经">
+    <title lang="zh">牛熊先機[直播]</title>
+    <desc lang="zh">每朝開市前主持聯同各方專家點出左右市埸主要因素, 總結股市、金市、匯市、油價等表現, 開市是牛是熊, 為你全面剖析。</desc>
+  </programme>
+  <programme start="20261103093000 +0800" stop="20261103110000 +0800" channel="Now财经">
+    <title lang="zh">交易時段 -20261103 第一節[直播]</title>
+    <desc lang="zh">要掌握第一手市場資訊, 各路財經專家與主持緊貼大市走勢, 為你提供全面訊息, 分析港股焦點新聞消息。</desc>
+  </programme>
+  <programme start="20261103110000 +0800" stop="20261103120000 +0800" channel="Now财经">
+    <title lang="zh">交易時段 -20261103 第二節[直播]</title>
+    <desc lang="zh">要掌握第一手市場資訊, 各路財經專家與主持緊貼大市走勢, 為你提供全面訊息, 分析港股焦點新聞消息。</desc>
+  </programme>
+  <programme start="20261103120000 +0800" stop="20261103123000 +0800" channel="Now财经">
+    <title lang="zh">午間股評 -20261103[直播]</title>
+    <desc lang="zh">專家檢討早市整體表現, 探討個別股票成敗得失, 專業分析員提供買賣資訊, 輔助投資者進一步掌握股壇形勢, 部署下午再戰。</desc>
+  </programme>
+  <programme start="20261103123000 +0800" stop="20261103130000 +0800" channel="Now财经">
+    <title lang="zh">Now午間新聞</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261103130000 +0800" stop="20261103150000 +0800" channel="Now财经">
+    <title lang="zh">交易時段 -20261103 第三節[直播]</title>
+    <desc lang="zh">要掌握第一手市場資訊, 各路財經專家與主持緊貼大市走勢, 為你提供全面訊息, 分析港股焦點新聞消息。</desc>
+  </programme>
+  <programme start="20261103150000 +0800" stop="20261103160000 +0800" channel="Now财经">
+    <title lang="zh">交易時段 -20261103 第四節[直播]</title>
+    <desc lang="zh">要掌握第一手市場資訊, 各路財經專家與主持緊貼大市走勢, 為你提供全面訊息, 分析港股焦點新聞消息。</desc>
+  </programme>
+  <programme start="20261103160000 +0800" stop="20261103170000 +0800" channel="Now财经">
+    <title lang="zh">收市檢討 -20261103[直播]</title>
+    <desc lang="zh">即日市況, 作出深入淺出的分析, 並會為接聽觀眾電話, 為投資者提供中肯的買賣策略。</desc>
+  </programme>
+  <programme start="20261103170000 +0800" stop="20261103172500 +0800" channel="Now财经">
+    <title lang="zh">Now新聞報道[直播]</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261103172500 +0800" stop="20261103173000 +0800" channel="Now财经">
+    <title lang="zh">世味天下</title>
+    <desc lang="zh">「世味天下」每日從全球報章中揀選特別的時事報道, 有趣的花邊新聞, 助你擴闊視野。</desc>
+  </programme>
+  <programme start="20261103173000 +0800" stop="20261103175500 +0800" channel="Now财经">
+    <title lang="zh">Now新聞報道</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261103175500 +0800" stop="20261103180000 +0800" channel="Now财经">
+    <title lang="zh">世味天下</title>
+    <desc lang="zh">「世味天下」每日從全球報章中揀選特別的時事報道, 有趣的花邊新聞, 助你擴闊視野。</desc>
+  </programme>
+  <programme start="20261103180000 +0800" stop="20261103183000 +0800" channel="Now财经">
+    <title lang="zh">Now新聞報道[直播]</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261103183000 +0800" stop="20261103190000 +0800" channel="Now财经">
+    <title lang="zh">Now新聞報道</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261103190000 +0800" stop="20261103192100 +0800" channel="Now财经">
+    <title lang="zh">Now財經新聞[直播]</title>
+    <desc lang="zh">逢交易日為你報道最新本地、內地及環球財經消息、市場動態、匯市形勢等。</desc>
+  </programme>
+  <programme start="20261103192100 +0800" stop="20261103193000 +0800" channel="Now财经">
+    <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
+    <desc lang="zh">理財有方每集提供各項理財投資的實用知識, 滿足投資者的不同需要。</desc>
+  </programme>
+  <programme start="20261103193000 +0800" stop="20261103195500 +0800" channel="Now财经">
+    <title lang="zh">Now新聞報道</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261103195500 +0800" stop="20261103200000 +0800" channel="Now财经">
+    <title lang="zh">世味天下</title>
+    <desc lang="zh">「世味天下」每日從全球報章中揀選特別的時事報道, 有趣的花邊新聞, 助你擴闊視野。</desc>
+  </programme>
+  <programme start="20261103200000 +0800" stop="20261103202100 +0800" channel="Now财经">
+    <title lang="zh">Now財經新聞</title>
+    <desc lang="zh">逢交易日為你報道最新本地、內地及環球財經消息、市場動態、匯市形勢等。</desc>
+  </programme>
+  <programme start="20261103202100 +0800" stop="20261103203000 +0800" channel="Now财经">
+    <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
+    <desc lang="zh">理財有方每集提供各項理財投資的實用知識, 滿足投資者的不同需要。</desc>
+  </programme>
+  <programme start="20261103203000 +0800" stop="20261103205100 +0800" channel="Now财经">
+    <title lang="zh">Now財經新聞</title>
+    <desc lang="zh">逢交易日為你報道最新本地、內地及環球財經消息、市場動態、匯市形勢等。</desc>
+  </programme>
+  <programme start="20261103205100 +0800" stop="20261103210000 +0800" channel="Now财经">
+    <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
+    <desc lang="zh">理財有方每集提供各項理財投資的實用知識, 滿足投資者的不同需要。</desc>
+  </programme>
+  <programme start="20261103210000 +0800" stop="20261103212100 +0800" channel="Now财经">
+    <title lang="zh">樓市每日睇 -20261103</title>
+    <desc lang="zh">請來真正地產界資深行家, 提供獨到行內人貼士, 報道及剖析每日樓市動態、最新一二手樓市資訊、成交紀錄等。</desc>
+  </programme>
+  <programme start="20261103212100 +0800" stop="20261103213000 +0800" channel="Now财经">
+    <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
+    <desc lang="zh">理財有方每集提供各項理財投資的實用知識, 滿足投資者的不同需要。</desc>
+  </programme>
+  <programme start="20261103213000 +0800" stop="20261103223000 +0800" channel="Now财经">
+    <title lang="zh">港股今日睇 -20261103</title>
+    <desc lang="zh">總結大市每日形勢、分析技術圖表、追蹤大戶動向, 更會請來專業評論員即時分析市場第一手資訊, 亦會接聽觀眾電話詢問股市概況, 為您仔細分析大市走勢。</desc>
+  </programme>
+  <programme start="20261103223000 +0800" stop="20261103230000 +0800" channel="Now财经">
+    <title lang="zh">環球金融快線 -20261103[直播]</title>
+    <desc lang="zh">要投資有道, 就請留意環球金融快線。每晚請來不同資深財經評論家為你把關, 全面審視美股開市前後形勢、外圍氣氛、歐洲股市、匯市、債市、油價和現貨金等市場因素, 深入分析環球市況。</desc>
+  </programme>
+  <programme start="20261103230000 +0800" stop="20261103232100 +0800" channel="Now财经">
+    <title lang="zh">Now財經新聞[直播]</title>
+    <desc lang="zh">逢交易日為你報道最新本地、內地及環球財經消息、市場動態、匯市形勢等。</desc>
+  </programme>
+  <programme start="20261103232100 +0800" stop="20261103233000 +0800" channel="Now财经">
+    <title lang="zh">華僑銀行香港 呈獻: 理財有方</title>
+    <desc lang="zh">理財有方每集提供各項理財投資的實用知識, 滿足投資者的不同需要。</desc>
+  </programme>
+  <programme start="20261103233000 +0800" stop="20261104000000 +0800" channel="Now财经">
+    <title lang="zh">交易時段精華 -20261103</title>
+  </programme>
   <programme start="20261028000000 +0800" stop="20261028012000 +0800" channel="PopC">
     <title lang="zh">變種狂蜥</title>
     <desc lang="zh">二十年後的未來世界,一群食客打算去一家違法經營的野味飯店享受一頓野味大餐,突然當中有一隻變種巨蜥衝破了鐵籠逃走,之後店員一個接一個地神秘失蹤。在此同時捕鼠專家阿發接到飯店的滅鼠委託,本來的滅鼠行動卻變..</desc>
@@ -129666,9 +130230,6 @@
   <programme start="20261103224000 +0800" stop="20261104001500 +0800" channel="PopC">
     <title lang="zh">蜀山伏魔篇</title>
     <desc lang="zh">白澤和淩風自幼一起在崑崙派長大,二人因誤入秘境,得到了昊天鏡及絕世魔功。後因淩風修煉魔功之事曝光,兩人被逐出師門,來到白馬鎮,在這裡找到心愛之人。不料崑崙派突然來追殺他們,使淩風愛人慘死,令他墜入魔道..</desc>
-  </programme>
-  <programme start="20261028090000 +0800" stop="20261028120000 +0800" channel="Now直播台">
-    <title lang="zh">隨時直播各類時事新聞及記者會</title>
   </programme>
   <programme start="20261028120000 +0800" stop="20261028150000 +0800" channel="Now直播台">
     <title lang="zh">隨時直播各類時事新聞及記者會</title>
