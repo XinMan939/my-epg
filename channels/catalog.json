@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-28T03:07:05.772Z",
+  "generatedAt": "2026-10-28T03:15:03.272Z",
   "total": 2863,
   "items": [
     {
@@ -23515,7 +23515,7 @@
       "sourceId": "156",
       "name": "KBS World",
       "logo": "",
-      "days": 6,
+      "days": 5,
       "count": 143,
       "withDesc": 127
     },
@@ -23796,7 +23796,7 @@
       "name": "Now直播台",
       "logo": "",
       "days": 7,
-      "count": 71,
+      "count": 89,
       "withDesc": 0
     },
     {
@@ -23805,7 +23805,7 @@
       "sourceId": "332",
       "name": "Now新聞台",
       "logo": "",
-      "days": 6,
+      "days": 5,
       "count": 259,
       "withDesc": 259
     },
@@ -23815,7 +23815,7 @@
       "sourceId": "333",
       "name": "Now財經台",
       "logo": "",
-      "days": 6,
+      "days": 5,
       "count": 229,
       "withDesc": 229
     },
@@ -24045,7 +24045,7 @@
       "sourceId": "553",
       "name": "三沙衛視",
       "logo": "",
-      "days": 5,
+      "days": 4,
       "count": 15,
       "withDesc": 0
     },
@@ -24692,16 +24692,6 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "2",
-      "name": "頻道總表",
-      "logo": "",
-      "days": 0,
-      "count": 0,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "6",
       "name": "民視HD",
       "logo": "",
@@ -24712,11 +24702,11 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "7",
-      "name": "人間衛視HD",
+      "sourceId": "2",
+      "name": "頻道總表",
       "logo": "",
-      "days": 7,
-      "count": 217,
+      "days": 0,
+      "count": 0,
       "withDesc": 0
     },
     {
@@ -24727,6 +24717,16 @@
       "logo": "",
       "days": 7,
       "count": 195,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "7",
+      "name": "人間衛視HD",
+      "logo": "",
+      "days": 7,
+      "count": 217,
       "withDesc": 0
     },
     {
@@ -24822,21 +24822,21 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "96",
-      "name": "華視教育體育文化台",
-      "logo": "",
-      "days": 5,
-      "count": 219,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "98",
       "name": "公視兒少台HD",
       "logo": "",
       "days": 7,
       "count": 325,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "96",
+      "name": "華視教育體育文化台",
+      "logo": "",
+      "days": 5,
+      "count": 219,
       "withDesc": 0
     },
     {
@@ -24892,16 +24892,6 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "106",
-      "name": "靖洋卡通台Nice Bingo HD",
-      "logo": "",
-      "days": 7,
-      "count": 315,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "107",
       "name": "靖天卡通台 HD",
       "logo": "",
@@ -24912,11 +24902,11 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "109",
-      "name": "達文西頻道HD",
+      "sourceId": "106",
+      "name": "靖洋卡通台Nice Bingo HD",
       "logo": "",
       "days": 7,
-      "count": 595,
+      "count": 315,
       "withDesc": 0
     },
     {
@@ -24927,6 +24917,16 @@
       "logo": "",
       "days": 7,
       "count": 1180,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "109",
+      "name": "達文西頻道HD",
+      "logo": "",
+      "days": 7,
+      "count": 595,
       "withDesc": 0
     },
     {
@@ -24982,21 +24982,21 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "152",
-      "name": "Medici-arts HD",
-      "logo": "",
-      "days": 7,
-      "count": 119,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "154",
       "name": "MTV綜合台HD",
       "logo": "",
       "days": 7,
       "count": 336,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "152",
+      "name": "Medici-arts HD",
+      "logo": "",
+      "days": 7,
+      "count": 119,
       "withDesc": 0
     },
     {
@@ -25062,21 +25062,21 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "203",
-      "name": "愛爾達體育4台",
-      "logo": "",
-      "days": 7,
-      "count": 69,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "158",
       "name": "CMusic",
       "logo": "",
       "days": 7,
       "count": 3293,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "203",
+      "name": "愛爾達體育4台",
+      "logo": "",
+      "days": 7,
+      "count": 69,
       "withDesc": 0
     },
     {
@@ -25112,21 +25112,21 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "207",
-      "name": "博斯魅力HD",
-      "logo": "",
-      "days": 6,
-      "count": 82,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "208",
       "name": "博斯無限台HD",
       "logo": "",
       "days": 6,
       "count": 60,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "207",
+      "name": "博斯魅力HD",
+      "logo": "",
+      "days": 6,
+      "count": 82,
       "withDesc": 0
     },
     {
@@ -25182,6 +25182,16 @@
     {
       "source": "mod",
       "region": "TW",
+      "sourceId": "216",
+      "name": "EUROSPORT HD",
+      "logo": "",
+      "days": 7,
+      "count": 111,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
       "sourceId": "214",
       "name": "DAZN 2",
       "logo": "",
@@ -25197,16 +25207,6 @@
       "logo": "",
       "days": 7,
       "count": 53,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
-      "sourceId": "216",
-      "name": "EUROSPORT HD",
-      "logo": "",
-      "days": 7,
-      "count": 111,
       "withDesc": 0
     },
     {
@@ -25242,21 +25242,21 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "253",
-      "name": "Discovery Asia HD",
-      "logo": "",
-      "days": 7,
-      "count": 231,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "254",
       "name": "Discovery科學HD",
       "logo": "",
       "days": 7,
       "count": 274,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "253",
+      "name": "Discovery Asia HD",
+      "logo": "",
+      "days": 7,
+      "count": 231,
       "withDesc": 0
     },
     {
@@ -25342,21 +25342,11 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "263",
-      "name": "LUXE TV HD",
+      "sourceId": "265",
+      "name": "KLT-靖天國際台HD",
       "logo": "",
-      "days": 7,
-      "count": 344,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
-      "sourceId": "264",
-      "name": "Lifetime HD",
-      "logo": "",
-      "days": 7,
-      "count": 162,
+      "days": 5,
+      "count": 215,
       "withDesc": 0
     },
     {
@@ -25372,11 +25362,21 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "265",
-      "name": "KLT-靖天國際台HD",
+      "sourceId": "264",
+      "name": "Lifetime HD",
       "logo": "",
-      "days": 5,
-      "count": 215,
+      "days": 7,
+      "count": 162,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "263",
+      "name": "LUXE TV HD",
+      "logo": "",
+      "days": 7,
+      "count": 344,
       "withDesc": 0
     },
     {
@@ -25502,21 +25502,21 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "302",
-      "name": "靖天資訊HD",
-      "logo": "",
-      "days": 5,
-      "count": 124,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "301",
       "name": "三立綜合台HD",
       "logo": "",
       "days": 7,
       "count": 151,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "302",
+      "name": "靖天資訊HD",
+      "logo": "",
+      "days": 5,
+      "count": 124,
       "withDesc": 0
     },
     {
@@ -25652,16 +25652,6 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "316",
-      "name": "民視第一台HD",
-      "logo": "",
-      "days": 5,
-      "count": 162,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "317",
       "name": "民視台灣台HD",
       "logo": "",
@@ -25682,21 +25672,21 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "321",
-      "name": "八大優頻道",
-      "logo": "",
-      "days": 7,
-      "count": 168,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "320",
       "name": "新唐人亞太台",
       "logo": "",
       "days": 7,
       "count": 347,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "321",
+      "name": "八大優頻道",
+      "logo": "",
+      "days": 7,
+      "count": 168,
       "withDesc": 0
     },
     {
@@ -25712,21 +25702,21 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "348",
-      "name": "momo2台HD",
-      "logo": "",
-      "days": 7,
-      "count": 252,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "349",
       "name": "東森購物3台HD",
       "logo": "",
       "days": 4,
       "count": 96,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "348",
+      "name": "momo2台HD",
+      "logo": "",
+      "days": 7,
+      "count": 252,
       "withDesc": 0
     },
     {
@@ -25742,21 +25732,21 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "351",
-      "name": "台灣戲劇HD",
-      "logo": "",
-      "days": 7,
-      "count": 180,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "352",
       "name": "龍華戲劇HD",
       "logo": "",
       "days": 7,
       "count": 93,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "351",
+      "name": "台灣戲劇HD",
+      "logo": "",
+      "days": 7,
+      "count": 180,
       "withDesc": 0
     },
     {
@@ -25782,6 +25772,16 @@
     {
       "source": "mod",
       "region": "TW",
+      "sourceId": "316",
+      "name": "民視第一台HD",
+      "logo": "",
+      "days": 5,
+      "count": 162,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
       "sourceId": "355",
       "name": "愛爾達影劇台HD",
       "logo": "",
@@ -25802,21 +25802,21 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "357",
-      "name": "靖洋戲劇HD",
-      "logo": "",
-      "days": 5,
-      "count": 126,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "358",
       "name": "EYE TV戲劇台HD",
       "logo": "",
       "days": 7,
       "count": 168,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "357",
+      "name": "靖洋戲劇HD",
+      "logo": "",
+      "days": 5,
+      "count": 126,
       "withDesc": 0
     },
     {
@@ -25842,16 +25842,6 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "372",
-      "name": "曼迪日本台HD",
-      "logo": "",
-      "days": 7,
-      "count": 325,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "374",
       "name": "Animax",
       "logo": "",
@@ -25872,6 +25862,16 @@
     {
       "source": "mod",
       "region": "TW",
+      "sourceId": "372",
+      "name": "曼迪日本台HD",
+      "logo": "",
+      "days": 7,
+      "count": 325,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
       "sourceId": "376",
       "name": "tvN HD",
       "logo": "",
@@ -25887,6 +25887,16 @@
       "logo": "",
       "days": 7,
       "count": 246,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "378",
+      "name": "華藝中文台",
+      "logo": "",
+      "days": 7,
+      "count": 182,
       "withDesc": 0
     },
     {
@@ -26062,16 +26072,6 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "378",
-      "name": "華藝中文台",
-      "logo": "",
-      "days": 7,
-      "count": 182,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "545",
       "name": "美好1台HD",
       "logo": "",
@@ -26102,26 +26102,6 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "551",
-      "name": "BBC NEWS HD",
-      "logo": "",
-      "days": 7,
-      "count": 355,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
-      "sourceId": "552",
-      "name": "Bloomberg",
-      "logo": "",
-      "days": 7,
-      "count": 162,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "553",
       "name": "Channel NewsAsia",
       "logo": "",
@@ -26142,11 +26122,11 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "556",
-      "name": "德國之聲",
+      "sourceId": "552",
+      "name": "Bloomberg",
       "logo": "",
       "days": 7,
-      "count": 521,
+      "count": 162,
       "withDesc": 0
     },
     {
@@ -26162,21 +26142,31 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "557",
-      "name": "FRANCE24E HD",
+      "sourceId": "551",
+      "name": "BBC NEWS HD",
       "logo": "",
-      "days": 6,
-      "count": 717,
+      "days": 7,
+      "count": 355,
       "withDesc": 0
     },
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "560",
-      "name": "NHK新聞資訊台HD",
+      "sourceId": "556",
+      "name": "德國之聲",
       "logo": "",
       "days": 7,
-      "count": 314,
+      "count": 521,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "557",
+      "name": "FRANCE24E HD",
+      "logo": "",
+      "days": 6,
+      "count": 717,
       "withDesc": 0
     },
     {
@@ -26192,11 +26182,11 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "600",
-      "name": "視納華仁紀實台HD",
+      "sourceId": "560",
+      "name": "NHK新聞資訊台HD",
       "logo": "",
-      "days": 4,
-      "count": 128,
+      "days": 7,
+      "count": 314,
       "withDesc": 0
     },
     {
@@ -26212,21 +26202,21 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "601",
-      "name": "影迷數位紀實台HD",
+      "sourceId": "600",
+      "name": "視納華仁紀實台HD",
       "logo": "",
-      "days": 7,
-      "count": 174,
+      "days": 4,
+      "count": 128,
       "withDesc": 0
     },
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "611",
-      "name": "龍華電影HD",
+      "sourceId": "601",
+      "name": "影迷數位紀實台HD",
       "logo": "",
       "days": 7,
-      "count": 77,
+      "count": 174,
       "withDesc": 0
     },
     {
@@ -26242,11 +26232,11 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "614",
-      "name": "靖天電影HD",
+      "sourceId": "611",
+      "name": "龍華電影HD",
       "logo": "",
-      "days": 5,
-      "count": 67,
+      "days": 7,
+      "count": 77,
       "withDesc": 0
     },
     {
@@ -26257,6 +26247,16 @@
       "logo": "",
       "days": 5,
       "count": 68,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "614",
+      "name": "靖天電影HD",
+      "logo": "",
+      "days": 5,
+      "count": 67,
       "withDesc": 0
     },
     {
@@ -26422,16 +26422,6 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "728",
-      "name": "信吉電視台",
-      "logo": "",
-      "days": 7,
-      "count": 84,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "702",
       "name": "華藏衛視HD",
       "logo": "",
@@ -26452,11 +26442,11 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "730",
-      "name": "華藝台灣台 HD",
+      "sourceId": "728",
+      "name": "信吉電視台",
       "logo": "",
       "days": 7,
-      "count": 168,
+      "count": 84,
       "withDesc": 0
     },
     {
@@ -26472,8 +26462,8 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "732",
-      "name": "大立電視台 HD",
+      "sourceId": "730",
+      "name": "華藝台灣台 HD",
       "logo": "",
       "days": 7,
       "count": 168,
@@ -26487,6 +26477,16 @@
       "logo": "",
       "days": 7,
       "count": 91,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "732",
+      "name": "大立電視台 HD",
+      "logo": "",
+      "days": 7,
+      "count": 168,
       "withDesc": 0
     },
     {
@@ -26512,26 +26512,6 @@
     {
       "source": "mod",
       "region": "TW",
-      "sourceId": "735",
-      "name": "天良綜合台 HD",
-      "logo": "",
-      "days": 7,
-      "count": 105,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
-      "sourceId": "751",
-      "name": "Arirang TV HD",
-      "logo": "",
-      "days": 4,
-      "count": 210,
-      "withDesc": 0
-    },
-    {
-      "source": "mod",
-      "region": "TW",
       "sourceId": "736",
       "name": "番薯電視台",
       "logo": "",
@@ -26542,11 +26522,31 @@
     {
       "source": "mod",
       "region": "TW",
+      "sourceId": "735",
+      "name": "天良綜合台 HD",
+      "logo": "",
+      "days": 7,
+      "count": 105,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
       "sourceId": "750",
       "name": "TV5MONDE",
       "logo": "",
       "days": 7,
       "count": 346,
+      "withDesc": 0
+    },
+    {
+      "source": "mod",
+      "region": "TW",
+      "sourceId": "751",
+      "name": "Arirang TV HD",
+      "logo": "",
+      "days": 4,
+      "count": 210,
       "withDesc": 0
     },
     {
