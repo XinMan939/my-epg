@@ -1229,7 +1229,9 @@ https://m.fengshows.com/api/v3/live/{liveId}/resources?dir=asc&date=YYYYMMDD&pag
 
 - **tvmao 全量频道重新对一遍**：本轮只抽样 24 个，还有 190 个没验证新解析器的收益
 - **`DOX-`/`KAMBA-`/`DIGITAL-` 这 3 个单频道组**：路径已修但没进产物验证
-- **浙江国际（cztv）**：纯 SPA + 全压缩分包，本机无 playwright，仍未破解
+- **浙江国际（cztv）**：~~纯 SPA + 全压缩分包，本机无 playwright，仍未破解~~
+  → **2026-10-28 第十五轮已破解并接入**（详见 pitfalls §7.1g）。结论修正：
+  分包**没压缩**、接口**没签名**，路由表里明文写着分包名，接口在分包里明文可读。
 
 ---
 

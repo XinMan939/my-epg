@@ -311,7 +311,7 @@ epg.pw 台湾包有一批节目 `<desc>` 就是 `<title>` 本身，长度过 12 
 **两道自动化防线（都已接进 CI）：**
 
 ```bash
-npm test                              # 178 项断言（8 个文件），build 之前跑
+npm test                              # 198 项断言（9 个文件），build 之前跑
 node test/audit-output.mjs output/epg.xml.gz   # 产物体检，重叠/乱序/零长度/某天半截 → exit 1
 ```
 
@@ -406,8 +406,9 @@ node test/audit-output.mjs output/epg.xml.gz   # 产物体检，重叠/乱序/�
 ##### 新增的第三道防线（`test/day-fill.test.mjs`，47 项断言）
 
 ```bash
-npm test    # 八套：normalize 23 + day-fill 52 + tvmao 33 + match 10
-            #       + timezone 23 + days-source 6 + litv-desc 25 + override-desc 6 = 178 项
+npm test    # 九套：normalize 23 + day-fill 52 + tvmao 33 + match 10
+            #       + timezone 23 + days-source 6 + litv-desc 25 + override-desc 6
+            #       + cztv 20 = 198 项
 ```
 
 关键断言：
@@ -747,6 +748,7 @@ console.log(e);  // 128 条 / 5 天 → 不如现有 148 条 / 6 天，就不该
 | **elta**（台湾 ELTA OTT） | 中国台湾 | 38 台，补爱尔达体育 4 台的天数 | **无**（只有标题） |
 | **nowplayer**（香港 Now TV 官网） | 中国香港 | 135 台 / 7 天 / 26451 条，凤凰台主力 | ★有（18534 条 = 70%） |
 | **mod**（台湾中华电信 MOD） | 中国台湾 | 187 台 / 7 天 / 40018 条，台湾本土台最全 | **无**（只有标题） |
+| **cztv**（浙江广电「新蓝网」官网） | 浙江 9 台 | 只给**今天 1 天**（明天起是 24 条「精彩节目」占位，已过滤）；补浙江国际 / 浙江少儿 | **无**（只有标题） |
 
 优先级：`epgpw → tvmao → tvsou` 为主链，其余源按 `pickBest()` 统一排序
 （`days → withDesc → count → 名字长度`）。主源返回 0 条节目时，会自动按 `alternatives` 列表降级（日志里会打 `[fallback]`）。

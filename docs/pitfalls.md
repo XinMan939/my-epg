@@ -683,6 +683,27 @@ override 从很多轮之前就写死 `457281` —— 恰好是 0 简介那份。
 ⚠️ 别把 override 改成 `descSourceId` 来救：那个字段只支持 tvmao（`desc.mjs`），
    对 epgpw 的另一个地区包无效。直接换 sourceId 更简单，且能连带拿到更干净的标题。
 
+#### 6.7k ★★★ 第五个变种：**条数是真的，内容是空壳**（cztv，2026-10-28 第十五轮）
+
+前几种「自报数据骗排序」都是数字在说谎：天数虚高（6.7g）、天数少一天（6.7h）、排序没跑（6.7j）。
+cztv 是第五种，也是最难的一种 —— **数字全是真的，只有内容是假的**：
+
+```
+cztv 浙江国际 20261029 → 24 条，每条 60 分钟，标题全部叫「精彩节目」
+cztv 浙江国际 20261028 → 81 条，真实节目（阿优之神奇萝卜 / 华人天地 / 靓丽之窗…）
+```
+
+把 7 天照单全收就得到 `days=7 / count=168`，在 `pickBest` 里以「天数最多」稳赢 epgpw。
+而**任何基于条数/天数/覆盖时长的检查都通得过**：168 条确实存在，24 小时确实被占满，
+`countCoveredYmds` 也判它「覆盖满 6 小时」。唯一的破绽在**标题**。
+
+**硬规则**：
+1. 接新源时，除了数天数条数，必须**抽一天看标题**。同一标题重复 24 次就是占位。
+2. 占位判定**只认标题**，别拿时长/条数当判据（真实节目也有 60 分钟栏目，会误杀）。
+3. 已落 `test/cztv.test.mjs`：删掉 `isFiller` 那 6 组断言会立刻红。
+
+详见 §7.1g（cztv 的完整接口与破解路径）。
+
 
 ### 6.8 ★★ 罗马数字 Ⅰ~Ⅻ 必须先转阿拉伯数字（2026-10-28 新增）
 
@@ -915,6 +936,96 @@ MOD 页面：<div class='time'> 00:00</div>        ← 台湾 10-28 00:00
    光看「满 7 天 / 节目总数 / 简介率」全部会被骗过。
 4. 已有防线：`test/timezone.test.mjs`（17 项，含「不减 8 小时会得到 08:00」的反证断言）。
 
+### 7.1g ★★★ 「纯 SPA 抓不到」多半是**只看了壳**，不是抓不到（cztv，2026-10-28 第十五轮）
+
+用户给了 `https://www.cztv.com/liveTV/108` 的截图，右侧有完整节目单，问「这个页面真的有 epg，你再试着抓一下」。
+而文档里躺着我自己写的结论：**「纯 SPA + 全压缩分包，接口未破解，本机无 playwright」** —— 错的。
+
+**四步就破了，全程 curl + grep，没有 playwright：**
+
+```bash
+# 1. 首页只有 SPA 壳（3.9KB），但壳里给了入口，不用猜
+curl https://www.cztv.com/liveTV/108 | grep -o 'src="/assets/[^"]*"'
+#   → /assets/index-PYvdPb2S.js
+
+# 2. 入口 1.2MB 是**路由表**，分包文件名明文写在 import() 里
+curl https://www.cztv.com/assets/index-PYvdPb2S.js | grep -o '.\{100\}liveTV.\{100\}'
+#   → {path:"/liveTV/:id?", name:"directSeedingTV",
+#      component:()=>import("./directSeedingTV-DpN52kBg.js")}
+
+# 3. 该分包开头几行是**全部依赖清单**：j=频道表 D=播放地址 E=节目单
+curl .../directSeedingTV-DpN52kBg.js | head -5
+#   → import{d as j,e as D,f as E}from"./new-B3uSErh9.js"
+
+# 4. 接口在 new-*.js 里明文，baseURL 在 reqOnline-*.js 里明文
+#   → n = () => s({url:'api/paas/channel/tv'})
+#   → c = (a,t) => s({url:`api/paas/program/${a}/${t}`})
+#   → axios.create({baseURL:'https://p.cztv.com/'})
+```
+
+**为什么之前会判「未破解」**：只 `curl` 了首屏那 3.9KB，看到 `<div id="app"></div>` 就收工，
+把「首屏没有数据」当成了「没有接口」。**这是方法论错误，不是技术障碍。**
+★ 下次遇到 SPA：**先抓 `index-*.js` 找路由表**，`import()` 的分包名就在里面，
+不用猜 hash、不用 DevTools、不用 playwright。
+
+**接口（免鉴权，免签名，UA 随便填，带 `Referer: https://www.cztv.com/` 更稳）**
+
+```
+GET https://p.cztv.com/api/paas/channel/tv
+  → content.list[] = { station_code, name, logo, station_playing }
+    实测 10 个台：101 浙江卫视 / 102 钱江都市 / 103 经济生活 / 104 教科影视 /
+                  106 民生休闲 / 107 新闻 / 108 少儿频道 / 110 浙江国际 /
+                  111 好易购 / 112 之江纪录
+
+GET https://p.cztv.com/api/paas/program/{station_code}/{yyyymmdd}
+  → content.list[0] = { station_id, station_name, station_date, list[] }
+    list[] = { program_title, play_time, duration, program_id, ... }
+```
+
+**四个坑（都已落进 `src/sources/cztv.mjs` 的注释与 `test/cztv.test.mjs`）**
+
+① **`play_time` / `duration` 都是毫秒**（`1793116800000` = 北京当日 00:00）。
+   当前端就是这么用的（`new Date(Number(p.play_time))`）。当秒会得到 1970 年。
+
+② ★★★ **只有「今天」是真实节目单，明天起全是 24 条「精彩节目」×60min 占位。**
+
+```
+实测 2026-10-28 16:00：
+  101 浙江卫视  今天  98 条真实 / 明天 24 条全「精彩节目」
+  108 少儿频道  今天 185 条真实 / 明天 24 条全「精彩节目」
+  110 浙江国际  今天  81 条真实 / 明天 24 条全「精彩节目」
+  ……10 个台无一例外，往后 6 天是同一份占位
+```
+
+   **照单全收会得到 `days=7 / count=168`，在 `pickBest` 里以「天数最多」稳赢 epgpw 的真实数据。**
+   注意这和 §6.7 前几次不是同一种：以前是**条数虚高**（自报 1520 实测 1177），
+   这次**条数是真的 168 条**，只是内容全是空壳 —— 更难发现，因为任何「条数/天数」检查都通得过。
+   → 唯一可靠的办法是**按内容判**：`isFiller()` 只认标题（`精彩节目|敬请期待|节目预告|测试信号`），
+     过滤后 cztv 的真实天数就是 **1 天**。这是源的限制，不要试图"修好"。
+   ★ 千万别拿「60 分钟」或「一天 24 条」当判据：真实节目里也有 60 分钟的栏目，会误杀。
+
+③ **源不带简介**（只有 title/time/duration/id）。定位是「补空台、补低条数台」，不是简介源。
+
+④ **裸台名必须补省名，否则少接一个台。** 频道表里一半是裸名：`少儿频道`/`新闻`/`经济生活`/
+   `民生休闲`/`教科影视`/`钱江都市`/`之江纪录`/`好易购`。而目标叫 `浙江少儿`（别名 `浙江少儿频道`），
+   归一化后 `少儿频道` ≠ `浙江少儿`，三级匹配全不中 —— **185 条的源进不了候选池**，
+   继续用 epgpw 那 24 条（且 `uniqTitles=1`，24 条全是同一个标题）。
+   补成 `浙江少儿频道` 后走目标别名精确命中。
+   ★ cztv 是浙江广电官网，补省名是补全正式全称，不是编造；
+   ★ 反过来，裸名 `新闻`/`少儿频道` 是**跨省通用词**，不补省名还可能被别的省抢走。
+
+**为什么不需要写 override**：`pickBest` 排序是 `days → withDesc → count`，cztv 只有 1 天 + 0 简介，于是
+
+| 目标 | 现有源 | cztv | 谁赢 |
+|---|---|---|---|
+| 浙江经视 | epgpw 1天/52条/**40简介** | 1天/120条/0简介 | **epgpw**（withDesc 40>0） |
+| 浙江民生休闲 | epgpw 1天/28条/**24简介** | 1天/114条/0简介 | **epgpw** |
+| 浙江少儿 | epgpw 1天/24条/**0简介**（uniqTitles=1） | 1天/**185条**/0简介 | **cztv**（count） |
+| 浙江国际 | epgpw **0 天** | 1天/**81条** | **cztv**（days） |
+
+即「有简介的台自动不被抢，空台和 0 简介的低条数台自动被补」。
+★ 这也再次印证 §6.7h：**要保护高简介源，靠排序/职责分离，不靠 override 硬顶。**
+
 ### 7.2 行尾
 
 `channels.json` / `index.mjs` / `README.md` 是 CRLF，其余 LF。
@@ -924,8 +1035,8 @@ Python `io.open(p,'w')` 会转 CRLF，必须 `newline='\n'`。
 ### 7.3 两道防线
 
 ```bash
-npm test    # 178 项 / 8 文件（normalize 23 + day-fill 52 + tvmao 33 + match 10
-            #   + timezone 23 + days-source 6 + litv-desc 25 + override-desc 6）
+npm test    # 198 项 / 9 文件（normalize 23 + day-fill 52 + tvmao 33 + match 10
+            #   + timezone 23 + days-source 6 + litv-desc 25 + override-desc 6 + cztv 20）
 node test/audit-output.mjs output/epg.xml.gz   # 重叠/乱序/零长度/某天半截 → exit 1
 ```
 
@@ -956,11 +1067,12 @@ node test/audit-output.mjs output/epg.xml.gz   # 重叠/乱序/零长度/某天�
 
 ## 八、已知缺口（上游确实没有，别再试）
 
-- CCTV-8K、公视戏剧、浙江少儿/影视 全 0
+- CCTV-8K、公视戏剧 全 0
 - 港台34/31、延边 少量
 - 澳门 3 台（无 MO 包）：澳门电视台、澳门莲花、澳亚卫视
 - HOY TV、湖南都市、湖南公共、中天新闻：四源全无
-- **浙江国际（cztv）**：纯 SPA + 全压缩分包，接口未破解，本机无 playwright
+- ~~**浙江国际（cztv）**：纯 SPA + 全压缩分包，接口未破解~~ → **第十五轮已接入**（§7.1g），
+  浙江国际 / 浙江少儿 由 cztv 供节目（只 1 天）；「未破解」是当年只看了 SPA 壳就下的判断，错的
 - 嘉佳卡通 tvmao 只 w1/w2 完整（w3~w7 只到 14~17 点）
 - 三沙卫视 tvmao w3~w6 全空（3 天是上限）
 

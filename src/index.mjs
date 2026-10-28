@@ -42,11 +42,12 @@ import * as tdm from './sources/tdm.mjs'
 import * as elta from './sources/elta.mjs'
 import * as nowplayer from './sources/nowplayer.mjs'
 import * as mod from './sources/mod.mjs'
+import * as cztv from './sources/cztv.mjs'
 import { enrichFromZ51, loadPacks, fillEmptyChannels } from './sources/z51.mjs'
 import { enrichFromKbro } from './sources/kbro.mjs'
 import { enrichFromLitv } from './sources/litv.mjs'
 
-const SOURCES = { epgpw, tvmao, tvsou, fengshows, webncode, litv, tdm, elta, nowplayer, mod }
+const SOURCES = { epgpw, tvmao, tvsou, fengshows, webncode, litv, tdm, elta, nowplayer, mod, cztv }
 
 /**
  * 源优先级：靠前的优先。
