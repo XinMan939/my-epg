@@ -90,8 +90,25 @@ console.log('\n[3] 排序口径回归：days 相同后必须按 withDesc 选，�
   check('（反证）webncode 报 6 天时会赢 —— 这就是简介 271→0 的成因', pickBest(broken).source === 'webncode')
 }
 
-console.log('\n[4] catalog 快照自检（存在才跑）：nowNews 的候选里不该有「天数最多但简介为 0」的')
+console.log('\n[4] catalog 快照体检（**只报告，不判失败**）')
 {
+  // ★★★ 为什么这里不 assert（2026-10-28 第十二轮，我自己的设计错误）：
+  //
+  //   我第一版把这条写成 check()，结果 push 时 catalog.json 还是修复前的旧快照
+  //   （webncode:nowtv_332 仍报 6 天），**build 直接被卡在「单元测试」这一步**，
+  //   CI run 40626398437 十秒失败。而我真正想跑的 build 根本轮不到。
+  //
+  //   根因是我把「外部可变状态」写进了单元测试的断言：
+  //     catalog.json 是**缓存**，有 24h TTL，随时会被重扫覆盖；
+  //     它的内容取决于「上次重扫是什么时候、那时上游给了几天」——
+  //     跟代码对不对**没有因果关系**。
+  //
+  //   ★ 单元测试必须确定性：同样的源码 + 同样的输入，永远同样的结果。
+  //     依赖 catalog 快照 = 让「测试是否通过」取决于「缓存新不新」，这是错的。
+  //     想验 catalog 该放 audit-output / 独立体检脚本，不该放 npm test。
+  //
+  //   所以这里改成「体检报告」：发现问题就**打印警告 + 给出修复命令**，
+  //   但不让 build 失败。真要看它，跑 `node test/days-source.test.mjs` 自己读输出。
   let cat = null
   try {
     cat = JSON.parse(fs.readFileSync(new URL('../channels/catalog.json', import.meta.url), 'utf8'))
@@ -106,12 +123,16 @@ console.log('\n[4] catalog 快照自检（存在才跑）：nowNews 的候选里
       return n.includes('Now新聞') || n.includes('Now新闻')
     })
     const top = [...cands].sort((a, b) => (b.days || 0) - (a.days || 0))[0]
-    check(
-      'catalog 里 Now新聞台 天数最多的源不是「0 简介」',
-      !top || (top.withDesc || 0) > 0,
-      top ? `最高是 ${top.source}:${top.sourceId} ${top.days}天 withDesc=${top.withDesc}` : ''
-    )
     console.log('   候选:', cands.map((c) => `${c.source}:${c.sourceId} ${c.days}天/${c.withDesc}简介`).join(' | '))
+    console.log(`   catalog generatedAt: ${cat.generatedAt}`)
+    if (top && (top.withDesc || 0) === 0 && (top.days || 0) > 0) {
+      // 只是提醒，不 fail：可能是 catalog 旧了，也可能是上游真变了
+      console.log(`   ⚠️  warn 天数最多的源是 0 简介：${top.source}:${top.sourceId} ${top.days}天`)
+      console.log('      如果刚改过 probeStat，先重扫 catalog 再看：')
+      console.log('        gh workflow run verify-mod.yml --ref main')
+    } else {
+      console.log('  ok   天数最多的源有简介（或没有 Now新聞 候选）')
+    }
   }
 }
 
