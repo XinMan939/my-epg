@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-28T02:47:13.953Z",
+  "generatedAt": "2026-10-28T03:04:09.572Z",
   "days": 7,
   "dayList": [
     "20261028",
@@ -15,7 +15,7 @@
   "channelsEmpty": 5,
   "channelsFull": 229,
   "channelsPartial": 54,
-  "programmesTotal": 57533,
+  "programmesTotal": 57534,
   "programmesWithDesc": 34118,
   "descCoverage": 59,
   "dateRange": [
@@ -3141,6 +3141,14 @@
   ],
   "dayFillStats": [
     {
+      "id": "CCTV5Plus.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTV-CCTV5-PLUS+17"
+      ]
+    },
+    {
       "id": "CCTV3.cn",
       "before": 6,
       "after": 7,
@@ -3165,35 +3173,11 @@
       ]
     },
     {
-      "id": "CCTV5Plus.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTV-CCTV5-PLUS+17"
-      ]
-    },
-    {
       "id": "CCTV7.cn",
       "before": 5,
       "after": 7,
       "sources": [
         "tvmao:CCTV-CCTV7+76"
-      ]
-    },
-    {
-      "id": "CCTV8.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTV-CCTV8+37"
-      ]
-    },
-    {
-      "id": "CCTV9.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTV-CCTV9+34"
       ]
     },
     {
@@ -3205,11 +3189,19 @@
       ]
     },
     {
-      "id": "CCTV12.cn",
+      "id": "CCTV9.cn",
       "before": 6,
       "after": 7,
       "sources": [
-        "tvmao:CCTV-CCTV12+31"
+        "tvmao:CCTV-CCTV9+34"
+      ]
+    },
+    {
+      "id": "CCTV8.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTV-CCTV8+37"
       ]
     },
     {
@@ -3226,6 +3218,22 @@
       "after": 7,
       "sources": [
         "tvmao:CCTV-CCTV15+21"
+      ]
+    },
+    {
+      "id": "CCTV15.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTV-CCTV16+17"
+      ]
+    },
+    {
+      "id": "CCTV12.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTV-CCTV12+31"
       ]
     },
     {
@@ -3263,19 +3271,11 @@
       ]
     },
     {
-      "id": "CCTV15.cn",
-      "before": 6,
+      "id": "JiangsuSatelliteTV.cn",
+      "before": 5,
       "after": 7,
       "sources": [
-        "tvmao:CCTV-CCTV16+17"
-      ]
-    },
-    {
-      "id": "CCTV4Asia.cn",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "epgpw:410375+40"
+        "tvmao:JSTV1+60"
       ]
     },
     {
@@ -3287,14 +3287,6 @@
       ]
     },
     {
-      "id": "JiangsuSatelliteTV.cn",
-      "before": 5,
-      "after": 7,
-      "sources": [
-        "tvmao:JSTV1+60"
-      ]
-    },
-    {
       "id": "HubeiSatelliteTV.cn",
       "before": 5,
       "after": 7,
@@ -3303,19 +3295,27 @@
       ]
     },
     {
-      "id": "HenanTVSatellite.cn",
-      "before": 5,
-      "after": 7,
-      "sources": [
-        "tvmao:HNTV1+74"
-      ]
-    },
-    {
       "id": "JilinSatelliteTV.cn",
       "before": 5,
       "after": 7,
       "sources": [
         "tvmao:JILIN1+72"
+      ]
+    },
+    {
+      "id": "CCTV4Asia.cn",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "epgpw:410375+40"
+      ]
+    },
+    {
+      "id": "HenanTVSatellite.cn",
+      "before": 5,
+      "after": 7,
+      "sources": [
+        "tvmao:HNTV1+74"
       ]
     },
     {
@@ -3343,19 +3343,19 @@
       ]
     },
     {
-      "id": "HainanSatelliteTV.cn",
-      "before": 5,
-      "after": 7,
-      "sources": [
-        "tvmao:TCTC1+77"
-      ]
-    },
-    {
       "id": "XiamenSatelliteTV.cn",
       "before": 6,
       "after": 7,
       "sources": [
         "tvmao:XMTV5+39"
+      ]
+    },
+    {
+      "id": "HainanSatelliteTV.cn",
+      "before": 5,
+      "after": 7,
+      "sources": [
+        "tvmao:TCTC1+77"
       ]
     },
     {
@@ -3399,19 +3399,19 @@
       ]
     },
     {
-      "id": "PhoenixChineseChannel.hk",
-      "before": 6,
-      "after": 7,
-      "sources": [
-        "epgpw:410378+48"
-      ]
-    },
-    {
       "id": "PhoenixInfoNewsChannel.hk",
       "before": 6,
       "after": 7,
       "sources": [
         "epgpw:410355+62"
+      ]
+    },
+    {
+      "id": "PhoenixChineseChannel.hk",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "epgpw:410378+48"
       ]
     },
     {
@@ -3423,19 +3423,19 @@
       ]
     },
     {
-      "id": "PhoenixHongKongChannel.hk",
-      "before": 0,
-      "after": 5,
-      "sources": [
-        "webncode:tvb_hdjade+243"
-      ]
-    },
-    {
       "id": "CCTVStormTheater.cn",
       "before": 1,
       "after": 7,
       "sources": [
         "tvmao:CCTVPAYFEE-CCTVPAYFEE4+126"
+      ]
+    },
+    {
+      "id": "PhoenixHongKongChannel.hk",
+      "before": 0,
+      "after": 5,
+      "sources": [
+        "webncode:tvb_hdjade+243"
       ]
     },
     {
@@ -3455,14 +3455,6 @@
       ]
     },
     {
-      "id": "CCTVTVGuide.cn",
-      "before": 1,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTVPAYFEE-CCTVPAYFEE6+769"
-      ]
-    },
-    {
       "id": "CCTVHealth.cn",
       "before": 1,
       "after": 7,
@@ -3471,11 +3463,11 @@
       ]
     },
     {
-      "id": "CGTNFrench.cn",
+      "id": "CCTVTVGuide.cn",
       "before": 1,
       "after": 7,
       "sources": [
-        "tvmao:CCTV-CCTVF+196"
+        "tvmao:CCTVPAYFEE-CCTVPAYFEE6+769"
       ]
     },
     {
@@ -3484,6 +3476,14 @@
       "after": 7,
       "sources": [
         "tvmao:CCTV-CCTV18+216"
+      ]
+    },
+    {
+      "id": "CGTNFrench.cn",
+      "before": 1,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTV-CCTVF+196"
       ]
     },
     {
@@ -3543,14 +3543,6 @@
       ]
     },
     {
-      "id": "AnimationShowChannel.cn",
-      "before": 1,
-      "after": 7,
-      "sources": [
-        "tvmao:SITV-CHILDREN+600"
-      ]
-    },
-    {
       "id": "CityTheaterChannel.cn",
       "before": 1,
       "after": 7,
@@ -3559,11 +3551,27 @@
       ]
     },
     {
+      "id": "AnimationShowChannel.cn",
+      "before": 1,
+      "after": 7,
+      "sources": [
+        "tvmao:SITV-CHILDREN+600"
+      ]
+    },
+    {
       "id": "ChannelLaw.cn",
       "before": 1,
       "after": 7,
       "sources": [
         "tvmao:SITV3+290"
+      ]
+    },
+    {
+      "id": "金色学堂.cn",
+      "before": 1,
+      "after": 7,
+      "sources": [
+        "tvmao:SITV6+638"
       ]
     },
     {
@@ -3583,19 +3591,19 @@
       ]
     },
     {
-      "id": "金色学堂.cn",
-      "before": 1,
-      "after": 7,
-      "sources": [
-        "tvmao:SITV6+638"
-      ]
-    },
-    {
       "id": "CHCHomeTheater.cn",
       "before": 1,
       "after": 7,
       "sources": [
         "tvmao:CHC-CHC2+148"
+      ]
+    },
+    {
+      "id": "nowDirect.hk",
+      "before": 5,
+      "after": 5,
+      "sources": [
+        "nowplayer:331+1"
       ]
     },
     {
@@ -3642,7 +3650,7 @@
   "descStats": {
     "realCoverage": 59.3,
     "realCount": 34118,
-    "totalCount": 57533,
+    "totalCount": 57534,
     "echoCount": 728,
     "titles": 940,
     "filled": 18944,
@@ -15026,15 +15034,15 @@
         "now直播"
       ],
       "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129061411320352_44",
-      "count": 59,
-      "days": 5,
+      "count": 60,
+      "days": 6,
       "perDay": {
         "20261028": 10,
         "20261029": 10,
         "20261030": 10,
         "20261031": 11,
         "20261101": 18,
-        "20261102": 0,
+        "20261102": 1,
         "20261103": 0
       },
       "withDesc": 0,
@@ -15042,7 +15050,7 @@
       "withCategory": 0,
       "uniqTitles": 8,
       "first": "20261028000000 +0800",
-      "last": "20261102000000 +0800",
+      "last": "20261102003000 +0800",
       "usedSource": "epgpw:410343(Now直播台)",
       "matchConfidence": "exact",
       "matchedSourceName": "Now直播台",
