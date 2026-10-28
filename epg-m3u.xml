@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tv generator-info-name="my-epg" generator-info-url="https://github.com/" date="20261028202553 +0800">
+<tv generator-info-name="my-epg" generator-info-url="https://github.com/" date="20261028210509 +0800">
   <channel id="CCTV1">
     <display-name lang="zh">CCTV-1 综合</display-name>
     <display-name lang="zh">CCTV-1</display-name>
@@ -866,6 +866,7 @@
   <channel id="寰宇财经">
     <display-name lang="zh">寰宇财经</display-name>
     <display-name lang="zh">寰宇財經HD</display-name>
+    <icon src="https://epg.pw/media/images/epg/2025/09/19/20250919172446201175_37.png" />
   </channel>
   <channel id="寰宇新闻">
     <display-name lang="zh">寰宇新闻</display-name>
@@ -913,7 +914,7 @@
     <display-name lang="zh">中視經典台HD</display-name>
     <icon src="https://epg.pw/media/images/epg/2025/09/19/20250919171222336167_77.png" />
   </channel>
-  <channel id="中视菁采">
+  <channel id="中视菁采.tw">
     <display-name lang="zh">中视菁采</display-name>
     <display-name lang="zh">中視菁采台HD</display-name>
     <icon src="https://epg.pw/media/images/epg/2025/09/19/20250919171248960811_15.png" />
@@ -57735,7 +57736,7 @@
   </programme>
   <programme start="20261029010000 +0800" stop="20261029013500 +0800" channel="TVB翡翠">
     <title lang="zh">東張西望[粵]</title>
-    <desc lang="zh">《東張西望》星期一至日，緊貼追蹤社會大事、趣聞逸事，並報道娛樂圈最新動態、藝人消息，以及劇集宣傳和花絮。「今日突發」環節為大家追蹤即日熱門新聞；專題環節，深入探討大眾關心的時事、社會及民生問題，並訪問相關的專家。</desc>
+    <desc lang="zh">汽車停泊在露天停車場時，被鄰近地盤工程噴出的水泥漿濺中，車身留下難以清除的白斑。涉事地盤一方願提供電子洗車券作補償，車主認為方案不合適！中年女士為了男同事狠心拋夫棄子，卻發覺自己原來是小三。其後正室跟女事主離奇成為好友，聲稱跟丈夫感情破裂，會大方讓愛，更向女事主借錢周轉，怎料男子出獄後即與正室復合……《愛．回家之三代同糖》眾演員快閃鬧市與酒樓，以有趣造型引爆熱鬧氣氛。另帶來有助改善關節健康的資訊。</desc>
   </programme>
   <programme start="20261029013500 +0800" stop="20261029022000 +0800" channel="TVB翡翠">
     <title lang="zh">流行都市[粵]</title>
@@ -57973,7 +57974,7 @@
   </programme>
   <programme start="20261030132500 +0800" stop="20261030141000 +0800" channel="TVB翡翠">
     <title lang="zh">流行都市[粵]</title>
-    <desc lang="zh">《流行都市》為觀眾介紹時令產品、健康養生、健體運動、護膚化妝、時尚服飾、嬰幼兒護理、育兒知識、城中美食、飼養寵物等潮流資訊，內容包羅萬有！主持們親身體驗、示範或測試之外，還會邀請嘉賓帶來相關專業知識。烹飪環節方面，多位手勢了得的廚藝專家輪流登場，示範簡單美味的健康美食、家常小菜，替大家解決煮食煩惱。</desc>
+    <desc lang="zh">肺動脈高壓有五大分類，早期症狀有胸悶、易喘，嚴重時更會出現昏厥、肺積水。右心導管檢查能精準檢測肺動脈內壓力，呼吸系統科醫生細談治療目標，以及針對不同病情採用的治療方案。健力運動員李健禧早前孤身一人赴土耳其出戰健力大學生盃，成功挑戰不可能，奪冠歸來！他講解何謂健力運動，並重提首次參戰香港健力錦標賽便打破紀錄的往事，更樂於從健力重量的提升見證自己的進步。「睇餸食飯」，Annie示範「簡易版豬手薑醋」。</desc>
   </programme>
   <programme start="20261030141000 +0800" stop="20261030144000 +0800" channel="TVB翡翠">
     <title lang="zh">BB要健康[粵]</title>
@@ -58075,7 +58076,7 @@
   </programme>
   <programme start="20261031013500 +0800" stop="20261031022000 +0800" channel="TVB翡翠">
     <title lang="zh">流行都市[粵]</title>
-    <desc lang="zh">《流行都市》為觀眾介紹時令產品、健康養生、健體運動、護膚化妝、時尚服飾、嬰幼兒護理、育兒知識、城中美食、飼養寵物等潮流資訊，內容包羅萬有！主持們親身體驗、示範或測試之外，還會邀請嘉賓帶來相關專業知識。烹飪環節方面，多位手勢了得的廚藝專家輪流登場，示範簡單美味的健康美食、家常小菜，替大家解決煮食煩惱。</desc>
+    <desc lang="zh">肺動脈高壓有五大分類，早期症狀有胸悶、易喘，嚴重時更會出現昏厥、肺積水。右心導管檢查能精準檢測肺動脈內壓力，呼吸系統科醫生細談治療目標，以及針對不同病情採用的治療方案。健力運動員李健禧早前孤身一人赴土耳其出戰健力大學生盃，成功挑戰不可能，奪冠歸來！他講解何謂健力運動，並重提首次參戰香港健力錦標賽便打破紀錄的往事，更樂於從健力重量的提升見證自己的進步。「睇餸食飯」，Annie示範「簡易版豬手薑醋」。</desc>
   </programme>
   <programme start="20261031022000 +0800" stop="20261031025000 +0800" channel="TVB翡翠">
     <title lang="zh">BB要健康[粵]</title>
@@ -58197,11 +58198,11 @@
   </programme>
   <programme start="20261031200000 +0800" stop="20261031203000 +0800" channel="TVB翡翠">
     <title lang="zh">渣打優先理財呈獻：Grand住去首爾[粵]</title>
-    <desc lang="zh">「Grand住旅行團」又再出發，高海寧、周嘉洛、朱敏瀚會歎住暢遊首爾！主持們會朝聖當地星級餐廳、品嚐頂級韓牛。美食行程外，兩位男生更獲安排與韓國明星兼「健身Icon」金鐘國一同熱血操肌，之後再盡情大啖吃燒肉。三人亦獲安排貼心私人行程，海寧跟陶瓷藝術家來一趟浪漫約會；朱仔體驗精緻西裝訂造，盡顯型男風采；嘉洛則親試頂流韓星同款的專屬造型設計，華麗變身。尊貴的玩味體驗，引領觀眾感受首爾極致奢華的魅力！</desc>
+    <desc lang="zh">高海寧、周嘉洛、朱敏瀚出發「Chill住遊」首爾。三人盛裝打扮歎摘星韓國料理，用脆片包裹魚片掛在樹枝上，擺盤已創意十足，慢煮十八小時的「1  」韓牛，朱仔大讚油脂平衡，做得出色。海寧獨自走進咖啡店，本打算一睹型男店員們以飽眼福，怎料最終陪她用餐的仍是朱仔和嘉洛。「開箱」盤浦洞酒店，房間可俯瞰江南核心地帶。再朝聖IU等眾星曾光顧的中韓餐廳，享用烤肉串與銅火鍋。壓軸前往吃海鮮，朱仔更表演用口剝蝦殼！</desc>
   </programme>
   <programme start="20261031203000 +0800" stop="20261031210000 +0800" channel="TVB翡翠">
     <title lang="zh">香港旅遊發展局呈獻：香港連場好戲[粵]</title>
-    <desc lang="zh">香港擁有獨特的城市氣質，新舊風貌並存，加上多元文化交融，在光影流轉下成就「連場好戲」！主持黎諾懿、賴慰玲引領觀眾遊走不同電影場景，回味經典橋段與金句，喚起一幕幕觸動人心的回憶。跟隨節目精選路線，欣賞璀璨的城市風光，沉浸於電影中的世界。主持還會示範打卡技巧，教大家用鏡頭捕捉這座「光影之城」的獨有情懷。此外，電影演員重遊取景舊地，回顧昔日拍攝點滴；動作指導細談設計動作場面的心得，帶出港式電影的魅力。</desc>
+    <desc lang="zh">《無間道》曾於舊油麻地警署取景，兩主持深入光影展，沉浸式感受警匪片情懷。動作導演林迪安細談設計動作場面的點滴，還編排一段追逐戲，展現香港狹窄街道特色。《旺角黑夜》一幕逃亡戲為花園街天橋注入都市浪漫，主持傳授打卡攻略，另會遊走啟德體育園新地標。港產動作片傳奇不得不提《英雄本色》，在新舊交融的中環街景回望「當年情」。槍戰、舌戰劇情同樣激昂，漫步添馬公園投入《寒戰》氛圍，再隨《三岔口》足跡探索美食街區。</desc>
   </programme>
   <programme start="20261031210000 +0800" stop="20261031231500 +0800" channel="TVB翡翠">
     <title lang="zh">失戀急讓[粵][PG]</title>
@@ -58215,7 +58216,7 @@
   </programme>
   <programme start="20261031233500 +0800" stop="20261101000500 +0800" channel="TVB翡翠">
     <title lang="zh">香港賽馬會特約：J Sport[粵] 及 潮流生活誌之時尚頭條[粵]</title>
-    <desc lang="zh">雜誌式體育資訊節目《J Sport》由鄭衍峰、何振然、何泳芍、曾文心等「星級」運動愛好者擔任主持，每星期搜羅最熱門的香港體壇情報。由萬眾矚目的國際體育盛事、本地賽事焦點，以至最貼地的學界、地區康體活動，都一網打盡！節目邀請專業運動員細訴踏進體壇、走過高山低谷的心路歷程，以及背後鮮為人知的故事，還會緊貼健兒們的最新動向。</desc>
+    <desc lang="zh">黎清嵐受身為網球教練的爸爸啟蒙，踏上運動員道路，她細談父女關係與征戰亞運經歷。壁球學生運動員趙彥正曾赴埃及集訓，有何得着？他暢談追夢起點與目標。亞運得獎港將參與巴士巡遊，跟市民分享喜悅。乒總訓練中心開幕，為本港乒壇發展寫下新一頁。匹克球亞巡賽結束，男單、混雙等戰況如何？高爾夫球公開賽，港將張雄熙奪亞。網球中巡賽、羽毛球公開賽將在港舉行，這集送上記招。另搜羅高級組銀牌足球賽、港隊出戰手球中超的戰報。</desc>
   </programme>
   <programme start="20261101000500 +0800" stop="20261101010500 +0800" channel="TVB翡翠">
     <title lang="zh">飛虎3壯志英雄#17[粵][PG]</title>
@@ -58385,7 +58386,7 @@
   </programme>
   <programme start="20261101224500 +0800" stop="20261101231500 +0800" channel="TVB翡翠">
     <title lang="zh">美食新聞周報[粵]</title>
-    <desc lang="zh">黃嘉雯、蔡景行、施焯日等主持親往熱搜餐廳試味，推介自駕覓食好去處，發掘各區「掃街」名物、名人愛店，驗證網上「抵食」傳聞；又會相約居港的外國人，到訪經他們認證的家鄉風味食肆。名廚、食評家、美食KOL、各區地膽及的士司機亦會帶路「搵食」，帶來專業推介；識食之人還會細說美食典故。節目精選《美食新聞報道》介紹的多間「人氣」餐廳，力推當中招牌美食，並會速遞美食優惠，讓觀眾即時掌握最滋味、抵食的飲食情報。</desc>
+    <desc lang="zh">張與辰帶行仔造訪廟街老字號煲仔飯店，品嚐飯焦香脆、肉餅嫩滑的鹹魚肉餅煲仔飯，並向師傅請教炮製煲仔飯的秘訣。食評家KC帶波波到深水埗「人氣」商場的美食中心品嚐川滬菜，爆汁小籠包及改良版擔擔麵皆是必吃之選。飲食廚藝文化專家劉惠平推介新派粵菜，包括肉汁土蛋燉羊肚菌瓦罐湯、翡翠蔥油脆皮雞等佳餚，滿是驚喜滋味。中環有酒樓推出每位218元的午餐任食點心放題，行仔與黃嘉雯吃盡片皮鴨、夫妻肺片等美食，性價比極高。</desc>
   </programme>
   <programme start="20261101231500 +0800" stop="20261101233000 +0800" channel="TVB翡翠">
     <title lang="zh">晚間新聞[粵]</title>
@@ -58466,9 +58467,12 @@
   <programme start="20261102114000 +0800" stop="20261102121500 +0800" channel="TVB翡翠">
     <title lang="zh">方德證券獨家呈現:交易現場[粵] 及 潮流生活誌[粵]</title>
   </programme>
-  <programme start="20261102121500 +0800" stop="20261102130000 +0800" channel="TVB翡翠">
+  <programme start="20261102121500 +0800" stop="20261102125500 +0800" channel="TVB翡翠">
     <title lang="zh">阿媽教落食平D[粵]</title>
     <desc lang="zh">肥媽要陸浩明自己動手煮出十餸五飯，看似沒可能？只要有電飯煲、煮食紙及肥媽準備好的食材，便變得異常簡單！六號自稱已變身「摺紙大師」，把「欖菜四季豆」、「蝦醬豬肉」、「麵醬豆角」、「梅菜菜心」摺好，蒸出來美味無窮。肥媽還自創菜式，將玉子豆腐釀入翠玉瓜，再灑上金華火腿碎作調味！肥媽購入雜菇雜菜做出一道滋味素飯，花盡心思卻換來六號的質疑！肥媽還教大家令蒸水蛋變滑、醃雞入味、梅菜出味的小小技巧。</desc>
+  </programme>
+  <programme start="20261102125500 +0800" stop="20261102130000 +0800" channel="TVB翡翠">
+    <title lang="zh">AI智有計[粵]</title>
   </programme>
   <programme start="20261102130000 +0800" stop="20261102132000 +0800" channel="TVB翡翠">
     <title lang="zh">午間新聞[粵]</title>
@@ -58515,15 +58519,15 @@
     <title lang="zh">六點半新聞報道[粵]</title>
     <desc lang="zh">翡翠台每日下午六點半，報道本地、兩岸及國際重要新聞。</desc>
   </programme>
-  <programme start="20261102191500 +0800" stop="20261102192500 +0800" channel="TVB翡翠">
+  <programme start="20261102191500 +0800" stop="20261102192000 +0800" channel="TVB翡翠">
     <title lang="zh">世界觀[粵] 及 農本方參苓白朮散呈獻:天氣報告[粵]</title>
   </programme>
-  <programme start="20261102192500 +0800" stop="20261102193000 +0800" channel="TVB翡翠">
-    <title lang="zh">有理說得清[粵]</title>
+  <programme start="20261102192000 +0800" stop="20261102193000 +0800" channel="TVB翡翠">
+    <title lang="zh">有理說得清[粵] 及 AI智有計[粵] 及 富途證券特約:富途講美股[粵]</title>
     <desc lang="zh">兩位時事評論員屈穎妍、楊立門，同觀眾論盡天下事、國家事、香港事；大事小事，開門見山、言無不盡，《有理說得清》！</desc>
   </programme>
   <programme start="20261102193000 +0800" stop="20261102200000 +0800" channel="TVB翡翠">
-    <title lang="zh">東張西望[粵] 及 富途證券特約:富途講美股[粵]</title>
+    <title lang="zh">東張西望[粵]</title>
     <desc lang="zh">《東張西望》星期一至日，緊貼追蹤社會大事、趣聞逸事，並報道娛樂圈最新動態、藝人消息，以及劇集宣傳和花絮。「今日突發」環節為大家追蹤即日熱門新聞；專題環節，深入探討大眾關心的時事、社會及民生問題，並訪問相關的專家。</desc>
   </programme>
   <programme start="20261102200000 +0800" stop="20261102203000 +0800" channel="TVB翡翠">
@@ -58531,7 +58535,7 @@
     <desc lang="zh">公關女皇唐萬里獨力照顧Gen Z女兒唐芯，控制欲極強。萬里的母親唐曹嘉冰半生相夫教子，忽然「覺醒」，由加拿大返港，決心尋回失落時光，更搬入萬里家中。當年嘉冰曾因萬里堅持未婚生下女兒，母女徹底鬧僵，如今嘉冰卻突然無預警殺入及擾亂萬里的生活。萬里力圖維持秩序，唐芯則周旋兩人之間，三代同堂火花四濺，矛盾不斷。職場上，富二代老闆空降「營銷大神」楊帆，與萬里平起平坐正面交鋒，萬里事業與家庭同時迎來危機……</desc>
   </programme>
   <programme start="20261102203000 +0800" stop="20261102213000 +0800" channel="TVB翡翠">
-    <title lang="zh">澳門上葡京綜合度假村呈獻：璀璨之城#16[粵][PG]</title>
+    <title lang="zh">澳門上葡京綜合度假村呈獻：璀璨之城#16[粵][PG] 及 才駿HASHTAG 科技新指標[粵]</title>
     <desc lang="zh">尚利鋒集團主席官志琛在澳門雄霸一方，這商界巨人安排兩子官孝賢、官孝君，出任集團聯席行政總裁，平起平坐。孝賢一直視孝君為眼中釘，為瓦解孝君和其夫人王雪瑩的強大團夥，孝賢宣佈與香港檢控官洪海允成婚。海允與雪瑩本是閨密，出身於十月初五街，但雪瑩為嫁入豪門，奪去海允的情人孝君。孝賢就是要利用海允心中的仇恨，化成攻擊孝君夫婦的利器。在家族各人看似充滿機心的環境中，孝君卻堅守正義，奮力抵抗着孝賢的步步進逼……</desc>
   </programme>
   <programme start="20261102213000 +0800" stop="20261102213300 +0800" channel="TVB翡翠">
@@ -58624,9 +58628,15 @@
   <programme start="20261103114000 +0800" stop="20261103121500 +0800" channel="TVB翡翠">
     <title lang="zh">方德證券獨家呈現:交易現場[粵] 及 潮流生活誌之時尚頭條[粵]</title>
   </programme>
-  <programme start="20261103121500 +0800" stop="20261103130000 +0800" channel="TVB翡翠">
+  <programme start="20261103121500 +0800" stop="20261103125000 +0800" channel="TVB翡翠">
     <title lang="zh">阿媽教落食平D[粵]</title>
     <desc lang="zh">誰說電飯煲一定要煮飯？肥媽相信，小小的電飯煲，也可完成燉湯、煲粥、煲糖水的任務！用電飯煲燉湯前，為何要先「煮毛巾」？肥媽買來三種番薯，準備煲「栗子地瓜滑雞丸粥」，順道提及想買較甜煨番薯的注意地方。上輯曾用慢煮棒慢煮豬扒，原來電飯煲亦可「慢煮乳鴿」，但一定要煮好汁料，不能偷懶！六號化身韓兵，聽從指令煮出潮流「韓式部隊鍋」，亦按指示逐一放入「芋頭椰香喳咋」的材料，同時發揮「靈活變通不浪費」的精神！</desc>
+  </programme>
+  <programme start="20261103125000 +0800" stop="20261103125500 +0800" channel="TVB翡翠">
+    <title lang="zh">才駿HASHTAG 科技新指標[粵]</title>
+  </programme>
+  <programme start="20261103125500 +0800" stop="20261103130000 +0800" channel="TVB翡翠">
+    <title lang="zh">AI智有計[粵]</title>
   </programme>
   <programme start="20261103130000 +0800" stop="20261103132000 +0800" channel="TVB翡翠">
     <title lang="zh">午間新聞[粵]</title>
@@ -58635,9 +58645,12 @@
     <title lang="zh">流行都市[粵]</title>
     <desc lang="zh">《流行都市》為觀眾介紹時令產品、健康養生、健體運動、護膚化妝、時尚服飾、嬰幼兒護理、育兒知識、城中美食、飼養寵物等潮流資訊，內容包羅萬有！主持們親身體驗、示範或測試之外，還會邀請嘉賓帶來相關專業知識。烹飪環節方面，多位手勢了得的廚藝專家輪流登場，示範簡單美味的健康美食、家常小菜，替大家解決煮食煩惱。</desc>
   </programme>
-  <programme start="20261103141000 +0800" stop="20261103145000 +0800" channel="TVB翡翠">
+  <programme start="20261103141000 +0800" stop="20261103144000 +0800" channel="TVB翡翠">
     <title lang="zh">BB要健康[粵]</title>
     <desc lang="zh">不少父母會為孩子報讀Playgroup、學前班等，究竟是否必要？今集請來朱凱婷、鄧梓峰、楊思琦參與討論。兼顧幼兒教育事業的梓峰不鼓勵父母陪同子女上課，凱婷竟有不同看法？言語治療師指出六歲前是學習語言的黃金期，家長可怎樣協助訓練？心理學家提到Messy Play能讓嬰幼兒透過感覺學習，節目介紹箇中特點。管教孩子常會出現無法預料的情況，爸媽的情緒管理備受考驗。梓峰便曾因生氣向女兒淋凍水，到底發生何事？</desc>
+  </programme>
+  <programme start="20261103144000 +0800" stop="20261103145000 +0800" channel="TVB翡翠">
+    <title lang="zh">才駿HASHTAG 科技新指標[粵]</title>
   </programme>
   <programme start="20261103145000 +0800" stop="20261103155000 +0800" channel="TVB翡翠">
     <title lang="zh">老表，你好hea！#24[粵]</title>
@@ -58673,15 +58686,15 @@
     <title lang="zh">六點半新聞報道[粵]</title>
     <desc lang="zh">翡翠台每日下午六點半，報道本地、兩岸及國際重要新聞。</desc>
   </programme>
-  <programme start="20261103191500 +0800" stop="20261103192500 +0800" channel="TVB翡翠">
+  <programme start="20261103191500 +0800" stop="20261103192000 +0800" channel="TVB翡翠">
     <title lang="zh">世界觀[粵] 及 農本方參苓白朮散呈獻:天氣報告[粵]</title>
   </programme>
-  <programme start="20261103192500 +0800" stop="20261103193000 +0800" channel="TVB翡翠">
-    <title lang="zh">宏利保險呈獻：灣區零距離[粵]</title>
+  <programme start="20261103192000 +0800" stop="20261103193000 +0800" channel="TVB翡翠">
+    <title lang="zh">宏利保險呈獻：灣區零距離[粵] 及 AI智有計[粵] 及 富途證券特約:富途講美股[粵]</title>
     <desc lang="zh">粵港澳大灣區11個城市，在基建與科技發展的推進下，人流、物流、資金流、信息流愈趨便捷。今時今日，北上南下已成常態，《灣區零距離》帶觀眾走入大灣區生活圈，以多元及貼地的視角，發掘灣區的人和事 ---尋找灣區人物故事、捕捉灣區的新發展、探索灣區的歷史文化、展現灣區的新舊面貎。大灣區各個城市縱使各有特色，於同一灣區內，大家都是灣區人，彼此零距離。</desc>
   </programme>
   <programme start="20261103193000 +0800" stop="20261103200000 +0800" channel="TVB翡翠">
-    <title lang="zh">東張西望[粵] 及 富途證券特約:富途講美股[粵]</title>
+    <title lang="zh">東張西望[粵]</title>
     <desc lang="zh">《東張西望》星期一至日，緊貼追蹤社會大事、趣聞逸事，並報道娛樂圈最新動態、藝人消息，以及劇集宣傳和花絮。「今日突發」環節為大家追蹤即日熱門新聞；專題環節，深入探討大眾關心的時事、社會及民生問題，並訪問相關的專家。</desc>
   </programme>
   <programme start="20261103200000 +0800" stop="20261103203000 +0800" channel="TVB翡翠">
@@ -61870,7 +61883,7 @@
   </programme>
   <programme start="20261030203000 +0800" stop="20261030210000 +0800" channel="TVBPlus">
     <title lang="zh">主廚湘遇記[粵/普]</title>
-    <desc lang="zh">節目邀請法國知名主廚戴廣坦深入湖南，實地研習湘菜技藝，體驗並解讀湘菜背後的文化密碼，生動呈現中法飲食文化的精彩碰撞與融合。</desc>
+    <desc lang="zh">戴廣坦和美食搭檔莊宇光來到芙蓉鎮這個千年古鎮，品嘗牛頭盛宴之餘，廣坦也分享了牛肉他他的做法；之後在張家界上999級天梯來到天門洞，廣坦還跟宋大廚學習製作代表張家界的三道菜式：岩耳燉雞、三下鍋和蒿子粑粑。</desc>
   </programme>
   <programme start="20261030210000 +0800" stop="20261030213000 +0800" channel="TVBPlus">
     <title lang="zh">娛樂新聞報道</title>
@@ -61939,7 +61952,7 @@
   </programme>
   <programme start="20261031073000 +0800" stop="20261031080000 +0800" channel="TVBPlus">
     <title lang="zh">主廚湘遇記[粵/普]</title>
-    <desc lang="zh">節目邀請法國知名主廚戴廣坦深入湖南，實地研習湘菜技藝，體驗並解讀湘菜背後的文化密碼，生動呈現中法飲食文化的精彩碰撞與融合。</desc>
+    <desc lang="zh">戴廣坦和美食搭檔莊宇光來到芙蓉鎮這個千年古鎮，品嘗牛頭盛宴之餘，廣坦也分享了牛肉他他的做法；之後在張家界上999級天梯來到天門洞，廣坦還跟宋大廚學習製作代表張家界的三道菜式：岩耳燉雞、三下鍋和蒿子粑粑。</desc>
   </programme>
   <programme start="20261031080000 +0800" stop="20261031083000 +0800" channel="TVBPlus">
     <title lang="zh">這一站阿拉伯[粵]</title>
@@ -62334,7 +62347,7 @@
   </programme>
   <programme start="20261103203000 +0800" stop="20261103210000 +0800" channel="TVBPlus">
     <title lang="zh">主廚湘遇記[粵/普]</title>
-    <desc lang="zh">節目邀請法國知名主廚戴廣坦深入湖南，實地研習湘菜技藝，體驗並解讀湘菜背後的文化密碼，生動呈現中法飲食文化的精彩碰撞與融合。</desc>
+    <desc lang="zh">本集廣坦先到一家環境優美的素食餐廳品嘗精緻素菜，更以荷塘月色為主題，與主廚比試甜品擺盤，視覺和味覺都很享受。然後到郴州會合新搭檔，先到農貿市場嘗嘗現砍現煮的砍肉粉，再到臨武鴨養殖基地品嘗豐盛的全鴨宴。</desc>
   </programme>
   <programme start="20261103210000 +0800" stop="20261103213000 +0800" channel="TVBPlus">
     <title lang="zh">娛樂新聞報道</title>
@@ -62466,8 +62479,8 @@
     <desc lang="zh">《730玩返轉》每晚為你帶來世界各地最新、最實用的旅遊情報，更有當地特色文化體驗、旅遊優惠資訊、以及旅遊達人的獨家分享。節目更與各地旅遊 KOL合作，希望為熱愛旅遊的香港人激發旅遊靈感，一起展開下一段未知的旅程啦！</desc>
   </programme>
   <programme start="20261028200000 +0800" stop="20261028203000 +0800" channel="ViuTV">
-    <title lang="zh">煮題研習社 第21集 -30分鐘快煮模式－蟹肉扒冬瓜 / 味噌豆腐西蘭花</title>
-    <desc lang="zh">以前冬瓜係成個買，攬住消暑又可以整唔同嘢食。泰山教你揀墜手冬瓜，香甜滋潤，配埋鮮美嘅蟹肉，簡直係白飯殺手。蝦莉再出手，拌勻白味噌同即食豆腐，加埋西蘭花整個「半冷盤」，廚藝新手一樣冇難度！</desc>
+    <title lang="zh">煮題研習社 第21集</title>
+    <desc lang="zh">每集針對特定的「料理主題（煮題）」展開研習，帶出神還原的廚藝技巧、食材搭配知識與生活實用資訊。透過每集不同的「煮題」研習，讓觀眾看清美食背後的訣竅，輕鬆在家重現各種美味！</desc>
   </programme>
   <programme start="20261028203000 +0800" stop="20261028213000 +0800" channel="ViuTV">
     <title lang="zh">直樂VIURIETY 邊個瞓梳化？ 第9集 -嘉賓: 方泳琳、陳張敏[直播]</title>
@@ -133364,6 +133377,24 @@
     <title lang="zh">蜀山伏魔篇</title>
     <desc lang="zh">白澤和淩風自幼一起在崑崙派長大,二人因誤入秘境,得到了昊天鏡及絕世魔功。後因淩風修煉魔功之事曝光,兩人被逐出師門,來到白馬鎮,在這裡找到心愛之人。不料崑崙派突然來追殺他們,使淩風愛人慘死,令他墜入魔道..</desc>
   </programme>
+  <programme start="20261028000000 +0800" stop="20261028030000 +0800" channel="Now直播台">
+    <title lang="zh">隨時直播各類時事新聞及記者會</title>
+  </programme>
+  <programme start="20261028030000 +0800" stop="20261028060000 +0800" channel="Now直播台">
+    <title lang="zh">隨時直播各類時事新聞及記者會</title>
+  </programme>
+  <programme start="20261028060000 +0800" stop="20261028090000 +0800" channel="Now直播台">
+    <title lang="zh">隨時直播各類時事新聞及記者會</title>
+  </programme>
+  <programme start="20261028090000 +0800" stop="20261028120000 +0800" channel="Now直播台">
+    <title lang="zh">隨時直播各類時事新聞及記者會</title>
+  </programme>
+  <programme start="20261028120000 +0800" stop="20261028150000 +0800" channel="Now直播台">
+    <title lang="zh">隨時直播各類時事新聞及記者會</title>
+  </programme>
+  <programme start="20261028150000 +0800" stop="20261028180000 +0800" channel="Now直播台">
+    <title lang="zh">隨時直播各類時事新聞及記者會</title>
+  </programme>
   <programme start="20261028180000 +0800" stop="20261028210000 +0800" channel="Now直播台">
     <title lang="zh">隨時直播各類時事新聞及記者會</title>
   </programme>
@@ -154643,516 +154674,516 @@
   <programme start="20261103230000 +0800" stop="20261104000000 +0800" channel="中视经典">
     <title lang="zh">再世情緣(15)(普)</title>
   </programme>
-  <programme start="20261028000000 +0800" stop="20261028020000 +0800" channel="中视菁采">
+  <programme start="20261028000000 +0800" stop="20261028020000 +0800" channel="中视菁采.tw">
     <title lang="zh">飢餓遊戲(135)(普)</title>
     <desc lang="zh">今天的戰友，明天的敵人，永遠無法預知下一關將跟與誰合作。唯有帶著「玩下去、吃下去」的精神，繼續獲得食物充飢讓飢餓指數歸零，才是最後贏家！</desc>
   </programme>
-  <programme start="20261028020000 +0800" stop="20261028030000 +0800" channel="中视菁采">
+  <programme start="20261028020000 +0800" stop="20261028030000 +0800" channel="中视菁采.tw">
     <title lang="zh">康熙來了(81)(護)</title>
     <desc lang="zh">最另類的組合康永和熙娣打破了以往談話性節目的模式，以麻辣的話題和風趣的主持風格掀起另一股流行風潮！風趣幽默的主持風格，保證逗的你哈哈大笑！</desc>
   </programme>
-  <programme start="20261028030000 +0800" stop="20261028040000 +0800" channel="中视菁采">
+  <programme start="20261028030000 +0800" stop="20261028040000 +0800" channel="中视菁采.tw">
     <title lang="zh">MIT台灣誌(578)(普)</title>
     <desc lang="zh">「ＭＩＴ台灣誌」以發現台灣、寫真台灣、紀錄台灣為主旨，走遍台灣的每寸土地，介紹台灣的人文環境、大自然地理等…</desc>
   </programme>
-  <programme start="20261028040000 +0800" stop="20261028050000 +0800" channel="中视菁采">
+  <programme start="20261028040000 +0800" stop="20261028050000 +0800" channel="中视菁采.tw">
     <title lang="zh">大陸見聞錄(149)(普)</title>
     <desc lang="zh">中國大陸地大物博，想了解這個文明古國的現代風貌，就要鎖定《大陸見聞錄》，為觀眾介紹中國大陸人民的食、衣、住、行、育樂等各種面向。</desc>
   </programme>
-  <programme start="20261028050000 +0800" stop="20261028060000 +0800" channel="中视菁采">
+  <programme start="20261028050000 +0800" stop="20261028060000 +0800" channel="中视菁采.tw">
     <title lang="zh">喜願花(23)(普)</title>
     <desc lang="zh">主要講述的是志雄與心蘭因年輕時偷嘗禁果，未婚生子，勢利固執的陳母始終不願承認。心蘭在懷孕時感染風疹，生下女兒小芳...</desc>
   </programme>
-  <programme start="20261028060000 +0800" stop="20261028070000 +0800" channel="中视菁采">
+  <programme start="20261028060000 +0800" stop="20261028070000 +0800" channel="中视菁采.tw">
     <title lang="zh">MIT台灣誌(578)(普)</title>
     <desc lang="zh">「ＭＩＴ台灣誌」以發現台灣、寫真台灣、紀錄台灣為主旨，走遍台灣的每寸土地，介紹台灣的人文環境、大自然地理等…</desc>
   </programme>
-  <programme start="20261028070000 +0800" stop="20261028080000 +0800" channel="中视菁采">
+  <programme start="20261028070000 +0800" stop="20261028080000 +0800" channel="中视菁采.tw">
     <title lang="zh">中視早安新聞(普)</title>
     <desc lang="zh">「中視早安新聞」每天早上以最客觀的角度，最專業的主播，為觀眾報導充分且詳實的新聞、氣象和交通路況資訊。</desc>
   </programme>
-  <programme start="20261028080000 +0800" stop="20261028100000 +0800" channel="中视菁采">
+  <programme start="20261028080000 +0800" stop="20261028100000 +0800" channel="中视菁采.tw">
     <title lang="zh">歌聲滿天下(28)(普)</title>
     <desc lang="zh">节目内容以分享民歌、台语歌曲为主，每集都会邀请不同歌手演唱经典歌曲。节目风格温馨、怀旧，深受观众喜爱。</desc>
   </programme>
-  <programme start="20261028100000 +0800" stop="20261028110000 +0800" channel="中视菁采">
+  <programme start="20261028100000 +0800" stop="20261028110000 +0800" channel="中视菁采.tw">
     <title lang="zh">健康一把抓(1)(普)</title>
   </programme>
-  <programme start="20261028110000 +0800" stop="20261028115800 +0800" channel="中视菁采">
+  <programme start="20261028110000 +0800" stop="20261028115800 +0800" channel="中视菁采.tw">
     <title lang="zh">健康一把抓(3)(普)</title>
   </programme>
-  <programme start="20261028115800 +0800" stop="20261028130000 +0800" channel="中视菁采">
+  <programme start="20261028115800 +0800" stop="20261028130000 +0800" channel="中视菁采.tw">
     <title lang="zh">中視午間新聞(普)</title>
     <desc lang="zh">「中視午間新聞」每天以最客觀的角度，最專業的主播，為觀眾完整報導上午發生之重大國內外重要新聞，並提供最新股市收盤價格。</desc>
   </programme>
-  <programme start="20261028130000 +0800" stop="20261028140000 +0800" channel="中视菁采">
+  <programme start="20261028130000 +0800" stop="20261028140000 +0800" channel="中视菁采.tw">
     <title lang="zh">康熙來了(81)(護)</title>
     <desc lang="zh">最另類的組合康永和熙娣打破了以往談話性節目的模式，以麻辣的話題和風趣的主持風格掀起另一股流行風潮！風趣幽默的主持風格，保證逗的你哈哈大笑！</desc>
   </programme>
-  <programme start="20261028140000 +0800" stop="20261028150000 +0800" channel="中视菁采">
+  <programme start="20261028140000 +0800" stop="20261028150000 +0800" channel="中视菁采.tw">
     <title lang="zh">健康一點靈(53)(普)</title>
   </programme>
-  <programme start="20261028150000 +0800" stop="20261028160000 +0800" channel="中视菁采">
+  <programme start="20261028150000 +0800" stop="20261028160000 +0800" channel="中视菁采.tw">
     <title lang="zh">繞著幸福轉(90)(普)</title>
     <desc lang="zh">內容聚焦於健康、生活資訊與財經知識。</desc>
   </programme>
-  <programme start="20261028160000 +0800" stop="20261028180000 +0800" channel="中视菁采">
+  <programme start="20261028160000 +0800" stop="20261028180000 +0800" channel="中视菁采.tw">
     <title lang="zh">黃昏的約會(28)(普)</title>
     <desc lang="zh">节目内容以分享轻松、休閒的生活资讯，节目风格幽默、诙谐，深受观众喜爱。</desc>
   </programme>
-  <programme start="20261028180000 +0800" stop="20261028185800 +0800" channel="中视菁采">
+  <programme start="20261028180000 +0800" stop="20261028185800 +0800" channel="中视菁采.tw">
     <title lang="zh">喜願花(23)(普)</title>
     <desc lang="zh">主要講述的是志雄與心蘭因年輕時偷嘗禁果，未婚生子，勢利固執的陳母始終不願承認。心蘭在懷孕時感染風疹，生下女兒小芳...</desc>
   </programme>
-  <programme start="20261028185800 +0800" stop="20261028200000 +0800" channel="中视菁采">
+  <programme start="20261028185800 +0800" stop="20261028200000 +0800" channel="中视菁采.tw">
     <title lang="zh">中視新聞全球報導(普)</title>
   </programme>
-  <programme start="20261028200000 +0800" stop="20261028220000 +0800" channel="中视菁采">
+  <programme start="20261028200000 +0800" stop="20261028220000 +0800" channel="中视菁采.tw">
     <title lang="zh">飢餓遊戲(136)(普)</title>
     <desc lang="zh">今天的戰友，明天的敵人，永遠無法預知下一關將跟與誰合作。唯有帶著「玩下去、吃下去」的精神，繼續獲得食物充飢讓飢餓指數歸零，才是最後贏家！</desc>
   </programme>
-  <programme start="20261028220000 +0800" stop="20261028230000 +0800" channel="中视菁采">
+  <programme start="20261028220000 +0800" stop="20261028230000 +0800" channel="中视菁采.tw">
     <title lang="zh">喜願花(23)(普)</title>
     <desc lang="zh">主要講述的是志雄與心蘭因年輕時偷嘗禁果，未婚生子，勢利固執的陳母始終不願承認。心蘭在懷孕時感染風疹，生下女兒小芳...</desc>
   </programme>
-  <programme start="20261028230000 +0800" stop="20261029000000 +0800" channel="中视菁采">
+  <programme start="20261028230000 +0800" stop="20261029000000 +0800" channel="中视菁采.tw">
     <title lang="zh">康熙來了(81)(護)</title>
     <desc lang="zh">最另類的組合康永和熙娣打破了以往談話性節目的模式，以麻辣的話題和風趣的主持風格掀起另一股流行風潮！風趣幽默的主持風格，保證逗的你哈哈大笑！</desc>
   </programme>
-  <programme start="20261029000000 +0800" stop="20261029020000 +0800" channel="中视菁采">
+  <programme start="20261029000000 +0800" stop="20261029020000 +0800" channel="中视菁采.tw">
     <title lang="zh">飢餓遊戲(136)(普)</title>
     <desc lang="zh">今天的戰友，明天的敵人，永遠無法預知下一關將跟與誰合作。唯有帶著「玩下去、吃下去」的精神，繼續獲得食物充飢讓飢餓指數歸零，才是最後贏家！</desc>
   </programme>
-  <programme start="20261029020000 +0800" stop="20261029030000 +0800" channel="中视菁采">
+  <programme start="20261029020000 +0800" stop="20261029030000 +0800" channel="中视菁采.tw">
     <title lang="zh">康熙來了(82)(護)</title>
     <desc lang="zh">最另類的組合康永和熙娣打破了以往談話性節目的模式，以麻辣的話題和風趣的主持風格掀起另一股流行風潮！風趣幽默的主持風格，保證逗的你哈哈大笑！</desc>
   </programme>
-  <programme start="20261029030000 +0800" stop="20261029040000 +0800" channel="中视菁采">
+  <programme start="20261029030000 +0800" stop="20261029040000 +0800" channel="中视菁采.tw">
     <title lang="zh">MIT台灣誌(579)(普)</title>
     <desc lang="zh">「ＭＩＴ台灣誌」以發現台灣、寫真台灣、紀錄台灣為主旨，走遍台灣的每寸土地，介紹台灣的人文環境、大自然地理等…</desc>
   </programme>
-  <programme start="20261029040000 +0800" stop="20261029050000 +0800" channel="中视菁采">
+  <programme start="20261029040000 +0800" stop="20261029050000 +0800" channel="中视菁采.tw">
     <title lang="zh">大陸見聞錄(150)(普)</title>
     <desc lang="zh">中國大陸地大物博，想了解這個文明古國的現代風貌，就要鎖定《大陸見聞錄》，為觀眾介紹中國大陸人民的食、衣、住、行、育樂等各種面向。</desc>
   </programme>
-  <programme start="20261029050000 +0800" stop="20261029060000 +0800" channel="中视菁采">
+  <programme start="20261029050000 +0800" stop="20261029060000 +0800" channel="中视菁采.tw">
     <title lang="zh">喜願花(24)(普)</title>
     <desc lang="zh">主要講述的是志雄與心蘭因年輕時偷嘗禁果，未婚生子，勢利固執的陳母始終不願承認。心蘭在懷孕時感染風疹，生下女兒小芳...</desc>
   </programme>
-  <programme start="20261029060000 +0800" stop="20261029070000 +0800" channel="中视菁采">
+  <programme start="20261029060000 +0800" stop="20261029070000 +0800" channel="中视菁采.tw">
     <title lang="zh">MIT台灣誌(579)(普)</title>
     <desc lang="zh">「ＭＩＴ台灣誌」以發現台灣、寫真台灣、紀錄台灣為主旨，走遍台灣的每寸土地，介紹台灣的人文環境、大自然地理等…</desc>
   </programme>
-  <programme start="20261029070000 +0800" stop="20261029080000 +0800" channel="中视菁采">
+  <programme start="20261029070000 +0800" stop="20261029080000 +0800" channel="中视菁采.tw">
     <title lang="zh">中視早安新聞(普)</title>
     <desc lang="zh">「中視早安新聞」每天早上以最客觀的角度，最專業的主播，為觀眾報導充分且詳實的新聞、氣象和交通路況資訊。</desc>
   </programme>
-  <programme start="20261029080000 +0800" stop="20261029100000 +0800" channel="中视菁采">
+  <programme start="20261029080000 +0800" stop="20261029100000 +0800" channel="中视菁采.tw">
     <title lang="zh">歌聲滿天下(29)(普)</title>
     <desc lang="zh">节目内容以分享民歌、台语歌曲为主，每集都会邀请不同歌手演唱经典歌曲。节目风格温馨、怀旧，深受观众喜爱。</desc>
   </programme>
-  <programme start="20261029100000 +0800" stop="20261029110000 +0800" channel="中视菁采">
+  <programme start="20261029100000 +0800" stop="20261029110000 +0800" channel="中视菁采.tw">
     <title lang="zh">健康一把抓(1)(普)</title>
   </programme>
-  <programme start="20261029110000 +0800" stop="20261029115800 +0800" channel="中视菁采">
+  <programme start="20261029110000 +0800" stop="20261029115800 +0800" channel="中视菁采.tw">
     <title lang="zh">健康一把抓(3)(普)</title>
   </programme>
-  <programme start="20261029115800 +0800" stop="20261029130000 +0800" channel="中视菁采">
+  <programme start="20261029115800 +0800" stop="20261029130000 +0800" channel="中视菁采.tw">
     <title lang="zh">中視午間新聞(普)</title>
     <desc lang="zh">「中視午間新聞」每天以最客觀的角度，最專業的主播，為觀眾完整報導上午發生之重大國內外重要新聞，並提供最新股市收盤價格。</desc>
   </programme>
-  <programme start="20261029130000 +0800" stop="20261029140000 +0800" channel="中视菁采">
+  <programme start="20261029130000 +0800" stop="20261029140000 +0800" channel="中视菁采.tw">
     <title lang="zh">康熙來了(82)(護)</title>
     <desc lang="zh">最另類的組合康永和熙娣打破了以往談話性節目的模式，以麻辣的話題和風趣的主持風格掀起另一股流行風潮！風趣幽默的主持風格，保證逗的你哈哈大笑！</desc>
   </programme>
-  <programme start="20261029140000 +0800" stop="20261029150000 +0800" channel="中视菁采">
+  <programme start="20261029140000 +0800" stop="20261029150000 +0800" channel="中视菁采.tw">
     <title lang="zh">健康一點靈(52)(普)</title>
   </programme>
-  <programme start="20261029150000 +0800" stop="20261029160000 +0800" channel="中视菁采">
+  <programme start="20261029150000 +0800" stop="20261029160000 +0800" channel="中视菁采.tw">
     <title lang="zh">繞著幸福轉(90)(普)</title>
     <desc lang="zh">內容聚焦於健康、生活資訊與財經知識。</desc>
   </programme>
-  <programme start="20261029160000 +0800" stop="20261029180000 +0800" channel="中视菁采">
+  <programme start="20261029160000 +0800" stop="20261029180000 +0800" channel="中视菁采.tw">
     <title lang="zh">黃昏的約會(29)(普)</title>
     <desc lang="zh">节目内容以分享轻松、休閒的生活资讯，节目风格幽默、诙谐，深受观众喜爱。</desc>
   </programme>
-  <programme start="20261029180000 +0800" stop="20261029185800 +0800" channel="中视菁采">
+  <programme start="20261029180000 +0800" stop="20261029185800 +0800" channel="中视菁采.tw">
     <title lang="zh">喜願花(24)(普)</title>
     <desc lang="zh">主要講述的是志雄與心蘭因年輕時偷嘗禁果，未婚生子，勢利固執的陳母始終不願承認。心蘭在懷孕時感染風疹，生下女兒小芳...</desc>
   </programme>
-  <programme start="20261029185800 +0800" stop="20261029200000 +0800" channel="中视菁采">
+  <programme start="20261029185800 +0800" stop="20261029200000 +0800" channel="中视菁采.tw">
     <title lang="zh">中視新聞全球報導(普)</title>
   </programme>
-  <programme start="20261029200000 +0800" stop="20261029220000 +0800" channel="中视菁采">
+  <programme start="20261029200000 +0800" stop="20261029220000 +0800" channel="中视菁采.tw">
     <title lang="zh">飢餓遊戲(137)(普)</title>
     <desc lang="zh">今天的戰友，明天的敵人，永遠無法預知下一關將跟與誰合作。唯有帶著「玩下去、吃下去」的精神，繼續獲得食物充飢讓飢餓指數歸零，才是最後贏家！</desc>
   </programme>
-  <programme start="20261029220000 +0800" stop="20261029230000 +0800" channel="中视菁采">
+  <programme start="20261029220000 +0800" stop="20261029230000 +0800" channel="中视菁采.tw">
     <title lang="zh">喜願花(24)(普)</title>
     <desc lang="zh">主要講述的是志雄與心蘭因年輕時偷嘗禁果，未婚生子，勢利固執的陳母始終不願承認。心蘭在懷孕時感染風疹，生下女兒小芳...</desc>
   </programme>
-  <programme start="20261029230000 +0800" stop="20261030000000 +0800" channel="中视菁采">
+  <programme start="20261029230000 +0800" stop="20261030000000 +0800" channel="中视菁采.tw">
     <title lang="zh">康熙來了(82)(護)</title>
     <desc lang="zh">最另類的組合康永和熙娣打破了以往談話性節目的模式，以麻辣的話題和風趣的主持風格掀起另一股流行風潮！風趣幽默的主持風格，保證逗的你哈哈大笑！</desc>
   </programme>
-  <programme start="20261030000000 +0800" stop="20261030020000 +0800" channel="中视菁采">
+  <programme start="20261030000000 +0800" stop="20261030020000 +0800" channel="中视菁采.tw">
     <title lang="zh">飢餓遊戲(137)(普)</title>
     <desc lang="zh">今天的戰友，明天的敵人，永遠無法預知下一關將跟與誰合作。唯有帶著「玩下去、吃下去」的精神，繼續獲得食物充飢讓飢餓指數歸零，才是最後贏家！</desc>
   </programme>
-  <programme start="20261030020000 +0800" stop="20261030030000 +0800" channel="中视菁采">
+  <programme start="20261030020000 +0800" stop="20261030030000 +0800" channel="中视菁采.tw">
     <title lang="zh">康熙來了(83)(護)</title>
     <desc lang="zh">最另類的組合康永和熙娣打破了以往談話性節目的模式，以麻辣的話題和風趣的主持風格掀起另一股流行風潮！風趣幽默的主持風格，保證逗的你哈哈大笑！</desc>
   </programme>
-  <programme start="20261030030000 +0800" stop="20261030040000 +0800" channel="中视菁采">
+  <programme start="20261030030000 +0800" stop="20261030040000 +0800" channel="中视菁采.tw">
     <title lang="zh">MIT台灣誌(580)(普)</title>
     <desc lang="zh">「ＭＩＴ台灣誌」以發現台灣、寫真台灣、紀錄台灣為主旨，走遍台灣的每寸土地，介紹台灣的人文環境、大自然地理等…</desc>
   </programme>
-  <programme start="20261030040000 +0800" stop="20261030050000 +0800" channel="中视菁采">
+  <programme start="20261030040000 +0800" stop="20261030050000 +0800" channel="中视菁采.tw">
     <title lang="zh">大陸見聞錄(151)(普)</title>
     <desc lang="zh">中國大陸地大物博，想了解這個文明古國的現代風貌，就要鎖定《大陸見聞錄》，為觀眾介紹中國大陸人民的食、衣、住、行、育樂等各種面向。</desc>
   </programme>
-  <programme start="20261030050000 +0800" stop="20261030060000 +0800" channel="中视菁采">
+  <programme start="20261030050000 +0800" stop="20261030060000 +0800" channel="中视菁采.tw">
     <title lang="zh">喜願花(25)(普)</title>
     <desc lang="zh">主要講述的是志雄與心蘭因年輕時偷嘗禁果，未婚生子，勢利固執的陳母始終不願承認。心蘭在懷孕時感染風疹，生下女兒小芳...</desc>
   </programme>
-  <programme start="20261030060000 +0800" stop="20261030070000 +0800" channel="中视菁采">
+  <programme start="20261030060000 +0800" stop="20261030070000 +0800" channel="中视菁采.tw">
     <title lang="zh">MIT台灣誌(580)(普)</title>
     <desc lang="zh">「ＭＩＴ台灣誌」以發現台灣、寫真台灣、紀錄台灣為主旨，走遍台灣的每寸土地，介紹台灣的人文環境、大自然地理等…</desc>
   </programme>
-  <programme start="20261030070000 +0800" stop="20261030080000 +0800" channel="中视菁采">
+  <programme start="20261030070000 +0800" stop="20261030080000 +0800" channel="中视菁采.tw">
     <title lang="zh">中視早安新聞(普)</title>
     <desc lang="zh">「中視早安新聞」每天早上以最客觀的角度，最專業的主播，為觀眾報導充分且詳實的新聞、氣象和交通路況資訊。</desc>
   </programme>
-  <programme start="20261030080000 +0800" stop="20261030100000 +0800" channel="中视菁采">
+  <programme start="20261030080000 +0800" stop="20261030100000 +0800" channel="中视菁采.tw">
     <title lang="zh">歌聲滿天下(30)(普)</title>
     <desc lang="zh">节目内容以分享民歌、台语歌曲为主，每集都会邀请不同歌手演唱经典歌曲。节目风格温馨、怀旧，深受观众喜爱。</desc>
   </programme>
-  <programme start="20261030100000 +0800" stop="20261030110000 +0800" channel="中视菁采">
+  <programme start="20261030100000 +0800" stop="20261030110000 +0800" channel="中视菁采.tw">
     <title lang="zh">健康一把抓(1)(普)</title>
   </programme>
-  <programme start="20261030110000 +0800" stop="20261030115800 +0800" channel="中视菁采">
+  <programme start="20261030110000 +0800" stop="20261030115800 +0800" channel="中视菁采.tw">
     <title lang="zh">健康一把抓(3)(普)</title>
   </programme>
-  <programme start="20261030115800 +0800" stop="20261030130000 +0800" channel="中视菁采">
+  <programme start="20261030115800 +0800" stop="20261030130000 +0800" channel="中视菁采.tw">
     <title lang="zh">中視午間新聞(普)</title>
     <desc lang="zh">「中視午間新聞」每天以最客觀的角度，最專業的主播，為觀眾完整報導上午發生之重大國內外重要新聞，並提供最新股市收盤價格。</desc>
   </programme>
-  <programme start="20261030130000 +0800" stop="20261030140000 +0800" channel="中视菁采">
+  <programme start="20261030130000 +0800" stop="20261030140000 +0800" channel="中视菁采.tw">
     <title lang="zh">康熙來了(83)(護)</title>
     <desc lang="zh">最另類的組合康永和熙娣打破了以往談話性節目的模式，以麻辣的話題和風趣的主持風格掀起另一股流行風潮！風趣幽默的主持風格，保證逗的你哈哈大笑！</desc>
   </programme>
-  <programme start="20261030140000 +0800" stop="20261030150000 +0800" channel="中视菁采">
+  <programme start="20261030140000 +0800" stop="20261030150000 +0800" channel="中视菁采.tw">
     <title lang="zh">健康一點靈(53)(普)</title>
   </programme>
-  <programme start="20261030150000 +0800" stop="20261030160000 +0800" channel="中视菁采">
+  <programme start="20261030150000 +0800" stop="20261030160000 +0800" channel="中视菁采.tw">
     <title lang="zh">繞著幸福轉(90)(普)</title>
     <desc lang="zh">內容聚焦於健康、生活資訊與財經知識。</desc>
   </programme>
-  <programme start="20261030160000 +0800" stop="20261030180000 +0800" channel="中视菁采">
+  <programme start="20261030160000 +0800" stop="20261030180000 +0800" channel="中视菁采.tw">
     <title lang="zh">黃昏的約會(30)(普)</title>
     <desc lang="zh">节目内容以分享轻松、休閒的生活资讯，节目风格幽默、诙谐，深受观众喜爱。</desc>
   </programme>
-  <programme start="20261030180000 +0800" stop="20261030185800 +0800" channel="中视菁采">
+  <programme start="20261030180000 +0800" stop="20261030185800 +0800" channel="中视菁采.tw">
     <title lang="zh">喜願花(25)(普)</title>
     <desc lang="zh">主要講述的是志雄與心蘭因年輕時偷嘗禁果，未婚生子，勢利固執的陳母始終不願承認。心蘭在懷孕時感染風疹，生下女兒小芳...</desc>
   </programme>
-  <programme start="20261030185800 +0800" stop="20261030200000 +0800" channel="中视菁采">
+  <programme start="20261030185800 +0800" stop="20261030200000 +0800" channel="中视菁采.tw">
     <title lang="zh">中視新聞全球報導(普)</title>
   </programme>
-  <programme start="20261030200000 +0800" stop="20261030220000 +0800" channel="中视菁采">
+  <programme start="20261030200000 +0800" stop="20261030220000 +0800" channel="中视菁采.tw">
     <title lang="zh">飢餓遊戲(138)(普)</title>
     <desc lang="zh">今天的戰友，明天的敵人，永遠無法預知下一關將跟與誰合作。唯有帶著「玩下去、吃下去」的精神，繼續獲得食物充飢讓飢餓指數歸零，才是最後贏家！</desc>
   </programme>
-  <programme start="20261030220000 +0800" stop="20261030230000 +0800" channel="中视菁采">
+  <programme start="20261030220000 +0800" stop="20261030230000 +0800" channel="中视菁采.tw">
     <title lang="zh">喜願花(25)(普)</title>
     <desc lang="zh">主要講述的是志雄與心蘭因年輕時偷嘗禁果，未婚生子，勢利固執的陳母始終不願承認。心蘭在懷孕時感染風疹，生下女兒小芳...</desc>
   </programme>
-  <programme start="20261030230000 +0800" stop="20261031000000 +0800" channel="中视菁采">
+  <programme start="20261030230000 +0800" stop="20261031000000 +0800" channel="中视菁采.tw">
     <title lang="zh">康熙來了(83)(護)</title>
     <desc lang="zh">最另類的組合康永和熙娣打破了以往談話性節目的模式，以麻辣的話題和風趣的主持風格掀起另一股流行風潮！風趣幽默的主持風格，保證逗的你哈哈大笑！</desc>
   </programme>
-  <programme start="20261031000000 +0800" stop="20261031020000 +0800" channel="中视菁采">
+  <programme start="20261031000000 +0800" stop="20261031020000 +0800" channel="中视菁采.tw">
     <title lang="zh">飢餓遊戲(138)(普)</title>
     <desc lang="zh">今天的戰友，明天的敵人，永遠無法預知下一關將跟與誰合作。唯有帶著「玩下去、吃下去」的精神，繼續獲得食物充飢讓飢餓指數歸零，才是最後贏家！</desc>
   </programme>
-  <programme start="20261031020000 +0800" stop="20261031040000 +0800" channel="中视菁采">
+  <programme start="20261031020000 +0800" stop="20261031040000 +0800" channel="中视菁采.tw">
     <title lang="zh">最強大國民(29)(普)</title>
   </programme>
-  <programme start="20261031040000 +0800" stop="20261031050000 +0800" channel="中视菁采">
+  <programme start="20261031040000 +0800" stop="20261031050000 +0800" channel="中视菁采.tw">
     <title lang="zh">MIT台灣誌(464)(普)</title>
     <desc lang="zh">「ＭＩＴ台灣誌」以發現台灣、寫真台灣、紀錄台灣為主旨，走遍台灣的每寸土地，介紹台灣的人文環境、大自然地理等…</desc>
   </programme>
-  <programme start="20261031050000 +0800" stop="20261031060000 +0800" channel="中视菁采">
+  <programme start="20261031050000 +0800" stop="20261031060000 +0800" channel="中视菁采.tw">
     <title lang="zh">康熙來了(30)(護)</title>
     <desc lang="zh">最另類的組合康永和熙娣打破了以往談話性節目的模式，以麻辣的話題和風趣的主持風格掀起另一股流行風潮！風趣幽默的主持風格，保證逗的你哈哈大笑！</desc>
   </programme>
-  <programme start="20261031060000 +0800" stop="20261031070000 +0800" channel="中视菁采">
+  <programme start="20261031060000 +0800" stop="20261031070000 +0800" channel="中视菁采.tw">
     <title lang="zh">台灣真棒(39)(普)</title>
   </programme>
-  <programme start="20261031070000 +0800" stop="20261031080000 +0800" channel="中视菁采">
+  <programme start="20261031070000 +0800" stop="20261031080000 +0800" channel="中视菁采.tw">
     <title lang="zh">中視早安新聞(普)</title>
     <desc lang="zh">「中視早安新聞」每天早上以最客觀的角度，最專業的主播，為觀眾報導充分且詳實的新聞、氣象和交通路況資訊。</desc>
   </programme>
-  <programme start="20261031080000 +0800" stop="20261031100000 +0800" channel="中视菁采">
+  <programme start="20261031080000 +0800" stop="20261031100000 +0800" channel="中视菁采.tw">
     <title lang="zh">歌聲滿天下(31)(普)</title>
     <desc lang="zh">节目内容以分享民歌、台语歌曲为主，每集都会邀请不同歌手演唱经典歌曲。节目风格温馨、怀旧，深受观众喜爱。</desc>
   </programme>
-  <programme start="20261031100000 +0800" stop="20261031110000 +0800" channel="中视菁采">
+  <programme start="20261031100000 +0800" stop="20261031110000 +0800" channel="中视菁采.tw">
     <title lang="zh">健康一把抓(1)(普)</title>
   </programme>
-  <programme start="20261031110000 +0800" stop="20261031115800 +0800" channel="中视菁采">
+  <programme start="20261031110000 +0800" stop="20261031115800 +0800" channel="中视菁采.tw">
     <title lang="zh">健康一把抓(3)(普)</title>
   </programme>
-  <programme start="20261031115800 +0800" stop="20261031130000 +0800" channel="中视菁采">
+  <programme start="20261031115800 +0800" stop="20261031130000 +0800" channel="中视菁采.tw">
     <title lang="zh">中視午間新聞(普)</title>
     <desc lang="zh">「中視午間新聞」每天以最客觀的角度，最專業的主播，為觀眾完整報導上午發生之重大國內外重要新聞，並提供最新股市收盤價格。</desc>
   </programme>
-  <programme start="20261031130000 +0800" stop="20261031140000 +0800" channel="中视菁采">
+  <programme start="20261031130000 +0800" stop="20261031140000 +0800" channel="中视菁采.tw">
     <title lang="zh">康熙來了(30)(護)</title>
     <desc lang="zh">最另類的組合康永和熙娣打破了以往談話性節目的模式，以麻辣的話題和風趣的主持風格掀起另一股流行風潮！風趣幽默的主持風格，保證逗的你哈哈大笑！</desc>
   </programme>
-  <programme start="20261031140000 +0800" stop="20261031150000 +0800" channel="中视菁采">
+  <programme start="20261031140000 +0800" stop="20261031150000 +0800" channel="中视菁采.tw">
     <title lang="zh">健康一點靈(52)(普)</title>
   </programme>
-  <programme start="20261031150000 +0800" stop="20261031160000 +0800" channel="中视菁采">
+  <programme start="20261031150000 +0800" stop="20261031160000 +0800" channel="中视菁采.tw">
     <title lang="zh">繞著幸福轉(90)(普)</title>
     <desc lang="zh">內容聚焦於健康、生活資訊與財經知識。</desc>
   </programme>
-  <programme start="20261031160000 +0800" stop="20261031180000 +0800" channel="中视菁采">
+  <programme start="20261031160000 +0800" stop="20261031180000 +0800" channel="中视菁采.tw">
     <title lang="zh">黃昏的約會(31)(普)</title>
     <desc lang="zh">节目内容以分享轻松、休閒的生活资讯，节目风格幽默、诙谐，深受观众喜爱。</desc>
   </programme>
-  <programme start="20261031180000 +0800" stop="20261031185700 +0800" channel="中视菁采">
+  <programme start="20261031180000 +0800" stop="20261031185700 +0800" channel="中视菁采.tw">
     <title lang="zh">MIT台灣誌(732)(普)</title>
     <desc lang="zh">「ＭＩＴ台灣誌」以發現台灣、寫真台灣、紀錄台灣為主旨，走遍台灣的每寸土地，介紹台灣的人文環境、大自然地理等…</desc>
   </programme>
-  <programme start="20261031185700 +0800" stop="20261031200000 +0800" channel="中视菁采">
+  <programme start="20261031185700 +0800" stop="20261031200000 +0800" channel="中视菁采.tw">
     <title lang="zh">中視新聞全球報導(普)</title>
   </programme>
-  <programme start="20261031200000 +0800" stop="20261031220000 +0800" channel="中视菁采">
+  <programme start="20261031200000 +0800" stop="20261031220000 +0800" channel="中视菁采.tw">
     <title lang="zh">飢餓遊戲(505)(普)</title>
     <desc lang="zh">今天的戰友，明天的敵人，永遠無法預知下一關將跟與誰合作。唯有帶著「玩下去、吃下去」的精神，繼續獲得食物充飢讓飢餓指數歸零，才是最後贏家！</desc>
   </programme>
-  <programme start="20261031220000 +0800" stop="20261101000000 +0800" channel="中视菁采">
+  <programme start="20261031220000 +0800" stop="20261101000000 +0800" channel="中视菁采.tw">
     <title lang="zh">綜藝大本營(24)(普)</title>
   </programme>
-  <programme start="20261101000000 +0800" stop="20261101010000 +0800" channel="中视菁采">
+  <programme start="20261101000000 +0800" stop="20261101010000 +0800" channel="中视菁采.tw">
     <title lang="zh">MIT台灣誌(732)(普)</title>
     <desc lang="zh">「ＭＩＴ台灣誌」以發現台灣、寫真台灣、紀錄台灣為主旨，走遍台灣的每寸土地，介紹台灣的人文環境、大自然地理等…</desc>
   </programme>
-  <programme start="20261101010000 +0800" stop="20261101020000 +0800" channel="中视菁采">
+  <programme start="20261101010000 +0800" stop="20261101020000 +0800" channel="中视菁采.tw">
     <title lang="zh">台灣真棒(39)(普)</title>
   </programme>
-  <programme start="20261101020000 +0800" stop="20261101040000 +0800" channel="中视菁采">
+  <programme start="20261101020000 +0800" stop="20261101040000 +0800" channel="中视菁采.tw">
     <title lang="zh">飢餓遊戲(505)(普)</title>
     <desc lang="zh">今天的戰友，明天的敵人，永遠無法預知下一關將跟與誰合作。唯有帶著「玩下去、吃下去」的精神，繼續獲得食物充飢讓飢餓指數歸零，才是最後贏家！</desc>
   </programme>
-  <programme start="20261101040000 +0800" stop="20261101050000 +0800" channel="中视菁采">
+  <programme start="20261101040000 +0800" stop="20261101050000 +0800" channel="中视菁采.tw">
     <title lang="zh">大陸尋奇英才文教基金會(2150)(普)</title>
   </programme>
-  <programme start="20261101050000 +0800" stop="20261101060000 +0800" channel="中视菁采">
+  <programme start="20261101050000 +0800" stop="20261101060000 +0800" channel="中视菁采.tw">
     <title lang="zh">康熙來了(31)(普)</title>
     <desc lang="zh">最另類的組合康永和熙娣打破了以往談話性節目的模式，以麻辣的話題和風趣的主持風格掀起另一股流行風潮！風趣幽默的主持風格，保證逗的你哈哈大笑！</desc>
   </programme>
-  <programme start="20261101060000 +0800" stop="20261101070000 +0800" channel="中视菁采">
+  <programme start="20261101060000 +0800" stop="20261101070000 +0800" channel="中视菁采.tw">
     <title lang="zh">台灣真棒(40)(普)</title>
   </programme>
-  <programme start="20261101070000 +0800" stop="20261101080000 +0800" channel="中视菁采">
+  <programme start="20261101070000 +0800" stop="20261101080000 +0800" channel="中视菁采.tw">
     <title lang="zh">中視早安新聞(普)</title>
     <desc lang="zh">「中視早安新聞」每天早上以最客觀的角度，最專業的主播，為觀眾報導充分且詳實的新聞、氣象和交通路況資訊。</desc>
   </programme>
-  <programme start="20261101080000 +0800" stop="20261101100000 +0800" channel="中视菁采">
+  <programme start="20261101080000 +0800" stop="20261101100000 +0800" channel="中视菁采.tw">
     <title lang="zh">歌聲滿天下(1)(普)</title>
     <desc lang="zh">节目内容以分享民歌、台语歌曲为主，每集都会邀请不同歌手演唱经典歌曲。节目风格温馨、怀旧，深受观众喜爱。</desc>
   </programme>
-  <programme start="20261101100000 +0800" stop="20261101110000 +0800" channel="中视菁采">
+  <programme start="20261101100000 +0800" stop="20261101110000 +0800" channel="中视菁采.tw">
     <title lang="zh">健康一把抓(1)(普)</title>
   </programme>
-  <programme start="20261101110000 +0800" stop="20261101115800 +0800" channel="中视菁采">
+  <programme start="20261101110000 +0800" stop="20261101115800 +0800" channel="中视菁采.tw">
     <title lang="zh">健康一把抓(3)(普)</title>
   </programme>
-  <programme start="20261101115800 +0800" stop="20261101130000 +0800" channel="中视菁采">
+  <programme start="20261101115800 +0800" stop="20261101130000 +0800" channel="中视菁采.tw">
     <title lang="zh">中視午間新聞(普)</title>
     <desc lang="zh">「中視午間新聞」每天以最客觀的角度，最專業的主播，為觀眾完整報導上午發生之重大國內外重要新聞，並提供最新股市收盤價格。</desc>
   </programme>
-  <programme start="20261101130000 +0800" stop="20261101140000 +0800" channel="中视菁采">
+  <programme start="20261101130000 +0800" stop="20261101140000 +0800" channel="中视菁采.tw">
     <title lang="zh">康熙來了(31)(普)</title>
     <desc lang="zh">最另類的組合康永和熙娣打破了以往談話性節目的模式，以麻辣的話題和風趣的主持風格掀起另一股流行風潮！風趣幽默的主持風格，保證逗的你哈哈大笑！</desc>
   </programme>
-  <programme start="20261101140000 +0800" stop="20261101150000 +0800" channel="中视菁采">
+  <programme start="20261101140000 +0800" stop="20261101150000 +0800" channel="中视菁采.tw">
     <title lang="zh">健康一點靈(53)(普)</title>
   </programme>
-  <programme start="20261101150000 +0800" stop="20261101160000 +0800" channel="中视菁采">
+  <programme start="20261101150000 +0800" stop="20261101160000 +0800" channel="中视菁采.tw">
     <title lang="zh">繞著幸福轉(90)(普)</title>
     <desc lang="zh">內容聚焦於健康、生活資訊與財經知識。</desc>
   </programme>
-  <programme start="20261101160000 +0800" stop="20261101180000 +0800" channel="中视菁采">
+  <programme start="20261101160000 +0800" stop="20261101180000 +0800" channel="中视菁采.tw">
     <title lang="zh">黃昏的約會(1)(普)</title>
     <desc lang="zh">节目内容以分享轻松、休閒的生活资讯，节目风格幽默、诙谐，深受观众喜爱。</desc>
   </programme>
-  <programme start="20261101180000 +0800" stop="20261101185700 +0800" channel="中视菁采">
+  <programme start="20261101180000 +0800" stop="20261101185700 +0800" channel="中视菁采.tw">
     <title lang="zh">大陸尋奇英才文教基金會(2151)(普)</title>
   </programme>
-  <programme start="20261101185700 +0800" stop="20261101200000 +0800" channel="中视菁采">
+  <programme start="20261101185700 +0800" stop="20261101200000 +0800" channel="中视菁采.tw">
     <title lang="zh">中視新聞全球報導(普)</title>
   </programme>
-  <programme start="20261101200000 +0800" stop="20261101220000 +0800" channel="中视菁采">
+  <programme start="20261101200000 +0800" stop="20261101220000 +0800" channel="中视菁采.tw">
     <title lang="zh">最強大國民(30)(普)</title>
   </programme>
-  <programme start="20261101220000 +0800" stop="20261102000000 +0800" channel="中视菁采">
+  <programme start="20261101220000 +0800" stop="20261102000000 +0800" channel="中视菁采.tw">
     <title lang="zh">周日八點黨(333)(普)</title>
   </programme>
-  <programme start="20261102000000 +0800" stop="20261102010000 +0800" channel="中视菁采">
+  <programme start="20261102000000 +0800" stop="20261102010000 +0800" channel="中视菁采.tw">
     <title lang="zh">大陸尋奇英才文教基金會(2151)(普)</title>
   </programme>
-  <programme start="20261102010000 +0800" stop="20261102020000 +0800" channel="中视菁采">
+  <programme start="20261102010000 +0800" stop="20261102020000 +0800" channel="中视菁采.tw">
     <title lang="zh">台灣真棒(40)(普)</title>
   </programme>
-  <programme start="20261102020000 +0800" stop="20261102030000 +0800" channel="中视菁采">
+  <programme start="20261102020000 +0800" stop="20261102030000 +0800" channel="中视菁采.tw">
     <title lang="zh">康熙來了(84)(護)</title>
     <desc lang="zh">最另類的組合康永和熙娣打破了以往談話性節目的模式，以麻辣的話題和風趣的主持風格掀起另一股流行風潮！風趣幽默的主持風格，保證逗的你哈哈大笑！</desc>
   </programme>
-  <programme start="20261102030000 +0800" stop="20261102040000 +0800" channel="中视菁采">
+  <programme start="20261102030000 +0800" stop="20261102040000 +0800" channel="中视菁采.tw">
     <title lang="zh">MIT台灣誌(581)(普)</title>
     <desc lang="zh">「ＭＩＴ台灣誌」以發現台灣、寫真台灣、紀錄台灣為主旨，走遍台灣的每寸土地，介紹台灣的人文環境、大自然地理等…</desc>
   </programme>
-  <programme start="20261102040000 +0800" stop="20261102050000 +0800" channel="中视菁采">
+  <programme start="20261102040000 +0800" stop="20261102050000 +0800" channel="中视菁采.tw">
     <title lang="zh">大陸見聞錄(152)(普)</title>
     <desc lang="zh">中國大陸地大物博，想了解這個文明古國的現代風貌，就要鎖定《大陸見聞錄》，為觀眾介紹中國大陸人民的食、衣、住、行、育樂等各種面向。</desc>
   </programme>
-  <programme start="20261102050000 +0800" stop="20261102060000 +0800" channel="中视菁采">
+  <programme start="20261102050000 +0800" stop="20261102060000 +0800" channel="中视菁采.tw">
     <title lang="zh">喜願花(26)(普)</title>
     <desc lang="zh">主要講述的是志雄與心蘭因年輕時偷嘗禁果，未婚生子，勢利固執的陳母始終不願承認。心蘭在懷孕時感染風疹，生下女兒小芳...</desc>
   </programme>
-  <programme start="20261102060000 +0800" stop="20261102070000 +0800" channel="中视菁采">
+  <programme start="20261102060000 +0800" stop="20261102070000 +0800" channel="中视菁采.tw">
     <title lang="zh">MIT台灣誌(581)(普)</title>
     <desc lang="zh">「ＭＩＴ台灣誌」以發現台灣、寫真台灣、紀錄台灣為主旨，走遍台灣的每寸土地，介紹台灣的人文環境、大自然地理等…</desc>
   </programme>
-  <programme start="20261102070000 +0800" stop="20261102080000 +0800" channel="中视菁采">
+  <programme start="20261102070000 +0800" stop="20261102080000 +0800" channel="中视菁采.tw">
     <title lang="zh">中視早安新聞(普)</title>
     <desc lang="zh">「中視早安新聞」每天早上以最客觀的角度，最專業的主播，為觀眾報導充分且詳實的新聞、氣象和交通路況資訊。</desc>
   </programme>
-  <programme start="20261102080000 +0800" stop="20261102100000 +0800" channel="中视菁采">
+  <programme start="20261102080000 +0800" stop="20261102100000 +0800" channel="中视菁采.tw">
     <title lang="zh">歌聲滿天下(2)(普)</title>
     <desc lang="zh">节目内容以分享民歌、台语歌曲为主，每集都会邀请不同歌手演唱经典歌曲。节目风格温馨、怀旧，深受观众喜爱。</desc>
   </programme>
-  <programme start="20261102100000 +0800" stop="20261102110000 +0800" channel="中视菁采">
+  <programme start="20261102100000 +0800" stop="20261102110000 +0800" channel="中视菁采.tw">
     <title lang="zh">健康一把抓(普)</title>
   </programme>
-  <programme start="20261102110000 +0800" stop="20261102115800 +0800" channel="中视菁采">
+  <programme start="20261102110000 +0800" stop="20261102115800 +0800" channel="中视菁采.tw">
     <title lang="zh">健康一把抓(普)</title>
   </programme>
-  <programme start="20261102115800 +0800" stop="20261102130000 +0800" channel="中视菁采">
+  <programme start="20261102115800 +0800" stop="20261102130000 +0800" channel="中视菁采.tw">
     <title lang="zh">中視午間新聞(普)</title>
     <desc lang="zh">「中視午間新聞」每天以最客觀的角度，最專業的主播，為觀眾完整報導上午發生之重大國內外重要新聞，並提供最新股市收盤價格。</desc>
   </programme>
-  <programme start="20261102130000 +0800" stop="20261102140000 +0800" channel="中视菁采">
+  <programme start="20261102130000 +0800" stop="20261102140000 +0800" channel="中视菁采.tw">
     <title lang="zh">康熙來了(84)(護)</title>
     <desc lang="zh">最另類的組合康永和熙娣打破了以往談話性節目的模式，以麻辣的話題和風趣的主持風格掀起另一股流行風潮！風趣幽默的主持風格，保證逗的你哈哈大笑！</desc>
   </programme>
-  <programme start="20261102140000 +0800" stop="20261102150000 +0800" channel="中视菁采">
+  <programme start="20261102140000 +0800" stop="20261102150000 +0800" channel="中视菁采.tw">
     <title lang="zh">健康一點靈(普)</title>
   </programme>
-  <programme start="20261102150000 +0800" stop="20261102160000 +0800" channel="中视菁采">
+  <programme start="20261102150000 +0800" stop="20261102160000 +0800" channel="中视菁采.tw">
     <title lang="zh">繞著幸福轉(普)</title>
     <desc lang="zh">內容聚焦於健康、生活資訊與財經知識。</desc>
   </programme>
-  <programme start="20261102160000 +0800" stop="20261102180000 +0800" channel="中视菁采">
+  <programme start="20261102160000 +0800" stop="20261102180000 +0800" channel="中视菁采.tw">
     <title lang="zh">黃昏的約會(2)(普)</title>
     <desc lang="zh">节目内容以分享轻松、休閒的生活资讯，节目风格幽默、诙谐，深受观众喜爱。</desc>
   </programme>
-  <programme start="20261102180000 +0800" stop="20261102185800 +0800" channel="中视菁采">
+  <programme start="20261102180000 +0800" stop="20261102185800 +0800" channel="中视菁采.tw">
     <title lang="zh">喜願花(26)(普)</title>
     <desc lang="zh">主要講述的是志雄與心蘭因年輕時偷嘗禁果，未婚生子，勢利固執的陳母始終不願承認。心蘭在懷孕時感染風疹，生下女兒小芳...</desc>
   </programme>
-  <programme start="20261102185800 +0800" stop="20261102200000 +0800" channel="中视菁采">
+  <programme start="20261102185800 +0800" stop="20261102200000 +0800" channel="中视菁采.tw">
     <title lang="zh">中視新聞全球報導(普)</title>
   </programme>
-  <programme start="20261102200000 +0800" stop="20261102220000 +0800" channel="中视菁采">
+  <programme start="20261102200000 +0800" stop="20261102220000 +0800" channel="中视菁采.tw">
     <title lang="zh">飢餓遊戲(139)(普)</title>
     <desc lang="zh">今天的戰友，明天的敵人，永遠無法預知下一關將跟與誰合作。唯有帶著「玩下去、吃下去」的精神，繼續獲得食物充飢讓飢餓指數歸零，才是最後贏家！</desc>
   </programme>
-  <programme start="20261102220000 +0800" stop="20261102230000 +0800" channel="中视菁采">
+  <programme start="20261102220000 +0800" stop="20261102230000 +0800" channel="中视菁采.tw">
     <title lang="zh">喜願花(26)(普)</title>
     <desc lang="zh">主要講述的是志雄與心蘭因年輕時偷嘗禁果，未婚生子，勢利固執的陳母始終不願承認。心蘭在懷孕時感染風疹，生下女兒小芳...</desc>
   </programme>
-  <programme start="20261102230000 +0800" stop="20261103000000 +0800" channel="中视菁采">
+  <programme start="20261102230000 +0800" stop="20261103000000 +0800" channel="中视菁采.tw">
     <title lang="zh">康熙來了(84)(護)</title>
     <desc lang="zh">最另類的組合康永和熙娣打破了以往談話性節目的模式，以麻辣的話題和風趣的主持風格掀起另一股流行風潮！風趣幽默的主持風格，保證逗的你哈哈大笑！</desc>
   </programme>
-  <programme start="20261103000000 +0800" stop="20261103020000 +0800" channel="中视菁采">
+  <programme start="20261103000000 +0800" stop="20261103020000 +0800" channel="中视菁采.tw">
     <title lang="zh">飢餓遊戲(139)(普)</title>
     <desc lang="zh">今天的戰友，明天的敵人，永遠無法預知下一關將跟與誰合作。唯有帶著「玩下去、吃下去」的精神，繼續獲得食物充飢讓飢餓指數歸零，才是最後贏家！</desc>
   </programme>
-  <programme start="20261103020000 +0800" stop="20261103030000 +0800" channel="中视菁采">
+  <programme start="20261103020000 +0800" stop="20261103030000 +0800" channel="中视菁采.tw">
     <title lang="zh">康熙來了(85)(護)</title>
     <desc lang="zh">最另類的組合康永和熙娣打破了以往談話性節目的模式，以麻辣的話題和風趣的主持風格掀起另一股流行風潮！風趣幽默的主持風格，保證逗的你哈哈大笑！</desc>
   </programme>
-  <programme start="20261103030000 +0800" stop="20261103040000 +0800" channel="中视菁采">
+  <programme start="20261103030000 +0800" stop="20261103040000 +0800" channel="中视菁采.tw">
     <title lang="zh">MIT台灣誌(582)(普)</title>
     <desc lang="zh">「ＭＩＴ台灣誌」以發現台灣、寫真台灣、紀錄台灣為主旨，走遍台灣的每寸土地，介紹台灣的人文環境、大自然地理等…</desc>
   </programme>
-  <programme start="20261103040000 +0800" stop="20261103050000 +0800" channel="中视菁采">
+  <programme start="20261103040000 +0800" stop="20261103050000 +0800" channel="中视菁采.tw">
     <title lang="zh">大陸見聞錄(153)(普)</title>
     <desc lang="zh">中國大陸地大物博，想了解這個文明古國的現代風貌，就要鎖定《大陸見聞錄》，為觀眾介紹中國大陸人民的食、衣、住、行、育樂等各種面向。</desc>
   </programme>
-  <programme start="20261103050000 +0800" stop="20261103060000 +0800" channel="中视菁采">
+  <programme start="20261103050000 +0800" stop="20261103060000 +0800" channel="中视菁采.tw">
     <title lang="zh">喜願花(27)(普)</title>
     <desc lang="zh">主要講述的是志雄與心蘭因年輕時偷嘗禁果，未婚生子，勢利固執的陳母始終不願承認。心蘭在懷孕時感染風疹，生下女兒小芳...</desc>
   </programme>
-  <programme start="20261103060000 +0800" stop="20261103070000 +0800" channel="中视菁采">
+  <programme start="20261103060000 +0800" stop="20261103070000 +0800" channel="中视菁采.tw">
     <title lang="zh">MIT台灣誌(582)(普)</title>
     <desc lang="zh">「ＭＩＴ台灣誌」以發現台灣、寫真台灣、紀錄台灣為主旨，走遍台灣的每寸土地，介紹台灣的人文環境、大自然地理等…</desc>
   </programme>
-  <programme start="20261103070000 +0800" stop="20261103080000 +0800" channel="中视菁采">
+  <programme start="20261103070000 +0800" stop="20261103080000 +0800" channel="中视菁采.tw">
     <title lang="zh">中視早安新聞(普)</title>
     <desc lang="zh">「中視早安新聞」每天早上以最客觀的角度，最專業的主播，為觀眾報導充分且詳實的新聞、氣象和交通路況資訊。</desc>
   </programme>
-  <programme start="20261103080000 +0800" stop="20261103100000 +0800" channel="中视菁采">
+  <programme start="20261103080000 +0800" stop="20261103100000 +0800" channel="中视菁采.tw">
     <title lang="zh">歌聲滿天下(3)(普)</title>
     <desc lang="zh">节目内容以分享民歌、台语歌曲为主，每集都会邀请不同歌手演唱经典歌曲。节目风格温馨、怀旧，深受观众喜爱。</desc>
   </programme>
-  <programme start="20261103100000 +0800" stop="20261103110000 +0800" channel="中视菁采">
+  <programme start="20261103100000 +0800" stop="20261103110000 +0800" channel="中视菁采.tw">
     <title lang="zh">健康一把抓(普)</title>
   </programme>
-  <programme start="20261103110000 +0800" stop="20261103115800 +0800" channel="中视菁采">
+  <programme start="20261103110000 +0800" stop="20261103115800 +0800" channel="中视菁采.tw">
     <title lang="zh">健康一把抓(普)</title>
   </programme>
-  <programme start="20261103115800 +0800" stop="20261103130000 +0800" channel="中视菁采">
+  <programme start="20261103115800 +0800" stop="20261103130000 +0800" channel="中视菁采.tw">
     <title lang="zh">中視午間新聞(普)</title>
     <desc lang="zh">「中視午間新聞」每天以最客觀的角度，最專業的主播，為觀眾完整報導上午發生之重大國內外重要新聞，並提供最新股市收盤價格。</desc>
   </programme>
-  <programme start="20261103130000 +0800" stop="20261103140000 +0800" channel="中视菁采">
+  <programme start="20261103130000 +0800" stop="20261103140000 +0800" channel="中视菁采.tw">
     <title lang="zh">康熙來了(85)(護)</title>
     <desc lang="zh">最另類的組合康永和熙娣打破了以往談話性節目的模式，以麻辣的話題和風趣的主持風格掀起另一股流行風潮！風趣幽默的主持風格，保證逗的你哈哈大笑！</desc>
   </programme>
-  <programme start="20261103140000 +0800" stop="20261103150000 +0800" channel="中视菁采">
+  <programme start="20261103140000 +0800" stop="20261103150000 +0800" channel="中视菁采.tw">
     <title lang="zh">健康一點靈(普)</title>
   </programme>
-  <programme start="20261103150000 +0800" stop="20261103160000 +0800" channel="中视菁采">
+  <programme start="20261103150000 +0800" stop="20261103160000 +0800" channel="中视菁采.tw">
     <title lang="zh">繞著幸福轉(普)</title>
     <desc lang="zh">內容聚焦於健康、生活資訊與財經知識。</desc>
   </programme>
-  <programme start="20261103160000 +0800" stop="20261103180000 +0800" channel="中视菁采">
+  <programme start="20261103160000 +0800" stop="20261103180000 +0800" channel="中视菁采.tw">
     <title lang="zh">黃昏的約會(3)(普)</title>
     <desc lang="zh">节目内容以分享轻松、休閒的生活资讯，节目风格幽默、诙谐，深受观众喜爱。</desc>
   </programme>
-  <programme start="20261103180000 +0800" stop="20261103185800 +0800" channel="中视菁采">
+  <programme start="20261103180000 +0800" stop="20261103185800 +0800" channel="中视菁采.tw">
     <title lang="zh">喜願花(27)(普)</title>
     <desc lang="zh">主要講述的是志雄與心蘭因年輕時偷嘗禁果，未婚生子，勢利固執的陳母始終不願承認。心蘭在懷孕時感染風疹，生下女兒小芳...</desc>
   </programme>
-  <programme start="20261103185800 +0800" stop="20261103200000 +0800" channel="中视菁采">
+  <programme start="20261103185800 +0800" stop="20261103200000 +0800" channel="中视菁采.tw">
     <title lang="zh">中視新聞全球報導(普)</title>
   </programme>
-  <programme start="20261103200000 +0800" stop="20261103220000 +0800" channel="中视菁采">
+  <programme start="20261103200000 +0800" stop="20261103220000 +0800" channel="中视菁采.tw">
     <title lang="zh">飢餓遊戲(140)(普)</title>
     <desc lang="zh">今天的戰友，明天的敵人，永遠無法預知下一關將跟與誰合作。唯有帶著「玩下去、吃下去」的精神，繼續獲得食物充飢讓飢餓指數歸零，才是最後贏家！</desc>
   </programme>
-  <programme start="20261103220000 +0800" stop="20261103230000 +0800" channel="中视菁采">
+  <programme start="20261103220000 +0800" stop="20261103230000 +0800" channel="中视菁采.tw">
     <title lang="zh">喜願花(27)(普)</title>
     <desc lang="zh">主要講述的是志雄與心蘭因年輕時偷嘗禁果，未婚生子，勢利固執的陳母始終不願承認。心蘭在懷孕時感染風疹，生下女兒小芳...</desc>
   </programme>
-  <programme start="20261103230000 +0800" stop="20261104000000 +0800" channel="中视菁采">
+  <programme start="20261103230000 +0800" stop="20261104000000 +0800" channel="中视菁采.tw">
     <title lang="zh">康熙來了(85)(護)</title>
     <desc lang="zh">最另類的組合康永和熙娣打破了以往談話性節目的模式，以麻辣的話題和風趣的主持風格掀起另一股流行風潮！風趣幽默的主持風格，保證逗的你哈哈大笑！</desc>
   </programme>

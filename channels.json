@@ -911,7 +911,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 312
+    "programmeCount": 316
   },
   {
     "id": "Pearl.hk",
@@ -1838,7 +1838,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 80
+    "programmeCount": 86
   },
   {
     "id": "ROCKAction.sg",
@@ -2030,7 +2030,7 @@
     "aliases": [
       "寰宇財經HD"
     ],
-    "logo": "",
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919172446201175_37.png",
     "hasEpg": true,
     "programmeCount": 168
   },
