@@ -1,0 +1,21 @@
+name: 缺口诊断（临时）
+on:
+  workflow_dispatch:
+jobs:
+  diag:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '22' }
+      - name: 跑诊断
+        env:
+          TZ: Asia/Shanghai
+        run: node tools/diag-gap.mjs 2>&1 | tee diag.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: diag-gap, path: 'diag-gap.json' }
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: diag-gap-txt, path: 'diag.txt' }
