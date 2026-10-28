@@ -149,30 +149,57 @@ console.log('\n[5] MOD buildRows：单条超 6 小时视为上游异常并丢弃
   check('★ 22.5 小时的「节目」被丢弃（宁缺勿错）', rows.length === 0, `实际 ${rows.length} 条`)
 }
 
-console.log('\n[6] countCoveredYmds：天数按「覆盖满 6 小时」判，不按条数')
+console.log('\n[6] countCoveredYmds：天数必须「当天有起播节目 + 覆盖满 6 小时」')
 {
   const ymds = ['20261028', '20261029', '20261030']
   const at = (s) => Date.parse(s)
 
-  // 反例：nowplayer 332 的第 6 天只有 1 条 11 小时的跨天节目（实测 CI run 40623856220）
-  // 「有节目就算 1 天」会算成 3 天；按小时口径应该只有 2 天（前两天满覆盖）
-  const rows = [
+  // ★★ 核心反例（CI run 40623856220 实测 Now新聞台 332 的 day=6）：
+  //   一条「11-01 23:30 ~ 11-02 10:30」的 11 小时跨天节目，
+  //   让 11-02 被覆盖 10.5 小时 —— 但 11-02 **没有任何一条节目是从这天起播的**。
+  //   只判「覆盖满 6 小时」会算成 3 天（错）；必须同时要求「当天有起播节目」→ 2 天。
+  const crossDay = [
     { startTs: at('2026-10-28T00:00:00+08:00'), stopTs: at('2026-10-28T23:59:00+08:00') },
     { startTs: at('2026-10-29T00:00:00+08:00'), stopTs: at('2026-10-29T23:59:00+08:00') },
-    // 10-30 只被这条覆盖 10.5 小时 —— 单条长节目，覆盖够但只有 1 条
-    { startTs: at('2026-10-30T01:00:00+08:00'), stopTs: at('2026-10-30T11:30:00+08:00') },
+    // 这条从 10-29 23:30 起播，覆盖到 10-30 10:30
+    { startTs: at('2026-10-29T23:30:00+08:00'), stopTs: at('2026-10-30T10:30:00+08:00') },
   ]
-  check('★ 10-30 被单条覆盖 10.5h → 仍算 1 天（口径只看小时，不看条数）', countCoveredYmds(rows, ymds, 6) === 3)
+  check(
+    '★★ 靠跨天节目「蹭」到的 10-30 不算 1 天（只判小时会算错）',
+    countCoveredYmds(crossDay, ymds, 6) === 2,
+    `实际 ${countCoveredYmds(crossDay, ymds, 6)}（只判小时会是 3）`
+  )
 
-  // 真正的碎片：每天只有 2 条 30 分钟的垫片 → 只覆盖 1 小时，不满 6 小时
+  // 反证：如果只判小时，确实是 3 天 —— 说明这条断言真的能抓到「只判小时」的写法
+  {
+    const hours = ymds.map(() => 0)
+    const ts0s = ymds.map((y) => at(`${y.slice(0, 4)}-${y.slice(4, 6)}-${y.slice(6, 8)}T00:00:00+08:00`))
+    for (const r of crossDay) {
+      for (let i = 0; i < ymds.length; i++) {
+        const oa = Math.max(r.startTs, ts0s[i])
+        const ob = Math.min(r.stopTs, ts0s[i] + 86400e3)
+        if (ob > oa) hours[i] += (ob - oa) / 3600e3
+      }
+    }
+    const onlyHours = hours.filter((h) => Math.min(h, 24) >= 6).length
+    check('（反证）只判小时 = 3 天，正是要拦掉的错法', onlyHours === 3, `实际 ${onlyHours}`)
+  }
+
+  // 当天有起播节目且覆盖够 → 正常算 1 天
+  const normal = [
+    { startTs: at('2026-10-28T00:00:00+08:00'), stopTs: at('2026-10-28T23:59:00+08:00') },
+  ]
+  check('当天起播 + 覆盖满 → 1 天', countCoveredYmds(normal, ymds, 6) === 1)
+
+  // 真正的碎片：每天只有 2 条 30 分钟垫片（有起播但覆盖只有 1 小时）→ 0 天
   const frag = []
   for (const d of ymds) {
-    frag.push({ startTs: at(`${d.slice(0, 4)}-${d.slice(4, 6)}-${d.slice(6, 8)}T02:00:00+08:00`), stopTs: at(`${d.slice(0, 4)}-${d.slice(4, 6)}-${d.slice(6, 8)}T02:30:00+08:00`) })
-    frag.push({ startTs: at(`${d.slice(0, 4)}-${d.slice(4, 6)}-${d.slice(6, 8)}T03:00:00+08:00`), stopTs: at(`${d.slice(0, 4)}-${d.slice(4, 6)}-${d.slice(6, 8)}T03:30:00+08:00`) })
+    const p = `${d.slice(0, 4)}-${d.slice(4, 6)}-${d.slice(6, 8)}`
+    frag.push({ startTs: at(`${p}T02:00:00+08:00`), stopTs: at(`${p}T02:30:00+08:00`) })
+    frag.push({ startTs: at(`${p}T03:00:00+08:00`), stopTs: at(`${p}T03:30:00+08:00`) })
   }
   check('★ 每天只有 1 小时垫片 → 0 天（不是 3 天）', countCoveredYmds(frag, ymds, 6) === 0, `实际 ${countCoveredYmds(frag, ymds, 6)}`)
 
-  // 空输入
   check('空 rows → 0 天', countCoveredYmds([], ymds, 6) === 0)
 
   // 重叠累加要封顶 24 小时（同一天两条完全重叠不该算 48 小时）

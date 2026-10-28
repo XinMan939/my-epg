@@ -305,17 +305,30 @@ export function tsToHM(ts) {
 }
 
 /**
- * ★ 数「这些行覆盖了几天」，按**每天覆盖满 minHours 小时**判，不按条数
+ * ★ 数「这些行覆盖了几天」——必须同时满足两个条件才算 1 天
  *
- * 为什么不能数条数（pitfalls §4 硬规则）：
- *   nowplayer 的 Now新聞台 332 第 6 天只有 1 条「11-01 23:30 ~ 11-02 10:30」，
- *   时长 11 小时、**只有 1 条**。按「有节目就算 1 天」会把这天算进去，
- *   于是 catalog 报 6 天，实际第 6 天只有一条跨天节目，播放器上等于没有节目单。
+ *   ① **至少 1 条节目的 start 落在这一天**（不能只靠前一天的跨天节目"蹭"天数）
+ *   ② 这一天被覆盖满 minHours 小时
  *
- *   MOD 侧同理：某台某天只有 2 条 30 分钟的垫片，也会被算成「1 天」。
+ * ★★ 为什么必须加 ①（2026-10-28 第十二轮，我先写错了再改回来）：
  *
- * 和 index.mjs 的 countCoveredDays 是同一套口径，区别是那个吃 buildDateRange
- * 的 [{ts0,ts1}]，这个吃「北京日 YYYYMMDD 列表」，供各源的 listChannels 用。
+ *   只判 ② 会得到完全相反的结果。实测 Now新聞台 332（CI run 40623856220）：
+ *   ```
+ *   day=6 只返回 1 条「11-01 23:30 ~ 11-02 10:30」—— 一条 11 小时的跨天节目
+ *   11-02 被它覆盖 10.5 小时 → 只判②会算「11-02 有数据」
+ *   但 11-02 没有任何一条节目是「从 11-02 开始」的，11:00 之后全空
+ *   ```
+ *   旧规则（数 start 归属日）算 **5 天**，只判②反而算 **6 天** ——
+ *   把「只有一条超长跨天节目」的天当成有效天，正是要修的问题。
+ *
+ * ★ 为什么不能只数条数（§4）：某天只有 2 条 30 分钟垫片 → 算 1 天，播放器 23 小时空白。
+ *
+ * 和 index.mjs 的 countCoveredDays 语义**有意不同**：
+ *   - `countCoveredDays`（补天判断）：这天有没有足够内容让播放器不空白 →
+ *     只判覆盖小时，一条 10.5 小时的节目确实填满了上午，判「够」是对的。
+ *   - `countCoveredYmds`（源自报 days，喂 pickBest 排序）：这个源**能提供几天的
+ *     完整节目单** → 必须要求当天有起播节目，否则排序会把「靠跨天节目蹭天数」的
+ *     源排到前面。
  *
  * @param {Array} rows        [{startTs, stopTs}]
  * @param {string[]} ymds     要统计的北京日（YYYYMMDD）
@@ -324,6 +337,7 @@ export function tsToHM(ts) {
  */
 export function countCoveredYmds(rows, ymds, minHours = 6) {
   const hours = new Array(ymds.length).fill(0)
+  const starts = new Array(ymds.length).fill(0)
   const ts0s = ymds.map((y) => Date.parse(`${y.slice(0, 4)}-${y.slice(4, 6)}-${y.slice(6, 8)}T00:00:00+08:00`))
   for (const r of rows) {
     const a = r.startTs
@@ -333,9 +347,15 @@ export function countCoveredYmds(rows, ymds, minHours = 6) {
       const oa = Math.max(a, ts0s[i])
       const ob = Math.min(b, ts0s[i] + 86400e3)
       if (ob > oa) hours[i] += (ob - oa) / 3600e3
+      // ★ 条件①：这条节目是不是「从这一天开始」的
+      if (a >= ts0s[i] && a < ts0s[i] + 86400e3) starts[i]++
     }
   }
-  return hours.filter((h) => Math.min(h, 24) >= minHours).length
+  let n = 0
+  for (let i = 0; i < ymds.length; i++) {
+    if (starts[i] > 0 && Math.min(hours[i], 24) >= minHours) n++
+  }
+  return n
 }
 
 /**
