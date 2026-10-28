@@ -44,6 +44,7 @@ import * as nowplayer from './sources/nowplayer.mjs'
 import * as mod from './sources/mod.mjs'
 import { enrichFromZ51, loadPacks, fillEmptyChannels } from './sources/z51.mjs'
 import { enrichFromKbro } from './sources/kbro.mjs'
+import { enrichFromLitv } from './sources/litv.mjs'
 
 const SOURCES = { epgpw, tvmao, tvsou, fengshows, webncode, litv, tdm, elta, nowplayer, mod }
 
@@ -828,6 +829,42 @@ async function cmdBuild() {
       }
     }
 
+    // ④ litv 补残余（台湾付费台）—— 2026-10-28 第十三轮新增
+    //
+    // 为什么需要：litv 有 33 个台简介率 ≥90%（博斯/龍華/八大系列 100%），
+    //   但它们只有 6 天，在 pickBest 的第一维 `days` 就被 epgpw 的 7~8 天淘汰，
+    //   **简介这一维根本没机会参与比较**。实测 15 个台约 1239 条简介被白扔：
+    //     龙华偶像  7天/106条/**0简介**  vs  litv 6天/139条/**139简介**
+    //     博斯无限Ⅱ 7天/ 74条/**1简介**  vs  litv 6天/ 67条/**67简介**
+    //
+    // ★ 为什么不改 pickBest：天数确实是硬需求（订阅 7 天不能缺天），
+    //   把简介提到天数前面会让整台少一天。正确做法是职责分离 ——
+    //   epgpw 出 7 天节目单，litv 只出简介，和 kbro 的定位完全一致。
+    //
+    // ★ 放在 kbro 之后：kbro 先补（它专补港澳台、有自己的一套去重规则），
+    //   litv 再补残余。顺序反了的话 kbro 就补不到 litv 已填的条目 —— 无意义。
+    let litvDescStats = null
+    if (!process.env.NO_LITV_DESC) {
+      try {
+        log.info('[desc] ④ 用 litv 补台湾付费台简介...')
+        const r = await enrichFromLitv(targets, epgMap, {})
+        if (r.stats && r.stats.size) {
+          const filled = [...r.stats.values()].reduce((a, v) => a + v.filled, 0)
+          litvDescStats = {
+            channels: r.stats.size,
+            filled,
+            detail: r.detail,
+            byChannel: Object.fromEntries([...r.stats].map(([id, v]) => [id, v])),
+          }
+          log.ok(`[desc] ④ litv 补了 ${filled} 条（${r.stats.size} 个频道）`)
+        } else {
+          log.info('[desc] ④ litv 没有可补的简介')
+        }
+      } catch (e) {
+        log.warn(`[desc] ④ litv 失败，忽略: ${e.message}`)
+      }
+    }
+
     const final = countReal()
     descStats = {
       // 真实简介口径（去掉「暂无节目描述」等占位，以及「desc 复读标题」）
@@ -838,10 +875,15 @@ async function cmdBuild() {
       echoCount: final.echo,
       // 历史字段，保留兼容看板
       titles: tvmaoStats?.titles || 0,
-      filled: (z51Stats?.filled || 0) + (tvmaoStats?.filled || 0) + (kbroStats?.filled || 0),
+      filled:
+        (z51Stats?.filled || 0) +
+        (tvmaoStats?.filled || 0) +
+        (kbroStats?.filled || 0) +
+        (litvDescStats?.filled || 0),
       z51: z51Stats,
       tvmao: tvmaoStats,
       kbro: kbroStats,
+      litv: litvDescStats,
     }
     log.info(
       `[desc] 最终真实简介覆盖 ${descStats.realCoverage}% (${descStats.realCount}/${descStats.totalCount})` +

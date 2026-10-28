@@ -293,7 +293,7 @@ export async function buildChannelIndex(dates) {
  *   （「台視」⊂「台視新聞」、「中天綜合台」vs「中天新聞」、
  *    「博斯網球台」vs「博斯運動台」），包含匹配必串台。
  */
-function normChannelName(s) {
+export function normChannelName(s) {
   let x = toSimplified(String(s || ''))
   x = x.replace(/[\s\u3000]+/g, '')
   x = x.replace(/[（(][^)）]{0,10}[)）]/g, '') // (免費) (HD)
@@ -309,12 +309,55 @@ function normChannelName(s) {
   return x.toLowerCase()
 }
 
-/** 目标频道的名字（含别名）里，有没有和 kbro 频道名完全相等的 */
-function targetNameMatches(t, kbroName) {
-  const k = normChannelName(kbroName)
+/**
+ * 目标频道的名字（含别名）里，有没有和对方频道名完全相等的
+ *
+ * ★ 2026-10-28 导出给 litv.mjs 复用：litv 补简介走的是同一套对齐逻辑，
+ *   复制一份实现必然漂移（改一边忘另一边），所以直接共用。
+ */
+export function targetNameMatches(t, otherName) {
+  const k = normChannelName(otherName)
   if (!k || k.length < 3) return false
   for (const cand of [t.name, ...(t.aliases || [])]) {
     if (normChannelName(cand) === k) return true
+  }
+  return false
+}
+
+/**
+ * ★★ 名字相关性护栏：完全相同，或一方完整包含另一方（各自长度 ≥3）
+ *
+ * 2026-10-28 第十三轮新增，专给 litv 补简介用。**不能省**。
+ *
+ * 为什么光靠标题交集不够（实测反例）：
+ *   「爱尔达娱乐」被对到 litv「INULTRA」，交集 54 条、覆盖率 100%——
+ *   数字上看是完美匹配，但那 54 条全是 INULTRA 的科普纪录片
+ *   （扶手椅冒險家 / 不容敗北 / 纳米比亚野生动物保护区），跟娱乐台毫无关系。
+ *   根因是 epgpw 的 `愛爾達娛樂台`（370149）本身挂的就是 INULTRA 的节目，
+ *   我的通道只是**继承**了上游的错误。标题交集在这类「上游整台错挂」面前完全失效。
+ *
+ * ★ 为什么用「包含」而不是只用「完全相等」：
+ *   实测有 3 个台必须靠包含才能对上，否则白丢 110 条：
+ *     SETiNews.tw(三立财经新闻) ← 三立新聞iNEWS     +71
+ *     阿里郎.tw                ← ARIRANG阿里郎頻道   +32
+ *     我的欧洲电影.tw           ← My Cinema Europe HD 我的歐洲電影  +5
+ *   这三个都是同一个台的不同叫法，包含关系是成立的。
+ *
+ * ★ 为什么包含不会误伤（对比真正的反例）：
+ *   「爱尔达娱乐」与「INULTRA」归一化后毫无交集 → 包含判断为 false ✓
+ *   而 kbro 那边之所以严禁包含匹配（见 normChannelName 注释），
+ *   是因为它在做**主源选择**——选错就整台串台；这里只做**补简介**，
+ *   且有标题交集门槛兜底，两者风险等级不同。即便如此，仍保留交集门槛。
+ */
+export function nameRelated(t, otherName) {
+  if (targetNameMatches(t, otherName)) return true
+  const y = normChannelName(otherName)
+  if (!y) return false
+  for (const cand of [t.name, ...(t.aliases || [])]) {
+    const x = normChannelName(cand)
+    if (!x) continue
+    if (x.length >= 3 && y.includes(x)) return true
+    if (y.length >= 3 && x.includes(y)) return true
   }
   return false
 }

@@ -34,7 +34,8 @@
  *   判断属于哪一天必须按 +08:00 换算 —— 跟 fengshows / webncode 同一类坑。
  */
 import zlib from 'node:zlib'
-import { fetchBuffer, log, hasRealDesc } from '../utils.mjs'
+import { fetchBuffer, log, hasRealDesc, isEchoDesc } from '../utils.mjs'
+import { normKbroTitle, targetNameMatches, nameRelated } from './kbro.mjs'
 
 const BASE = 'https://fino.svc.litv.tv'
 const UA =
@@ -198,3 +199,176 @@ export async function listChannels() {
 }
 
 export { log }
+
+/**
+ * ★ 端到端：用 litv 给已抓到的节目补简介（2026-10-28 第十三轮新增）
+ *
+ * ── 为什么需要这个通道（实测数据，别删） ──────────────────────────
+ *
+ * litv 有 **33 个台简介率 ≥90%**，其中博斯全系列、龍華全系列、八大系列是 **100%**。
+ * 但它们在 `pickBest` 里永远选不上，因为排序第一维是 `days`：
+ *
+ *   | 目标台   | 现状（epgpw）      | litv 候选              |
+ *   |----------|--------------------|------------------------|
+ *   | 龙华偶像 | 7天/106条/**0简介**  | 6天/139条/**139简介**  |
+ *   | 博斯无限Ⅱ | 7天/74条/**1简介**   | 6天/67条/**67简介**    |
+ *   | 采昌影剧 | 7天/119条/12简介    | 6天/94条/93简介        |
+ *
+ * litv 少 1 天就被第一维淘汰，**简介这一维根本没机会参与比较**。
+ * 这和 §6.7g（webncode 天数虚高）是同一个结构，只是方向相反：
+ * 那边是「天数虚高 → 坏源赢」，这里是「天数少 1 天 → 好源连比较资格都没有」。
+ *
+ * ★ 为什么不改 pickBest 的排序：
+ *   天数确实是硬需求（订阅 7 天就不能缺天），把简介提到天数前面会让整台少一天。
+ *   正确做法是**职责分离**——epgpw 出 7 天节目单，litv 只出简介，
+ *   和 kbro 已有的定位完全一致（kbro 只给 3 天，也从不抢主源）。
+ *
+ * ── 两条安全规则（照抄 kbro，理由见 kbro.mjs 对应注释） ────────────
+ *   ① 频道级：用**节目标题交集**对齐，不用名字匹配（台湾台名字天生互相包含）
+ *   ② 全局级：只在「同名频道」内兜底，绝不跨频道套用
+ *
+ * ★ 只填「还没有真实简介」的条目，绝不覆盖已有内容。
+ */
+export async function enrichFromLitv(targets, epgMap, opts = {}) {
+  const { force = false } = opts
+
+  let all
+  try {
+    all = await loadAll()
+  } catch (e) {
+    log.warn(`[litv] 补简介：包不可用，跳过（${e.message}）`)
+    return { stats: null, detail: [] }
+  }
+
+  const P = all.Programs || {}
+
+  // ① 把 litv 的 94 个台建成 {channelId → {name, titles:Set, descMap:Map}}
+  const byChannel = new Map()
+  for (const c of all.Channels || []) {
+    const id = c.CdnCode
+    if (!id) continue
+    const slot = { channelId: id, name: String(c.Name || '').trim(), titles: new Set(), descMap: new Map() }
+    for (const p of c.Schedule || []) {
+      const meta = P[p.ProgramId]
+      if (!meta) continue
+      const title = String(meta.Title || '').trim()
+      if (!title) continue
+      const key = normKbroTitle(title)
+      if (!key) continue
+      slot.titles.add(key)
+      const desc = String(meta.Description || '').trim()
+      if (!desc) continue
+      // ★ 简介复读标题 = 没写简介（pitfalls §5.1）
+      if (isEchoDesc(desc, title)) continue
+      if (desc.length < 12) continue
+      const old = slot.descMap.get(key)
+      if (!old || desc.length > old.length) slot.descMap.set(key, desc)
+    }
+    if (slot.titles.size) byChannel.set(id, slot)
+  }
+  if (!byChannel.size) {
+    log.info('[litv] 补简介：没有任何可用频道')
+    return { stats: null, detail: [] }
+  }
+
+  // ② 我方每个频道已有的节目标题（归一化）
+  const titlesByTarget = new Map()
+  for (const t of targets) {
+    const rows = epgMap.get(t.id) || []
+    if (!rows.length) continue
+    const set = new Set()
+    for (const r of rows) {
+      const k = normKbroTitle(r.title)
+      if (k) set.add(k)
+    }
+    if (set.size) titlesByTarget.set(t.id, set)
+  }
+
+  // ③ 标题交集对齐（阈值与 kbro 一致：交集 ≥5 且 ≥15%，或名字完全相等且交集 ≥2）
+  const aligned = new Map()
+  const detail = []
+  for (const t of targets) {
+    const mine = titlesByTarget.get(t.id)
+    if (!mine || !mine.size) continue
+
+    let best = null
+    for (const [chId, o] of byChannel) {
+      if (!o.titles.size) continue
+      let inter = 0
+      for (const nt of mine) if (o.titles.has(nt)) inter++
+      if (inter < 2) continue
+      const rate = inter / mine.size
+      if (!best || inter > best.inter || (inter === best.inter && rate > best.rate)) {
+        best = { channelId: chId, name: o.name, inter, rate }
+      }
+    }
+    if (!best) {
+      detail.push({ id: t.id, name: t.name, status: 'none', mine: mine.size })
+      continue
+    }
+
+    const nameEq = targetNameMatches(t, best.name)
+    // ★★ 名字护栏（2026-10-28 实测必须加，理由见 kbro.mjs 的 nameRelated 注释）：
+    //   光靠标题交集会把「爱尔达娱乐」对到「INULTRA」——交集 54 条、覆盖率 100%，
+    //   数字上完美，但那 54 条全是 INULTRA 的科普纪录片。上游整台错挂时交集毫无意义。
+    //   加护栏后：588 → 496 条，少 92 条但零串台，这个取舍值得。
+    const related = nameRelated(t, best.name)
+    const strong = related && (nameEq || (best.inter >= 5 && best.rate >= 0.15))
+    if (!strong) {
+      detail.push({
+        id: t.id,
+        name: t.name,
+        status: nameEq || related ? 'weak' : 'name-mismatch',
+        mine: mine.size,
+        nameEq,
+        related,
+        ...best,
+      })
+      continue
+    }
+    const o = byChannel.get(best.channelId)
+    aligned.set(t.id, { ...best, descCount: o.descMap.size })
+    detail.push({ id: t.id, name: t.name, status: 'ok', mine: mine.size, nameEq, ...best, descCount: o.descMap.size })
+  }
+
+  log.info(
+    `[litv] 补简介：频道对齐 ${aligned.size} 个命中 / ${targets.length} 个目标` +
+      `（weak ${detail.filter((d) => d.status === 'weak').length}，` +
+      `名字不符 ${detail.filter((d) => d.status === 'name-mismatch').length}，` +
+      `none ${detail.filter((d) => d.status === 'none').length}）`
+  )
+
+  // ④ 填简介
+  let filled = 0
+  const stats = new Map()
+  for (const t of targets) {
+    const rows = epgMap.get(t.id)
+    if (!rows || !rows.length) continue
+    const a = aligned.get(t.id)
+    if (!a) continue
+    const slot = byChannel.get(a.channelId)
+    if (!slot) continue
+
+    let n = 0
+    for (const r of rows) {
+      if (!force && hasRealDesc(r.desc, r.title)) continue
+      const k = normKbroTitle(r.title)
+      if (!k) continue
+      const d = slot.descMap.get(k)
+      if (!d) continue
+      if (!hasRealDesc(d, r.title)) continue
+      r.desc = d
+      n++
+    }
+    if (n) {
+      filled += n
+      stats.set(t.id, { filled: n, litvChannel: a.channelId, litvName: a.name, inter: a.inter, rate: a.rate })
+    }
+  }
+
+  if (filled) log.ok(`[litv] 补简介：共补 ${filled} 条，涉及 ${stats.size} 个频道`)
+  else log.info('[litv] 补简介：没有可补的条目')
+
+  return { stats, detail }
+}
+
