@@ -278,7 +278,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 286
+    "programmeCount": 288
   },
   {
     "id": "CCTV4America.cn",
@@ -293,7 +293,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 285
+    "programmeCount": 287
   },
   {
     "id": "HunanTV.cn",
@@ -304,7 +304,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 271
+    "programmeCount": 270
   },
   {
     "id": "ZhejiangSatelliteTV.cn",
@@ -338,7 +338,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 305
+    "programmeCount": 304
   },
   {
     "id": "BeijingSatelliteTV.cn",
@@ -449,7 +449,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 262
+    "programmeCount": 261
   },
   {
     "id": "HebeiSatelliteTV.cn",
@@ -753,7 +753,7 @@
     ],
     "logo": "http://oss.cztv.com/ucc/20200123/ad3c07c7910e475a8631e4cff5a9431c.png",
     "hasEpg": true,
-    "programmeCount": 72
+    "programmeCount": 156
   },
   {
     "id": "HunanEconomyChannel.cn",
@@ -821,7 +821,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 56
+    "programmeCount": 173
   },
   {
     "id": "ZhejiangMinshengLeisure.cn",
@@ -832,7 +832,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 31
+    "programmeCount": 147
   },
   {
     "id": "ZhejiangFilmEntertainmentChannel.cn",
@@ -854,7 +854,7 @@
     ],
     "logo": "http://oss.cztv.com/ucc/20200123/312d8aea2f2a4f678b084d2bd8dbcb05.png",
     "hasEpg": true,
-    "programmeCount": 164
+    "programmeCount": 330
   },
   {
     "id": "JiangsuCityChannel.cn",
@@ -972,7 +972,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 242
+    "programmeCount": 257
   },
   {
     "id": "ViuTVsix.hk",
@@ -1057,7 +1057,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 121
+    "programmeCount": 268
   },
   {
     "id": "PhoenixChineseChannel.hk",
@@ -1228,7 +1228,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 70
+    "programmeCount": 117
   },
   {
     "id": "CTiTV.tw",
@@ -1324,7 +1324,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 110
+    "programmeCount": 125
   },
   {
     "id": "TTVNews.tw",
@@ -1510,7 +1510,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 358
+    "programmeCount": 364
   },
   {
     "id": "CGTNFrench.cn",
@@ -1806,7 +1806,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 356
+    "programmeCount": 377
   },
   {
     "id": "nowBusinessNewsChannel.hk",
@@ -1838,7 +1838,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 82
+    "programmeCount": 80
   },
   {
     "id": "ROCKAction.sg",
@@ -2199,7 +2199,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 97
+    "programmeCount": 114
   },
   {
     "id": "FTVVariety.tw",
@@ -2210,7 +2210,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 88
+    "programmeCount": 103
   },
   {
     "id": "FTVTravel.tw",
@@ -2221,7 +2221,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 222
+    "programmeCount": 248
   },
   {
     "id": "PTSTaigi.tw",
@@ -2243,7 +2243,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 99
+    "programmeCount": 113
   },
   {
     "id": "台视综合.tw",
@@ -2353,7 +2353,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 136
+    "programmeCount": 152
   },
   {
     "id": "八大精彩.tw",
@@ -2364,7 +2364,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 153
+    "programmeCount": 173
   },
   {
     "id": "龙华经典.tw",
@@ -2505,7 +2505,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 191
+    "programmeCount": 182
   },
   {
     "id": "靖洋戏剧.tw",
@@ -2609,7 +2609,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 89
+    "programmeCount": 85
   },
   {
     "id": "DAZN1.uk",
@@ -2695,7 +2695,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 69
+    "programmeCount": 70
   },
   {
     "id": "博斯网球.tw",
@@ -2818,7 +2818,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 114
+    "programmeCount": 257
   },
   {
     "id": "AsiaTravelTV.tw",
@@ -2862,7 +2862,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 109
+    "programmeCount": 123
   },
   {
     "id": "HBO强档巨献.tw",
@@ -3160,7 +3160,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 123
+    "programmeCount": 124
   },
   {
     "id": "MacauSports.hk",
