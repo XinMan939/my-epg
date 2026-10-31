@@ -1,0 +1,3213 @@
+[
+  {
+    "id": "CCTV1.cn",
+    "name": "CCTV-1 综合",
+    "group": "cctv",
+    "aliases": [
+      "CCTV-1",
+      "CCTV1",
+      "CCTV-1综合",
+      "CCTV1综合",
+      "CCTV-1（高清）"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 256
+  },
+  {
+    "id": "CCTV2.cn",
+    "name": "CCTV-2 财经",
+    "group": "cctv",
+    "aliases": [
+      "CCTV-2",
+      "CCTV2",
+      "CCTV-2财经"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 273
+  },
+  {
+    "id": "CCTV3.cn",
+    "name": "CCTV-3 综艺",
+    "group": "cctv",
+    "aliases": [
+      "CCTV-3",
+      "CCTV3",
+      "CCTV-3综艺"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 162
+  },
+  {
+    "id": "CCTV4Asia.cn",
+    "name": "CCTV-4 亚洲",
+    "group": "cctv",
+    "aliases": [
+      "CCTV-4",
+      "CCTV4",
+      "CCTV-4 (亚洲)",
+      "CCTV-4中文国际（亚）",
+      "CCTV-4中文国际",
+      "CCTV4A",
+      "CCTV-4A"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129145556253811_19",
+    "hasEpg": true,
+    "programmeCount": 278
+  },
+  {
+    "id": "CCTV5.cn",
+    "name": "CCTV-5 体育",
+    "group": "cctv",
+    "aliases": [
+      "CCTV-5",
+      "CCTV5",
+      "CCTV-5体育"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 173
+  },
+  {
+    "id": "CCTV5Plus.cn",
+    "name": "CCTV-5+ 体育赛事",
+    "group": "cctv",
+    "aliases": [
+      "CCTV-5+",
+      "CCTV5+",
+      "CCTV5加"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 118
+  },
+  {
+    "id": "CCTV6.cn",
+    "name": "CCTV-6 电影",
+    "group": "cctv",
+    "aliases": [
+      "CCTV-6",
+      "CCTV6",
+      "CCTV-6电影"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 130
+  },
+  {
+    "id": "CCTV7.cn",
+    "name": "CCTV-7 国防军事",
+    "group": "cctv",
+    "aliases": [
+      "CCTV-7",
+      "CCTV7",
+      "CCTV-7国防军事"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 236
+  },
+  {
+    "id": "CCTV8.cn",
+    "name": "CCTV-8 电视剧",
+    "group": "cctv",
+    "aliases": [
+      "CCTV-8",
+      "CCTV8",
+      "CCTV-8电视剧"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 273
+  },
+  {
+    "id": "CCTV9.cn",
+    "name": "CCTV-9 纪录",
+    "group": "cctv",
+    "aliases": [
+      "CCTV-9",
+      "CCTV9",
+      "CCTV-9纪录"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 194
+  },
+  {
+    "id": "CCTV10.cn",
+    "name": "CCTV-10 科教",
+    "group": "cctv",
+    "aliases": [
+      "CCTV-10",
+      "CCTV10",
+      "CCTV-10科教"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 251
+  },
+  {
+    "id": "CCTV11.cn",
+    "name": "CCTV-11 戏曲",
+    "group": "cctv",
+    "aliases": [
+      "CCTV-11",
+      "CCTV11",
+      "CCTV-11戏曲"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 121
+  },
+  {
+    "id": "CCTV12.cn",
+    "name": "CCTV-12 社会与法",
+    "group": "cctv",
+    "aliases": [
+      "CCTV-12",
+      "CCTV12",
+      "CCTV-12社会与法",
+      "CCTV-12法制"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 210
+  },
+  {
+    "id": "CCTV13.cn",
+    "name": "CCTV-13 新闻",
+    "group": "cctv",
+    "aliases": [
+      "CCTV-13",
+      "CCTV13",
+      "CCTV-13新闻"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 243
+  },
+  {
+    "id": "CCTV14.cn",
+    "name": "CCTV-14 少儿",
+    "group": "cctv",
+    "aliases": [
+      "CCTV-14",
+      "CCTV14",
+      "CCTV-14少儿"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 118
+  },
+  {
+    "id": "CCTV15.cn",
+    "name": "CCTV-15 音乐",
+    "group": "cctv",
+    "aliases": [
+      "CCTV-15",
+      "CCTV15",
+      "CCTV-15音乐"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 119
+  },
+  {
+    "id": "CCTV16.cn",
+    "name": "CCTV-16 奥林匹克",
+    "group": "cctv",
+    "aliases": [
+      "CCTV-16",
+      "CCTV16",
+      "CCTV-16奥林匹克"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 165
+  },
+  {
+    "id": "CCTV17.cn",
+    "name": "CCTV-17 农业农村",
+    "group": "cctv",
+    "aliases": [
+      "CCTV-17",
+      "CCTV17",
+      "CCTV-17农业农村",
+      "CCTV-17（农业农村）"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 228
+  },
+  {
+    "id": "CCTV4K.cn",
+    "name": "CCTV-4K 超高清",
+    "group": "cctv",
+    "aliases": [
+      "CCTV4K",
+      "CCTV-4K"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 448
+  },
+  {
+    "id": "CCTV8K.cn",
+    "name": "CCTV-8K 超高清",
+    "group": "cctv",
+    "aliases": [
+      "CCTV8K",
+      "CCTV-8K"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 1813
+  },
+  {
+    "id": "CCTV4Europe.cn",
+    "name": "CCTV-4 欧洲",
+    "group": "cctv",
+    "aliases": [
+      "CCTV-4 (欧洲)",
+      "CCTV-4中文国际（欧）",
+      "CCTV4EUO",
+      "CCTV4-EUO",
+      "CCTV4欧洲"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 289
+  },
+  {
+    "id": "CCTV4America.cn",
+    "name": "CCTV-4 美洲",
+    "group": "cctv",
+    "aliases": [
+      "CCTV-4 (美洲)",
+      "CCTV-4中文国际（美）",
+      "CCTV4AME",
+      "CCTV4-AME",
+      "CCTV4美洲"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 288
+  },
+  {
+    "id": "HunanTV.cn",
+    "name": "湖南卫视",
+    "group": "satellite",
+    "aliases": [
+      "湖南卫视（高清）"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 259
+  },
+  {
+    "id": "ZhejiangSatelliteTV.cn",
+    "name": "浙江卫视",
+    "group": "satellite",
+    "aliases": [
+      "浙江卫视（高清）"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 217
+  },
+  {
+    "id": "JiangsuSatelliteTV.cn",
+    "name": "江苏卫视",
+    "group": "satellite",
+    "aliases": [
+      "江苏卫视（高清）"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 212
+  },
+  {
+    "id": "DragonTV.cn",
+    "name": "东方卫视",
+    "group": "satellite",
+    "aliases": [
+      "东方卫视（高清）",
+      "上海东方卫视"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 305
+  },
+  {
+    "id": "BeijingSatelliteTV.cn",
+    "name": "北京卫视",
+    "group": "satellite",
+    "aliases": [
+      "BTV北京卫视",
+      "北京卫视（高清）"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 226
+  },
+  {
+    "id": "AnhuiSatelliteTV.cn",
+    "name": "安徽卫视",
+    "group": "satellite",
+    "aliases": [
+      "安徽卫视（高清）"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 230
+  },
+  {
+    "id": "ShandongSatelliteTV.cn",
+    "name": "山东卫视",
+    "group": "satellite",
+    "aliases": [
+      "山东卫视（高清）"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 239
+  },
+  {
+    "id": "GuangdongSatelliteTV.cn",
+    "name": "广东卫视",
+    "group": "satellite",
+    "aliases": [
+      "广东卫视（高清）"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 200
+  },
+  {
+    "id": "ShenzhenSatelliteTV.cn",
+    "name": "深圳卫视",
+    "group": "satellite",
+    "aliases": [
+      "深圳卫视（高清）"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 195
+  },
+  {
+    "id": "TianjinSatelliteTV.cn",
+    "name": "天津卫视",
+    "group": "satellite",
+    "aliases": [
+      "天津卫视（高清）"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 222
+  },
+  {
+    "id": "ChongqingSatelliteTV.cn",
+    "name": "重庆卫视",
+    "group": "satellite",
+    "aliases": [
+      "重庆卫视（高清）"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 225
+  },
+  {
+    "id": "SichuanSatelliteTV.cn",
+    "name": "四川卫视",
+    "group": "satellite",
+    "aliases": [
+      "四川卫视（高清）"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 230
+  },
+  {
+    "id": "HubeiSatelliteTV.cn",
+    "name": "湖北卫视",
+    "group": "satellite",
+    "aliases": [
+      "湖北卫视（高清）"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 336
+  },
+  {
+    "id": "HenanTVSatellite.cn",
+    "name": "河南卫视",
+    "group": "satellite",
+    "aliases": [
+      "河南卫视（高清）"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 255
+  },
+  {
+    "id": "HebeiSatelliteTV.cn",
+    "name": "河北卫视",
+    "group": "satellite",
+    "aliases": [
+      "河北卫视（高清）"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 157
+  },
+  {
+    "id": "ShanxiSatelliteTV.cn",
+    "name": "山西卫视",
+    "group": "satellite",
+    "aliases": [
+      "山西卫视（高清）"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 198
+  },
+  {
+    "id": "ShaanxiSatelliteTV.cn",
+    "name": "陕西卫视",
+    "group": "satellite",
+    "aliases": [
+      "陕西卫视（高清）"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 162
+  },
+  {
+    "id": "LiaoningSatelliteTV.cn",
+    "name": "辽宁卫视",
+    "group": "satellite",
+    "aliases": [
+      "辽宁卫视（高清）"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 223
+  },
+  {
+    "id": "JilinSatelliteTV.cn",
+    "name": "吉林卫视",
+    "group": "satellite",
+    "aliases": [
+      "吉林卫视（高清）"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 267
+  },
+  {
+    "id": "HeilongjiangSatelliteTV.cn",
+    "name": "黑龙江卫视",
+    "group": "satellite",
+    "aliases": [
+      "黑龙江卫视（高清）"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 227
+  },
+  {
+    "id": "JiangxiSatelliteTV.cn",
+    "name": "江西卫视",
+    "group": "satellite",
+    "aliases": [
+      "江西卫视（高清）"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 251
+  },
+  {
+    "id": "FujianSatelliteTV.cn",
+    "name": "东南卫视",
+    "group": "satellite",
+    "aliases": [
+      "东南卫视（高清）",
+      "福建东南卫视"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 219
+  },
+  {
+    "id": "GuangxiSatelliteTV.cn",
+    "name": "广西卫视",
+    "group": "satellite",
+    "aliases": [
+      "广西卫视（高清）"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 225
+  },
+  {
+    "id": "YunnanSatelliteTV.cn",
+    "name": "云南卫视",
+    "group": "satellite",
+    "aliases": [
+      "云南卫视（高清）"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 216
+  },
+  {
+    "id": "GuizhouSatelliteTV.cn",
+    "name": "贵州卫视",
+    "group": "satellite",
+    "aliases": [
+      "贵州卫视（高清）"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 197
+  },
+  {
+    "id": "GansuSatelliteTV.cn",
+    "name": "甘肃卫视",
+    "group": "satellite",
+    "aliases": [
+      "甘肃卫视（高清）"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 246
+  },
+  {
+    "id": "QinghaiSatelliteTV.cn",
+    "name": "青海卫视",
+    "group": "satellite",
+    "aliases": [
+      "青海卫视（高清）"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 217
+  },
+  {
+    "id": "NingxiaSatelliteChannel.cn",
+    "name": "宁夏卫视",
+    "group": "satellite",
+    "aliases": [
+      "宁夏卫视（高清）"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 258
+  },
+  {
+    "id": "XinjiangSatelliteTV.cn",
+    "name": "新疆卫视",
+    "group": "satellite",
+    "aliases": [
+      "新疆卫视（高清）"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 169
+  },
+  {
+    "id": "TibetSatelliteTV.cn",
+    "name": "西藏卫视",
+    "group": "satellite",
+    "aliases": [
+      "西藏卫视（高清）"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 367
+  },
+  {
+    "id": "NeiMongolSatelliteTV.cn",
+    "name": "内蒙古卫视",
+    "group": "satellite",
+    "aliases": [
+      "内蒙古卫视（高清）"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 214
+  },
+  {
+    "id": "HainanSatelliteTV.cn",
+    "name": "海南卫视",
+    "group": "satellite",
+    "aliases": [
+      "海南卫视（高清）",
+      "旅游卫视"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 271
+  },
+  {
+    "id": "XiamenSatelliteTV.cn",
+    "name": "厦门卫视",
+    "group": "satellite",
+    "aliases": [
+      "厦门卫视（高清）"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 189
+  },
+  {
+    "id": "YanbianSatelliteTV.cn",
+    "name": "延边卫视",
+    "group": "satellite",
+    "aliases": [
+      "延边卫视（高清）"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 194
+  },
+  {
+    "id": "BingtuanSatelliteTV.cn",
+    "name": "兵团卫视",
+    "group": "satellite",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 204
+  },
+  {
+    "id": "KangbaSatelliteTV.cn",
+    "name": "康巴卫视",
+    "group": "satellite",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 307
+  },
+  {
+    "id": "HuangheSatelliteTV.cn",
+    "name": "黄河卫视",
+    "group": "satellite",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 140
+  },
+  {
+    "id": "HaixiaSatelliteTV.cn",
+    "name": "海峡卫视",
+    "group": "satellite",
+    "aliases": [
+      "海峡卫视（高清）"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 265
+  },
+  {
+    "id": "GBASatelliteTV.cn",
+    "name": "大湾区卫视",
+    "group": "satellite",
+    "aliases": [
+      "广东南方卫视",
+      "南方卫视"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 134
+  },
+  {
+    "id": "SanshaSatelliteTV.cn",
+    "name": "三沙卫视",
+    "group": "satellite",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 275
+  },
+  {
+    "id": "HunanTVInternational.cn",
+    "name": "湖南国际",
+    "group": "satellite",
+    "aliases": [
+      "湖南卫视国际",
+      "湖南国际频道"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 18
+  },
+  {
+    "id": "ZhejiangInternationalChannel.cn",
+    "name": "浙江国际",
+    "group": "satellite",
+    "aliases": [
+      "浙江国际频道"
+    ],
+    "logo": "http://oss.cztv.com/ucc/20200123/ad3c07c7910e475a8631e4cff5a9431c.png",
+    "hasEpg": true,
+    "programmeCount": 84
+  },
+  {
+    "id": "HunanEconomyChannel.cn",
+    "name": "湖南经视",
+    "group": "local",
+    "aliases": [
+      "湖南经济电视台",
+      "湖南经视综合"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 18
+  },
+  {
+    "id": "HunanEntertainmentChannel.cn",
+    "name": "湖南娱乐",
+    "group": "local",
+    "aliases": [
+      "湖南娱乐频道"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 11
+  },
+  {
+    "id": "HunanDramaChannel.cn",
+    "name": "湖南电视剧",
+    "group": "local",
+    "aliases": [
+      "湖南电视剧频道"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 14
+  },
+  {
+    "id": "HunanCityChannel.cn",
+    "name": "湖南都市",
+    "group": "local",
+    "aliases": [
+      "湖南都市频道"
+    ],
+    "logo": "",
+    "hasEpg": false,
+    "programmeCount": 0
+  },
+  {
+    "id": "HunanPublicChannel.cn",
+    "name": "湖南公共",
+    "group": "local",
+    "aliases": [
+      "湖南公共频道"
+    ],
+    "logo": "",
+    "hasEpg": false,
+    "programmeCount": 0
+  },
+  {
+    "id": "ZhejiangEconomicChannel.cn",
+    "name": "浙江经视",
+    "group": "local",
+    "aliases": [
+      "浙江经济生活",
+      "浙江经济频道"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 24
+  },
+  {
+    "id": "ZhejiangMinshengLeisure.cn",
+    "name": "浙江民生休闲",
+    "group": "local",
+    "aliases": [
+      "浙江民生"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 24
+  },
+  {
+    "id": "ZhejiangFilmEntertainmentChannel.cn",
+    "name": "浙江影视",
+    "group": "local",
+    "aliases": [
+      "浙江影视娱乐"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 24
+  },
+  {
+    "id": "ZhejiangChildrensChannel.cn",
+    "name": "浙江少儿",
+    "group": "local",
+    "aliases": [
+      "浙江少儿频道"
+    ],
+    "logo": "http://oss.cztv.com/ucc/20200123/312d8aea2f2a4f678b084d2bd8dbcb05.png",
+    "hasEpg": true,
+    "programmeCount": 166
+  },
+  {
+    "id": "JiangsuCityChannel.cn",
+    "name": "江苏城市",
+    "group": "local",
+    "aliases": [
+      "江苏城市频道"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 25
+  },
+  {
+    "id": "JiangsuVarietyChannel.cn",
+    "name": "江苏综艺",
+    "group": "local",
+    "aliases": [
+      "江苏综艺频道"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 23
+  },
+  {
+    "id": "JiangsuMovieChannel.cn",
+    "name": "江苏影视",
+    "group": "local",
+    "aliases": [
+      "江苏影视剧频道"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 27
+  },
+  {
+    "id": "JiangsuPublicNewsChannel.cn",
+    "name": "江苏公共新闻",
+    "group": "local",
+    "aliases": [
+      "江苏公共·新闻"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 42
+  },
+  {
+    "id": "Jade.hk",
+    "name": "翡翠台",
+    "group": "hk",
+    "aliases": [
+      "TVB翡翠台",
+      "無綫翡翠台",
+      "无线翡翠台"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 318
+  },
+  {
+    "id": "Pearl.hk",
+    "name": "明珠台",
+    "group": "hk",
+    "aliases": [
+      "TVB明珠台",
+      "無綫明珠台",
+      "无线明珠台"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 234
+  },
+  {
+    "id": "TVBNewsChannel.hk",
+    "name": "無綫新聞台",
+    "group": "hk",
+    "aliases": [
+      "TVB新闻台",
+      "无线新闻台"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 377
+  },
+  {
+    "id": "GoldenJade.hk",
+    "name": "黃金翡翠台",
+    "group": "hk",
+    "aliases": [
+      "黄金翡翠台",
+      "TVB黃金翡翠台"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 204
+  },
+  {
+    "id": "TVBPlus.hk",
+    "name": "TVB Plus",
+    "group": "hk",
+    "aliases": [
+      "TVB+",
+      "无线Plus"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 232
+  },
+  {
+    "id": "ViuTV.hk",
+    "name": "ViuTV",
+    "group": "hk",
+    "aliases": [
+      "ViuTV 99",
+      "ViuTV99"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 257
+  },
+  {
+    "id": "ViuTVsix.hk",
+    "name": "ViuTVsix",
+    "group": "hk",
+    "aliases": [
+      "ViuTV 96",
+      "ViuTVsix 96"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 193
+  },
+  {
+    "id": "RTHKTV31.hk",
+    "name": "港台电视31",
+    "group": "hk",
+    "aliases": [
+      "RTHK 31",
+      "港台31"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 314
+  },
+  {
+    "id": "RTHKTV32.hk",
+    "name": "港台电视32",
+    "group": "hk",
+    "aliases": [
+      "RTHK 32",
+      "港台32"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 382
+  },
+  {
+    "id": "RTHKTV33.hk",
+    "name": "港台电视33",
+    "group": "hk",
+    "aliases": [
+      "RTHK 33",
+      "港台33"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 235
+  },
+  {
+    "id": "RTHKTV34.hk",
+    "name": "港台电视34",
+    "group": "hk",
+    "aliases": [
+      "RTHK 34",
+      "港台34"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 480
+  },
+  {
+    "id": "RTHKTV35.hk",
+    "name": "港台电视35",
+    "group": "hk",
+    "aliases": [
+      "RTHK 35",
+      "港台35"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 313
+  },
+  {
+    "id": "HOYTV.hk",
+    "name": "HOY TV",
+    "group": "hk",
+    "aliases": [
+      "HOY 77",
+      "香港开电视",
+      "奇妙电视"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 269
+  },
+  {
+    "id": "PhoenixChineseChannel.hk",
+    "name": "鳳凰衛視中文台",
+    "group": "hk",
+    "aliases": [
+      "凤凰卫视",
+      "凤凰卫视中文台",
+      "凤凰中文"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129153829170771_55",
+    "hasEpg": true,
+    "programmeCount": 343
+  },
+  {
+    "id": "PhoenixInfoNewsChannel.hk",
+    "name": "鳳凰衛視資訊台",
+    "group": "hk",
+    "aliases": [
+      "凤凰卫视资讯台",
+      "凤凰资讯"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129074347363304_81",
+    "hasEpg": true,
+    "programmeCount": 445
+  },
+  {
+    "id": "PhoenixHongKongChannel.hk",
+    "name": "鳳凰衛視香港台",
+    "group": "hk",
+    "aliases": [
+      "凤凰卫视香港台"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 339
+  },
+  {
+    "id": "MacauTV.hk",
+    "name": "澳门电视台",
+    "group": "mo",
+    "aliases": [
+      "澳视澳门",
+      "澳门澳视"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 303
+  },
+  {
+    "id": "MacauLotus.hk",
+    "name": "澳门莲花电视台",
+    "group": "mo",
+    "aliases": [
+      "莲花卫视",
+      "澳门莲花"
+    ],
+    "logo": "",
+    "hasEpg": false,
+    "programmeCount": 0
+  },
+  {
+    "id": "AsiaSatelliteTV.hk",
+    "name": "澳亚卫视",
+    "group": "mo",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": false,
+    "programmeCount": 0
+  },
+  {
+    "id": "TTV.tw",
+    "name": "台視",
+    "group": "tw",
+    "aliases": [
+      "台视",
+      "TTV",
+      "台湾电视台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917031034704095_77.jpg",
+    "hasEpg": true,
+    "programmeCount": 193
+  },
+  {
+    "id": "CTV.tw",
+    "name": "中視",
+    "group": "tw",
+    "aliases": [
+      "中视",
+      "CTV",
+      "中国电视"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917031118563901_35.png",
+    "hasEpg": true,
+    "programmeCount": 172
+  },
+  {
+    "id": "CTS.tw",
+    "name": "華視",
+    "group": "tw",
+    "aliases": [
+      "华视",
+      "CTS",
+      "中华电视"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917031155788805_32.png",
+    "hasEpg": true,
+    "programmeCount": 161
+  },
+  {
+    "id": "FTV.tw",
+    "name": "民視無線台",
+    "group": "tw",
+    "aliases": [
+      "民视",
+      "FTV",
+      "民视无线台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917030955973578_68.png",
+    "hasEpg": true,
+    "programmeCount": 224
+  },
+  {
+    "id": "PTS.tw",
+    "name": "公視",
+    "group": "tw",
+    "aliases": [
+      "公视",
+      "PTS",
+      "台湾公视"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919165120743160_73.png",
+    "hasEpg": true,
+    "programmeCount": 168
+  },
+  {
+    "id": "TVBS.tw",
+    "name": "TVBS",
+    "group": "tw",
+    "aliases": [
+      "TVBS 56",
+      "TVBS欢乐台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917032546980305_30.jpg",
+    "hasEpg": true,
+    "programmeCount": 134
+  },
+  {
+    "id": "TVBSNews.tw",
+    "name": "TVBS新聞",
+    "group": "tw",
+    "aliases": [
+      "TVBS新闻",
+      "TVBS新闻台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917032519951049_21.jpg",
+    "hasEpg": true,
+    "programmeCount": 126
+  },
+  {
+    "id": "CTiNews.tw",
+    "name": "中天新聞",
+    "group": "tw",
+    "aliases": [
+      "中天新闻",
+      "中天电视台",
+      "中天新闻台"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 117
+  },
+  {
+    "id": "CTiTV.tw",
+    "name": "中天綜合",
+    "group": "tw",
+    "aliases": [
+      "中天综合",
+      "中天综合台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917031949990817_28.png",
+    "hasEpg": true,
+    "programmeCount": 136
+  },
+  {
+    "id": "SETNews.tw",
+    "name": "三立新聞",
+    "group": "tw",
+    "aliases": [
+      "三立新闻",
+      "三立电视台",
+      "三立新闻台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917032453282910_33.png",
+    "hasEpg": true,
+    "programmeCount": 161
+  },
+  {
+    "id": "SETTaiwan.tw",
+    "name": "三立台灣台",
+    "group": "tw",
+    "aliases": [
+      "三立台湾台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917031748057162_92.png",
+    "hasEpg": true,
+    "programmeCount": 151
+  },
+  {
+    "id": "EBCNews.tw",
+    "name": "東森新聞",
+    "group": "tw",
+    "aliases": [
+      "东森新闻",
+      "东森电视台",
+      "东森新闻台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917032418916390_69.jpg",
+    "hasEpg": true,
+    "programmeCount": 155
+  },
+  {
+    "id": "EBCVariety.tw",
+    "name": "東森綜合",
+    "group": "tw",
+    "aliases": [
+      "东森综合",
+      "东森综合台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917031840234354_38.jpg",
+    "hasEpg": true,
+    "programmeCount": 151
+  },
+  {
+    "id": "FTVNews.tw",
+    "name": "民視新聞",
+    "group": "tw",
+    "aliases": [
+      "民视新闻",
+      "民视新闻台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917032436253078_82.jpg",
+    "hasEpg": true,
+    "programmeCount": 164
+  },
+  {
+    "id": "CTVNewsChannel.tw",
+    "name": "中視新聞",
+    "group": "tw",
+    "aliases": [
+      "中视新闻",
+      "中视新闻台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917035002618464_42.jpg",
+    "hasEpg": true,
+    "programmeCount": 168
+  },
+  {
+    "id": "CTSNews.tw",
+    "name": "華視新聞",
+    "group": "tw",
+    "aliases": [
+      "华视新闻"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 126
+  },
+  {
+    "id": "TTVNews.tw",
+    "name": "台視新聞",
+    "group": "tw",
+    "aliases": [
+      "台视新闻"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917035019942493_61.jpg",
+    "hasEpg": true,
+    "programmeCount": 178
+  },
+  {
+    "id": "EBCYOYO.tw",
+    "name": "東森幼幼台",
+    "group": "tw",
+    "aliases": [
+      "东森幼幼",
+      "YOYO TV"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917031636959877_14.jpg",
+    "hasEpg": true,
+    "programmeCount": 471
+  },
+  {
+    "id": "CCTVWeaponTechnology.cn",
+    "name": "CCTV兵器科技",
+    "group": "cctv",
+    "aliases": [
+      "兵器科技"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 285
+  },
+  {
+    "id": "CCTVTheFirstTheater.cn",
+    "name": "CCTV第一剧场",
+    "group": "cctv",
+    "aliases": [
+      "第一剧场"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 150
+  },
+  {
+    "id": "CNDFilmDiscoveryChannel.cn",
+    "name": "CCTV发现之旅",
+    "group": "cctv",
+    "aliases": [
+      "发现之旅"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 351
+  },
+  {
+    "id": "CCTVStormTheater.cn",
+    "name": "CCTV风云剧场",
+    "group": "cctv",
+    "aliases": [
+      "风云剧场"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 147
+  },
+  {
+    "id": "CCTVStormMusic.cn",
+    "name": "CCTV风云音乐",
+    "group": "cctv",
+    "aliases": [
+      "风云音乐"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 183
+  },
+  {
+    "id": "CCTVStormFootball.cn",
+    "name": "CCTV风云足球",
+    "group": "cctv",
+    "aliases": [
+      "风云足球"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 252
+  },
+  {
+    "id": "CCTVBilliards.cn",
+    "name": "CCTV央视台球",
+    "group": "cctv",
+    "aliases": [
+      "央视台球"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 168
+  },
+  {
+    "id": "CCTVGolfTennis.cn",
+    "name": "CCTV高尔夫网球",
+    "group": "cctv",
+    "aliases": [
+      "高尔夫网球"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 112
+  },
+  {
+    "id": "CCTVNostalgiaTheater.cn",
+    "name": "CCTV怀旧剧场",
+    "group": "cctv",
+    "aliases": [
+      "怀旧剧场"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 132
+  },
+  {
+    "id": "CNDFilmOldStoryChannel.cn",
+    "name": "CCTV老故事",
+    "group": "cctv",
+    "aliases": [
+      "老故事"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 353
+  },
+  {
+    "id": "CCTVWomensFashion.cn",
+    "name": "CCTV女性时尚",
+    "group": "cctv",
+    "aliases": [
+      "女性时尚"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 161
+  },
+  {
+    "id": "CCTVWorldGeography.cn",
+    "name": "CCTV世界地理",
+    "group": "cctv",
+    "aliases": [
+      "世界地理"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 290
+  },
+  {
+    "id": "CCTVHealth.cn",
+    "name": "CCTV卫生健康",
+    "group": "cctv",
+    "aliases": [
+      "卫生健康"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 314
+  },
+  {
+    "id": "CCTVTVGuide.cn",
+    "name": "CCTV电视指南",
+    "group": "cctv",
+    "aliases": [
+      "电视指南"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 907
+  },
+  {
+    "id": "CGTN.cn",
+    "name": "CGTN",
+    "group": "cctv",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 377
+  },
+  {
+    "id": "CGTNFrench.cn",
+    "name": "CGTN法语",
+    "group": "cctv",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 230
+  },
+  {
+    "id": "CGTNDocumentary.cn",
+    "name": "CGTN纪录",
+    "group": "cctv",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 252
+  },
+  {
+    "id": "CETV1.cn",
+    "name": "CETV1",
+    "group": "cctv",
+    "aliases": [
+      "CETV-1"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 241
+  },
+  {
+    "id": "CETV2.cn",
+    "name": "CETV2",
+    "group": "cctv",
+    "aliases": [
+      "CETV-2"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 165
+  },
+  {
+    "id": "CETV4.cn",
+    "name": "CETV4",
+    "group": "cctv",
+    "aliases": [
+      "CETV-4"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 223
+  },
+  {
+    "id": "BRTVKakuChildrensChannel.cn",
+    "name": "卡酷少儿",
+    "group": "pay",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 479
+  },
+  {
+    "id": "GoldenEagleCartoon.cn",
+    "name": "金鹰卡通",
+    "group": "pay",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 200
+  },
+  {
+    "id": "哈哈炫动.cn",
+    "name": "哈哈炫动",
+    "group": "pay",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 140
+  },
+  {
+    "id": "JiaJiaCartoon.cn",
+    "name": "嘉佳卡通",
+    "group": "pay",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 1050
+  },
+  {
+    "id": "LiyuanTV.cn",
+    "name": "梨园频道",
+    "group": "pay",
+    "aliases": [
+      "梨园"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 84
+  },
+  {
+    "id": "求索纪录.cn",
+    "name": "求索纪录",
+    "group": "pay",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 220
+  },
+  {
+    "id": "求索动物.cn",
+    "name": "求索动物",
+    "group": "pay",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 196
+  },
+  {
+    "id": "求索科学.cn",
+    "name": "求索科学",
+    "group": "pay",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 196
+  },
+  {
+    "id": "求索生活.cn",
+    "name": "求索生活",
+    "group": "pay",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 12
+  },
+  {
+    "id": "GreatSportsChannel.cn",
+    "name": "五星体育",
+    "group": "pay",
+    "aliases": [
+      "五星体育频道"
+    ],
+    "logo": "https://www.tvsou.com/media/f/3758760354d6/zm48-24",
+    "hasEpg": true,
+    "programmeCount": 66
+  },
+  {
+    "id": "魅力足球.cn",
+    "name": "魅力足球",
+    "group": "pay",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 88
+  },
+  {
+    "id": "GameChannel.cn",
+    "name": "游戏风云",
+    "group": "pay",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 294
+  },
+  {
+    "id": "劲爆体育.cn",
+    "name": "劲爆体育",
+    "group": "pay",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 133
+  },
+  {
+    "id": "乐游.cn",
+    "name": "乐游",
+    "group": "pay",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 465
+  },
+  {
+    "id": "AnimationShowChannel.cn",
+    "name": "动漫秀场",
+    "group": "pay",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 700
+  },
+  {
+    "id": "CityTheaterChannel.cn",
+    "name": "都市剧场",
+    "group": "pay",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 332
+  },
+  {
+    "id": "ChannelLaw.cn",
+    "name": "法治天地",
+    "group": "pay",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 343
+  },
+  {
+    "id": "LaughterTheater.cn",
+    "name": "欢笑剧场",
+    "group": "pay",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 37
+  },
+  {
+    "id": "金色学堂.cn",
+    "name": "金色学堂",
+    "group": "pay",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 763
+  },
+  {
+    "id": "LifestyleChannel.cn",
+    "name": "生活时尚",
+    "group": "pay",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 397
+  },
+  {
+    "id": "CHCAction.cn",
+    "name": "CHC动作电影",
+    "group": "pay",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 188
+  },
+  {
+    "id": "CHCHomeTheater.cn",
+    "name": "CHC家庭影院",
+    "group": "pay",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 165
+  },
+  {
+    "id": "CHCFansMovieChannel.cn",
+    "name": "CHC影迷电影",
+    "group": "pay",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 109
+  },
+  {
+    "id": "EntertainmentNews.hk",
+    "name": "TVB娱乐新闻",
+    "group": "hk",
+    "aliases": [
+      "娛樂新聞台"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 336
+  },
+  {
+    "id": "TVB千禧经典.hk",
+    "name": "TVB千禧经典",
+    "group": "hk",
+    "aliases": [
+      "千禧經典台"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 226
+  },
+  {
+    "id": "nowNews.hk",
+    "name": "NOW新闻",
+    "group": "hk",
+    "aliases": [
+      "Now新聞台",
+      "Now新聞"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 377
+  },
+  {
+    "id": "nowBusinessNewsChannel.hk",
+    "name": "Now财经",
+    "group": "hk",
+    "aliases": [
+      "Now財經台",
+      "Now財經"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129070159584201_42",
+    "hasEpg": true,
+    "programmeCount": 332
+  },
+  {
+    "id": "PopC.hk",
+    "name": "PopC",
+    "group": "hk",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 119
+  },
+  {
+    "id": "nowDirect.hk",
+    "name": "Now直播台",
+    "group": "hk",
+    "aliases": [
+      "now直播"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 86
+  },
+  {
+    "id": "ROCKAction.sg",
+    "name": "ROCKAction",
+    "group": "hk",
+    "aliases": [
+      "ROCK Action"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 99
+  },
+  {
+    "id": "Thrill.hk",
+    "name": "Thrill",
+    "group": "hk",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 114
+  },
+  {
+    "id": "ChineseOperaChannel.hk",
+    "name": "戏曲台",
+    "group": "hk",
+    "aliases": [
+      "戲曲台"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 652
+  },
+  {
+    "id": "黄金华剧台.hk",
+    "name": "黄金华剧台",
+    "group": "hk",
+    "aliases": [
+      "黃金華劇台"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 196
+  },
+  {
+    "id": "MeiAhMovieChannel.hk",
+    "name": "美亚电影",
+    "group": "hk",
+    "aliases": [
+      "美亞電影台"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 104
+  },
+  {
+    "id": "ZooMoo.sg",
+    "name": "ZooMoo",
+    "group": "hk",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 1165
+  },
+  {
+    "id": "TVBSEntertainmentChannel.tw",
+    "name": "TVBS欢乐",
+    "group": "tw",
+    "aliases": [
+      "TVBS歡樂台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917032145508911_51.jpg",
+    "hasEpg": true,
+    "programmeCount": 162
+  },
+  {
+    "id": "TVBS精采.tw",
+    "name": "TVBS精采",
+    "group": "tw",
+    "aliases": [
+      "TVBS精采台HD"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171302040909_29.png",
+    "hasEpg": true,
+    "programmeCount": 142
+  },
+  {
+    "id": "ETTVFinancial.tw",
+    "name": "东森财经新闻",
+    "group": "tw",
+    "aliases": [
+      "東森財經新聞台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917032603853302_35.jpg",
+    "hasEpg": true,
+    "programmeCount": 165
+  },
+  {
+    "id": "EBCSuper.tw",
+    "name": "东森超视",
+    "group": "tw",
+    "aliases": [
+      "東森超視"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917031857898940_26.jpg",
+    "hasEpg": true,
+    "programmeCount": 156
+  },
+  {
+    "id": "EBCMovie.tw",
+    "name": "东森电影",
+    "group": "tw",
+    "aliases": [
+      "東森電影台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917032728478839_83.jpg",
+    "hasEpg": true,
+    "programmeCount": 104
+  },
+  {
+    "id": "ETTVDrama.tw",
+    "name": "东森戏剧",
+    "group": "tw",
+    "aliases": [
+      "東森戲劇台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917032110560998_87.jpg",
+    "hasEpg": true,
+    "programmeCount": 163
+  },
+  {
+    "id": "EBCForeignMovie.tw",
+    "name": "东森洋片",
+    "group": "tw",
+    "aliases": [
+      "東森洋片台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917032827405129_96.jpg",
+    "hasEpg": true,
+    "programmeCount": 68
+  },
+  {
+    "id": "EraNews.tw",
+    "name": "年代新闻",
+    "group": "tw",
+    "aliases": [
+      "年代新聞台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917032401871162_38.png",
+    "hasEpg": true,
+    "programmeCount": 134
+  },
+  {
+    "id": "UniqueBusinessNews.tw",
+    "name": "非凡新闻",
+    "group": "tw",
+    "aliases": [
+      "非凡新聞台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917032621409180_62.jpg",
+    "hasEpg": true,
+    "programmeCount": 177
+  },
+  {
+    "id": "非凡商业.tw",
+    "name": "非凡商业",
+    "group": "tw",
+    "aliases": [
+      "非凡商業台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917033430816131_51.jpg",
+    "hasEpg": true,
+    "programmeCount": 208
+  },
+  {
+    "id": "寰宇新闻台湾.tw",
+    "name": "寰宇新闻台湾",
+    "group": "tw",
+    "aliases": [
+      "寰宇新聞台灣台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917051956198153_86.jpg",
+    "hasEpg": true,
+    "programmeCount": 168
+  },
+  {
+    "id": "寰宇财经.tw",
+    "name": "寰宇财经",
+    "group": "tw",
+    "aliases": [
+      "寰宇財經HD"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919172446201175_37.png",
+    "hasEpg": true,
+    "programmeCount": 168
+  },
+  {
+    "id": "GlobalNews.tw",
+    "name": "寰宇新闻",
+    "group": "tw",
+    "aliases": [
+      "寰宇新聞HD"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 169
+  },
+  {
+    "id": "mnews.tw",
+    "name": "镜新闻",
+    "group": "tw",
+    "aliases": [
+      "鏡電視新聞台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917033335614535_52.jpg",
+    "hasEpg": true,
+    "programmeCount": 160
+  },
+  {
+    "id": "国会频道①.tw",
+    "name": "国会频道①",
+    "group": "tw",
+    "aliases": [
+      "國會頻道1台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917034424606790_14.jpg",
+    "hasEpg": true,
+    "programmeCount": 84
+  },
+  {
+    "id": "国会频道②.tw",
+    "name": "国会频道②",
+    "group": "tw",
+    "aliases": [
+      "國會頻道2台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917034438903554_17.jpg",
+    "hasEpg": true,
+    "programmeCount": 84
+  },
+  {
+    "id": "SETiNews.tw",
+    "name": "三立财经新闻",
+    "group": "tw",
+    "aliases": [
+      "三立財經新聞台",
+      "三立iNEWS",
+      "三立新聞iNEWS"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917033452979285_81.jpg",
+    "hasEpg": true,
+    "programmeCount": 166
+  },
+  {
+    "id": "三立综合.tw",
+    "name": "三立综合",
+    "group": "tw",
+    "aliases": [
+      "三立綜合台HD"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171046612691_63.png",
+    "hasEpg": true,
+    "programmeCount": 151
+  },
+  {
+    "id": "三立戏剧.tw",
+    "name": "三立戏剧",
+    "group": "tw",
+    "aliases": [
+      "三立戲劇台HD"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171628507319_68.png",
+    "hasEpg": true,
+    "programmeCount": 128
+  },
+  {
+    "id": "SETMetro.tw",
+    "name": "三立都会",
+    "group": "tw",
+    "aliases": [
+      "三立都會台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917031805765900_73.png",
+    "hasEpg": true,
+    "programmeCount": 160
+  },
+  {
+    "id": "CTVClassic.tw",
+    "name": "中视经典",
+    "group": "tw",
+    "aliases": [
+      "中視經典台HD"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171222336167_77.png",
+    "hasEpg": true,
+    "programmeCount": 185
+  },
+  {
+    "id": "中视菁采.tw",
+    "name": "中视菁采",
+    "group": "tw",
+    "aliases": [
+      "中視菁采台HD"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171248960811_15.png",
+    "hasEpg": true,
+    "programmeCount": 138
+  },
+  {
+    "id": "CTiEntertainment.tw",
+    "name": "中天娱乐",
+    "group": "tw",
+    "aliases": [
+      "中天娛樂台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917032053206627_49.png",
+    "hasEpg": true,
+    "programmeCount": 157
+  },
+  {
+    "id": "CTiAsia.tw",
+    "name": "中天亚洲",
+    "group": "tw",
+    "aliases": [
+      "中天亞洲台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129141524674377_87",
+    "hasEpg": true,
+    "programmeCount": 174
+  },
+  {
+    "id": "FTVOne.tw",
+    "name": "民视第一台",
+    "group": "tw",
+    "aliases": [
+      "民視第一台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917034917461812_13.jpg",
+    "hasEpg": true,
+    "programmeCount": 224
+  },
+  {
+    "id": "FTVTaiwan.tw",
+    "name": "民视台湾",
+    "group": "tw",
+    "aliases": [
+      "民視台灣台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917034945522495_98.jpg",
+    "hasEpg": true,
+    "programmeCount": 183
+  },
+  {
+    "id": "FTVDrama.tw",
+    "name": "民视影剧",
+    "group": "tw",
+    "aliases": [
+      "民視影劇台"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 114
+  },
+  {
+    "id": "FTVVariety.tw",
+    "name": "民视综艺",
+    "group": "tw",
+    "aliases": [
+      "民視綜藝台"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 102
+  },
+  {
+    "id": "FTVTravel.tw",
+    "name": "民视旅游",
+    "group": "tw",
+    "aliases": [
+      "民視旅遊台"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 247
+  },
+  {
+    "id": "PTSTaigi.tw",
+    "name": "公视台语",
+    "group": "tw",
+    "aliases": [
+      "公視台語台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917031235354496_59.jpg",
+    "hasEpg": true,
+    "programmeCount": 173
+  },
+  {
+    "id": "公视戏剧.tw",
+    "name": "公视戏剧",
+    "group": "tw",
+    "aliases": [
+      "公視戲劇"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 110
+  },
+  {
+    "id": "台视综合.tw",
+    "name": "台视综合",
+    "group": "tw",
+    "aliases": [
+      "台視綜合台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917035053435180_29.jpg",
+    "hasEpg": true,
+    "programmeCount": 173
+  },
+  {
+    "id": "TTVFinance.tw",
+    "name": "台视财经",
+    "group": "tw",
+    "aliases": [
+      "台視財經台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917035036471417_10.jpg",
+    "hasEpg": true,
+    "programmeCount": 162
+  },
+  {
+    "id": "纬来综合.tw",
+    "name": "纬来综合",
+    "group": "tw",
+    "aliases": [
+      "緯來綜合台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917031655265261_11.png",
+    "hasEpg": true,
+    "programmeCount": 145
+  },
+  {
+    "id": "VideolandDrama.tw",
+    "name": "纬来戏剧",
+    "group": "tw",
+    "aliases": [
+      "緯來戲劇台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917032202647189_89.png",
+    "hasEpg": true,
+    "programmeCount": 162
+  },
+  {
+    "id": "VideolandJapan.tw",
+    "name": "纬来日本",
+    "group": "tw",
+    "aliases": [
+      "緯來日本台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917033108660461_30.png",
+    "hasEpg": true,
+    "programmeCount": 132
+  },
+  {
+    "id": "VideolandMovie.tw",
+    "name": "纬来电影",
+    "group": "tw",
+    "aliases": [
+      "緯來電影台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917032743418857_37.png",
+    "hasEpg": true,
+    "programmeCount": 93
+  },
+  {
+    "id": "VideolandSports.tw",
+    "name": "纬来体育",
+    "group": "tw",
+    "aliases": [
+      "緯來體育台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917033004270852_19.png",
+    "hasEpg": true,
+    "programmeCount": 129
+  },
+  {
+    "id": "纬来育乐.tw",
+    "name": "纬来育乐",
+    "group": "tw",
+    "aliases": [
+      "緯來育樂台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917032931686009_60.png",
+    "hasEpg": true,
+    "programmeCount": 167
+  },
+  {
+    "id": "纬来精采.tw",
+    "name": "纬来精采",
+    "group": "tw",
+    "aliases": [
+      "緯來精采HD"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171330796273_29.png",
+    "hasEpg": true,
+    "programmeCount": 153
+  },
+  {
+    "id": "八大综艺.tw",
+    "name": "八大综艺",
+    "group": "tw",
+    "aliases": [
+      "八大綜藝台"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 147
+  },
+  {
+    "id": "八大精彩.tw",
+    "name": "八大精彩",
+    "group": "tw",
+    "aliases": [
+      "八大精彩台"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 174
+  },
+  {
+    "id": "龙华经典.tw",
+    "name": "龙华经典",
+    "group": "tw",
+    "aliases": [
+      "龍華經典HD"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919173330371551_43.png",
+    "hasEpg": true,
+    "programmeCount": 72
+  },
+  {
+    "id": "龙华偶像.tw",
+    "name": "龙华偶像",
+    "group": "tw",
+    "aliases": [
+      "龍華偶像HD"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171708780431_98.png",
+    "hasEpg": true,
+    "programmeCount": 104
+  },
+  {
+    "id": "龙华戏剧.tw",
+    "name": "龙华戏剧",
+    "group": "tw",
+    "aliases": [
+      "龍華戲劇HD"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171656153616_95.png",
+    "hasEpg": true,
+    "programmeCount": 93
+  },
+  {
+    "id": "CelestialClassicMovies.hk",
+    "name": "天映经典",
+    "group": "tw",
+    "aliases": [
+      "天映經典頻道"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 105
+  },
+  {
+    "id": "Catchplay电影.tw",
+    "name": "Catchplay电影",
+    "group": "tw",
+    "aliases": [
+      "CATCHPLAY電影台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917032712744454_75.jpg",
+    "hasEpg": true,
+    "programmeCount": 110
+  },
+  {
+    "id": "AMC.tw",
+    "name": "AMC",
+    "group": "tw",
+    "aliases": [],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917032914589936_26.jpg",
+    "hasEpg": true,
+    "programmeCount": 110
+  },
+  {
+    "id": "HollywoodMovieChannel.tw",
+    "name": "好莱坞电影台",
+    "group": "tw",
+    "aliases": [
+      "好萊塢電影台"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 83
+  },
+  {
+    "id": "靖天电影.tw",
+    "name": "靖天电影",
+    "group": "tw",
+    "aliases": [
+      "靖天電影台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917035253544256_62.jpg",
+    "hasEpg": true,
+    "programmeCount": 93
+  },
+  {
+    "id": "龙华电影.tw",
+    "name": "龙华电影",
+    "group": "tw",
+    "aliases": [
+      "龍華電影HD"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919173121682426_53.png",
+    "hasEpg": true,
+    "programmeCount": 77
+  },
+  {
+    "id": "龙华洋片.tw",
+    "name": "龙华洋片",
+    "group": "tw",
+    "aliases": [
+      "龍華洋片HD"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919173210969684_85.png",
+    "hasEpg": true,
+    "programmeCount": 92
+  },
+  {
+    "id": "采昌影剧.tw",
+    "name": "采昌影剧",
+    "group": "tw",
+    "aliases": [
+      "采昌影劇台HD"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919173437679814_51.png",
+    "hasEpg": true,
+    "programmeCount": 110
+  },
+  {
+    "id": "靖天映画.tw",
+    "name": "靖天映画",
+    "group": "tw",
+    "aliases": [
+      "靖天映畫"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917034648086712_56.jpg",
+    "hasEpg": true,
+    "programmeCount": 92
+  },
+  {
+    "id": "靖天戏剧.tw",
+    "name": "靖天戏剧",
+    "group": "tw",
+    "aliases": [
+      "靖天戲劇HD"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 178
+  },
+  {
+    "id": "靖洋戏剧.tw",
+    "name": "靖洋戏剧",
+    "group": "tw",
+    "aliases": [
+      "靖洋戲劇台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917034705563800_19.jpg",
+    "hasEpg": true,
+    "programmeCount": 178
+  },
+  {
+    "id": "影迷数位电影.tw",
+    "name": "影迷数位电影",
+    "group": "tw",
+    "aliases": [
+      "影迷數位電影台HD"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919173450936196_74.png",
+    "hasEpg": true,
+    "programmeCount": 93
+  },
+  {
+    "id": "经典电影台.tw",
+    "name": "经典电影台",
+    "group": "tw",
+    "aliases": [
+      "經典電影台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2024/06/12/20240612113519904800_19.png",
+    "hasEpg": true,
+    "programmeCount": 38
+  },
+  {
+    "id": "CMusic.tw",
+    "name": "CMusic",
+    "group": "tw",
+    "aliases": [],
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919165925761257_21.png",
+    "hasEpg": true,
+    "programmeCount": 3000
+  },
+  {
+    "id": "DreamWorks梦工厂动画.tw",
+    "name": "DreamWorks梦工厂动画",
+    "group": "tw",
+    "aliases": [
+      "DreamWorks 夢工廠動畫"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2024/06/12/20240612110728162254_39.png",
+    "hasEpg": true,
+    "programmeCount": 194
+  },
+  {
+    "id": "CinemaWorld.my",
+    "name": "CinemaWorld",
+    "group": "tw",
+    "aliases": [],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917035308652770_24.jpg",
+    "hasEpg": true,
+    "programmeCount": 99
+  },
+  {
+    "id": "精选动漫台.tw",
+    "name": "精选动漫台",
+    "group": "tw",
+    "aliases": [
+      "精選動漫台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2024/06/12/20240612113540523500_57.png",
+    "hasEpg": true,
+    "programmeCount": 126
+  },
+  {
+    "id": "金光布袋戏.tw",
+    "name": "金光布袋戏",
+    "group": "tw",
+    "aliases": [
+      "金光布袋戲"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2024/06/12/20240612111604544110_65.png",
+    "hasEpg": true,
+    "programmeCount": 48
+  },
+  {
+    "id": "AXN.tw",
+    "name": "AXN",
+    "group": "tw",
+    "aliases": [],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917032844221558_23.jpg",
+    "hasEpg": true,
+    "programmeCount": 137
+  },
+  {
+    "id": "Cinemax.tw",
+    "name": "Cinemax",
+    "group": "tw",
+    "aliases": [
+      "CINEMAX"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 84
+  },
+  {
+    "id": "DAZN1.uk",
+    "name": "DAZN1",
+    "group": "tw",
+    "aliases": [
+      "DAZN 1"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917033019444810_34.jpg",
+    "hasEpg": true,
+    "programmeCount": 114
+  },
+  {
+    "id": "DAZN2.uk",
+    "name": "DAZN2",
+    "group": "tw",
+    "aliases": [
+      "DAZN 2"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917033034750310_47.jpg",
+    "hasEpg": true,
+    "programmeCount": 104
+  },
+  {
+    "id": "Discovery.tw",
+    "name": "Discovery",
+    "group": "tw",
+    "aliases": [],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917031417182203_69.jpg",
+    "hasEpg": true,
+    "programmeCount": 169
+  },
+  {
+    "id": "DW德国之声.tw",
+    "name": "DW德国之声",
+    "group": "tw",
+    "aliases": [
+      "DW德國之聲",
+      "德國之聲",
+      "德国之声"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2024/06/12/20240612111756574035_95.png",
+    "hasEpg": true,
+    "programmeCount": 521
+  },
+  {
+    "id": "EYETVTravel.tw",
+    "name": "EYETV旅游",
+    "group": "tw",
+    "aliases": [
+      "EYE TV旅遊台HD"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919170925819253_83.png",
+    "hasEpg": true,
+    "programmeCount": 172
+  },
+  {
+    "id": "EYETVDrama.tw",
+    "name": "EYETV戏剧",
+    "group": "tw",
+    "aliases": [
+      "EYE TV戲劇台HD"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171817556696_65.png",
+    "hasEpg": true,
+    "programmeCount": 168
+  },
+  {
+    "id": "HITS.tw",
+    "name": "HITS",
+    "group": "tw",
+    "aliases": [],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917035558520120_36.jpg",
+    "hasEpg": true,
+    "programmeCount": 210
+  },
+  {
+    "id": "博斯魅力.tw",
+    "name": "博斯魅力",
+    "group": "tw",
+    "aliases": [
+      "博斯魅力HD"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 65
+  },
+  {
+    "id": "博斯网球.tw",
+    "name": "博斯网球",
+    "group": "tw",
+    "aliases": [
+      "博斯網球台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917052057930545_19.jpg",
+    "hasEpg": true,
+    "programmeCount": 47
+  },
+  {
+    "id": "博斯无限Ⅰ.tw",
+    "name": "博斯无限Ⅰ",
+    "group": "tw",
+    "aliases": [
+      "博斯無限台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917052111304833_18.jpg",
+    "hasEpg": true,
+    "programmeCount": 67
+  },
+  {
+    "id": "博斯无限Ⅱ.tw",
+    "name": "博斯无限Ⅱ",
+    "group": "tw",
+    "aliases": [
+      "博斯無限二台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917052219385831_92.jpg",
+    "hasEpg": true,
+    "programmeCount": 77
+  },
+  {
+    "id": "博斯运动Ⅰ.tw",
+    "name": "博斯运动Ⅰ",
+    "group": "tw",
+    "aliases": [
+      "博斯運動一台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917052204800349_50.jpg",
+    "hasEpg": true,
+    "programmeCount": 60
+  },
+  {
+    "id": "博斯运动Ⅱ.tw",
+    "name": "博斯运动Ⅱ",
+    "group": "tw",
+    "aliases": [
+      "博斯運動二台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917052043951323_23.jpg",
+    "hasEpg": true,
+    "programmeCount": 87
+  },
+  {
+    "id": "博斯高球Ⅰ.tw",
+    "name": "博斯高球Ⅰ",
+    "group": "tw",
+    "aliases": [
+      "博斯高球1台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917052124091814_23.jpg",
+    "hasEpg": true,
+    "programmeCount": 51
+  },
+  {
+    "id": "博斯高球Ⅱ.tw",
+    "name": "博斯高球Ⅱ",
+    "group": "tw",
+    "aliases": [
+      "博斯高球2台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917052137162286_92.jpg",
+    "hasEpg": true,
+    "programmeCount": 57
+  },
+  {
+    "id": "DaAi1.tw",
+    "name": "大爱Ⅰ",
+    "group": "tw",
+    "aliases": [
+      "大爱一台",
+      "大愛",
+      "大爱"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 102
+  },
+  {
+    "id": "DaAi2.tw",
+    "name": "大爱Ⅱ",
+    "group": "tw",
+    "aliases": [
+      "大愛二台 "
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917034632655173_18.png",
+    "hasEpg": true,
+    "programmeCount": 337
+  },
+  {
+    "id": "GoodTV.tw",
+    "name": "好消息Ⅰ",
+    "group": "tw",
+    "aliases": [
+      "好消息頻道"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917031258254628_38.png",
+    "hasEpg": true,
+    "programmeCount": 324
+  },
+  {
+    "id": "Good2.tw",
+    "name": "好消息Ⅱ",
+    "group": "tw",
+    "aliases": [
+      "好消息2台"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 258
+  },
+  {
+    "id": "AsiaTravelTV.tw",
+    "name": "亚洲旅游",
+    "group": "tw",
+    "aliases": [
+      "亞洲旅遊台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917052013256313_13.jpg",
+    "hasEpg": true,
+    "programmeCount": 168
+  },
+  {
+    "id": "智林体育.tw",
+    "name": "智林体育",
+    "group": "tw",
+    "aliases": [
+      "智林體育HD"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919170258664451_83.png",
+    "hasEpg": true,
+    "programmeCount": 62
+  },
+  {
+    "id": "靖天卡通.tw",
+    "name": "靖天卡通",
+    "group": "tw",
+    "aliases": [
+      "靖天卡通台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917052557563478_84.jpg",
+    "hasEpg": true,
+    "programmeCount": 310
+  },
+  {
+    "id": "猪哥亮歌厅秀.tw",
+    "name": "猪哥亮歌厅秀",
+    "group": "tw",
+    "aliases": [
+      "豬哥亮歌廳秀"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 124
+  },
+  {
+    "id": "HBO强档巨献.tw",
+    "name": "HBO强档巨献",
+    "group": "tw",
+    "aliases": [
+      "HBO 強檔鉅獻"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917035339263398_57.jpg",
+    "hasEpg": true,
+    "programmeCount": 94
+  },
+  {
+    "id": "HBO原创巨献.tw",
+    "name": "HBO原创巨献",
+    "group": "tw",
+    "aliases": [
+      "HBO 原創鉅獻"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917035405130629_50.jpg",
+    "hasEpg": true,
+    "programmeCount": 115
+  },
+  {
+    "id": "HBO温馨家庭.tw",
+    "name": "HBO温馨家庭",
+    "group": "tw",
+    "aliases": [
+      "HBO 溫馨家庭"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917035427937773_37.jpg",
+    "hasEpg": true,
+    "programmeCount": 343
+  },
+  {
+    "id": "爱尔达体育Ⅰ.tw",
+    "name": "爱尔达体育Ⅰ",
+    "group": "tw",
+    "aliases": [
+      "愛爾達體育1台"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 123
+  },
+  {
+    "id": "爱尔达体育Ⅱ.tw",
+    "name": "爱尔达体育Ⅱ",
+    "group": "tw",
+    "aliases": [
+      "愛爾達體育2台"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 109
+  },
+  {
+    "id": "爱尔达体育Ⅲ.tw",
+    "name": "爱尔达体育Ⅲ",
+    "group": "tw",
+    "aliases": [
+      "愛爾達體育3台"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 98
+  },
+  {
+    "id": "爱尔达影剧.tw",
+    "name": "爱尔达影剧",
+    "group": "tw",
+    "aliases": [
+      "愛爾達影劇台HD"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919171734740564_46.png",
+    "hasEpg": true,
+    "programmeCount": 173
+  },
+  {
+    "id": "爱尔达体育Ⅳ.tw",
+    "name": "爱尔达体育Ⅳ",
+    "group": "tw",
+    "aliases": [
+      "愛爾達體育4台"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 70
+  },
+  {
+    "id": "爱尔达娱乐.tw",
+    "name": "爱尔达娱乐",
+    "group": "tw",
+    "aliases": [
+      "愛爾達娛樂台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2024/06/12/20240612110257902484_18.png",
+    "hasEpg": true,
+    "programmeCount": 105
+  },
+  {
+    "id": "爱尔达生活旅游.tw",
+    "name": "爱尔达生活旅游",
+    "group": "tw",
+    "aliases": [
+      "愛爾達生活旅遊台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2024/06/12/20240612111416131786_59.png",
+    "hasEpg": true,
+    "programmeCount": 108
+  },
+  {
+    "id": "湖南电影.cn",
+    "name": "湖南电影",
+    "group": "local",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 10
+  },
+  {
+    "id": "GoldenEagleDocumentary.cn",
+    "name": "金鹰纪实",
+    "group": "local",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 68
+  },
+  {
+    "id": "快乐垂钓.cn",
+    "name": "快乐垂钓",
+    "group": "local",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 145
+  },
+  {
+    "id": "广东体育.cn",
+    "name": "广东体育",
+    "group": "local",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 172
+  },
+  {
+    "id": "GuangdongNewsChannel.cn",
+    "name": "广东新闻",
+    "group": "local",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 81
+  },
+  {
+    "id": "广东民生.cn",
+    "name": "广东民生",
+    "group": "local",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 60
+  },
+  {
+    "id": "广州新闻.cn",
+    "name": "广州新闻",
+    "group": "local",
+    "aliases": [],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 39
+  },
+  {
+    "id": "农林卫视.cn",
+    "name": "农林卫视",
+    "group": "satellite",
+    "aliases": [
+      "陝西農林衛視",
+      "陕西农林卫视"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 325
+  },
+  {
+    "id": "AsianFood.tw",
+    "name": "AsianFood",
+    "group": "tw",
+    "aliases": [
+      "亞洲美食頻道",
+      "亚洲美食频道",
+      "亞洲美食台"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/01/29/20250129135816741989_62",
+    "hasEpg": true,
+    "programmeCount": 288
+  },
+  {
+    "id": "阿里郎.tw",
+    "name": "阿里郎",
+    "group": "tw",
+    "aliases": [
+      "ARIRANG",
+      "韓國阿里郎",
+      "韩国阿里郎",
+      "阿里郎頻道"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917035151658357_64.jpg",
+    "hasEpg": true,
+    "programmeCount": 359
+  },
+  {
+    "id": "我的欧洲电影.tw",
+    "name": "我的欧洲电影",
+    "group": "tw",
+    "aliases": [
+      "MCE 我的歐洲電影台",
+      "My Cinema Europe HD",
+      "我的歐洲電影"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/19/20250919173504365160_58.png",
+    "hasEpg": true,
+    "programmeCount": 102
+  },
+  {
+    "id": "汕头经济.cn",
+    "name": "汕头经济",
+    "group": "local",
+    "aliases": [
+      "汕頭經濟生活",
+      "汕头经济生活"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 18
+  },
+  {
+    "id": "广东珠江.cn",
+    "name": "广东珠江",
+    "group": "local",
+    "aliases": [
+      "珠江台",
+      "廣東珠江"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 29
+  },
+  {
+    "id": "HBO电影.tw",
+    "name": "HBO电影",
+    "group": "pay",
+    "aliases": [
+      "HBO",
+      "HBO HD"
+    ],
+    "logo": "https://epg.pw/media/images/epg/2025/09/17/20250917035324057947_34.jpg",
+    "hasEpg": true,
+    "programmeCount": 221
+  },
+  {
+    "id": "CCTV中学生.cn",
+    "name": "CCTV中学生",
+    "group": "pay",
+    "aliases": [
+      "中学生频道",
+      "CCTV中学生频道",
+      "CCTV-中学生"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 384
+  },
+  {
+    "id": "重温经典.cn",
+    "name": "重温经典",
+    "group": "pay",
+    "aliases": [
+      "重温经典频道",
+      "重溫經典"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 180
+  },
+  {
+    "id": "MacauPortuguese.hk",
+    "name": "澳门葡文台",
+    "group": "mo",
+    "aliases": [
+      "澳视葡文",
+      "澳視葡文"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 125
+  },
+  {
+    "id": "MacauSports.hk",
+    "name": "澳门体育",
+    "group": "mo",
+    "aliases": [
+      "澳视体育",
+      "澳視體育"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 139
+  },
+  {
+    "id": "MacauInfo.hk",
+    "name": "澳门资讯",
+    "group": "mo",
+    "aliases": [
+      "澳视资讯",
+      "澳門資訊"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 345
+  },
+  {
+    "id": "MacauVariety.hk",
+    "name": "澳门综艺",
+    "group": "mo",
+    "aliases": [
+      "澳视综艺",
+      "澳門綜藝"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 127
+  },
+  {
+    "id": "MacauSatellite.hk",
+    "name": "澳门-Macau",
+    "group": "mo",
+    "aliases": [
+      "澳門-Macau",
+      "澳门澳门"
+    ],
+    "logo": "",
+    "hasEpg": true,
+    "programmeCount": 340
+  }
+]
