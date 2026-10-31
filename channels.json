@@ -765,7 +765,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 21
+    "programmeCount": 20
   },
   {
     "id": "HunanEntertainmentChannel.cn",
@@ -776,7 +776,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 12
+    "programmeCount": 11
   },
   {
     "id": "HunanDramaChannel.cn",
@@ -865,7 +865,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 26
+    "programmeCount": 25
   },
   {
     "id": "JiangsuVarietyChannel.cn",
@@ -876,7 +876,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 24
+    "programmeCount": 23
   },
   {
     "id": "JiangsuMovieChannel.cn",
@@ -887,7 +887,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 28
+    "programmeCount": 27
   },
   {
     "id": "JiangsuPublicNewsChannel.cn",
@@ -898,7 +898,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 1
+    "programmeCount": 42
   },
   {
     "id": "Jade.hk",
@@ -972,7 +972,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 248
+    "programmeCount": 240
   },
   {
     "id": "ViuTVsix.hk",
@@ -1057,7 +1057,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 275
+    "programmeCount": 276
   },
   {
     "id": "PhoenixChineseChannel.hk",
@@ -1727,7 +1727,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 35
+    "programmeCount": 34
   },
   {
     "id": "金色学堂.cn",
@@ -1806,7 +1806,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 376
+    "programmeCount": 368
   },
   {
     "id": "nowBusinessNewsChannel.hk",
@@ -1838,7 +1838,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 84
+    "programmeCount": 80
   },
   {
     "id": "ROCKAction.sg",
@@ -2609,7 +2609,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 95
+    "programmeCount": 93
   },
   {
     "id": "DAZN1.uk",
@@ -2785,7 +2785,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 48
+    "programmeCount": 118
   },
   {
     "id": "DaAi2.tw",
@@ -2928,7 +2928,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 97
+    "programmeCount": 95
   },
   {
     "id": "爱尔达影剧.tw",
@@ -2950,7 +2950,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 70
+    "programmeCount": 71
   },
   {
     "id": "爱尔达娱乐.tw",
@@ -2981,7 +2981,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 11
+    "programmeCount": 10
   },
   {
     "id": "GoldenEagleDocumentary.cn",
@@ -2990,7 +2990,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 35
+    "programmeCount": 34
   },
   {
     "id": "快乐垂钓.cn",
@@ -3017,7 +3017,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 41
+    "programmeCount": 40
   },
   {
     "id": "广东民生.cn",
@@ -3026,7 +3026,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 31
+    "programmeCount": 30
   },
   {
     "id": "广州新闻.cn",
@@ -3111,7 +3111,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 22
+    "programmeCount": 21
   },
   {
     "id": "HBO电影.tw",
