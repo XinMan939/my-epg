@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T05:52:38.314Z",
+  "generatedAt": "2026-11-05T14:22:57.397Z",
   "days": 7,
   "dayList": [
     "20261105",
@@ -15,8 +15,8 @@
   "channelsEmpty": 4,
   "channelsFull": 233,
   "channelsPartial": 51,
-  "programmesTotal": 57750,
-  "programmesWithDesc": 34006,
+  "programmesTotal": 58345,
+  "programmesWithDesc": 34160,
   "descCoverage": 59,
   "dateRange": [
     "20261105",
@@ -3251,14 +3251,6 @@
   ],
   "dayFillStats": [
     {
-      "id": "CCTV3.cn",
-      "before": 5,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTV-CCTV3+43"
-      ]
-    },
-    {
       "id": "CCTV7.cn",
       "before": 4,
       "after": 7,
@@ -3267,11 +3259,11 @@
       ]
     },
     {
-      "id": "CCTV5Plus.cn",
+      "id": "CCTV5.cn",
       "before": 5,
       "after": 7,
       "sources": [
-        "tvmao:CCTV-CCTV5-PLUS+38"
+        "tvmao:CCTV-CCTV5+47"
       ]
     },
     {
@@ -3283,19 +3275,19 @@
       ]
     },
     {
+      "id": "CCTV3.cn",
+      "before": 5,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTV-CCTV3+43"
+      ]
+    },
+    {
       "id": "CCTV2.cn",
       "before": 5,
       "after": 7,
       "sources": [
         "tvmao:CCTV-CCTV2+84"
-      ]
-    },
-    {
-      "id": "CCTV9.cn",
-      "before": 5,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTV-CCTV9+79"
       ]
     },
     {
@@ -3307,14 +3299,6 @@
       ]
     },
     {
-      "id": "CCTV11.cn",
-      "before": 5,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTV-CCTV11+37"
-      ]
-    },
-    {
       "id": "CCTV10.cn",
       "before": 5,
       "after": 7,
@@ -3323,11 +3307,35 @@
       ]
     },
     {
+      "id": "CCTV11.cn",
+      "before": 5,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTV-CCTV11+37"
+      ]
+    },
+    {
+      "id": "CCTV5Plus.cn",
+      "before": 5,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTV-CCTV5-PLUS+38"
+      ]
+    },
+    {
       "id": "CCTV8.cn",
       "before": 5,
       "after": 7,
       "sources": [
         "tvmao:CCTV-CCTV8+74"
+      ]
+    },
+    {
+      "id": "CCTV14.cn",
+      "before": 5,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTV-CCTV15+44"
       ]
     },
     {
@@ -3347,14 +3355,6 @@
       ]
     },
     {
-      "id": "CCTV5.cn",
-      "before": 5,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTV-CCTV5+47"
-      ]
-    },
-    {
       "id": "CCTV4America.cn",
       "before": 1,
       "after": 7,
@@ -3363,35 +3363,11 @@
       ]
     },
     {
-      "id": "ZhejiangSatelliteTV.cn",
-      "before": 4,
+      "id": "CCTV9.cn",
+      "before": 5,
       "after": 7,
       "sources": [
-        "tvmao:ZJTV1+124"
-      ]
-    },
-    {
-      "id": "HunanTV.cn",
-      "before": 4,
-      "after": 7,
-      "sources": [
-        "tvmao:HUNANTV1+102"
-      ]
-    },
-    {
-      "id": "DragonTV.cn",
-      "before": 4,
-      "after": 7,
-      "sources": [
-        "tvmao:DONGFANG1+121"
-      ]
-    },
-    {
-      "id": "JiangsuSatelliteTV.cn",
-      "before": 4,
-      "after": 7,
-      "sources": [
-        "tvmao:JSTV1+91"
+        "tvmao:CCTV-CCTV9+79"
       ]
     },
     {
@@ -3403,11 +3379,27 @@
       ]
     },
     {
-      "id": "CCTV14.cn",
-      "before": 5,
+      "id": "HunanTV.cn",
+      "before": 4,
       "after": 7,
       "sources": [
-        "tvmao:CCTV-CCTV15+44"
+        "tvmao:HUNANTV1+102"
+      ]
+    },
+    {
+      "id": "ZhejiangSatelliteTV.cn",
+      "before": 4,
+      "after": 7,
+      "sources": [
+        "tvmao:ZJTV1+124"
+      ]
+    },
+    {
+      "id": "JiangsuSatelliteTV.cn",
+      "before": 4,
+      "after": 7,
+      "sources": [
+        "tvmao:JSTV1+91"
       ]
     },
     {
@@ -3419,19 +3411,11 @@
       ]
     },
     {
-      "id": "GuangdongSatelliteTV.cn",
+      "id": "DragonTV.cn",
       "before": 4,
       "after": 7,
       "sources": [
-        "tvmao:GDTV1+103"
-      ]
-    },
-    {
-      "id": "ShandongSatelliteTV.cn",
-      "before": 4,
-      "after": 7,
-      "sources": [
-        "tvmao:SDTV1+102"
+        "tvmao:DONGFANG1+121"
       ]
     },
     {
@@ -3443,6 +3427,30 @@
       ]
     },
     {
+      "id": "ShandongSatelliteTV.cn",
+      "before": 4,
+      "after": 7,
+      "sources": [
+        "tvmao:SDTV1+102"
+      ]
+    },
+    {
+      "id": "HubeiSatelliteTV.cn",
+      "before": 4,
+      "after": 7,
+      "sources": [
+        "tvmao:HUBEI1+101"
+      ]
+    },
+    {
+      "id": "GuangdongSatelliteTV.cn",
+      "before": 4,
+      "after": 7,
+      "sources": [
+        "tvmao:GDTV1+103"
+      ]
+    },
+    {
       "id": "TianjinSatelliteTV.cn",
       "before": 4,
       "after": 7,
@@ -3451,11 +3459,11 @@
       ]
     },
     {
-      "id": "HubeiSatelliteTV.cn",
+      "id": "SichuanSatelliteTV.cn",
       "before": 4,
       "after": 7,
       "sources": [
-        "tvmao:HUBEI1+100"
+        "tvmao:SCTV1+102"
       ]
     },
     {
@@ -3464,14 +3472,6 @@
       "after": 7,
       "sources": [
         "tvmao:SZTV1+90"
-      ]
-    },
-    {
-      "id": "SichuanSatelliteTV.cn",
-      "before": 4,
-      "after": 7,
-      "sources": [
-        "tvmao:SCTV1+102"
       ]
     },
     {
@@ -3487,15 +3487,7 @@
       "before": 4,
       "after": 7,
       "sources": [
-        "tvmao:HNTV1+109"
-      ]
-    },
-    {
-      "id": "ShaanxiSatelliteTV.cn",
-      "before": 4,
-      "after": 7,
-      "sources": [
-        "tvmao:SHXITV1+91"
+        "tvmao:HNTV1+107"
       ]
     },
     {
@@ -3511,7 +3503,7 @@
       "before": 4,
       "after": 7,
       "sources": [
-        "tvmao:SXTV1+83"
+        "tvmao:SXTV1+84"
       ]
     },
     {
@@ -3531,11 +3523,11 @@
       ]
     },
     {
-      "id": "GuangxiSatelliteTV.cn",
+      "id": "ShaanxiSatelliteTV.cn",
       "before": 4,
       "after": 7,
       "sources": [
-        "tvmao:GUANXI1+98"
+        "tvmao:SHXITV1+91"
       ]
     },
     {
@@ -3555,11 +3547,19 @@
       ]
     },
     {
-      "id": "JiangxiSatelliteTV.cn",
+      "id": "GuangxiSatelliteTV.cn",
       "before": 4,
       "after": 7,
       "sources": [
-        "tvmao:JXTV1+109"
+        "tvmao:GUANXI1+99"
+      ]
+    },
+    {
+      "id": "GuizhouSatelliteTV.cn",
+      "before": 4,
+      "after": 7,
+      "sources": [
+        "tvmao:GUIZOUTV1+104"
       ]
     },
     {
@@ -3571,19 +3571,11 @@
       ]
     },
     {
-      "id": "GuizhouSatelliteTV.cn",
+      "id": "JiangxiSatelliteTV.cn",
       "before": 4,
       "after": 7,
       "sources": [
-        "tvmao:GUIZOUTV1+102"
-      ]
-    },
-    {
-      "id": "QinghaiSatelliteTV.cn",
-      "before": 4,
-      "after": 7,
-      "sources": [
-        "tvmao:QHTV1+80"
+        "tvmao:JXTV1+109"
       ]
     },
     {
@@ -3595,11 +3587,11 @@
       ]
     },
     {
-      "id": "NingxiaSatelliteChannel.cn",
+      "id": "QinghaiSatelliteTV.cn",
       "before": 4,
       "after": 7,
       "sources": [
-        "tvmao:NXTV2+119"
+        "tvmao:QHTV1+79"
       ]
     },
     {
@@ -3611,11 +3603,11 @@
       ]
     },
     {
-      "id": "HainanSatelliteTV.cn",
+      "id": "NingxiaSatelliteChannel.cn",
       "before": 4,
       "after": 7,
       "sources": [
-        "tvmao:TCTC1+109"
+        "tvmao:NXTV2+119"
       ]
     },
     {
@@ -3627,19 +3619,11 @@
       ]
     },
     {
-      "id": "YanbianSatelliteTV.cn",
-      "before": 5,
-      "after": 7,
-      "sources": [
-        "tvmao:YANBIAN1+42"
-      ]
-    },
-    {
-      "id": "BingtuanSatelliteTV.cn",
+      "id": "HainanSatelliteTV.cn",
       "before": 4,
       "after": 7,
       "sources": [
-        "tvmao:BINGTUAN+93"
+        "tvmao:TCTC1+109"
       ]
     },
     {
@@ -3648,6 +3632,22 @@
       "after": 7,
       "sources": [
         "tvmao:XMTV5+78"
+      ]
+    },
+    {
+      "id": "BingtuanSatelliteTV.cn",
+      "before": 4,
+      "after": 7,
+      "sources": [
+        "tvmao:BINGTUAN+92"
+      ]
+    },
+    {
+      "id": "YanbianSatelliteTV.cn",
+      "before": 5,
+      "after": 7,
+      "sources": [
+        "tvmao:YANBIAN1+42"
       ]
     },
     {
@@ -3667,6 +3667,14 @@
       ]
     },
     {
+      "id": "HaixiaSatelliteTV.cn",
+      "before": 4,
+      "after": 7,
+      "sources": [
+        "tvmao:HXTV+127"
+      ]
+    },
+    {
       "id": "HuangheSatelliteTV.cn",
       "before": 4,
       "after": 7,
@@ -3675,11 +3683,11 @@
       ]
     },
     {
-      "id": "HaixiaSatelliteTV.cn",
-      "before": 4,
-      "after": 7,
+      "id": "ZhejiangMinshengLeisure.cn",
+      "before": 1,
+      "after": 2,
       "sources": [
-        "tvmao:HXTV+127"
+        "cztv:106+113"
       ]
     },
     {
@@ -3691,11 +3699,11 @@
       ]
     },
     {
-      "id": "CCTVStormTheater.cn",
+      "id": "ZhejiangEconomicChannel.cn",
       "before": 1,
-      "after": 7,
+      "after": 2,
       "sources": [
-        "tvmao:CCTVPAYFEE-CCTVPAYFEE4+125"
+        "cztv:103+110"
       ]
     },
     {
@@ -3704,6 +3712,22 @@
       "after": 7,
       "sources": [
         "tvmao:CCTVPAYFEE-CCTVPAYFEE3+128"
+      ]
+    },
+    {
+      "id": "CCTVStormTheater.cn",
+      "before": 1,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTVPAYFEE-CCTVPAYFEE4+125"
+      ]
+    },
+    {
+      "id": "ViuTV.hk",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "epgpw:565569+31"
       ]
     },
     {
@@ -3719,7 +3743,7 @@
       "before": 1,
       "after": 7,
       "sources": [
-        "tvmao:SITV13+269"
+        "tvmao:SITV13+271"
       ]
     },
     {
@@ -3727,23 +3751,7 @@
       "before": 1,
       "after": 7,
       "sources": [
-        "tvmao:CCTVPAYFEE-CCTVPAYFEE6+743"
-      ]
-    },
-    {
-      "id": "CGTNDocumentary.cn",
-      "before": 1,
-      "after": 7,
-      "sources": [
-        "tvmao:CCTV-CCTV18+216"
-      ]
-    },
-    {
-      "id": "BRTVKakuChildrensChannel.cn",
-      "before": 1,
-      "after": 7,
-      "sources": [
-        "tvmao:BTV10+414"
+        "tvmao:CCTVPAYFEE-CCTVPAYFEE6+755"
       ]
     },
     {
@@ -3755,11 +3763,19 @@
       ]
     },
     {
-      "id": "CNDFilmDiscoveryChannel.cn",
+      "id": "LiyuanTV.cn",
       "before": 1,
       "after": 7,
       "sources": [
-        "tvmao:CCTVPAYFEE-CCTVFXZL+300"
+        "tvmao:CCTVPAYFEE-CCTVPAYFEE20+72"
+      ]
+    },
+    {
+      "id": "CGTNDocumentary.cn",
+      "before": 1,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTV-CCTV18+216"
       ]
     },
     {
@@ -3771,11 +3787,27 @@
       ]
     },
     {
-      "id": "LiyuanTV.cn",
+      "id": "BRTVKakuChildrensChannel.cn",
       "before": 1,
       "after": 7,
       "sources": [
-        "tvmao:CCTVPAYFEE-CCTVPAYFEE20+72"
+        "tvmao:BTV10+414"
+      ]
+    },
+    {
+      "id": "CNDFilmDiscoveryChannel.cn",
+      "before": 1,
+      "after": 7,
+      "sources": [
+        "tvmao:CCTVPAYFEE-CCTVFXZL+300"
+      ]
+    },
+    {
+      "id": "GameChannel.cn",
+      "before": 1,
+      "after": 7,
+      "sources": [
+        "tvmao:SITV-GAME+194"
       ]
     },
     {
@@ -3787,11 +3819,11 @@
       ]
     },
     {
-      "id": "GameChannel.cn",
+      "id": "劲爆体育.cn",
       "before": 1,
       "after": 7,
       "sources": [
-        "tvmao:SITV-GAME+194"
+        "tvmao:SITV-SPORTS+115"
       ]
     },
     {
@@ -3811,27 +3843,11 @@
       ]
     },
     {
-      "id": "劲爆体育.cn",
-      "before": 1,
-      "after": 7,
-      "sources": [
-        "tvmao:SITV-SPORTS+115"
-      ]
-    },
-    {
       "id": "ChannelLaw.cn",
       "before": 1,
       "after": 7,
       "sources": [
         "tvmao:SITV3+302"
-      ]
-    },
-    {
-      "id": "CityTheaterChannel.cn",
-      "before": 1,
-      "after": 7,
-      "sources": [
-        "tvmao:SITV-MOVIE+266"
       ]
     },
     {
@@ -3843,11 +3859,11 @@
       ]
     },
     {
-      "id": "LifestyleChannel.cn",
+      "id": "CityTheaterChannel.cn",
       "before": 1,
       "after": 7,
       "sources": [
-        "tvmao:SITV-FASHION+451"
+        "tvmao:SITV-MOVIE+266"
       ]
     },
     {
@@ -3856,6 +3872,14 @@
       "after": 7,
       "sources": [
         "tvmao:CHC-CHC1+160"
+      ]
+    },
+    {
+      "id": "LifestyleChannel.cn",
+      "before": 1,
+      "after": 7,
+      "sources": [
+        "tvmao:SITV-FASHION+451"
       ]
     },
     {
@@ -3883,11 +3907,35 @@
       ]
     },
     {
+      "id": "nowDirect.hk",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "epgpw:410343+8"
+      ]
+    },
+    {
       "id": "博斯魅力.tw",
       "before": 6,
       "after": 7,
       "sources": [
-        "mod:207+2"
+        "mod:207+1"
+      ]
+    },
+    {
+      "id": "nowNews.hk",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "epgpw:410344+48"
+      ]
+    },
+    {
+      "id": "Cinemax.tw",
+      "before": 6,
+      "after": 7,
+      "sources": [
+        "epgpw:410281+13"
       ]
     },
     {
@@ -3908,15 +3956,15 @@
     }
   ],
   "descStats": {
-    "realCoverage": 58.9,
-    "realCount": 34006,
-    "totalCount": 57750,
+    "realCoverage": 58.5,
+    "realCount": 34160,
+    "totalCount": 58345,
     "echoCount": 795,
-    "titles": 961,
-    "filled": 17994,
+    "titles": 957,
+    "filled": 18058,
     "z51": {
-      "channels": 163,
-      "filled": 14936,
+      "channels": 165,
+      "filled": 14999,
       "packs": [
         {
           "key": "e1",
@@ -4117,8 +4165,8 @@
           "status": "ok",
           "mine": 63,
           "key": "e1:22",
-          "inter": 24,
-          "rate": 0.38095238095238093
+          "inter": 22,
+          "rate": 0.3492063492063492
         },
         {
           "id": "CCTV4America.cn",
@@ -4126,8 +4174,8 @@
           "status": "ok",
           "mine": 59,
           "key": "e1:23",
-          "inter": 22,
-          "rate": 0.3728813559322034
+          "inter": 18,
+          "rate": 0.3050847457627119
         },
         {
           "id": "HunanTV.cn",
@@ -4187,19 +4235,19 @@
           "id": "ShandongSatelliteTV.cn",
           "name": "山东卫视",
           "status": "ok",
-          "mine": 41,
+          "mine": 42,
           "key": "e1:38",
           "inter": 20,
-          "rate": 0.4878048780487805
+          "rate": 0.47619047619047616
         },
         {
           "id": "GuangdongSatelliteTV.cn",
           "name": "广东卫视",
           "status": "ok",
-          "mine": 48,
+          "mine": 47,
           "key": "e1:33",
           "inter": 13,
-          "rate": 0.2708333333333333
+          "rate": 0.2765957446808511
         },
         {
           "id": "ShenzhenSatelliteTV.cn",
@@ -4250,10 +4298,10 @@
           "id": "HenanTVSatellite.cn",
           "name": "河南卫视",
           "status": "ok",
-          "mine": 38,
+          "mine": 36,
           "key": "e1:47",
           "inter": 19,
-          "rate": 0.5
+          "rate": 0.5277777777777778
         },
         {
           "id": "HebeiSatelliteTV.cn",
@@ -4304,10 +4352,10 @@
           "id": "HeilongjiangSatelliteTV.cn",
           "name": "黑龙江卫视",
           "status": "ok",
-          "mine": 42,
+          "mine": 41,
           "key": "e1:46",
-          "inter": 21,
-          "rate": 0.5
+          "inter": 20,
+          "rate": 0.4878048780487805
         },
         {
           "id": "JiangxiSatelliteTV.cn",
@@ -4322,19 +4370,19 @@
           "id": "FujianSatelliteTV.cn",
           "name": "东南卫视",
           "status": "ok",
-          "mine": 53,
+          "mine": 51,
           "key": "e1:41",
           "inter": 24,
-          "rate": 0.4528301886792453
+          "rate": 0.47058823529411764
         },
         {
           "id": "GuangxiSatelliteTV.cn",
           "name": "广西卫视",
           "status": "ok",
-          "mine": 55,
+          "mine": 54,
           "key": "e1:43",
           "inter": 24,
-          "rate": 0.43636363636363634
+          "rate": 0.4444444444444444
         },
         {
           "id": "YunnanSatelliteTV.cn",
@@ -4349,10 +4397,10 @@
           "id": "GuizhouSatelliteTV.cn",
           "name": "贵州卫视",
           "status": "ok",
-          "mine": 53,
+          "mine": 52,
           "key": "e1:44",
           "inter": 11,
-          "rate": 0.20754716981132076
+          "rate": 0.21153846153846154
         },
         {
           "id": "GansuSatelliteTV.cn",
@@ -4367,19 +4415,19 @@
           "id": "QinghaiSatelliteTV.cn",
           "name": "青海卫视",
           "status": "ok",
-          "mine": 36,
+          "mine": 35,
           "key": "e1:59",
           "inter": 17,
-          "rate": 0.4722222222222222
+          "rate": 0.4857142857142857
         },
         {
           "id": "NingxiaSatelliteChannel.cn",
           "name": "宁夏卫视",
           "status": "ok",
-          "mine": 47,
+          "mine": 46,
           "key": "e1:53",
           "inter": 16,
-          "rate": 0.3404255319148936
+          "rate": 0.34782608695652173
         },
         {
           "id": "XinjiangSatelliteTV.cn",
@@ -4412,10 +4460,10 @@
           "id": "HainanSatelliteTV.cn",
           "name": "旅游卫视",
           "status": "ok",
-          "mine": 35,
+          "mine": 34,
           "key": "e1:37",
-          "inter": 16,
-          "rate": 0.45714285714285713
+          "inter": 15,
+          "rate": 0.4411764705882353
         },
         {
           "id": "XiamenSatelliteTV.cn",
@@ -4439,10 +4487,10 @@
           "id": "BingtuanSatelliteTV.cn",
           "name": "兵团卫视",
           "status": "ok",
-          "mine": 32,
+          "mine": 31,
           "key": "e1:61",
           "inter": 14,
-          "rate": 0.4375
+          "rate": 0.45161290322580644
         },
         {
           "id": "KangbaSatelliteTV.cn",
@@ -4499,7 +4547,7 @@
           "id": "ZhejiangInternationalChannel.cn",
           "name": "浙江国际",
           "status": "none",
-          "mine": 25
+          "mine": 43
         },
         {
           "id": "HunanEconomyChannel.cn",
@@ -4531,14 +4579,20 @@
         {
           "id": "ZhejiangEconomicChannel.cn",
           "name": "浙江经视",
-          "status": "none",
-          "mine": 1
+          "status": "weak",
+          "mine": 52,
+          "key": "e1:657",
+          "inter": 4,
+          "rate": 0.07692307692307693
         },
         {
           "id": "ZhejiangMinshengLeisure.cn",
           "name": "浙江民生休闲",
-          "status": "none",
-          "mine": 1
+          "status": "weak",
+          "mine": 73,
+          "key": "e1:660",
+          "inter": 10,
+          "rate": 0.136986301369863
         },
         {
           "id": "ZhejiangFilmEntertainmentChannel.cn",
@@ -4550,7 +4604,7 @@
           "id": "ZhejiangChildrensChannel.cn",
           "name": "浙江少儿",
           "status": "none",
-          "mine": 50
+          "mine": 82
         },
         {
           "id": "JiangsuCityChannel.cn",
@@ -4625,19 +4679,19 @@
           "id": "TVBPlus.hk",
           "name": "J2",
           "status": "ok",
-          "mine": 85,
+          "mine": 81,
           "key": "e2:190",
           "inter": 39,
-          "rate": 0.4588235294117647
+          "rate": 0.48148148148148145
         },
         {
           "id": "ViuTV.hk",
           "name": "ViuTV",
           "status": "weak",
-          "mine": 160,
+          "mine": 173,
           "key": "e2:187",
           "inter": 6,
-          "rate": 0.0375
+          "rate": 0.03468208092485549
         },
         {
           "id": "ViuTVsix.hk",
@@ -4715,10 +4769,10 @@
           "id": "MacauTV.hk",
           "name": "内蒙蒙语卫视",
           "status": "weak",
-          "mine": 77,
+          "mine": 76,
           "key": "e1:1185",
           "inter": 2,
-          "rate": 0.025974025974025976
+          "rate": 0.02631578947368421
         },
         {
           "id": "TTV.tw",
@@ -5000,10 +5054,10 @@
           "id": "CGTN.cn",
           "name": "CGTN",
           "status": "ok",
-          "mine": 32,
+          "mine": 33,
           "key": "e1:20",
           "inter": 15,
-          "rate": 0.46875
+          "rate": 0.45454545454545453
         },
         {
           "id": "CGTNFrench.cn",
@@ -5270,7 +5324,7 @@
           "id": "nowNews.hk",
           "name": "NOW新闻",
           "status": "none",
-          "mine": 59
+          "mine": 61
         },
         {
           "id": "nowBusinessNewsChannel.hk",
@@ -5864,10 +5918,10 @@
           "id": "Cinemax.tw",
           "name": "CINEMAX",
           "status": "ok",
-          "mine": 51,
+          "mine": 53,
           "key": "e2:1511",
-          "inter": 20,
-          "rate": 0.39215686274509803
+          "inter": 22,
+          "rate": 0.41509433962264153
         },
         {
           "id": "DAZN1.uk",
@@ -5924,7 +5978,7 @@
           "id": "博斯魅力.tw",
           "name": "博斯魅力",
           "status": "none",
-          "mine": 5
+          "mine": 3
         },
         {
           "id": "博斯网球.tw",
@@ -6080,28 +6134,28 @@
           "id": "爱尔达体育Ⅰ.tw",
           "name": "爱尔达体育1",
           "status": "weak",
-          "mine": 93,
+          "mine": 94,
           "key": "e2:1832",
           "inter": 11,
-          "rate": 0.11827956989247312
+          "rate": 0.11702127659574468
         },
         {
           "id": "爱尔达体育Ⅱ.tw",
           "name": "爱尔达体育2",
           "status": "weak",
-          "mine": 81,
+          "mine": 83,
           "key": "e2:1815",
           "inter": 12,
-          "rate": 0.14814814814814814
+          "rate": 0.14457831325301204
         },
         {
           "id": "爱尔达体育Ⅲ.tw",
-          "name": "爱尔达体育3",
+          "name": "爱尔达体育1",
           "status": "weak",
-          "mine": 65,
-          "key": "e2:1833",
-          "inter": 5,
-          "rate": 0.07692307692307693
+          "mine": 66,
+          "key": "e2:1832",
+          "inter": 4,
+          "rate": 0.06060606060606061
         },
         {
           "id": "爱尔达影剧.tw",
@@ -6116,7 +6170,7 @@
           "id": "爱尔达体育Ⅳ.tw",
           "name": "爱尔达体育Ⅳ",
           "status": "none",
-          "mine": 47
+          "mine": 46
         },
         {
           "id": "爱尔达娱乐.tw",
@@ -6163,8 +6217,8 @@
           "status": "ok",
           "mine": 88,
           "key": "e1:1436",
-          "inter": 34,
-          "rate": 0.38636363636363635
+          "inter": 23,
+          "rate": 0.26136363636363635
         },
         {
           "id": "GuangdongNewsChannel.cn",
@@ -6428,20 +6482,20 @@
           "rate": 0.6
         },
         "CCTV4Europe.cn": {
-          "filled": 217,
+          "filled": 213,
           "before": 0,
           "stage": "channel+global",
           "source": "e1:22(CCTV4EUO)",
-          "inter": 24,
-          "rate": 0.38095238095238093
+          "inter": 22,
+          "rate": 0.3492063492063492
         },
         "CCTV4America.cn": {
-          "filled": 224,
+          "filled": 220,
           "before": 0,
           "stage": "channel+global",
           "source": "e1:23(CCTV4AME)",
-          "inter": 22,
-          "rate": 0.3728813559322034
+          "inter": 18,
+          "rate": 0.3050847457627119
         },
         "HunanTV.cn": {
           "filled": 117,
@@ -6468,7 +6522,7 @@
           "rate": 0.46808510638297873
         },
         "DragonTV.cn": {
-          "filled": 129,
+          "filled": 130,
           "before": 0,
           "stage": "channel+global",
           "source": "e1:31(东方卫视)",
@@ -6484,7 +6538,7 @@
           "rate": 0.4782608695652174
         },
         "AnhuiSatelliteTV.cn": {
-          "filled": 161,
+          "filled": 160,
           "before": 0,
           "stage": "channel+global",
           "source": "e1:32(安徽卫视)",
@@ -6492,23 +6546,23 @@
           "rate": 0.3333333333333333
         },
         "ShandongSatelliteTV.cn": {
-          "filled": 192,
+          "filled": 191,
           "before": 0,
           "stage": "channel+global",
           "source": "e1:38(山东卫视)",
           "inter": 20,
-          "rate": 0.4878048780487805
+          "rate": 0.47619047619047616
         },
         "GuangdongSatelliteTV.cn": {
-          "filled": 150,
+          "filled": 151,
           "before": 0,
           "stage": "channel+global",
           "source": "e1:33(广东卫视)",
           "inter": 13,
-          "rate": 0.2708333333333333
+          "rate": 0.2765957446808511
         },
         "ShenzhenSatelliteTV.cn": {
-          "filled": 111,
+          "filled": 110,
           "before": 0,
           "stage": "channel+global",
           "source": "e1:34(深圳卫视)",
@@ -6540,7 +6594,7 @@
           "rate": 0.2682926829268293
         },
         "HubeiSatelliteTV.cn": {
-          "filled": 182,
+          "filled": 183,
           "before": 0,
           "stage": "channel+global",
           "source": "e1:48(湖北卫视)",
@@ -6548,12 +6602,12 @@
           "rate": 0.25
         },
         "HenanTVSatellite.cn": {
-          "filled": 188,
+          "filled": 187,
           "before": 0,
           "stage": "channel+global",
           "source": "e1:47(河南卫视)",
           "inter": 19,
-          "rate": 0.5
+          "rate": 0.5277777777777778
         },
         "HebeiSatelliteTV.cn": {
           "filled": 109,
@@ -6564,7 +6618,7 @@
           "rate": 0.35714285714285715
         },
         "ShanxiSatelliteTV.cn": {
-          "filled": 155,
+          "filled": 156,
           "before": 0,
           "stage": "channel+global",
           "source": "e1:54(山西卫视)",
@@ -6596,12 +6650,12 @@
           "rate": 0.42857142857142855
         },
         "HeilongjiangSatelliteTV.cn": {
-          "filled": 139,
+          "filled": 137,
           "before": 0,
           "stage": "channel+global",
           "source": "e1:46(黑龙江卫视)",
-          "inter": 21,
-          "rate": 0.5
+          "inter": 20,
+          "rate": 0.4878048780487805
         },
         "JiangxiSatelliteTV.cn": {
           "filled": 82,
@@ -6612,12 +6666,12 @@
           "rate": 0.4186046511627907
         },
         "FujianSatelliteTV.cn": {
-          "filled": 170,
+          "filled": 171,
           "before": 0,
           "stage": "channel+global",
           "source": "e1:41(东南卫视)",
           "inter": 24,
-          "rate": 0.4528301886792453
+          "rate": 0.47058823529411764
         },
         "GuangxiSatelliteTV.cn": {
           "filled": 182,
@@ -6625,7 +6679,7 @@
           "stage": "channel+global",
           "source": "e1:43(广西卫视)",
           "inter": 24,
-          "rate": 0.43636363636363634
+          "rate": 0.4444444444444444
         },
         "YunnanSatelliteTV.cn": {
           "filled": 142,
@@ -6641,7 +6695,7 @@
           "stage": "channel+global",
           "source": "e1:44(贵州卫视)",
           "inter": 11,
-          "rate": 0.20754716981132076
+          "rate": 0.21153846153846154
         },
         "GansuSatelliteTV.cn": {
           "filled": 206,
@@ -6657,15 +6711,15 @@
           "stage": "channel+global",
           "source": "e1:59(青海卫视)",
           "inter": 17,
-          "rate": 0.4722222222222222
+          "rate": 0.4857142857142857
         },
         "NingxiaSatelliteChannel.cn": {
-          "filled": 188,
+          "filled": 189,
           "before": 0,
           "stage": "channel+global",
           "source": "e1:53(宁夏卫视)",
           "inter": 16,
-          "rate": 0.3404255319148936
+          "rate": 0.34782608695652173
         },
         "XinjiangSatelliteTV.cn": {
           "filled": 130,
@@ -6696,8 +6750,8 @@
           "before": 0,
           "stage": "channel+global",
           "source": "e1:37(旅游卫视)",
-          "inter": 16,
-          "rate": 0.45714285714285713
+          "inter": 15,
+          "rate": 0.4411764705882353
         },
         "XiamenSatelliteTV.cn": {
           "filled": 120,
@@ -6721,7 +6775,7 @@
           "stage": "channel+global",
           "source": "e1:61(兵团卫视)",
           "inter": 14,
-          "rate": 0.4375
+          "rate": 0.45161290322580644
         },
         "KangbaSatelliteTV.cn": {
           "filled": 209,
@@ -6805,7 +6859,7 @@
         },
         "Jade.hk": {
           "filled": 4,
-          "before": 208,
+          "before": 206,
           "stage": "channel",
           "source": "e2:120(翡翠台)",
           "inter": 47,
@@ -6913,7 +6967,7 @@
           "stage": "channel+global",
           "source": "e1:20(CGTN)",
           "inter": 15,
-          "rate": 0.46875
+          "rate": 0.45454545454545453
         },
         "CGTNDocumentary.cn": {
           "filled": 42,
@@ -7124,12 +7178,12 @@
           "rate": 1
         },
         "广东体育.cn": {
-          "filled": 27,
+          "filled": 18,
           "before": 0,
-          "stage": "channel+global",
+          "stage": "channel",
           "source": "e1:1436(广东体育)",
-          "inter": 34,
-          "rate": 0.38636363636363635
+          "inter": 23,
+          "rate": 0.26136363636363635
         },
         "CCTV7.cn": {
           "filled": 39,
@@ -7162,13 +7216,25 @@
           "source": "全局索引"
         },
         "ZhejiangInternationalChannel.cn": {
-          "filled": 6,
+          "filled": 12,
+          "before": 0,
+          "stage": "global",
+          "source": "全局索引"
+        },
+        "ZhejiangEconomicChannel.cn": {
+          "filled": 45,
+          "before": 0,
+          "stage": "global",
+          "source": "全局索引"
+        },
+        "ZhejiangMinshengLeisure.cn": {
+          "filled": 24,
           "before": 0,
           "stage": "global",
           "source": "全局索引"
         },
         "ZhejiangChildrensChannel.cn": {
-          "filled": 1,
+          "filled": 3,
           "before": 0,
           "stage": "global",
           "source": "全局索引"
@@ -7198,7 +7264,7 @@
           "source": "全局索引"
         },
         "MacauTV.hk": {
-          "filled": 12,
+          "filled": 18,
           "before": 0,
           "stage": "global",
           "source": "全局索引"
@@ -7228,13 +7294,13 @@
           "source": "全局索引"
         },
         "CCTVHealth.cn": {
-          "filled": 205,
+          "filled": 207,
           "before": 0,
           "stage": "global",
           "source": "全局索引"
         },
         "CCTVTVGuide.cn": {
-          "filled": 51,
+          "filled": 53,
           "before": 0,
           "stage": "global",
           "source": "全局索引"
@@ -7468,7 +7534,7 @@
           "source": "全局索引"
         },
         "MacauInfo.hk": {
-          "filled": 102,
+          "filled": 95,
           "before": 0,
           "stage": "global",
           "source": "全局索引"
@@ -7492,22 +7558,22 @@
           "source": "e1:20"
         }
       },
-      "coverageBefore": 27.7,
-      "coverageAfter": 53.6
+      "coverageBefore": 27.6,
+      "coverageAfter": 53.3
     },
     "tvmao": {
-      "titles": 961,
-      "filled": 1798
+      "titles": 957,
+      "filled": 1791
     },
     "kbro": {
-      "channels": 251,
+      "channels": 252,
       "aligned": 81,
-      "globalTitles": 2176,
-      "filled": 582,
-      "filledByChannel": 520,
-      "filledByGlobal": 62,
-      "skippedCrossRegion": 47,
-      "promoRemoved": 630,
+      "globalTitles": 2121,
+      "filled": 588,
+      "filledByChannel": 522,
+      "filledByGlobal": 66,
+      "skippedCrossRegion": 48,
+      "promoRemoved": 1011,
       "dates": [
         {
           "ymd": "20261105"
@@ -7662,7 +7728,7 @@
           "id": "ZhejiangSatelliteTV.cn",
           "name": "浙江卫视",
           "status": "none",
-          "mine": 88
+          "mine": 86
         },
         {
           "id": "JiangsuSatelliteTV.cn",
@@ -7698,11 +7764,11 @@
           "id": "GuangdongSatelliteTV.cn",
           "name": "鏡電視新聞台HD",
           "status": "weak",
-          "mine": 49,
+          "mine": 48,
           "nameEq": false,
           "channelId": "1086",
           "inter": 2,
-          "rate": 0.04081632653061224
+          "rate": 0.041666666666666664
         },
         {
           "id": "ShenzhenSatelliteTV.cn",
@@ -7738,7 +7804,7 @@
           "id": "HenanTVSatellite.cn",
           "name": "河南卫视",
           "status": "none",
-          "mine": 39
+          "mine": 37
         },
         {
           "id": "HebeiSatelliteTV.cn",
@@ -7750,7 +7816,7 @@
           "id": "ShanxiSatelliteTV.cn",
           "name": "山西卫视",
           "status": "none",
-          "mine": 43
+          "mine": 42
         },
         {
           "id": "ShaanxiSatelliteTV.cn",
@@ -7774,7 +7840,7 @@
           "id": "HeilongjiangSatelliteTV.cn",
           "name": "黑龙江卫视",
           "status": "none",
-          "mine": 45
+          "mine": 44
         },
         {
           "id": "JiangxiSatelliteTV.cn",
@@ -7786,13 +7852,13 @@
           "id": "FujianSatelliteTV.cn",
           "name": "东南卫视",
           "status": "none",
-          "mine": 54
+          "mine": 52
         },
         {
           "id": "GuangxiSatelliteTV.cn",
           "name": "广西卫视",
           "status": "none",
-          "mine": 55
+          "mine": 54
         },
         {
           "id": "YunnanSatelliteTV.cn",
@@ -7804,7 +7870,7 @@
           "id": "GuizhouSatelliteTV.cn",
           "name": "贵州卫视",
           "status": "none",
-          "mine": 55
+          "mine": 53
         },
         {
           "id": "GansuSatelliteTV.cn",
@@ -7816,13 +7882,13 @@
           "id": "QinghaiSatelliteTV.cn",
           "name": "青海卫视",
           "status": "none",
-          "mine": 64
+          "mine": 63
         },
         {
           "id": "NingxiaSatelliteChannel.cn",
           "name": "宁夏卫视",
           "status": "none",
-          "mine": 52
+          "mine": 51
         },
         {
           "id": "XinjiangSatelliteTV.cn",
@@ -7846,7 +7912,7 @@
           "id": "HainanSatelliteTV.cn",
           "name": "海南卫视",
           "status": "none",
-          "mine": 73
+          "mine": 72
         },
         {
           "id": "XiamenSatelliteTV.cn",
@@ -7864,7 +7930,7 @@
           "id": "BingtuanSatelliteTV.cn",
           "name": "兵团卫视",
           "status": "none",
-          "mine": 32
+          "mine": 31
         },
         {
           "id": "KangbaSatelliteTV.cn",
@@ -7906,7 +7972,7 @@
           "id": "ZhejiangInternationalChannel.cn",
           "name": "浙江国际",
           "status": "none",
-          "mine": 25
+          "mine": 51
         },
         {
           "id": "HunanEconomyChannel.cn",
@@ -7930,13 +7996,13 @@
           "id": "ZhejiangEconomicChannel.cn",
           "name": "浙江经视",
           "status": "none",
-          "mine": 1
+          "mine": 64
         },
         {
           "id": "ZhejiangMinshengLeisure.cn",
           "name": "浙江民生休闲",
           "status": "none",
-          "mine": 1
+          "mine": 80
         },
         {
           "id": "ZhejiangFilmEntertainmentChannel.cn",
@@ -7948,7 +8014,7 @@
           "id": "ZhejiangChildrensChannel.cn",
           "name": "浙江少儿",
           "status": "none",
-          "mine": 68
+          "mine": 122
         },
         {
           "id": "JiangsuCityChannel.cn",
@@ -8010,13 +8076,13 @@
           "id": "TVBPlus.hk",
           "name": "TVB Plus",
           "status": "none",
-          "mine": 80
+          "mine": 76
         },
         {
           "id": "ViuTV.hk",
           "name": "ViuTV",
           "status": "none",
-          "mine": 160
+          "mine": 173
         },
         {
           "id": "ViuTVsix.hk",
@@ -8082,11 +8148,11 @@
           "id": "MacauTV.hk",
           "name": "鏡電視新聞台HD",
           "status": "weak",
-          "mine": 76,
+          "mine": 75,
           "nameEq": false,
           "channelId": "1086",
           "inter": 2,
-          "rate": 0.02631578947368421
+          "rate": 0.02666666666666667
         },
         {
           "id": "TTV.tw",
@@ -8221,8 +8287,8 @@
           "mine": 33,
           "nameEq": true,
           "channelId": "53",
-          "inter": 24,
-          "rate": 0.7272727272727273
+          "inter": 25,
+          "rate": 0.7575757575757576
         },
         {
           "id": "CTVNewsChannel.tw",
@@ -8340,7 +8406,7 @@
           "id": "CCTVHealth.cn",
           "name": "CCTV卫生健康",
           "status": "none",
-          "mine": 107
+          "mine": 109
         },
         {
           "id": "CCTVTVGuide.cn",
@@ -8352,7 +8418,7 @@
           "id": "CGTN.cn",
           "name": "CGTN",
           "status": "none",
-          "mine": 32
+          "mine": 33
         },
         {
           "id": "CGTNFrench.cn",
@@ -8538,7 +8604,7 @@
           "id": "nowNews.hk",
           "name": "NOW新闻",
           "status": "none",
-          "mine": 38
+          "mine": 40
         },
         {
           "id": "nowBusinessNewsChannel.hk",
@@ -8875,8 +8941,8 @@
           "mine": 49,
           "nameEq": true,
           "channelId": "14",
-          "inter": 33,
-          "rate": 0.673469387755102
+          "inter": 32,
+          "rate": 0.6530612244897959
         },
         {
           "id": "公视戏剧.tw",
@@ -9121,8 +9187,8 @@
           "mine": 1378,
           "nameEq": true,
           "channelId": "2219",
-          "inter": 689,
-          "rate": 0.5
+          "inter": 723,
+          "rate": 0.5246734397677794
         },
         {
           "id": "DreamWorks梦工厂动画.tw",
@@ -9170,11 +9236,11 @@
           "id": "Cinemax.tw",
           "name": "CINEMAX HD",
           "status": "ok",
-          "mine": 51,
+          "mine": 53,
           "nameEq": true,
           "channelId": "70",
           "inter": 6,
-          "rate": 0.11764705882352941
+          "rate": 0.11320754716981132
         },
         {
           "id": "DAZN1.uk",
@@ -9183,8 +9249,8 @@
           "mine": 38,
           "nameEq": true,
           "channelId": "1098",
-          "inter": 17,
-          "rate": 0.4473684210526316
+          "inter": 18,
+          "rate": 0.47368421052631576
         },
         {
           "id": "DAZN2.uk",
@@ -9242,7 +9308,7 @@
           "id": "博斯魅力.tw",
           "name": "博斯魅力",
           "status": "none",
-          "mine": 5
+          "mine": 3
         },
         {
           "id": "博斯网球.tw",
@@ -9416,19 +9482,19 @@
           "id": "爱尔达体育Ⅰ.tw",
           "name": "爱尔达体育Ⅰ",
           "status": "none",
-          "mine": 92
+          "mine": 93
         },
         {
           "id": "爱尔达体育Ⅱ.tw",
           "name": "爱尔达体育Ⅱ",
           "status": "none",
-          "mine": 81
+          "mine": 84
         },
         {
           "id": "爱尔达体育Ⅲ.tw",
           "name": "爱尔达体育Ⅲ",
           "status": "none",
-          "mine": 69
+          "mine": 70
         },
         {
           "id": "爱尔达影剧.tw",
@@ -9440,7 +9506,7 @@
           "id": "爱尔达体育Ⅳ.tw",
           "name": "爱尔达体育Ⅳ",
           "status": "none",
-          "mine": 47
+          "mine": 46
         },
         {
           "id": "爱尔达娱乐.tw",
@@ -9682,13 +9748,13 @@
           "id": "DAZN1.uk",
           "name": "DAZN1",
           "channelId": "1098",
-          "filled": 29
+          "filled": 31
         },
         {
           "id": "DAZN2.uk",
           "name": "DAZN2",
           "channelId": "210",
-          "filled": 48
+          "filled": 52
         },
         {
           "id": "DW德国之声.tw",
@@ -9718,7 +9784,7 @@
     },
     "litv": {
       "channels": 23,
-      "filled": 678,
+      "filled": 680,
       "detail": [
         {
           "id": "CCTV1.cn",
@@ -9862,7 +9928,7 @@
           "id": "ZhejiangSatelliteTV.cn",
           "name": "浙江卫视",
           "status": "none",
-          "mine": 88
+          "mine": 86
         },
         {
           "id": "JiangsuSatelliteTV.cn",
@@ -9898,7 +9964,7 @@
           "id": "GuangdongSatelliteTV.cn",
           "name": "广东卫视",
           "status": "none",
-          "mine": 49
+          "mine": 48
         },
         {
           "id": "ShenzhenSatelliteTV.cn",
@@ -9934,7 +10000,7 @@
           "id": "HenanTVSatellite.cn",
           "name": "河南卫视",
           "status": "none",
-          "mine": 39
+          "mine": 37
         },
         {
           "id": "HebeiSatelliteTV.cn",
@@ -9946,7 +10012,7 @@
           "id": "ShanxiSatelliteTV.cn",
           "name": "山西卫视",
           "status": "none",
-          "mine": 43
+          "mine": 42
         },
         {
           "id": "ShaanxiSatelliteTV.cn",
@@ -9970,7 +10036,7 @@
           "id": "HeilongjiangSatelliteTV.cn",
           "name": "黑龙江卫视",
           "status": "none",
-          "mine": 45
+          "mine": 44
         },
         {
           "id": "JiangxiSatelliteTV.cn",
@@ -9982,13 +10048,13 @@
           "id": "FujianSatelliteTV.cn",
           "name": "东南卫视",
           "status": "none",
-          "mine": 54
+          "mine": 52
         },
         {
           "id": "GuangxiSatelliteTV.cn",
           "name": "广西卫视",
           "status": "none",
-          "mine": 55
+          "mine": 54
         },
         {
           "id": "YunnanSatelliteTV.cn",
@@ -10000,7 +10066,7 @@
           "id": "GuizhouSatelliteTV.cn",
           "name": "贵州卫视",
           "status": "none",
-          "mine": 55
+          "mine": 53
         },
         {
           "id": "GansuSatelliteTV.cn",
@@ -10012,13 +10078,13 @@
           "id": "QinghaiSatelliteTV.cn",
           "name": "青海卫视",
           "status": "none",
-          "mine": 64
+          "mine": 63
         },
         {
           "id": "NingxiaSatelliteChannel.cn",
           "name": "宁夏卫视",
           "status": "none",
-          "mine": 52
+          "mine": 51
         },
         {
           "id": "XinjiangSatelliteTV.cn",
@@ -10042,7 +10108,7 @@
           "id": "HainanSatelliteTV.cn",
           "name": "海南卫视",
           "status": "none",
-          "mine": 73
+          "mine": 72
         },
         {
           "id": "XiamenSatelliteTV.cn",
@@ -10060,7 +10126,7 @@
           "id": "BingtuanSatelliteTV.cn",
           "name": "兵团卫视",
           "status": "none",
-          "mine": 32
+          "mine": 31
         },
         {
           "id": "KangbaSatelliteTV.cn",
@@ -10102,7 +10168,7 @@
           "id": "ZhejiangInternationalChannel.cn",
           "name": "浙江国际",
           "status": "none",
-          "mine": 25
+          "mine": 51
         },
         {
           "id": "HunanEconomyChannel.cn",
@@ -10126,13 +10192,13 @@
           "id": "ZhejiangEconomicChannel.cn",
           "name": "浙江经视",
           "status": "none",
-          "mine": 1
+          "mine": 64
         },
         {
           "id": "ZhejiangMinshengLeisure.cn",
           "name": "浙江民生休闲",
           "status": "none",
-          "mine": 1
+          "mine": 80
         },
         {
           "id": "ZhejiangFilmEntertainmentChannel.cn",
@@ -10144,7 +10210,7 @@
           "id": "ZhejiangChildrensChannel.cn",
           "name": "浙江少儿",
           "status": "none",
-          "mine": 68
+          "mine": 122
         },
         {
           "id": "JiangsuCityChannel.cn",
@@ -10198,13 +10264,13 @@
           "id": "TVBPlus.hk",
           "name": "TVB Plus",
           "status": "none",
-          "mine": 80
+          "mine": 76
         },
         {
           "id": "ViuTV.hk",
           "name": "ViuTV",
           "status": "none",
-          "mine": 160
+          "mine": 173
         },
         {
           "id": "ViuTVsix.hk",
@@ -10270,7 +10336,7 @@
           "id": "MacauTV.hk",
           "name": "澳门电视台",
           "status": "none",
-          "mine": 76
+          "mine": 75
         },
         {
           "id": "TTV.tw",
@@ -10313,8 +10379,8 @@
           "nameEq": false,
           "related": false,
           "channelId": "4gtv-4gtv155",
-          "inter": 22,
-          "rate": 0.7333333333333333
+          "inter": 23,
+          "rate": 0.7666666666666667
         },
         {
           "id": "PTS.tw",
@@ -10402,9 +10468,9 @@
           "mine": 33,
           "nameEq": true,
           "channelId": "litv-ftv13",
-          "inter": 28,
-          "rate": 0.8484848484848485,
-          "descCount": 31
+          "inter": 27,
+          "rate": 0.8181818181818182,
+          "descCount": 30
         },
         {
           "id": "CTVNewsChannel.tw",
@@ -10413,8 +10479,8 @@
           "mine": 9,
           "nameEq": true,
           "channelId": "4gtv-4gtv074",
-          "inter": 6,
-          "rate": 0.6666666666666666,
+          "inter": 7,
+          "rate": 0.7777777777777778,
           "descCount": 11
         },
         {
@@ -10521,7 +10587,7 @@
           "id": "CCTVHealth.cn",
           "name": "CCTV卫生健康",
           "status": "none",
-          "mine": 107
+          "mine": 109
         },
         {
           "id": "CCTVTVGuide.cn",
@@ -10533,7 +10599,7 @@
           "id": "CGTN.cn",
           "name": "CGTN",
           "status": "none",
-          "mine": 32
+          "mine": 33
         },
         {
           "id": "CGTNFrench.cn",
@@ -10719,7 +10785,7 @@
           "id": "nowNews.hk",
           "name": "NOW新闻",
           "status": "none",
-          "mine": 38
+          "mine": 40
         },
         {
           "id": "nowBusinessNewsChannel.hk",
@@ -11363,7 +11429,7 @@
           "id": "Cinemax.tw",
           "name": "Cinemax",
           "status": "none",
-          "mine": 51
+          "mine": 53
         },
         {
           "id": "DAZN1.uk",
@@ -11411,11 +11477,11 @@
           "id": "博斯魅力.tw",
           "name": "博斯魅力台",
           "status": "ok",
-          "mine": 5,
+          "mine": 3,
           "nameEq": true,
           "channelId": "litv-xinchuang04",
-          "inter": 3,
-          "rate": 0.6,
+          "inter": 2,
+          "rate": 0.6666666666666666,
           "descCount": 2
         },
         {
@@ -11560,19 +11626,19 @@
           "id": "爱尔达体育Ⅰ.tw",
           "name": "爱尔达体育Ⅰ",
           "status": "none",
-          "mine": 92
+          "mine": 93
         },
         {
           "id": "爱尔达体育Ⅱ.tw",
           "name": "爱尔达体育Ⅱ",
           "status": "none",
-          "mine": 81
+          "mine": 84
         },
         {
           "id": "爱尔达体育Ⅲ.tw",
           "name": "爱尔达体育Ⅲ",
           "status": "none",
-          "mine": 69
+          "mine": 70
         },
         {
           "id": "爱尔达影剧.tw",
@@ -11584,7 +11650,7 @@
           "id": "爱尔达体育Ⅳ.tw",
           "name": "爱尔达体育Ⅳ",
           "status": "none",
-          "mine": 47
+          "mine": 46
         },
         {
           "id": "爱尔达娱乐.tw",
@@ -11752,15 +11818,15 @@
           "filled": 5,
           "litvChannel": "litv-ftv13",
           "litvName": "民視新聞台",
-          "inter": 28,
-          "rate": 0.8484848484848485
+          "inter": 27,
+          "rate": 0.8181818181818182
         },
         "CTVNewsChannel.tw": {
-          "filled": 42,
+          "filled": 44,
           "litvChannel": "4gtv-4gtv074",
           "litvName": "中視新聞",
-          "inter": 6,
-          "rate": 0.6666666666666666
+          "inter": 7,
+          "rate": 0.7777777777777778
         },
         "TTVNews.tw": {
           "filled": 14,
@@ -12719,8 +12785,8 @@
         "20261110": 40,
         "20261111": 43
       },
-      "withDesc": 217,
-      "descRate": 76,
+      "withDesc": 213,
+      "descRate": 75,
       "withCategory": 0,
       "uniqTitles": 128,
       "first": "20261105000000 +0800",
@@ -12768,8 +12834,8 @@
         "20261110": 42,
         "20261111": 42
       },
-      "withDesc": 224,
-      "descRate": 77,
+      "withDesc": 220,
+      "descRate": 75,
       "withCategory": 0,
       "uniqTitles": 113,
       "first": "20261105000000 +0800",
@@ -12813,12 +12879,12 @@
         "20261110": 31,
         "20261111": 35
       },
-      "withDesc": 174,
+      "withDesc": 173,
       "descRate": 67,
       "withCategory": 0,
       "uniqTitles": 75,
       "first": "20261105000600 +0800",
-      "last": "20261112000000 +0800",
+      "last": "20261112001500 +0800",
       "usedSource": "epgpw:545960(湖南卫视)",
       "matchConfidence": "exact",
       "matchedSourceName": "湖南卫视",
@@ -12929,12 +12995,12 @@
         "20261110": 40,
         "20261111": 41
       },
-      "withDesc": 181,
-      "descRate": 62,
+      "withDesc": 177,
+      "descRate": 61,
       "withCategory": 0,
       "uniqTitles": 151,
       "first": "20261105001600 +0800",
-      "last": "20261112002300 +0800",
+      "last": "20261112002200 +0800",
       "usedSource": "epgpw:545959(东方卫视)",
       "matchConfidence": "exact",
       "matchedSourceName": "东方卫视",
@@ -13006,10 +13072,10 @@
         "20261110": 39,
         "20261111": 34
       },
-      "withDesc": 161,
-      "descRate": 67,
+      "withDesc": 160,
+      "descRate": 66,
       "withCategory": 0,
-      "uniqTitles": 88,
+      "uniqTitles": 89,
       "first": "20261105000700 +0800",
       "last": "20261112000100 +0800",
       "usedSource": "epgpw:545966(安徽卫视)",
@@ -13044,12 +13110,12 @@
         "20261110": 33,
         "20261111": 36
       },
-      "withDesc": 192,
+      "withDesc": 191,
       "descRate": 80,
       "withCategory": 0,
-      "uniqTitles": 60,
+      "uniqTitles": 61,
       "first": "20261105001600 +0800",
-      "last": "20261112001600 +0800",
+      "last": "20261112042100 +0800",
       "usedSource": "epgpw:545961(山东卫视)",
       "matchConfidence": "exact",
       "matchedSourceName": "山东卫视",
@@ -13082,7 +13148,7 @@
         "20261110": 33,
         "20261111": 35
       },
-      "withDesc": 153,
+      "withDesc": 154,
       "descRate": 72,
       "withCategory": 0,
       "uniqTitles": 102,
@@ -13120,7 +13186,7 @@
         "20261110": 27,
         "20261111": 25
       },
-      "withDesc": 111,
+      "withDesc": 110,
       "descRate": 54,
       "withCategory": 0,
       "uniqTitles": 75,
@@ -13163,7 +13229,7 @@
       "withCategory": 0,
       "uniqTitles": 81,
       "first": "20261105000000 +0800",
-      "last": "20261112001500 +0800",
+      "last": "20261112000300 +0800",
       "usedSource": "epgpw:545981(天津卫视)",
       "matchConfidence": "exact",
       "matchedSourceName": "天津卫视",
@@ -13261,7 +13327,7 @@
         "湖北卫视（高清）"
       ],
       "logo": "",
-      "count": 301,
+      "count": 302,
       "days": 7,
       "perDay": {
         "20261105": 47,
@@ -13270,14 +13336,14 @@
         "20261108": 60,
         "20261109": 34,
         "20261110": 35,
-        "20261111": 31
+        "20261111": 32
       },
-      "withDesc": 186,
+      "withDesc": 187,
       "descRate": 62,
       "withCategory": 0,
       "uniqTitles": 100,
       "first": "20261105004700 +0800",
-      "last": "20261112004200 +0800",
+      "last": "20261112001700 +0800",
       "usedSource": "epgpw:545987(湖北卫视)",
       "matchConfidence": "exact",
       "matchedSourceName": "湖北卫视",
@@ -13298,7 +13364,7 @@
         "河南卫视（高清）"
       ],
       "logo": "",
-      "count": 254,
+      "count": 252,
       "days": 7,
       "perDay": {
         "20261105": 36,
@@ -13307,14 +13373,14 @@
         "20261108": 37,
         "20261109": 37,
         "20261110": 35,
-        "20261111": 37
+        "20261111": 35
       },
-      "withDesc": 188,
+      "withDesc": 187,
       "descRate": 74,
       "withCategory": 0,
-      "uniqTitles": 73,
+      "uniqTitles": 71,
       "first": "20261105000700 +0800",
-      "last": "20261112000700 +0800",
+      "last": "20261112001200 +0800",
       "usedSource": "epgpw:545985(河南卫视)",
       "matchConfidence": "exact",
       "matchedSourceName": "河南卫视",
@@ -13373,7 +13439,7 @@
         "山西卫视（高清）"
       ],
       "logo": "",
-      "count": 196,
+      "count": 197,
       "days": 7,
       "perDay": {
         "20261105": 31,
@@ -13382,14 +13448,14 @@
         "20261108": 29,
         "20261109": 29,
         "20261110": 27,
-        "20261111": 27
+        "20261111": 28
       },
-      "withDesc": 158,
+      "withDesc": 159,
       "descRate": 81,
       "withCategory": 0,
-      "uniqTitles": 53,
+      "uniqTitles": 54,
       "first": "20261105002000 +0800",
-      "last": "20261112020000 +0800",
+      "last": "20261112000100 +0800",
       "usedSource": "epgpw:545977(山西卫视)",
       "matchConfidence": "exact",
       "matchedSourceName": "山西卫视",
@@ -13427,7 +13493,7 @@
       "withCategory": 0,
       "uniqTitles": 47,
       "first": "20261105005100 +0800",
-      "last": "20261112003600 +0800",
+      "last": "20261112002900 +0800",
       "usedSource": "epgpw:545978(陕西卫视)",
       "matchConfidence": "exact",
       "matchedSourceName": "陕西卫视",
@@ -13534,10 +13600,10 @@
         "20261110": 33,
         "20261111": 30
       },
-      "withDesc": 139,
+      "withDesc": 137,
       "descRate": 60,
       "withCategory": 0,
-      "uniqTitles": 52,
+      "uniqTitles": 51,
       "first": "20261105002900 +0800",
       "last": "20261112002300 +0800",
       "usedSource": "epgpw:545986(黑龙江卫视)",
@@ -13610,12 +13676,12 @@
         "20261110": 43,
         "20261111": 35
       },
-      "withDesc": 170,
-      "descRate": 72,
+      "withDesc": 171,
+      "descRate": 73,
       "withCategory": 0,
-      "uniqTitles": 78,
+      "uniqTitles": 77,
       "first": "20261105001500 +0800",
-      "last": "20261112001500 +0800",
+      "last": "20261112000900 +0800",
       "usedSource": "epgpw:545965(东南卫视)",
       "matchConfidence": "exact",
       "matchedSourceName": "东南卫视",
@@ -13637,7 +13703,7 @@
         "广西卫视（高清）"
       ],
       "logo": "",
-      "count": 230,
+      "count": 231,
       "days": 7,
       "perDay": {
         "20261105": 36,
@@ -13646,14 +13712,14 @@
         "20261108": 32,
         "20261109": 36,
         "20261110": 34,
-        "20261111": 28
+        "20261111": 29
       },
       "withDesc": 185,
       "descRate": 80,
       "withCategory": 0,
-      "uniqTitles": 82,
+      "uniqTitles": 83,
       "first": "20261105000900 +0800",
-      "last": "20261112000900 +0800",
+      "last": "20261112001500 +0800",
       "usedSource": "epgpw:545982(广西卫视)",
       "matchConfidence": "exact",
       "matchedSourceName": "广西卫视",
@@ -13709,7 +13775,7 @@
         "贵州卫视（高清）"
       ],
       "logo": "",
-      "count": 211,
+      "count": 213,
       "days": 7,
       "perDay": {
         "20261105": 32,
@@ -13718,12 +13784,12 @@
         "20261108": 29,
         "20261109": 37,
         "20261110": 36,
-        "20261111": 29
+        "20261111": 31
       },
-      "withDesc": 167,
-      "descRate": 79,
+      "withDesc": 166,
+      "descRate": 78,
       "withCategory": 0,
-      "uniqTitles": 98,
+      "uniqTitles": 99,
       "first": "20261105000000 +0800",
       "last": "20261112000000 +0800",
       "usedSource": "epgpw:545983(贵州卫视)",
@@ -13783,7 +13849,7 @@
         "青海卫视（高清）"
       ],
       "logo": "",
-      "count": 204,
+      "count": 203,
       "days": 7,
       "perDay": {
         "20261105": 33,
@@ -13792,14 +13858,14 @@
         "20261108": 32,
         "20261109": 29,
         "20261110": 26,
-        "20261111": 25
+        "20261111": 24
       },
       "withDesc": 174,
-      "descRate": 85,
+      "descRate": 86,
       "withCategory": 0,
-      "uniqTitles": 69,
+      "uniqTitles": 68,
       "first": "20261105010400 +0800",
-      "last": "20261112050000 +0800",
+      "last": "20261112045700 +0800",
       "usedSource": "epgpw:545972(青海卫视)",
       "matchConfidence": "exact",
       "matchedSourceName": "青海卫视",
@@ -13831,12 +13897,12 @@
         "20261110": 36,
         "20261111": 42
       },
-      "withDesc": 188,
-      "descRate": 68,
+      "withDesc": 189,
+      "descRate": 69,
       "withCategory": 0,
-      "uniqTitles": 96,
+      "uniqTitles": 95,
       "first": "20261105001000 +0800",
-      "last": "20261112005600 +0800",
+      "last": "20261112002900 +0800",
       "usedSource": "epgpw:545971(宁夏卫视)",
       "matchConfidence": "exact",
       "matchedSourceName": "宁夏卫视",
@@ -13873,7 +13939,7 @@
       "withCategory": 0,
       "uniqTitles": 78,
       "first": "20261105003200 +0800",
-      "last": "20261112001900 +0800",
+      "last": "20261112001800 +0800",
       "usedSource": "epgpw:545991(新疆卫视)",
       "matchConfidence": "exact",
       "matchedSourceName": "新疆卫视",
@@ -13910,7 +13976,7 @@
       "withCategory": 0,
       "uniqTitles": 99,
       "first": "20261105000400 +0800",
-      "last": "20261112000400 +0800",
+      "last": "20261112000900 +0800",
       "usedSource": "epgpw:545990(西藏卫视)",
       "matchConfidence": "exact",
       "matchedSourceName": "西藏卫视",
@@ -13983,7 +14049,7 @@
       "withCategory": 0,
       "uniqTitles": 89,
       "first": "20261105001500 +0800",
-      "last": "20261112001500 +0800",
+      "last": "20261112001000 +0800",
       "usedSource": "epgpw:545969(海南卫视)",
       "matchConfidence": "exact",
       "matchedSourceName": "海南卫视",
@@ -14077,7 +14143,7 @@
       "group": "satellite",
       "aliases": [],
       "logo": "",
-      "count": 214,
+      "count": 213,
       "days": 7,
       "perDay": {
         "20261105": 29,
@@ -14086,12 +14152,12 @@
         "20261108": 29,
         "20261109": 32,
         "20261110": 29,
-        "20261111": 32
+        "20261111": 31
       },
       "withDesc": 146,
-      "descRate": 68,
+      "descRate": 69,
       "withCategory": 0,
-      "uniqTitles": 78,
+      "uniqTitles": 77,
       "first": "20261105010900 +0800",
       "last": "20261112012000 +0800",
       "usedSource": "epgpw:545992(兵团卫视)",
@@ -14322,23 +14388,23 @@
         "浙江国际频道"
       ],
       "logo": "http://oss.cztv.com/ucc/20200123/ad3c07c7910e475a8631e4cff5a9431c.png",
-      "count": 78,
-      "days": 1,
+      "count": 152,
+      "days": 2,
       "perDay": {
         "20261105": 78,
-        "20261106": 0,
+        "20261106": 74,
         "20261107": 0,
         "20261108": 0,
         "20261109": 0,
         "20261110": 0,
         "20261111": 0
       },
-      "withDesc": 6,
+      "withDesc": 12,
       "descRate": 8,
       "withCategory": 0,
-      "uniqTitles": 25,
+      "uniqTitles": 51,
       "first": "20261105000000 +0800",
-      "last": "20261106000000 +0800",
+      "last": "20261107000000 +0800",
       "usedSource": "cztv:110(浙江国际)",
       "matchConfidence": "exact",
       "matchedSourceName": "浙江国际",
@@ -14514,23 +14580,23 @@
         "浙江经济频道"
       ],
       "logo": "",
-      "count": 24,
-      "days": 1,
+      "count": 134,
+      "days": 2,
       "perDay": {
         "20261105": 24,
-        "20261106": 0,
+        "20261106": 110,
         "20261107": 0,
         "20261108": 0,
         "20261109": 0,
         "20261110": 0,
         "20261111": 0
       },
-      "withDesc": 0,
-      "descRate": 0,
+      "withDesc": 45,
+      "descRate": 34,
       "withCategory": 0,
-      "uniqTitles": 1,
+      "uniqTitles": 65,
       "first": "20261105000000 +0800",
-      "last": "20261106000000 +0800",
+      "last": "20261107000000 +0800",
       "usedSource": "epgpw:539780(浙江经视)",
       "matchConfidence": "exact",
       "matchedSourceName": "浙江经视",
@@ -14548,23 +14614,23 @@
         "浙江民生"
       ],
       "logo": "",
-      "count": 24,
-      "days": 1,
+      "count": 137,
+      "days": 2,
       "perDay": {
         "20261105": 24,
-        "20261106": 0,
+        "20261106": 113,
         "20261107": 0,
         "20261108": 0,
         "20261109": 0,
         "20261110": 0,
         "20261111": 0
       },
-      "withDesc": 0,
-      "descRate": 0,
+      "withDesc": 24,
+      "descRate": 18,
       "withCategory": 0,
-      "uniqTitles": 1,
+      "uniqTitles": 87,
       "first": "20261105000000 +0800",
-      "last": "20261106000000 +0800",
+      "last": "20261107000000 +0800",
       "usedSource": "epgpw:570490(浙江民生)",
       "matchConfidence": "override",
       "matchedSourceName": "浙江民生",
@@ -14613,23 +14679,23 @@
         "浙江少儿频道"
       ],
       "logo": "http://oss.cztv.com/ucc/20200123/312d8aea2f2a4f678b084d2bd8dbcb05.png",
-      "count": 189,
-      "days": 1,
+      "count": 385,
+      "days": 2,
       "perDay": {
         "20261105": 189,
-        "20261106": 0,
+        "20261106": 196,
         "20261107": 0,
         "20261108": 0,
         "20261109": 0,
         "20261110": 0,
         "20261111": 0
       },
-      "withDesc": 1,
+      "withDesc": 3,
       "descRate": 1,
       "withCategory": 0,
-      "uniqTitles": 68,
+      "uniqTitles": 122,
       "first": "20261105000000 +0800",
-      "last": "20261106000044 +0800",
+      "last": "20261107000000 +0800",
       "usedSource": "cztv:108(浙江少儿频道)",
       "matchConfidence": "exact",
       "matchedSourceName": "浙江少儿频道",
@@ -14772,19 +14838,19 @@
         "无线翡翠台"
       ],
       "logo": "",
-      "count": 304,
+      "count": 309,
       "days": 7,
       "perDay": {
         "20261105": 46,
         "20261106": 47,
         "20261107": 33,
         "20261108": 48,
-        "20261109": 44,
-        "20261110": 43,
-        "20261111": 43
+        "20261109": 45,
+        "20261110": 46,
+        "20261111": 44
       },
-      "withDesc": 212,
-      "descRate": 70,
+      "withDesc": 210,
+      "descRate": 68,
       "withCategory": 0,
       "uniqTitles": 132,
       "first": "20261105010000 +0800",
@@ -14908,21 +14974,21 @@
         "无线Plus"
       ],
       "logo": "",
-      "count": 241,
+      "count": 243,
       "days": 7,
       "perDay": {
         "20261105": 34,
         "20261106": 43,
-        "20261107": 27,
+        "20261107": 29,
         "20261108": 24,
         "20261109": 41,
         "20261110": 40,
         "20261111": 32
       },
-      "withDesc": 195,
+      "withDesc": 197,
       "descRate": 81,
       "withCategory": 0,
-      "uniqTitles": 85,
+      "uniqTitles": 81,
       "first": "20261105000500 +0800",
       "last": "20261112000500 +0800",
       "usedSource": "webncode:tvb_j2(TVB Plus)",
@@ -14943,10 +15009,10 @@
         "ViuTV99"
       ],
       "logo": "",
-      "count": 230,
+      "count": 248,
       "days": 7,
       "perDay": {
-        "20261105": 18,
+        "20261105": 36,
         "20261106": 36,
         "20261107": 26,
         "20261108": 40,
@@ -14954,11 +15020,11 @@
         "20261110": 36,
         "20261111": 36
       },
-      "withDesc": 166,
-      "descRate": 72,
+      "withDesc": 181,
+      "descRate": 73,
       "withCategory": 0,
-      "uniqTitles": 160,
-      "first": "20261105133000 +0800",
+      "uniqTitles": 173,
+      "first": "20261105003000 +0800",
       "last": "20261112003000 +0800",
       "usedSource": "nowplayer:099(ViuTV)",
       "matchConfidence": "exact",
@@ -14995,7 +15061,7 @@
       "withCategory": 0,
       "uniqTitles": 128,
       "first": "20261105005500 +0800",
-      "last": "20261112000000 +0800",
+      "last": "20261112001500 +0800",
       "usedSource": "webncode:viutv_96(ViuTVsix)",
       "matchConfidence": "exact",
       "matchedSourceName": "ViuTVsix",
@@ -15176,15 +15242,15 @@
         "奇妙电视"
       ],
       "logo": "",
-      "count": 276,
+      "count": 278,
       "days": 7,
       "perDay": {
         "20261105": 38,
         "20261106": 41,
         "20261107": 42,
         "20261108": 39,
-        "20261109": 39,
-        "20261110": 38,
+        "20261109": 40,
+        "20261110": 39,
         "20261111": 39
       },
       "withDesc": 62,
@@ -15192,7 +15258,7 @@
       "withCategory": 0,
       "uniqTitles": 64,
       "first": "20261105000000 +0800",
-      "last": "20261112000000 +0800",
+      "last": "20261112004500 +0800",
       "usedSource": "webncode:fantv_77(HOY TV)",
       "matchConfidence": "exact",
       "matchedSourceName": "HOY TV",
@@ -15327,10 +15393,10 @@
         "20261110": 45,
         "20261111": 43
       },
-      "withDesc": 102,
-      "descRate": 34,
+      "withDesc": 107,
+      "descRate": 35,
       "withCategory": 0,
-      "uniqTitles": 77,
+      "uniqTitles": 76,
       "first": "20261105070000 +0800",
       "last": "20261112000100 +0800",
       "usedSource": "tdm:1(澳視澳門)",
@@ -15907,8 +15973,8 @@
         "20261110": 24,
         "20261111": 24
       },
-      "withDesc": 166,
-      "descRate": 99,
+      "withDesc": 168,
+      "descRate": 100,
       "withCategory": 0,
       "uniqTitles": 9,
       "first": "20261105000000 +0800",
@@ -15932,23 +15998,23 @@
         "华视新闻"
       ],
       "logo": "",
-      "count": 89,
-      "days": 5,
+      "count": 125,
+      "days": 6,
       "perDay": {
         "20261105": 14,
         "20261106": 22,
         "20261107": 22,
         "20261108": 23,
-        "20261109": 8,
-        "20261110": 0,
+        "20261109": 23,
+        "20261110": 21,
         "20261111": 0
       },
-      "withDesc": 89,
+      "withDesc": 125,
       "descRate": 100,
       "withCategory": 0,
       "uniqTitles": 22,
       "first": "20261105090000 +0800",
-      "last": "20261109080000 +0800",
+      "last": "20261110235500 +0800",
       "usedSource": "litv:4gtv-4gtv052(華視新聞)",
       "matchConfidence": "exact",
       "matchedSourceName": "華視新聞",
@@ -16435,21 +16501,21 @@
         "卫生健康"
       ],
       "logo": "",
-      "count": 312,
+      "count": 314,
       "days": 7,
       "perDay": {
         "20261105": 43,
         "20261106": 48,
         "20261107": 44,
         "20261108": 43,
-        "20261109": 42,
+        "20261109": 44,
         "20261110": 45,
         "20261111": 47
       },
-      "withDesc": 205,
+      "withDesc": 207,
       "descRate": 66,
       "withCategory": 0,
-      "uniqTitles": 108,
+      "uniqTitles": 110,
       "first": "20261105003000 +0800",
       "last": "20261112003000 +0800",
       "usedSource": "epgpw:539738(卫生健康)",
@@ -16468,18 +16534,18 @@
         "电视指南"
       ],
       "logo": "",
-      "count": 868,
+      "count": 880,
       "days": 7,
       "perDay": {
         "20261105": 125,
         "20261106": 121,
         "20261107": 126,
         "20261108": 125,
-        "20261109": 119,
+        "20261109": 131,
         "20261110": 126,
         "20261111": 126
       },
-      "withDesc": 51,
+      "withDesc": 53,
       "descRate": 6,
       "withCategory": 0,
       "uniqTitles": 110,
@@ -16513,7 +16579,7 @@
       "withDesc": 259,
       "descRate": 73,
       "withCategory": 0,
-      "uniqTitles": 32,
+      "uniqTitles": 33,
       "first": "20261105000000 +0800",
       "last": "20261112000000 +0800",
       "usedSource": "tvmao:CCTV-CCTV19(CGTN)",
@@ -17002,7 +17068,7 @@
       "withCategory": 0,
       "uniqTitles": 49,
       "first": "20261105011500 +0800",
-      "last": "20261112111000 +0800",
+      "last": "20261112115000 +0800",
       "usedSource": "epgpw:544272(魅力足球)",
       "matchConfidence": "exact",
       "matchedSourceName": "魅力足球",
@@ -17455,10 +17521,10 @@
         "Now新聞"
       ],
       "logo": "",
-      "count": 356,
+      "count": 379,
       "days": 7,
       "perDay": {
-        "20261105": 29,
+        "20261105": 52,
         "20261106": 52,
         "20261107": 60,
         "20261108": 59,
@@ -17466,11 +17532,11 @@
         "20261110": 52,
         "20261111": 52
       },
-      "withDesc": 354,
+      "withDesc": 377,
       "descRate": 99,
       "withCategory": 0,
-      "uniqTitles": 59,
-      "first": "20261105133000 +0800",
+      "uniqTitles": 61,
+      "first": "20261105000000 +0800",
       "last": "20261112000000 +0800",
       "usedSource": "nowplayer:332(Now新聞台)",
       "matchConfidence": "exact",
@@ -17555,10 +17621,10 @@
         "now直播"
       ],
       "logo": "",
-      "count": 82,
+      "count": 86,
       "days": 7,
       "perDay": {
-        "20261105": 6,
+        "20261105": 10,
         "20261106": 10,
         "20261107": 11,
         "20261108": 18,
@@ -17570,7 +17636,7 @@
       "descRate": 0,
       "withCategory": 0,
       "uniqTitles": 8,
-      "first": "20261105120000 +0800",
+      "first": "20261105000000 +0800",
       "last": "20261112000000 +0800",
       "usedSource": "nowplayer:331(Now直播台)",
       "matchConfidence": "exact",
@@ -19928,10 +19994,10 @@
         "CINEMAX"
       ],
       "logo": "",
-      "count": 85,
+      "count": 93,
       "days": 7,
       "perDay": {
-        "20261105": 6,
+        "20261105": 14,
         "20261106": 13,
         "20261107": 14,
         "20261108": 13,
@@ -19939,11 +20005,11 @@
         "20261110": 12,
         "20261111": 14
       },
-      "withDesc": 85,
+      "withDesc": 93,
       "descRate": 100,
       "withCategory": 0,
-      "uniqTitles": 51,
-      "first": "20261105125000 +0800",
+      "uniqTitles": 53,
+      "first": "20261105000000 +0800",
       "last": "20261112013000 +0800",
       "usedSource": "nowplayer:113(CINEMAX)",
       "matchConfidence": "exact",
@@ -19974,8 +20040,8 @@
         "20261110": 15,
         "20261111": 15
       },
-      "withDesc": 51,
-      "descRate": 44,
+      "withDesc": 53,
+      "descRate": 46,
       "withCategory": 0,
       "uniqTitles": 38,
       "first": "20261105000000 +0800",
@@ -20005,8 +20071,8 @@
         "20261110": 16,
         "20261111": 13
       },
-      "withDesc": 56,
-      "descRate": 53,
+      "withDesc": 60,
+      "descRate": 57,
       "withCategory": 0,
       "uniqTitles": 24,
       "first": "20261105000000 +0800",
@@ -20194,21 +20260,21 @@
         "博斯魅力HD"
       ],
       "logo": "",
-      "count": 43,
+      "count": 46,
       "days": 7,
       "perDay": {
         "20261105": 6,
         "20261106": 8,
         "20261107": 9,
         "20261108": 10,
-        "20261109": 6,
-        "20261110": 2,
-        "20261111": 2
+        "20261109": 8,
+        "20261110": 4,
+        "20261111": 1
       },
-      "withDesc": 36,
-      "descRate": 84,
+      "withDesc": 45,
+      "descRate": 98,
       "withCategory": 0,
-      "uniqTitles": 5,
+      "uniqTitles": 3,
       "first": "20261105080000 +0800",
       "last": "20261112000000 +0800",
       "usedSource": "litv:litv-xinchuang04(博斯魅力台)",
@@ -20837,7 +20903,7 @@
         "愛爾達體育1台"
       ],
       "logo": "",
-      "count": 118,
+      "count": 120,
       "days": 8,
       "perDay": {
         "20261104": 1,
@@ -20847,12 +20913,12 @@
         "20261108": 14,
         "20261109": 18,
         "20261110": 14,
-        "20261111": 16
+        "20261111": 18
       },
       "withDesc": 0,
       "descRate": 0,
       "withCategory": 0,
-      "uniqTitles": 93,
+      "uniqTitles": 94,
       "first": "20261104225500 +0800",
       "last": "20261112000000 +0800",
       "usedSource": "elta:101(體育 1 台)",
@@ -20886,7 +20952,7 @@
       "withDesc": 0,
       "descRate": 0,
       "withCategory": 0,
-      "uniqTitles": 81,
+      "uniqTitles": 84,
       "first": "20261105000000 +0800",
       "last": "20261112003000 +0800",
       "usedSource": "elta:105(體育 2 台)",
@@ -20906,22 +20972,23 @@
         "愛爾達體育3台"
       ],
       "logo": "",
-      "count": 97,
-      "days": 7,
+      "count": 99,
+      "days": 8,
       "perDay": {
+        "20261104": 1,
         "20261105": 11,
         "20261106": 14,
         "20261107": 10,
         "20261108": 14,
         "20261109": 16,
-        "20261110": 14,
+        "20261110": 15,
         "20261111": 18
       },
       "withDesc": 0,
       "descRate": 0,
       "withCategory": 0,
-      "uniqTitles": 69,
-      "first": "20261105000000 +0800",
+      "uniqTitles": 70,
+      "first": "20261104190000 +0800",
       "last": "20261112012500 +0800",
       "usedSource": "elta:110(體育 3 台)",
       "matchConfidence": "override",
@@ -20973,11 +21040,11 @@
         "愛爾達體育4台"
       ],
       "logo": "",
-      "count": 78,
+      "count": 77,
       "days": 8,
       "perDay": {
         "20261104": 1,
-        "20261105": 11,
+        "20261105": 10,
         "20261106": 12,
         "20261107": 13,
         "20261108": 11,
@@ -20988,7 +21055,7 @@
       "withDesc": 0,
       "descRate": 0,
       "withCategory": 0,
-      "uniqTitles": 47,
+      "uniqTitles": 46,
       "first": "20261104222500 +0800",
       "last": "20261112000000 +0800",
       "usedSource": "elta:115(體育 4 台)",
@@ -21158,21 +21225,21 @@
       "group": "local",
       "aliases": [],
       "logo": "",
-      "count": 159,
+      "count": 161,
       "days": 7,
       "perDay": {
         "20261105": 23,
-        "20261106": 21,
-        "20261107": 20,
+        "20261106": 22,
+        "20261107": 21,
         "20261108": 20,
         "20261109": 27,
         "20261110": 21,
         "20261111": 27
       },
-      "withDesc": 27,
-      "descRate": 17,
+      "withDesc": 18,
+      "descRate": 11,
       "withCategory": 0,
-      "uniqTitles": 96,
+      "uniqTitles": 95,
       "first": "20261105002500 +0800",
       "last": "20261112000000 +0800",
       "usedSource": "tvsou:64e4e458(广东体育)",
@@ -21652,7 +21719,7 @@
         "澳門資訊"
       ],
       "logo": "",
-      "count": 344,
+      "count": 330,
       "days": 7,
       "perDay": {
         "20261105": 43,
@@ -21660,11 +21727,11 @@
         "20261107": 54,
         "20261108": 53,
         "20261109": 49,
-        "20261110": 48,
+        "20261110": 34,
         "20261111": 49
       },
-      "withDesc": 119,
-      "descRate": 35,
+      "withDesc": 112,
+      "descRate": 34,
       "withCategory": 0,
       "uniqTitles": 58,
       "first": "20261105065900 +0800",
@@ -21716,7 +21783,7 @@
         "澳门澳门"
       ],
       "logo": "",
-      "count": 339,
+      "count": 334,
       "days": 7,
       "perDay": {
         "20261105": 51,
@@ -21724,7 +21791,7 @@
         "20261107": 46,
         "20261108": 52,
         "20261109": 49,
-        "20261110": 50,
+        "20261110": 45,
         "20261111": 46
       },
       "withDesc": 47,
