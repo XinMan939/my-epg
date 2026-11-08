@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tv generator-info-name="my-epg" generator-info-url="https://github.com/" date="20261108130927 +0800">
+<tv generator-info-name="my-epg" generator-info-url="https://github.com/" date="20261108205950 +0800">
   <channel id="CCTV1">
     <display-name lang="zh">CCTV-1 综合</display-name>
     <display-name lang="zh">CCTV-1</display-name>
@@ -5539,7 +5539,6 @@
   </programme>
   <programme start="20261108020500 +0800" stop="20261108033500 +0800" channel="CCTV5+">
     <title lang="zh">实况录像-2026/2027赛季花样滑冰大奖赛 法国站 2</title>
-    <desc lang="zh">世界花样滑冰锦标赛由国际滑冰总会（ISU）主办，各成员国（或地区）的业余运动员参加的花样滑冰比赛，每年举办一次（常在三月）。世界花样滑冰锦标赛包含四个单项：男子单人滑、女子单人滑、双人滑、冰舞。各单项的第一名享有该年度“世界冠军”的头衔。本赛事与冬奥滑冰比赛、欧洲花样滑冰锦标赛、四大洲花样滑冰锦标赛为国际滑冰总会主办的四大世界顶级花样</desc>
   </programme>
   <programme start="20261108033500 +0800" stop="20261108040000 +0800" channel="CCTV5+">
     <title lang="zh">2026/2027法国足球甲级联赛-第9轮集锦（4K）</title>
@@ -5551,7 +5550,6 @@
   </programme>
   <programme start="20261108060000 +0800" stop="20261108072800 +0800" channel="CCTV5+">
     <title lang="zh">实况录像-2026年世界田联钻石联赛 巴黎站</title>
-    <desc lang="zh">国际田径钻石联赛成立于2010年，是国际田联推出的一个全新系列赛事，作为原有国际田联黄金联赛的升级赛事。钻石联赛在全球共设14个分站，遍布亚洲、北美洲和欧洲。根据国际田联钻石联赛的规则，比赛项目将设立32个单项，每个站有不同的比赛项目，而每年的项目将轮换举办。而且根据规定，参加钻石联赛必须是每个项目年度排名前20位的选手。作为钻石联赛</desc>
   </programme>
   <programme start="20261108072800 +0800" stop="20261108085800 +0800" channel="CCTV5+">
     <title lang="zh">2026年ATP1000男子网球大师赛-上海站 决赛（4K）</title>
@@ -5816,7 +5814,6 @@
   </programme>
   <programme start="20261112123200 +0800" stop="20261112140300 +0800" channel="CCTV5+">
     <title lang="zh">实况录像-2026/2027赛季花样滑冰大奖赛 法国站 2</title>
-    <desc lang="zh">世界花样滑冰锦标赛由国际滑冰总会（ISU）主办，各成员国（或地区）的业余运动员参加的花样滑冰比赛，每年举办一次（常在三月）。世界花样滑冰锦标赛包含四个单项：男子单人滑、女子单人滑、双人滑、冰舞。各单项的第一名享有该年度“世界冠军”的头衔。本赛事与冬奥滑冰比赛、欧洲花样滑冰锦标赛、四大洲花样滑冰锦标赛为国际滑冰总会主办的四大世界顶级花样</desc>
   </programme>
   <programme start="20261112140300 +0800" stop="20261112150400 +0800" channel="CCTV5+">
     <title lang="zh">2026年国际自盟场地自行车世锦赛-2（4K）</title>
@@ -41606,18 +41603,18 @@
     <title lang="zh">金牌剧场:老舅(16)</title>
     <desc lang="zh">小学生二胖从小最崇拜的人就是自己的老舅，老舅从小天资聪颖，做任何事情都比别人优秀，大学毕业后做了工厂的技术骨干。但正因为老舅太过聪明，他对任何事情都有新鲜感和探索欲，做什么事情都是三分钟热度。老舅的一生尝试过无数个行业，走南闯北，每一次创业的开端都非常热闹，但他的创业总是赶不上合适的时机。在老舅逐梦的路上，家人始终给他最大的支持，而折...</desc>
   </programme>
-  <programme start="20261114212000 +0800" stop="20261114222600 +0800" channel="江西卫视">
+  <programme start="20261114212000 +0800" stop="20261114222500 +0800" channel="江西卫视">
     <title lang="zh">世界新声场</title>
   </programme>
-  <programme start="20261114222600 +0800" stop="20261114230500 +0800" channel="江西卫视">
+  <programme start="20261114222500 +0800" stop="20261114230400 +0800" channel="江西卫视">
     <title lang="zh">金牌调解</title>
     <desc lang="zh">《金牌调解》是江西卫视一档以调解纠纷、化解矛盾、促进和谐为宗旨，集最权威的金牌调解员和观察员队伍，集最独到的视角和观点，让观众看到一个不一样的电视调解节目。它顺应了当前民间争议纠纷较多而期待更多的法庭外和解以提高社会和谐效率的社会需求；它运用媒介的力量更好地推动了社会尤其是普通民众的和谐感。2011年1月1日，《中华人民共和国人民调解法》正式施行，我们在未来会愈发感受到调解的力量。“调解”是指“通过说服、疏导等方法，促使当事人在平等协商基础上自愿达成调解协议，解决民间纠纷的活动”。江西卫视倾力打造《金牌调解》栏目，最为直观的展示调解的艺术和魅力。节目邀请一对（或多个）有矛盾的当事人进入演播室，主持人和人民调解员现场为当事人排忧解难，通过节目告诉观众面对纠纷的智慧和解决矛盾的艺术，将真实事件和综艺手段完美交融，塑造全新节目模式。节目中将大力体现人文关怀和心理疏导，倡导文明积极、健康向上的社会风尚。《金牌调解》栏目价值宣传贯彻《中华人民共和国调解法》，扩大人民调解的影响，推进人民调解工作的发展，特别是利用电视媒体促进矛盾纠纷化解，维护社会稳定。创新、打造并共同推行全新的调解手段——电视调解，并与人民调解和司法调解相集合形成具有中国特色的多元化调解机制。把《金牌调解》栏目打造成全国知名的电视调解栏目。打造“金牌调解”概念，形成全国独有的文化现象，成为调解矛盾、化解纠纷的代名词，使《金牌调解》成为国内基层人民调解工作成果展示及形象宣传的重要平台。以全新的节目样式和电视包装手法，形成独具创意和风格的电视栏目；引发更多观众的关注和共鸣；引领中国电视未来十年风潮。《金牌调解》栏目特点集“室内剧”、“真人秀”、“泛法制类节目”和“娱乐节目”为一体。这将是一个“12+X”个人共同出演的一部具有真人秀特征的谈话类节目，融和法庭辩驳元素，通过舞美、灯光、镜头等诸多表现手法，给更多普通民众的情感提供不一样的诉求平台。而这个平台有着比法庭更大的互动性和更广泛的教育性。</desc>
   </programme>
-  <programme start="20261114230500 +0800" stop="20261114233700 +0800" channel="江西卫视">
+  <programme start="20261114230400 +0800" stop="20261114233600 +0800" channel="江西卫视">
     <title lang="zh">新闻夜航</title>
     <desc lang="zh">《新闻夜航》是江西卫视新闻栏目的一档晚间新闻栏目，是江西电视台具有10年历史的老栏目，它的前身是《今晚报道》，2003年5月1日更名为《新闻夜航》，以社会新闻为主体，栏目定位是关注大众话题，追踪新闻事件，传播政策资讯，贴近百姓生活，在江西电视台的自办栏目中收视率名列前茅。《新闻夜航》是宗旨是“关注百姓生活，新闻与您同行”，每晚（周四除外）22:40播出，栏目新闻热线：0791-88313333。2007年，《新闻夜航》在全国35个中心城市省级卫视台同时段收视率排名第4位，在江西省内同类新闻中排名第一，在南昌市网的平均收视率达到3.96%，在江西省市场份额达到20.9%。2008年，栏目收视率持续走高，月平均收视率维持在4.5——5.5之间。栏目连续6年获得江西广播电视优秀栏目奖，2007年度获得中国广播电视奖优秀栏目提名奖（二等奖）。《新闻夜航》栏目注重公众参与，建立了与社区点对点的密切联系。一方面，栏目的意图能够及时地反映到社区，增加公民参与的积极性，另一方面，公民的反馈通过社区也能够及时传递到节目里。使得节目体现社会变化，情节生动，特别好看。《新闻夜航》节目关注本土的寻常百姓，体现共性化的东西，体现人文关怀，吸引了全国观众的喜爱，在“大众电视排行榜”中，《新闻夜航》名列前茅（最好的名次第三名）。人物故事是《新闻夜航》的一大特色，也是我们的长项。栏目关注的主体是社会底层的公民，反映日常生活中的真善美，人物形象生动，故事曲折感人。《新闻夜航》勇于自我挑战，在收视率不断走高的情景下，大胆改变栏目整体包装，使整体形象更加时尚，整体感强。同时，对栏目的节目结构进行调整，使《新闻夜航》的品牌子栏目“夜航话题”更加贴切当天的新闻内容，得到观众和专家的认可。《新闻夜航》结合宣传主题，新闻策划常规化，机制上有保障，目标十分明确：结合大的宣传背景，从身边的小事切入，有故事有情节，还要讲道理。策划、组织、实施了一系列热点报道，像关于和谐社会的构建、十七大宣传、百姓和谐生活、抗击冰雪灾害、抗震救灾报道、奥运宣传等热点，因为报道的切入点非常小，非常贴切，故事生动，观众看得非常入眼，宣传效果很好。《新闻夜航》栏目历经10年，报道内容贴近普通百姓，叙述语言朴实流畅，报道角度细小贴切，现场报道、人物故事、夜航话题都特色鲜明；栏目整体编排流畅，质量稳定，培养了一大批固定的观众。女主播秦婧获得2008中国播音主持“金话筒奖”电视播音作品奖。</desc>
   </programme>
-  <programme start="20261114233700 +0800" stop="20261115002800 +0800" channel="江西卫视">
+  <programme start="20261114233600 +0800" stop="20261115001900 +0800" channel="江西卫视">
     <title lang="zh">沉默的荣耀(13)</title>
     <desc lang="zh">1949年8月，本来要在福州迎接解放的吴石，突然被蒋介石任命为国民政府国防部次长。为了获得更多情报，吴石按照党组织的指示毅然前往台湾就职，利用工作便利陆续向中共华东局提供了有关金门岛兵力变化、西南战役国军调动等重要情报。原本要回上海的朱枫在得知吴石原来的交通员牺牲、组织上需要派新的交通员去台湾时，也毅然放弃了阖家团圆的机会，只身去了台...</desc>
   </programme>
@@ -56024,6 +56021,7 @@
   </programme>
   <programme start="20261114004200 +0800" stop="20261114010800 +0800" channel="海峡卫视">
     <title lang="zh">重播海峡拼经济</title>
+    <desc lang="zh">《海峡拼经济》是由福建省广播影视集团海峡卫视和台湾东森电视台联合制播的一档财经专题类栏目。因应两岸签署经济合作框架协议（ECFA）的大背景，秉持“民生最大，两岸共赢”的核心理念，拉近两岸民众的距离。 海峡拼经济播出时间 全部时间》 10-30周五 10-31周六 11-01周日 21:42 福建海峡卫视 海峡拼经济 21:50 海峡卫视国际频道(亚洲) 海峡拼经济 05:30 海峡卫视国际频道(亚洲) &lt;p class=&quot;line</desc>
   </programme>
   <programme start="20261114010800 +0800" stop="20261114015800 +0800" channel="海峡卫视">
     <title lang="zh">重播精品纪录片</title>
@@ -56054,6 +56052,7 @@
   </programme>
   <programme start="20261114053700 +0800" stop="20261114060100 +0800" channel="海峡卫视">
     <title lang="zh">重播海峡拼经济</title>
+    <desc lang="zh">《海峡拼经济》是由福建省广播影视集团海峡卫视和台湾东森电视台联合制播的一档财经专题类栏目。因应两岸签署经济合作框架协议（ECFA）的大背景，秉持“民生最大，两岸共赢”的核心理念，拉近两岸民众的距离。 海峡拼经济播出时间 全部时间》 10-30周五 10-31周六 11-01周日 21:42 福建海峡卫视 海峡拼经济 21:50 海峡卫视国际频道(亚洲) 海峡拼经济 05:30 海峡卫视国际频道(亚洲) &lt;p class=&quot;line</desc>
   </programme>
   <programme start="20261114060100 +0800" stop="20261114061900 +0800" channel="海峡卫视">
     <title lang="zh">重播向往的大海</title>
@@ -56072,6 +56071,7 @@
   </programme>
   <programme start="20261114081900 +0800" stop="20261114084300 +0800" channel="海峡卫视">
     <title lang="zh">重播海峡拼经济</title>
+    <desc lang="zh">《海峡拼经济》是由福建省广播影视集团海峡卫视和台湾东森电视台联合制播的一档财经专题类栏目。因应两岸签署经济合作框架协议（ECFA）的大背景，秉持“民生最大，两岸共赢”的核心理念，拉近两岸民众的距离。 海峡拼经济播出时间 全部时间》 10-30周五 10-31周六 11-01周日 21:42 福建海峡卫视 海峡拼经济 21:50 海峡卫视国际频道(亚洲) 海峡拼经济 05:30 海峡卫视国际频道(亚洲) &lt;p class=&quot;line</desc>
   </programme>
   <programme start="20261114084300 +0800" stop="20261114090000 +0800" channel="海峡卫视">
     <title lang="zh">重播向往的大海</title>
@@ -56104,6 +56104,7 @@
   </programme>
   <programme start="20261114123000 +0800" stop="20261114125400 +0800" channel="海峡卫视">
     <title lang="zh">重播海峡拼经济</title>
+    <desc lang="zh">《海峡拼经济》是由福建省广播影视集团海峡卫视和台湾东森电视台联合制播的一档财经专题类栏目。因应两岸签署经济合作框架协议（ECFA）的大背景，秉持“民生最大，两岸共赢”的核心理念，拉近两岸民众的距离。 海峡拼经济播出时间 全部时间》 10-30周五 10-31周六 11-01周日 21:42 福建海峡卫视 海峡拼经济 21:50 海峡卫视国际频道(亚洲) 海峡拼经济 05:30 海峡卫视国际频道(亚洲) &lt;p class=&quot;line</desc>
   </programme>
   <programme start="20261114125400 +0800" stop="20261114130900 +0800" channel="海峡卫视">
     <title lang="zh">福建一百吃</title>
@@ -56134,9 +56135,11 @@
   </programme>
   <programme start="20261114163200 +0800" stop="20261114171500 +0800" channel="海峡卫视">
     <title lang="zh">重播海峡剧场:灼灼韶华 第23集</title>
+    <desc lang="zh">1916年，褚韶华为救哥哥褚韶中而嫁给陈记药铺的大少爷陈大顺，她以诚信和出色的商业才能得到陈父的赏识，成为药铺管理人。陈父和陈大顺意外去世后，陈二顺继承药铺并败光家财，药铺陷入绝境。褚韶华在艰辛努力下，开了华顺药铺养活一家老小。褚韶华决意携手初恋情人夏初开启新的生活，却遭陈二顺和陈母的阻挠。陈家被土匪洗劫一空，褚韶华也在这次劫难中失去...</desc>
   </programme>
   <programme start="20261114171500 +0800" stop="20261114180000 +0800" channel="海峡卫视">
     <title lang="zh">重播海峡剧场:灼灼韶华 第24集</title>
+    <desc lang="zh">1916年，褚韶华为救哥哥褚韶中而嫁给陈记药铺的大少爷陈大顺，她以诚信和出色的商业才能得到陈父的赏识，成为药铺管理人。陈父和陈大顺意外去世后，陈二顺继承药铺并败光家财，药铺陷入绝境。褚韶华在艰辛努力下，开了华顺药铺养活一家老小。褚韶华决意携手初恋情人夏初开启新的生活，却遭陈二顺和陈母的阻挠。陈家被土匪洗劫一空，褚韶华也在这次劫难中失去...</desc>
   </programme>
   <programme start="20261114180000 +0800" stop="20261114182500 +0800" channel="海峡卫视">
     <title lang="zh">精品纪录片</title>
@@ -58000,6 +58003,231 @@
   <programme start="20261108231530 +0800" stop="20261109000000 +0800" channel="ZhejiangInternationalChannel.cn">
     <title lang="zh">《大奉打更人（海外版权）》14（海外播出版）</title>
   </programme>
+  <programme start="20261109000000 +0800" stop="20261109000100 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">串编时段包装2026-11-09第01段</title>
+  </programme>
+  <programme start="20261109000100 +0800" stop="20261109002600 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">《狮来运转（第1-26集）》5（海外播出版）</title>
+  </programme>
+  <programme start="20261109002600 +0800" stop="20261109002900 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">串编时段包装2026-11-09第03段</title>
+  </programme>
+  <programme start="20261109002900 +0800" stop="20261109005900 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">靓丽之窗2026-309</title>
+  </programme>
+  <programme start="20261109005900 +0800" stop="20261109010900 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">黄金时间2026-312</title>
+    <desc lang="zh">该栏目是为纪念改革开放四十周年，由江苏省委改革办和江苏省广播电视总台合作推出的，旨在解读江苏省新近出台的改革政策，关注政策的落实与执行，让更多的百姓知晓改革政策，尽享改革红利。节目以主持人现场问答为主架构，将穿插外采短片、职能部门解读、权威专家点评、政策信息梳理、媒体记者提问、群众代表提问以及网友在线互动提问等多种形式，让高含金量的改革政策接地气、活起来，从而架起省委省政府和全省广大人民群众的连心桥。</desc>
+  </programme>
+  <programme start="20261109010900 +0800" stop="20261109011900 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">垫片2025-001</title>
+  </programme>
+  <programme start="20261109011900 +0800" stop="20261109012300 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">串编时段包装2026-11-09第06段</title>
+  </programme>
+  <programme start="20261109012300 +0800" stop="20261109013300 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">黄金时间2026-312</title>
+    <desc lang="zh">该栏目是为纪念改革开放四十周年，由江苏省委改革办和江苏省广播电视总台合作推出的，旨在解读江苏省新近出台的改革政策，关注政策的落实与执行，让更多的百姓知晓改革政策，尽享改革红利。节目以主持人现场问答为主架构，将穿插外采短片、职能部门解读、权威专家点评、政策信息梳理、媒体记者提问、群众代表提问以及网友在线互动提问等多种形式，让高含金量的改革政策接地气、活起来，从而架起省委省政府和全省广大人民群众的连心桥。</desc>
+  </programme>
+  <programme start="20261109013300 +0800" stop="20261109014300 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">垫片2025-002</title>
+  </programme>
+  <programme start="20261109014300 +0800" stop="20261109014600 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">串编时段包装2026-11-09第07段</title>
+  </programme>
+  <programme start="20261109014600 +0800" stop="20261109023030 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">《创想季（海外版权）》10（海外播出版）</title>
+  </programme>
+  <programme start="20261109023030 +0800" stop="20261109023330 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">串编时段包装2026-11-09第08段</title>
+  </programme>
+  <programme start="20261109023330 +0800" stop="20261109031800 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">《创想季（海外版权）》11（海外播出版）</title>
+  </programme>
+  <programme start="20261109031800 +0800" stop="20261109032100 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">串编时段包装2026-11-09第09段</title>
+  </programme>
+  <programme start="20261109032100 +0800" stop="20261109040530 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">《创想季（海外版权）》12（海外播出版）</title>
+  </programme>
+  <programme start="20261109040530 +0800" stop="20261109040830 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">串编时段包装2026-11-09第15段</title>
+  </programme>
+  <programme start="20261109040830 +0800" stop="20261109045300 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">《我是刑警（海外版权）》15（海外播出版）</title>
+  </programme>
+  <programme start="20261109045300 +0800" stop="20261109053730 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">《我是刑警（海外版权）》16（海外播出版）</title>
+  </programme>
+  <programme start="20261109053730 +0800" stop="20261109054030 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">串编时段包装2026-11-09第12段</title>
+  </programme>
+  <programme start="20261109054030 +0800" stop="20261109062500 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">《大奉打更人（海外版权）》15（海外播出版）</title>
+  </programme>
+  <programme start="20261109062500 +0800" stop="20261109062800 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">串编时段包装2026-11-09第13段</title>
+  </programme>
+  <programme start="20261109062800 +0800" stop="20261109071230 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">《大奉打更人（海外版权）》16（海外播出版）</title>
+  </programme>
+  <programme start="20261109071230 +0800" stop="20261109071530 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">串编时段包装2026-11-09第14段</title>
+  </programme>
+  <programme start="20261109071530 +0800" stop="20261109080000 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">《大奉打更人（海外版权）》17（海外播出版）</title>
+    <desc lang="zh">《1/7》是上海文广新闻传媒集团重点打造的60分钟大型电视新闻周刊。我们的口号是“一切从源头开始”，以关注时代进程之中的重大事件，展示精彩而充满矛盾的社会故事，对话热点新闻人物为主旨。</desc>
+  </programme>
+  <programme start="20261109080000 +0800" stop="20261109080100 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">串编时段包装2026-11-09第16段</title>
+  </programme>
+  <programme start="20261109080100 +0800" stop="20261109082600 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">《狮来运转（第1-26集）》5（海外播出版）</title>
+  </programme>
+  <programme start="20261109082600 +0800" stop="20261109082900 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">串编时段包装2026-11-09第03段</title>
+  </programme>
+  <programme start="20261109082900 +0800" stop="20261109085900 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">靓丽之窗2026-309</title>
+  </programme>
+  <programme start="20261109085900 +0800" stop="20261109090900 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">黄金时间2026-312</title>
+    <desc lang="zh">该栏目是为纪念改革开放四十周年，由江苏省委改革办和江苏省广播电视总台合作推出的，旨在解读江苏省新近出台的改革政策，关注政策的落实与执行，让更多的百姓知晓改革政策，尽享改革红利。节目以主持人现场问答为主架构，将穿插外采短片、职能部门解读、权威专家点评、政策信息梳理、媒体记者提问、群众代表提问以及网友在线互动提问等多种形式，让高含金量的改革政策接地气、活起来，从而架起省委省政府和全省广大人民群众的连心桥。</desc>
+  </programme>
+  <programme start="20261109090900 +0800" stop="20261109091900 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">垫片2025-001</title>
+  </programme>
+  <programme start="20261109091900 +0800" stop="20261109092300 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">串编时段包装2026-11-09第06段</title>
+  </programme>
+  <programme start="20261109092300 +0800" stop="20261109093300 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">黄金时间2026-312</title>
+    <desc lang="zh">该栏目是为纪念改革开放四十周年，由江苏省委改革办和江苏省广播电视总台合作推出的，旨在解读江苏省新近出台的改革政策，关注政策的落实与执行，让更多的百姓知晓改革政策，尽享改革红利。节目以主持人现场问答为主架构，将穿插外采短片、职能部门解读、权威专家点评、政策信息梳理、媒体记者提问、群众代表提问以及网友在线互动提问等多种形式，让高含金量的改革政策接地气、活起来，从而架起省委省政府和全省广大人民群众的连心桥。</desc>
+  </programme>
+  <programme start="20261109093300 +0800" stop="20261109094300 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">垫片2025-002</title>
+  </programme>
+  <programme start="20261109094300 +0800" stop="20261109094600 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">串编时段包装2026-11-09第07段</title>
+  </programme>
+  <programme start="20261109094600 +0800" stop="20261109103030 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">《创想季（海外版权）》10（海外播出版）</title>
+  </programme>
+  <programme start="20261109103030 +0800" stop="20261109103330 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">串编时段包装2026-11-09第08段</title>
+  </programme>
+  <programme start="20261109103330 +0800" stop="20261109111800 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">《创想季（海外版权）》11（海外播出版）</title>
+  </programme>
+  <programme start="20261109111800 +0800" stop="20261109112100 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">串编时段包装2026-11-09第09段</title>
+  </programme>
+  <programme start="20261109112100 +0800" stop="20261109120530 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">《创想季（海外版权）》12（海外播出版）</title>
+  </programme>
+  <programme start="20261109120530 +0800" stop="20261109120830 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">串编时段包装2026-11-09第15段</title>
+  </programme>
+  <programme start="20261109120830 +0800" stop="20261109125300 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">《我是刑警（海外版权）》15（海外播出版）</title>
+  </programme>
+  <programme start="20261109125300 +0800" stop="20261109133730 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">《我是刑警（海外版权）》16（海外播出版）</title>
+  </programme>
+  <programme start="20261109133730 +0800" stop="20261109134030 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">串编时段包装2026-11-09第12段</title>
+  </programme>
+  <programme start="20261109134030 +0800" stop="20261109142500 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">《大奉打更人（海外版权）》15（海外播出版）</title>
+  </programme>
+  <programme start="20261109142500 +0800" stop="20261109142800 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">串编时段包装2026-11-09第13段</title>
+  </programme>
+  <programme start="20261109142800 +0800" stop="20261109151230 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">《大奉打更人（海外版权）》16（海外播出版）</title>
+  </programme>
+  <programme start="20261109151230 +0800" stop="20261109151530 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">串编时段包装2026-11-09第14段</title>
+  </programme>
+  <programme start="20261109151530 +0800" stop="20261109160000 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">《大奉打更人（海外版权）》17（海外播出版）</title>
+    <desc lang="zh">《1/7》是上海文广新闻传媒集团重点打造的60分钟大型电视新闻周刊。我们的口号是“一切从源头开始”，以关注时代进程之中的重大事件，展示精彩而充满矛盾的社会故事，对话热点新闻人物为主旨。</desc>
+  </programme>
+  <programme start="20261109160000 +0800" stop="20261109160100 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">串编时段包装2026-11-09第16段</title>
+  </programme>
+  <programme start="20261109160100 +0800" stop="20261109162600 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">《狮来运转（第1-26集）》5（海外播出版）</title>
+  </programme>
+  <programme start="20261109162600 +0800" stop="20261109162900 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">串编时段包装2026-11-09第03段</title>
+  </programme>
+  <programme start="20261109162900 +0800" stop="20261109165900 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">靓丽之窗2026-309</title>
+  </programme>
+  <programme start="20261109165900 +0800" stop="20261109170900 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">黄金时间2026-312</title>
+    <desc lang="zh">该栏目是为纪念改革开放四十周年，由江苏省委改革办和江苏省广播电视总台合作推出的，旨在解读江苏省新近出台的改革政策，关注政策的落实与执行，让更多的百姓知晓改革政策，尽享改革红利。节目以主持人现场问答为主架构，将穿插外采短片、职能部门解读、权威专家点评、政策信息梳理、媒体记者提问、群众代表提问以及网友在线互动提问等多种形式，让高含金量的改革政策接地气、活起来，从而架起省委省政府和全省广大人民群众的连心桥。</desc>
+  </programme>
+  <programme start="20261109170900 +0800" stop="20261109171900 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">垫片2025-001</title>
+  </programme>
+  <programme start="20261109171900 +0800" stop="20261109172300 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">串编时段包装2026-11-09第06段</title>
+  </programme>
+  <programme start="20261109172300 +0800" stop="20261109173300 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">黄金时间2026-312</title>
+    <desc lang="zh">该栏目是为纪念改革开放四十周年，由江苏省委改革办和江苏省广播电视总台合作推出的，旨在解读江苏省新近出台的改革政策，关注政策的落实与执行，让更多的百姓知晓改革政策，尽享改革红利。节目以主持人现场问答为主架构，将穿插外采短片、职能部门解读、权威专家点评、政策信息梳理、媒体记者提问、群众代表提问以及网友在线互动提问等多种形式，让高含金量的改革政策接地气、活起来，从而架起省委省政府和全省广大人民群众的连心桥。</desc>
+  </programme>
+  <programme start="20261109173300 +0800" stop="20261109174300 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">垫片2025-002</title>
+  </programme>
+  <programme start="20261109174300 +0800" stop="20261109174600 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">串编时段包装2026-11-09第07段</title>
+  </programme>
+  <programme start="20261109174600 +0800" stop="20261109183030 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">《创想季（海外版权）》10（海外播出版）</title>
+  </programme>
+  <programme start="20261109183030 +0800" stop="20261109183330 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">串编时段包装2026-11-09第08段</title>
+  </programme>
+  <programme start="20261109183330 +0800" stop="20261109191800 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">《创想季（海外版权）》11（海外播出版）</title>
+  </programme>
+  <programme start="20261109191800 +0800" stop="20261109192100 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">串编时段包装2026-11-09第09段</title>
+  </programme>
+  <programme start="20261109192100 +0800" stop="20261109200530 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">《创想季（海外版权）》12（海外播出版）</title>
+  </programme>
+  <programme start="20261109200530 +0800" stop="20261109200830 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">串编时段包装2026-11-09第15段</title>
+  </programme>
+  <programme start="20261109200830 +0800" stop="20261109205300 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">《我是刑警（海外版权）》15（海外播出版）</title>
+  </programme>
+  <programme start="20261109205300 +0800" stop="20261109213730 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">《我是刑警（海外版权）》16（海外播出版）</title>
+  </programme>
+  <programme start="20261109213730 +0800" stop="20261109214030 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">串编时段包装2026-11-09第12段</title>
+  </programme>
+  <programme start="20261109214030 +0800" stop="20261109222500 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">《大奉打更人（海外版权）》15（海外播出版）</title>
+  </programme>
+  <programme start="20261109222500 +0800" stop="20261109222800 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">串编时段包装2026-11-09第13段</title>
+  </programme>
+  <programme start="20261109222800 +0800" stop="20261109231230 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">《大奉打更人（海外版权）》16（海外播出版）</title>
+  </programme>
+  <programme start="20261109231230 +0800" stop="20261109231530 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">串编时段包装2026-11-09第14段</title>
+  </programme>
+  <programme start="20261109231530 +0800" stop="20261110000000 +0800" channel="ZhejiangInternationalChannel.cn">
+    <title lang="zh">《大奉打更人（海外版权）》17（海外播出版）</title>
+    <desc lang="zh">《1/7》是上海文广新闻传媒集团重点打造的60分钟大型电视新闻周刊。我们的口号是“一切从源头开始”，以关注时代进程之中的重大事件，展示精彩而充满矛盾的社会故事，对话热点新闻人物为主旨。</desc>
+  </programme>
   <programme start="20261108003000 +0800" stop="20261108012000 +0800" channel="HunanEconomyChannel.cn">
     <title lang="zh">凌晨剧场</title>
     <desc lang="zh">凌晨午夜时间播放的电视剧时段。</desc>
@@ -58174,7 +58402,6 @@
   </programme>
   <programme start="20261108014500 +0800" stop="20261108025500 +0800" channel="ZhejiangEconomicChannel.cn">
     <title lang="zh">经视新闻</title>
-    <desc lang="zh">《经视新闻》节目是浙江广电集团经济生活频道 惟一的一档新闻栏目。2(X)3年1月1日，这档原本巧 分钟的栏目扩容到30分钟，首播时间设定在18: 55一19:25。栏目中有《经视聚焦》、《有话想说》、《经 视调查》、《经视说法》、《一周综述》等子栏目。节目改版后迅速得到观众市场认可，收视率持续走高。 对照《经视新闻》的改版，从理论的层面，可以发现 《经视新闻》的变化并不是单纯从形式上“求新求变” 的结果，而是对现代电视传播理念的一种实践。</desc>
   </programme>
   <programme start="20261108025500 +0800" stop="20261108032500 +0800" channel="ZhejiangEconomicChannel.cn">
     <title lang="zh">剧场</title>
@@ -58363,7 +58590,6 @@
   </programme>
   <programme start="20261108203000 +0800" stop="20261108213000 +0800" channel="ZhejiangEconomicChannel.cn">
     <title lang="zh">经视新闻</title>
-    <desc lang="zh">《经视新闻》节目是浙江广电集团经济生活频道 惟一的一档新闻栏目。2(X)3年1月1日，这档原本巧 分钟的栏目扩容到30分钟，首播时间设定在18: 55一19:25。栏目中有《经视聚焦》、《有话想说》、《经 视调查》、《经视说法》、《一周综述》等子栏目。节目改版后迅速得到观众市场认可，收视率持续走高。 对照《经视新闻》的改版，从理论的层面，可以发现 《经视新闻》的变化并不是单纯从形式上“求新求变” 的结果，而是对现代电视传播理念的一种实践。</desc>
   </programme>
   <programme start="20261108213000 +0800" stop="20261108220000 +0800" channel="ZhejiangEconomicChannel.cn">
     <title lang="zh">剧场</title>
@@ -58385,6 +58611,407 @@
   </programme>
   <programme start="20261108235900 +0800" stop="20261109000000 +0800" channel="ZhejiangEconomicChannel.cn">
     <title lang="zh">结束</title>
+  </programme>
+  <programme start="20261109000000 +0800" stop="20261109003600 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">《豆娘》56（午夜1026）</title>
+  </programme>
+  <programme start="20261109003600 +0800" stop="20261109010600 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">《豆娘》57（午夜1026）</title>
+  </programme>
+  <programme start="20261109010600 +0800" stop="20261109013600 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">《豆娘》58（午夜1026）</title>
+  </programme>
+  <programme start="20261109013600 +0800" stop="20261109014100 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">2026年05月27日播带</title>
+  </programme>
+  <programme start="20261109014100 +0800" stop="20261109014500 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">红箭精彩呈现</title>
+  </programme>
+  <programme start="20261109014500 +0800" stop="20261109024000 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">11月08日经视新闻</title>
+  </programme>
+  <programme start="20261109024000 +0800" stop="20261109025000 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">红箭精彩呈现</title>
+  </programme>
+  <programme start="20261109025000 +0800" stop="20261109025500 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">2026年05月27日播带</title>
+  </programme>
+  <programme start="20261109025500 +0800" stop="20261109032500 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">《豆娘》51（午夜1026）</title>
+  </programme>
+  <programme start="20261109032500 +0800" stop="20261109035500 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">《豆娘》52（午夜1026）</title>
+  </programme>
+  <programme start="20261109035500 +0800" stop="20261109042500 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">《豆娘》53（午夜1026）</title>
+  </programme>
+  <programme start="20261109042500 +0800" stop="20261109045500 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">《豆娘》54（午夜1026）</title>
+  </programme>
+  <programme start="20261109045500 +0800" stop="20261109052500 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">《豆娘》55（午夜1026）</title>
+  </programme>
+  <programme start="20261109052500 +0800" stop="20261109055500 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">《豆娘》56（午夜1026）</title>
+  </programme>
+  <programme start="20261109055500 +0800" stop="20261109062500 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">《豆娘》57（午夜1026）</title>
+  </programme>
+  <programme start="20261109062500 +0800" stop="20261109065500 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">《豆娘》58（午夜1026）</title>
+  </programme>
+  <programme start="20261109065500 +0800" stop="20261109065800 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-012（特别节目宣传片A）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109065800 +0800" stop="20261109070100 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-022（特别节目宣传片C）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109070100 +0800" stop="20261109070400 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-008（特别节目宣传片F）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109070400 +0800" stop="20261109071400 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">《《桃花朵朵开》》203（阳光1027）A</title>
+  </programme>
+  <programme start="20261109071400 +0800" stop="20261109071700 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-022（特别节目宣传片C）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109071700 +0800" stop="20261109072000 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-008（特别节目宣传片F）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109072000 +0800" stop="20261109072600 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">11月09日串播jb1</title>
+  </programme>
+  <programme start="20261109072600 +0800" stop="20261109074100 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">《《桃花朵朵开》》204（阳光1027）</title>
+  </programme>
+  <programme start="20261109074100 +0800" stop="20261109075100 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-006（白天版10分钟F）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109075100 +0800" stop="20261109075400 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-022（特别节目宣传片C）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109075400 +0800" stop="20261109075700 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-012（特别节目宣传片A）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109075700 +0800" stop="20261109081300 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">《《桃花朵朵开》》205（阳光1027）</title>
+  </programme>
+  <programme start="20261109081300 +0800" stop="20261109082300 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-012（白天版10分钟A）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109082300 +0800" stop="20261109082900 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">11月09日串播jb2</title>
+  </programme>
+  <programme start="20261109082900 +0800" stop="20261109083200 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-022（特别节目宣传片C）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109083200 +0800" stop="20261109084200 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">11月08日体彩新天地</title>
+  </programme>
+  <programme start="20261109084200 +0800" stop="20261109084800 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">11月09日串播jb1</title>
+  </programme>
+  <programme start="20261109084800 +0800" stop="20261109090300 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">《《桃花朵朵开》》206（阳光1027）</title>
+  </programme>
+  <programme start="20261109090300 +0800" stop="20261109090800 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-039（白天版E）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109090800 +0800" stop="20261109091100 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-022（特别节目宣传片C）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109091100 +0800" stop="20261109091700 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">11月09日串播jb3</title>
+  </programme>
+  <programme start="20261109091700 +0800" stop="20261109092000 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-008（特别节目宣传片F）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109092000 +0800" stop="20261109093500 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">《《桃花朵朵开》》207（阳光1027）</title>
+  </programme>
+  <programme start="20261109093500 +0800" stop="20261109094500 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-006（白天版10分钟F）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109094500 +0800" stop="20261109094800 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-022（特别节目宣传片C）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109094800 +0800" stop="20261109095400 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">11月09日串播jb1</title>
+  </programme>
+  <programme start="20261109095400 +0800" stop="20261109101200 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">《《桃花朵朵开》》208（阳光1027）</title>
+  </programme>
+  <programme start="20261109101200 +0800" stop="20261109101500 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-022（特别节目宣传片C）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109101500 +0800" stop="20261109102100 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">11月09日串播jb2</title>
+  </programme>
+  <programme start="20261109102100 +0800" stop="20261109103600 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">《《桃花朵朵开》》209（阳光1027）</title>
+  </programme>
+  <programme start="20261109103600 +0800" stop="20261109105600 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-012（白天版20分钟A）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109105600 +0800" stop="20261109105900 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-022（特别节目宣传片C）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109105900 +0800" stop="20261109111400 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">《《桃花朵朵开》》210（阳光1027）</title>
+  </programme>
+  <programme start="20261109111400 +0800" stop="20261109112400 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-046（白天版5-10分钟B）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109112400 +0800" stop="20261109112700 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-008（特别节目宣传片F）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109112700 +0800" stop="20261109113400 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">11月09日串播jb4</title>
+  </programme>
+  <programme start="20261109113400 +0800" stop="20261109114900 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">《《桃花朵朵开》》211（阳光1027）</title>
+  </programme>
+  <programme start="20261109114900 +0800" stop="20261109115400 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-039（白天版E）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109115400 +0800" stop="20261109115700 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-022（特别节目宣传片C）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109115700 +0800" stop="20261109120300 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">11月09日串播jb2</title>
+  </programme>
+  <programme start="20261109120300 +0800" stop="20261109121800 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">《《桃花朵朵开》》212（阳光1027）</title>
+  </programme>
+  <programme start="20261109121800 +0800" stop="20261109122800 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-006（白天版10分钟F）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109122800 +0800" stop="20261109123400 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">11月09日串播jb1</title>
+  </programme>
+  <programme start="20261109123400 +0800" stop="20261109123700 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-022（特别节目宣传片C）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109123700 +0800" stop="20261109125200 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">《《桃花朵朵开》》213（阳光1027）</title>
+  </programme>
+  <programme start="20261109125200 +0800" stop="20261109130200 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-006（白天版10分钟F）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109130200 +0800" stop="20261109130800 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">11月09日串播jb3</title>
+  </programme>
+  <programme start="20261109130800 +0800" stop="20261109132600 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">《《桃花朵朵开》》214（阳光1027）</title>
+  </programme>
+  <programme start="20261109132600 +0800" stop="20261109132900 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-022（特别节目宣传片C）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109132900 +0800" stop="20261109133500 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">11月09日串播jb1</title>
+  </programme>
+  <programme start="20261109133500 +0800" stop="20261109135000 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">《《桃花朵朵开》》215（阳光1027）</title>
+  </programme>
+  <programme start="20261109135000 +0800" stop="20261109141000 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-012（白天版20分钟A）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109141000 +0800" stop="20261109141600 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">11月09日串播jb2</title>
+  </programme>
+  <programme start="20261109141600 +0800" stop="20261109141900 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-022（特别节目宣传片C）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109141900 +0800" stop="20261109143400 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">《《桃花朵朵开》》216（阳光1027）</title>
+  </programme>
+  <programme start="20261109143400 +0800" stop="20261109144400 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-006（白天版10分钟F）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109144400 +0800" stop="20261109144700 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-022（特别节目宣传片C）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109144700 +0800" stop="20261109145000 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-012（特别节目宣传片A）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109145000 +0800" stop="20261109150400 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">《《桃花朵朵开》》217（阳光1027）</title>
+  </programme>
+  <programme start="20261109150400 +0800" stop="20261109153400 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-054（白天版G）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109153400 +0800" stop="20261109153700 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-022（特别节目宣传片C）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109153700 +0800" stop="20261109154300 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">11月09日串播jb1</title>
+  </programme>
+  <programme start="20261109154300 +0800" stop="20261109155700 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">《《桃花朵朵开》》218（阳光1027）</title>
+  </programme>
+  <programme start="20261109155700 +0800" stop="20261109160700 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-155（白天版10分钟B）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109160700 +0800" stop="20261109161000 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-022（特别节目宣传片C）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109161000 +0800" stop="20261109161800 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">11月09日串播jb5</title>
+  </programme>
+  <programme start="20261109161800 +0800" stop="20261109162100 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-040（特别节目宣传片E）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109162100 +0800" stop="20261109163500 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">《《桃花朵朵开》》219（阳光1027）</title>
+  </programme>
+  <programme start="20261109163500 +0800" stop="20261109164500 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-156（白天版10分钟B）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109164500 +0800" stop="20261109164800 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-022（特别节目宣传片C）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109164800 +0800" stop="20261109170200 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">《《桃花朵朵开》》220（阳光1027）</title>
+  </programme>
+  <programme start="20261109170200 +0800" stop="20261109171200 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-006（白天版10分钟F）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109171200 +0800" stop="20261109172600 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">《《桃花朵朵开》》221（阳光1027）</title>
+  </programme>
+  <programme start="20261109172600 +0800" stop="20261109173600 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-012（白天版10分钟A）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109173600 +0800" stop="20261109174500 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">11月09日串播jb6</title>
+  </programme>
+  <programme start="20261109174500 +0800" stop="20261109180500 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">直播-财富大直播</title>
+  </programme>
+  <programme start="20261109180500 +0800" stop="20261109181100 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-006（白天版5-10分钟F）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109181100 +0800" stop="20261109181400 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-012（特别节目宣传片A）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109181400 +0800" stop="20261109181625 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">11月09日串播jw1</title>
+  </programme>
+  <programme start="20261109181625 +0800" stop="20261109185625 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">《红箭》18（经视1103）</title>
+  </programme>
+  <programme start="20261109185625 +0800" stop="20261109185925 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-008（特别节目宣传片F）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109185925 +0800" stop="20261109190025 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">11月09日串播jw2</title>
+  </programme>
+  <programme start="20261109190025 +0800" stop="20261109194025 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">《红箭》19（经视1103）</title>
+  </programme>
+  <programme start="20261109194025 +0800" stop="20261109194215 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">11月09日串播jw3</title>
+  </programme>
+  <programme start="20261109194215 +0800" stop="20261109202215 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">《红箭》20（经视1103）</title>
+  </programme>
+  <programme start="20261109202215 +0800" stop="20261109202500 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">11月09日串播jw4</title>
+  </programme>
+  <programme start="20261109202500 +0800" stop="20261109202800 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">新闻深呼吸2026-313（大舒有话说）</title>
+    <desc lang="zh">《新闻深呼吸》是浙江经视的一档深度新闻评述节目，由资深媒体人士、兼职律师舒中胜担当主持。周一至周日晚22:30分播出。</desc>
+  </programme>
+  <programme start="20261109202800 +0800" stop="20261109203000 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">11月09日串播jw5</title>
+  </programme>
+  <programme start="20261109203000 +0800" stop="20261109212500 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">直播-经视新闻</title>
+  </programme>
+  <programme start="20261109212500 +0800" stop="20261109212800 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-008（特别节目宣传片F）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109212800 +0800" stop="20261109213000 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">11月09日串播jw6</title>
+  </programme>
+  <programme start="20261109213000 +0800" stop="20261109220000 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">《《上有老下有小》》41（930剧场1004）</title>
+  </programme>
+  <programme start="20261109220000 +0800" stop="20261109220505 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">11月09日体彩新天地</title>
+  </programme>
+  <programme start="20261109220505 +0800" stop="20261109221005 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">经视养生会2026-045（养生星期一）</title>
+    <desc lang="zh">关注现代人健康问题,了解养生误区,传播健康时尚的生活方式。</desc>
+  </programme>
+  <programme start="20261109221005 +0800" stop="20261109223005 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">经视养生会2026-135（高清首播版）</title>
+    <desc lang="zh">关注现代人健康问题,了解养生误区,传播健康时尚的生活方式。</desc>
+  </programme>
+  <programme start="20261109223005 +0800" stop="20261109230005 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">新闻深呼吸2026-313</title>
+    <desc lang="zh">《新闻深呼吸》是浙江经视的一档深度新闻评述节目，由资深媒体人士、兼职律师舒中胜担当主持。周一至周日晚22:30分播出。</desc>
+  </programme>
+  <programme start="20261109230005 +0800" stop="20261109230305 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-012（特别节目宣传片A）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109230305 +0800" stop="20261109230605 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">浙样的生活12026-022（特别节目宣传片C）</title>
+    <desc lang="zh">浙里更精彩 活出我的young</desc>
+  </programme>
+  <programme start="20261109230605 +0800" stop="20261109232605 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">11月09日财富大直播午夜版（周一）</title>
+  </programme>
+  <programme start="20261109232605 +0800" stop="20261109235605 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">《豆娘》59（午夜1026）</title>
+  </programme>
+  <programme start="20261109235605 +0800" stop="20261110000000 +0800" channel="ZhejiangEconomicChannel.cn">
+    <title lang="zh">《豆娘》60（午夜1026）</title>
   </programme>
   <programme start="20261108000000 +0800" stop="20261108003000 +0800" channel="ZhejiangMinshengLeisure.cn">
     <title lang="zh">PK大擂台</title>
@@ -58508,6 +59135,365 @@
   </programme>
   <programme start="20261108235900 +0800" stop="20261109000000 +0800" channel="ZhejiangMinshengLeisure.cn">
     <title lang="zh">结束</title>
+  </programme>
+  <programme start="20261109000000 +0800" stop="20261109003500 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">1818黄金眼2026-312（民生版高清）</title>
+    <desc lang="zh">《1818黄金眼》开办于2004年1月，以“关注民生、服务百姓”为栏目宗旨，以百姓的眼睛看百姓，和老百姓零距离接触，全心全意为老百姓服务。栏目开办之初，就创下了“三个浙江第一”：浙江节目时间最长的新闻节目（当时为每天55分钟）；浙江第一个开通24小时新闻热线的电视媒体；浙江第一个开设公益小专栏“寻”的电视节目，为观众免费提供寻人寻物服务。 公众版节目版块：“大事件”、“杭州日”、“浙一天”、“中国结”、“天下会”。</desc>
+  </programme>
+  <programme start="20261109003500 +0800" stop="20261109004405 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TC-1广告（11.9）</title>
+  </programme>
+  <programme start="20261109004405 +0800" stop="20261109005745 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TC-2广告（11.9）</title>
+  </programme>
+  <programme start="20261109005745 +0800" stop="20261109011155 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TC-3广告（11.9）</title>
+  </programme>
+  <programme start="20261109011155 +0800" stop="20261109012410 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TC-4广告（11.9）</title>
+  </programme>
+  <programme start="20261109012410 +0800" stop="20261109014700 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TC-5广告（11.9）</title>
+  </programme>
+  <programme start="20261109014700 +0800" stop="20261109015000 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">宣传片F（11.1）</title>
+  </programme>
+  <programme start="20261109015000 +0800" stop="20261109023500 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">金牌赛场2026-299（浙BA上）</title>
+    <desc lang="zh">金牌赛场是民生休闲频道的一个重要赛事栏目。负责播放国内外的重要体育赛事的体育栏目。</desc>
+  </programme>
+  <programme start="20261109023500 +0800" stop="20261109032000 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">金牌赛场2026-299（浙BA下）</title>
+    <desc lang="zh">金牌赛场是民生休闲频道的一个重要赛事栏目。负责播放国内外的重要体育赛事的体育栏目。</desc>
+  </programme>
+  <programme start="20261109032000 +0800" stop="20261109032500 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">1818黄金眼2026-312（公众版高清）</title>
+    <desc lang="zh">《1818黄金眼》开办于2004年1月，以“关注民生、服务百姓”为栏目宗旨，以百姓的眼睛看百姓，和老百姓零距离接触，全心全意为老百姓服务。栏目开办之初，就创下了“三个浙江第一”：浙江节目时间最长的新闻节目（当时为每天55分钟）；浙江第一个开通24小时新闻热线的电视媒体；浙江第一个开设公益小专栏“寻”的电视节目，为观众免费提供寻人寻物服务。 公众版节目版块：“大事件”、“杭州日”、“浙一天”、“中国结”、“天下会”。</desc>
+  </programme>
+  <programme start="20261109032500 +0800" stop="20261109033250 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TC-6广告（11.9）</title>
+  </programme>
+  <programme start="20261109033250 +0800" stop="20261109034520 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TC-7广告（11.9）</title>
+  </programme>
+  <programme start="20261109034520 +0800" stop="20261109035245 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TC-8广告（11.9）</title>
+  </programme>
+  <programme start="20261109035245 +0800" stop="20261109040000 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TC-9广告（11.9）</title>
+  </programme>
+  <programme start="20261109040000 +0800" stop="20261109040200 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">宣传片C（11.1）</title>
+  </programme>
+  <programme start="20261109040200 +0800" stop="20261109044525 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">《大海道》13（缩编版）</title>
+  </programme>
+  <programme start="20261109044525 +0800" stop="20261109044635 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TC-10广告（11.9）</title>
+  </programme>
+  <programme start="20261109044635 +0800" stop="20261109053000 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">《大海道》14（缩编版）</title>
+  </programme>
+  <programme start="20261109053000 +0800" stop="20261109053300 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">宣传片G（11.1）</title>
+  </programme>
+  <programme start="20261109053300 +0800" stop="20261109055300 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">我要惠生活2026-312（晚间20分钟版）</title>
+  </programme>
+  <programme start="20261109055300 +0800" stop="20261109061300 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">PK大擂台（精编版）2026-310</title>
+    <desc lang="zh">该栏目是浙江电视台民生休闲频道05年推出的一档全国首创的文体休闲电视直播节目。</desc>
+  </programme>
+  <programme start="20261109061300 +0800" stop="20261109062500 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">MS专题2026-312（华飞A）</title>
+  </programme>
+  <programme start="20261109062500 +0800" stop="20261109064500 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">PK大擂台（精编版）2026-311</title>
+    <desc lang="zh">该栏目是浙江电视台民生休闲频道05年推出的一档全国首创的文体休闲电视直播节目。</desc>
+  </programme>
+  <programme start="20261109064500 +0800" stop="20261109065700 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">MS专题2026-312（华飞B）</title>
+  </programme>
+  <programme start="20261109065700 +0800" stop="20261109070700 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">中国蓝·书画园地2026-001</title>
+    <desc lang="zh">中国蓝书画社的宗旨是服务职工，服务频道，服务基层；丰富和活跃职工文化生活，坚持团结，和谐，创新，发展；促进“品质广电，幸福集团”建设。</desc>
+  </programme>
+  <programme start="20261109070700 +0800" stop="20261109071700 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">汽车先锋2026-312（高清版）</title>
+    <desc lang="zh">2003年，深圳已成为除北京以外汽车拥有量做多的城市，经过一年多的精心运作，深圳电视台《汽车先锋》栏目茁壮成长。《汽车先锋》目前已经成为深圳地区唯一一档电视汽车栏目，播出覆盖珠三角地区，栏目风格时尚，权威性强，已经成为深圳车友了解汽车资讯，购买汽车的重要风向标，同时也成为众多车商和深圳本土经销商以及汽车相关产品的信息发布的重要平台。2004年4月，《汽车先锋》栏目在飞速发展的基础上，进行全新改版，节目版块增多，节目内容更丰富，节目设置更条理化，节目更细分市场，受众选择更丰富，同时也给客户提供更多投放选择。改版后节目收视率更是节节攀升，已成为深圳电视台三大专业电视栏目之一。《汽车先锋》为您搜罗全国乃至世界最酷最热车型，为您提供最新车市情报，教您如何用车护车爱车。汽车先锋，展现汽车魅力，打造汽车文化。</desc>
+  </programme>
+  <programme start="20261109071700 +0800" stop="20261109071900 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">宣传片A（11.1）</title>
+  </programme>
+  <programme start="20261109071900 +0800" stop="20261109072400 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">舅要管到底2026-045（周播版）</title>
+  </programme>
+  <programme start="20261109072400 +0800" stop="20261109073235 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TD-1广告（11.9）</title>
+  </programme>
+  <programme start="20261109073235 +0800" stop="20261109074525 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TD-2广告（11.9）</title>
+  </programme>
+  <programme start="20261109074525 +0800" stop="20261109075500 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TD-3广告（11.9）</title>
+  </programme>
+  <programme start="20261109075500 +0800" stop="20261109080000 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TD-4广告（11.9）</title>
+  </programme>
+  <programme start="20261109080000 +0800" stop="20261109080500 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">1818黄金眼2026-312（公众版高清）</title>
+    <desc lang="zh">《1818黄金眼》开办于2004年1月，以“关注民生、服务百姓”为栏目宗旨，以百姓的眼睛看百姓，和老百姓零距离接触，全心全意为老百姓服务。栏目开办之初，就创下了“三个浙江第一”：浙江节目时间最长的新闻节目（当时为每天55分钟）；浙江第一个开通24小时新闻热线的电视媒体；浙江第一个开设公益小专栏“寻”的电视节目，为观众免费提供寻人寻物服务。 公众版节目版块：“大事件”、“杭州日”、“浙一天”、“中国结”、“天下会”。</desc>
+  </programme>
+  <programme start="20261109080500 +0800" stop="20261109081250 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TC-6广告（11.9）</title>
+  </programme>
+  <programme start="20261109081250 +0800" stop="20261109082520 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TC-7广告（11.9）</title>
+  </programme>
+  <programme start="20261109082520 +0800" stop="20261109083245 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TC-8广告（11.9）</title>
+  </programme>
+  <programme start="20261109083245 +0800" stop="20261109084000 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TC-9广告（11.9）</title>
+  </programme>
+  <programme start="20261109084000 +0800" stop="20261109085200 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">MS专题2026-312（一家和兴）</title>
+  </programme>
+  <programme start="20261109085200 +0800" stop="20261109085600 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TD-5广告（11.9）</title>
+  </programme>
+  <programme start="20261109085600 +0800" stop="20261109090500 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">PK大擂台（精编版）2026-212</title>
+    <desc lang="zh">该栏目是浙江电视台民生休闲频道05年推出的一档全国首创的文体休闲电视直播节目。</desc>
+  </programme>
+  <programme start="20261109090500 +0800" stop="20261109092100 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">颜百岁专题（11.6）</title>
+  </programme>
+  <programme start="20261109092100 +0800" stop="20261109093600 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TD-6广告（11.9）</title>
+  </programme>
+  <programme start="20261109093600 +0800" stop="20261109095200 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TD-7广告（11.9）</title>
+  </programme>
+  <programme start="20261109095200 +0800" stop="20261109100300 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TD-8广告（11.9）</title>
+  </programme>
+  <programme start="20261109100300 +0800" stop="20261109101300 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">颜百岁专题（11.6）</title>
+  </programme>
+  <programme start="20261109101300 +0800" stop="20261109102800 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">午夜说亮话2026-312（匠心15）</title>
+    <desc lang="zh">浙江电视台民生休闲频道最新推出的一档访谈类节目。打开天窗说亮话，《午夜说亮话》的沙发上总会坐着不同的嘉宾，跟你一起来打开天窗说亮话。</desc>
+  </programme>
+  <programme start="20261109102800 +0800" stop="20261109103200 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TD-9广告（11.9）</title>
+  </programme>
+  <programme start="20261109103200 +0800" stop="20261109103500 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">老人鞋专题A（10.28）</title>
+  </programme>
+  <programme start="20261109103500 +0800" stop="20261109104000 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">舅要管到底2026-045（周播版）</title>
+  </programme>
+  <programme start="20261109104000 +0800" stop="20261109105035 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TD-10广告（11.9）</title>
+  </programme>
+  <programme start="20261109105035 +0800" stop="20261109110525 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TD-11广告（11.9）</title>
+  </programme>
+  <programme start="20261109110525 +0800" stop="20261109111700 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TD-12广告（11.9）</title>
+  </programme>
+  <programme start="20261109111700 +0800" stop="20261109112200 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">老人鞋专题C（10.28）</title>
+  </programme>
+  <programme start="20261109112200 +0800" stop="20261109113400 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">MS专题2026-312（一家和兴）</title>
+  </programme>
+  <programme start="20261109113400 +0800" stop="20261109113800 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TD-13广告（11.9）</title>
+  </programme>
+  <programme start="20261109113800 +0800" stop="20261109114300 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">老人鞋专题C（10.28）</title>
+  </programme>
+  <programme start="20261109114300 +0800" stop="20261109115300 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">MS专题2026-312（一家和兴10）</title>
+  </programme>
+  <programme start="20261109115300 +0800" stop="20261109115600 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">老人鞋专题B（10.28）</title>
+  </programme>
+  <programme start="20261109115600 +0800" stop="20261109120000 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TD-14广告（11.9）</title>
+  </programme>
+  <programme start="20261109120000 +0800" stop="20261109120500 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">1818黄金眼2026-312（民生版高清）</title>
+    <desc lang="zh">《1818黄金眼》开办于2004年1月，以“关注民生、服务百姓”为栏目宗旨，以百姓的眼睛看百姓，和老百姓零距离接触，全心全意为老百姓服务。栏目开办之初，就创下了“三个浙江第一”：浙江节目时间最长的新闻节目（当时为每天55分钟）；浙江第一个开通24小时新闻热线的电视媒体；浙江第一个开设公益小专栏“寻”的电视节目，为观众免费提供寻人寻物服务。 公众版节目版块：“大事件”、“杭州日”、“浙一天”、“中国结”、“天下会”。</desc>
+  </programme>
+  <programme start="20261109120500 +0800" stop="20261109121405 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TC-1广告（11.9）</title>
+  </programme>
+  <programme start="20261109121405 +0800" stop="20261109122745 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TC-2广告（11.9）</title>
+  </programme>
+  <programme start="20261109122745 +0800" stop="20261109124155 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TC-3广告（11.9）</title>
+  </programme>
+  <programme start="20261109124155 +0800" stop="20261109125410 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TC-4广告（11.9）</title>
+  </programme>
+  <programme start="20261109125410 +0800" stop="20261109131700 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TC-5广告（11.9）</title>
+  </programme>
+  <programme start="20261109131700 +0800" stop="20261109132200 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">国坤堂专题（11.8）</title>
+  </programme>
+  <programme start="20261109132200 +0800" stop="20261109132700 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">颜百岁专题（11.6）</title>
+  </programme>
+  <programme start="20261109132700 +0800" stop="20261109133100 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TB-1广告（11.9）</title>
+  </programme>
+  <programme start="20261109133100 +0800" stop="20261109133600 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">老人鞋专题C（10.28）</title>
+  </programme>
+  <programme start="20261109133600 +0800" stop="20261109134500 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">PK大擂台（精编版）2026-312</title>
+    <desc lang="zh">该栏目是浙江电视台民生休闲频道05年推出的一档全国首创的文体休闲电视直播节目。</desc>
+  </programme>
+  <programme start="20261109134500 +0800" stop="20261109140100 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TB-2广告（11.9）</title>
+  </programme>
+  <programme start="20261109140100 +0800" stop="20261109141600 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TB-3广告（11.9）</title>
+  </programme>
+  <programme start="20261109141600 +0800" stop="20261109143100 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TB-4广告（11.9）</title>
+  </programme>
+  <programme start="20261109143100 +0800" stop="20261109144100 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TB-5广告（11.9）</title>
+  </programme>
+  <programme start="20261109144100 +0800" stop="20261109145100 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TB-6广告（11.9）</title>
+  </programme>
+  <programme start="20261109145100 +0800" stop="20261109145400 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TB-7广告（11.9）</title>
+  </programme>
+  <programme start="20261109145400 +0800" stop="20261109145900 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">老人鞋专题C（10.28）</title>
+  </programme>
+  <programme start="20261109145900 +0800" stop="20261109150400 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TB-8广告（11.9）</title>
+  </programme>
+  <programme start="20261109150400 +0800" stop="20261109151300 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">PK大擂台（精编版）2026-311</title>
+    <desc lang="zh">该栏目是浙江电视台民生休闲频道05年推出的一档全国首创的文体休闲电视直播节目。</desc>
+  </programme>
+  <programme start="20261109151300 +0800" stop="20261109152900 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">颜百岁专题（11.6）</title>
+  </programme>
+  <programme start="20261109152900 +0800" stop="20261109153900 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">颜百岁专题（11.6）</title>
+  </programme>
+  <programme start="20261109153900 +0800" stop="20261109160930 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">MS专题2026-312（11民生30）</title>
+  </programme>
+  <programme start="20261109160930 +0800" stop="20261109161100 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">宣传片D（11.1）</title>
+  </programme>
+  <programme start="20261109161100 +0800" stop="20261109161500 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TB-9广告（11.9）</title>
+  </programme>
+  <programme start="20261109161500 +0800" stop="20261109161800 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">老人鞋专题A（10.28）</title>
+  </programme>
+  <programme start="20261109161800 +0800" stop="20261109162300 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">舅要管到底2026-045（周播版）</title>
+  </programme>
+  <programme start="20261109162300 +0800" stop="20261109163335 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TB-10广告（11.9）</title>
+  </programme>
+  <programme start="20261109163335 +0800" stop="20261109164825 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TB-11广告（11.9）</title>
+  </programme>
+  <programme start="20261109164825 +0800" stop="20261109170000 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TB-12广告（11.9）</title>
+  </programme>
+  <programme start="20261109170000 +0800" stop="20261109170500 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">颜百岁专题（11.6）</title>
+  </programme>
+  <programme start="20261109170500 +0800" stop="20261109171500 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">汽车先锋2026-312（高清版）</title>
+    <desc lang="zh">2003年，深圳已成为除北京以外汽车拥有量做多的城市，经过一年多的精心运作，深圳电视台《汽车先锋》栏目茁壮成长。《汽车先锋》目前已经成为深圳地区唯一一档电视汽车栏目，播出覆盖珠三角地区，栏目风格时尚，权威性强，已经成为深圳车友了解汽车资讯，购买汽车的重要风向标，同时也成为众多车商和深圳本土经销商以及汽车相关产品的信息发布的重要平台。2004年4月，《汽车先锋》栏目在飞速发展的基础上，进行全新改版，节目版块增多，节目内容更丰富，节目设置更条理化，节目更细分市场，受众选择更丰富，同时也给客户提供更多投放选择。改版后节目收视率更是节节攀升，已成为深圳电视台三大专业电视栏目之一。《汽车先锋》为您搜罗全国乃至世界最酷最热车型，为您提供最新车市情报，教您如何用车护车爱车。汽车先锋，展现汽车魅力，打造汽车文化。</desc>
+  </programme>
+  <programme start="20261109171500 +0800" stop="20261109171900 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TB-13广告（11.9）</title>
+  </programme>
+  <programme start="20261109171900 +0800" stop="20261109174900 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">我要惠生活2026-312（30版）</title>
+  </programme>
+  <programme start="20261109174900 +0800" stop="20261109175500 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TB-14广告（11.9）</title>
+  </programme>
+  <programme start="20261109175500 +0800" stop="20261109175600 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">6频道海洋预报（11.9）</title>
+  </programme>
+  <programme start="20261109175600 +0800" stop="20261109180000 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">直播前广告</title>
+  </programme>
+  <programme start="20261109180000 +0800" stop="20261109181400 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">直播1800看今晚</title>
+  </programme>
+  <programme start="20261109181400 +0800" stop="20261109181800 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TA-1广告（11.9）</title>
+  </programme>
+  <programme start="20261109181800 +0800" stop="20261109193000 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">直播1818黄金眼</title>
+  </programme>
+  <programme start="20261109193000 +0800" stop="20261109193200 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TA-2广告（11.9）</title>
+  </programme>
+  <programme start="20261109193200 +0800" stop="20261109193700 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">钱塘老娘舅2026-313（高清版）</title>
+    <desc lang="zh">“夫妻二人闹别扭，儿女不孝老人愁，邻里矛盾起纠纷，试试找个老娘舅！” 这是一档全国首创民间纠纷当场摆平栏目，从民间寻找热心公正、敢于直言的“老娘舅”，凭借其最质朴、真实的市井语言，为老百姓调解纠纷化解矛盾。通过一个个最真实、最现场的矛盾调解过程，让观众在审视人性美与丑的同时，衍生出更为理性的思考和价值观 。</desc>
+  </programme>
+  <programme start="20261109193700 +0800" stop="20261109194535 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TA-3广告（11.9）</title>
+  </programme>
+  <programme start="20261109194535 +0800" stop="20261109195825 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TA-4广告（11.9）</title>
+  </programme>
+  <programme start="20261109195825 +0800" stop="20261109200800 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TA-5广告（11.9）</title>
+  </programme>
+  <programme start="20261109200800 +0800" stop="20261109201000 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">TA-6广告（11.9）</title>
+  </programme>
+  <programme start="20261109201000 +0800" stop="20261109210500 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">直播PK大擂台</title>
+  </programme>
+  <programme start="20261109210500 +0800" stop="20261109210800 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">直播原产地短片</title>
+  </programme>
+  <programme start="20261109210800 +0800" stop="20261109211000 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">直播前广告</title>
+  </programme>
+  <programme start="20261109211000 +0800" stop="20261109220000 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">直播1818公众版</title>
+  </programme>
+  <programme start="20261109220000 +0800" stop="20261109221000 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">1818黄金屋2026-313（高清版）</title>
+    <desc lang="zh">《1818黄金屋》是一档提倡服务性的电视房产栏目，记者编导化身黄金屋的探访者、体验者，他们兼具专业的眼光及客户的视角，他们将以参谋的身份为您跑盘读盘，另外还奉上最新的房产资讯，通过线上影响力，带动线下营销活动。</desc>
+  </programme>
+  <programme start="20261109221000 +0800" stop="20261109225500 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">金牌赛场2026-313（浙BA上）</title>
+    <desc lang="zh">金牌赛场是民生休闲频道的一个重要赛事栏目。负责播放国内外的重要体育赛事的体育栏目。</desc>
+  </programme>
+  <programme start="20261109225500 +0800" stop="20261109234000 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">金牌赛场2026-313（浙BA下）</title>
+    <desc lang="zh">金牌赛场是民生休闲频道的一个重要赛事栏目。负责播放国内外的重要体育赛事的体育栏目。</desc>
+  </programme>
+  <programme start="20261109234000 +0800" stop="20261110000000 +0800" channel="ZhejiangMinshengLeisure.cn">
+    <title lang="zh">PK大擂台（精编版）2026-312</title>
+    <desc lang="zh">该栏目是浙江电视台民生休闲频道05年推出的一档全国首创的文体休闲电视直播节目。</desc>
   </programme>
   <programme start="20261108000000 +0800" stop="20261108001200 +0800" channel="ZhejiangChildrensChannel.cn">
     <title lang="zh">《《我的哪吒与变形金刚（一）》》6（少儿高清版）</title>
@@ -59102,6 +60088,595 @@
   <programme start="20261108235734 +0800" stop="20261109000000 +0800" channel="ZhejiangChildrensChannel.cn">
     <title lang="zh">公益广告5月21日版</title>
   </programme>
+  <programme start="20261109000000 +0800" stop="20261109001354 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《我的哪吒与变形金刚（一）》》10（少儿高清版）</title>
+  </programme>
+  <programme start="20261109001354 +0800" stop="20261109001814 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">公益广告5月21日版</title>
+  </programme>
+  <programme start="20261109001814 +0800" stop="20261109003012 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《我的哪吒与变形金刚（一）》》11（少儿高清版）</title>
+  </programme>
+  <programme start="20261109003012 +0800" stop="20261109003432 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">公益广告5月21日版</title>
+  </programme>
+  <programme start="20261109003432 +0800" stop="20261109004632 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《我的哪吒与变形金刚（一）》》12（少儿高清版）</title>
+  </programme>
+  <programme start="20261109004632 +0800" stop="20261109005052 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">公益广告5月21日版</title>
+  </programme>
+  <programme start="20261109005052 +0800" stop="20261109010323 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《天天成长记第三季天天成长记第四季》》22（少儿高清版）</title>
+  </programme>
+  <programme start="20261109010323 +0800" stop="20261109010743 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">公益广告5月21日版</title>
+  </programme>
+  <programme start="20261109010743 +0800" stop="20261109012015 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《天天成长记第三季天天成长记第四季》》23（少儿高清版）</title>
+  </programme>
+  <programme start="20261109012015 +0800" stop="20261109012435 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">公益广告5月21日版</title>
+  </programme>
+  <programme start="20261109012435 +0800" stop="20261109013707 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《天天成长记第三季天天成长记第四季》》24（少儿高清版）</title>
+  </programme>
+  <programme start="20261109013707 +0800" stop="20261109014127 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">公益广告5月21日版</title>
+  </programme>
+  <programme start="20261109014127 +0800" stop="20261109015401 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《天天成长记第三季天天成长记第四季》》25（少儿高清版）</title>
+  </programme>
+  <programme start="20261109015401 +0800" stop="20261109015821 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">公益广告5月21日版</title>
+  </programme>
+  <programme start="20261109015821 +0800" stop="20261109021049 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《天天成长记第三季天天成长记第四季》》26（少儿高清版）</title>
+  </programme>
+  <programme start="20261109021049 +0800" stop="20261109021509 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">公益广告5月21日版</title>
+  </programme>
+  <programme start="20261109021509 +0800" stop="20261109022709 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《我的哪吒与变形金刚（一）》》9（少儿高清版）</title>
+  </programme>
+  <programme start="20261109022709 +0800" stop="20261109023129 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">公益广告5月21日版</title>
+  </programme>
+  <programme start="20261109023129 +0800" stop="20261109024329 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《我的哪吒与变形金刚（一）》》10（少儿高清版）</title>
+  </programme>
+  <programme start="20261109024329 +0800" stop="20261109024749 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">公益广告5月21日版</title>
+  </programme>
+  <programme start="20261109024749 +0800" stop="20261109025947 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《我的哪吒与变形金刚（一）》》11（少儿高清版）</title>
+  </programme>
+  <programme start="20261109025947 +0800" stop="20261109030407 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">公益广告5月21日版</title>
+  </programme>
+  <programme start="20261109030407 +0800" stop="20261109031607 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《我的哪吒与变形金刚（一）》》12（少儿高清版）</title>
+  </programme>
+  <programme start="20261109031607 +0800" stop="20261109032027 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">公益广告5月21日版</title>
+  </programme>
+  <programme start="20261109032027 +0800" stop="20261109033258 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《天天成长记第三季天天成长记第四季》》22（少儿高清版）</title>
+  </programme>
+  <programme start="20261109033258 +0800" stop="20261109033718 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">公益广告5月21日版</title>
+  </programme>
+  <programme start="20261109033718 +0800" stop="20261109034950 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《天天成长记第三季天天成长记第四季》》23（少儿高清版）</title>
+  </programme>
+  <programme start="20261109034950 +0800" stop="20261109035410 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">公益广告5月21日版</title>
+  </programme>
+  <programme start="20261109035410 +0800" stop="20261109040642 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《天天成长记第三季天天成长记第四季》》24（少儿高清版）</title>
+  </programme>
+  <programme start="20261109040642 +0800" stop="20261109041102 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">公益广告5月21日版</title>
+  </programme>
+  <programme start="20261109041102 +0800" stop="20261109042336 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《天天成长记第三季天天成长记第四季》》25（少儿高清版）</title>
+  </programme>
+  <programme start="20261109042336 +0800" stop="20261109042756 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">公益广告5月21日版</title>
+  </programme>
+  <programme start="20261109042756 +0800" stop="20261109044024 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《天天成长记第三季天天成长记第四季》》26（少儿高清版）</title>
+  </programme>
+  <programme start="20261109044024 +0800" stop="20261109044444 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">公益广告5月21日版</title>
+  </programme>
+  <programme start="20261109044444 +0800" stop="20261109045644 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《我的哪吒与变形金刚（一）》》9（少儿高清版）</title>
+  </programme>
+  <programme start="20261109045644 +0800" stop="20261109045900 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">公益广告5月21日版</title>
+  </programme>
+  <programme start="20261109045900 +0800" stop="20261109051100 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《我的哪吒与变形金刚（一）》》10（少儿高清版）</title>
+  </programme>
+  <programme start="20261109051100 +0800" stop="20261109052258 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《我的哪吒与变形金刚（一）》》11（少儿高清版）</title>
+  </programme>
+  <programme start="20261109052258 +0800" stop="20261109053458 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《我的哪吒与变形金刚（一）》》12（少儿高清版）</title>
+  </programme>
+  <programme start="20261109053458 +0800" stop="20261109054732 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《天天成长记第三季天天成长记第四季》》25（少儿高清版）</title>
+  </programme>
+  <programme start="20261109054732 +0800" stop="20261109060000 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《天天成长记第三季天天成长记第四季》》26（少儿高清版）</title>
+  </programme>
+  <programme start="20261109060000 +0800" stop="20261109060140 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告1</title>
+  </programme>
+  <programme start="20261109060140 +0800" stop="20261109060600 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">公益广告5月21日版</title>
+  </programme>
+  <programme start="20261109060600 +0800" stop="20261109061800 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《我的哪吒与变形金刚（一）》》12（少儿高清版）</title>
+  </programme>
+  <programme start="20261109061800 +0800" stop="20261109061940 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告2</title>
+  </programme>
+  <programme start="20261109061940 +0800" stop="20261109063140 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《我的哪吒与变形金刚（一）》》13（少儿高清版）</title>
+  </programme>
+  <programme start="20261109063140 +0800" stop="20261109063252 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">敬老爱老公益广告2024喜羊羊与灰太狼</title>
+  </programme>
+  <programme start="20261109063252 +0800" stop="20261109063432 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告3</title>
+  </programme>
+  <programme start="20261109063432 +0800" stop="20261109064631 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《我的哪吒与变形金刚（一）》》14（少儿高清版）</title>
+  </programme>
+  <programme start="20261109064631 +0800" stop="20261109064811 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告4</title>
+  </programme>
+  <programme start="20261109064811 +0800" stop="20261109070009 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《我的哪吒与变形金刚（一）》》15（少儿高清版）</title>
+  </programme>
+  <programme start="20261109070009 +0800" stop="20261109070149 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告1</title>
+  </programme>
+  <programme start="20261109070149 +0800" stop="20261109071348 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《我的哪吒与变形金刚（一）》》16（少儿高清版）</title>
+  </programme>
+  <programme start="20261109071348 +0800" stop="20261109071458 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">青少年健康成长公益广告7.22版1</title>
+  </programme>
+  <programme start="20261109071458 +0800" stop="20261109071638 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告2</title>
+  </programme>
+  <programme start="20261109071638 +0800" stop="20261109074638 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《海天雄鹰》》6（高清少儿片尾版）</title>
+  </programme>
+  <programme start="20261109074638 +0800" stop="20261109074808 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">红军长征胜利90周年公益广告11.20止1</title>
+  </programme>
+  <programme start="20261109074808 +0800" stop="20261109074948 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告3</title>
+  </programme>
+  <programme start="20261109074948 +0800" stop="20261109080048 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《舒克贝塔生命水之战》》1（少儿高清版）</title>
+  </programme>
+  <programme start="20261109080048 +0800" stop="20261109080228 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告4</title>
+  </programme>
+  <programme start="20261109080228 +0800" stop="20261109081328 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《舒克贝塔生命水之战》》2（少儿高清版）</title>
+  </programme>
+  <programme start="20261109081328 +0800" stop="20261109081508 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告1</title>
+  </programme>
+  <programme start="20261109081508 +0800" stop="20261109082608 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《舒克贝塔生命水之战》》3（少儿高清版）</title>
+  </programme>
+  <programme start="20261109082608 +0800" stop="20261109082748 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告2</title>
+  </programme>
+  <programme start="20261109082748 +0800" stop="20261109083848 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《舒克贝塔生命水之战》》4（少儿高清版）</title>
+  </programme>
+  <programme start="20261109083848 +0800" stop="20261109084028 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告3</title>
+  </programme>
+  <programme start="20261109084028 +0800" stop="20261109085128 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《舒克贝塔生命水之战》》5（少儿高清版）A</title>
+  </programme>
+  <programme start="20261109085128 +0800" stop="20261109085308 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告4</title>
+  </programme>
+  <programme start="20261109085308 +0800" stop="20261109090508 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《我的哪吒与变形金刚（一）》》12（少儿高清版）</title>
+  </programme>
+  <programme start="20261109090508 +0800" stop="20261109090623 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">2026获奖公益广告10.10版3</title>
+  </programme>
+  <programme start="20261109090623 +0800" stop="20261109090803 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告1</title>
+  </programme>
+  <programme start="20261109090803 +0800" stop="20261109092003 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《我的哪吒与变形金刚（一）》》13（少儿高清版）</title>
+  </programme>
+  <programme start="20261109092003 +0800" stop="20261109092143 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告2</title>
+  </programme>
+  <programme start="20261109092143 +0800" stop="20261109093342 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《我的哪吒与变形金刚（一）》》14（少儿高清版）</title>
+  </programme>
+  <programme start="20261109093342 +0800" stop="20261109093522 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告3</title>
+  </programme>
+  <programme start="20261109093522 +0800" stop="20261109094720 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《我的哪吒与变形金刚（一）》》15（少儿高清版）</title>
+  </programme>
+  <programme start="20261109094720 +0800" stop="20261109094900 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告4</title>
+  </programme>
+  <programme start="20261109094900 +0800" stop="20261109100059 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《我的哪吒与变形金刚（一）》》16（少儿高清版）</title>
+  </programme>
+  <programme start="20261109100059 +0800" stop="20261109100259 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">少儿频道节目32026-025（少儿国医馆（2026））</title>
+  </programme>
+  <programme start="20261109100259 +0800" stop="20261109100439 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告1</title>
+  </programme>
+  <programme start="20261109100439 +0800" stop="20261109103439 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《海天雄鹰》》7（高清少儿片尾版）</title>
+  </programme>
+  <programme start="20261109103439 +0800" stop="20261109103604 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">少儿宣传片2025-001（《一起去看外面的世界》公益广告）</title>
+  </programme>
+  <programme start="20261109103604 +0800" stop="20261109103744 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告2</title>
+  </programme>
+  <programme start="20261109103744 +0800" stop="20261109110744 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《海天雄鹰》》8（高清少儿片尾版）</title>
+  </programme>
+  <programme start="20261109110744 +0800" stop="20261109110900 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">青少年健康成长公益广告7.22版3</title>
+  </programme>
+  <programme start="20261109110900 +0800" stop="20261109111040 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告3</title>
+  </programme>
+  <programme start="20261109111040 +0800" stop="20261109114040 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《海天雄鹰》》9（高清少儿片尾版）</title>
+  </programme>
+  <programme start="20261109114040 +0800" stop="20261109114116 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">奥运冠军禁毒反兴奋剂潘展乐篇</title>
+  </programme>
+  <programme start="20261109114116 +0800" stop="20261109114256 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告4</title>
+  </programme>
+  <programme start="20261109114256 +0800" stop="20261109121256 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《海天雄鹰》》10（高清少儿片尾版）</title>
+  </programme>
+  <programme start="20261109121256 +0800" stop="20261109121408 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">敬老爱老公益广告2024喜羊羊与灰太狼</title>
+  </programme>
+  <programme start="20261109121408 +0800" stop="20261109121548 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告1</title>
+  </programme>
+  <programme start="20261109121548 +0800" stop="20261109122648 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《舒克贝塔生命水之战》》1（少儿高清版）</title>
+  </programme>
+  <programme start="20261109122648 +0800" stop="20261109122828 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告2</title>
+  </programme>
+  <programme start="20261109122828 +0800" stop="20261109123928 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《舒克贝塔生命水之战》》2（少儿高清版）</title>
+  </programme>
+  <programme start="20261109123928 +0800" stop="20261109124028 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">青少年健康成长公益广告7.22版2</title>
+  </programme>
+  <programme start="20261109124028 +0800" stop="20261109124208 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告3</title>
+  </programme>
+  <programme start="20261109124208 +0800" stop="20261109125308 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《舒克贝塔生命水之战》》3（少儿高清版）</title>
+  </programme>
+  <programme start="20261109125308 +0800" stop="20261109125448 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告4</title>
+  </programme>
+  <programme start="20261109125448 +0800" stop="20261109130548 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《舒克贝塔生命水之战》》4（少儿高清版）</title>
+  </programme>
+  <programme start="20261109130548 +0800" stop="20261109130633 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">超高清公益广告2.13版2</title>
+  </programme>
+  <programme start="20261109130633 +0800" stop="20261109130813 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告1</title>
+  </programme>
+  <programme start="20261109130813 +0800" stop="20261109133813 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《海天雄鹰》》11（高清少儿片尾版）</title>
+  </programme>
+  <programme start="20261109133813 +0800" stop="20261109133943 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">红军长征胜利90周年公益广告11.20止1</title>
+  </programme>
+  <programme start="20261109133943 +0800" stop="20261109134123 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告2</title>
+  </programme>
+  <programme start="20261109134123 +0800" stop="20261109141123 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《海天雄鹰》》12（高清少儿片尾版）</title>
+  </programme>
+  <programme start="20261109141123 +0800" stop="20261109141223 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">交通银行囤金宝视频（沃德logo广告</title>
+  </programme>
+  <programme start="20261109141223 +0800" stop="20261109141403 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告3</title>
+  </programme>
+  <programme start="20261109141403 +0800" stop="20261109144403 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《海天雄鹰》》13（高清少儿片尾版）</title>
+  </programme>
+  <programme start="20261109144403 +0800" stop="20261109144528 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">少儿宣传片2025-001（《一起去看外面的世界》公益广告）</title>
+  </programme>
+  <programme start="20261109144528 +0800" stop="20261109144708 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告4</title>
+  </programme>
+  <programme start="20261109144708 +0800" stop="20261109151708 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《海天雄鹰》》14（高清少儿片尾版）</title>
+  </programme>
+  <programme start="20261109151708 +0800" stop="20261109151808 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">交通银行囤金宝视频（沃德logo广告</title>
+  </programme>
+  <programme start="20261109151808 +0800" stop="20261109151948 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告1</title>
+  </programme>
+  <programme start="20261109151948 +0800" stop="20261109154948 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《海天雄鹰》》15（高清少儿片尾版）</title>
+  </programme>
+  <programme start="20261109154948 +0800" stop="20261109155128 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告2</title>
+  </programme>
+  <programme start="20261109155128 +0800" stop="20261109160328 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《乐比大冒险第一季》》19（少儿高清版）</title>
+  </programme>
+  <programme start="20261109160328 +0800" stop="20261109160508 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告3</title>
+  </programme>
+  <programme start="20261109160508 +0800" stop="20261109161708 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《乐比大冒险第一季》》20（少儿高清版）</title>
+  </programme>
+  <programme start="20261109161708 +0800" stop="20261109161808 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">交通银行囤金宝视频（沃德logo广告</title>
+  </programme>
+  <programme start="20261109161808 +0800" stop="20261109161948 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告4</title>
+  </programme>
+  <programme start="20261109161948 +0800" stop="20261109163148 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《乐比大冒险第一季》》21（少儿高清版）</title>
+  </programme>
+  <programme start="20261109163148 +0800" stop="20261109163300 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">敬老爱老公益广告2024喜羊羊与灰太狼</title>
+  </programme>
+  <programme start="20261109163300 +0800" stop="20261109163440 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告1</title>
+  </programme>
+  <programme start="20261109163440 +0800" stop="20261109164742 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《宇宙护卫队之钢甲风暴》》7（少儿高清版）</title>
+  </programme>
+  <programme start="20261109164742 +0800" stop="20261109164900 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">珍爱生命远离毒品</title>
+  </programme>
+  <programme start="20261109164900 +0800" stop="20261109165040 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告2</title>
+  </programme>
+  <programme start="20261109165040 +0800" stop="20261109165540 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《瑞奇宝宝第五季》（27-52集）》51（少儿高清版）</title>
+  </programme>
+  <programme start="20261109165540 +0800" stop="20261109165720 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告3</title>
+  </programme>
+  <programme start="20261109165720 +0800" stop="20261109170218 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《瑞奇宝宝第五季》（27-52集）》52（少儿高清版）</title>
+  </programme>
+  <programme start="20261109170218 +0800" stop="20261109170258 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">青少年健康成长公益广告7.22版4</title>
+  </programme>
+  <programme start="20261109170258 +0800" stop="20261109170438 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告4</title>
+  </programme>
+  <programme start="20261109170438 +0800" stop="20261109170941 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《瑞奇宝宝幼儿园之旅》》1（少儿高清版）</title>
+  </programme>
+  <programme start="20261109170941 +0800" stop="20261109171041 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">交通银行囤金宝视频（沃德logo广告</title>
+  </programme>
+  <programme start="20261109171041 +0800" stop="20261109171544 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《瑞奇宝宝幼儿园之旅》》2（少儿高清版）</title>
+  </programme>
+  <programme start="20261109171544 +0800" stop="20261109171619 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">2026获奖公益广告10.10版4</title>
+  </programme>
+  <programme start="20261109171619 +0800" stop="20261109172122 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《瑞奇宝宝幼儿园之旅》》3（少儿高清版）</title>
+  </programme>
+  <programme start="20261109172122 +0800" stop="20261109172302 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告1</title>
+  </programme>
+  <programme start="20261109172302 +0800" stop="20261109173501 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《梦幻镇之成长日记》》7（少儿高清版）</title>
+  </programme>
+  <programme start="20261109173501 +0800" stop="20261109173601 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">交通银行囤金宝视频（沃德logo广告</title>
+  </programme>
+  <programme start="20261109173601 +0800" stop="20261109173741 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告2</title>
+  </programme>
+  <programme start="20261109173741 +0800" stop="20261109174938 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《梦幻镇之成长日记》》8（少儿高清版）</title>
+  </programme>
+  <programme start="20261109174938 +0800" stop="20261109175108 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">超高清公益广告2.13版3</title>
+  </programme>
+  <programme start="20261109175108 +0800" stop="20261109175248 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告3</title>
+  </programme>
+  <programme start="20261109175248 +0800" stop="20261109180249 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《奶龙搞怪大作战2》》22（少儿高清版）</title>
+  </programme>
+  <programme start="20261109180249 +0800" stop="20261109180349 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">交通银行囤金宝视频（沃德logo广告</title>
+  </programme>
+  <programme start="20261109180349 +0800" stop="20261109180529 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告4</title>
+  </programme>
+  <programme start="20261109180529 +0800" stop="20261109181729 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《天眼归来之幸福配方》（105-208集）》183（少儿高清版）</title>
+  </programme>
+  <programme start="20261109181729 +0800" stop="20261109181841 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">敬老爱老公益广告2024喜羊羊与灰太狼</title>
+  </programme>
+  <programme start="20261109181841 +0800" stop="20261109182021 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告1</title>
+  </programme>
+  <programme start="20261109182021 +0800" stop="20261109183221 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《天眼归来之幸福配方》（105-208集）》184（少儿高清版）</title>
+  </programme>
+  <programme start="20261109183221 +0800" stop="20261109183321 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">交通银行囤金宝视频（沃德logo广告</title>
+  </programme>
+  <programme start="20261109183321 +0800" stop="20261109184521 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《乐比大冒险第二季》》55（少儿高清版）</title>
+  </programme>
+  <programme start="20261109184521 +0800" stop="20261109184701 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告2</title>
+  </programme>
+  <programme start="20261109184701 +0800" stop="20261109185901 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《乐比大冒险第二季》》56（少儿高清版）</title>
+  </programme>
+  <programme start="20261109185901 +0800" stop="20261109191101 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《乐比大冒险第二季》》57（少儿高清版）</title>
+  </programme>
+  <programme start="20261109191101 +0800" stop="20261109191201 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">交通银行囤金宝视频（沃德logo广告</title>
+  </programme>
+  <programme start="20261109191201 +0800" stop="20261109191341 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告3</title>
+  </programme>
+  <programme start="20261109191341 +0800" stop="20261109192539 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《我的哪吒与变形金刚（一）》》11（少儿高清版）</title>
+  </programme>
+  <programme start="20261109192539 +0800" stop="20261109192719 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告4</title>
+  </programme>
+  <programme start="20261109192719 +0800" stop="20261109193919 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《我的哪吒与变形金刚（一）》》12（少儿高清版）</title>
+  </programme>
+  <programme start="20261109193919 +0800" stop="20261109194005 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">集团公益广告10.27版4</title>
+  </programme>
+  <programme start="20261109194005 +0800" stop="20261109194145 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告1</title>
+  </programme>
+  <programme start="20261109194145 +0800" stop="20261109195345 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《我的哪吒与变形金刚（一）》》13（少儿高清版）</title>
+  </programme>
+  <programme start="20261109195345 +0800" stop="20261109195515 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">红军长征胜利90周年公益广告11.20止2</title>
+  </programme>
+  <programme start="20261109195515 +0800" stop="20261109195655 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告2</title>
+  </programme>
+  <programme start="20261109195655 +0800" stop="20261109200854 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《我的哪吒与变形金刚（一）》》14（少儿高清版）</title>
+  </programme>
+  <programme start="20261109200854 +0800" stop="20261109200929 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">奥运冠军禁毒反兴奋剂羽毛球王昶篇</title>
+  </programme>
+  <programme start="20261109200929 +0800" stop="20261109201109 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告3</title>
+  </programme>
+  <programme start="20261109201109 +0800" stop="20261109202307 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《我的哪吒与变形金刚（一）》》15（少儿高清版）</title>
+  </programme>
+  <programme start="20261109202307 +0800" stop="20261109202447 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告4</title>
+  </programme>
+  <programme start="20261109202447 +0800" stop="20261109203646 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《我的哪吒与变形金刚（一）》》16（少儿高清版）</title>
+  </programme>
+  <programme start="20261109203646 +0800" stop="20261109203758 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">敬老爱老公益广告2024喜羊羊与灰太狼</title>
+  </programme>
+  <programme start="20261109203758 +0800" stop="20261109204957 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《我的哪吒与变形金刚（一）》》17（少儿高清版）</title>
+    <desc lang="zh">《1/7》是上海文广新闻传媒集团重点打造的60分钟大型电视新闻周刊。我们的口号是“一切从源头开始”，以关注时代进程之中的重大事件，展示精彩而充满矛盾的社会故事，对话热点新闻人物为主旨。</desc>
+  </programme>
+  <programme start="20261109204957 +0800" stop="20261109205137 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告1</title>
+  </programme>
+  <programme start="20261109205137 +0800" stop="20261109210337 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《乐比大冒险第一季》》19（少儿高清版）</title>
+  </programme>
+  <programme start="20261109210337 +0800" stop="20261109210413 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">奥运冠军禁毒反兴奋剂潘展乐篇</title>
+  </programme>
+  <programme start="20261109210413 +0800" stop="20261109210553 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告2</title>
+  </programme>
+  <programme start="20261109210553 +0800" stop="20261109211753 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《乐比大冒险第一季》》20（少儿高清版）</title>
+  </programme>
+  <programme start="20261109211753 +0800" stop="20261109211918 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">少儿宣传片2025-001（《一起去看外面的世界》公益广告）</title>
+  </programme>
+  <programme start="20261109211918 +0800" stop="20261109212058 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告3</title>
+  </programme>
+  <programme start="20261109212058 +0800" stop="20261109213258 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《乐比大冒险第一季》》21（少儿高清版）</title>
+  </programme>
+  <programme start="20261109213258 +0800" stop="20261109213438 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告4</title>
+  </programme>
+  <programme start="20261109213438 +0800" stop="20261109214638 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《乐比大冒险第一季》》22（少儿高清版）</title>
+  </programme>
+  <programme start="20261109214638 +0800" stop="20261109214818 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告1</title>
+  </programme>
+  <programme start="20261109214818 +0800" stop="20261109220018 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《乐比大冒险第一季》》23（少儿高清版）</title>
+  </programme>
+  <programme start="20261109220018 +0800" stop="20261109220158 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">11.1S广告2</title>
+  </programme>
+  <programme start="20261109220158 +0800" stop="20261109223158 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《迎风的青春》34（高清少儿片尾版）</title>
+  </programme>
+  <programme start="20261109223158 +0800" stop="20261109223325 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">超高清公益广告2.13版5</title>
+  </programme>
+  <programme start="20261109223325 +0800" stop="20261109230325 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《迎风的青春》35（高清少儿片尾版）</title>
+  </programme>
+  <programme start="20261109230325 +0800" stop="20261109230531 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">超高清公益广告2.13版4</title>
+  </programme>
+  <programme start="20261109230531 +0800" stop="20261109233531 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《迎风的青春》36（高清少儿片尾版）</title>
+  </programme>
+  <programme start="20261109233531 +0800" stop="20261109233951 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">公益广告5月21日版</title>
+  </programme>
+  <programme start="20261109233951 +0800" stop="20261109235149 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《我的哪吒与变形金刚（一）》》11（少儿高清版）</title>
+  </programme>
+  <programme start="20261109235149 +0800" stop="20261109235609 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">公益广告5月21日版</title>
+  </programme>
+  <programme start="20261109235609 +0800" stop="20261110000000 +0800" channel="ZhejiangChildrensChannel.cn">
+    <title lang="zh">《《我的哪吒与变形金刚（一）》》12（少儿高清版）</title>
+  </programme>
   <programme start="20261108003200 +0800" stop="20261108003700 +0800" channel="JiangsuCityChannel.cn">
     <title lang="zh">江南文脉</title>
     <desc lang="zh">《江南文脉》是一部以独特视角树立江南文化发展脉络，以创新方式展示江南优秀文化成绩的电视纪录片。摄制组认为，江南文化作为中华文化的重要组成部分，既有悠久而深厚的共性，也有江南固有基因所构成的特质。因此，本纪录片力图在全面展示江南灿烂文化、描摹江南优美风物的基础上，对江南文化发展进行整体脉络的梳理和全新视角的归纳。</desc>
@@ -59524,7 +61099,7 @@
   </programme>
   <programme start="20261108193500 +0800" stop="20261108200000 +0800" channel="TVB翡翠">
     <title lang="zh">東張西望[粵]</title>
-    <desc lang="zh">《東張西望》星期一至日，緊貼追蹤社會大事、趣聞逸事，並報道娛樂圈最新動態、藝人消息，以及劇集宣傳和花絮。「今日突發」環節為大家追蹤即日熱門新聞；專題環節，深入探討大眾關心的時事、社會及民生問題，並訪問相關的專家。</desc>
+    <desc lang="zh">有中學生家長發現兒子被迫加入某通訊群組，而群組管理員疑似有背景，並向群組成員索取金錢。前DJ路芙轉戰殯儀界，認識一名業界女負責人，未上班便被邀吃飯見面？二人第二度合作後，女負責人要求路芙簽一份死約才發放佣金，然而合約要求離職後一年內不得從事殯儀業！《美食強人》導嚐團再出發，伍允龍再夥拍團員去試獲得「GBA評級」的食肆，這次的美食有帶來驚喜嗎？有銀行於銅鑼灣開設旗艦分行，為客人提供更多貼心服務。</desc>
   </programme>
   <programme start="20261108200000 +0800" stop="20261108203000 +0800" channel="TVB翡翠">
     <title lang="zh">中信銀行(國際)Motion$呈獻：試真D唷[粵]</title>
@@ -59563,7 +61138,7 @@
   </programme>
   <programme start="20261109003500 +0800" stop="20261109011000 +0800" channel="TVB翡翠">
     <title lang="zh">東張西望[粵]</title>
-    <desc lang="zh">《東張西望》星期一至日，緊貼追蹤社會大事、趣聞逸事，並報道娛樂圈最新動態、藝人消息，以及劇集宣傳和花絮。「今日突發」環節為大家追蹤即日熱門新聞；專題環節，深入探討大眾關心的時事、社會及民生問題，並訪問相關的專家。</desc>
+    <desc lang="zh">有中學生家長發現兒子被迫加入某通訊群組，而群組管理員疑似有背景，並向群組成員索取金錢。前DJ路芙轉戰殯儀界，認識一名業界女負責人，未上班便被邀吃飯見面？二人第二度合作後，女負責人要求路芙簽一份死約才發放佣金，然而合約要求離職後一年內不得從事殯儀業！《美食強人》導嚐團再出發，伍允龍再夥拍團員去試獲得「GBA評級」的食肆，這次的美食有帶來驚喜嗎？有銀行於銅鑼灣開設旗艦分行，為客人提供更多貼心服務。</desc>
   </programme>
   <programme start="20261109011000 +0800" stop="20261109024000 +0800" channel="TVB翡翠">
     <title lang="zh">初入職場·中醫季[粵/普]</title>
@@ -64203,47 +65778,132 @@
   <programme start="20261114233000 +0800" stop="20261115003500 +0800" channel="TVBPlus">
     <title lang="zh">賽後你點睇[粵][馬會]</title>
   </programme>
+  <programme start="20261108001500 +0800" stop="20261108004500 +0800" channel="ViuTV">
+    <title lang="zh">ERROR死腳膠千萬巨蛋自作夢 第6集</title>
+    <desc lang="zh">死腳膠意外成為鳥取官方外賓獲地方首長接見。Dee中途離隊後，餘下三人面對世界級挑戰。</desc>
+  </programme>
+  <programme start="20261108004500 +0800" stop="20261108011500 +0800" channel="ViuTV">
+    <title lang="zh">回憶守護隊 第7集</title>
+    <desc lang="zh">擁有無敵大海景的學校，廢校後改建成漁材體驗設施，面對寬大的禮堂以及戶外操場，Sica立即忍不住來個青春暴走，晚間還會在校內進行試膽活動。另外Sica又會來到埼玉縣，拜會擁有大量Classic Car的校長。</desc>
+  </programme>
+  <programme start="20261108011500 +0800" stop="20261108014500 +0800" channel="ViuTV">
+    <title lang="zh">MM730 - 困獸鬥 第28集</title>
+    <desc lang="zh">三位女主持悉心裝扮，猜度肥仔心思，營造浪漫的心跳回憶，目的只為奪得他的芳心！究竟誰能通過重重考核，令肥仔小鹿亂撞，成為他心目中的「女主角」呢？</desc>
+  </programme>
+  <programme start="20261108014500 +0800" stop="20261108020000 +0800" channel="ViuTV">
+    <title lang="zh">四鏡大暴走 第9集</title>
+    <desc lang="zh">Stanley 及Tiger則獲得面見荔枝窩居民代表——群英姐的機會，可以一嚐客家傳統味道。在荔枝窩旅程的結尾，二人更以麻雀會友，與兩位「耆英」上演「麻雀群英會」！</desc>
+  </programme>
+  <programme start="20261108020000 +0800" stop="20261108023000 +0800" channel="ViuTV">
+    <title lang="zh">台灣乜都拜 第9集</title>
+    <desc lang="zh">新一集嘉賓請來三位美女，郭奕芯 (Ashina)、陳凱寧 (Isabella)和鄭伊琪 (浩南)，節目組走訪了位於石碇的姑娘廟，在台灣不少民間信仰被受關注，而姑娘廟則是專門拜祭一些未結婚但已去世的女性，到底神秘的姑娘廟背後的面紗是怎樣的？</desc>
+  </programme>
+  <programme start="20261108023000 +0800" stop="20261108030000 +0800" channel="ViuTV">
+    <title lang="zh">拆你個夢 第10集</title>
+    <desc lang="zh">詠軒夢見與媽媽被小丑綁架，最後受驚喊醒；拆夢反映恐嚇與童星身份有密切關係。外表堅強的娟姐，拆夢後發現她原來是個柔弱小女子。</desc>
+  </programme>
+  <programme start="20261108030000 +0800" stop="20261108033000 +0800" channel="ViuTV">
+    <title lang="zh">運動員背後 第12集</title>
+    <desc lang="zh">人稱倪sir的Alert倪震權，分別於長天中學和華青體育會教排球20年，由運動員成為教練，至今仍對推動香港排球工作充滿熱誠。倪sir認為學習打排球不但只是學技術，更加應該從中體會做人道理，成為一個更好的人。而倪sir除了教排球外，仍不停為自身發掘其他可能性，近年開始鑽研唱歌，尋找不太受制身體條件的興趣，繼續精彩……</desc>
+  </programme>
+  <programme start="20261108033000 +0800" stop="20261108040000 +0800" channel="ViuTV">
+    <title lang="zh">文藝誌 第83集</title>
+    <desc lang="zh">竹棚是非物質文化遺產，在香港時常可以看見。一個專門展現竹棚的畫展，藝術家會如何展現竹棚的美？一起聽聽他的分享。</desc>
+  </programme>
+  <programme start="20261108040000 +0800" stop="20261108043000 +0800" channel="ViuTV">
+    <title lang="zh">平行教室 第19集</title>
+    <desc lang="zh">冰廳主理人-阿峰，承傳港式冰廳文化同時注入新意。他與團隊用心打理店舖日常，在保留經典風味與懷舊氛圍的基礎上，尋求傳統與現代之間的平衡，延續社區的飲食記憶。</desc>
+  </programme>
+  <programme start="20261108043000 +0800" stop="20261108050000 +0800" channel="ViuTV">
+    <title lang="zh">環保發現號 第81集</title>
+    <desc lang="zh">環保好難搞？你實在太悲觀啦！我們看到的處處都是環保新機遇！《環保發現號》將會帶大家走一趟環保之旅，接觸不同的環保人士，從個人出發，由理念開始，在他們身上取經，如何透過行動實踐環保！既然香港有接近700萬人口，節目就探索出700萬種環保生活！令你重新發現「環保」兩個字，其實唔難！</desc>
+  </programme>
+  <programme start="20261108050000 +0800" stop="20261108053000 +0800" channel="ViuTV">
+    <title lang="zh">嘥料 第8集</title>
+    <desc lang="zh">製作組準備了一隻價值近二千元的新鮮日本松葉蟹給3位主持發揮，嘉倩同 WinWin 就用了蟹身拆肉同蟹膏去煮麻婆豆腐 。George 從小最愛食片皮鴨，忽發其想就要用松葉蟹蟹鉗蟹腳去弄 「芝士牛油果片皮蟹」。可惜，「蟹肉蟹膏麻婆豆腐」比例完全錯配，豆腐太多，汁太辣，吃不到松葉蟹的鮮味及肉質，徹底嘥料! George 以清淡的牛油果及淡芝士去配松葉蟹，不但沒有搶去蟹的鮮甜，亦食到蟹肉清爽的質感。Christian 在節目中除卻教主持如何不嘥料外，更教大家要物盡其用，他用大家拆肉後 蟹殼、蟹肉、昆布、味醂及珍珠米煲粥，非常美味。</desc>
+  </programme>
+  <programme start="20261108053000 +0800" stop="20261108060000 +0800" channel="ViuTV">
+    <title lang="zh">給香港的情書 貳 第16集 -壁畫藝術家及插畫師</title>
+    <desc lang="zh">Kristopher Ho，一位來自香港的壁畫藝術家和插畫師，1986年出生於香港並於英國布萊克浦長大。他以黑白單色及複雜細緻的作品著稱，作品中融入了「佛系」和「輪迴」的概念，常以動物和手為主題，展現獨特風格。Kristopher的街頭藝術遍布香港，包括深水埗的貓貓壁畫及不同咖啡店的作品，他亦有參加HKwalls街頭藝術節，展現其對生活故事的熱誠和對細節的敏銳洞察力。</desc>
+  </programme>
+  <programme start="20261108060000 +0800" stop="20261108080000 +0800" channel="ViuTV">
+    <title lang="zh">早晨新聞</title>
+  </programme>
+  <programme start="20261108080000 +0800" stop="20261108083000 +0800" channel="ViuTV">
+    <title lang="zh">買不到的一餐 第7集</title>
+    <desc lang="zh">由荒廢村落到本地咖啡園聖地，荔枝窩的大翻身應該歸功給誰？讓我們呷著一口本土精品咖啡，了解每顆咖啡豆的得來不易。</desc>
+  </programme>
+  <programme start="20261108083000 +0800" stop="20261108090000 +0800" channel="ViuTV">
+    <title lang="zh">銀色下半場 第3集 -舞蹈家</title>
+    <desc lang="zh">陳嘉靈（Calina）自小夢想成為舞蹈家，卻多次因家庭和生活責任與芭蕾舞擦身而過。退休多年後，她在71歲重返排舞室，重新追尋未完成的舞台夢。今集主持將了解她如何以芭蕾舞找回少女心，優雅地活出人生下半場。</desc>
+  </programme>
+  <programme start="20261108090000 +0800" stop="20261108093000 +0800" channel="ViuTV">
+    <title lang="zh">健康識唔sick 第4集 -前列腺癌</title>
+  </programme>
+  <programme start="20261108093000 +0800" stop="20261108100000 +0800" channel="ViuTV">
+    <title lang="zh">我的哪吒與變形金剛 第13集</title>
+  </programme>
+  <programme start="20261108100000 +0800" stop="20261108103000 +0800" channel="ViuTV">
+    <title lang="zh">運動員背後 第13集</title>
+    <desc lang="zh">足球、籃球經理人可能聽得比較多，美式足球隊經理人你又聽過了沒有？今集為大家介紹一項在香港比較罕有的運動項目－美式足球，而身為球隊背後支柱的經理人Jason，這個角色可以說是舉足輕重，而Jason 更會分享身為一個幕僚的心路歷程。</desc>
+  </programme>
+  <programme start="20261108103000 +0800" stop="20261108110000 +0800" channel="ViuTV">
+    <title lang="zh">豆釘遊學團 第1集</title>
+    <desc lang="zh">近年 Staycation 盛行，不少家長不惜工本花大量金錢與小朋友到不同酒店遊玩，期望與孩子留下美好回憶，但這些回憶背後是由酒店員工為大家努力服務，才能讓入住的顧客有舒適的活動空間。今集朱薰、Ash、Hayden、Micah 和泰泰會化身成一間酒店服務員，體驗在酒店工作的辛酸。</desc>
+  </programme>
+  <programme start="20261108110000 +0800" stop="20261108113000 +0800" channel="ViuTV">
+    <title lang="zh">環保發現號 第81集</title>
+    <desc lang="zh">環保好難搞？你實在太悲觀啦！我們看到的處處都是環保新機遇！《環保發現號》將會帶大家走一趟環保之旅，接觸不同的環保人士，從個人出發，由理念開始，在他們身上取經，如何透過行動實踐環保！既然香港有接近700萬人口，節目就探索出700萬種環保生活！令你重新發現「環保」兩個字，其實唔難！</desc>
+  </programme>
+  <programme start="20261108113000 +0800" stop="20261108120000 +0800" channel="ViuTV">
+    <title lang="zh">聲畫合拍 9 第14集</title>
+    <desc lang="zh">《螢光蜓影》講述自幽暗江湖中長大的少女小螢，被昆蟲化形之族收留，自幼苦習繩鏢，卻被推向命定的「化蛹」試煉⋯⋯今集請來導演、製片和歌手上來分享拍攝故事。</desc>
+  </programme>
+  <programme start="20261108120000 +0800" stop="20261108123000 +0800" channel="ViuTV">
+    <title lang="zh">午間新聞</title>
+  </programme>
+  <programme start="20261108123000 +0800" stop="20261108130000 +0800" channel="ViuTV">
+    <title lang="zh">夜漫遊 第9集</title>
+    <desc lang="zh">今集，Yoshi同Anton將會遇上三位特別嘉賓——先有旅居韓國近10年嘅香港人Amanda，帶兩位乘坐夜間快車欣賞首爾靚景，再去本地人最愛嘅海鮮市場食大餐；隨後再有Viu原創劇《完美的家族》嘅導演行定勳、演員金永大，從中八卦佢哋喺韓國拍戲時嘅夜生活。而Yoshi同Anton兩位戲精隨後仲忍唔住喺寺廟上演「狗血劇情」？</desc>
+  </programme>
   <programme start="20261108130000 +0800" stop="20261108135500 +0800" channel="ViuTV">
-    <title lang="zh">擊戰 2 第11集 -甚麼都會 甚麼都呸 都Play</title>
+    <title lang="zh">擊戰 2 第11集</title>
     <desc lang="zh">4強終於誕生，她們將要迎接第一個挑戰—到台灣集訓！台灣除了大家熟悉的食買玩，音樂文化發展亦同樣值得關注，到底四位選手集訓期間有甚麼得著呢？台灣街頭鼓后羅小白作為東道主，將率先迎接4位選手，帶領她們在街頭busking，到底選手們又能否適應，打出Good show呢？</desc>
   </programme>
   <programme start="20261108135500 +0800" stop="20261108142500 +0800" channel="ViuTV">
-    <title lang="zh">名偵探光之美少女！ 第32集 -我回來了，光之偵探社</title>
+    <title lang="zh">名偵探光之美少女！ 第32集</title>
   </programme>
   <programme start="20261108142500 +0800" stop="20261108145500 +0800" channel="ViuTV">
-    <title lang="zh">爆旋陀螺X 第3季 第134集 -真．最後的未來</title>
+    <title lang="zh">爆旋陀螺X 第3季 第134集</title>
   </programme>
   <programme start="20261108145500 +0800" stop="20261108152500 +0800" channel="ViuTV">
-    <title lang="zh">放學玩啲咩 第35集 -旋風球</title>
+    <title lang="zh">放學玩啲咩 第35集</title>
     <desc lang="zh">本集的主角是旋風球，是來自美國的Trackball，其特點是不用花費太多力氣，就能夠利用特殊球拍打出高速及曲線變化球的新興運動。</desc>
   </programme>
   <programme start="20261108152500 +0800" stop="20261108155500 +0800" channel="ViuTV">
-    <title lang="zh">職人小學徒 第17集 -紙膠帶拼貼工藝師 - 陳釗傑</title>
-    <desc lang="zh">紙膠帶不是淨用來補破爛的，原來只要有創意，它也可以成為藝術素材。紙膠帶拼貼工藝師陳釗傑，就憑其無限想像及一雙巧手，用紙膠帶拼拼貼貼地帶留下香港最美麗的風景。小學徒和主持人今集也要跟老師學習貼出自己心中的良辰美景。</desc>
+    <title lang="zh">職人小學徒 第17集</title>
+    <desc lang="zh">在這個「一鍵生成」的 AI 時代，親手觸摸、感受與創造的溫度顯得尤為珍貴。本節目將帶領好奇心爆棚的小朋友走進香港各行各業的「大師工作室」。從充滿科技感的 3D 打印，到療癒心靈的苔玉盆景，小朋友將化身為「一日小學徒」，向當代職人討教。我們不只學習一門技術，更要體會職人背後那份「專注做好一件事」的匠心。</desc>
   </programme>
   <programme start="20261108155500 +0800" stop="20261108180000 +0800" channel="ViuTV">
-    <title lang="zh">保誠香港網球公開賽2026 -單打決賽[直播]</title>
+    <title lang="zh">保誠香港網球公開賽2026</title>
+    <desc lang="zh">單打決賽</desc>
   </programme>
   <programme start="20261108180000 +0800" stop="20261108183000 +0800" channel="ViuTV">
     <title lang="zh">6點新聞報道 (手語新聞)</title>
   </programme>
   <programme start="20261108183000 +0800" stop="20261108190000 +0800" channel="ViuTV">
-    <title lang="zh">大鳴大放 第1026集 -嘉賓：陳英凝 (共享基金會總幹事) / 題目:人道救援與民間外交</title>
-    <desc lang="zh">2018年成立的共享基金會響應國家「一帶一路」倡議，向沿線發展中國家提供公共衞生人道援助、登革熱防控及民心相通的工作。共享基金會總幹事陳英凝接受《大鳴大放》專訪時表示，香港的學生義工到這些發展中國家「落地」服務社群，做了我們的民間大使，擴闊了他們的國際視野。共享基金會2019年開始在柬埔寨工作，陳英凝表示當時碰上新冠疫情，直到2022年在柬埔寨做白內障手術，到2026年已進行了七千多台手術。今年4月共享基金會獲國家邀請，參與了一個中柬泰的對話：「就是他們希望可以促進和平的一個平台。」陳英凝續指，共享基金會主席梁振英帶領了一個小團隊去了邊境的菩薩省，在當地開了一個項目協助流離失所的民眾。陳英凝補充說，提供的人道工作主要是三類型︰第一類是公共衞生，提供一些簡單的公共衞生物資；第二類是在營地做登革熱防控工作。她指共享基金會在全球13個國家提供登革熱防控工作，當中11個有登革熱風險的國家﹐是與當地政府合作，所以共享基金會是有基礎和經驗。她指出柬埔寨的菩薩省地區受嚴重的登革熱影響：「居民的環境已經不理想，還要中了登革熱的話，死亡率是高的。」第三類工作是民心相通的工作，她指出當地有很多小孩和婦孺相關的一些群組團體，共享基金會的義工到當地做教育工作，及從民間層面做一些青年工作，希望為泰國和柬埔寨搭建橋樑，促進他們之間多些對話。陳英凝指共享基金會招攬的義工很多是學生、大學生、大專院校的老師和退休的紀律部隊和退休公務員等，共享基金會和香港主要的大專院校有些合作備忘錄，安排相關的學系包括醫療、公共衞生、傳理系的同學做社區工作。「其實那些同學不只是做事，是有機會認識其他國家大學裡的尖子或一些有心的同學，一起落地工作是很有意思的。」陳英凝表示，共享基金會是一個平台，合作伙伴不局限香港，還有內地幾間大學、外交學院等。「年輕人應該對社會大事熱心，不然我們社會就不向前走，對他們來說，看到實地的東西的感受很不同，因為現在可從網上獲得豐富資訊，但是他人的視野，我們的年輕人落地看，對其世界觀、大格局的方向很重要。」陳英凝說看到香港年輕人在當地工作很熱心，都很感動，民間外交除了經濟貿易，就是如何讓年輕人有機會認識自己。</desc>
+    <title lang="zh">大鳴大放 第1026集</title>
+    <desc lang="zh">《大鳴大放》是一個30分鐘的時事討論節目，識英雄重英雄，請來各界重磅名人，拋出論點，言無不盡，深入討論時事，跨越維港神州，宏觀全世界。</desc>
   </programme>
   <programme start="20261108190000 +0800" stop="20261108193000 +0800" channel="ViuTV">
     <title lang="zh">7點新聞報道</title>
   </programme>
-  <programme start="20261108193000 +0800" stop="20261108195500 +0800" channel="ViuTV">
-    <title lang="zh">經緯線 第530集 -失業潮汐</title>
-    <desc lang="zh">本港最新失業率升至百分之3.9，較六至八月上升0.1個百分點，失業人數增加約1,100人至15.5萬人，而就業不足率則上升至百分之2。各行業當中，以建造業和零售、住宿及膳食服務業失業率最嚴重。五十歲的葉先生當搭棚工人七年，今年年初開始幾乎沒有工開，以往每月工作二十多天，現在最多只有兩、三天；一家四口，只靠在餐廳當廚房雜工的太太一萬多元的收入維持生計，他說壓力很大，「繳交房租、水電費後已經所剩無幾。」本港首三季合計實質本地生產總值，按年上升百分之5.1，是五年來同期最快的增長。經濟有增長，但失業率高企，有研究勞工政策的學者歐陽達初認為，是由於本港的經濟增長只反映在地產、金融等行業，並沒有惠及餐飲、建造業等吸納最多基層勞動力的行業；加上政府近年推行「補充勞工優化計劃」，以及其他行業輸入勞工計劃，包括院舍、建造業、運輸業等，他認為輸入外勞會減少聘請本地工人的數量，對本地工人來說，可能需要在就業市場裡，應徵待遇較差的工作，衝擊本地工人就業。失業大軍當中，以20至29歲的青年組別最為嚴重，失業率達到百分之9.1。Joey去年八月大學畢業後便開始找工作，她應徵了超過一百份工作，獲邀面試的大約三十份，但沒有一份成功，加上身邊部分同學已經找到工作，令她更加焦慮。為年輕人提供就業相關諮詢服務的機構指，以往較多是副學士或高級文憑畢業的青年求助，但現在有不少求助者是大學畢業生，認為是跟人工智能發展迅速有關。一些數據分析、設計、翻譯以及初級文書處理工作，較容易透過人工智能的技術完成，於是有不少初級職位被削減。究竟，失業率高企，背後還有甚麼原因？又可以怎樣解決？</desc>
-  </programme>
-  <programme start="20261108195500 +0800" stop="20261108200000 +0800" channel="ViuTV">
-    <title lang="zh">香港僱主聯合會呈獻: 解鎖好僱主 第1集 -職涯發展</title>
-    <desc lang="zh">人工高、福利好，就等於好僱主？其實一個真正的好僱主，除了給員工合理待遇之外, 還需要懂得關心員工、重視發展，同時打造理想的工作環境。《解鎖好僱主》走訪不同行業的優秀企業，透過管理層的真實分享，拆解成功企業背後的管理智慧，一齊發掘新時代的「好僱主」。</desc>
+  <programme start="20261108193000 +0800" stop="20261108200000 +0800" channel="ViuTV">
+    <title lang="zh">經緯線 第530集</title>
+    <desc lang="zh">專題式深入報道香港及世界熱門時事。</desc>
   </programme>
   <programme start="20261108200000 +0800" stop="20261108203000 +0800" channel="ViuTV">
-    <title lang="zh">毛國界義工假期 第8集 -野生動物醫院幕後直擊</title>
+    <title lang="zh">毛國界義工假期 第8集</title>
     <desc lang="zh">走進野生動物醫院，到底老虎的手術台有多大？大象插喉的導管有多長？獸醫一一解答。主持隨獸醫出診，為猴子注射疫苗，更在密集的鹿群中精準鎖定受傷目標，遠距離射擊麻醉。再到訪歷史悠久的華欣車站，坐火車探索特色市集。</desc>
   </programme>
   <programme start="20261108203000 +0800" stop="20261108213000 +0800" channel="ViuTV">
@@ -71920,7 +73580,7 @@
     <desc lang="zh">今集要改造嘅屋位於大阪市嘅港區，佢地就係松下家，松下兩夫婦係退休人士，三十七年前買左呢間屋，本來兩個人住都好舒服，可惜呢間屋樓梯斜、收納空間嚴重不足，地基有問題，裝修又破破爛爛，工匠會將呢間屋徹底改造，為佢地解決問題。</desc>
   </programme>
   <programme start="20261108210000 +0800" stop="20261108220000 +0800" channel="HOY77">
-    <title lang="zh">臥底旅行團 6.0</title>
+    <title lang="zh">龍豐集團呈獻 : 臥底旅行團 6.0</title>
     <desc lang="zh">「臥底旅行團6.0」又嚟啦，第一個任務就挑戰佢哋極限，阿正妹頭要潛入零下三十度嘅內蒙古呼倫貝爾進行任務，冰天雪地阿正著波鞋、妹頭著普通Boot出發，會唔會跣到攤攤腰？首團出師不利，暴雪引致重要景點甩完再甩，等了又等，等到不知所措，佢哋會點面對今次逆境</desc>
   </programme>
   <programme start="20261108220000 +0800" stop="20261108230000 +0800" channel="HOY77">
@@ -71969,7 +73629,7 @@
     <title lang="zh">Cable早晨</title>
   </programme>
   <programme start="20261109090000 +0800" stop="20261109100000 +0800" channel="HOY77">
-    <title lang="zh">臥底旅行團 6.0</title>
+    <title lang="zh">龍豐集團呈獻 : 臥底旅行團 6.0</title>
     <desc lang="zh">「臥底旅行團6.0」又嚟啦，第一個任務就挑戰佢哋極限，阿正妹頭要潛入零下三十度嘅內蒙古呼倫貝爾進行任務，冰天雪地阿正著波鞋、妹頭著普通Boot出發，會唔會跣到攤攤腰？首團出師不利，暴雪引致重要景點甩完再甩，等了又等，等到不知所措，佢哋會點面對今次逆境</desc>
   </programme>
   <programme start="20261109100000 +0800" stop="20261109103000 +0800" channel="HOY77">
@@ -76887,17 +78547,26 @@
   <programme start="20261109090000 +0800" stop="20261109090200 +0800" channel="澳视澳门">
     <title lang="zh">TDM 新視點</title>
   </programme>
-  <programme start="20261109090200 +0800" stop="20261109093000 +0800" channel="澳视澳门">
+  <programme start="20261109090200 +0800" stop="20261109092500 +0800" channel="澳视澳门">
     <title lang="zh">趨記茶餐廳</title>
     <desc lang="zh">一部以澳門茶餐廳為背景的輕鬆幽默連續劇，故事圍繞茶餐廳的日常營運展開，當中穿插生活熱話，搞笑得來又有共鳴，歡迎大家光臨！</desc>
   </programme>
-  <programme start="20261109093000 +0800" stop="20261109120000 +0800" channel="澳视澳门">
+  <programme start="20261109092500 +0800" stop="20261109100000 +0800" channel="澳视澳门">
+    <title lang="zh">考古學家的神秘武器</title>
+  </programme>
+  <programme start="20261109100000 +0800" stop="20261109103000 +0800" channel="澳视澳门">
     <title lang="zh">新聞報道</title>
     <desc lang="zh">《新闻报道》是上海电视台新闻综合频道的主打新闻栏目。自1958年10月1日上海电视台成立并播出第一条电视新闻后，历经四十多年的磨砺，它已成为上海地区收视率最高的电视新闻节目。《新闻报道》以权威可靠、信息迅即、视野广阔、编排精到为报道特点，精心报道上海的重大活动、热点新闻，解读政策法规，反映社情民意，同时密切关注国内重要消息和国际风云际会，荟萃精华及时播报，使《新闻报道》成为上海最权威、最全面、最及时的信息发布窗口。</desc>
   </programme>
-  <programme start="20261109120000 +0800" stop="20261109124700 +0800" channel="澳视澳门">
-    <title lang="zh">口述澳門歷史名人堂 II</title>
-    <desc lang="zh">澳門，這個座落在南海之濱的小城巿，是祖國的一顆掌上明珠，也是東西方文化交織相融之地，曾有不少歷史名人在此駐足停留，對後世影響深遠。《口述澳門歷史名人堂2》將延續第一季節目的精神，與觀眾一起探尋歷史名人們留下過的足跡，並以光影為墨、以鏡頭為筆，發掘珍貴文獻素材，結合專家學者們的深度分享，記錄先賢們的卓越貢獻，打造值得代代相傳的文化經典。</desc>
+  <programme start="20261109103000 +0800" stop="20261109111000 +0800" channel="澳视澳门">
+    <title lang="zh">重播中國城市動態</title>
+  </programme>
+  <programme start="20261109111000 +0800" stop="20261109111500 +0800" channel="澳视澳门">
+    <title lang="zh">TDM 新視點</title>
+  </programme>
+  <programme start="20261109111500 +0800" stop="20261109124700 +0800" channel="澳视澳门">
+    <title lang="zh">被遺忘的時光</title>
+    <desc lang="zh">傳說有一神秘典當行隱匿於市井之中，非常人所能見，唯獨欲壑難填之人才可入內，以情當願，可使典當者夢想成真逆風翻盤，但若贖當或毀當則需償還不同程度的利息和代價，稍有不慎或會危及性命。半山腰的工地上，路小凡(范丞丞飾)的兩生花異變出現血絲，曾為心愛之人做過典當的青年心緒大亂，恐愛人再次陷入危局。他的愛人吳恙(藍盈瑩飾)跟母親守著糖水鋪面對債台累累已無力應對，機緣之下喚來典當行，典當之路從此一發不可收拾，卻不知道前路充滿著未知的危機和變數……</desc>
   </programme>
   <programme start="20261109124700 +0800" stop="20261109130000 +0800" channel="澳视澳门">
     <title lang="zh">葡萄牙燈塔 (第二季)</title>
@@ -103785,20 +105454,27 @@
   <programme start="20261108090200 +0800" stop="20261108100000 +0800" channel="CGTN">
     <title lang="zh">环球纪实</title>
   </programme>
-  <programme start="20261108100000 +0800" stop="20261108103000 +0800" channel="CGTN">
+  <programme start="20261108100000 +0800" stop="20261108102800 +0800" channel="CGTN">
     <title lang="zh">今日世界</title>
     <desc lang="zh">The World Today is the core rolling news service of CGTN. Regular updates from Beijing and Washington D.C. keep viewers up-to-date with all the world’s top stories as they happen. The World Today delivers breaking news, live event, in-depth reporting, expert analysis and sustained coverage.</desc>
+  </programme>
+  <programme start="20261108102800 +0800" stop="20261108103000 +0800" channel="CGTN">
+    <title lang="zh">天气预报</title>
+    <desc lang="zh">《天气预报》为您提供天气气象信息,及时发布天气预报、灾害预警、气象云图、台风、暴雨雪等气象信息,为人民的生产生活提供全面精确的气象服务。 天气预报播出时间 全部时间》 10-28周三 10-29周四 10-30周五 10-31周六 11-01周日 11-02周一 11-03周二 00:10 石家庄电视台城市服务频道 天气预报 00:13 新余电视台新闻综合频道</desc>
   </programme>
   <programme start="20261108103000 +0800" stop="20261108110000 +0800" channel="CGTN">
-    <title lang="zh">传承中国</title>
+    <title lang="zh">环球纪实</title>
   </programme>
-  <programme start="20261108110000 +0800" stop="20261108111500 +0800" channel="CGTN">
+  <programme start="20261108110000 +0800" stop="20261108111200 +0800" channel="CGTN">
     <title lang="zh">今日世界</title>
     <desc lang="zh">The World Today is the core rolling news service of CGTN. Regular updates from Beijing and Washington D.C. keep viewers up-to-date with all the world’s top stories as they happen. The World Today delivers breaking news, live event, in-depth reporting, expert analysis and sustained coverage.</desc>
   </programme>
+  <programme start="20261108111200 +0800" stop="20261108111500 +0800" channel="CGTN">
+    <title lang="zh">天气预报</title>
+    <desc lang="zh">《天气预报》为您提供天气气象信息,及时发布天气预报、灾害预警、气象云图、台风、暴雨雪等气象信息,为人民的生产生活提供全面精确的气象服务。 天气预报播出时间 全部时间》 10-28周三 10-29周四 10-30周五 10-31周六 11-01周日 11-02周一 11-03周二 00:10 石家庄电视台城市服务频道 天气预报 00:13 新余电视台新闻综合频道</desc>
+  </programme>
   <programme start="20261108111500 +0800" stop="20261108113000 +0800" channel="CGTN">
-    <title lang="zh">环球体育</title>
-    <desc lang="zh">《体育报道》是由CCTV-NEWS频道播出的一档国内外体育赛事的节目。节目内容丰富详实。The most up-to-date sports coverage from around the world, with a focus on China. Theprogram specializes in providing news on Chinese athletes, leagues, as well as the mostprominent foreign competitors playing in the world&apos;s most populous nation.</desc>
+    <title lang="zh">体育报道</title>
   </programme>
   <programme start="20261108113000 +0800" stop="20261108120000 +0800" channel="CGTN">
     <title lang="zh">高端访谈</title>
@@ -117649,27 +119325,21 @@
   </programme>
   <programme start="20261108011500 +0800" stop="20261108024000 +0800" channel="魅力足球">
     <title lang="zh">德甲联赛第23轮:莱比锡-多特蒙德</title>
-    <desc lang="zh">德国足球甲级联赛（德语：Bundesliga，意思是“联邦联赛”，广义上是指所有德国体育最高等级联赛，狭义则指德国足球甲级联赛。德甲是德国最高水平的职业足球联赛，球风强悍，较注重整体配合。德甲未成立前，全国最高等级足球赛事为德国锦标赛（Germany Championships），赛事先由每州各自进行比赛，出线者出线全国淘汰赛，在中立</desc>
   </programme>
   <programme start="20261108024000 +0800" stop="20261108040500 +0800" channel="魅力足球">
     <title lang="zh">德甲第24轮:多特蒙德-拜仁慕尼黑</title>
-    <desc lang="zh">德国足球甲级联赛（德语：Bundesliga，意思是“联邦联赛”，广义上是指所有德国体育最高等级联赛，狭义则指德国足球甲级联赛。德甲是德国最高水平的职业足球联赛，球风强悍，较注重整体配合。德甲未成立前，全国最高等级足球赛事为德国锦标赛（Germany Championships），赛事先由每州各自进行比赛，出线者出线全国淘汰赛，在中立</desc>
   </programme>
   <programme start="20261108040500 +0800" stop="20261108053000 +0800" channel="魅力足球">
     <title lang="zh">德甲第24轮:斯图加特-沃尔夫斯堡</title>
-    <desc lang="zh">德国足球甲级联赛（德语：Bundesliga，意思是“联邦联赛”，广义上是指所有德国体育最高等级联赛，狭义则指德国足球甲级联赛。德甲是德国最高水平的职业足球联赛，球风强悍，较注重整体配合。德甲未成立前，全国最高等级足球赛事为德国锦标赛（Germany Championships），赛事先由每州各自进行比赛，出线者出线全国淘汰赛，在中立</desc>
   </programme>
   <programme start="20261108053000 +0800" stop="20261108065500 +0800" channel="魅力足球">
     <title lang="zh">德甲:拜仁慕尼黑-门兴格拉德巴赫</title>
-    <desc lang="zh">德国足球甲级联赛（德语：Bundesliga，意思是“联邦联赛”，广义上是指所有德国体育最高等级联赛，狭义则指德国足球甲级联赛。德甲是德国最高水平的职业足球联赛，球风强悍，较注重整体配合。德甲未成立前，全国最高等级足球赛事为德国锦标赛（Germany Championships），赛事先由每州各自进行比赛，出线者出线全国淘汰赛，在中立</desc>
   </programme>
   <programme start="20261108065500 +0800" stop="20261108082000 +0800" channel="魅力足球">
     <title lang="zh">德甲联赛第25轮:科隆-多特蒙德</title>
-    <desc lang="zh">德国足球甲级联赛（德语：Bundesliga，意思是“联邦联赛”，广义上是指所有德国体育最高等级联赛，狭义则指德国足球甲级联赛。德甲是德国最高水平的职业足球联赛，球风强悍，较注重整体配合。德甲未成立前，全国最高等级足球赛事为德国锦标赛（Germany Championships），赛事先由每州各自进行比赛，出线者出线全国淘汰赛，在中立</desc>
   </programme>
   <programme start="20261108082000 +0800" stop="20261108094500 +0800" channel="魅力足球">
     <title lang="zh">德甲第26轮:多特蒙德-奥格斯堡</title>
-    <desc lang="zh">德国足球甲级联赛（德语：Bundesliga，意思是“联邦联赛”，广义上是指所有德国体育最高等级联赛，狭义则指德国足球甲级联赛。德甲是德国最高水平的职业足球联赛，球风强悍，较注重整体配合。德甲未成立前，全国最高等级足球赛事为德国锦标赛（Germany Championships），赛事先由每州各自进行比赛，出线者出线全国淘汰赛，在中立</desc>
   </programme>
   <programme start="20261108094500 +0800" stop="20261108111000 +0800" channel="魅力足球">
     <title lang="zh">2026南美解放者杯1/8决赛第1回合</title>
@@ -117681,7 +119351,6 @@
   </programme>
   <programme start="20261108123500 +0800" stop="20261108130500 +0800" channel="魅力足球">
     <title lang="zh">2026/2027英超联赛第9轮集锦</title>
-    <desc lang="zh">英超全称英格兰足球超级联赛，是英格兰足总属下的职业足球联赛。英格兰超级联赛成立于1992年2月20日，其前身是英格兰甲级联赛，是英格兰联赛系统的最高等级联赛。英超联赛已成为世界上最受欢迎的体育赛事之一。英格兰足球超级联赛（FA Premier League），2004年巴克莱斯银行（BarclaysBank）成为英超的赞助商，冠名为巴</desc>
   </programme>
   <programme start="20261108130500 +0800" stop="20261108143000 +0800" channel="魅力足球">
     <title lang="zh">2026世界杯:瑞士-哥伦比亚</title>
@@ -117949,7 +119618,7 @@
     <title lang="zh">2026南美解放者杯1/8决赛第1回合</title>
     <desc lang="zh">南美解放者杯（西班牙语：Copa Libertadores de América）是一项由南美洲各支顶级球会之间竞争的最高荣誉的国际足球赛事，赛事等级相等于欧洲的欧洲联赛冠军杯，于1960年举行首届赛事，由南美洲足球协会负责举办。虽然南美解放者杯只规定南美足协所属球会参与（合共十一个国家包括巴西、阿根廷、乌拉圭、巴拉圭、秘鲁、智利、厄</desc>
   </programme>
-  <programme start="20261114235000 +0800" stop="20261115111000 +0800" channel="魅力足球">
+  <programme start="20261114235000 +0800" stop="20261115115000 +0800" channel="魅力足球">
     <title lang="zh">2026南美解放者杯1/8决赛第1回合</title>
     <desc lang="zh">南美解放者杯（西班牙语：Copa Libertadores de América）是一项由南美洲各支顶级球会之间竞争的最高荣誉的国际足球赛事，赛事等级相等于欧洲的欧洲联赛冠军杯，于1960年举行首届赛事，由南美洲足球协会负责举办。虽然南美解放者杯只规定南美足协所属球会参与（合共十一个国家包括巴西、阿根廷、乌拉圭、巴拉圭、秘鲁、智利、厄</desc>
   </programme>
@@ -131483,11 +133152,8 @@
   <programme start="20261114235500 +0800" stop="20261115013300 +0800" channel="CHC家庭影院">
     <title lang="zh">请帖</title>
   </programme>
-  <programme start="20261108012700 +0800" stop="20261108025600 +0800" channel="CHC影迷电影">
+  <programme start="20261108010200 +0800" stop="20261108060000 +0800" channel="CHC影迷电影">
     <title lang="zh">丽人保镖之心跳重逢</title>
-  </programme>
-  <programme start="20261108025600 +0800" stop="20261108060000 +0800" channel="CHC影迷电影">
-    <title lang="zh">闭台</title>
   </programme>
   <programme start="20261108060000 +0800" stop="20261108080200 +0800" channel="CHC影迷电影">
     <title lang="zh">最长的旅程</title>
@@ -131842,7 +133508,7 @@
     <title lang="zh">2024影迷频道形象片</title>
     <desc lang="zh">拍摄旨在“塑造和提升中国繁荣发展、民主进步、文明开放、和平和谐的国家形象”的宣传片</desc>
   </programme>
-  <programme start="20261114233900 +0800" stop="20261115012700 +0800" channel="CHC影迷电影">
+  <programme start="20261114233900 +0800" stop="20261115010200 +0800" channel="CHC影迷电影">
     <title lang="zh">一诺千金</title>
   </programme>
   <programme start="20261108000000 +0800" stop="20261108003000 +0800" channel="TVB娱乐新闻">
@@ -134093,6 +135759,130 @@
     <title lang="zh">華麗轉身 #2 [粵]</title>
     <desc lang="zh">迪迪帶尚恆回酒店房親熱，但她看到芳凝的高跟鞋便清醒過來。芳凝在哥頓授勳慶祝會上獻唱，羅斌致電明霞讓她欣賞偶像的歌聲。芳凝得悉南思將結婚，想從社交網站看女兒的近況。尚恆哄迪迪高聲說出對男人的要求……</desc>
   </programme>
+  <programme start="20261108000000 +0800" stop="20261108003000 +0800" channel="NOW新闻">
+    <title lang="zh">Now深宵新聞</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261108003000 +0800" stop="20261108010000 +0800" channel="NOW新闻">
+    <title lang="zh">Now深宵新聞</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261108010000 +0800" stop="20261108013000 +0800" channel="NOW新闻">
+    <title lang="zh">Now深宵新聞</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261108013000 +0800" stop="20261108020000 +0800" channel="NOW新闻">
+    <title lang="zh">Now深宵新聞</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261108020000 +0800" stop="20261108023000 +0800" channel="NOW新闻">
+    <title lang="zh">Now深宵新聞</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261108023000 +0800" stop="20261108030000 +0800" channel="NOW新闻">
+    <title lang="zh">Now深宵新聞</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261108030000 +0800" stop="20261108033000 +0800" channel="NOW新闻">
+    <title lang="zh">Now深宵新聞</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261108033000 +0800" stop="20261108040000 +0800" channel="NOW新闻">
+    <title lang="zh">Now深宵新聞</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261108040000 +0800" stop="20261108043000 +0800" channel="NOW新闻">
+    <title lang="zh">Now深宵新聞</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261108043000 +0800" stop="20261108050000 +0800" channel="NOW新闻">
+    <title lang="zh">Now深宵新聞</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261108050000 +0800" stop="20261108053000 +0800" channel="NOW新闻">
+    <title lang="zh">Now深宵新聞</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261108053000 +0800" stop="20261108060000 +0800" channel="NOW新闻">
+    <title lang="zh">Now深宵新聞</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261108060000 +0800" stop="20261108063000 +0800" channel="NOW新闻">
+    <title lang="zh">Now早晨</title>
+    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
+  </programme>
+  <programme start="20261108063000 +0800" stop="20261108065400 +0800" channel="NOW新闻">
+    <title lang="zh">Now早晨</title>
+    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
+  </programme>
+  <programme start="20261108065400 +0800" stop="20261108070000 +0800" channel="NOW新闻">
+    <title lang="zh">杏林在線</title>
+    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
+  </programme>
+  <programme start="20261108070000 +0800" stop="20261108073000 +0800" channel="NOW新闻">
+    <title lang="zh">Now早晨</title>
+    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
+  </programme>
+  <programme start="20261108073000 +0800" stop="20261108075400 +0800" channel="NOW新闻">
+    <title lang="zh">Now早晨</title>
+    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
+  </programme>
+  <programme start="20261108075400 +0800" stop="20261108080000 +0800" channel="NOW新闻">
+    <title lang="zh">杏林在線</title>
+    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
+  </programme>
+  <programme start="20261108080000 +0800" stop="20261108083000 +0800" channel="NOW新闻">
+    <title lang="zh">Now早晨</title>
+    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
+  </programme>
+  <programme start="20261108083000 +0800" stop="20261108085400 +0800" channel="NOW新闻">
+    <title lang="zh">Now早晨</title>
+    <desc lang="zh">每朝無間斷為你提供天氣、交通、本地同國際新聞, 還有環球金融消息, 讓觀眾在上班之前, 都能夠盡握時事脈搏。</desc>
+  </programme>
+  <programme start="20261108085400 +0800" stop="20261108090000 +0800" channel="NOW新闻">
+    <title lang="zh">杏林在線</title>
+    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
+  </programme>
+  <programme start="20261108090000 +0800" stop="20261108093000 +0800" channel="NOW新闻">
+    <title lang="zh">Now新聞報道[直播]</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261108093000 +0800" stop="20261108100000 +0800" channel="NOW新闻">
+    <title lang="zh">Now新聞報道</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261108100000 +0800" stop="20261108101600 +0800" channel="NOW新闻">
+    <title lang="zh">Now新聞報道[直播]</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261108101600 +0800" stop="20261108103000 +0800" channel="NOW新闻">
+    <title lang="zh">杏林在線</title>
+    <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
+  </programme>
+  <programme start="20261108103000 +0800" stop="20261108110000 +0800" channel="NOW新闻">
+    <title lang="zh">Now新聞報道</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261108110000 +0800" stop="20261108113000 +0800" channel="NOW新闻">
+    <title lang="zh">Now新聞報道[直播]</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261108113000 +0800" stop="20261108120000 +0800" channel="NOW新闻">
+    <title lang="zh">Now新聞報道</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261108120000 +0800" stop="20261108122400 +0800" channel="NOW新闻">
+    <title lang="zh">Now午間新聞[直播]</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
+  <programme start="20261108122400 +0800" stop="20261108123000 +0800" channel="NOW新闻">
+    <title lang="zh">THEi高科院 呈獻: 創科著陸-實戰方程式 第1集</title>
+    <desc lang="zh">電動車普及化, 移動機械人可隨時上門充電；吞嚥困難長者, 照護食色香味俱全。北部都會區機遇處處, 產、學、研緊密聯繫, 培育應用科學人才, 香港高等教育科技學院(THEi)呈獻, 節目【創科著陸】應對社會需求, 譜寫實戰方程式。</desc>
+  </programme>
+  <programme start="20261108123000 +0800" stop="20261108130000 +0800" channel="NOW新闻">
+    <title lang="zh">Now午間新聞</title>
+    <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
+  </programme>
   <programme start="20261108130000 +0800" stop="20261108132100 +0800" channel="NOW新闻">
     <title lang="zh">Now新聞報道[直播]</title>
     <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
@@ -134106,7 +135896,7 @@
     <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261108141600 +0800" stop="20261108143000 +0800" channel="NOW新闻">
-    <title lang="zh">杏林在線 -20261030</title>
+    <title lang="zh">杏林在線</title>
     <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261108143000 +0800" stop="20261108150000 +0800" channel="NOW新闻">
@@ -134126,7 +135916,7 @@
     <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261108154600 +0800" stop="20261108160000 +0800" channel="NOW新闻">
-    <title lang="zh">杏林在線 -20261106</title>
+    <title lang="zh">杏林在線</title>
     <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261108160000 +0800" stop="20261108161600 +0800" channel="NOW新闻">
@@ -134134,7 +135924,7 @@
     <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261108161600 +0800" stop="20261108163000 +0800" channel="NOW新闻">
-    <title lang="zh">杏林在線 -20261030</title>
+    <title lang="zh">杏林在線</title>
     <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261108163000 +0800" stop="20261108164600 +0800" channel="NOW新闻">
@@ -134142,7 +135932,7 @@
     <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261108164600 +0800" stop="20261108170000 +0800" channel="NOW新闻">
-    <title lang="zh">杏林在線 -20261106</title>
+    <title lang="zh">杏林在線</title>
     <desc lang="zh">「杏林在線」精選醫學專題, 邀請醫生討論及分析各類型醫學報告。</desc>
   </programme>
   <programme start="20261108170000 +0800" stop="20261108173000 +0800" channel="NOW新闻">
@@ -134166,7 +135956,7 @@
     <desc lang="zh">即日頭條、突發新聞、政壇動態、國際時局, 本地社會民生新聞, 專業主播同前線記者為你詳盡報道。</desc>
   </programme>
   <programme start="20261108193000 +0800" stop="20261108200000 +0800" channel="NOW新闻">
-    <title lang="zh">一語千金 - 港好創科 -專訪京東集團副總裁 - 沈建光</title>
+    <title lang="zh">一語千金 - 港好創科 -專訪京東集團副總裁</title>
     <desc lang="zh">科技．轉變時代；創新．領導未來!《信報財經新聞》聯乘《Now TV》製作跨媒體節目《一語千金-港好創科》, 信報總編輯鄧傳鏘、主持余穎恒, 每星期請嚟創科界領軍人物, 出謀獻策 為香港貢獻力量, 嘉賓真知灼見, 一語值千金。</desc>
   </programme>
   <programme start="20261108200000 +0800" stop="20261108203000 +0800" channel="NOW新闻">
@@ -137288,6 +139078,30 @@
   <programme start="20261114234500 +0800" stop="20261115012500 +0800" channel="PopC">
     <title lang="zh">我的野蠻女掌門</title>
     <desc lang="zh">青雲堂的女掌門於勝男為了完成病重父親的願望,急於結婚。她在相親時認識了牛多多,而牛在威逼利誘下簽了假結婚協議。正當勝男漸漸被牛的善良和純真吸引,多年前被勝男父親逐出師門的師兄林傑歸來,並用牛威脅勝男接..</desc>
+  </programme>
+  <programme start="20261108000000 +0800" stop="20261108003000 +0800" channel="Now直播台">
+    <title lang="zh">杏林在線</title>
+  </programme>
+  <programme start="20261108003000 +0800" stop="20261108010000 +0800" channel="Now直播台">
+    <title lang="zh">一周睇樓團</title>
+  </programme>
+  <programme start="20261108010000 +0800" stop="20261108030000 +0800" channel="Now直播台">
+    <title lang="zh">隨時直播各類時事新聞及記者會</title>
+  </programme>
+  <programme start="20261108030000 +0800" stop="20261108033000 +0800" channel="Now直播台">
+    <title lang="zh">大鳴大放 第1集</title>
+  </programme>
+  <programme start="20261108033000 +0800" stop="20261108040000 +0800" channel="Now直播台">
+    <title lang="zh">杏林在線</title>
+  </programme>
+  <programme start="20261108040000 +0800" stop="20261108043000 +0800" channel="Now直播台">
+    <title lang="zh">一周睇樓團</title>
+  </programme>
+  <programme start="20261108043000 +0800" stop="20261108073000 +0800" channel="Now直播台">
+    <title lang="zh">隨時直播各類時事新聞及記者會</title>
+  </programme>
+  <programme start="20261108073000 +0800" stop="20261108103000 +0800" channel="Now直播台">
+    <title lang="zh">隨時直播各類時事新聞及記者會</title>
   </programme>
   <programme start="20261108103000 +0800" stop="20261108133000 +0800" channel="Now直播台">
     <title lang="zh">隨時直播各類時事新聞及記者會</title>
@@ -173326,7 +175140,6 @@
   </programme>
   <programme start="20261108074500 +0800" stop="20261108093500 +0800" channel="龙华电影">
     <title lang="zh">一眉道人(護)</title>
-    <desc lang="zh">一眉道人（林正英）與兩名徒弟錢小豪和呂方住在偏僻小鎮。因為鎮上水源受到不明的污染，三人四處找尋新的水源。途中他們在教堂的暗處忽發現一具西洋彊屍神奇復活，而自此之後村中開始發生許多恐怖異象。為了拯救村民，一眉出盡絕招來降魔服妖…</desc>
   </programme>
   <programme start="20261108093500 +0800" stop="20261108120500 +0800" channel="龙华电影">
     <title lang="zh">警察故事續集(護)</title>
@@ -184158,7 +185971,6 @@
   </programme>
   <programme start="20261113103300 +0800" stop="20261113103600 +0800" channel="CMusic">
     <title lang="zh">Danse Macabre(普)</title>
-    <desc lang="zh">Danse macabre, Op. 40, R. 171 (Arr. Garrett / van der Heijden for Violin and Orchestra)</desc>
   </programme>
   <programme start="20261113103600 +0800" stop="20261113103900 +0800" channel="CMusic">
     <title lang="zh">Étude No. 4 in C sharp minor Op.10(普)</title>
@@ -187644,22 +189456,6 @@
   <programme start="20261114230000 +0800" stop="20261115000000 +0800" channel="AXN">
     <title lang="zh">反恐特警組-十萬火急</title>
     <desc lang="zh">反恐特警組收了一位備受矚目的神秘囚犯。為了將他奪回，各方國際勢力開始發動一連串的攻勢。</desc>
-  </programme>
-  <programme start="20261108123500 +0800" stop="20261108142500 +0800" channel="Cinemax">
-    <title lang="zh">絕地拒戰</title>
-    <desc lang="zh">波灣英雄布蘭登回道德週老家，卻發現自己無法適應以前的生活。在情非得已情況下，他自願重返戰場，也讓他重新面對家人、友情、愛與榮耀的考驗。</desc>
-  </programme>
-  <programme start="20261108142500 +0800" stop="20261108160500 +0800" channel="Cinemax">
-    <title lang="zh">奪命狂date</title>
-    <desc lang="zh">約會暗藏殺機，薇奧莉和亨利共進晚餐時，卻在手機上收到恐怖威脅，要她殺了這位男伴，否則她的孩子將遭毒手。</desc>
-  </programme>
-  <programme start="20261108160500 +0800" stop="20261108174500 +0800" channel="Cinemax">
-    <title lang="zh">魔鬼潛艦</title>
-    <desc lang="zh">當一艘俄羅斯核潛艇與一艘美國潛艇相撞時，兩名船長必須通力防止核熔毀。</desc>
-  </programme>
-  <programme start="20261108174500 +0800" stop="20261108193500 +0800" channel="Cinemax">
-    <title lang="zh">救馬行動</title>
-    <desc lang="zh">唐強生領導的士兵們為了解救騎兵隊最後一批馬兒的性命而奮戰！</desc>
   </programme>
   <programme start="20261108193500 +0800" stop="20261108220000 +0800" channel="Cinemax">
     <title lang="zh">變形金剛</title>
@@ -203513,10 +205309,10 @@
   <programme start="20261108124500 +0800" stop="20261108130000 +0800" channel="爱尔达体育Ⅱ">
     <title lang="zh">棒球亞冠賽自辦熱身賽 新莊戰前報 11/8 LIVE</title>
   </programme>
-  <programme start="20261108130000 +0800" stop="20261108160000 +0800" channel="爱尔达体育Ⅱ">
+  <programme start="20261108130000 +0800" stop="20261108163800 +0800" channel="爱尔达体育Ⅱ">
     <title lang="zh">亞洲職棒冠軍爭霸賽 台灣 VS 中信 11/8 自辦熱身賽 LIVE</title>
   </programme>
-  <programme start="20261108160000 +0800" stop="20261108175500 +0800" channel="爱尔达体育Ⅱ">
+  <programme start="20261108163800 +0800" stop="20261108175500 +0800" channel="爱尔达体育Ⅱ">
     <title lang="zh">英超 兵工廠 VS 赫爾城 第10輪 今日最新</title>
   </programme>
   <programme start="20261108175500 +0800" stop="20261108192500 +0800" channel="爱尔达体育Ⅱ">
@@ -203834,13 +205630,10 @@
   <programme start="20261108003000 +0800" stop="20261108013000 +0800" channel="爱尔达体育Ⅲ">
     <title lang="zh">2023 Crufts 敏捷障礙賽 各犬型組 / 國際邀請賽 精華回顧</title>
   </programme>
-  <programme start="20261108013000 +0800" stop="20261108050000 +0800" channel="爱尔达体育Ⅲ">
+  <programme start="20261108013000 +0800" stop="20261108053400 +0800" channel="爱尔达体育Ⅲ">
     <title lang="zh">WTT冠軍賽 法蘭克福站 單打八強 11/8 LIVE</title>
   </programme>
-  <programme start="20261108050000 +0800" stop="20261108053000 +0800" channel="爱尔达体育Ⅲ">
-    <title lang="zh">體壇最前線 11/7</title>
-  </programme>
-  <programme start="20261108053000 +0800" stop="20261108070000 +0800" channel="爱尔达体育Ⅲ">
+  <programme start="20261108053400 +0800" stop="20261108070000 +0800" channel="爱尔达体育Ⅲ">
     <title lang="zh">F1 巴西站 排位賽 今日最新</title>
   </programme>
   <programme start="20261108070000 +0800" stop="20261108090000 +0800" channel="爱尔达体育Ⅲ">
@@ -203889,7 +205682,7 @@
     <title lang="zh">BWF 韓國公開賽 男單/女單決賽</title>
   </programme>
   <programme start="20261109053000 +0800" stop="20261109063000 +0800" channel="爱尔达体育Ⅲ">
-    <title lang="zh">青年奧運 射箭 男子個人賽八強/四強/決賽 11/8 今日最新</title>
+    <title lang="zh">青年奧運 陳品安 射箭 男子個人賽八強/四強/決賽 11/8 今日最新</title>
   </programme>
   <programme start="20261109063000 +0800" stop="20261109074500 +0800" channel="爱尔达体育Ⅲ">
     <title lang="zh">WTT冠軍賽 法蘭克福站 女單決賽 11/9 今日最新</title>
@@ -203904,7 +205697,7 @@
     <title lang="zh">BWF 韓國公開賽 男單/女單決賽</title>
   </programme>
   <programme start="20261109113000 +0800" stop="20261109123000 +0800" channel="爱尔达体育Ⅲ">
-    <title lang="zh">青年奧運 射箭 男子個人賽八強/四強/決賽 11/8</title>
+    <title lang="zh">青年奧運 陳品安 射箭 男子個人賽八強/四強/決賽 11/8</title>
   </programme>
   <programme start="20261109123000 +0800" stop="20261109134500 +0800" channel="爱尔达体育Ⅲ">
     <title lang="zh">WTT冠軍賽 法蘭克福站 女單決賽 11/9 今日最新</title>
@@ -204714,7 +206507,7 @@
     <title lang="zh">2026 WEC世界耐久錦標賽特輯#7 - 巴塞隆納6小時(原音) LIVE</title>
   </programme>
   <programme start="20261108215500 +0800" stop="20261109002500 +0800" channel="爱尔达体育Ⅳ">
-    <title lang="zh">青年奧運 射箭 男子個人賽八強/四強/決賽 11/8 LIVE</title>
+    <title lang="zh">青年奧運 陳品安 射箭 男子個人賽八強/四強/決賽 11/8 LIVE</title>
   </programme>
   <programme start="20261109002500 +0800" stop="20261109014500 +0800" channel="爱尔达体育Ⅳ">
     <title lang="zh">青年奧運 跆拳道 女子44/男子48公斤級四強/決賽 11/9 LIVE</title>
@@ -204759,7 +206552,7 @@
     <title lang="zh">英超名人堂 #21 Marcus Stewart 屹立不倒</title>
   </programme>
   <programme start="20261109223000 +0800" stop="20261110002000 +0800" channel="爱尔达体育Ⅳ">
-    <title lang="zh">青年奧運 射箭 男子個人賽八強/四強/決賽 11/8</title>
+    <title lang="zh">青年奧運 陳品安 射箭 男子個人賽八強/四強/決賽 11/8</title>
   </programme>
   <programme start="20261110002000 +0800" stop="20261110033000 +0800" channel="爱尔达体育Ⅳ">
     <title lang="zh">U23棒球世界盃 澳大利亞 VS 中華 預賽 11/10 LIVE</title>
@@ -210101,7 +211894,6 @@
   </programme>
   <programme start="20261108070000 +0800" stop="20261108091000 +0800" channel="我的欧洲电影">
     <title lang="zh">人生多美麗(普)</title>
-    <desc lang="zh">故事發生在濟州島的一間民宿，一對男女帶著前段婚姻的孩子組成一個再婚家庭。透過親情、愛情的劇情讓大家發現身邊所愛的人的重要！甚至是同性之愛，也在本劇的討論之中。</desc>
   </programme>
   <programme start="20261108091000 +0800" stop="20261108105000 +0800" channel="我的欧洲电影">
     <title lang="zh">經典的背後(普)</title>
@@ -210382,7 +212174,6 @@
   </programme>
   <programme start="20261114170500 +0800" stop="20261114191500 +0800" channel="我的欧洲电影">
     <title lang="zh">人生多美麗(普)</title>
-    <desc lang="zh">故事發生在濟州島的一間民宿，一對男女帶著前段婚姻的孩子組成一個再婚家庭。透過親情、愛情的劇情讓大家發現身邊所愛的人的重要！甚至是同性之愛，也在本劇的討論之中。</desc>
   </programme>
   <programme start="20261114191500 +0800" stop="20261114210000 +0800" channel="我的欧洲电影">
     <title lang="zh">門(護)</title>
@@ -213972,9 +215763,26 @@
   <programme start="20261109090000 +0800" stop="20261109093000 +0800" channel="MacauInfo.hk">
     <title lang="zh">重播早晨新聞</title>
   </programme>
-  <programme start="20261109093000 +0800" stop="20261109120000 +0800" channel="MacauInfo.hk">
+  <programme start="20261109093000 +0800" stop="20261109100000 +0800" channel="MacauInfo.hk">
+    <title lang="zh">灣區全媒睇</title>
+  </programme>
+  <programme start="20261109100000 +0800" stop="20261109103000 +0800" channel="MacauInfo.hk">
     <title lang="zh">新聞報道</title>
     <desc lang="zh">《新闻报道》是上海电视台新闻综合频道的主打新闻栏目。自1958年10月1日上海电视台成立并播出第一条电视新闻后，历经四十多年的磨砺，它已成为上海地区收视率最高的电视新闻节目。《新闻报道》以权威可靠、信息迅即、视野广阔、编排精到为报道特点，精心报道上海的重大活动、热点新闻，解读政策法规，反映社情民意，同时密切关注国内重要消息和国际风云际会，荟萃精华及时播报，使《新闻报道》成为上海最权威、最全面、最及时的信息发布窗口。</desc>
+  </programme>
+  <programme start="20261109103000 +0800" stop="20261109110000 +0800" channel="MacauInfo.hk">
+    <title lang="zh">新聞報道</title>
+    <desc lang="zh">《新闻报道》是上海电视台新闻综合频道的主打新闻栏目。自1958年10月1日上海电视台成立并播出第一条电视新闻后，历经四十多年的磨砺，它已成为上海地区收视率最高的电视新闻节目。《新闻报道》以权威可靠、信息迅即、视野广阔、编排精到为报道特点，精心报道上海的重大活动、热点新闻，解读政策法规，反映社情民意，同时密切关注国内重要消息和国际风云际会，荟萃精华及时播报，使《新闻报道》成为上海最权威、最全面、最及时的信息发布窗口。</desc>
+  </programme>
+  <programme start="20261109110000 +0800" stop="20261109111200 +0800" channel="MacauInfo.hk">
+    <title lang="zh">新聞報道</title>
+    <desc lang="zh">《新闻报道》是上海电视台新闻综合频道的主打新闻栏目。自1958年10月1日上海电视台成立并播出第一条电视新闻后，历经四十多年的磨砺，它已成为上海地区收视率最高的电视新闻节目。《新闻报道》以权威可靠、信息迅即、视野广阔、编排精到为报道特点，精心报道上海的重大活动、热点新闻，解读政策法规，反映社情民意，同时密切关注国内重要消息和国际风云际会，荟萃精华及时播报，使《新闻报道》成为上海最权威、最全面、最及时的信息发布窗口。</desc>
+  </programme>
+  <programme start="20261109111200 +0800" stop="20261109112000 +0800" channel="MacauInfo.hk">
+    <title lang="zh">中國軟實力</title>
+  </programme>
+  <programme start="20261109112000 +0800" stop="20261109120000 +0800" channel="MacauInfo.hk">
+    <title lang="zh">重播中國城市動態</title>
   </programme>
   <programme start="20261109120000 +0800" stop="20261109122000 +0800" channel="MacauInfo.hk">
     <title lang="zh">新聞報道</title>

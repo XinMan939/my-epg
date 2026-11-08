@@ -753,7 +753,7 @@
     ],
     "logo": "http://oss.cztv.com/ucc/20200123/ad3c07c7910e475a8631e4cff5a9431c.png",
     "hasEpg": true,
-    "programmeCount": 72
+    "programmeCount": 144
   },
   {
     "id": "HunanEconomyChannel.cn",
@@ -821,7 +821,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 59
+    "programmeCount": 176
   },
   {
     "id": "ZhejiangMinshengLeisure.cn",
@@ -832,7 +832,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 33
+    "programmeCount": 146
   },
   {
     "id": "ZhejiangFilmEntertainmentChannel.cn",
@@ -854,7 +854,7 @@
     ],
     "logo": "http://oss.cztv.com/ucc/20200123/312d8aea2f2a4f678b084d2bd8dbcb05.png",
     "hasEpg": true,
-    "programmeCount": 197
+    "programmeCount": 393
   },
   {
     "id": "JiangsuCityChannel.cn",
@@ -972,7 +972,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 230
+    "programmeCount": 252
   },
   {
     "id": "ViuTVsix.hk",
@@ -1105,7 +1105,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 305
+    "programmeCount": 308
   },
   {
     "id": "MacauLotus.hk",
@@ -1510,7 +1510,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 383
+    "programmeCount": 385
   },
   {
     "id": "CGTNFrench.cn",
@@ -1772,7 +1772,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 105
+    "programmeCount": 104
   },
   {
     "id": "EntertainmentNews.hk",
@@ -1806,7 +1806,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 347
+    "programmeCount": 378
   },
   {
     "id": "nowBusinessNewsChannel.hk",
@@ -1838,7 +1838,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 78
+    "programmeCount": 86
   },
   {
     "id": "ROCKAction.sg",
@@ -2609,7 +2609,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 88
+    "programmeCount": 84
   },
   {
     "id": "DAZN1.uk",
@@ -2928,7 +2928,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 111
+    "programmeCount": 110
   },
   {
     "id": "爱尔达影剧.tw",
@@ -3184,7 +3184,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 324
+    "programmeCount": 329
   },
   {
     "id": "MacauVariety.hk",
