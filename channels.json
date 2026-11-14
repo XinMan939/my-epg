@@ -753,7 +753,7 @@
     ],
     "logo": "http://oss.cztv.com/ucc/20200123/ad3c07c7910e475a8631e4cff5a9431c.png",
     "hasEpg": true,
-    "programmeCount": 81
+    "programmeCount": 153
   },
   {
     "id": "HunanEconomyChannel.cn",
@@ -821,7 +821,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 114
+    "programmeCount": 230
   },
   {
     "id": "ZhejiangMinshengLeisure.cn",
@@ -832,7 +832,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 113
+    "programmeCount": 231
   },
   {
     "id": "ZhejiangFilmEntertainmentChannel.cn",
@@ -854,7 +854,7 @@
     ],
     "logo": "http://oss.cztv.com/ucc/20200123/312d8aea2f2a4f678b084d2bd8dbcb05.png",
     "hasEpg": true,
-    "programmeCount": 196
+    "programmeCount": 393
   },
   {
     "id": "JiangsuCityChannel.cn",
@@ -972,7 +972,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 245
+    "programmeCount": 262
   },
   {
     "id": "ViuTVsix.hk",
@@ -984,7 +984,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 215
+    "programmeCount": 220
   },
   {
     "id": "RTHKTV31.hk",
@@ -1468,7 +1468,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 160
+    "programmeCount": 161
   },
   {
     "id": "CCTVWorldGeography.cn",
@@ -1570,7 +1570,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 472
+    "programmeCount": 471
   },
   {
     "id": "GoldenEagleCartoon.cn",
@@ -1709,7 +1709,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 320
+    "programmeCount": 317
   },
   {
     "id": "ChannelLaw.cn",
@@ -1772,7 +1772,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 105
+    "programmeCount": 104
   },
   {
     "id": "EntertainmentNews.hk",
@@ -1806,7 +1806,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 357
+    "programmeCount": 384
   },
   {
     "id": "nowBusinessNewsChannel.hk",
@@ -1838,7 +1838,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 82
+    "programmeCount": 86
   },
   {
     "id": "ROCKAction.sg",
@@ -2609,7 +2609,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 85
+    "programmeCount": 92
   },
   {
     "id": "DAZN1.uk",
@@ -2917,7 +2917,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 111
+    "programmeCount": 113
   },
   {
     "id": "爱尔达体育Ⅲ.tw",
@@ -2928,7 +2928,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 99
+    "programmeCount": 97
   },
   {
     "id": "爱尔达影剧.tw",
@@ -2950,7 +2950,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 95
+    "programmeCount": 98
   },
   {
     "id": "爱尔达娱乐.tw",
