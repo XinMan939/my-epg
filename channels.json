@@ -753,7 +753,7 @@
     ],
     "logo": "http://oss.cztv.com/ucc/20200123/ad3c07c7910e475a8631e4cff5a9431c.png",
     "hasEpg": true,
-    "programmeCount": 72
+    "programmeCount": 146
   },
   {
     "id": "HunanEconomyChannel.cn",
@@ -821,7 +821,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 88
+    "programmeCount": 205
   },
   {
     "id": "ZhejiangMinshengLeisure.cn",
@@ -832,7 +832,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 112
+    "programmeCount": 224
   },
   {
     "id": "ZhejiangFilmEntertainmentChannel.cn",
@@ -854,7 +854,7 @@
     ],
     "logo": "http://oss.cztv.com/ucc/20200123/312d8aea2f2a4f678b084d2bd8dbcb05.png",
     "hasEpg": true,
-    "programmeCount": 191
+    "programmeCount": 376
   },
   {
     "id": "JiangsuCityChannel.cn",
@@ -911,7 +911,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 305
+    "programmeCount": 306
   },
   {
     "id": "Pearl.hk",
@@ -972,7 +972,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 242
+    "programmeCount": 262
   },
   {
     "id": "ViuTVsix.hk",
@@ -984,7 +984,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 217
+    "programmeCount": 219
   },
   {
     "id": "RTHKTV31.hk",
@@ -1380,7 +1380,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 352
+    "programmeCount": 351
   },
   {
     "id": "CCTVStormTheater.cn",
@@ -1457,7 +1457,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 351
+    "programmeCount": 350
   },
   {
     "id": "CCTVWomensFashion.cn",
@@ -1617,7 +1617,7 @@
     "aliases": [],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 12
+    "programmeCount": 210
   },
   {
     "id": "求索动物.cn",
@@ -1806,7 +1806,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 356
+    "programmeCount": 385
   },
   {
     "id": "nowBusinessNewsChannel.hk",
@@ -1838,7 +1838,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 77
+    "programmeCount": 86
   },
   {
     "id": "ROCKAction.sg",
@@ -2210,7 +2210,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 104
+    "programmeCount": 103
   },
   {
     "id": "FTVTravel.tw",
@@ -2609,7 +2609,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 87
+    "programmeCount": 93
   },
   {
     "id": "DAZN1.uk",
@@ -3136,7 +3136,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 190
+    "programmeCount": 351
   },
   {
     "id": "重温经典.cn",
@@ -3148,7 +3148,7 @@
     ],
     "logo": "",
     "hasEpg": true,
-    "programmeCount": 96
+    "programmeCount": 165
   },
   {
     "id": "MacauPortuguese.hk",
